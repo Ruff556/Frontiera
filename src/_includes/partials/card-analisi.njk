@@ -1,0 +1,16 @@
+{# Attende `item` (elemento di collezione analisi) nello scope #}
+{% from "partials/media.njk" import fill %}
+<article class="card" data-domini="{{ item.data.domini | join(' ') }}">
+  <a class="cardlink" href="{{ item.url }}">
+    <div class="cardfig">{{ fill(item.data.immagine, "16:10") }}</div>
+    <div class="cardbody">
+      <div class="tagrow">
+        <span class="tag sez">{{ item.data.sezione }}</span>
+        {{ item.data.affidabilita | affBadge | safe }}
+      </div>
+      <h3>{{ item.data.titolo }}</h3>
+      {% if item.data.sommario %}<p>{{ item.data.sommario }}</p>{% endif %}
+      <span class="date">{{ item.data.data | dataMono }}{% if item.data.teatro %} · Teatro: {{ item.data.teatro }}{% endif %}</span>
+    </div>
+  </a>
+</article>

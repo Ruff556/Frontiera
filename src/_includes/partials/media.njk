@@ -1,0 +1,34 @@
+{# ---- Macro immagini: diritti incorporati (credito + licenza obbligatori) ---- #}
+
+{# Immagine d'articolo: figura con didascalia + credito/licenza sempre presenti.
+   Se manca img.file mostra lo slot segnaposto petrolio. #}
+{% macro media(img, ph="Immagine — segnaposto", sizes="(min-width: 40rem) 38rem, 100vw") %}
+<figure class="media {{ 'ph' if not img or not img.file }}">
+  <div class="frame">
+    {% if img and img.file %}
+      <img src="{{ img.file }}" alt="{{ img.alt | default('') }}" loading="lazy" decoding="async" sizes="{{ sizes }}">
+    {% else %}
+      <span class="ph">[ {{ ph }} ]</span>
+    {% endif %}
+  </div>
+  {% if img and img.file %}
+  <figcaption>
+    {% if img.didascalia %}<span class="cap">{{ img.didascalia }}</span>{% endif %}
+    <span class="rights"><b>Credito:</b>&nbsp;{{ img.credito | default('—') }} · <b>Licenza:</b>&nbsp;{{ img.licenza | default('—') }}</span>
+  </figcaption>
+  {% endif %}
+</figure>
+{% endmacro %}
+
+{# Riempimento di una cornice a rapporto fisso (card / hero scheda / slide):
+   il contenitore con la classe di stile lo passa il chiamante. #}
+{% macro fill(img, ph="immagine") %}
+  {% if img and img.file %}
+    <img src="{{ img.file }}" alt="{{ img.alt | default('') }}" loading="lazy" decoding="async">
+    {% if img.credito or img.licenza %}
+      <span class="credit-overlay">{{ img.credito }}{% if img.licenza %} · {{ img.licenza }}{% endif %}</span>
+    {% endif %}
+  {% else %}
+    <span class="ph">[ {{ ph }} ]</span>
+  {% endif %}
+{% endmacro %}

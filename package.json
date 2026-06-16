@@ -1,0 +1,21 @@
+{
+  "name": "frontiera",
+  "version": "1.0.0",
+  "description": "Frontiera - analisi di tecnologia e strategia. Sito statico Eleventy.",
+  "license": "MIT",
+  "scripts": {
+    "font": "node scripts/copia-font.mjs",
+    "build": "npm run font && eleventy",
+    "serve": "npm run font && eleventy --serve",
+    "start": "npm run font && eleventy --serve"
+  },
+  "dependencies": {
+    "@fontsource/archivo": "^5.0.0",
+    "@fontsource/ibm-plex-mono": "^5.0.0",
+    "@fontsource/spectral": "^5.0.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-rss": "^2.0.2"
+  }
+}

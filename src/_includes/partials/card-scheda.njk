@@ -1,0 +1,16 @@
+{# Attende `item` (elemento di collezione schede) nello scope #}
+{% from "partials/media.njk" import fill %}
+<article class="card"{% if item.data.specifiche and item.data.specifiche.Ruolo %} data-ruolo="{{ item.data.specifiche.Ruolo }}"{% endif %}>
+  <a class="cardlink" href="{{ item.url }}">
+    <div class="cardfig">{{ fill(item.data.immagine, "scheda piattaforma") }}</div>
+    <div class="cardbody">
+      <div class="tagrow">
+        <span class="tag sez">{{ item.data.categoria }}</span>
+        <span class="tag">Scheda</span>
+      </div>
+      <h3>{{ item.data.titolo }}</h3>
+      {% if item.data.ruolo %}<p>{{ item.data.ruolo }}</p>{% endif %}
+      <span class="date">Profilo · agg. {{ item.data.aggiornata | dataMono }}</span>
+    </div>
+  </a>
+</article>

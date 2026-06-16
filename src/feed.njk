@@ -1,0 +1,32 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+metadata:
+  titolo: "Frontiera — Analisi"
+  sottotitolo: "Analisi di tecnologia e strategia"
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.titolo }}</title>
+  <subtitle>{{ metadata.sottotitolo }}</subtitle>
+  <link href="{{ site.url }}/feed.xml" rel="self"/>
+  <link href="{{ site.url }}/"/>
+  <updated>{{ collections.analisi | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ site.url }}/</id>
+  <author>
+    <name>{{ site.titolo }}</name>
+  </author>
+  {%- for item in collections.analisi | limita(20) %}
+  {%- set absolutePostUrl = item.url | absoluteUrl(site.url) %}
+  <entry>
+    <title>{{ item.data.titolo }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ item.date | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    {%- if item.data.sommario %}
+    <summary>{{ item.data.sommario }}</summary>
+    {%- endif %}
+    <content type="html">{{ item.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

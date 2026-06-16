@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frontiera — analisi di tecnologia e strategia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0F1A22;
+    --ink-2:#16242E;
+    --ink-3:#1E303B;
+    --paper:#F4F6F4;
+    --card:#FFFFFF;
+    --text:#1A2730;
+    --muted:#5E6E78;
+    --muted-2:#8A989F;
+    --hairline:#DCE1DD;
+    --hairline-dark:#2A3B45;
+    --accent:#1C6E8C;
+    --accent-2:#22566B;
+    --accent-soft:#E4EEF1;
+    /* affidabilità — semantica separata dal brand */
+    --conf:#2E7D5B;
+    --plaus:#B8822A;
+    --nonver:#7A8791;
+    --disinfo:#B23B36;
+    --maxread:38rem;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Spectral',Georgia,serif;
+    background:var(--paper);
+    color:var(--text);
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace}
+  .disp{font-family:'Archivo',system-ui,sans-serif}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+
+  /* ---------- NAV (glass) ---------- */
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:.85rem clamp(1rem,4vw,2.75rem);
+    background:rgba(15,26,34,.62);
+    backdrop-filter:blur(18px) saturate(140%);
+    -webkit-backdrop-filter:blur(18px) saturate(140%);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .brand{display:flex;align-items:baseline;gap:.6rem;cursor:pointer}
+  .brand .word{
+    font-family:'Archivo',sans-serif;font-weight:800;letter-spacing:.04em;
+    font-size:1.32rem;color:#fff;text-transform:uppercase;
+  }
+  .brand .word b{color:var(--accent);font-weight:800}
+  .brand .sub{
+    font-family:'IBM Plex Mono',monospace;font-size:.62rem;
+    color:rgba(255,255,255,.55);letter-spacing:.14em;text-transform:uppercase;
+    display:none;
+  }
+  @media(min-width:760px){.brand .sub{display:inline}}
+  .navlinks{display:none;gap:.35rem;align-items:center}
+  @media(min-width:920px){.navlinks{display:flex}}
+  .navlinks a{
+    font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.06em;
+    color:rgba(255,255,255,.78);text-transform:uppercase;
+    padding:.5rem .7rem;border-radius:7px;transition:background .2s,color .2s;
+  }
+  .navlinks a:hover{background:rgba(255,255,255,.09);color:#fff}
+  .navlinks a.on{color:var(--accent);background:rgba(28,110,140,.16)}
+  .burger{
+    display:flex;flex-direction:column;gap:4px;cursor:pointer;
+    background:none;border:0;padding:.4rem;
+  }
+  @media(min-width:920px){.burger{display:none}}
+  .burger span{width:22px;height:2px;background:#fff;border-radius:2px;transition:.25s}
+  .burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+  .mobilemenu{
+    position:fixed;inset:0 0 0 auto;width:min(80vw,320px);z-index:49;
+    background:var(--ink);transform:translateX(105%);transition:transform .32s cubic-bezier(.4,0,.2,1);
+    padding:5.2rem 1.6rem 2rem;display:flex;flex-direction:column;gap:.2rem;
+    border-left:1px solid var(--hairline-dark);
+  }
+  .mobilemenu.open{transform:translateX(0)}
+  .mobilemenu a{
+    font-family:'IBM Plex Mono',monospace;font-size:.86rem;letter-spacing:.05em;
+    color:rgba(255,255,255,.82);text-transform:uppercase;padding:.85rem .4rem;
+    border-bottom:1px solid var(--hairline-dark);
+  }
+  .scrim{position:fixed;inset:0;background:rgba(8,14,18,.5);z-index:48;opacity:0;pointer-events:none;transition:.3s}
+  .scrim.open{opacity:1;pointer-events:auto}
+
+  /* ---------- VIEWS ---------- */
+  .view{display:none}
+  .view.active{display:block;animation:fade .4s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+  /* ---------- HERO / CAROUSEL ---------- */
+  .hero{
+    position:relative;background:var(--ink);color:#fff;overflow:hidden;
+    padding:7.5rem clamp(1rem,4vw,2.75rem) 0;
+  }
+  /* contour-grid signature background */
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+    background-size:54px 54px;
+    mask-image:radial-gradient(120% 90% at 70% 10%,#000 30%,transparent 80%);
+    -webkit-mask-image:radial-gradient(120% 90% at 70% 10%,#000 30%,transparent 80%);
+  }
+  /* signature: advancing frontier line */
+  .scanline{
+    position:absolute;left:0;right:0;top:62%;height:1px;
+    background:linear-gradient(90deg,transparent,var(--accent) 18%,var(--accent) 82%,transparent);
+    opacity:.5;
+  }
+  .scanline::after{
+    content:"";position:absolute;top:-3px;left:0;width:7px;height:7px;border-radius:50%;
+    background:var(--accent);box-shadow:0 0 12px 2px rgba(28,110,140,.7);
+    animation:run 9s linear infinite;
+  }
+  @keyframes run{0%{left:6%}50%{left:90%}100%{left:6%}}
+  @media(prefers-reduced-motion:reduce){.scanline::after{animation:none;left:50%}}
+
+  .carousel{position:relative;max-width:1180px;margin:0 auto;z-index:2}
+  .eyebrowrow{display:flex;align-items:center;gap:.8rem;margin-bottom:1.1rem;flex-wrap:wrap}
+  .kicker{
+    font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--accent);
+  }
+  .slides{position:relative;min-height:330px}
+  .slide{
+    position:absolute;inset:0;opacity:0;transition:opacity .7s ease;pointer-events:none;
+    display:grid;grid-template-columns:1fr;gap:1.4rem;align-items:end;
+  }
+  @media(min-width:880px){.slide{grid-template-columns:1.15fr .85fr;gap:3rem}}
+  .slide.show{opacity:1;pointer-events:auto;position:relative}
+  .slide h1{
+    font-family:'Archivo',sans-serif;font-weight:700;line-height:1.04;
+    font-size:clamp(2.1rem,5vw,3.5rem);letter-spacing:-.01em;margin-bottom:1rem;
+  }
+  .slide .dek{font-size:1.06rem;color:rgba(255,255,255,.78);max-width:34rem}
+  .slide .meta{margin-top:1.4rem;display:flex;gap:1.1rem;flex-wrap:wrap;align-items:center}
+  .slidefig{
+    border:1px solid var(--hairline-dark);border-radius:14px;overflow:hidden;
+    background:linear-gradient(155deg,var(--ink-3),var(--ink-2));
+    aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;
+    color:var(--muted-2);position:relative;
+  }
+  .slidefig .ph{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:1rem}
+  .slidefig::after{content:"";position:absolute;inset:0;border:1px solid rgba(28,110,140,.25);border-radius:14px;margin:8px}
+
+  .dots{display:flex;gap:.5rem;margin:1.8rem auto 0;max-width:1180px;padding-bottom:2.4rem;position:relative;z-index:2}
+  .dot{width:30px;height:4px;border-radius:3px;background:rgba(255,255,255,.22);border:0;cursor:pointer;transition:background .25s}
+  .dot.on{background:var(--accent)}
+  .carbtns{position:absolute;top:.2rem;right:0;display:flex;gap:.4rem;z-index:3}
+  .carbtns button{
+    width:34px;height:34px;border-radius:9px;border:1px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.05);color:#fff;cursor:pointer;font-size:1rem;
+    transition:background .2s;display:flex;align-items:center;justify-content:center;
+  }
+  .carbtns button:hover{background:rgba(255,255,255,.14)}
+
+  /* ---------- SECTION GRID (home) ---------- */
+  .wrap{max-width:1180px;margin:0 auto;padding:clamp(2.5rem,6vw,4.5rem) clamp(1rem,4vw,2.75rem)}
+  .sechead{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:1.8rem;border-bottom:1px solid var(--hairline);padding-bottom:.9rem}
+  .sechead h2{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:-.01em}
+  .sechead .all{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.4rem}
+  .card{
+    background:var(--card);border:1px solid var(--hairline);border-radius:13px;overflow:hidden;
+    cursor:pointer;transition:transform .22s,box-shadow .22s,border-color .22s;display:flex;flex-direction:column;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:0 14px 30px -18px rgba(15,26,34,.4);border-color:#c4ccc5}
+  .cardfig{aspect-ratio:16/10;background:linear-gradient(150deg,var(--ink-3),var(--ink-2));display:flex;align-items:center;justify-content:center;color:var(--muted-2)}
+  .cardfig .ph{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase}
+  .cardbody{padding:1.1rem 1.2rem 1.3rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
+  .tagrow{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
+  .tag{
+    font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--muted);padding:.22rem .5rem;border:1px solid var(--hairline);border-radius:5px;
+  }
+  .tag.sez{color:var(--accent);border-color:var(--accent-soft);background:var(--accent-soft)}
+  .card h3{font-family:'Archivo',sans-serif;font-weight:600;font-size:1.16rem;line-height:1.18;letter-spacing:-.005em;color:var(--ink)}
+  .card p{font-size:.95rem;color:var(--muted);margin-top:.1rem}
+  .card .date{font-family:'IBM Plex Mono',monospace;font-size:.66rem;color:var(--muted-2);letter-spacing:.06em;margin-top:auto;padding-top:.5rem}
+
+  .twocol{display:grid;grid-template-columns:1fr;gap:clamp(2rem,5vw,3.5rem)}
+  @media(min-width:880px){.twocol{grid-template-columns:1fr 1fr}}
+
+  /* ---------- ARCHIVE ---------- */
+  .archhead{background:var(--ink);color:#fff;padding:7rem clamp(1rem,4vw,2.75rem) 2.6rem}
+  .archhead .inner{max-width:1180px;margin:0 auto}
+  .archhead h1{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(2rem,5vw,3rem);letter-spacing:-.01em;text-transform:uppercase}
+  .archhead p{color:rgba(255,255,255,.7);max-width:40rem;margin-top:.7rem}
+  .filters{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.6rem 0 0}
+  .chip{
+    font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;
+    color:rgba(255,255,255,.8);padding:.4rem .75rem;border:1px solid var(--hairline-dark);border-radius:7px;
+    background:transparent;cursor:pointer;transition:.2s;
+  }
+  .chip:hover{border-color:var(--accent);color:#fff}
+  .chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+
+  /* ---------- ARTICLE ---------- */
+  .reading{max-width:var(--maxread);margin:0 auto;padding:6.5rem 1.2rem 4rem}
+  .reading .back{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;cursor:pointer;display:inline-block;margin-bottom:1.5rem}
+  .reading .artkicker{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.9rem}
+  .reading h1{font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(2rem,5vw,2.9rem);line-height:1.07;letter-spacing:-.015em;color:var(--ink);margin-bottom:1rem}
+  .reading .standfirst{font-size:1.22rem;color:var(--muted);line-height:1.5;margin-bottom:1.7rem;font-style:italic}
+  .reading .byline{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--muted-2);letter-spacing:.05em;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);padding:.8rem 0;margin-bottom:2rem;display:flex;gap:1.2rem;flex-wrap:wrap}
+  .reading p{margin-bottom:1.25rem;font-size:1.12rem}
+  .reading h2{font-family:'Archivo',sans-serif;font-weight:600;font-size:1.4rem;margin:2.2rem 0 .9rem;color:var(--ink)}
+  /* affidabilità inline */
+  .aff{font-family:'IBM Plex Mono',monospace;font-size:.64rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;padding:.1rem .42rem;border-radius:4px;vertical-align:.08em;white-space:nowrap}
+  .aff--conf{color:#fff;background:var(--conf)}
+  .aff--plaus{color:#3d2c06;background:#F2DCA6}
+  .aff--nonver{color:#fff;background:var(--nonver)}
+  .aff--disinfo{color:#fff;background:var(--disinfo)}
+
+  .relbox{background:var(--card);border:1px solid var(--hairline);border-left:3px solid var(--accent);border-radius:10px;padding:1.2rem 1.3rem;margin:2.2rem 0}
+  .relbox .lab{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.7rem}
+  .relbox a{display:flex;align-items:center;gap:.6rem;padding:.55rem 0;border-bottom:1px dashed var(--hairline);font-family:'Archivo',sans-serif;font-weight:600;color:var(--ink);cursor:pointer}
+  .relbox a:last-child{border-bottom:0}
+  .relbox a:hover{color:var(--accent)}
+  .relbox a .arrow{margin-left:auto;color:var(--accent);font-family:'IBM Plex Mono',monospace}
+
+  /* ---------- SCHEDA ---------- */
+  .schedahead{background:linear-gradient(160deg,var(--ink),var(--ink-3));color:#fff;padding:6.8rem clamp(1rem,4vw,2.75rem) 2.4rem}
+  .schedahead .inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:2rem;align-items:center}
+  @media(min-width:820px){.schedahead .inner{grid-template-columns:1.3fr .7fr}}
+  .schedahead .back{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;cursor:pointer;display:inline-block;margin-bottom:1.2rem}
+  .schedahead .type{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
+  .schedahead h1{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(2rem,5vw,3rem);letter-spacing:-.01em}
+  .schedahead .role{color:rgba(255,255,255,.74);margin-top:.5rem;font-size:1.05rem}
+  .schedafig{border:1px solid var(--hairline-dark);border-radius:13px;aspect-ratio:4/3;background:linear-gradient(150deg,var(--ink-3),var(--ink-2));display:flex;align-items:center;justify-content:center;color:var(--muted-2)}
+  .schedafig .ph{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase}
+  .specs{max-width:1180px;margin:0 auto;padding:clamp(2rem,5vw,3.5rem) clamp(1rem,4vw,2.75rem)}
+  .spectable{display:grid;grid-template-columns:1fr;gap:0;border:1px solid var(--hairline);border-radius:11px;overflow:hidden;background:var(--card);margin-bottom:2.5rem}
+  @media(min-width:680px){.spectable{grid-template-columns:1fr 1fr}}
+  .specrow{display:flex;justify-content:space-between;gap:1rem;padding:.85rem 1.1rem;border-bottom:1px solid var(--hairline)}
+  .specrow .k{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+  .specrow .v{font-weight:500;text-align:right}
+  .schedabody{max-width:var(--maxread);margin:0 auto}
+  .schedabody p{font-size:1.1rem;margin-bottom:1.2rem}
+  .schedabody h2{font-family:'Archivo',sans-serif;font-weight:600;font-size:1.35rem;margin:2rem 0 .8rem;color:var(--ink)}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink);color:rgba(255,255,255,.6);padding:3rem clamp(1rem,4vw,2.75rem);margin-top:2rem}
+  footer .inner{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem;align-items:flex-start}
+  footer .word{font-family:'Archivo',sans-serif;font-weight:800;color:#fff;font-size:1.1rem;letter-spacing:.04em;text-transform:uppercase}
+  footer .word b{color:var(--accent)}
+  footer .sub{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;margin-top:.3rem}
+  footer nav{display:flex;gap:1.4rem;flex-wrap:wrap}
+  footer nav a{font-family:'IBM Plex Mono',monospace;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.6);cursor:pointer}
+  footer nav a:hover{color:#fff}
+  .skip{position:absolute;left:-999px}
+  .skip:focus{left:1rem;top:1rem;z-index:99;background:#fff;color:var(--ink);padding:.6rem 1rem;border-radius:6px}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Salta al contenuto</a>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="brand" onclick="go('home')" tabindex="0" role="button" aria-label="Frontiera — home">
+    <span class="word">Fronti<b>era</b></span>
+    <span class="sub">analisi di tecnologia e strategia</span>
+  </div>
+  <nav class="navlinks" aria-label="Sezioni principali">
+    <a onclick="go('arch','Attualità')" data-sec="Attualità">Attualità</a>
+    <a onclick="go('arch','Strategia')" data-sec="Strategia">Strategia</a>
+    <a onclick="go('arch','Mezzi aerei')" data-sec="Mezzi aerei">Mezzi aerei</a>
+    <a onclick="go('arch','Mezzi terrestri')" data-sec="Mezzi terrestri">Mezzi terrestri</a>
+    <a onclick="go('arch','Droni')" data-sec="Droni">Droni</a>
+    <a onclick="go('arch','Metodo')" data-sec="Metodo">Metodo</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Apri menù" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<div class="scrim" id="scrim"></div>
+<aside class="mobilemenu" id="mobilemenu" aria-label="Menù mobile">
+  <a onclick="go('arch','Attualità')">Attualità</a>
+  <a onclick="go('arch','Strategia')">Strategia</a>
+  <a onclick="go('arch','Mezzi aerei')">Mezzi aerei</a>
+  <a onclick="go('arch','Mezzi terrestri')">Mezzi terrestri</a>
+  <a onclick="go('arch','Droni')">Droni</a>
+  <a onclick="go('arch','Metodo')">Metodo</a>
+</aside>
+
+<main id="main">
+
+<!-- ============ HOME ============ -->
+<section class="view active" id="view-home">
+  <div class="hero">
+    <div class="scanline" aria-hidden="true"></div>
+    <div class="carousel">
+      <div class="eyebrowrow">
+        <span class="kicker">In evidenza</span>
+        <div class="carbtns"><button id="prev" aria-label="Precedente">‹</button><button id="next" aria-label="Successivo">›</button></div>
+      </div>
+      <div class="slides" id="slides" aria-live="polite">
+        <article class="slide show">
+          <div>
+            <h1>Il Tu-22M3 caduto e la geometria di una flotta che invecchia</h1>
+            <p class="dek">La perdita dell'ennesimo bombardiere a lungo raggio riapre la domanda sulla profondità reale della componente strategica russa nello scenario dominato dai sistemi senza pilota.</p>
+            <div class="meta"><span class="tag sez">Attualità</span><span class="aff aff--plaus">Plausibile</span><span class="tag">Teatro: Russia</span></div>
+          </div>
+          <div class="slidefig"><span class="ph">[ Immagine editoriale<br>16:9 — slot carosello ]</span></div>
+        </article>
+        <article class="slide">
+          <div>
+            <h1>Sciami a basso costo: la dottrina dei droni d'attacco rivista</h1>
+            <p class="dek">Quando la quantità ridiventa una qualità: come le munizioni circuitanti riscrivono il calcolo costo-efficacia della difesa aerea.</p>
+            <div class="meta"><span class="tag sez">Strategia</span><span class="aff aff--conf">Confermato</span><span class="tag">Dominio: Droni</span></div>
+          </div>
+          <div class="slidefig"><span class="ph">[ Immagine editoriale<br>16:9 — slot carosello ]</span></div>
+        </article>
+        <article class="slide">
+          <div>
+            <h1>AESA e asimmetrie: cosa separa davvero un radar dall'altro</h1>
+            <p class="dek">Dietro le sigle, la fisica e l'industria: una lettura tecnica delle differenze che contano sul campo, oltre il marketing dei costruttori.</p>
+            <div class="meta"><span class="tag sez">Mezzi aerei</span><span class="aff aff--nonver">Non verificato</span><span class="tag">Dominio: Sensori</span></div>
+          </div>
+          <div class="slidefig"><span class="ph">[ Immagine editoriale<br>16:9 — slot carosello ]</span></div>
+        </article>
+      </div>
+    </div>
+    <div class="dots" id="dots" role="tablist" aria-label="Selettore slide"></div>
+  </div>
+
+  <div class="wrap">
+    <div class="twocol">
+      <div>
+        <div class="sechead"><h2>Attualità</h2><span class="all" onclick="go('arch','Attualità')">Tutte →</span></div>
+        <div class="grid">
+          <div class="card" onclick="go('analisi')">
+            <div class="cardfig"><span class="ph">[ 16:10 ]</span></div>
+            <div class="cardbody">
+              <div class="tagrow"><span class="tag sez">Attualità</span><span class="aff aff--plaus">Plausibile</span></div>
+              <h3>Il Tu-22M3 caduto e la geometria di una flotta che invecchia</h3>
+              <p>Implicazioni e ipotesi sulla perdita di un bombardiere strategico.</p>
+              <span class="date mono">14 GIU 2026 · Teatro: Russia</span>
+            </div>
+          </div>
+          <div class="card" onclick="go('analisi')">
+            <div class="cardfig"><span class="ph">[ 16:10 ]</span></div>
+            <div class="cardbody">
+              <div class="tagrow"><span class="tag sez">Attualità</span><span class="aff aff--conf">Confermato</span></div>
+              <h3>Nuova consegna di sistemi di difesa aerea sul fronte orientale</h3>
+              <p>Lettura tecnica del dispiegamento e delle sue ricadute.</p>
+              <span class="date mono">11 GIU 2026 · Teatro: Europa orientale</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="sechead"><h2>Strategia</h2><span class="all" onclick="go('arch','Strategia')">Tutte →</span></div>
+        <div class="grid">
+          <div class="card" onclick="go('analisi')">
+            <div class="cardfig"><span class="ph">[ 16:10 ]</span></div>
+            <div class="cardbody">
+              <div class="tagrow"><span class="tag sez">Strategia</span></div>
+              <h3>Qual è la capacità residua del bombardamento strategico nell'era dei droni?</h3>
+              <p>Una veduta d'insieme sul ruolo delle piattaforme pesanti.</p>
+              <span class="date mono">09 GIU 2026 · Analisi lunga</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:3.5rem">
+      <div class="sechead"><h2>Schede · Mezzi e sistemi</h2><span class="all" onclick="go('arch','Mezzi aerei')">Archivio →</span></div>
+      <div class="grid">
+        <div class="card" onclick="go('scheda')">
+          <div class="cardfig"><span class="ph">[ scheda piattaforma ]</span></div>
+          <div class="cardbody">
+            <div class="tagrow"><span class="tag sez">Mezzi aerei</span><span class="tag">Scheda</span></div>
+            <h3>Tupolev Tu-22M3 «Backfire-C»</h3>
+            <p>Bombardiere strategico a geometria variabile a lungo raggio.</p>
+            <span class="date mono">Profilo · agg. 14 GIU 2026</span>
+          </div>
+        </div>
+        <div class="card" onclick="go('scheda')">
+          <div class="cardfig"><span class="ph">[ scheda piattaforma ]</span></div>
+          <div class="cardbody">
+            <div class="tagrow"><span class="tag sez">Droni</span><span class="tag">Scheda</span></div>
+            <h3>Munizione circuitante — classe tattica</h3>
+            <p>Sistema d'attacco monouso a basso costo.</p>
+            <span class="date mono">Profilo · agg. 06 GIU 2026</span>
+          </div>
+        </div>
+        <div class="card" onclick="go('scheda')">
+          <div class="cardfig"><span class="ph">[ scheda piattaforma ]</span></div>
+          <div class="cardbody">
+            <div class="tagrow"><span class="tag sez">Mezzi terrestri</span><span class="tag">Scheda</span></div>
+            <h3>Veicolo da combattimento ruotato</h3>
+            <p>Piattaforma per fuoco indiretto e supporto mobile.</p>
+            <span class="date mono">Profilo · agg. 02 GIU 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ARCHIVIO SEZIONE ============ -->
+<section class="view" id="view-arch">
+  <div class="archhead">
+    <div class="inner">
+      <h1 id="archtitle">Attualità</h1>
+      <p id="archdesc">Gli avvenimenti correnti osservati attraverso una lente tecnica: cosa è successo, cosa implica, cosa resta da verificare.</p>
+      <div class="filters" id="archfilters">
+        <button class="chip on">Tutto</button>
+        <button class="chip">Aria</button>
+        <button class="chip">Terra</button>
+        <button class="chip">Droni</button>
+        <button class="chip">Spazio · EW</button>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="grid" id="archgrid"></div>
+  </div>
+</section>
+
+<!-- ============ ANALISI ============ -->
+<section class="view" id="view-analisi">
+  <article class="reading">
+    <span class="back" onclick="go('arch','Attualità')">‹ Attualità</span>
+    <div class="artkicker">Attualità · Teatro: Russia</div>
+    <h1>Il Tu-22M3 caduto e la geometria di una flotta che invecchia</h1>
+    <p class="standfirst">La perdita dell'ennesimo bombardiere a lungo raggio non è solo un incidente: è una finestra sulla profondità reale di una componente strategica costruita in un'altra epoca.</p>
+    <div class="byline mono"><span>Analisi lunga</span><span>14 giugno 2026</span><span>~ 9 min di lettura</span></div>
+
+    <p>Questo è un testo segnaposto che mostra come si presenterà un'analisi compiuta. Il paragrafo d'apertura muove dal fatto concreto e ne fissa i contorni verificabili, distinguendo da subito ciò che è accertato da ciò che resta ipotesi.</p>
+    <p>La notizia della perdita risulta <span class="aff aff--plaus">Plausibile</span>: riportata da più canali indipendenti ma in assenza di conferma ufficiale al momento della scrittura. La dinamica esatta è invece <span class="aff aff--nonver">Non verificata</span>, mentre le immagini diffuse come prova della causa sono <span class="aff aff--disinfo">Probabile disinformazione</span> e vengono trattate di conseguenza.</p>
+    <h2>Cosa cambia, sul piano tecnico</h2>
+    <p>Il corpo dell'analisi allarga lo sguardo dal singolo evento al quadro tecnologico e industriale: la sostituibilità della piattaforma, i colli di bottiglia produttivi, il rapporto fra costo del mezzo e costo della minaccia che lo insidia.</p>
+    <p>Qui la tesi di fondo della testata emerge dalla struttura, non dalla predica: la tecnologia ridefinisce le condizioni stesse della strategia, e una flotta progettata per un altro paradigma va riletta alla luce del nuovo.</p>
+
+    <div class="relbox">
+      <div class="lab">Schede collegate</div>
+      <a onclick="go('scheda')"><span>Tupolev Tu-22M3 «Backfire-C» — profilo della piattaforma</span><span class="arrow">→</span></a>
+      <a onclick="go('scheda')"><span>Munizione circuitante — classe tattica</span><span class="arrow">→</span></a>
+    </div>
+
+    <p>La chiusura apre una linea di tendenza — la domanda che il pezzo di strategia raccoglierà e svilupperà — senza pretendere di chiuderla.</p>
+  </article>
+</section>
+
+<!-- ============ SCHEDA ============ -->
+<section class="view" id="view-scheda">
+  <div class="schedahead">
+    <div class="inner">
+      <div>
+        <span class="back" onclick="go('arch','Mezzi aerei')">‹ Mezzi aerei</span>
+        <div class="type">Scheda piattaforma · Mezzi aerei</div>
+        <h1>Tupolev Tu-22M3 «Backfire-C»</h1>
+        <p class="role">Bombardiere strategico/marittimo a geometria variabile, lungo raggio, supersonico.</p>
+      </div>
+      <div class="schedafig"><span class="ph">[ profilo / 3-viste<br>4:3 ]</span></div>
+    </div>
+  </div>
+  <div class="specs">
+    <div class="spectable">
+      <div class="specrow"><span class="k">Ruolo</span><span class="v">Bombardiere a lungo raggio</span></div>
+      <div class="specrow"><span class="k">Primo volo</span><span class="v">— (segnaposto)</span></div>
+      <div class="specrow"><span class="k">Equipaggio</span><span class="v">— (segnaposto)</span></div>
+      <div class="specrow"><span class="k">Velocità max</span><span class="v">— (segnaposto)</span></div>
+      <div class="specrow"><span class="k">Raggio d'azione</span><span class="v">— (segnaposto)</span></div>
+      <div class="specrow"><span class="k">Armamento principale</span><span class="v">— (segnaposto)</span></div>
+    </div>
+    <div class="schedabody">
+      <h2>Concezione e ruolo</h2>
+      <p>La scheda è un profilo di riferimento permanente: descrive la piattaforma in modo stabile, indipendente dalla cronaca, così che le analisi di attualità possano rimandarvi senza ripetersi.</p>
+      <h2>Stato dell'arte e prospettive</h2>
+      <p>Una sezione finale colloca il mezzo nel presente tecnologico — obsolescenza, ammodernamenti, sostituibilità — costruendo il ponte verso le analisi di strategia.</p>
+
+      <div class="relbox">
+        <div class="lab">Appare in queste analisi</div>
+        <a onclick="go('analisi')"><span>Il Tu-22M3 caduto e la geometria di una flotta che invecchia</span><span class="arrow">→</span></a>
+        <a onclick="go('analisi')"><span>Qual è la capacità residua del bombardamento strategico nell'era dei droni?</span><span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="inner">
+    <div>
+      <div class="word">Fronti<b>era</b></div>
+      <div class="sub">analisi di tecnologia e strategia</div>
+    </div>
+    <nav>
+      <a onclick="go('arch','Attualità')">Attualità</a>
+      <a onclick="go('arch','Strategia')">Strategia</a>
+      <a onclick="go('arch','Mezzi aerei')">Schede</a>
+      <a onclick="go('arch','Metodo')">Metodo</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // ---------- view routing ----------
+  const views = {
+    home:'view-home', arch:'view-arch', analisi:'view-analisi', scheda:'view-scheda'
+  };
+  function go(v, sec){
+    Object.values(views).forEach(id=>document.getElementById(id).classList.remove('active'));
+    document.getElementById(views[v]).classList.add('active');
+    if(v==='arch'){ buildArch(sec||'Attualità'); }
+    document.querySelectorAll('.navlinks a').forEach(a=>{
+      a.classList.toggle('on', v==='arch' && a.dataset.sec===sec);
+    });
+    closeMenu();
+    window.scrollTo({top:0,behavior:'instant'in window ? 'instant':'auto'});
+  }
+
+  // ---------- archive content ----------
+  const SECDESC = {
+    'Attualità':'Gli avvenimenti correnti osservati attraverso una lente tecnica: cosa è successo, cosa implica, cosa resta da verificare.',
+    'Strategia':'Vedute d\'insieme: dove i singoli eventi si compongono in tendenze di lungo periodo.',
+    'Mezzi aerei':'Schede di riferimento permanenti su velivoli e sistemi della componente aerea.',
+    'Mezzi terrestri':'Schede di riferimento permanenti su veicoli e sistemi della componente terrestre.',
+    'Droni':'Schede e analisi sui sistemi senza pilota, terrestri e aerei.',
+    'Metodo':'Come lavora Frontiera: gerarchia delle fonti, scala di affidabilità, separazione fra fatto e interpretazione.'
+  };
+  const sampleCards = (sec)=>{
+    const isScheda = ['Mezzi aerei','Mezzi terrestri','Droni'].includes(sec);
+    const items=[];
+    for(let i=0;i<6;i++){
+      items.push(`
+      <div class="card" onclick="go('${isScheda?'scheda':'analisi'}')">
+        <div class="cardfig"><span class="ph">[ ${isScheda?'scheda':'16:10'} ]</span></div>
+        <div class="cardbody">
+          <div class="tagrow"><span class="tag sez">${sec}</span>${isScheda?'<span class="tag">Scheda</span>':'<span class="aff aff--nonver">Non verificato</span>'}</div>
+          <h3>${isScheda?'Profilo piattaforma — segnaposto '+(i+1):'Titolo analisi segnaposto '+(i+1)}</h3>
+          <p>Riga di sommario che anticipa il contenuto in una o due frasi.</p>
+          <span class="date mono">${isScheda?'Profilo · agg. GIU 2026':'GIU 2026 · Analisi'}</span>
+        </div>
+      </div>`);
+    }
+    return items.join('');
+  };
+  function buildArch(sec){
+    document.getElementById('archtitle').textContent = sec;
+    document.getElementById('archdesc').textContent = SECDESC[sec]||'';
+    document.getElementById('archgrid').innerHTML = sampleCards(sec);
+  }
+
+  // ---------- carousel ----------
+  const slides=[...document.querySelectorAll('.slide')];
+  const dotsWrap=document.getElementById('dots');
+  let cur=0, timer=null;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  slides.forEach((s,i)=>{
+    const b=document.createElement('button');
+    b.className='dot'+(i===0?' on':''); b.setAttribute('role','tab');
+    b.setAttribute('aria-label','Slide '+(i+1));
+    b.onclick=()=>{show(i);rest();};
+    dotsWrap.appendChild(b);
+  });
+  const dots=[...dotsWrap.children];
+  function show(i){
+    cur=(i+slides.length)%slides.length;
+    slides.forEach((s,n)=>s.classList.toggle('show',n===cur));
+    dots.forEach((d,n)=>d.classList.toggle('on',n===cur));
+  }
+  function next(){show(cur+1)}
+  function prev(){show(cur-1)}
+  function start(){ if(!reduce){ timer=setInterval(next,6500);} }
+  function rest(){ clearInterval(timer); start(); }
+  document.getElementById('next').onclick=()=>{next();rest();};
+  document.getElementById('prev').onclick=()=>{prev();rest();};
+  start();
+
+  // ---------- mobile menu ----------
+  const burger=document.getElementById('burger');
+  const menu=document.getElementById('mobilemenu');
+  const scrim=document.getElementById('scrim');
+  function openMenu(){menu.classList.add('open');scrim.classList.add('open');burger.classList.add('open');burger.setAttribute('aria-expanded','true');}
+  function closeMenu(){menu.classList.remove('open');scrim.classList.remove('open');burger.classList.remove('open');burger.setAttribute('aria-expanded','false');}
+  burger.onclick=()=>menu.classList.contains('open')?closeMenu():openMenu();
+  scrim.onclick=closeMenu;
+</script>
+</body>
+</html>

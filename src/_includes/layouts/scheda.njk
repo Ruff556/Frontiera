@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+---
+{% from "partials/media.njk" import fill %}
+<div class="schedahead">
+  <div class="inner">
+    <div>
+      <a class="back" href="{{ categoria | archivioUrl }}">‹ {{ categoria }}</a>
+      <div class="type">Scheda piattaforma · {{ categoria }}</div>
+      <h1>{{ titolo }}</h1>
+      {% if ruolo %}<p class="role">{{ ruolo }}</p>{% endif %}
+    </div>
+    <div class="schedafig">{{ fill(immagine, "profilo / 3-viste · 4:3") }}</div>
+  </div>
+</div>
+
+<div class="specs">
+  {% if specifiche %}
+  <div class="spectable">
+    {% for k, v in specifiche %}
+      <div class="specrow"><span class="k">{{ k }}</span><span class="v">{{ v if v else "— (segnaposto)" }}</span></div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <div class="schedabody">
+    {{ content | safe }}
+
+    {% set apparizioni = collections.analisi | analisiPerScheda(slug) %}
+    <aside class="relbox" aria-label="Analisi collegate">
+      <div class="lab">Appare in queste analisi</div>
+      {% if apparizioni.length %}
+        {% for a in apparizioni %}
+          <a href="{{ a.url }}"><span>{{ a.data.titolo }}</span><span class="arrow">→</span></a>
+        {% endfor %}
+      {% else %}
+        <p class="vuoto">Nessuna analisi cita ancora questa scheda.</p>
+      {% endif %}
+    </aside>
+  </div>
+</div>

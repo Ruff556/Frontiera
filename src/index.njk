@@ -1,0 +1,62 @@
+---
+layout: layouts/base.njk
+permalink: /index.html
+---
+{% from "partials/media.njk" import fill %}
+
+<section class="hero">
+  <div class="scanline" aria-hidden="true"></div>
+  <div class="carousel">
+    <div class="eyebrowrow">
+      <span class="kicker">In evidenza</span>
+      <div class="carbtns"><button id="prev" type="button" aria-label="Precedente">‹</button><button id="next" type="button" aria-label="Successivo">›</button></div>
+    </div>
+    <div class="slides" id="slides" aria-live="polite">
+      {% for item in collections.inEvidenza %}
+      <article class="slide{% if loop.first %} show{% endif %}">
+        <div>
+          <h1><a href="{{ item.url }}">{{ item.data.titolo }}</a></h1>
+          {% if item.data.sommario %}<p class="dek">{{ item.data.sommario }}</p>{% endif %}
+          <div class="meta">
+            <span class="tag sez">{{ item.data.sezione }}</span>
+            {{ item.data.affidabilita | affBadge | safe }}
+            {% if item.data.teatro %}<span class="tag">Teatro: {{ item.data.teatro }}</span>{% endif %}
+          </div>
+        </div>
+        <a class="slidefig" href="{{ item.url }}" aria-label="{{ item.data.titolo }}">{{ fill(item.data.immagine, "Immagine editoriale 16:9 — slot carosello") }}</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="dots" id="dots" role="tablist" aria-label="Selettore slide"></div>
+</section>
+
+<div class="wrap">
+  <div class="twocol">
+    <div>
+      <div class="sechead"><h2>Attualità</h2><a class="all" href="/archivio/attualita/">Tutte →</a></div>
+      <div class="grid">
+        {% for item in collections.analisi | perSezione("Attualità") | limita(4) %}
+          {% include "partials/card-analisi.njk" %}
+        {% endfor %}
+      </div>
+    </div>
+    <div>
+      <div class="sechead"><h2>Strategia</h2><a class="all" href="/archivio/strategia/">Tutte →</a></div>
+      <div class="grid">
+        {% for item in collections.analisi | perSezione("Strategia") | limita(4) %}
+          {% include "partials/card-analisi.njk" %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="block-spazio">
+    <div class="sechead"><h2>Schede · Mezzi e sistemi</h2><a class="all" href="/archivio/mezzi-aerei/">Archivio →</a></div>
+    <div class="grid">
+      {% for item in collections.schede | limita(6) %}
+        {% include "partials/card-scheda.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

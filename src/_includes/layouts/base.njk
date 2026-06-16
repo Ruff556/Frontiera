@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if titoloPagina %}{{ titoloPagina }} — {{ site.titolo }}{% else %}{{ site.titolo }} — {{ site.sottotitolo }}{% endif %}</title>
+<meta name="description" content="{{ descrizionePagina | default(site.sottotitolo) }}">
+{# Abilita i miglioramenti JS prima del paint per evitare flash #}
+<script>document.documentElement.className+=' js';</script>
+<link rel="preload" href="/fonts/spectral-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/archivo-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/frontiera.css">
+<link rel="alternate" type="application/rss+xml" title="{{ site.titolo }} — Analisi" href="/feed.xml">
+</head>
+<body>
+<a href="#main" class="skip">Salta al contenuto</a>
+
+<header class="nav">
+  <a class="brand" href="/" aria-label="{{ site.titolo }} — home">
+    <span class="word">Fronti<b>era</b></span>
+    <span class="sub">{{ site.sottotitolo }}</span>
+  </a>
+  <nav class="navlinks" aria-label="Sezioni principali">
+    {% for item in site.nav %}
+      <a href="{{ item.url }}"{% if (item.url != '/' ) and page.url.startsWith(item.url) %} class="on" aria-current="page"{% endif %}>{{ item.nome }}</a>
+    {% endfor %}
+  </nav>
+  <button class="burger" id="burger" aria-label="Apri menù" aria-expanded="false" aria-controls="mobilemenu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="scrim" id="scrim"></div>
+<aside class="mobilemenu" id="mobilemenu" aria-label="Menù mobile">
+  {% for item in site.nav %}
+    <a href="{{ item.url }}">{{ item.nome }}</a>
+  {% endfor %}
+</aside>
+
+<main id="main">
+{{ content | safe }}
+</main>
+
+<footer>
+  <div class="inner">
+    <div>
+      <div class="word">Fronti<b>era</b></div>
+      <div class="sub">{{ site.sottotitolo }}</div>
+    </div>
+    <nav aria-label="Mappa del sito">
+      {% for item in site.nav %}
+        <a href="{{ item.url }}">{{ item.nome }}</a>
+      {% endfor %}
+      <a href="/feed.xml">RSS</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/js/menu-mobile.js" defer></script>
+<script src="/js/carosello.js" defer></script>
+<script src="/js/filtro-archivio.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+---
+layout: layouts/base.njk
+---
+<article class="page">
+  {% if kicker %}<div class="artkicker">{{ kicker }}</div>{% endif %}
+  <h1>{{ titolo | default(titoloPagina) }}</h1>
+  {{ content | safe }}
+</article>

@@ -1,0 +1,48 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: sezioni
+  size: 1
+  alias: sez
+permalink: "/archivio/{{ sez.slug }}/index.html"
+eleventyComputed:
+  titoloPagina: "{{ sez.nome }}"
+  descrizionePagina: "{{ sez.descrizione }}"
+---
+{% if sez.tipo == "analisi" %}
+  {% set items = collections.analisi | perSezione(sez.sezione) %}
+{% else %}
+  {% set items = collections.schede | perCategoria(sez.categoria) %}
+{% endif %}
+
+<div class="archhead">
+  <div class="inner">
+    <h1>{{ sez.nome }}</h1>
+    <p>{{ sez.descrizione }}</p>
+    {% if sez.tipo == "analisi" %}
+    <div class="filters" id="archfilters" role="group" aria-label="Filtra per dominio">
+      <button class="chip on" type="button" data-dominio="tutto">Tutto</button>
+      {% for d in dominiFiltro %}
+        <button class="chip" type="button" data-dominio="{{ d.chiave }}">{{ d.nome }}</button>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="grid" id="archgrid">
+    {% if items.length %}
+      {% for item in items %}
+        {% if sez.tipo == "analisi" %}
+          {% include "partials/card-analisi.njk" %}
+        {% else %}
+          {% include "partials/card-scheda.njk" %}
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      <p class="archempty">Ancora nessun contenuto in questa sezione.</p>
+    {% endif %}
+  </div>
+  <p class="archempty" id="archempty" hidden>Nessun contenuto per questo dominio.</p>
+</div>

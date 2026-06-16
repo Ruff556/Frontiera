@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+---
+{% from "partials/media.njk" import media %}
+<article class="reading">
+  <a class="back" href="{{ sezione | archivioUrl }}">‹ {{ sezione }}</a>
+  <div class="artkicker">{{ sezione }}{% if teatro %} · Teatro: {{ teatro }}{% endif %}</div>
+  <h1>{{ titolo }}</h1>
+  {% if sommario %}<p class="standfirst">{{ sommario }}</p>{% endif %}
+  <div class="byline mono">
+    <span>Analisi</span>
+    <span>{{ data | dataIt }}</span>
+    {% if tempo_lettura %}<span>~ {{ tempo_lettura }} min di lettura</span>{% endif %}
+    {% if domini and domini.length %}<span>Domini: {{ domini | join(", ") }}</span>{% endif %}
+  </div>
+
+  {% if immagine and immagine.file %}
+    <div class="leadmedia">{{ media(immagine, "Immagine editoriale — 16:9") }}</div>
+  {% endif %}
+
+  {{ content | safe }}
+
+  {% set collegate = collections.schede | schedeBySlug(schede_collegate) %}
+  {% if collegate.length %}
+  <aside class="relbox" aria-label="Schede collegate">
+    <div class="lab">Schede collegate</div>
+    {% for s in collegate %}
+      <a href="{{ s.url }}"><span>{{ s.data.titolo }}{% if s.data.ruolo %} — {{ s.data.ruolo }}{% endif %}</span><span class="arrow">→</span></a>
+    {% endfor %}
+  </aside>
+  {% endif %}
+</article>
