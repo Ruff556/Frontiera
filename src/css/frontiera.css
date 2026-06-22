@@ -151,6 +151,7 @@ img{max-width:100%;display:block}
 
 .carousel{position:relative;max-width:var(--maxwide);margin:0 auto;z-index:2}
 .eyebrowrow{display:flex;align-items:center;gap:.8rem;margin-bottom:1.1rem;flex-wrap:wrap}
+.eyebrowrow .carbtns{margin-left:auto}
 .kicker{
   font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.18em;
   text-transform:uppercase;color:var(--accent);
@@ -162,14 +163,18 @@ img{max-width:100%;display:block}
 }
 @media(min-width:880px){.slide{grid-template-columns:1.15fr .85fr;gap:3rem}}
 .slide + .slide{display:none}
-/* Con JS: carosello a dissolvenza */
-.js .slides{min-height:330px}
+/* Con JS: carosello a dissolvenza su palco ad ALTEZZA FISSA.
+   Tutte le slide sono assolute (anche quella visibile), così il titolo
+   non può più dettare l'altezza: il riquadro resta immobile. */
+.js .slides{height:clamp(380px,52vh,520px)}
 .js .slide{position:absolute;inset:0;opacity:0;transition:opacity .7s ease;pointer-events:none}
 .js .slide + .slide{display:grid}
-.js .slide.show{opacity:1;pointer-events:auto;position:relative}
+.js .slide.show{opacity:1;pointer-events:auto}
 .slide h1{
   font-family:'Archivo',sans-serif;font-weight:700;line-height:1.04;
   font-size:clamp(2.1rem,5vw,3.5rem);letter-spacing:-.01em;margin-bottom:1rem;
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;
+  line-clamp:4;overflow:hidden;
 }
 .slide h1 a{color:inherit}
 .slide .dek{font-size:1.06rem;color:rgba(255,255,255,.78);max-width:34rem}
@@ -187,7 +192,7 @@ img{max-width:100%;display:block}
 .dots{display:flex;gap:.5rem;margin:1.8rem auto 0;max-width:var(--maxwide);padding-bottom:2.4rem;position:relative;z-index:2}
 .dot{width:30px;height:4px;border-radius:3px;background:rgba(255,255,255,.22);border:0;cursor:pointer;transition:background .25s}
 .dot.on{background:var(--accent)}
-.carbtns{position:absolute;top:.2rem;right:0;display:flex;gap:.4rem;z-index:3}
+.carbtns{display:flex;gap:.4rem;z-index:3}
 .carbtns button{
   width:34px;height:34px;border-radius:var(--r-md);border:1px solid rgba(255,255,255,.18);
   background:rgba(255,255,255,.05);color:#fff;cursor:pointer;font-size:1rem;
