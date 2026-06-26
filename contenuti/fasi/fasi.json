@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/scheda-fase.njk",
+  "tags": "fasi",
+  "permalink": "/fasi/{{ slug }}/"
+}

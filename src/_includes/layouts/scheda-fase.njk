@@ -1,0 +1,56 @@
+---
+layout: layouts/base.njk
+---
+{% from "partials/media.njk" import fill, media %}
+
+{# ============ INTESTAZIONE ============ #}
+{# Titolo portante: dice il contenuto, mai "Fase N". Il numero vive come
+   sopratitolo discreto, non come titolo. #}
+<div class="fasehead">
+  <div class="inner">
+    <div class="fasehead-testo">
+      <a class="back" href="/fasi/">‹ Le fasi del conflitto</a>
+      {% if numeroEtichetta %}<div class="type">{{ numeroEtichetta }} · {{ datazione }}</div>{% endif %}
+      <h1>{{ titolo }}</h1>
+      {% if soluzione %}<p class="role">{{ soluzione }}</p>{% endif %}
+    </div>
+    <div class="fasefig">{{ fill(immagine, "immagine di fase · 4:3") }}</div>
+  </div>
+</div>
+
+{# ============ INFOBOX ============ #}
+{# Formato didascalico, a colpo d'occhio. I campi alimentano anche la
+   futura linea del tempo (date, soluzione, anteprima). #}
+<div class="fasewrap">
+  <aside class="faseinfo" aria-label="Scheda sintetica della fase">
+    <div class="faseinfo-grid">
+      {% if datazione %}<div class="ir"><span class="k">Datazione</span><span class="v">{{ datazione }}</span></div>{% endif %}
+      {% if luoghi %}<div class="ir"><span class="k">Luoghi caldi del fronte</span><span class="v">{{ luoghi }}</span></div>{% endif %}
+      {% if intentoRusso %}<div class="ir"><span class="k">Intento russo</span><span class="v">{{ intentoRusso }}</span></div>{% endif %}
+      {% if intentoUcraino %}<div class="ir"><span class="k">Intento ucraino</span><span class="v">{{ intentoUcraino }}</span></div>{% endif %}
+      {% if soluzione %}<div class="ir ir--full"><span class="k">Soluzione caratterizzante</span><span class="v">{{ soluzione }}</span></div>{% endif %}
+    </div>
+  </aside>
+
+  {# ============ EXCURSUS (il corpo, nodo per nodo) ============ #}
+  <div class="fasebody">
+    {{ content | safe }}
+
+    {# ============ NAVIGAZIONE TRA FASI (cucitura) ============ #}
+    <nav class="fasenav" aria-label="Navigazione tra le fasi">
+      {% set tutte = collections.fasi %}
+      {% for f in tutte %}
+        {% if f.url == page.url %}
+          {% set prima = loop.index0 - 1 %}
+          {% set dopo = loop.index0 + 1 %}
+          {% if prima >= 0 %}
+            <a class="prev" href="{{ tutte[prima].url }}">‹ {{ tutte[prima].data.titolo }}</a>
+          {% endif %}
+          {% if dopo < tutte.length %}
+            <a class="next" href="{{ tutte[dopo].url }}">{{ tutte[dopo].data.titolo }} ›</a>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </div>
+</div>
