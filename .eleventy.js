@@ -31,6 +31,13 @@ module.exports = function (eleventyConfig) {
     return (flagged.length ? flagged : analisi).slice(0, 3);
   });
 
+// ---- Collezioni fasi ed eventi ----
+  eleventyConfig.addCollection("fasi", (c) =>
+    c.getFilteredByTag("fasi").sort((a, b) => (a.data.ordine ?? 0) - (b.data.ordine ?? 0))
+  );
+  eleventyConfig.addCollection("eventi", (c) =>
+    c.getFilteredByTag("eventi").sort((a, b) => (a.data.ordine ?? 0) - (b.data.ordine ?? 0))
+  );
   // ---- Rimandi bidirezionali ----
   // Analisi -> schede: risolve gli slug in oggetti scheda.
   eleventyConfig.addFilter("schedeBySlug", (schede, slugs) => {
@@ -46,6 +53,10 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => b.date - a.date)
   );
 
+  // Nodi di una fase: schede-evento che portano `fase: <slug>`.
+  eleventyConfig.addFilter("eventiPerFase", (eventi, slug) =>
+    (eventi || []).filter((e) => e.data.fase === slug)
+  );
   // ---- Selettori per griglie ----
   eleventyConfig.addFilter("perSezione", (items, nome) =>
     (items || []).filter((i) => i.data.sezione === nome)
@@ -101,6 +112,7 @@ module.exports = function (eleventyConfig) {
     "Mezzi aerei": "/archivio/mezzi-aerei/",
     "Mezzi terrestri": "/archivio/mezzi-terrestri/",
     Droni: "/archivio/droni/",
+    Fasi: "/fasi/",
   };
   eleventyConfig.addFilter("archivioUrl", (nome) => ARCH[nome] || "/");
 

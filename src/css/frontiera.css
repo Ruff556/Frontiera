@@ -359,3 +359,79 @@ footer nav a:hover{color:#fff}
 /* ---------- SKIP LINK ---------- */
 .skip{position:absolute;left:-999px}
 .skip:focus{left:1rem;top:1rem;z-index:99;background:#fff;color:var(--ink);padding:.6rem 1rem;border-radius:6px}
+/* ============================================================
+   /* ============================================================
+   SCHEDA-FASE  —  SOSTITUISCE il blocco scheda-fase gia' presente
+   in fondo a frontiera.css (cancella il vecchio, incolla questo).
+   ============================================================ */
+
+/* ---- INTESTAZIONE ---- */
+.fasehead{background:linear-gradient(160deg,var(--ink),var(--ink-3));color:#fff;padding:6.8rem clamp(1rem,4vw,2.75rem) 2.4rem}
+.fasehead .inner{max-width:var(--maxwide);margin:0 auto}
+.fasehead .back{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;display:inline-block;margin-bottom:1.1rem}
+.fasehead .type{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
+.fasehead h1{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(2rem,5vw,3rem);letter-spacing:-.01em;line-height:1.05;max-width:22ch}
+.fasehead .role{color:rgba(255,255,255,.74);margin-top:.7rem;font-size:1.06rem;max-width:46ch}
+
+/* ---- CORPO A DUE COLONNE ---- */
+.fasewrap{max-width:var(--maxwide);margin:0 auto;padding:clamp(2rem,5vw,3.5rem) clamp(1rem,4vw,2.75rem);display:grid;grid-template-columns:1fr;gap:clamp(1.8rem,4vw,3rem);align-items:start}
+@media(min-width:900px){
+  .fasewrap{grid-template-columns:20rem 1fr}
+}
+
+/* Colonna sinistra: sticky solo se piu' corta della viewport; altrimenti
+   scorre normalmente col resto della pagina (niente blocco scomodo). */
+.faseaside{display:flex;flex-direction:column;gap:1.1rem}
+@media(min-width:900px){
+  .faseaside{position:sticky;top:5.5rem;max-height:calc(100vh - 6.5rem);overflow-y:auto;padding-right:.3rem}
+  /* scrollbar discreta */
+  .faseaside::-webkit-scrollbar{width:6px}
+  .faseaside::-webkit-scrollbar-thumb{background:var(--hairline);border-radius:3px}
+}
+
+/* Immagine: cornice arrotondata su TUTTI i lati, crediti SOTTO (via media) */
+.fasefig figure.media{margin:0}
+.fasefig figure.media .frame{border-radius:var(--r-lg);aspect-ratio:4/3}
+.fasefig figure.media .frame img{width:100%;height:100%;object-fit:cover}
+.fasefig figure.media figcaption{margin-top:.5rem;display:flex;flex-direction:column;gap:.2rem;line-height:1.35}
+.fasefig figure.media figcaption .cap{color:var(--text);font-family:'Spectral',serif;font-size:.82rem;font-style:italic}
+.fasefig figure.media figcaption .rights{color:var(--muted-2);font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.03em}
+.fasefig figure.media figcaption .rights b{color:var(--muted);font-weight:500}
+
+/* Infobox */
+.faseinfo{background:var(--card);border:1px solid var(--hairline);border-radius:var(--r-md);padding:1.15rem 1.25rem}
+.faseinfo-grid{display:flex;flex-direction:column;gap:.9rem}
+.faseinfo .ir{display:flex;flex-direction:column;gap:.22rem}
+.faseinfo .k{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)}
+.faseinfo .v{font-size:.95rem;line-height:1.42;color:var(--text)}
+.faseinfo .ir--full{padding-top:.7rem;border-top:1px solid var(--hairline)}
+.faseinfo .ir--full .v{font-weight:500}
+
+/* Colonna destra: lettura */
+.fasebody{max-width:var(--maxread)}
+.fasebody h2{font-family:'Archivo',sans-serif;font-weight:600;font-size:1.5rem;letter-spacing:-.005em;margin:2.4rem 0 .9rem;color:var(--ink);line-height:1.15}
+.fasebody h2:first-child{margin-top:0}
+.fasebody p{font-size:1.12rem;line-height:1.62;margin-bottom:1.25rem}
+.fasebody ul{margin:0 0 1.3rem;padding-left:1.15rem}
+.fasebody li{font-size:1.08rem;line-height:1.55;margin-bottom:.6rem}
+.fasebody strong{font-weight:600}
+.fasebody em{font-style:italic}
+
+/* MOVIMENTO II — I NODI */
+.fasenodi{margin:2.8rem 0 0}
+.fasenodi h2{font-family:'Archivo',sans-serif;font-weight:600;font-size:1.5rem;margin-bottom:1rem;color:var(--ink)}
+.nodi-attesa{font-style:italic;color:var(--muted);font-size:1rem}
+.nodi-lista{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.6rem}
+.nodo a{display:flex;align-items:center;gap:1rem;padding:.95rem 1.1rem;background:var(--card);border:1px solid var(--hairline);border-radius:var(--r-md);transition:border-color .2s,transform .2s}
+.nodo a:hover{border-color:var(--accent);transform:translateX(3px)}
+.nodo-num{font-family:'IBM Plex Mono',monospace;font-size:.9rem;font-weight:600;color:var(--accent);flex-shrink:0}
+.nodo-testo{display:flex;flex-direction:column;gap:.15rem;flex:1}
+.nodo-titolo{font-family:'Archivo',sans-serif;font-weight:600;color:var(--ink);line-height:1.2}
+.nodo-somm{font-size:.92rem;color:var(--muted);line-height:1.35}
+.nodo-freccia{color:var(--accent);font-family:'IBM Plex Mono',monospace;flex-shrink:0}
+
+/* CUCITURA */
+.fasenav{display:flex;justify-content:space-between;gap:1rem;margin-top:2.8rem;padding-top:1.4rem;border-top:1px solid var(--hairline);flex-wrap:wrap}
+.fasenav a{font-family:'Archivo',sans-serif;font-weight:600;color:var(--ink);font-size:.98rem}
+.fasenav a:hover{color:var(--accent)}
+.fasenav .next{margin-left:auto;text-align:right}
