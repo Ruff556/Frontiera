@@ -2,6 +2,8 @@ const rssPlugin = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(rssPlugin);
+  // ---- Markdown: consenti HTML grezzo nel corpo (schemi .derivazione, ecc.) ----
+  eleventyConfig.amendLibrary("md", (mdLib) => mdLib.set({ html: true }));
 
   // ---- Asset statici (passthrough) ----
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });

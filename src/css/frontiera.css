@@ -435,3 +435,81 @@ footer nav a:hover{color:#fff}
 .fasenav a{font-family:'Archivo',sans-serif;font-weight:600;color:var(--ink);font-size:.98rem}
 .fasenav a:hover{color:var(--accent)}
 .fasenav .next{margin-left:auto;text-align:right}
+
+/* ============================================================
+   SCHEMA DI DERIVAZIONE (assunti annidati) — componente riusabile
+   Da ACCODARE in fondo a src/css/frontiera.css.
+   Uso: nel corpo Markdown si incolla il frammento HTML .derivazione
+   (vedi esempio Fase 1). Le scatole si contengono per mostrare
+   che ogni grado poggia su quello che lo racchiude.
+   ============================================================ */
+
+.derivazione{
+  margin:2rem 0;
+  border:1px solid var(--hairline);
+  border-radius:var(--r-lg);
+  background:linear-gradient(160deg,var(--ink),var(--ink-3));
+  padding:clamp(1rem,3vw,1.6rem);
+  color:#fff;
+}
+.derivazione .der-cap{
+  font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:1rem;display:block;
+}
+
+/* livello: una scatola. Le scatole annidate stanno dentro il .liv-body del genitore */
+.der-liv{
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:var(--r-md);
+  padding:.85rem .95rem;
+  background:rgba(255,255,255,.03);
+}
+.der-liv + .der-liv{margin-top:.7rem}
+
+.der-tag{
+  font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.1em;
+  text-transform:uppercase;color:#C9C3B2;display:block;margin-bottom:.35rem;
+}
+.der-txt{
+  font-family:'Spectral',serif;font-size:1rem;line-height:1.4;color:#fff;
+}
+.der-txt b{font-weight:600}
+
+/* corpo che contiene i livelli figli, rientrato e segnato da una guida a sinistra */
+.der-body{
+  margin-top:.8rem;padding-left:.9rem;
+  border-left:2px solid rgba(28,110,140,.5);   /* accent tenue: "poggia su" */
+  display:flex;flex-direction:column;gap:.7rem;
+}
+
+/* i due annidati affiancati su desktop, impilati su mobile */
+.der-coppia{display:flex;flex-direction:column;gap:.7rem}
+@media(min-width:620px){.der-coppia{flex-direction:row}.der-coppia .der-liv{flex:1}}
+
+/* gradazione cromatica per profondità (sottile) */
+.der-liv--strat{border-color:rgba(255,255,255,.22)}
+.der-liv--sup{border-color:rgba(28,110,140,.5)}
+.der-liv--ann{border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.02)}
+
+/* ============================================================
+   VINCITORI E VINTI (scatola-gruppo) — accodare a frontiera.css
+   ============================================================ */
+:root{
+  --asc:#3E7D63; --asc-bg:#EAF1EC;   /* ascesa — verde-salvia */
+  --dec:#A65442; --dec-bg:#F4EAE6;   /* declino — mattone smorzato */
+  --tra:#9A7B2E; --tra-bg:#F4EFE0;   /* trasformato — ambra spento */
+}
+.grp{position:relative;background:var(--card);border:1px solid var(--hairline);border-left:3px solid var(--muted-2);border-radius:var(--r-lg);padding:1.1rem 1.3rem 1.15rem 1.4rem;margin:0 0 1rem;overflow:hidden}
+.grp-head{display:flex;align-items:center;gap:.6rem;margin-bottom:.9rem}
+.grp-ico{flex-shrink:0;width:22px;height:22px}
+.grp-moto{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.01em;text-transform:uppercase}
+.grp-tag{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;padding:.16rem .5rem;border-radius:5px}
+.grp .el{padding:.7rem 0;border-top:1px dashed var(--hairline)}
+.grp .el:first-of-type{border-top:0;padding-top:0}
+.grp .el-nome{font-family:'Archivo',sans-serif;font-weight:600;font-size:1.02rem;color:var(--ink);margin-bottom:.2rem}
+.grp .el-txt{font-size:1.02rem;line-height:1.5;color:var(--text)}
+.grp .el-txt b{font-weight:600}
+.grp-eco{position:absolute;right:-8px;top:1.2rem;width:96px;height:96px;opacity:.06;pointer-events:none}
+.grp--asc{border-left-color:var(--asc)} .grp--asc .grp-moto{color:var(--asc)} .grp--asc .grp-tag{color:var(--asc);background:var(--asc-bg)} .grp--asc .grp-ico,.grp--asc .grp-eco{color:var(--asc)}
+.grp--dec{border-left-color:var(--dec)} .grp--dec .grp-moto{color:var(--dec)} .grp--dec .grp-tag{color:var(--dec);background:var(--dec-bg)} .grp--dec .grp-ico,.grp--dec .grp-eco{color:var(--dec)}
+.grp--tra{border-left-color:var(--tra)} .grp--tra .grp-moto{color:var(--tra)} .grp--tra .grp-tag{color:var(--tra);background:var(--tra-bg)} .grp--tra .grp-ico,.grp--tra .grp-eco{color:var(--tra)}

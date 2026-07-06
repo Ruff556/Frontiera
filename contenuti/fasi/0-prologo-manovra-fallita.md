@@ -11,7 +11,7 @@ datazione: "24 febbraio – aprile 2022"
 luoghi: "Asse di Kyiv e Hostomel (nord); Kherson e ponte di Antonivka (sud)"
 intentoRusso: "Colpo di mano rapido che elude la guerra: decapitazione politica e successo su entrambi gli assi, nord e sud."
 intentoUcraino: "Negare la decisione rapida con difesa dispersa ed elastica; tenere la capitale e logorare le colonne."
-soluzione: "Manovra corazzata su due assi contro difesa elastica e dispersa (MANPADS, controcarro spallabili)"
+soluzione: "Manovra corazzata su due assi contro difesa elastica e dispersa"
 
 # ============ DATI PER LA LINEA DEL TEMPO ============
 titoloBreve: "Manovra fallita"
@@ -29,9 +29,9 @@ immagine:
 
 ## La fase che apre la catena
 
-La Fase 0 è l'unico segmento del conflitto che non nasce da una contromisura. Ogni fase che segue risponde a un problema lasciato aperto dalla precedente; questa, sola, apre la serie. È il momento in cui un paradigma ereditato — le riforme militari russe post 2008, la forma del **Gruppo Tattico di Battaglione** (GTB), la scommessa su una guerra breve e decisiva — viene portato davanti al solo giudice che conti, il campo, e trovato manchevole. Il suo contenuto è prima negativo che positivo: la fase non propone, smentisce. Per questo è prologo, e non Fase 1.
+La Fase 0 è l'unico segmento del conflitto che non nasce da una contromisura. Ogni fase che segue risponde a un problema lasciato aperto dalla precedente; questa, sola, apre la serie. È il momento in cui un paradigma ereditato — le riforme militari russe post 2008, la forma del **Gruppo Tattico di Battaglione** (BTG), la scommessa su una guerra breve e decisiva — viene portato davanti al solo giudice che conti, il campo, e trovato manchevole. Il suo contenuto è prima negativo che positivo: la fase non propone, smentisce. Per questo è prologo, e non Fase 1.
 
-Ciò che il prologo mette alla prova è una congettura, e conviene leggerla nei suoi due piani, perché l'uno regge l'altro. Sul piano politico, in grado massimo, sta la scommessa: un rapido colpo di mano mette in ginocchio lo Stato ucraino e ne assume il controllo, *eludendo la guerra*. Sul piano militare, da cui il primo dipende per intero, sta la premessa che lo rende possibile: le due manovre offensive principali — a nord e a sud, imperniate sul GTB — avranno successo, perché il nemico è colto di sorpresa, inferiore di forze e politicamente debole. La decisione rapida doveva essere *prodotta* dal successo su entrambi gli assi. È questa dipendenza a rendere netto, alla fine, il giudizio: una scommessa politica che poggia su una premessa militare cade con la premessa.
+Ciò che il prologo mette alla prova è una congettura, e conviene leggerla nei suoi due piani, perché l'uno regge l'altro. Sul piano politico, in grado massimo, sta la scommessa: un rapido colpo di mano mette in ginocchio lo Stato ucraino e ne assume il controllo, *eludendo la guerra*. Sul piano militare, da cui il primo dipende per intero, sta la premessa che lo rende possibile: le due manovre offensive principali — a nord e a sud, imperniate sul BTG — avranno successo, perché il nemico è colto di sorpresa, inferiore di forze e politicamente debole. La decisione rapida doveva essere *prodotta* dal successo su entrambi gli assi. È questa dipendenza a rendere netto, alla fine, il giudizio: una scommessa politica che poggia su una premessa militare cade con la premessa.
 
 La tesi sotto esame, dunque, non è «la manovra in astratto», ma *quella* manovra, su *quei* due assi, di *quella* forza, posta al servizio dell'assunto politico. Per reggere, doveva riuscire su **entrambe** le direttrici.
 
@@ -65,13 +65,27 @@ L'esito non consegna un equilibrio. Lo scarto fra previsione e realtà è simmet
 
 ## Vincitori e vinti
 
-Questa sezione scende nei mezzi e nelle strategie, e mostra quali strumenti hanno consentito il trionfo di una forma sull'altra. Vale però un'avvertenza vincolante: comparire qui non fa di un mezzo uno sconfitto della guerra. Lo sconfitto di una fase può essere il vincitore della successiva — tanto più nel passaggio dalla manovra all'attrito, che ribalta il valore degli strumenti. Le conclusioni che seguono riguardano *questa* fase, non l'intero conflitto.
+Comparire qui non fa di un mezzo uno sconfitto della guerra: lo sconfitto di una fase può essere il vincitore della successiva — tanto più nel passaggio dalla manovra all'attrito, che ribalta il valore degli strumenti. Le conclusioni riguardano *questa* fase, non l'intero conflitto.
 
-Sul lato che declina stanno l'elicottero, esposto ai MANPADS fin dalle prime ore di Hostomel, e la colonna corazzata sull'asse lungo, dove il carro è privato di schermo appiedato e di sostegno logistico. Non sono verdetti definitivi: sono i primi moti di un declino che le fasi successive verificheranno.
+<div class="grp grp--dec">
+  <svg class="grp-eco" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4 L20 20"/><path d="M20 14 L20 20 L14 20"/><path d="M4 10 L14 20" opacity="0.5"/><path d="M4 16 L8 20" opacity="0.25"/></svg>
+  <div class="grp-head"><svg class="grp-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5 L19 19"/><path d="M19 12 L19 19 L12 19"/></svg><span class="grp-moto">Declina</span><span class="grp-tag">primi moti</span></div>
+  <div class="el"><div class="el-nome">L'elicottero</div><div class="el-txt">Esposto ai <b>MANPADS</b> fin dalle prime ore di Hostomel, la sua presenza a ridosso del fronte diventa insostenibile. Non è un verdetto definitivo, ma il primo moto di un declino che le fasi successive verificheranno.</div></div>
+  <div class="el"><div class="el-nome">La colonna corazzata sull'asse lungo</div><div class="el-txt">Privata dello schermo di fanteria appiedata e del sostegno logistico, sull'asse lungo diventa bersaglio ideale dell'interdizione dispersa.</div></div>
+</div>
 
-Sul lato che ascende stanno gli strumenti dell'elasticità difensiva. I **MANPADS** e i controcarro spallabili — **Javelin** e **NLAW** — sono ciò che rende possibile la difesa dispersa: leggeri, distribuibili a piccoli gruppi, capaci di colpire e dileguarsi. È nel mezzo, non nel proclama, che si vede *perché* l'interdizione dispersa funziona.
+<div class="grp grp--asc">
+  <svg class="grp-eco" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 L20 4"/><path d="M20 10 L20 4 L14 4"/><path d="M4 14 L14 4" opacity="0.5"/><path d="M4 8 L8 4" opacity="0.25"/></svg>
+  <div class="grp-head"><svg class="grp-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 L19 5"/><path d="M19 12 L19 5 L12 5"/></svg><span class="grp-moto">Ascende</span><span class="grp-tag">elasticità difensiva</span></div>
+  <div class="el"><div class="el-nome">MANPADS e controcarro spallabili (Javelin, NLAW)</div><div class="el-txt">Leggeri, distribuibili a piccoli gruppi, capaci di colpire e dileguarsi: sono ciò che rende possibile la <b>difesa dispersa</b>. È nel mezzo, non nel proclama, che si vede perché l'interdizione elastica funziona.</div></div>
+  <div class="el"><div class="el-nome">Il TB2 Bayraktar</div><div class="el-txt">Ascende in questa fase come mezzo ISR e tiro radiocomandato a media quota — ma è un'ascesa che le fasi successive negheranno. Il limite non è del drone né dell'iniziativa russa presa da sola, ma del loro <b>incontro</b>: l'agency va all'attore che adatta.</div></div>
+</div>
 
-Caso a parte è il **TB2** Bayraktar, il drone armato turco che in questa fase ascende — e che *le fasi successive* negheranno. Il suo limite non va ascritto a una proprietà del drone né all'iniziativa russa presa da sola, ma all'**incontro** tra i due: un mezzo da ISR (Intelligence, Surveillance, and Reconnaissance) e tiro radiocomandato a media quota, quale i suoi costruttori lo progettarono, contro una difesa aerea russa che verrà ricostituita e densificata, sostenuta dalla guerra elettronica. L'agency va attribuita all'attore che adatta: se la Russia neutralizza il TB2, è la Russia a farlo: non un destino iscritto nel mezzo.
+<div class="grp grp--tra">
+  <svg class="grp-eco" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12 a8 8 0 0 1 -13.7 5.6"/><path d="M4 12 a8 8 0 0 1 13.7 -5.6"/><path d="M17.7 3 L17.7 6.4 L14.3 6.4"/><path d="M6.3 21 L6.3 17.6 L9.7 17.6"/></svg>
+  <div class="grp-head"><svg class="grp-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12 a8 8 0 0 1 -13.7 5.6"/><path d="M4 12 a8 8 0 0 1 13.7 -5.6"/><path d="M17.7 3 L17.7 6.4 L14.3 6.4"/><path d="M6.3 21 L6.3 17.6 L9.7 17.6"/></svg><span class="grp-moto">Trasformato</span><span class="grp-tag">muta ruolo</span></div>
+  <div class="el"><div class="el-nome">L'artiglieria</div><div class="el-txt">Non vince né perde: <b>muta ruolo</b>. Da strumento della manovra diventa protagonista della contesa di fuoco che apre la fase seguente, in attesa che l'interdizione di profondità ne insidi la catena di rifornimento.</div></div>
+</div>
 
 ## Il campo resta aperto
 
