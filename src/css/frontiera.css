@@ -437,59 +437,35 @@ footer nav a:hover{color:#fff}
 .fasenav .next{margin-left:auto;text-align:right}
 
 /* ============================================================
-   SCHEMA DI DERIVAZIONE (assunti annidati) — componente riusabile
-   Da ACCODARE in fondo a src/css/frontiera.css.
-   Uso: nel corpo Markdown si incolla il frammento HTML .derivazione
-   (vedi esempio Fase 1). Le scatole si contengono per mostrare
-   che ogni grado poggia su quello che lo racchiude.
+   SCHEMA DI DERIVAZIONE — variante chiara "C"
+   SOSTITUISCE il vecchio blocco .derivazione (fondo petrolio) in frontiera.css.
+   Canone coerente con le scatole vincitori/vinti: fondo chiaro, bordo-accento
+   che SCHIARISCE scendendo di profondità, nidificazione per rientro + guida.
+   Standard: max 3 livelli di profondità (strat → sup → ann).
    ============================================================ */
+:root{
+  --der-l1:#1C6E8C;   /* strategico — petrolio pieno */
+  --der-l2:#5A97AD;   /* superiore — azzurro medio */
+  --der-l3:#9EC3CF;   /* annidato — azzurro chiaro */
+}
+.derivazione{margin:2rem 0;padding:.2rem 0}
+.der-cap{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.9rem;display:block}
 
-.derivazione{
-  margin:2rem 0;
-  border:1px solid var(--hairline);
-  border-radius:var(--r-lg);
-  background:linear-gradient(160deg,var(--ink),var(--ink-3));
-  padding:clamp(1rem,3vw,1.6rem);
-  color:#fff;
-}
-.derivazione .der-cap{
-  font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--accent);margin-bottom:1rem;display:block;
-}
-
-/* livello: una scatola. Le scatole annidate stanno dentro il .liv-body del genitore */
-.der-liv{
-  border:1px solid rgba(255,255,255,.16);
-  border-radius:var(--r-md);
-  padding:.85rem .95rem;
-  background:rgba(255,255,255,.03);
-}
-.der-liv + .der-liv{margin-top:.7rem}
-
-.der-tag{
-  font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.1em;
-  text-transform:uppercase;color:#C9C3B2;display:block;margin-bottom:.35rem;
-}
-.der-txt{
-  font-family:'Spectral',serif;font-size:1rem;line-height:1.4;color:#fff;
-}
+/* un livello = una striscia con bordo-accento a sinistra */
+.der-liv{padding:.75rem .95rem;border-radius:var(--r-md);background:var(--card);border:1px solid var(--hairline);border-left:3px solid var(--der-l1)}
+.der-tag{font-family:'IBM Plex Mono',monospace;font-size:.58rem;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.3rem}
+.der-txt{font-family:'Spectral',serif;font-size:1rem;line-height:1.4;color:var(--text)}
 .der-txt b{font-weight:600}
 
-/* corpo che contiene i livelli figli, rientrato e segnato da una guida a sinistra */
-.der-body{
-  margin-top:.8rem;padding-left:.9rem;
-  border-left:2px solid rgba(28,110,140,.5);   /* accent tenue: "poggia su" */
-  display:flex;flex-direction:column;gap:.7rem;
-}
+/* corpo annidato: rientro + guida tratteggiata; l'accento del bordo schiarisce */
+.der-body{margin-top:.55rem;margin-left:1.1rem;padding-left:1rem;border-left:2px dashed var(--hairline);display:flex;flex-direction:column;gap:.55rem}
+.der-liv--sup{border-left-color:var(--der-l2)}
+.der-liv--ann{border-left-color:var(--der-l3)}
 
-/* i due annidati affiancati su desktop, impilati su mobile */
-.der-coppia{display:flex;flex-direction:column;gap:.7rem}
-@media(min-width:620px){.der-coppia{flex-direction:row}.der-coppia .der-liv{flex:1}}
-
-/* gradazione cromatica per profondità (sottile) */
-.der-liv--strat{border-color:rgba(255,255,255,.22)}
-.der-liv--sup{border-color:rgba(28,110,140,.5)}
-.der-liv--ann{border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.02)}
+/* i due annidati affiancati, impilati su mobile */
+.der-coppia{display:flex;gap:.55rem}
+.der-coppia .der-liv{flex:1}
+@media(max-width:560px){.der-coppia{flex-direction:column}}
 
 /* ============================================================
    VINCITORI E VINTI (scatola-gruppo) — accodare a frontiera.css
