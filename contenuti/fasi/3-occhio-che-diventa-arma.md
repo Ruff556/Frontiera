@@ -20,11 +20,11 @@ dialettica: "Trasparenza contesa"
 
 # ---- IMMAGINE (diritti obbligatori) ----
 immagine:
-  file: 
-  alt: ""
-  credito: ""
+  file: /immagini/fasi/fase-3-T72.jpg
+  alt: "Carro T-72 russo con voluminoso sistema EW improvvisato su pallet, catturato presso Terny"
+  credito: "Serhii «Flash» Beskrestnov — Uso autorizzato su concessione diretta"
   licenza: ""
-  didascalia: ""
+  didascalia: "Terny, aprile 2024: carro T-72 russo con batteria EW improvvisata contro droni FPV, disabilitato e catturato dalla 12ª Brigata forze speciali «Azov»."
 ---
 
 ## Dopo la difesa che osserva, l'occhio diventa arma
