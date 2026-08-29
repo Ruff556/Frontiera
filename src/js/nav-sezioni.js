@@ -413,7 +413,7 @@
   }
 
   /* =====================================================================
-     RULLINO MOBILE / SCHERMI STRETTI  (logica approvata, invariata)
+     RULLINO MOBILE / SCHERMI STRETTI
      ===================================================================== */
   var narrowMQ = window.matchMedia("(max-width: 1139px)");
   var roll = document.createElement("nav");
@@ -498,6 +498,21 @@
   var position = 0;
   var selected = 0;
 
+  function hapticPulse(duration) {
+    if (typeof navigator === "undefined" || typeof navigator.vibrate !== "function") return;
+    try {
+      navigator.vibrate(duration);
+    } catch (e) {}
+  }
+
+  function hapticTick() {
+    hapticPulse(28);
+  }
+
+  function hapticMenu() {
+    hapticPulse(16);
+  }
+
   function renderRoll(pos) {
     position = pos;
     for (var i = 0; i < rollTicks.length; i++) {
@@ -511,15 +526,13 @@
         tk.classList.remove("is-center");
         continue;
       }
-      var scale = 1 - Math.min(ad * 0.16, 0.42);
+      var scale = 1 - Math.min(ad * 0.08, 0.16);
       var opacity = 1 - Math.min(ad * 0.4, 0.82);
-      var rot = reduceMotion ? 0 : Math.max(Math.min(-d * 12, 26), -26);
       tk.style.opacity = String(opacity);
       tk.style.transform =
         "translateY(" +
         d * STEP +
         "px)" +
-        (reduceMotion ? "" : " perspective(220px) rotateX(" + rot + "deg)") +
         " scale(" +
         scale +
         ")";
@@ -531,11 +544,7 @@
     idx = Math.max(0, Math.min(sections.length - 1, idx));
     if (idx !== selected) {
       selected = idx;
-      if (navigator.vibrate) {
-        try {
-          navigator.vibrate(8);
-        } catch (e) {}
-      }
+      hapticTick();
     }
     if (showPop) {
       popupText.textContent = sections[selected].title;
@@ -624,41 +633,45 @@
     capsule.setAttribute("aria-valuenow", String(idx + 1));
   });
 
-  // ----- Comparsa/scomparsa del rullino -----
+  // ----- Comparsa del rullino -----
   var pastStart = false;
-  var atEnd = false;
   function updateRollVisibility() {
-    var show = narrowMQ.matches && pastStart && !atEnd;
+    var show = narrowMQ.matches && pastStart;
     roll.classList.toggle("is-visible", show);
-    // Se il rullino non è più visibile (sopra la prima sezione, oltre la fine,
-    // o viewport tornato largo) il menu eventualmente aperto va chiuso.
+    // Se il rullino non è più visibile (sopra il corpo o viewport tornato largo)
+    // il menu eventualmente aperto va chiuso.
     if (!show) closeMenu(false);
   }
-  var startObs = new IntersectionObserver(
-    function (entries) {
-      var top = entries[0].boundingClientRect.top;
-      pastStart = top <= navH + 8;
-      updateRollVisibility();
-    },
-    { rootMargin: "-" + (navH + 8) + "px 0px 0px 0px", threshold: [0, 1] }
-  );
-  startObs.observe(sections[0].el);
 
-  var endEl =
-    document.querySelector(".fasenodi") ||
-    document.querySelector(".fasenav") ||
-    document.querySelector(".relbox") ||
-    document.querySelector("footer");
-  if (endEl) {
-    var endObs = new IntersectionObserver(
+  // Il marker è ancorato all'inizio del contenitore indicizzabile, non al
+  // primo h2: così il rullino entra appena il lettore raggiunge il corpo vero
+  // della pagina, anche quando il corpo inizia con testo, media o uno schema.
+  var startMarker = document.createElement("span");
+  startMarker.className = "secroll-start-marker";
+  startMarker.setAttribute("aria-hidden", "true");
+  startMarker.style.cssText =
+    "position:absolute;left:0;top:0;width:1px;height:1px;pointer-events:none;opacity:0;";
+  if (getComputedStyle(body).position === "static") body.classList.add("secnav-start-anchor");
+  body.insertBefore(startMarker, body.firstChild);
+
+  var startObs = null;
+  function setupStartObserver() {
+    if (startObs) startObs.disconnect();
+    var line = Math.round(navH + 12);
+    startObs = new IntersectionObserver(
       function (entries) {
-        atEnd = entries[0].isIntersecting;
+        var top = entries[0].boundingClientRect.top;
+        pastStart = top <= line;
         updateRollVisibility();
       },
-      { rootMargin: "-" + (navH + 40) + "px 0px 0px 0px", threshold: 0 }
+      { rootMargin: "-" + line + "px 0px 0px 0px", threshold: 0 }
     );
-    endObs.observe(endEl);
+    startObs.observe(startMarker);
+    pastStart = startMarker.getBoundingClientRect().top <= line;
+    updateRollVisibility();
   }
+  setupStartObserver();
+
   if (narrowMQ.addEventListener)
     narrowMQ.addEventListener("change", updateRollVisibility);
   else narrowMQ.addListener(updateRollVisibility);
@@ -671,14 +684,6 @@
   var menuOpen = false;
   var mediaFine = window.matchMedia("(hover: hover) and (pointer: fine)");
   var hoverCloseT = null;
-
-  function menuHaptic() {
-    if (navigator.vibrate) {
-      try {
-        navigator.vibrate(8);
-      } catch (e) {}
-    }
-  }
 
   // All'apertura porta la voce attiva nell'area visibile del pannello.
   function revealActiveMenuItem() {
@@ -718,7 +723,7 @@
     syncMenuActive();
     menu.classList.add("is-open");
     revealActiveMenuItem();
-    menuHaptic(); // impulso di apertura
+    hapticMenu(); // impulso di apertura
     document.addEventListener("pointerdown", onMenuOutside, true);
     document.addEventListener("keydown", onMenuKey, true);
     if (fromKeyboard) {
@@ -755,7 +760,7 @@
   }
 
   function selectFromMenu(idx, fromKeyboard) {
-    menuHaptic(); // impulso unico di selezione: goTo non produce feedback aptico
+    hapticMenu(); // impulso unico di selezione: goTo non produce feedback aptico
     closeMenu(false);
     goTo(idx, true, fromKeyboard); // stessa navigazione di rullino e pannello
   }
@@ -843,6 +848,7 @@
         reT = null;
         measure();
         setupObserver();
+        setupStartObserver();
         computeActive();
         if (!dragging) renderRoll(activeIndex >= 0 ? activeIndex : 0);
       }, 150);

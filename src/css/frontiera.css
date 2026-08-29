@@ -489,8 +489,9 @@ svg{display:block}
 }
 .carbtns button:hover{background:rgba(180,216,230,.2);border-color:var(--gd-brd-hi)}
 /* controlli del carosello solo con JS */
-.js .carbtns{display:flex}
 .js .dots{display:flex}
+@media(min-width:880px){.js .carbtns{display:flex}}
+@media(max-width:879px){.js .carbtns{display:none}}
 /* senza JS il palco non ha altezza fissa: spazio sotto comunque */
 .hero .carousel{padding-bottom:2.6rem}
 .js .hero .carousel{padding-bottom:0}
@@ -2283,23 +2284,27 @@ figure.media figcaption .rights b{color:#4A5A64;font-weight:500}
 @media(max-width:1139px){
   .secroll{
     display:block;position:fixed;z-index:40;
-    /* poco sotto la metà verticale del viewport (centro capsula ~57%) */
-    top:calc(57vh - 2.7rem);
+    /* Il centro usa svh: non segue le oscillazioni della browser chrome mobile. */
+    top:57vh;
     right:calc(env(safe-area-inset-right,0px) + .7rem);
-    opacity:0;transform:translateY(-8px) scale(.94);pointer-events:none;
+    opacity:0;transform:translateY(calc(-50% - 8px)) scale(.94);pointer-events:none;
     transition:opacity var(--t2) ease,transform var(--t2) ease;
   }
-  .secroll.is-visible{opacity:1;transform:none;pointer-events:auto}
+  .secroll.is-visible{opacity:1;transform:translateY(-50%);pointer-events:auto}
+  @supports (height:1svh){.secroll{top:57svh}}
 }
-/* Solo la LARGHEZZA visiva è variabile (--secroll-w); altezza, tacche, area
-   tattile effettiva e animazioni restano invariate. */
+/* Ancora assoluta per il marker d'ingresso: non occupa spazio nel testo. */
+.secnav-start-anchor{position:relative}
+.secroll-start-marker{display:block}
+/* Il guscio resta visivamente stretto, ma la pseudo-area conserva una zona
+   tattile ampia per il drag. */
 .secroll-capsule{
-  position:relative;width:var(--secroll-w);height:5.4rem;border-radius:1.1rem;overflow:hidden;
-  background:linear-gradient(160deg,rgba(255,255,255,.42),rgba(255,255,255,.22));
+  position:relative;width:var(--secroll-w);height:5.4rem;border-radius:var(--r-sm);overflow:hidden;
+  background:linear-gradient(160deg,rgba(255,255,255,.46),rgba(255,255,255,.26));
   -webkit-backdrop-filter:var(--blur-panel);
   backdrop-filter:var(--blur-panel);
-  border:1px solid rgba(255,255,255,.58);
-  box-shadow:0 8px 24px -10px rgba(6,12,17,.5),inset 0 1px 0 rgba(255,255,255,.72);
+  border:1px solid rgba(255,255,255,.62);
+  box-shadow:0 8px 24px -10px rgba(6,12,17,.5),inset 0 1px 0 rgba(255,255,255,.76);
   cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none;
 }
 .secroll-capsule::before{
@@ -2307,22 +2312,21 @@ figure.media figcaption .rights b{color:#4A5A64;font-weight:500}
   background:linear-gradient(150deg,rgba(255,255,255,.55),rgba(255,255,255,0) 50%);opacity:.75;
 }
 .secroll-capsule.is-dragging{cursor:grabbing}
-/* area tattile effettiva INVARIATA: il rettangolo assorbe l'assottigliamento
-   della pillola estendendosi a sinistra della stessa quantità sottratta. */
+/* area tattile invisibile più ampia del rail visivo */
 .secroll-capsule::after{content:"";position:absolute;top:-6px;bottom:-6px;left:calc(-14px - (2.2rem - var(--secroll-w)));right:-14px}
 .secroll-track{position:absolute;left:0;right:0;top:50%;height:0;z-index:1}
 .secroll-tick{
   position:absolute;left:50%;top:0;width:14px;height:2px;margin:-1px 0 0 -7px;
-  border-radius:2px;background:var(--ink-4);opacity:.6;will-change:transform,opacity;
+  border-radius:1px;background:rgba(38,55,66,.36);opacity:.6;will-change:transform,opacity;
 }
-.secroll-tick.is-center{width:20px;height:2.5px;margin-left:-10px;background:var(--accent);opacity:1}
+.secroll-tick.is-center{width:20px;height:3px;margin-left:-10px;background:var(--ink-3);opacity:1}
 
 /* pop-up del titolo — geometria invariata */
 .secroll-popup{
   position:absolute;top:50%;right:calc(var(--secroll-w) + .6rem);
   transform:translateY(-50%) scaleX(.9);transform-origin:right center;
   max-width:calc(100vw - env(safe-area-inset-right,0px) - 4.7rem);
-  padding:.5rem .85rem;border-radius:1rem;
+  padding:.5rem .85rem;border-radius:var(--r-md);
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
   background:linear-gradient(160deg,rgba(255,255,255,.58),rgba(255,255,255,.38));
   -webkit-backdrop-filter:var(--blur-panel);
@@ -2368,6 +2372,9 @@ figure.media figcaption .rights b{color:#4A5A64;font-weight:500}
 .secroll-menu.is-open{
   opacity:1;visibility:visible;pointer-events:auto;
   transform:translateY(-50%) translateX(0) scale(1);
+}
+@media(max-width:879px){
+  .slides{touch-action:pan-y}
 }
 .secroll-menu-list{
   list-style:none;margin:0;padding:0;position:relative;z-index:1;
