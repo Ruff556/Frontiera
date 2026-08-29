@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  FRONTIERA — watermark universale, variante per superfici chiare.
+  Geometria comune a tutte le varianti: FRONTI + ERA, Archivo 800.
+  L'opacità resta a carico del componente che lo integra.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="100" viewBox="0 0 520 100" role="img" aria-labelledby="title desc">
+  <title id="title">Frontiera</title>
+  <desc id="desc">Watermark Frontiera in petrolio profondo e blu-petrolio.</desc>
+  <text x="12" y="71" font-family="Archivo, Arial, sans-serif" font-size="62" font-weight="800" letter-spacing="2.5" text-transform="uppercase">
+    <tspan fill="#16242E">FRONTI</tspan><tspan fill="#1C6E8C">ERA</tspan>
+  </text>
+</svg>

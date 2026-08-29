@@ -1,0 +1,14 @@
+{% macro infoboxTipo2(modello) %}
+<div class="analisi-info infobox-panel infobox-panel--tipo-2 scrollable-infobox" data-infobox-tipo="2" tabindex="0">
+  {% if modello.titolo %}<div class="analisi-info-title">{{ modello.titolo }}</div>{% endif %}
+  <div class="analisi-info-list">
+    {% for voce in modello.voci %}
+      <section class="analisi-info-item">
+        {% if voce.occhiello %}<div class="analisi-info-kicker">{{ voce.occhiello }}</div>{% endif %}
+        {% if voce.titolo %}<h2 class="analisi-info-name">{{ voce.titolo }}</h2>{% endif %}
+        {% if voce.testo %}<p class="analisi-info-text">{{ voce.testo }}</p>{% endif %}
+      </section>
+    {% endfor %}
+  </div>
+</div>
+{% endmacro %}

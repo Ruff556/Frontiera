@@ -1,0 +1,17 @@
+{#
+  Asset di sistema del watermark Frontiera.
+
+  I componenti scelgono soltanto una variante canonica; il percorso resta
+  centralizzato qui, così nessuna pagina deve ricreare il wordmark o duplicare
+  gli URL degli SVG.
+#}
+{% macro watermark(variant, className) %}
+{%- set selected = variant or "standard" -%}
+{%- set asset = "frontiera-watermark.svg" -%}
+{%- if selected == "neutral" -%}
+  {%- set asset = "frontiera-watermark-neutral.svg" -%}
+{%- elif selected == "dark" -%}
+  {%- set asset = "frontiera-watermark-dark.svg" -%}
+{%- endif -%}
+<img class="{% if className %}{{ className }} {% endif %}watermark watermark--{{ selected }}" src="/immagini/watermark/{{ asset }}" alt="" aria-hidden="true" focusable="false" draggable="false">
+{% endmacro %}

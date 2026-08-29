@@ -1,0 +1,13 @@
+{% macro infoboxTipo1(modello) %}
+<div class="faseinfo infobox-panel infobox-panel--tipo-1 scrollable-infobox" data-infobox-tipo="1" tabindex="0">
+  {% if modello.titolo %}<div class="infobox-panel-title">{{ modello.titolo }}</div>{% endif %}
+  <div class="faseinfo-grid">
+    {% for voce in modello.voci %}
+      <div class="ir{% if voce.ruolo == 'russo' %} ir--ru{% elif voce.ruolo == 'ucraino' %} ir--ua{% elif voce.ruolo == 'evidenza' %} ir--full{% endif %}">
+        <span class="k">{{ voce.etichetta }}</span>
+        <span class="v">{{ voce.testo }}</span>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endmacro %}

@@ -1,0 +1,70 @@
+{# ================================================================= #}
+{# COMPONENTE — Linea del tempo (Liquid Glass)                        #}
+{# Estratto dalla home per essere applicato a più periodizzazioni     #}
+{# (F0–F5 "Le fasi del conflitto", P0–P6 "Il filo della profondità"). #}
+{# Rende lo STESSO HTML/classi del componente originale: nessuna      #}
+{# nuova estetica, nessun secondo linguaggio grafico.                 #}
+{#                                                                     #}
+{# Parametri:                                                          #}
+{#   items            collezione o array di nodi. Ogni nodo può essere #}
+{#                    un item Eleventy (campi in it.data.*, link it.url)#}
+{#                    oppure un oggetto piatto (campi in it.*).         #}
+{#   idTitolo         id univoco dell'<h2> (usato da aria-labelledby). #}
+{#   kicker           sopratitolo (facoltativo).                       #}
+{#   titolo           titolo della sezione.                            #}
+{#   intro            testo introduttivo (facoltativo).                #}
+{#   urlCompleta      URL della periodizzazione completa (facoltativo: #}
+{#                    se assente NON si stampa alcun collegamento).    #}
+{#   etichettaCompleta etichetta del collegamento sopra.               #}
+{#   classi           classi modificatrici PURAMENTE strutturali       #}
+{#                    (es. spaziatura), mai identità visuale.          #}
+{#                                                                     #}
+{# Stato dei collegamenti: la card è un <a> quando il nodo possiede    #}
+{# un URL valido; altrimenti un contenitore <div> non interattivo con  #}
+{# le stesse classi visuali — non focalizzabile, non annunciato come   #}
+{# link, senza href inesistente.                                       #}
+{# ================================================================= #}
+{% macro linea(items, idTitolo, kicker="", titolo="", intro="", urlCompleta="", etichettaCompleta="Periodizzazione completa", classi="") %}
+<section class="wrap linea{% if classi %} {{ classi }}{% endif %}" aria-labelledby="{{ idTitolo }}">
+  <div class="sechead sechead--ampia">
+    <div class="sechead-testo">
+      {% if kicker %}<span class="kicker">{{ kicker }}</span>{% endif %}
+      <h2 id="{{ idTitolo }}">{{ titolo }}</h2>
+      {% if intro %}<p class="sechead-dek">{{ intro }}</p>{% endif %}
+    </div>
+    {% if urlCompleta %}<a class="all" href="{{ urlCompleta }}">{{ etichettaCompleta }} <span aria-hidden="true">→</span></a>{% endif %}
+  </div>
+
+  <ol class="linea-fasi">
+    {% for it in items %}
+    {%- set d = it.data if it.data else it -%}
+    {%- set href = it.url or d.url -%}
+    <li class="lf{% if loop.first %} lf--attiva{% endif %}">
+      {# L'immagine è una componente stabile del tono del pannello: entra come
+         scena di fondo (desktop) o come banda a tutta larghezza (mobile), mai
+         come miniatura intermittente. Crediti e licenza restano nel piede. #}
+      {% if href %}<a class="lf-link" href="{{ href }}">{% else %}<div class="lf-link">{% endif %}
+        <span class="lf-scena{% if not (d.immagine and d.immagine.file) %} lf-scena--vuota{% endif %}" aria-hidden="true">
+          {% if d.immagine and d.immagine.file %}{{ d.immagine | responsiveImage("timeline", { alt: "", loading: "lazy" }) | safe }}{% endif %}
+        </span>
+        <span class="lf-testa">
+          <span class="lf-num disp" aria-hidden="true">{{ d.numero }}</span>
+          <span class="lf-etichetta mono">{{ d.numeroEtichetta }}</span>
+        </span>
+        <span class="lf-corpo">
+          <span class="lf-tit disp">{{ d.titoloBreve | default(d.titolo) }}</span>
+          {% if d.dialettica %}<span class="lf-dial mono">{{ d.dialettica }}</span>{% endif %}
+          {% if d.anteprima %}<span class="lf-piu"><span class="lf-ante">{{ d.anteprima }}</span></span>{% endif %}
+        </span>
+        <span class="lf-pie">
+          <span class="lf-data mono">{{ d.datazione }}</span>
+          {% if d.immagine and d.immagine.file and (d.immagine.credito or d.immagine.licenza) %}
+          <span class="lf-credito mono">{{ d.immagine.credito }}{% if d.immagine.licenza %} · {{ d.immagine.licenza }}{% endif %}</span>
+          {% endif %}
+        </span>
+      {% if href %}</a>{% else %}</div>{% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endmacro %}

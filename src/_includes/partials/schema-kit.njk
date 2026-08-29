@@ -1,0 +1,73 @@
+{#
+  Schema Kit Frontiera v1.
+
+  Questo partial standardizza soltanto il telaio editoriale e accessibile.
+  Geometria, stati, illustrazioni, controlli e regia restano responsabilita
+  dello schema specifico.
+#}
+{% macro schemaFrame(o) %}
+{% from "partials/watermark.njk" import watermark as renderWatermark %}
+{%- set o = o or {} -%}
+{%- set id = o.id or "schema-autonomo" -%}
+{%- set kind = o.kind or "standalone" -%}
+{%- set navigationLabel = o.navigationLabel or o.title or "Schema" -%}
+<figure
+  class="schema-kit{% if o.className %} {{ o.className }}{% endif %}"
+  id="{{ id }}"
+  data-schema-kit="{{ kind }}"
+  data-section-navigation-stop
+  data-section-navigation-label="{{ navigationLabel }}"
+  aria-labelledby="{{ id }}-titolo">
+  <header class="schema-kit__header">
+    <div class="schema-kit__heading">
+      {% if o.eyebrow %}<p class="schema-kit__eyebrow">{{ o.eyebrow }}</p>{% endif %}
+      <h3 id="{{ id }}-titolo">{{ o.title or "Schema" }}</h3>
+      {% if o.subtitle %}<p class="schema-kit__subtitle">{{ o.subtitle }}</p>{% endif %}
+    </div>
+    {{ renderWatermark(o.watermark or "standard", "schema-kit__watermark") }}
+  </header>
+  <div class="schema-kit__body">
+    {{ caller() }}
+  </div>
+  <p class="schema-kit__live" aria-live="polite" data-schema-live></p>
+</figure>
+{% endmacro %}
+
+{% macro schemaStage(o) %}
+{%- set o = o or {} -%}
+<div class="schema-kit__stage{% if o.className %} {{ o.className }}{% endif %}"{% if o.label %} role="group" aria-label="{{ o.label }}"{% endif %}>
+  {{ caller() }}
+</div>
+{% endmacro %}
+
+{% macro schemaConsole(o) %}
+{%- set o = o or {} -%}
+<div class="schema-kit__console{% if o.className %} {{ o.className }}{% endif %}" data-schema-controls{% if o.hidden %} hidden{% endif %}>
+  {{ caller() }}
+</div>
+{% endmacro %}
+
+{% macro schemaReading(o) %}
+{%- set o = o or {} -%}
+<div class="schema-kit__reading{% if o.className %} {{ o.className }}{% endif %}">
+  <div class="schema-kit__reading-meta">
+    <span>{{ o.label or "LETTURA" }}</span>
+    {% if o.count %}<span data-schema-count>{{ o.count }}</span>{% endif %}
+  </div>
+  {{ caller() }}
+</div>
+{% endmacro %}
+
+{% macro schemaControls(o) %}
+{%- set o = o or {} -%}
+<div class="schema-kit__controls{% if o.className %} {{ o.className }}{% endif %}" aria-label="{{ o.label or "Controlli dello schema" }}">
+  {{ caller() }}
+</div>
+{% endmacro %}
+
+{% macro schemaCaption(o) %}
+{%- set o = o or {} -%}
+<figcaption class="schema-kit__caption{% if o.className %} {{ o.className }}{% endif %}">
+  {{ caller() }}
+</figcaption>
+{% endmacro %}

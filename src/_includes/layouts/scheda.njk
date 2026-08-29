@@ -1,41 +1,36 @@
 ---
 layout: layouts/base.njk
 ---
-{% from "partials/media.njk" import fill %}
-<div class="schedahead">
-  <div class="inner">
-    <div>
-      <a class="back" href="{{ categoria | archivioUrl }}">‹ {{ categoria }}</a>
-      <div class="type">Scheda piattaforma · {{ categoria }}</div>
-      <h1>{{ titolo }}</h1>
-      {% if ruolo %}<p class="role">{{ ruolo }}</p>{% endif %}
-    </div>
-    <div class="schedafig">{{ fill(immagine, "profilo / 3-viste · 4:3") }}</div>
-  </div>
-</div>
+{% from "partials/struttura-editoriale.njk" import testataEditoriale, corpoEditoriale %}
 
-<div class="specs">
-  {% if specifiche %}
-  <div class="spectable">
-    {% for k, v in specifiche %}
-      <div class="specrow"><span class="k">{{ k }}</span><span class="v">{{ v if v else "— (segnaposto)" }}</span></div>
-    {% endfor %}
+{# Metadati Scheda dentro la stessa struttura normativa delle Analisi. #}
+{% call testataEditoriale(categoria | archivioUrl, categoria, immagine) %}
+  <div class="artkicker">Scheda di riferimento · {{ categoria }}</div>
+  <h1>{{ titolo }}</h1>
+  {% if ruolo %}<p class="standfirst">{{ ruolo }}</p>{% endif %}
+  <div class="byline mono">
+    <span>Scheda di riferimento</span>
+    {% if aggiornata %}<span>Aggiornata {{ aggiornata | dataIt }}</span>{% endif %}
+    {% if categoria %}<span>{{ categoria }}</span>{% endif %}
   </div>
-  {% endif %}
+{% endcall %}
 
-  <div class="schedabody">
+{# Un eventuale infobox esplicito ha precedenza; le `specifiche` esistenti
+   vengono adattate al medesimo componente senza cambiare il contratto dati. #}
+{% set schedaInfobox = infobox | modelloInfobox("sistemi", {}, specifiche, page.inputPath) %}
+
+{% call corpoEditoriale(schedaInfobox, "Specifiche della scheda") %}
+  <div class="articlebody" data-section-navigation>
     {{ content | safe }}
-
-    {% set apparizioni = collections.analisi | analisiPerScheda(slug) %}
-    <aside class="relbox" aria-label="Analisi collegate">
-      <div class="lab">Appare in queste analisi</div>
-      {% if apparizioni.length %}
-        {% for a in apparizioni %}
-          <a href="{{ a.url }}"><span>{{ a.data.titolo }}</span><span class="arrow">→</span></a>
-        {% endfor %}
-      {% else %}
-        <p class="vuoto">Nessuna analisi cita ancora questa scheda.</p>
-      {% endif %}
-    </aside>
   </div>
-</div>
+
+  {% set riferimenti = collections.riferimentiSistemi | riferimentiSistemiPerSlug(slug) %}
+  {% if riferimenti.length %}
+  <aside class="relbox" aria-label="Contenuti di Frontiera che citano il sistema" data-section-navigation-ignore>
+    <div class="lab">Il sistema in Frontiera</div>
+    {% for riferimento in riferimenti %}
+      <a href="{{ riferimento.url }}"><span>{{ riferimento.codice }} · {{ riferimento.titolo }}</span><span class="arrow">→</span></a>
+    {% endfor %}
+  </aside>
+  {% endif %}
+{% endcall %}

@@ -1,0 +1,20 @@
+{% from "partials/infobox-tipo-1.njk" import infoboxTipo1 %}
+{% from "partials/infobox-tipo-2.njk" import infoboxTipo2 %}
+{% from "partials/infobox-tipo-3.njk" import infoboxTipo3 %}
+
+{% macro renderInfobox(modello, ariaLabel="Sintesi del contenuto", conAside=true) %}
+{% if modello %}
+  {% if conAside %}<aside class="analisi-aside" aria-label="{{ ariaLabel }}">{% endif %}
+  <div class="infobox-mobile-hook" data-infobox-mobile-hook data-infobox-label="{{ ariaLabel }}">
+    {% if modello.tipo == 1 %}
+      {{ infoboxTipo1(modello) }}
+    {% elif modello.tipo == 2 %}
+      {{ infoboxTipo2(modello) }}
+    {% elif modello.tipo == 3 %}
+      {{ infoboxTipo3(modello) }}
+    {% endif %}
+    <span class="infobox-mobile-sentinel" data-infobox-mobile-sentinel aria-hidden="true"></span>
+  </div>
+  {% if conAside %}</aside>{% endif %}
+{% endif %}
+{% endmacro %}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- FRONTIERA — watermark universale, variante per superfici scure. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="100" viewBox="0 0 520 100" role="img" aria-labelledby="title desc">
+  <title id="title">Frontiera</title>
+  <desc id="desc">Watermark Frontiera in chiaro e azzurro-petrolio per superfici scure.</desc>
+  <text x="12" y="71" font-family="Archivo, Arial, sans-serif" font-size="62" font-weight="800" letter-spacing="2.5" text-transform="uppercase">
+    <tspan fill="#E9EFF1">FRONTI</tspan><tspan fill="#5A97AD">ERA</tspan>
+  </text>
+</svg>

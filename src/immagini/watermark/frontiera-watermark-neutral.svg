@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- FRONTIERA — watermark universale, variante neutra per grafici scuri. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="100" viewBox="0 0 520 100" role="img" aria-labelledby="title desc">
+  <title id="title">Frontiera</title>
+  <desc id="desc">Watermark Frontiera monocromatico e neutro.</desc>
+  <text x="12" y="71" font-family="Archivo, Arial, sans-serif" font-size="62" font-weight="800" letter-spacing="2.5" fill="#A7B5BA" text-transform="uppercase">FRONTIERA</text>
+</svg>

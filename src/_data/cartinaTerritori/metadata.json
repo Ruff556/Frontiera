@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "crs": "EPSG:4326",
+  "coordinateOrder": "longitude, latitude",
+  "geometryTypes": [
+    "Polygon",
+    "MultiPolygon"
+  ],
+  "allowedStates": [
+    "controllo-russo",
+    "controllo-ucraino-in-russia",
+    "conteso"
+  ],
+  "allowedControlOrigins": [
+    "pre-2022",
+    "post-2022",
+    "non-applicabile"
+  ],
+  "rendering": {
+    "projection": "equirettangolare lineare WGS84, condivisa con gli hotspot",
+    "viewBox": "0 0 1920 1290",
+    "clientSideMapJavaScript": false,
+    "legacyFallback": "disattivato: tutte le sei fasi possiedono un master territoriale verificato"
+  },
+  "snapshots": [
+    {
+      "id": "controllo-fase-0-2022-03-24",
+      "date": "2022-03-24",
+      "status": "prototipo editoriale",
+      "master": true
+    },
+    {
+      "id": "controllo-fase-1-2022-11-13",
+      "date": "2022-11-13",
+      "status": "master territoriale verificato",
+      "master": true,
+      "fase": "Fase 1",
+      "generatore": "scripts/importa-territori.mjs",
+      "revisioneSorgente": "DeepStateMap 1668381004"
+    },
+    {
+      "id": "controllo-fase-2-2023-09-30",
+      "date": "2023-09-30",
+      "status": "master territoriale verificato",
+      "master": true,
+      "fase": "Fase 2",
+      "generatore": "scripts/importa-territori.mjs",
+      "revisioneSorgente": "DeepStateMap 1696066231"
+    },
+    {
+      "id": "controllo-fase-3-2024-08-14",
+      "date": "2024-08-14",
+      "status": "prototipo editoriale",
+      "master": true
+    },
+    {
+      "id": "controllo-fase-4-2025-03-13",
+      "date": "2025-03-13",
+      "status": "master territoriale verificato",
+      "master": true,
+      "fase": "Fase 4",
+      "generatore": "scripts/importa-territori.mjs",
+      "revisioneSorgente": "DeepStateMap 1741873398"
+    },
+    {
+      "id": "controllo-fase-5-2026-07-15",
+      "date": "2026-07-15",
+      "status": "master territoriale verificato",
+      "master": true,
+      "fase": "Fase 5",
+      "generatore": "scripts/importa-territori.mjs",
+      "revisioneSorgente": "DeepStateMap 1784114834"
+    }
+  ],
+  "administrativeBoundaries": {
+    "dataset": "geoBoundaries UKR ADM1",
+    "role": "verifica quantitativa; non sostituisce la base cartografica pubblica",
+    "license": "ODbL 1.0",
+    "source": "https://www.geoboundaries.org/"
+  },
+  "methodology": "../../../docs/cartina-territori/FONTI-E-METODO.md",
+  "pipeline": {
+    "digitalizzazione": "vettoriale da revisioni GeoJSON storiche DeepStateMap precise e datate; verifica coeva ISW/CTP e controllo indipendente VIINA 2.0",
+    "import": "scripts/importa-territori.mjs — importa, ripara, dissolve, separa le categorie, ritaglia sul confine nazionale ed esporta",
+    "vincolo": "il generatore non deduce il fronte da testi, percentuali editoriali, linee di contatto o interpolazione fra istantanee",
+    "verifica": "npm run verify:territori"
+  }
+}

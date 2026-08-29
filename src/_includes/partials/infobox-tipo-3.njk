@@ -1,0 +1,20 @@
+{% macro infoboxTipo3(modello) %}
+<div class="analisi-info infobox-panel infobox-panel--tipo-3 scrollable-infobox" data-infobox-tipo="3" tabindex="0">
+  {% if modello.titolo %}<div class="analisi-info-title">{{ modello.titolo }}</div>{% endif %}
+  <div class="infobox-groups">
+    {% for gruppo in modello.gruppi %}
+      <section class="infobox-group">
+        <h2 class="infobox-group-title">{{ gruppo.titolo }}</h2>
+        <div class="infobox-group-list">
+          {% for voce in gruppo.voci %}
+            <div class="infobox-group-item">
+              <h3 class="infobox-group-name">{{ voce.nome }}</h3>
+              <p class="infobox-group-description">{{ voce.descrizione }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </section>
+    {% endfor %}
+  </div>
+</div>
+{% endmacro %}

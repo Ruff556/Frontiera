@@ -2,12 +2,27 @@
   "name": "frontiera",
   "version": "1.0.0",
   "description": "Frontiera - analisi di tecnologia e strategia. Sito statico Eleventy.",
-  "license": "MIT",
+  "license": "UNLICENSED",
+  "private": true,
   "scripts": {
     "font": "node scripts/copia-font.mjs",
-    "build": "npm run font && eleventy",
-    "serve": "npm run font && eleventy --serve",
-    "start": "npm run font && eleventy --serve"
+    "assets:performance": "node scripts/genera-sfondi.cjs",
+    "build": "npm run font && npm run assets:performance && npm run verify:schemi && npm run verify:infobox && npm run verify:infobox-mobile && npm run verify:image-lightbox && npm run verify:cartina && npm run verify:territori && npm run verify:profondita && eleventy && npm run verify:seo && npm run verify:favicon && npm run verify:output && npm run verify:performance",
+    "serve": "npm run font && npm run assets:performance && eleventy --serve",
+    "start": "npm run font && npm run assets:performance && eleventy --serve",
+    "verify:cartina": "node scripts/verifica-cartina.cjs",
+    "verify:territori": "node scripts/verifica-territori.cjs",
+    "verify:profondita": "node scripts/verifica-diagramma-profondita.cjs",
+    "verify:infobox": "node scripts/verifica-infobox.cjs",
+    "verify:infobox-mobile": "node scripts/verifica-infobox-mobile.cjs",
+    "verify:image-lightbox": "node scripts/verifica-image-lightbox.cjs",
+    "verify:output": "node scripts/verifica-output.cjs",
+    "verify:performance": "node scripts/verifica-performance.cjs",
+    "verify:favicon": "node scripts/verifica-favicon-output.mjs",
+    "verify:seo": "node scripts/verifica-seo-infrastruttura.mjs",
+    "verify:schemi": "node scripts/verifica-schema-kit.cjs",
+    "report:performance-browser": "node scripts/calcola-performance-browser.cjs",
+    "import:territori": "node scripts/importa-territori.mjs"
   },
   "dependencies": {
     "@fontsource/archivo": "^5.0.0",
@@ -16,6 +31,8 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-plugin-rss": "^2.0.2"
+    "@11ty/eleventy-img": "7.0.0",
+    "@11ty/eleventy-plugin-rss": "^2.0.2",
+    "polygon-clipping": "^0.15.7"
   }
 }

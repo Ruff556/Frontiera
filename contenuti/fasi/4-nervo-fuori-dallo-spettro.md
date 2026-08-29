@@ -1,66 +1,126 @@
 ---
+# ---- IDENTITA' E ORDINAMENTO ----
 titolo: "Il nervo fuori dallo spettro — l'immunità della fibra e la conversione mancata"
 slug: nervo-fuori-dallo-spettro
 numero: 4
 numeroEtichetta: "Fase 4"
 ordine: 4
 
-datazione: "autunno 2024 – novembre 2025"
-luoghi: "Kursk e Sudža; l'asse Pokrovs'k–Kostjantynivka; le retrovie logistiche lungo l'intera linea di contatto"
-intentoRusso: "Rispondere all'istituzionalizzazione ucraina della guerra dei droni e convertire l'interdizione capillare del retro in avanzamento sul terreno."
-intentoUcraino: "Recuperare, dopo un rifiuto iniziale, l'affidabilità del collegamento in fibra, e mantenere la glaciazione della kill zone."
-soluzione: "La kill zone universale: convertire o congelare"
+# ---- INFOBOX (colonna sinistra) ----
+infobox:
+  tipo: 1
+datazione: "Autunno 2024 – Fine 2025"
+luoghi: "Il saliente di Sudža nel Kursk; i settori di Pokrovs'k e Kostjantynivka; le retrovie logistiche lungo l'intera linea di contatto"
+intentoRusso: "Trasformare l'affidabilità degli FPV in fibra, l'interdizione del retro e l'infiltrazione dispersa in avanzamento operativo sul terreno."
+intentoUcraino: "Negare quella conversione mediante difese fisiche, dispersione, ridondanza dei sistemi dronici e costituzione deliberata della kill zone come barriera difensiva."
+soluzione: "FPV in fibra e interdizione della retrovia contro difese fisiche, dispersione e drone wall."
 
+# ---- DATI PER LA LINEA DEL TEMPO (compilare sempre) ----
 titoloBreve: "Il nervo fuori dallo spettro"
-anteprima: "Dopo l'accecamento elettronico, il drone trova un nervo che il disturbo non raggiunge: il filo di fibra ottica. Kursk ne è il crocevia — vede l'Ucraina attaccare e poi difendersi dallo stesso strumento — mentre la kill zone si fa universale e interroga chi la sa convertire in vittoria e chi solo congelare."
-dialettica: "Immunità e conversione"
+anteprima: "La guerra elettronica aveva reso inaffidabile il collegamento radio; la fibra lo sottrae allo spettro e porta l'FPV più a fondo nelle retrovie. La Russia tenta di convertire interdizione e infiltrazione in avanzamento, mentre l'Ucraina costruisce una kill zone difensiva che nega la rottura senza poter ancora riaprire il campo."
+dialettica: "Conversione e congelamento"
 
+sistemi_citati: [fpv, fpv-fibra-ottica, drone-line]
+
+# ---- IMMAGINE (diritti obbligatori) ----
 immagine:
-  file: /immagini/fasi/fase-4-fpv.jpg
+  file: /immagini/fasi/fase-4-fpv.png
   alt: "Drone FPV ucraino con canale di comunicazione in fibra ottica"
   credito: "АрміяІнформ (Ministero della Difesa dell'Ucraina) / Wikimedia Commons"
   licenza: "CC BY 4.0"
   didascalia: "Drone FPV ucraino a guida in fibra ottica, 1 febbraio 2025."
+
+# ---- CARTINA DI FASE ----
+cartina:
+  dataRiferimento: "13 marzo 2025"
+  hotspot:
+    - tipo: punto
+      luogo: sudzha
+      etichetta: "Sudža"
+      posizioneEtichetta: sinistra
+    - tipo: punto
+      luogo: pokrovsk-donetsk
+      etichetta: "Pokrovs'k"
+      posizioneEtichetta: basso-sinistra
+    - tipo: punto
+      luogo: kostiantynivka-donetsk
+      etichetta: "Kostjantynivka"
+      posizioneEtichetta: alto-destra
+  territori:
+    dataset: controllo-fase-4-2025-03-13
+    data: "2025-03-13"
 ---
 
-## Dopo l'accecamento, un nervo che il disturbo non raggiunge
+## Quando il collegamento smette di irradiare
 
-La fase precedente si era chiusa su un problema aperto, non su una soluzione. La guerra elettronica aveva dimezzato l'FPV radiocomandato, recidendo non l'occhio del drone ma il filo radio che lo teneva legato a chi lo guidava da terra. La risposta, si intuiva già, non poteva restare nello spettro: doveva essere un nervo che il disturbo non potesse raggiungere. Questa fase comincia esattamente lì, con quel nervo che prende forma — un filamento di fibra ottica che srotolandosi in volo collega fisicamente il drone alla propria stazione di comando, sottraendolo per intero alla guerra dei segnali. È una soluzione tanto semplice quanto radicale: non batte il disturbo elettronico, gli sottrae l'oggetto su cui mordere.
+La fase precedente aveva mostrato che osservare e colpire non bastano se il collegamento che unisce l'operatore all'effettore può essere disturbato, localizzato o reciso. L'FPV radiocomandato aveva compresso la catena fra vista e fuoco, ma proprio quella compressione dipendeva da un flusso continuo di comando e immagini attraverso lo spettro elettromagnetico. La guerra elettronica russa e ucraina non aveva cancellato il drone: ne aveva reso variabile l'affidabilità, costringendo entrambi gli attori a cercare frequenze, antenne, ripetitori e procedure capaci di sopravvivere abbastanza a lungo.
 
-Ma la fibra non era un destino. Prima di essere l'arma che decide la fase, è stata per mesi un'occasione messa da parte.
+La fibra ottica modifica il problema alla radice. Una bobina montata sul drone lascia srotolare un filamento che collega fisicamente la piattaforma alla stazione di controllo. Il comando e il video non vengono più irradiati via radio lungo l'intero tragitto: il jammer non trova una frequenza da saturare, il rilevatore non riceve la stessa emissione da geolocalizzare e l'operatore conserva un'immagine stabile anche in un ambiente elettromagnetico saturo. La fibra non vince una gara dentro lo spettro. Sottrae allo spettro una parte decisiva della missione.
 
-## Il rifiuto e il ritorno
+La nuova fase non comincia però con il primo prototipo. Nella primavera del 2024 la soluzione esiste ancora come possibilità tecnica; durante l'estate compare in combattimento; soltanto fra l'autunno 2024 e il 2025 diventa abbastanza diffusa da obbligare le difese a cambiare dominio e da incidere sistematicamente sulle retrovie. La soglia è questa: il nervo non irradiato smette di essere un'eccezione e diventa una componente ordinaria della contesa. Da quel momento non basta più dominare le frequenze. Occorre colpire la piattaforma, il filo, l'operatore e l'organizzazione che li produce.
 
-La tecnologia era già disponibile all'Ucraina nella primavera del 2024, e Kyiv la scarta. Il 7 marzo circola la prima documentazione di un FPV russo controllato in fibra; nella stessa finestra, tra l'11 e il 18 marzo, il collettivo ucraino *Dronarnia* mostra un proprio prototipo — il «Banderyk-Strička», gittata attorno al chilometro, carico di circa 3 kg — che supera i test statali {% aff "confermato" %}. Lo Stato Maggiore lo giudica però irrilevante per il costo: una bobina da 10 km valeva circa 3.000 dollari, quasi dieci volte un FPV radio ordinario, e proposte analoghe erano già state respinte nel 2022 e a inizio 2023 per gli stessi dubbi {% aff "confermato" %}. Non è una svista tecnica: è una scelta di costo-efficacia legittima nelle condizioni di allora, quando il disturbo elettronico non aveva ancora reso l'FPV radio inaffidabile su scala.
+La fibra ristabilisce così la persistenza tattica dell'FPV, ma non consegna da sola la conversione operativa. Un drone può raggiungere una strada, un camion o una postazione senza che da quel colpo segua uno sfondamento. La posta della Fase 4 è precisamente lo scarto fra questi due livelli. La Russia tenta di saldare interdizione della retrovia e infiltrazione terrestre per trasformare la pressione in avanzamento; l'Ucraina tenta di mantenere quella pressione sotto la soglia della rottura mediante dispersione, difese fisiche e una propria rete dronica. Il titolo della fase nasce da qui: il nervo fuori dallo spettro restituisce affidabilità all'arma, ma la *conversione* rimane da conquistare.
 
-A produrre per prima la forma operativa della fibra è la Russia. Il centro Ushkujnik, a Velikij Novgorod — soggetto distinto dal Rubikon, di cui si dirà — sviluppa il drone «Knjaz' Vandal Novgorodskij» (KVN), che esordisce in combattimento nel Kursk verso il 13 agosto 2024 {% aff "confermato" %}. È il primo impiego su scala rilevante di un FPV in fibra nel conflitto {% aff "plausibile" %}; la produzione seriale viene annunciata a novembre {% aff "plausibile" %}. Solo allora, il 5 gennaio 2025, il comandante in capo Syrs'kyj conferma l'impiego di droni in fibra da parte ucraina, esplicitamente «in risposta ai russi» {% aff "confermato" %}: a inizio 2025 circa quindici aziende, sotto il programma *Brave1*, ne producono già migliaia al mese {% aff "plausibile" %}. L'Ucraina rincorre uno strumento che aveva concepito per prima e scartato per costo — un rincorrere che si paga in mesi.
+## L'occasione non prioritaria e il vantaggio di scala russo
 
-## Le istituzioni rincorrono l'innovazione
+La storia della fibra non è quella di un'invenzione posseduta in esclusiva da un solo attore. Il 7 marzo 2024 viene documentato un FPV russo controllato attraverso un collegamento ottico {% aff "confermato" %}. Pochi giorni dopo il laboratorio ucraino *Dronarnia* presenta il prototipo «Banderyk-Strička», con un raggio dichiarato di circa un chilometro, quindici minuti di autonomia e un carico utile fino a circa 3 kg {% aff "confermato" %}. La dimostrazione prova che comunità tecniche ucraine avevano compreso il principio. Non prova che esistesse già una piattaforma pronta per produzione e impiego su scala.
 
-Alla tecnologia si affianca, nella stessa finestra, la sua cornice organizzativa. L'11 giugno 2024 l'Ucraina istituisce le Forze dei Sistemi Senza Equipaggio (USF - СБС), primo corpo militare al mondo dedicato ai droni su terra, mare e aria, sotto il comando del col. Vadym Sucharevs'kyj {% aff "confermato" %}. La Russia risponde il 2 agosto 2024, quattro giorni prima dell'incursione nel Kursk e dunque non come sua conseguenza, istituendo per ordine del ministro Belousov il centro Rubikon per le tecnologie avanzate senza equipaggio {% aff "confermato" %}: una replica diretta all'istituzionalizzazione ucraina, non un'improvvisazione da campo di battaglia. Lo specchio si chiuderà solo a fase quasi conclusa, il 12 novembre 2025, quando Mosca istituisce a propria volta le Forze dei Sistemi Senza Equipaggio (VBS - ВБС) come raggruppamento di combattimento «sul modello ucraino» {% aff "confermato" %}, con Rubikon a farne il reparto di punta.
+Secondo le ricostruzioni disponibili, segmenti della valutazione militare e del procurement ucraino non attribuirono inizialmente priorità alla soluzione. Una bobina da 10 km veniva allora indicata a circa 3.000 dollari, quasi un ordine di grandezza sopra il costo di molti FPV radio, mentre i primi prototipi offrivano raggio e carico ancora modesti {% aff "plausibile" %}. La decisione va letta dentro quelle condizioni. Finché il collegamento radio conservava un rendimento sufficiente, volgere lo sguardo alla fibra poteva apparire una soluzione inefficiente, potenzialmente un passo falso. Non fu «l'Ucraina» nel suo insieme a ignorare la tecnologia: sviluppatori e reparti continuarono a lavorarvi, mentre altri segmenti dell'apparato la giudicavano ancora immatura o troppo costosa.
 
-## Kursk: dove la fibra risponde al blitz elettronico
+La Russia porta per prima la fibra a una forma operativa visibile. Il centro scientifico-produttivo Ushkujnik di Velikij Novgorod sviluppa il «Knjaz' Vandal Novgorodskij» — KVN — e ne documenta l'impiego nel Kursk nell'agosto 2024 {% aff "plausibile" %}. L'esatta data del debutto resta meno solida della sequenza generale: durante l'incursione ucraina compaiono attacchi russi condotti da FPV che mantengono il controllo nonostante il disturbo elettronico. La produzione seriale viene annunciata entro la fine dell'anno {% aff "plausibile" %}.
 
-Il nodo che tiene insieme tecnologia e istituzioni è Kursk, agosto 2024, e vi si incrociano due iniziative opposte. Il 6 agosto l'Ucraina apre l'incursione nella regione russa con un blitz di guerra elettronica che acceca la ricognizione e abbatte gli FPV radiocomandati russi {% aff "confermato" %} — la stessa arma, la trasparenza contesa, che aveva dominato la fase precedente, qui usata offensivamente. La risposta russa arriva nelle stesse settimane, ed è il KVN in fibra: uno strumento a cui il disturbo elettronico ucraino, per costruzione, non può mordere. Kursk mostra così, nello stesso episodio, potenzialità offensive e limiti della guerra elettronica. Come di consueto, proponiamo una struttura di derivazione, che fissi gli intenti di questa fase.
+Il vantaggio russo non consiste nell'aver concepito per primo il principio, ma nell'averlo trasformato prima in una combinazione ripetibile di bobina, piattaforma, addestramento, unità e rifornimento. Il 5 gennaio 2025 Oleksandr Syrs'kyj — comandante in capo delle Forze Armate dell'Ucraina — conferma che le forze ucraine stanno impiegando droni in fibra «in risposta» a quelli russi {% aff "confermato" %}. Nella stessa finestra più imprese sostenute dall'ecosistema *Brave1* avviano o ampliano la produzione, ma per alcuni mesi Kyiv deve rincorrere una soluzione che i propri sviluppatori avevano già mostrato e che l'apparato avversario aveva saputo scalare più rapidamente {% aff "plausibile" %}.
+
+Questo ritardo produce una lezione più importante della gara nazionale sull'invenzione. Nel conflitto non basta che una capacità esista. Deve attraversare selezione, acquisto, addestramento, distribuzione e apprendimento fino a essere presente nel luogo e nel momento in cui risponde al problema. L'identità tecnica del mezzo è soltanto una parte del vantaggio; l'altra è l'istituzione che lo rende numeroso, disponibile e integrato.
+
+## Le istituzioni entrano nella catena del fuoco
+
+La trasformazione organizzativa precede e accompagna quella tecnica. Nel febbraio 2024 il presidente Volodymyr Zelens'kyj avvia la costituzione di una forza separata per i sistemi senza equipaggio; l'11 giugno le Forze dei Sistemi Senza Equipaggio ucraine — SBS dall'ucraino, o USF: *Unmanned Systems Forces* — vengono presentate pubblicamente sotto il comando del colonnello Vadym Sucharevs'kyj {% aff "confermato" %}. La nuova struttura non sostituisce all'istante le unità droni già distribuite nelle brigate. Tenta di standardizzare addestramento, dottrina, innovazione e collegamento fra sviluppatori e combattenti in un dominio che fino ad allora era cresciuto soprattutto per iniziativa diffusa.
+
+La Russia costruisce nello stesso anno una propria centralizzazione. Il Ministero della Difesa istituisce in agosto il Centro per le tecnologie avanzate senza equipaggio «Rubikon», la cui esistenza diventa pubblica con la visita del ministro Andrej Belousov in ottobre {% aff "confermato" %}. Il Rubikon sviluppa e sperimenta sistemi, addestra operatori e soprattutto concentra squadre capaci di essere trasferite sui settori prioritari. Non è il produttore del KVN — Ushkujnik rimane un soggetto distinto — ma diventa uno degli attori più importanti nell'impiego sistematico di droni radio, in fibra, da ricognizione e d'attacco.
+
+Non è necessario ridurre una struttura all'imitazione dell'altra. L'Ucraina istituzionalizza una superiorità nata in larga misura dal basso; la Russia tenta di raccogliere, standardizzare e redistribuire esperienze fino ad allora frammentate. Entrambe riconoscono la stessa necessità: quando il drone entra in ogni livello della battaglia, non può più essere trattato come accessorio di reparto. Servono comando, intelligence, manutenzione, rifornimento, analisi dei dati e una politica industriale capace di produrre ricambio.
+
+A fase quasi conclusa, il processo russo sale di grado. Il 12 novembre 2025 Mosca annuncia la costituzione delle proprie Forze dei Sistemi Senza Equipaggio come ramo dedicato: VBS {% aff "confermato" %}. L'evento non inaugura una capacità già impiegata da mesi; ne sancisce la ricomposizione statale. È insieme la chiusura organizzativa della Fase 4 e una premessa della successiva, nella quale autonomia, intercettazione e sostituzione dell'uomo verranno ordinate oltre la sola piattaforma in fibra.
+
+## Due congetture sulla stessa fascia letale
+
+La Fase 4 non mette alla prova la semplice e generica funzionalità dei droni in fibra. Entrambi gli attori ne riconoscono il valore e ne sviluppano versioni proprie. Ciò che viene rischiato sul campo è la capacità di trasformare quell'affidabilità in un risultato coerente con intenti asimmetrici.
 
 <div class="derivazione">
-  <span class="der-cap">La congettura della fase, nella sua struttura annidata</span>
+  <span class="der-cap">Le congetture concorrenti della Fase 4</span>
   <div class="der-liv der-liv--strat">
-    <span class="der-tag">Assunto strategico · ereditato, ancora aperto</span>
-    <span class="der-txt">Reggere l'attrito meglio dell'avversario resta la scommessa di fondo: nessuna fase presa singolarmente la decide. In questa ne osserviamo una forma inedita.</span>
+    <span class="der-tag">Problema strategico · l'attrito deve produrre un esito</span>
+    <span class="der-txt">La Russia deve convertire la pressione in <b>avanzamento e decisione</b>; l'Ucraina deve impedire che il vantaggio tattico avversario superi la soglia della rottura.</span>
     <div class="der-body">
       <div class="der-liv der-liv--sup">
-        <span class="der-tag">Assunto di fase · grado tattico</span>
-        <span class="der-txt">La capacità già dimostrata dall'FPV è un <b>bene irrinunciabile</b>: sfruttarla quanto più possibile produce una leva di vantaggio, e disporne in fibra ne moltiplica i numeri utili dove lo spettro resta conteso.</span>
+        <span class="der-tag">Congettura russa · conversione operativa</span>
+        <span class="der-txt">FPV persistenti, interdizione della retrovia e fanteria dispersa possono isolare le posizioni ucraine e trasformare il consumo in guadagno territoriale.</span>
         <div class="der-body">
           <div class="der-coppia">
             <div class="der-liv der-liv--ann">
-              <span class="der-tag">Primo annidato · immunità al disturbo</span>
-              <span class="der-txt">Il collegamento in fibra sottrae il drone alla guerra elettronica, restituendogli l'affidabilità che il disturbo radio gli aveva dimezzato.</span>
+              <span class="der-tag">Primo assunto · persistenza e profondità</span>
+              <span class="der-txt">La fibra mantiene comando e video anche sotto disturbo e porta la caccia oltre il contatto, contro logistica, operatori e rotazioni.</span>
             </div>
             <div class="der-liv der-liv--ann">
-              <span class="der-tag">Secondo annidato · gittata nel retro</span>
-              <span class="der-txt">La gittata del filo cresce quanto basta a portare l'interdizione oltre la fascia di contatto, dentro il retro operativo avversario.</span>
+              <span class="der-tag">Secondo assunto · saldatura terrestre</span>
+              <span class="der-txt">L'interdizione può aprire finestre a piccoli gruppi che penetrano, fissano una presenza e ampliano lentamente il varco.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="der-liv der-liv--sup">
+        <span class="der-tag">Congettura ucraina · negazione della conversione</span>
+        <span class="der-txt">Difese fisiche, dispersione, ridondanza e una kill zone deliberatamente mantenuta possono tassare il vantaggio russo e conservarlo sotto la soglia operativa.</span>
+        <div class="der-body">
+          <div class="der-coppia">
+            <div class="der-liv der-liv--ann">
+              <span class="der-tag">Primo assunto · contrasto fuori dallo spettro</span>
+              <span class="der-txt">Reti, intercettori, pattuglie, inganno, occultamento e caccia agli operatori possono ridurre l'effetto anche quando il collegamento non è disturbabile.</span>
+            </div>
+            <div class="der-liv der-liv--ann">
+              <span class="der-tag">Secondo assunto · costituzione difensiva</span>
+              <span class="der-txt">Una rete dronica propria può negare concentramento e sfruttamento, rendendo l'immobilità operativa più favorevole al difensore che all'invasore.</span>
             </div>
           </div>
         </div>
@@ -69,73 +129,102 @@ Il nodo che tiene insieme tecnologia e istituzioni è Kursk, agosto 2024, e vi s
   </div>
 </div>
 
-Condiviso, insieme, da Ucraina e Russia, attorno all'assunto di grado tattico si decidono gli equilibri in campo di questa fase, come andremo ad osservare.
+Le due congetture non sono simmetriche. La Russia, in quanto invasore, deve ottenere più della persistenza: deve trasformare pressione e metri conquistati in un degrado della capacità ucraina di tenere il teatro. L'Ucraina può ottenere un successo operativo impedendo quella conversione, ma non per questo rende sostenibile uno stallo indefinito. La scarsità di uomini, il costo economico e la dipendenza dalla coalizione occidentale fanno dell'immobilità un vantaggio relativo, non una facile vittoria strategica.
 
-## Il contrasto lascia lo spettro
+## Kursk, il luogo in cui la risposta incontra il problema
 
-Che il collegamento in fibra sia inattaccabile sulle frequenze non è tuttavia sufficiente a far passare questi nuovi FPV impuniti. Già dentro questa fase il contrasto abbandona lo spettro e si sposta su punti deboli fisici, ciascuno con un autore preciso:
+L'incursione ucraina nel Kursk del 6 agosto 2024 appartiene ancora, nel proprio gesto iniziale, alla Fase 3. Kyiv ottiene sorpresa, compartimenta il comando russo e impiega la guerra elettronica per degradare ricognizione e FPV radiocomandati. La manovra ricompare perché l'Ucraina produce localmente opacità prima che l'avversario possa ricostruire la propria rete.
 
-- il **filamento** — impigliabile nel terreno, fragile, tranciabile, conteso da entrambe le parti;
-- la **piattaforma** — reti, tunnel stesi sulle strade, primi intercettori: contromisura cinetica, soprattutto difensiva, di larga iniziativa ucraina;
-- il **sensore ottico** — il laser ucraino *Tryzub*, mostrato pubblicamente il 13 aprile 2025, priva il drone in fibra del controllo accecandone la telecamera: un effetto ottico, non cinetico {% aff "confermato" %}. Resta un dimostratore tecnologico: un impiego operativo dichiarato in linea non risulta documentato {% aff "non-verificato" %};
-- l'**operatore** — individuare e colpire chi guida il drone avversario è di per sé una soluzione pagante.
+Proprio quel successo prepara il primo grande nodo della fase successiva. Gli FPV russi in fibra entrano nello stesso teatro come risposta a un ambiente nel quale il collegamento radio viene disturbato con efficacia. La piattaforma continua a ricevere comandi e a trasmettere immagini; l'operatore può seguire strade, veicoli e ingressi anche quando il jammer ucraino ha reso inaffidabili i canali ordinari. Kursk mostra così due verità nello stesso spazio: la guerra elettronica può restituire movimento contro una rete radio, ma non possiede sovranità su un collegamento che non irradia.
 
-Nessuna di queste risposte richiude il varco che la fibra ha aperto: lo tassano, punto per punto, senza restituire allo spettro la sua sovranità perduta. Nel campo segnato dall'ascesa dei droni troviamo perciò una commistione di soluzioni d'arma: da un lato i classici FPV radio — economici ma esposti alla EW - dall'altro i nuovi FPV in fibra — più onerosi, invulnerabili alla EW, ma comunque interdetti attraverso soluzioni fisiche.
+La fibra non rovescia immediatamente l'incursione. Per mesi l'Ucraina conserva il saliente, mentre la Russia accumula forze convenzionali, artiglieria, droni, intelligence e rinforzi nordcoreani. La risposta diventa decisiva quando questi elementi vengono saldati contro la logistica. Da fine febbraio 2025 il Rubikon e altre unità russe concentrano gli attacchi sull'arteria Junakivka–Sudža, sui veicoli di rifornimento, sulle evacuazioni e sulle postazioni degli operatori. La fibra amplia le ore e i luoghi in cui la strada può essere cacciata; l'intelligence dei segnali e la ricognizione cercano chi alimenta la rete ucraina.
 
-## Sudža e il ritiro: l'interdizione che strozza la logistica
+Fra il 10 e l'11 marzo le forze ucraine abbandonano Sudža e gran parte del saliente {% aff "confermato" %}. L'interdizione dronica della linea di rifornimento è un fattore maggiore del collasso logistico {% aff "plausibile" %}, non una causa unica. Pressione convenzionale, consumo delle riserve, geometria del saliente, rinforzi russi e nordcoreani e temporanea interruzione di una parte del sostegno statunitense concorrono all'esito. La lettura più forte non è che «un drone conquista una città», ma che una capacità dronica persistente, integrata a forze terrestri e fuochi, può rendere insostenibile una posizione che dipende da poche arterie osservabili.
 
-Il 25 febbraio 2025 il Rubikon apre a nord del saliente di Sudža la sua dimostrazione maggiore: un'ondata sistematica sull'arteria di rifornimento Junakivka–Sudža, centinaia di camion distrutti, e l'uso dell'intelligence dei segnali per localizzare e colpire gli operatori di droni ucraini {% aff "confermato" %}. Il 10-11 marzo l'Ucraina si ritira dal saliente {% aff "confermato" %}. L'interdizione in fibra sulle vie di rifornimento è un fattore maggiore del collasso logistico, ma — è importante tenerlo presente — non l'unico: concorrono le forze convenzionali, il coevo taglio statunitense di intelligence e munizioni {% aff "plausibile" %}, e l'attrito generale, alimentato in questa specifica area del fronte, dallo schieramento da parte russa dei rinforzi inviati dall'alleato nord coreano {% aff "confermato" %} — secondo le stime dell'intelligence sudcoreana (NIS) circa 11.000 soldati {% aff "plausibile" %}, dei quali le perdite complessive sono stimate a circa 6.000 unità, secondo i servizi britannici e sudcoreani, 7.000 secondo l'intelligence ucraina {% aff "plausibile" %}. Attribuire al solo Rubikon il peso causale esclusivo del ritiro resta un passo che i dati non sostengono, e una condizione che raramente il campo concede ad un solo attore. Di nuovo, i droni si presentano come un eccezionale moltiplicatore di forze, operanti di concerto nella complessità delle operazioni.
+Sudža corrobora dunque la congettura russa al livello locale e operativo. La fibra mantiene la caccia; l'interdizione degrada il sostegno; la pressione terrestre converte il degrado in ritiro. È il caso più compiuto della fase. Proprio per questo non deve essere trasformato in una legge generale: la stessa saldatura deve essere ricostruita settore per settore, contro difese, distanze e riserve differenti.
 
-## Il caso Spiderweb: LTE e AI
+## Il contrasto abbandona il jammer
 
-Il 1° giugno 2025 l'Ucraina lancia «Operazione Spiderweb»: 117 FPV, nascosti in container su autocarri infiltrati mesi prima, colpiscono contemporaneamente cinque basi ospitanti bombardieri strategici russi, da Murmansk all'Amur, attraverso tre fusi orari {% aff "confermato" %}. Il collegamento non passa né per lo spettro conteso né per il filo: viaggia su reti cellulari civili russe (4G/LTE). In questa misura, Spiderweb rappresenta un caso a sé: pur disponendo la Russia di avanzate capacità EW, queste sono ottimizzate per operare presso il fronte, lavorando sui collegamenti normalmente utilizzati dall'apparato militare (GNSS/GPS, collegamenti radio diretti, bande specifiche dello spettro radio). Disturbare una rete LTE civile è un problema diverso, e richiede di operare sulle celle presenti nell'area, oppure sull'intera infrastruttura cellulare locale {% aff "confermato" %}. Non risultano prove pubbliche che la EW russa abbia disturbato in modo efficace i collegamenti 4G/LTE utilizzati durante l'operazione; ma anche in caso di disturbo dei collegamenti LTE, gli FPV impiegati dagli ucraini avrebbero potuto contare — secondo le ricostruzioni disponibili — su sistemi di guida assistita basati su AI e machine vision {% aff "confermato" %}, capaci di supportare l'ingaggio del bersaglio nella fase terminale e, in alcuni casi, di subentrare all'operatore in caso di perdita del collegamento {% aff "plausibile" %}. Non è chiaro se gli operatori si trovassero o meno in territorio russo durante le operazioni {% aff "plausibile" %} — il CSIS (Center for Strategic and International Studies) afferma che questa configurazione consenta il controllo su lunghe distanze, anche al di fuori del territorio russo, ma non risultano prove pubbliche che ciò sia avvenuto durante Spiderweb.
-I danni rivendicati —  34% dei vettori di crociera strategici colpiti secondo Kyiv {% aff "non verificato" %} — restano contesi rispetto a stime USA/NATO più prudenti, che indicano la distruzione di 10-13 velivoli e il danneggiamento di 40 {% aff "plausibile" %}. Una stima OSINT più cauta, quella di Janes, limitata a quanto è osservabile, indica non meno di 12 aerei distrutti, 2 sicuramente danneggiati e 8 probabili {% aff "plausibile" %}.
-Come gli FPV in fibra, anche Spiderweb aggira lo spettro conteso, non attraverso il collegamento fisico, ma sfruttando la rete LTE e *riducendo la dipendenza dal collegamento in tempo reale* tramite sistemi AI; elemento che si imporrà decisamente nella fase successiva.
+L'immunità al disturbo non equivale a immunità al campo. Il collegamento in fibra elimina una vulnerabilità dominante e ne rende decisive altre. Il filamento può impigliarsi nella vegetazione, in edifici, cavi o ostacoli; la bobina aggiunge peso e resistenza aerodinamica, sottraendo una quota di carico o autonomia; la piattaforma rimane visibile e abbattibile; il punto di lancio, l'operatore e la logistica che rifornisce le bobine possono essere scoperti e colpiti.
 
+Il contrasto diventa perciò fisico e organizzativo. Lungo le strade compaiono tunnel e cortine di reti, che non garantiscono protezione assoluta ma complicano l'angolo d'attacco e possono arrestare la piattaforma. Pattuglie con fucili a canna liscia e mitragliatrici leggere, sensori acustici, piccoli radar e primi droni intercettori tentano di abbattere l'FPV prima dell'impatto. Mezzi, postazioni e ingressi vengono coperti o spostati; convogli e rotazioni si frammentano; gli operatori riducono le emissioni e cambiano sito. Nessuna singola contromisura chiude la soluzione, ma la combinazione ne abbassa il rendimento e ne alza il costo.
 
-## Kill zone e drone wall: congelare o convertire
+Anche il sensore ottico diventa una superficie d'attacco. Nell'aprile 2025 l'Ucraina mostra pubblicamente il sistema laser *Tryzub*, presentato come capace di danneggiare o accecare sensori elettro-ottici {% aff "confermato" %}. La dimostrazione non prova un impiego operativo efficace contro FPV in fibra {% aff "non-verificato" %}; indica però la direzione del contrasto. Quando il comando non può essere reciso nello spettro, si tenta di negare alla piattaforma la vista necessaria a guidare l'ultimo tratto.
 
-Le due smentite fin qui viste — che la sovranità sullo spettro non basta (la produce la Russia, con la fibra) e che l'immunità della fibra non equivale a un colpo incontestabile (essendo l'fpv fisicamente interdicibile) — chiudono la questione dello strumento. Non decidono però la fase. La posta della Fase 4 non è se la fibra colpisca — colpisce — ma che cosa ciascun attore riesca a fare di un campo reso saturo, trasparente e letale su ogni sua fascia.
+La caccia all'operatore acquista un valore ancora maggiore. Un FPV è sacrificabile; una squadra addestrata, i terminali, le antenne, i punti di lancio e la capacità di mantenere una cadenza non lo sono nello stesso grado. Il Rubikon e le unità ucraine non si limitano a scambiare droni: usano ricognizione, segnali e altri effettori per colpire la persona e il nodo che rendono possibile la missione.
 
-La *kill zone* è quel campo: una fascia trasparente e letale davanti alla linea, dove una rete densa di FPV, intercettori, disturbatori e mine individua e colpisce ciò che vi entra. In sé è neutra — non appartiene a nessuno, e vieta a chiunque la attraversi {% aff "confermato" %}. La *drone wall* — nome ufficiale del progetto ucraino «Drone Line», lanciato nella primavera 2025 dal Ministero della Difesa e dalle Forze dei Sistemi Senza Equipaggio {% aff "confermato" %} — non è un sinonimo, ma la sua costituzione difensiva deliberata: la kill zone eretta e tenuta come un muro, che nega all'avversario il concentramento e fa da schermo a una fanteria assottigliata. È per definizione una misura di congelamento: il suo scopo non è avanzare, è impedire l'avanzata altrui.
+## La kill zone non è un ambiente senza autore
 
-L'approccio russo alla stessa materia prima è diverso, perché il suo intento non è congelare ma **convertire**. Da luglio 2025 a Pokrovs'k, poi a Sudža e a Kostjantynivka, la Russia salda due componenti: l'interdizione del retro (BAI — *Battlefield Air Interdiction*), che con il Rubikon e gli FPV a gittata estesa colpisce logistica, operatori e convogli fino a ~15 km di profondità {% aff "confermato" %}; e l'infiltrazione a piccoli gruppi di due-cinque uomini, che penetrano la kill zone sfruttando finestre di vulnerabilità e cercando di ridurre la probabilità di essere neutralizzati — metodologia che abbiamo osservato in un contesto diverso a Bakhmut —, vi stabiliscono una presenza avanzata e un vantaggio locale nel dominio dei droni, da cui possono disarticolare le posizioni difensive e preparare l'ampliamento della penetrazione {% aff "confermato" %}. Per l'invasore la kill zone non è un muro da tenere, ma un Per l'attaccante la kill zone non è un muro da tenere, ma un ambiente da degradare attraverso l'interdizione del retro della linea di contatto avversaria, da sfruttare con piccole infiltrazioni, cercando di trasformarela saturazione stessa del campo in attrito favorevole e, infine, in guadagno territoriale.
+La *kill zone* è la fascia nella quale un attore possiede sensori, collegamenti, operatori ed effettori sufficienti a individuare e colpire con continuità ciò che si espone. Non ha una profondità uguale ovunque e non appartiene al terreno. Varia con meteo, addestramento, densità di droni, quota delle antenne, disponibilità di munizioni, copertura delle unità, qualità del comando e vulnerabilità della logistica.
 
-Qui si gioca l'esito, e si biforca: **se la conversione riesce**, la kill zone diventa uno strumento di guadagno per chi avanza; **se non riesce**, e resta un fattore che congela il campo, il favore va al difensore, per cui l'immobilità è già un risultato favorevole. La forma del campo non porta un verdetto in sé: lo riceve dall'intento che la incontra — e gli intenti, al livello strategico, sono stabili e asimmetrici: l'invasore deve convertire la pressione in avanzamento per vincere, il difensore deve solo negarglielo.
+La fibra tende ad approfondirla perché conserva il collegamento in aree nelle quali il radio sarebbe stato degradato. Un camion o un'ambulanza non sono più relativamente protetti soltanto perché si trovano alcuni chilometri dietro il contatto; una strada alberata o un ingresso coperto non interrompono necessariamente il video. Nello stesso tempo il filo impone traiettorie, peso e vincoli fisici che il radio non conosce. La profondità utile non è quindi una proprietà uniforme della bobina: è il risultato che l'unità riesce a costruire con piattaforma, ricognizione, punti di lancio e sostegno.
 
-Il verdetto si legge su due piani, da non confondere. Dove l'interdizione ha potuto saldarsi all'infiltrazione — in modo compiuto nel settore di Kursk/Sudža e, in forma ancora in evoluzione e *non* compiuta, sull'asse Pokrovs'k–Kostjantynivka — l'approccio operativo russo trova conferma: ha effettivamente compresso la logistica ucraina, reso più fragile la linea di contatto e, nel primo caso, contribuito al collasso delle posizioni difensive ucraine {% aff "confermato" %}, senza però dimostrarsi esportabile all'intero fronte {% aff "plausibile" %}.
-Sul piano aggregato, infatti, la conversione dello stallo in una dinamica di avanzata non trova conferma. Le perdite russe di mezzi rimangono nettamente superiori a quelle ucraine per tutto il 2025 (fra 5:1 e 2:1) {% aff "plausibile" %}; l'avanzata procede a un ritmo glaciale — dell'ordine di 50–70 metri al giorno sugli assi principali {% aff "plausibile" %} — e, a novembre 2025, funzionari occidentali indicano per la prima volta che la Russia perde più uomini di quanti ne recluti {% aff "plausibile" %}. Un successo operativo locale non equivale a una trasformazione del fronte nel suo complesso. È proprio questo scarto — fra efficacia locale e persistenza dello stallo strategico — a costituire il dato caratteristico della Fase 4, senza attenuare l'onere imposto alla difesa ucraina nei settori d'interdizione, dove la pressione russa ha portato la linea fino ai limiti della rottura.
+Nella primavera 2025 il progetto ucraino «Drone Line» porta questa logica a una forma deliberata {% aff "confermato" %}. Non è una singola muraglia né un reparto isolato, ma il tentativo di scalare le pratiche delle unità droniche più efficaci e di costruire una presenza continua lungo il contatto. L'espressione *drone wall* indica la sua funzione difensiva: fare della fascia letale un muro che impedisca il concentramento russo e compensi, almeno in parte, l'assottigliamento della fanteria.
 
-La conversione, dunque, rimane un fenomeno locale. Dove riesce, non dissolve la kill zone: la attraversa lentamente, consumando la difesa più che superandola. Per questo, come già l'attrito, anche la conversione è una condizione che il suo attore possiede solo quando la realizza: non un attributo permanente del campo, ma un risultato sempre da riconquistare. Nel frattempo, la kill zone continua a tendere verso la propria forma difensiva, il drone wall ucraino. I tentativi di convertirla in avanzata esistono, e in alcuni settori hanno trovato conferma; ma persino dove riescono producono un'offensiva di ritmo glaciale, che sul piano strategico continua a favorire chi deve impedire il movimento dell'avversario più che realizzare il proprio.
+La costituzione difensiva non rende la kill zone neutrale. È un prodotto ucraino là dove Kyiv dispone e alimenta la rete; può essere penetrata o degradata dalla Russia; può essere più densa su un asse e più fragile su un altro. Il suo successo si misura nel negare all'avversario il passaggio dalla pressione alla rottura. Per un difensore che deve conservare la linea, l'immobilità dell'invasore è un risultato operativo. Per uno Stato che deve sopravvivere a una guerra lunga, tuttavia, quel risultato continua a consumare uomini, economia e sostegno esterno. Il muro guadagna tempo; non decide da solo come quel tempo verrà pagato.
 
-## Ciò che la fase lascia in eredità
+## Pokrovs'k e Kostjantynivka: convertire senza sfondare
 
-La fase consegna un nome per la propria conversione mancata: paralisi strategica. Il drone in fibra, nato per riaprire la manovra sotto la guerra elettronica, la richiude a un livello più profondo — e per entrambi. Nessuna massa sopravvive abbastanza a lungo da convertirsi in successo, non per scarsità di fuoco ma per eccesso di trasparenza armata. Non è più, come nel Prologo, la profondità delle colonne russe esposte in avanzata a offrire il bersaglio: il fronte resta marcato e compatto, e ciò che si dilata è la pervasività della kill zone stessa, che vieta a entrambi il concentramento e il movimento. Se questa chiusura sia aggirabile — con l'intercettazione di massa o con l'autonomia — è la domanda che la fase successiva erediterà.
+Dopo Kursk, la Russia tenta di generalizzare la saldatura fra interdizione e infiltrazione sui principali assi del Donetsk. Il Rubikon e altre unità portano la caccia nel retro prossimo, contro mezzi logistici, postazioni droni, radar, artiglieria, rotazioni e punti di comando. Questa attività viene descritta come *Battlefield Air Interdiction* — interdizione aerea del campo di battaglia — perché non cerca soltanto il bersaglio già impegnato sulla linea, ma ciò che deve raggiungerla per mantenerla combattente.
 
-La Russia esce dalla fase con un successo d'interdizione settoriale dentro una conversione strategica mancata: ha prodotto per prima la forma operativa della fibra e ne ha tratto, dove ha potuto applicarla con cura, un vantaggio tattico solido — ma non la rottura dello stallo che l'invasore, per vincere, deve produrre. L'Ucraina esce dalla fase vincitrice sul margine più sottile finora: ha visto la propria iniziativa neutralizzata dalla stessa arma che aveva scartato per costo, ha perso il saliente di Kursk, ha rincorso lo strumento con mesi di ritardo — eppure la sua difesa tiene all'aggregato, e l'immobilità che il difensore cerca resta, per lui, la vittoria.
+L'interdizione viene accoppiata a gruppi di fanteria ridotti, spesso di pochi uomini, i cosiddetti *fireteams*, composti da appena 2-4 soldati. La dispersione diminuisce la firma e limita la perdita prodotta da un singolo FPV; le squadre cercano interstizi, edifici, filari e coperture, stabiliscono una presenza avanzata e costringono il difensore a spendere ricognizione e munizioni contro bersagli piccoli e numerosi. Dove la rete ucraina viene degradata o la logistica rallenta, presenze minime possono accumularsi fino a disarticolare una posizione.
+
+La combinazione produce risultati reali. Nei settori di Pokrovs'k e Kostjantynivka la pressione russa avanza, comprime le vie di rifornimento e porta alcune posizioni ucraine vicino alla rottura {% aff "confermato" %}. Non produce però, entro la fine del 2025, una penetrazione operativa capace di disgregare l'intero sistema difensivo. L'avanzamento resta lento, settoriale e costoso; i guadagni dipendono dalla ricostruzione continua di superiorità locali, non da una libertà di manovra ormai acquisita.
+
+La distinzione fra localizzato e aggregato è il centro del verdetto. A Sudža la conversione si compie: l'interdizione concorre a rendere insostenibile il saliente e la pressione terrestre ne raccoglie l'esito. Nel Donetsk la stessa forma ottiene avanzamenti e logora la difesa, ma non scioglie la paralisi generale. Il successo locale non è un'eccezione da minimizzare; dimostra che la congettura russa può funzionare. Il mancato sfondamento aggregato dimostra insieme che la capacità non si trasferisce automaticamente da un settore all'altro e che il difensore conserva ancora mezzi per tassarla, assorbirla e ricostruire la linea.
+
+La manovra viene così trasformata. Non torna come massa corazzata incaricata di aprire il fronte. Ritorna in una forma ridotta: piccoli gruppi attraversano una fascia resa meno coerente dall'interdizione, mentre mezzi e riserve seguono soltanto quando l'occhio e il sostegno avversari sono stati abbastanza degradati. La fibra non restituisce alla Russia il febbraio 2022. Le consente di avanzare dentro il campo che quel fallimento e gli adattamenti successivi hanno prodotto.
+
+## Spiderweb: l'intersezione con la profondità
+
+Il 1° giugno 2025 l'operazione ucraina «Spiderweb» porta la tecnologia FPV fuori dalla spina terrestre. Centodiciassette droni nascosti in strutture trasportate da autocarri vengono lanciati in prossimità di basi aeree russe, dopo una preparazione clandestina durata molti mesi {% aff "confermato" %}. Il piano comprendeva cinque basi; attacchi efficaci sono stati pubblicamente documentati su quattro {% aff "confermato" %}. La distanza geografica dal fronte viene aggirata non da un FPV capace di attraversare migliaia di chilometri, ma dalla separazione fra trasporto clandestino e tratto terminale.
+
+Il bilancio rimane conteso. Kyiv dichiarò 41 velivoli colpiti e il 34 per cento dei vettori russi di missili da crociera strategici coinvolto {% aff "non-verificato" %}. Una successiva valutazione statunitense riportata da Reuters stimò fino a circa venti velivoli colpiti e approssimativamente dieci distrutti {% aff "plausibile" %}. Le immagini satellitari confermano danni e distruzioni a bombardieri strategici, ma non consentono di trasformare la rivendicazione ucraina nel dato definitivo.
+
+Anche la ricostruzione del comando deve rimanere distinta dai fatti osservati. Fonti ucraine hanno descritto l'uso di reti cellulari russe e funzioni di visione artificiale o guida terminale assistita {% aff "confermato" %} come capacità dichiarate. Non è pubblicamente verificabile quale collegamento sia rimasto attivo in ogni attacco, dove si trovassero tutti gli operatori o in quale momento un algoritmo abbia effettivamente sostituito la guida umana {% aff "non-verificato" %}.
+
+Spiderweb non è il cuore della Fase 4. La fibra domina il contatto; l'operazione agisce nella profondità strategica mediante preparazione clandestina, reti civili e autonomia terminale. Nondimeno, l'operazione mostra che la tecnologia e le procedure maturate nella guerra FPV possono essere ricombinate per separare il luogo dell'effetto dal luogo dell'operatore e anticipa la domanda della Fase 5: come continuare una missione quando il nervo, fisico o radio, non può essere garantito per l'intero percorso.
+
+## La conversione mancata
+
+Alla fine del 2025 la fibra ha superato la propria prova più stretta. Mantiene video e comando sotto disturbo, consente traiettorie basse e stabili e porta l'interdizione dentro fasce che la via radio rendeva meno affidabili. La sua ascesa è autorata anzitutto dalla Russia, che la porta a scala e la integra con Rubikon, intelligence e fanteria dispersa; l'Ucraina recupera lo strumento, lo produce e ne sviluppa contromisure, ma parte da un ritardo reale.
+
+La congettura russa è corroborata localmente. A Sudža l'interdizione del retro concorre alla perdita del saliente; nel Donetsk la stessa forma comprime logistica e difesa, facilita infiltrazioni e produce guadagni. La Russia dimostra di saper trasformare l'immunità del collegamento in vantaggio tattico e, in determinate condizioni, in esito operativo.
+
+La stessa congettura *non è corroborata all'aggregato*. La conversione resta lenta, settoriale e reversibile; non genera una rottura del fronte, non restituisce libertà di manovra e non avvicina in modo conclusivo la decisione politica. La fibra aumenta la persistenza dell'offesa, ma non risolve da sola ricognizione, comando, massa, sostegno e sfruttamento. Ogni avanzamento richiede che l'intero sistema venga ricostruito sul settore prescelto.
+
+L'Ucraina subisce una sconfitta locale importante e perde la gara iniziale di scala sulla fibra. Nondimeno conserva il risultato operativo più ampio: la Russia non converte il vantaggio in sfondamento generale. Difese fisiche, dispersione, FPV radio e in fibra, intercettori e *Drone Line* mantengono la pressione sotto la soglia strategica. È una vittoria difensiva stretta, non assoluta. Congelare l'invasore protegge il territorio che resta, ma prolunga una guerra nella quale Kyiv dispone di minore profondità demografica ed economica e dipende dal sostegno esterno.
+
+Il verdetto della fase è quindi biforcato e organico. **La Russia vince la gara iniziale della fibra e dimostra una conversione operativa locale; l'Ucraina vince la negazione aggregata, impedendo che quella conversione diventi rottura strategica.** La prima possiede massa e iniziativa offensiva ma non decisione; la seconda conserva la linea ma non riapre ancora il campo a una propria iniziativa ripetibile.
+
+La fibra ha salvato l'arma dal disturbo e, proprio per questo, ha reso più profonda la chiusura del campo. Più l'FPV sopravvive, più uomini, mezzi e convogli devono disperdersi o scomparire dalla superficie. La fase successiva eredita allora un problema diverso da quello che l'ha aperta. Non basta più assicurare il collegamento. Occorre sostituire l'uomo nelle missioni a massima esposizione, intercettare massa con massa, mantenere la missione anche dopo la perdita del nervo e trasferire una parte dell'attrito nel retro operativo e nella profondità che rigenera il fronte.
 
 ## Vincitori e vinti
 
-Questa sezione scende nei mezzi e nelle dottrine, per mostrare quali strumenti hanno permesso a una forma di prevalere sull'altra in questa fase. Vale la solita avvertenza: comparire qui non fa di un mezzo uno sconfitto *della guerra*. Lo sconfitto di una fase può essere il vincitore della successiva; le conclusioni che seguono riguardano *questa* fase, non il conflitto nel suo complesso.
+Comparire qui non fa di un mezzo uno sconfitto della guerra. Ogni moto riguarda la configurazione assunta nella Fase 4: lo stesso strumento cambia valore quando cambiano collegamento, protezione, densità, organizzazione e iniziativa dell'avversario.
 
 <div class="grp grp--asc">
   <svg class="grp-eco" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 L20 4"/><path d="M20 10 L20 4 L14 4"/><path d="M4 14 L14 4" opacity="0.5"/><path d="M4 8 L8 4" opacity="0.25"/></svg>
-  <div class="grp-head"><svg class="grp-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 L19 5"/><path d="M19 12 L19 5 L12 5"/></svg><span class="grp-moto">Ascende</span><span class="grp-tag">il filo che chiude il varco elettronico</span></div>
-  <div class="el"><div class="el-nome">Il drone in fibra ottica</div><div class="el-txt">Da subito conteso, nondimeno, dimostra chiaramente il valore sul campo, rivelandosi un asset pur sempre economico che consente di mantenere l'interdizione nei settori in cui la EW è più pesante.</div></div>
-  <div class="el"><div class="el-nome">Il comando istituzionalizzato dei droni (USF; Rubikon, VBS)</div><div class="el-txt">La pervasività degli FPV spinge all'organizzazione in unità dedicate.</div></div>
-  <div class="el"><div class="el-nome">La kill zone come dottrina deliberata (drone wall)</div><div class="el-txt">Da effetto collaterale a scelta organizzativa del difensore: il progetto ucraino «Drone Line» eleva la fascia trasparente a misura di congelamento, dorsale tecnologica della cintura fortificata.</div></div>
+  <div class="grp-head"><svg class="grp-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 L19 5"/><path d="M19 12 L19 5 L12 5"/></svg><span class="grp-moto">Ascende</span><span class="grp-tag">persistenza, profondità, organizzazione</span></div>
+  <div class="el"><div class="el-nome">L'FPV in fibra ottica</div><div class="el-txt">Sottrae comando e video al disturbo radio e conserva la precisione in settori saturi di guerra elettronica. Il vantaggio non è assoluto: bobina, piattaforma, sensore e operatore restano vulnerabili, mentre peso e terreno ne condizionano raggio e carico.</div></div>
+  <div class="el"><div class="el-nome">L'interdizione dronica della retrovia</div><div class="el-txt">Strade, rotazioni, evacuazioni, operatori e depositi prossimi diventano parti della battaglia. A Sudža la caccia persistente concorre a rendere insostenibile il saliente; nel Donetsk sostiene avanzamenti senza produrre ancora sfondamento.</div></div>
+  <div class="el"><div class="el-nome">Il comando istituzionalizzato dei sistemi senza equipaggio</div><div class="el-txt">USF ucraine, Rubikon e successiva costituzione delle forze russe raccolgono addestramento, dati, manutenzione e innovazione. Il drone smette di essere un accessorio e diventa una funzione organizzata della forza.</div></div>
+  <div class="el"><div class="el-nome">La difesa fisica e la Drone Line</div><div class="el-txt">Reti, intercettori, occultamento, dispersione e caccia agli operatori costruiscono una risposta dove il jammer non può agire. Non eliminano la fibra; ne tassano l'effetto e aiutano il difensore a mantenere la conversione avversaria sotto la soglia della rottura.</div></div>
 </div>
 
 <div class="grp grp--dec">
   <svg class="grp-eco" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4 L20 20"/><path d="M20 14 L20 20 L14 20"/><path d="M4 10 L14 20" opacity="0.5"/><path d="M4 16 L8 20" opacity="0.25"/></svg>
-  <div class="grp-head"><svg class="grp-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5 L19 19"/><path d="M19 12 L19 19 L12 19"/></svg><span class="grp-moto">Declina</span><span class="grp-tag">la massa che non sopravvive alla trasparenza universale</span></div>
-  <div class="el"><div class="el-nome">La massa corazzata e la manovra meccanizzata</div><div class="el-txt">Proseguono verso la paralisi quasi totale aperta nel Prologo: non un esito nuovo, ma il suo consolidarsi. La manovra si trasforma in infiltrazione dispersa, piccoli gruppi, mezzi leggeri.</div></div>
-  <div class="el"><div class="el-nome">La logistica esposta nel retro</div><div class="el-txt">Camion, rotazioni, postazioni fisse: il bersaglio più remunerativo dell'interdizione russa a Sudža e Pokrovs'k. Costretta a diradarsi o a smaterializzarsi dove la fibra e l'intelligence dei segnali la raggiungono.</div></div>
+  <div class="grp-head"><svg class="grp-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5 L19 19"/><path d="M19 12 L19 19 L12 19"/></svg><span class="grp-moto">Declina</span><span class="grp-tag">protezione presunta e concentrazione esposta</span></div>
+  <div class="el"><div class="el-nome">La sovranità dello spettro come difesa sufficiente</div><div class="el-txt">Un attore può saturare le frequenze e continuare a essere colpito da una piattaforma collegata fisicamente. La guerra elettronica resta decisiva, ma perde la pretesa di chiudere da sola il ciclo FPV.</div></div>
+  <div class="el"><div class="el-nome">La logistica relativamente protetta dalla distanza</div><div class="el-txt">Camion, evacuazioni e punti di rifornimento nel retro prossimo devono ora occultarsi, frammentarsi e difendersi come elementi della linea. La distanza continua a ridurre alcune minacce; non garantisce più immunità dal drone persistente.</div></div>
+  <div class="el"><div class="el-nome">La conversione affidata alla sola piattaforma</div><div class="el-txt">Colpire più a fondo non equivale a conquistare. Senza ricognizione, comando, fanteria, fuochi e sfruttamento, anche l'FPV immune al disturbo produce consumo senza decisione.</div></div>
 </div>
 
 <div class="grp grp--tra">
   <svg class="grp-eco" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12 a8 8 0 0 1 -13.7 5.6"/><path d="M4 12 a8 8 0 0 1 13.7 -5.6"/><path d="M17.7 3 L17.7 6.4 L14.3 6.4"/><path d="M6.3 21 L6.3 17.6 L9.7 17.6"/></svg>
-  <div class="grp-head"><svg class="grp-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12 a8 8 0 0 1 -13.7 5.6"/><path d="M4 12 a8 8 0 0 1 13.7 -5.6"/><path d="M17.7 3 L17.7 6.4 L14.3 6.4"/><path d="M6.3 21 L6.3 17.6 L9.7 17.6"/></svg><span class="grp-moto">Trasformato</span><span class="grp-tag">l'immunità che non chiude la partita</span></div>
-  <div class="el"><div class="el-nome">La guerra elettronica</div><div class="el-txt">Trasformata, non in declino: non contende il cielo agli FPV in fibra, ma resta contromisura indispensabile ovunque il collegamento passi per lo spettro.</div></div>
-  <div class="el"><div class="el-nome">Il drone FPV radiocomandato</div><div class="el-txt">Convive con la fibra invece di sparire: le stesse unità droni mescolano radio a salto di frequenza e fibra. Perde la centralità esclusiva, non l'importanza.</div></div>
+  <div class="grp-head"><svg class="grp-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12 a8 8 0 0 1 -13.7 5.6"/><path d="M4 12 a8 8 0 0 1 13.7 -5.6"/><path d="M17.7 3 L17.7 6.4 L14.3 6.4"/><path d="M6.3 21 L6.3 17.6 L9.7 17.6"/></svg><span class="grp-moto">Trasformato</span><span class="grp-tag">dal segnale al sistema</span></div>
+  <div class="el"><div class="el-nome">La guerra elettronica</div><div class="el-txt">Non declina: viene circoscritta e ridistribuita. Continua a negare FPV radio, GNSS, telemetria e comunicazioni, mentre contro la fibra deve concorrere con rilevamento, inganno ottico, fuoco e caccia agli operatori.</div></div>
+  <div class="el"><div class="el-nome">L'FPV radiocomandato</div><div class="el-txt">Perde l'esclusiva ma non scompare. Rimane più economico e flessibile dove lo spettro è praticabile; le unità mescolano radio, salto di frequenza, ripetitori e fibra secondo missione e rischio.</div></div>
+  <div class="el"><div class="el-nome">La manovra</div><div class="el-txt">Dalla massa incaricata di aprire il fronte passa alla fanteria dispersa che sfrutta un'interdizione precedente. Il movimento ritorna come effetto tardivo di una superiorità dronica locale, non come negazione della kill zone.</div></div>
+  <div class="el"><div class="el-nome">La kill zone</div><div class="el-txt">Da effetto emergente della trasparenza diventa configurazione costruita e contesa. La Russia tenta di convertirla in consumo favorevole; l'Ucraina la costituisce come muro difensivo. Il suo valore dipende dall'autore, dalla densità e dall'intento.</div></div>
 </div>

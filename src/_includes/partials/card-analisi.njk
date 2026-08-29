@@ -2,7 +2,7 @@
 {% from "partials/media.njk" import fill %}
 <article class="card" data-domini="{{ item.data.domini | join(' ') }}">
   <a class="cardlink" href="{{ item.url }}">
-    <div class="cardfig">{{ fill(item.data.immagine, "16:10") }}</div>
+    <div class="cardfig">{{ fill(item.data.immagine, "16:10", true, "archiveCard") }}</div>
     <div class="cardbody">
       <div class="tagrow">
         <span class="tag sez">{{ item.data.sezione }}</span>

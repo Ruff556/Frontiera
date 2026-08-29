@@ -15,10 +15,11 @@ eleventyComputed:
   {% set items = collections.schede | perCategoria(sez.categoria) %}
 {% endif %}
 
-<div class="archhead">
+<div class="testata testata--archivio">
   <div class="inner">
+    <span class="kicker">{{ "Analisi" if sez.tipo == "analisi" else "Schede di riferimento" }}</span>
     <h1>{{ sez.nome }}</h1>
-    <p>{{ sez.descrizione }}</p>
+    <p class="testata-dek">{{ sez.descrizione }}</p>
     {% if sez.tipo == "analisi" %}
     <div class="filters" id="archfilters" role="group" aria-label="Filtra per dominio">
       <button class="chip on" type="button" data-dominio="tutto">Tutto</button>
@@ -30,7 +31,7 @@ eleventyComputed:
   </div>
 </div>
 
-<div class="wrap">
+<div class="wrap wrap--stretto">
   <div class="grid" id="archgrid">
     {% if items.length %}
       {% for item in items %}

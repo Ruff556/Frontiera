@@ -3,47 +3,118 @@ layout: layouts/base.njk
 permalink: /index.html
 ---
 {% from "partials/media.njk" import fill %}
+{% from "partials/linea-temporale.njk" import linea %}
 
-<section class="hero">
-  <div class="scanline" aria-hidden="true"></div>
-  <div class="carousel">
-    <div class="eyebrowrow">
-      <span class="kicker">In evidenza</span>
-      <div class="carbtns"><button id="prev" type="button" aria-label="Precedente">‹</button><button id="next" type="button" aria-label="Successivo">›</button></div>
-    </div>
-    <div class="slides" id="slides" aria-live="polite">
-      {% for item in collections.inEvidenza %}
-      <article class="slide{% if loop.first %} show{% endif %}">
-        <div>
-          <h1><a href="{{ item.url }}">{{ item.data.titolo }}</a></h1>
-          {% if item.data.sommario %}<p class="dek">{{ item.data.sommario }}</p>{% endif %}
-          <div class="meta">
-            <span class="tag sez">{{ item.data.sezione }}</span>
-            {{ item.data.affidabilita | affBadge | safe }}
-            {% if item.data.teatro %}<span class="tag">Teatro: {{ item.data.teatro }}</span>{% endif %}
+<section class="hero" aria-label="In evidenza">
+  <div class="hero-inner">
+    <div class="carousel">
+      <div class="eyebrowrow">
+        <span class="kicker">In evidenza</span>
+        <span class="hairline" aria-hidden="true"></span>
+        <div class="carbtns"><button id="prev" type="button" aria-label="Precedente">‹</button><button id="next" type="button" aria-label="Successivo">›</button></div>
+      </div>
+      <div class="slides" id="slides" aria-live="polite">
+        {% for item in collections.inEvidenza %}
+        {# Il carosello rappresenta i tre nuclei editoriali e ospita sia analisi
+           (Attualità/Strategia) sia schede (Sistemi) con lo stesso markup.
+           L'etichetta editoriale è la `sezione` (analisi) o la `categoria`
+           (schede); il sommario, se assente in una scheda, ripiega sul `ruolo`. #}
+        {% set ambito = item.data.sezione or item.data.categoria %}
+        {% set introSlide = item.data.sommario or item.data.ruolo %}
+        <article class="slide{% if loop.first %} show{% endif %}">
+          <div class="slide-copy">
+            <h1><a href="{{ item.url }}">{{ item.data.titolo }}</a></h1>
+            {% if introSlide %}<p class="dek">{{ introSlide }}</p>{% endif %}
+            <div class="meta">
+              {% if ambito %}<span class="tag sez">{{ ambito }}</span>{% endif %}
+              {% if item.data.affidabilita %}{{ item.data.affidabilita | affBadge | safe }}{% endif %}
+              {% if item.data.teatro %}<span class="tag">Teatro: {{ item.data.teatro }}</span>{% endif %}
+              {% if item.data.categoria and not item.data.sezione %}<span class="tag">Scheda</span>{% endif %}
+            </div>
           </div>
-        </div>
-        <a class="slidefig" href="{{ item.url }}" aria-label="{{ item.data.titolo }}">{{ fill(item.data.immagine, "Immagine editoriale 16:9 — slot carosello") }}</a>
-      </article>
-      {% endfor %}
+          <a class="slidefig{% if item.data.immagine and item.data.immagine.fit == 'contain' %} slidefig--contain{% endif %}" href="{{ item.url }}" aria-label="{{ item.data.titolo }}">{{ fill(item.data.immagine, "Immagine editoriale 16:9 — slot carosello", false, "carousel", "eager" if loop.first else "lazy", loop.first) }}</a>
+        </article>
+        {% endfor %}
+      </div>
+      <div class="dots" id="dots" role="tablist" aria-label="Selettore slide"></div>
     </div>
   </div>
-  <div class="dots" id="dots" role="tablist" aria-label="Selettore slide"></div>
 </section>
 
-<div class="wrap">
-  {# ============================================================ #}
-  {# LINEA DEL TEMPO — "Le fasi del conflitto" (il cuore del sito) #}
-  {# Da costruire come componente interattivo una volta definito   #}
-  {# lo schema di periodizzazione 2022-2026. Inserire qui.         #}
-  {# ============================================================ #}
+{# ============================================================ #}
+{# LINEE DEL TEMPO (componente unico: partials/linea-temporale)   #}
+{# Statico: leggibile senza JavaScript, espansione su hover/focus  #}
+{# dove il puntatore è fine, disteso su touch.                     #}
+{#                                                                 #}
+{# 1) "Le fasi del conflitto" — F0–F5, spina dorsale generale.     #}
+{#    Riceve collections.fasi e conserva la stessa copy, timeline, #}
+{#    card e navigazione verso le singole schede F.                #}
+{# ============================================================ #}
+{{ linea(
+  collections.fasi,
+  "linea-titolo",
+  "La guerra in Ucraina",
+  "Le fasi del conflitto",
+  "Non una cronologia, ma una concatenazione: ogni fase nasce dalla soluzione che chiude la precedente."
+) }}
 
-  <div class="block-spazio">
-    <div class="sechead"><h2>Schede · Mezzi e sistemi</h2><a class="all" href="/archivio/mezzi-aerei/">Archivio →</a></div>
-    <div class="grid">
-      {% for item in collections.schede | limita(6) %}
-        {% include "partials/card-scheda.njk" %}
-      {% endfor %}
+{# ============================================================ #}
+{# 2) "Il filo della profondità" — P0–P6, seconda periodizzazione #}
+{#    autonoma della campagna in profondità. Stessa estetica del   #}
+{#    componente; fonte dati dedicata collections.profondita.      #}
+{#    Nessun link "Periodizzazione completa" finché non esiste una #}
+{#    pagina reale; la copy è passata come parametro (non nel      #}
+{#    partial). `linea--profondita` regola solo la spaziatura fra  #}
+{#    le due sezioni: nessuna identità visuale diversa.            #}
+{# ============================================================ #}
+{{ linea(
+  collections.profondita,
+  "filo-profondita-titolo",
+  "La guerra oltre il fronte",
+  "Il filo della profondità",
+  "Una periodizzazione autonoma della campagna in profondità: non il semplice aumento della gittata, ma il mutare di obiettivi, vettori, scala, libertà d'impiego e contromisure.",
+  "",
+  "Periodizzazione completa",
+  "linea--profondita"
+) }}
+
+<section class="wrap wrap--stretto sistemi" id="sistemi" aria-labelledby="sistemi-titolo">
+  <div class="sechead">
+    <h2 id="sistemi-titolo">Sistemi</h2>
+    <div class="sistemi-head-controls" data-sistemi-controls hidden>
+      <span
+        class="sistemi-cluster-indicator"
+        data-sistemi-indicator
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+        aria-label="Gruppo 1 di 1"
+      >01 / 01</span>
+      <button
+        class="sistemi-layout-toggle"
+        data-sistemi-layout-toggle
+        type="button"
+        aria-label="Mostra tre sistemi per gruppo"
+        aria-pressed="false"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect x="3.5" y="3.5" width="6.5" height="6.5" rx="1.3"></rect>
+          <rect x="14" y="3.5" width="6.5" height="6.5" rx="1.3"></rect>
+          <rect x="3.5" y="14" width="6.5" height="6.5" rx="1.3"></rect>
+          <rect x="14" y="14" width="6.5" height="6.5" rx="1.3"></rect>
+        </svg>
+      </button>
     </div>
   </div>
-</div>
+  {# La homepage è l'indice pubblico completo di Sistemi: la collezione dedicata
+     contiene soltanto categoria:Sistemi, senza limiti o filtri nel template. #}
+  {% if collections.sistemi.length %}
+  <div class="sistemi-grid" data-sistemi-track>
+    {% for item in collections.sistemi %}
+      {% include "partials/card-sistema.njk" %}
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="archempty">Le prime schede di riferimento saranno pubblicate qui a breve.</p>
+  {% endif %}
+</section>

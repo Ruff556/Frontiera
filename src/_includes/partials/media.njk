@@ -2,11 +2,11 @@
 
 {# Immagine d'articolo: figura con didascalia + credito/licenza sempre presenti.
    Se manca img.file mostra lo slot segnaposto petrolio. #}
-{% macro media(img, ph="Immagine — segnaposto", sizes="(min-width: 40rem) 38rem, 100vw") %}
+{% macro media(img, ph="Immagine — segnaposto") %}
 <figure class="media {{ 'ph' if not img or not img.file }}">
   <div class="frame">
     {% if img and img.file %}
-      <img src="{{ img.file }}" alt="{{ img.alt | default('') }}" loading="lazy" decoding="async" sizes="{{ sizes }}">
+      {{ img | responsiveImage("lightboxInline", { alt: img.alt | default(""), loading: "lazy", full: true }) | safe }}
     {% else %}
       <span class="ph">[ {{ ph }} ]</span>
     {% endif %}
@@ -21,14 +21,59 @@
 {% endmacro %}
 
 {# Riempimento di una cornice a rapporto fisso (card / hero scheda / slide):
-   il contenitore con la classe di stile lo passa il chiamante. #}
-{% macro fill(img, ph="immagine") %}
+   il contenitore con la classe di stile lo passa il chiamante.
+   Se il front matter dichiara img.posizione la si applica come object-position;
+   in assenza del campo il comportamento resta invariato (default del CSS).
+   `showCredits` resta true per compatibilità; le sole anteprime della homepage
+   lo disattivano esplicitamente, mentre le pagine editoriali conservano i diritti. #}
+{% macro fill(img, ph="immagine", showCredits=true, profile="archiveCard", loading="lazy", priority=false) %}
   {% if img and img.file %}
-    <img src="{{ img.file }}" alt="{{ img.alt | default('') }}" loading="lazy" decoding="async">
-    {% if img.credito or img.licenza %}
+    {{ img | responsiveImage(profile, { alt: img.alt | default(""), loading: loading, fetchpriority: "high" if priority else "" }) | safe }}
+    {% if showCredits and (img.credito or img.licenza) %}
       <span class="credit-overlay">{{ img.credito }}{% if img.licenza %} · {{ img.licenza }}{% endif %}</span>
     {% endif %}
   {% else %}
     <span class="ph">[ {{ ph }} ]</span>
   {% endif %}
+{% endmacro %}
+
+{# Slot immagine della testata analisi: cornice di vetro 16/9, sempre resa.
+   Riusa il MEDESIMO blocco `immagine` del front matter (nessun campo separato).
+   - stato compilato: <img> above-the-fold (eager, fetchpriority alta), eventuale
+     object-position da img.posizione, e SOTTO la cornice uno spazio dedicato con
+     didascalia e crediti (didascalia · credito · fonte · licenza);
+   - stato vuoto: superficie petrolio intenzionale, senza segnaposto testuale,
+     esclusa dall'albero accessibile (aria-hidden).
+
+   Lo spazio didascalia riprende, in registro Liquid Glass, la funzione della
+   figcaption delle schede F e P (macro `media`): descrizione e crediti
+   gerarchicamente distinti. Nessun testo è codificato: tutti i campi vengono
+   dal front matter `immagine` e sono opzionali. Se non è presente alcun campo,
+   la figcaption non viene renderizzata (niente spazio vuoto). L'attributo `alt`
+   resta semanticamente distinto dalla didascalia pubblica. #}
+{% macro testataMedia(img) %}
+{% if img and img.file %}
+{% set hasRights = img.credito or img.fonte or img.licenza %}
+<figure class="analisi-head-media{% if img.fit == 'contain' %} analisi-head-media--contain{% endif %}">
+  <div class="analisi-head-frame">
+    {{ img | responsiveImage("articleHero", { alt: img.alt | default(""), loading: "eager", fetchpriority: "high" }) | safe }}
+  </div>
+  {% if img.didascalia or hasRights %}
+  <figcaption class="analisi-head-caption">
+    {% if img.didascalia %}<span class="analisi-caption-desc">{{ img.didascalia }}</span>{% endif %}
+    {% if hasRights %}
+    <span class="analisi-caption-rights">
+      {% if img.credito %}<span class="analisi-caption-credit"><b>Credito:</b>&nbsp;{{ img.credito }}</span>{% endif %}
+      {% if img.fonte %}<span class="analisi-caption-credit"><b>Fonte:</b>&nbsp;{{ img.fonte }}</span>{% endif %}
+      {% if img.licenza %}<span class="analisi-caption-credit"><b>Licenza:</b>&nbsp;{{ img.licenza }}</span>{% endif %}
+    </span>
+    {% endif %}
+  </figcaption>
+  {% endif %}
+</figure>
+{% else %}
+<figure class="analisi-head-media is-empty" aria-hidden="true">
+  <div class="analisi-head-frame"></div>
+</figure>
+{% endif %}
 {% endmacro %}

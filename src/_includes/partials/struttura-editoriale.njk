@@ -1,0 +1,32 @@
+{# Grammatica strutturale condivisa da Analisi e Schede Sistemi.
+   I chiamanti forniscono metadati e apparati semanticamente propri; griglia,
+   immagine, wrapper responsive, foglio e infobox restano una sola implementazione. #}
+{% from "partials/media.njk" import testataMedia %}
+{% from "partials/infobox-dispatcher.njk" import renderInfobox %}
+
+{% macro testataEditoriale(ritornoUrl, ritornoLabel, immagine) %}
+<div class="testata testata--articolo testata--analisi">
+  <div class="inner">
+    <a class="back" href="{{ ritornoUrl }}"><span aria-hidden="true">‹</span> {{ ritornoLabel }}</a>
+    <div class="analisi-head-grid">
+      <div class="analisi-head-copy">
+        {{ caller() }}
+      </div>
+      {{ testataMedia(immagine) }}
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro corpoEditoriale(box=null, boxAriaLabel="Sintesi del contenuto") %}
+{% set hasInfobox = box and box.tipo %}
+<div class="analisi-wrap{% if not hasInfobox %} analisi-wrap--single{% endif %}">
+  {% if hasInfobox %}
+    {{ renderInfobox(box, boxAriaLabel) }}
+  {% endif %}
+
+  <article class="reading foglio analisi-body">
+    {{ caller() }}
+  </article>
+</div>
+{% endmacro %}

@@ -1,0 +1,35 @@
+{# Esempio non compilato: docs/** e esclusa dalla build. #}
+{% from "partials/schema-kit.njk" import schemaFrame, schemaStage, schemaConsole, schemaReading, schemaControls, schemaCaption %}
+
+{% call schemaFrame({
+  id: "schema-esempio",
+  kind: "sequenza",
+  className: "schema-esempio",
+  eyebrow: "S3 · Funzione",
+  title: "Titolo dello schema",
+  subtitle: "La domanda resa visibile",
+  navigationLabel: "Schema — titolo breve"
+}) %}
+  {% call schemaStage({ label: "Rappresentazione del processo" }) %}
+    <svg viewBox="0 0 760 340" role="img" aria-labelledby="schema-esempio-svg-title schema-esempio-svg-desc">
+      <title id="schema-esempio-svg-title">Titolo accessibile</title>
+      <desc id="schema-esempio-svg-desc">Descrizione degli elementi e del confronto.</desc>
+      {# Geometria interamente specifica. #}
+    </svg>
+  {% endcall %}
+
+  {% call schemaConsole({ hidden: true }) %}
+    {% call schemaReading({ count: "00/03" }) %}
+      <p data-schema-title>Pronto</p>
+      <p data-schema-reading>Avanza per attivare il primo momento.</p>
+    {% endcall %}
+    {% call schemaControls({ label: "Momenti dello schema" }) %}
+      <button class="schema-kit__button" type="button" data-schema-auto aria-pressed="false">AUTO</button>
+      <button class="schema-kit__button" type="button" data-schema-next>AVANZA</button>
+    {% endcall %}
+  {% endcall %}
+
+  {% call schemaCaption() %}
+    <p><b>Metodo.</b> Dichiarare qui semplificazioni, significato dei tempi e limiti.</p>
+  {% endcall %}
+{% endcall %}

@@ -4,11 +4,21 @@
   var slidesWrap = document.getElementById("slides");
   if (!slidesWrap) return;
   var slides = Array.prototype.slice.call(slidesWrap.querySelectorAll(".slide"));
-  if (slides.length < 2) return;
 
   var dotsWrap = document.getElementById("dots");
   var prevBtn = document.getElementById("prev");
   var nextBtn = document.getElementById("next");
+  var carbtns = document.querySelector(".carbtns");
+
+  // Con 0 o 1 slide non c'è nulla da ruotare: niente timer, niente indicatori,
+  // controlli precedente/successivo nascosti. La home resta funzionante e non
+  // vengono lasciati controlli inerti o dot ridondanti.
+  if (slides.length < 2) {
+    if (carbtns) carbtns.hidden = true;
+    if (dotsWrap) dotsWrap.hidden = true;
+    return;
+  }
+
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var cur = 0;
   var timer = null;

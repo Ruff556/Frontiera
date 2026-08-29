@@ -2,69 +2,70 @@
 layout: layouts/base.njk
 ---
 {% from "partials/media.njk" import media %}
+{% from "partials/cartina-fase.njk" import cartinaFase %}
+{% from "partials/infobox-dispatcher.njk" import renderInfobox %}
+{% set datiInfoboxStorici = {
+  datazione: datazione,
+  luoghi: luoghi,
+  intentoRusso: intentoRusso,
+  intentoUcraino: intentoUcraino,
+  soluzione: soluzione
+} %}
+{% set modelloInfobox = infobox | modelloInfobox("fasi", datiInfoboxStorici, null, page.inputPath) %}
 
 {# ============ INTESTAZIONE ============ #}
-<div class="fasehead">
+{% if cartina %}
+<div class="testata testata--fase testata--conmappa">
   <div class="inner">
-    <a class="back" href="/fasi/">‹ Le fasi del conflitto</a>
-    {% if numeroEtichetta %}<div class="type">{{ numeroEtichetta }} · {{ datazione }}</div>{% endif %}
-    <h1>{{ titolo }}</h1>
-    {% if soluzione %}<p class="role">{{ soluzione }}</p>{% endif %}
+    <a class="back" href="/#linea-titolo"><span aria-hidden="true">‹</span> Le fasi del conflitto</a>
+    <div class="fasehead-grid">
+      <div class="fasehead-copy">
+        {% if numeroEtichetta %}<div class="artkicker">{{ numeroEtichetta }} · {{ datazione }}</div>{% endif %}
+        <h1>{{ titolo }}</h1>
+        {% if soluzione %}<p class="testata-dek">{{ soluzione }}</p>{% endif %}
+      </div>
+      {{ cartinaFase(cartina, cartinaLuoghi, cartinaLinee) }}
+    </div>
   </div>
 </div>
+{% else %}
+<div class="testata testata--fase">
+  <div class="inner">
+    <a class="back" href="/#linea-titolo"><span aria-hidden="true">‹</span> Le fasi del conflitto</a>
+    <div class="fasehead-copy">
+      {% if numeroEtichetta %}<div class="artkicker">{{ numeroEtichetta }} · {{ datazione }}</div>{% endif %}
+      <h1>{{ titolo }}</h1>
+      {% if soluzione %}<p class="testata-dek">{{ soluzione }}</p>{% endif %}
+    </div>
+  </div>
+</div>
+{% endif %}
 
 {# ============ CORPO A DUE COLONNE ============ #}
 <div class="fasewrap">
 
   {# --- SINISTRA: immagine (crediti sotto) + infobox --- #}
   <aside class="faseaside" aria-label="Scheda sintetica della fase">
-    <div class="fasefig">{{ media(immagine, "immagine di fase · 4:3") }}</div>
-    <div class="faseinfo">
-      <div class="faseinfo-grid">
-        {% if datazione %}<div class="ir"><span class="k">Datazione</span><span class="v">{{ datazione }}</span></div>{% endif %}
-        {% if luoghi %}<div class="ir"><span class="k">Luoghi caldi del fronte</span><span class="v">{{ luoghi }}</span></div>{% endif %}
-        {% if intentoRusso %}<div class="ir"><span class="k">Intento russo</span><span class="v">{{ intentoRusso }}</span></div>{% endif %}
-        {% if intentoUcraino %}<div class="ir"><span class="k">Intento ucraino</span><span class="v">{{ intentoUcraino }}</span></div>{% endif %}
-        {% if soluzione %}<div class="ir ir--full"><span class="k">Soluzione caratterizzante</span><span class="v">{{ soluzione }}</span></div>{% endif %}
-      </div>
-    </div>
+    <div class="fasefig" data-image-lightbox-scope>{{ media(immagine, "immagine di fase · 4:3") }}</div>
+    {{ renderInfobox(modelloInfobox, "Scheda sintetica della fase", false) }}
   </aside>
 
   {# --- DESTRA: la lettura --- #}
-  <div class="fasebody">
+  {# data-section-navigation: contratto comune che attiva il navigatore delle
+     sezioni sugli h2 del corpo editoriale. L'apparato che segue il corpo
+     (.fasenav) è marcato data-section-navigation-ignore, così non viene
+     indicizzato né riceve id in build. #}
+  <div class="fasebody" data-section-navigation>
     {{ content | safe }}
 
-    {% set nodi = collections.eventi | eventiPerFase(slug) %}
-    <section class="fasenodi" aria-label="I nodi della fase">
-      <h2>I nodi della fase</h2>
-      {% if nodi.length %}
-        <ol class="nodi-lista">
-          {% for n in nodi %}
-            <li class="nodo">
-              <a href="{{ n.url }}">
-                <span class="nodo-num">{{ "%02d"|format(loop.index) }}</span>
-                <span class="nodo-testo">
-                  <span class="nodo-titolo">{{ n.data.titolo }}</span>
-                  {% if n.data.sommario %}<span class="nodo-somm">{{ n.data.sommario }}</span>{% endif %}
-                </span>
-                <span class="nodo-freccia">&rarr;</span>
-              </a>
-            </li>
-          {% endfor %}
-        </ol>
-      {% else %}
-        <p class="nodi-attesa">Gli approfondimenti dedicati ai singoli nodi di questa fase sono in preparazione.</p>
-      {% endif %}
-    </section>
-
-    <nav class="fasenav" aria-label="Navigazione tra le fasi">
+    <nav class="fasenav" aria-label="Navigazione tra le fasi" data-section-navigation-ignore>
       {% set tutte = collections.fasi %}
       {% for f in tutte %}
         {% if f.url == page.url %}
           {% set prima = loop.index0 - 1 %}
           {% set dopo = loop.index0 + 1 %}
-          {% if prima >= 0 %}<a class="prev" href="{{ tutte[prima].url }}">&lsaquo; {{ tutte[prima].data.titolo }}</a>{% endif %}
-          {% if dopo < tutte.length %}<a class="next" href="{{ tutte[dopo].url }}">{{ tutte[dopo].data.titolo }} &rsaquo;</a>{% endif %}
+          {% if prima >= 0 %}<a class="prev" href="{{ tutte[prima].url }}"><span class="fasenav-k mono">Fase precedente</span><span class="fasenav-t">{{ tutte[prima].data.titolo }}</span></a>{% endif %}
+          {% if dopo < tutte.length %}<a class="next" href="{{ tutte[dopo].url }}"><span class="fasenav-k mono">Fase successiva</span><span class="fasenav-t">{{ tutte[dopo].data.titolo }}</span></a>{% endif %}
         {% endif %}
       {% endfor %}
     </nav>

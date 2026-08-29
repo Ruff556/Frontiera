@@ -1,0 +1,138 @@
+{# ===================================================================
+   IL FILO DELLA PROFONDITÀ — diagramma funzionale della profondità (schede P)
+   -------------------------------------------------------------------
+   Componente seriale e autonomo: riceve la configurazione della scheda
+   (`diagrammaProfondita` del front matter) e l'identificatore della
+   scheda, e non conosce nulla della singola fase. Ordine delle corsie e
+   delle fasce, etichette pubbliche, classi degli stati, segmentazione dei
+   vettori, legenda, icone, data italiana, riepilogo accessibile e nota
+   metodologica sono DERIVATI dal motore (src/_lib/diagramma-profondita.js)
+   a partire dal vocabolario condiviso (src/_data/profonditaVocabolario.js).
+
+   HTML semantico + CSS Grid. L'SVG serve soltanto per le icone dei nodi.
+   Nessun JavaScript, nessun testo editoriale in coordinate assolute,
+   nessuno stile inline generato dal front matter: i testi passano dal
+   normale escaping di Nunjucks, `safe` è usato unicamente per lo sprite,
+   markup infrastrutturale del repository.
+   =================================================================== #}
+{% macro diagrammaProfonditaFigura(config, idScheda, sorgente) %}
+{% from "partials/watermark.njk" import watermark %}
+{% set d = config | diagrammaProfonditaModello(idScheda, sorgente) %}
+{{ d.spriteInline | safe }}
+<figure class="depth-card" aria-labelledby="{{ d.id }}-titolo" aria-describedby="{{ d.id }}-descrizione">
+
+  {# ---- 1. testata del componente ----
+     A sinistra un solo gruppo visivo, «Profondità contesa · <data>»: la data
+     dell'assetto è derivata da `dataAssetto` e non compare altrove. A destra il
+     watermark, che occupa lo spazio prima riservato alla data. Entrambi sono
+     elementi di flusso della stessa riga flessibile: nessun posizionamento
+     assoluto, nessuna collisione alle larghezze intermedie, e su schermi
+     stretti il watermark va a capo restando allineato a destra. #}
+  <div class="depth-head">
+    <p class="depth-kicker" id="{{ d.id }}-titolo">{{ d.kicker }} <span class="depth-sep" aria-hidden="true">{{ d.etichette.separatore }}</span> <span class="depth-data">{{ d.dataAssettoIt }}</span></p>
+    {{ watermark("neutral", "depth-watermark") }}
+  </div>
+
+  {# Riepilogo per le tecnologie assistive: l'intero contenuto della figura
+     in forma testuale, generato dal motore. Visivamente nascosto, mai
+     compilato a mano nel front matter. #}
+  <p class="depth-a11y" id="{{ d.id }}-descrizione">{{ d.riepilogo }}</p>
+
+  {# ---- 2. area principale: due corsie parallele ---- #}
+  <div class="depth-stage">
+
+    {# Testate colonnari delle quattro fasce: stessa griglia, stessi stacchi e
+       stesse quattro larghezze semantiche delle fasce sottostanti, così ogni
+       intestazione coincide con la propria colonna a qualunque larghezza.
+       Sono aperte inferiormente (nessun bordo sotto): la colonna prosegue
+       idealmente attraverso entrambe le corsie senza che si disegni alcuna
+       linea continua sopra le righe Ucraina e Russia.
+       Restano ridondanti per l'accessibilità — ogni fascia porta già la propria
+       etichetta e la propria distanza — quindi fuori dall'albero accessibile. #}
+    <div class="depth-scale" aria-hidden="true">
+      {% for f in d.fasce %}
+      <span class="depth-scale-col">
+        <span class="depth-scale-nome">{{ f.etichetta }}</span>
+        <span class="depth-scale-km">{{ f.distanza }}</span>
+      </span>
+      {% endfor %}
+    </div>
+
+    {% for corsia in d.corsie %}
+    <div class="depth-lane" data-attore="{{ corsia.chiave }}">
+      <div class="depth-lane-head">
+        <p class="depth-lane-id">
+          <span class="depth-actor">{{ corsia.nome }}</span>
+          <span class="depth-target">{{ corsia.destinatario }}</span>
+        </p>
+        <p class="depth-lane-complex">
+          <span class="depth-k">{{ d.etichette.complesso }}</span>
+          <span class="depth-v">{{ corsia.complesso }}</span>
+        </p>
+      </div>
+
+      <div class="depth-bands">
+        {% for f in corsia.fasce %}
+        <div class="depth-band depth-band--{{ f.stato }}" data-fascia="{{ f.chiave }}" data-stato="{{ f.stato }}">
+          {# Etichetta e distanza locali: sempre nel documento (leggibilità
+             senza CSS e senza JavaScript), visibili quando la corsia si
+             ricompone in verticale. #}
+          <p class="depth-band-scale">
+            <span class="depth-band-nome">{{ f.etichetta }}</span>
+            <span class="depth-band-km">{{ f.distanza }}</span>
+          </p>
+          <p class="depth-state"><span class="depth-state-badge">{{ f.statoBreve }}</span></p>
+
+          {% if f.nodi.length %}
+          <ul class="depth-nodes">
+            {% for n in f.nodi %}
+            <li class="depth-node">
+              <svg class="depth-node-icon" aria-hidden="true" focusable="false"><use href="#{{ n.simbolo }}"></use></svg>
+              <span class="depth-node-label">{{ n.etichetta }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+
+          {# Vettore: segmenti derivati dai soli stati. Contiguo quando
+             l'accesso continua, interrotto in una fascia non accessibile,
+             autonomo quando riappare oltre la discontinuità. Segno grafico
+             puro: l'informazione è già nel testo dello stato. #}
+          <p class="depth-vector-row">
+            <span class="depth-vector depth-vector--{{ f.vettore.tipo }}{% if f.vettore.continua %} depth-vector--continua{% endif %}{% if f.vettore.autonomo %} depth-vector--autonomo{% endif %}" aria-hidden="true">
+              {% if f.vettore.presente %}<span class="depth-vector-line"></span>{% endif %}
+              {% if f.vettore.punta %}<span class="depth-vector-head"></span>{% endif %}
+            </span>
+          </p>
+        </div>
+        {% endfor %}
+      </div>
+
+      <p class="depth-lane-limit">
+        <span class="depth-k">{{ d.etichette.limite }}</span>
+        <span class="depth-v">{{ corsia.limite }}</span>
+      </p>
+    </div>
+    {% endfor %}
+  </div>
+
+  {# ---- 3. legenda dei soli stati realmente presenti ---- #}
+  <div class="depth-legend">
+    <p class="depth-legend-title">{{ d.etichette.legenda }}</p>
+    <ul class="depth-legend-list">
+      {% for s in d.legenda %}
+      <li class="depth-legend-item">
+        <span class="depth-legend-swatch depth-legend-swatch--{{ s.chiave }}" aria-hidden="true"></span>
+        <span class="depth-legend-label">{{ s.etichetta }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {# ---- 4. nota metodologica automatica: ultima sezione del componente ----
+     Dichiara che cosa il diagramma misura davvero. La lettura interpretativa
+     della fase (mutamento prodotto, soglia verificata) appartiene al corpo
+     editoriale della scheda, non alla figura. #}
+  <figcaption class="depth-nota">{{ d.notaMetodologica }}</figcaption>
+</figure>
+{% endmacro %}

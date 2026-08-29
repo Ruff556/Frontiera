@@ -1,16 +1,26 @@
 module.exports = {
   titolo: "Frontiera",
   sottotitolo: "analisi di tecnologia e strategia",
-  // Cambia questo URL con il dominio definitivo (serve a RSS e link assoluti)
-  url: "https://frontiera.example",
+  titoloEsteso: "Analisi di tecnologia e strategia",
+  descrizione:
+    "Pubblicazione analitica indipendente in lingua italiana sulla guerra russo-ucraina, la tecnologia e la strategia.",
+  // Fonte unica del dominio. Il valore di ambiente prevale; il fallback è già
+  // il dominio pubblico canonico e non richiede una configurazione implicita.
+  url: (process.env.FRONTIERA_SITE_URL || "https://frontiera.pages.dev").replace(/\/+$/, ""),
   lingua: "it",
-  // Voci di navigazione: 5 archivi + pagina statica Metodo
+  locale: "it_IT",
+  ogImage: {
+    file: "/immagini/open-graph/frontiera-og-default.png",
+    alt: "Frontiera — analisi di tecnologia e strategia",
+    width: 1200,
+    height: 630,
+  },
+  // Voci di navigazione: 2 archivi editoriali, la sezione Sistemi in homepage
+  // e la pagina statica Il progetto Frontiera. Fonte unica per desktop, mobile e footer.
   nav: [
     { nome: "Attualità", url: "/archivio/attualita/" },
     { nome: "Strategia", url: "/archivio/strategia/" },
-    { nome: "Mezzi aerei", url: "/archivio/mezzi-aerei/" },
-    { nome: "Mezzi terrestri", url: "/archivio/mezzi-terrestri/" },
-    { nome: "Droni", url: "/archivio/droni/" },
-    { nome: "Metodo", url: "/metodo/" },
+    { nome: "Sistemi", url: "/#sistemi" },
+    { nome: "Il progetto Frontiera", url: "/progetto/" },
   ],
 };

@@ -1,0 +1,16 @@
+{# Card autonoma per collections.sistemi. `immagine.fit: contain` è opzionale;
+   cover resta il comportamento predefinito per le fotografie. #}
+{% from "partials/media.njk" import fill %}
+{% set contain = item.data.immagine and item.data.immagine.fit == "contain" %}
+<article class="sistema-card{% if contain %} sistema-card--contain{% endif %}">
+  <a class="sistema-card-link" href="{{ item.url }}">
+    <div class="sistema-card-media">
+      {{ fill(item.data.immagine, "immagine del sistema", false, "systemCard") }}
+    </div>
+    <span class="sistema-card-scrim" aria-hidden="true"></span>
+    <div class="sistema-card-copy">
+      <h3>{{ item.data.titolo }}</h3>
+      {% if item.data.ruolo %}<p>{{ item.data.ruolo }}</p>{% endif %}
+    </div>
+  </a>
+</article>

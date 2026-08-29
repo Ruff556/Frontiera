@@ -1,8 +1,15 @@
 ---
 layout: layouts/base.njk
 ---
-<article class="page">
-  {% if kicker %}<div class="artkicker">{{ kicker }}</div>{% endif %}
-  <h1>{{ titolo | default(titoloPagina) }}</h1>
-  {{ content | safe }}
+<div class="testata testata--articolo testata--pagina">
+  <div class="inner">
+    {% if kicker %}<div class="artkicker">{{ kicker }}</div>{% endif %}
+    <h1>{{ titolo | default(titoloPagina) }}</h1>
+  </div>
+</div>
+
+<article class="page foglio">
+  <div class="page-body" data-section-navigation>
+    {{ content | safe }}
+  </div>
 </article>

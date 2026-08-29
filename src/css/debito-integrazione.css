@@ -1,0 +1,354 @@
+/* =====================================================================
+   21. DEBITO D'INTEGRAZIONE — schema concettuale interattivo
+   Componente modulare (partials/debito-integrazione.njk). Vive sul foglio
+   della lettura lunga: vetro chiaro, nessun backdrop-filter (regola del
+   progetto: niente blur sulle superfici di lettura).
+   Interazione senza JavaScript: sei radio nascosti + :checked pilotano
+   variabili CSS lette dall'SVG. L'hover è una PREVISIONE della selezione,
+   quindi le sue regole stanno DOPO quelle di :checked e non usano id
+   (specificità identica: vince l'ordine).
+   ===================================================================== */
+.debito{
+  /* --- materia --- */
+  --d-superficie:linear-gradient(158deg,rgba(255,255,255,.93),rgba(255,255,255,.62));
+  --d-superficie-2:linear-gradient(158deg,rgba(255,255,255,.86),rgba(255,255,255,.5));
+  --d-bordo:var(--hairline);
+  --d-bordo-2:var(--hairline-2);
+  --d-ombra:0 10px 26px -20px rgba(15,26,34,.42),inset 0 1px 0 rgba(255,255,255,.9);
+  --d-alone:rgba(250,251,250,.94);
+  /* --- segno --- */
+  --d-inn:var(--accent);
+  --d-int:#27404E;
+  --d-fascia-alto:rgba(28,110,140,.20);
+  --d-fascia-basso:rgba(28,110,140,.05);
+  --d-trama:rgba(34,86,107,.22);
+  --d-griglia:rgba(28,110,140,.14);
+  --d-fondo:rgba(255,255,255,.34);
+  --d-velo:#F7F9F8;
+  --d-testo:var(--text);
+  --d-testo-2:var(--muted);
+  --d-kicker:var(--accent);
+  position:relative;overflow:hidden;margin:2.6rem 0;padding:1.15rem 1.25rem 1.05rem;
+  border-radius:var(--r-lg);background-image:var(--d-superficie);
+  border:1px solid var(--d-bordo);box-shadow:var(--d-ombra);
+}
+.reading .debito,.page .debito,.schedabody .debito,.fasebody .debito{margin:2.6rem 0}
+/* --- testata editoriale --- */
+.debito-testa{position:relative;margin-bottom:1rem}
+.debito .debito-eyebrow{
+  font-family:'IBM Plex Mono',monospace;font-size:.6rem;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--d-kicker);margin:0 0 .5rem;
+}
+.debito .debito-titolo{
+  font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(1.14rem,2vw,1.34rem);
+  line-height:1.16;letter-spacing:-.012em;color:var(--ink);margin:0 0 .5rem;
+}
+.debito .debito-intro{
+  font-family:'Spectral',serif;font-size:.98rem;line-height:1.5;color:var(--d-testo);
+  margin:0;max-width:46ch;
+}
+/* --- corpo: radio + scena + legenda + pannello --- */
+.debito-corpo{position:relative;display:block}
+.debito-radio{
+  position:absolute;width:1px;height:1px;margin:0;padding:0;border:0;
+  clip:rect(0,0,0,0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;
+}
+.debito-sr{
+  position:absolute!important;width:1px!important;height:1px!important;padding:0!important;
+  margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;border:0!important;
+}
+.debito-scena{
+  position:relative;aspect-ratio:720/440;width:100%;overflow:hidden;
+  border-radius:var(--r-md);background-image:var(--d-superficie-2);
+  border:1px solid var(--d-bordo-2);box-shadow:inset 0 1px 0 rgba(255,255,255,.9);
+}
+.debito-tela{
+  position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;
+  /* stato dinamico: valori di riposo, riscritti dalle regole :checked/:hover */
+  --d-op-inn:1;--d-op-int:1;--d-op-fascia:1;--d-w-inn:2.2;--d-w-int:2.9;
+  --d-trama-op:.46;--d-trama2-op:0;
+  --d-velo-a:0;--d-velo-b:0;--d-velo-c:0;
+  --d-zona-a:0;--d-zona-b:0;--d-zona-c:0;
+  --d-mis-a:0;--d-mis-b:0;--d-mis-c:0;
+  --d-fuoco-a:0;--d-fuoco-b:0;--d-fuoco-c:0;
+}
+/* --- aree di attivazione: sagome trasparenti sopra il disegno --- */
+.debito-mira{position:absolute;inset:0;margin:0;pointer-events:none}
+.debito-mira svg{width:100%;height:100%;display:block;pointer-events:none}
+.debito-bersaglio{
+  fill:none;stroke:rgba(0,0,0,0);stroke-width:30;stroke-linecap:round;stroke-linejoin:round;
+  pointer-events:stroke;cursor:pointer;
+}
+.debito-bersaglio--area{fill:rgba(0,0,0,0);stroke:none;pointer-events:fill;cursor:pointer}
+.debito-bersaglio--zona{fill:rgba(0,0,0,0);stroke:none;pointer-events:fill;cursor:pointer}
+/* --- disegno --- */
+.debito-fondo{fill:var(--d-fondo)}
+.debito-asse{fill:none;stroke:var(--d-griglia);stroke-width:1.2;vector-effect:non-scaling-stroke}
+.debito-freccia{fill:var(--d-griglia)}
+.debito-tacca{fill:none;stroke:var(--d-griglia);stroke-width:1.2;vector-effect:non-scaling-stroke}
+.debito-divisorio{
+  fill:none;stroke:var(--d-griglia);stroke-width:1;stroke-dasharray:3 5;
+  vector-effect:non-scaling-stroke;
+}
+.debito-stop--alto{stop-color:var(--d-fascia-alto)}
+.debito-stop--basso{stop-color:var(--d-fascia-basso)}
+.debito-fascia{opacity:var(--d-op-fascia);transition:opacity var(--t2) var(--e-io)}
+.debito-trama-segno{stroke:var(--d-trama);stroke-width:1.1}
+.debito-fascia-trama{opacity:calc(var(--d-op-fascia) * var(--d-trama-op));transition:opacity var(--t2) var(--e-io)}
+.debito-fascia-trama--densa{opacity:calc(var(--d-op-fascia) * var(--d-trama2-op))}
+.debito-zona{fill:var(--d-inn);transition:opacity var(--t2) var(--e-io)}
+.debito-zona--a{opacity:calc(var(--d-zona-a) * .045)}
+.debito-zona--b{opacity:calc(var(--d-zona-b) * .045)}
+.debito-zona--c{opacity:calc(var(--d-zona-c) * .045)}
+.debito-curva{
+  fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;
+  transition:opacity var(--t2) var(--e-io),stroke-width var(--t2) var(--e-io);
+}
+.debito-curva--innovazione{stroke:var(--d-inn);stroke-width:var(--d-w-inn);opacity:var(--d-op-inn)}
+.debito-curva--integrata{stroke:var(--d-int);stroke-width:var(--d-w-int);opacity:var(--d-op-int)}
+.debito-marcatori rect{fill:var(--d-inn);opacity:calc(var(--d-op-inn) * .9);transition:opacity var(--t2) var(--e-io)}
+.debito-velo{fill:var(--d-velo);transition:opacity var(--t2) var(--e-io)}
+.debito-velo--a{opacity:var(--d-velo-a)}
+.debito-velo--b{opacity:var(--d-velo-b)}
+.debito-velo--c{opacity:var(--d-velo-c)}
+.debito-misura{transition:opacity var(--t2) var(--e-io)}
+.debito-misura--a{opacity:var(--d-mis-a)}
+.debito-misura--b{opacity:var(--d-mis-b)}
+.debito-misura--c{opacity:var(--d-mis-c)}
+.debito-misura-linea{fill:none;stroke:var(--d-int);stroke-width:1.4;vector-effect:non-scaling-stroke}
+.debito-misura-cappello{fill:none;stroke:var(--d-int);stroke-width:1.4;vector-effect:non-scaling-stroke}
+.debito-soglia{
+  fill:none;stroke:var(--d-int);stroke-width:1.4;stroke-dasharray:5 4;opacity:.62;
+  vector-effect:non-scaling-stroke;
+}
+.debito-fuoco{
+  fill:none;stroke:var(--d-inn);stroke-width:1.6;stroke-dasharray:4 3;
+  vector-effect:non-scaling-stroke;transition:opacity var(--t1) var(--e-io);
+}
+.debito-fuoco--a{opacity:var(--d-fuoco-a)}
+.debito-fuoco--b{opacity:var(--d-fuoco-b)}
+.debito-fuoco--c{opacity:var(--d-fuoco-c)}
+/* --- testi dentro l'SVG: alone chiaro, mai sovrapposti alle curve --- */
+.debito-tela text{
+  paint-order:stroke fill;stroke:var(--d-alone);stroke-width:3.6px;stroke-linejoin:round;
+  pointer-events:none;
+}
+.debito-eti-curva{font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;fill:var(--d-testo)}
+.debito-eti-zona,.debito-eti-asse,.debito-eti-mis,.debito-eti-soglia{
+  font-family:'IBM Plex Mono',monospace;font-weight:500;fill:var(--d-testo-2);
+}
+.debito-eti-zona{font-size:13px;letter-spacing:.9px;text-transform:uppercase}
+.debito-eti-asse{font-size:12.5px;letter-spacing:1.2px;text-transform:uppercase}
+.debito-eti-mis{font-size:13px;letter-spacing:.2px}
+.debito-eti-soglia{font-size:11.5px;letter-spacing:.6px}
+.debito-eti--stretta{display:none}
+/* --- watermark FRONTIERA: presente ma subordinato, dentro la superficie --- */
+.debito-firma{
+  position:absolute;top:.5rem;right:.7rem;width:clamp(110px,22%,176px);height:auto;opacity:.50;
+}
+.debito-firma.watermark--dark{opacity:.32}
+/* --- legenda: è anche il comando dei tre strati --- */
+.debito-legenda{display:flex;flex-wrap:wrap;gap:.4rem;margin:.7rem 0 .75rem}
+.debito-gettone{
+  display:inline-flex;align-items:center;gap:.45rem;min-height:2.15rem;
+  padding:.34rem .7rem;border-radius:var(--r-pill);cursor:pointer;
+  background:rgba(255,255,255,.6);border:1px solid var(--d-bordo);
+  font-family:'IBM Plex Mono',monospace;font-size:.62rem;font-weight:500;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--d-testo-2);
+  transition:color var(--t1),background-color var(--t1),border-color var(--t1);
+}
+.debito-gettone:hover{color:var(--ink);border-color:var(--accent)}
+.debito-campione{display:block;flex:0 0 auto;width:1.05rem;height:.62rem;border-radius:2px}
+.debito-campione--innovazione{height:0;border-top:2.5px solid var(--d-inn)}
+.debito-campione--integrata{height:0;border-top:3px solid var(--d-int)}
+.debito-campione--debito{
+  border:1px solid rgba(34,86,107,.34);background-color:rgba(28,110,140,.13);
+  background-image:repeating-linear-gradient(50deg,rgba(34,86,107,.34) 0 1px,rgba(0,0,0,0) 1px 5px);
+}
+/* --- pannello interpretativo: altezza riservata, nessun salto di layout --- */
+.debito-pannello{
+  position:relative;padding:.85rem 1rem .95rem;border-radius:var(--r-md);
+  background-image:var(--d-superficie-2);border:1px solid var(--d-bordo);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9);
+}
+.debito-pannello::before{
+  content:"";position:absolute;left:0;top:.75rem;bottom:.75rem;width:2px;border-radius:1px;
+  background:linear-gradient(180deg,var(--accent),rgba(28,110,140,.15));
+}
+.debito-pannello-testa{display:flex;align-items:center;gap:1rem;margin-bottom:.5rem}
+.debito-pannello-kicker{
+  font-family:'IBM Plex Mono',monospace;font-size:.56rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--d-kicker);
+}
+.debito-ripristino{
+  margin-left:auto;display:inline-flex;align-items:center;gap:.3rem;cursor:pointer;
+  font-family:'IBM Plex Mono',monospace;font-size:.56rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--d-testo-2);
+  transition:color var(--t1),opacity var(--t1);
+}
+.debito-ripristino:hover{color:var(--accent)}
+.debito-ripristino-segno{font-size:.8rem;line-height:1}
+.debito-voci{display:grid}
+.debito-voce{
+  grid-area:1/1;min-width:0;opacity:0;visibility:hidden;
+  transition:opacity var(--t2) var(--e-io);
+}
+.debito .debito-voce-nome{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:.98rem;line-height:1.2;
+  color:var(--ink);margin:0 0 .35rem;
+}
+.debito .debito-voce-testo{
+  font-family:'Spectral',serif;font-size:.96rem;line-height:1.5;color:var(--d-testo);margin:0;
+}
+.debito .debito-voce-messaggio{
+  margin:.55rem 0 0;padding-left:.7rem;border-left:2px solid rgba(28,110,140,.28);
+  font-family:'Spectral',serif;font-style:italic;font-size:.93rem;line-height:1.45;
+  color:var(--d-testo-2);
+}
+/* --- chiusura concettuale e didascalia --- */
+.debito .debito-chiusura{
+  display:flex;flex-direction:column;gap:.18rem;margin:.9rem 0 0;
+  padding-top:.75rem;border-top:1px solid var(--d-bordo-2);
+}
+.debito-chiusura b{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:-.005em;
+  color:var(--ink);
+}
+.debito-chiusura span{
+  font-family:'Spectral',serif;font-style:italic;font-size:.88rem;color:var(--d-testo-2);
+}
+.debito-didascalia{
+  margin:.7rem 0 0;font-family:'IBM Plex Mono',monospace;font-size:.58rem;line-height:1.5;
+  letter-spacing:.015em;color:var(--d-testo-2);
+}
+.debito-fonte{opacity:.8}
+/* --- STATO SELEZIONATO (senza JavaScript) --- */
+.debito-radio--innovazione:checked ~ .debito-scena .debito-tela{--d-w-inn:3.4;--d-op-int:.4;--d-op-fascia:.42;--d-trama-op:.26}
+.debito-radio--integrata:checked ~ .debito-scena .debito-tela{--d-w-int:4;--d-op-inn:.4;--d-op-fascia:.42;--d-trama-op:.26}
+.debito-radio--debito:checked ~ .debito-scena .debito-tela{--d-op-inn:.92;--d-op-int:.92;--d-trama-op:.6;--d-mis-b:1}
+.debito-radio--frenata:checked ~ .debito-scena .debito-tela{--d-velo-b:.58;--d-velo-c:.58;--d-zona-a:1;--d-mis-a:1}
+.debito-radio--governata:checked ~ .debito-scena .debito-tela{--d-velo-a:.58;--d-velo-c:.58;--d-zona-b:1;--d-mis-b:1;--d-trama-op:.62}
+.debito-radio--frammentazione:checked ~ .debito-scena .debito-tela{--d-velo-a:.58;--d-velo-b:.58;--d-zona-c:1;--d-mis-c:1;--d-trama-op:.72;--d-trama2-op:.62}
+.debito-radio--innovazione:checked ~ .debito-pannello .debito-voce--innovazione,
+.debito-radio--integrata:checked ~ .debito-pannello .debito-voce--integrata,
+.debito-radio--debito:checked ~ .debito-pannello .debito-voce--debito,
+.debito-radio--frenata:checked ~ .debito-pannello .debito-voce--frenata,
+.debito-radio--governata:checked ~ .debito-pannello .debito-voce--governata,
+.debito-radio--frammentazione:checked ~ .debito-pannello .debito-voce--frammentazione{opacity:1;visibility:visible}
+.debito-radio--innovazione:checked ~ .debito-legenda .debito-gettone--innovazione,
+.debito-radio--integrata:checked ~ .debito-legenda .debito-gettone--integrata,
+.debito-radio--debito:checked ~ .debito-legenda .debito-gettone--debito{
+  color:var(--ink);background:rgba(255,255,255,.95);border-color:var(--accent);
+  box-shadow:0 0 0 1px rgba(28,110,140,.28);
+}
+.debito-radio--debito:checked ~ .debito-pannello .debito-ripristino{opacity:0;visibility:hidden}
+/* --- PREVISIONE AL PASSAGGIO (dopo :checked, stessa specificità) --- */
+.debito-mira--innovazione:hover ~ .debito-tela{--d-w-inn:3.4;--d-op-int:.48;--d-op-fascia:.5}
+.debito-mira--integrata:hover ~ .debito-tela{--d-w-int:4;--d-op-inn:.48;--d-op-fascia:.5}
+.debito-mira--fascia:hover ~ .debito-tela{--d-trama-op:.75;--d-mis-b:1}
+.debito-mira--frenata:hover ~ .debito-tela{--d-zona-a:1}
+.debito-mira--governata:hover ~ .debito-tela{--d-zona-b:1}
+.debito-mira--frammentazione:hover ~ .debito-tela{--d-zona-c:1}
+/* --- FUOCO VISIBILE --- */
+.debito-radio--frenata:focus-visible ~ .debito-scena .debito-tela{--d-fuoco-a:1}
+.debito-radio--governata:focus-visible ~ .debito-scena .debito-tela{--d-fuoco-b:1}
+.debito-radio--frammentazione:focus-visible ~ .debito-scena .debito-tela{--d-fuoco-c:1}
+.debito-radio--innovazione:focus-visible ~ .debito-legenda .debito-gettone--innovazione,
+.debito-radio--integrata:focus-visible ~ .debito-legenda .debito-gettone--integrata,
+.debito-radio--debito:focus-visible ~ .debito-legenda .debito-gettone--debito{
+  outline:2px solid var(--accent);outline-offset:2px;
+}
+/* --- COMPARSA DELLE CURVE (solo con JS attivo e movimento consentito) --- */
+.debito--pronto .debito-curva{stroke-dasharray:1;stroke-dashoffset:1}
+.debito--pronto .debito-gruppo-fascia{opacity:0}
+.debito--vista .debito-curva{animation:debito-traccia .9s var(--e-out) forwards}
+.debito--vista .debito-curva--integrata{animation-delay:.06s}
+.debito--vista .debito-gruppo-fascia{animation:debito-apparizione .45s .3s var(--e-out) forwards}
+@keyframes debito-traccia{to{stroke-dashoffset:0}}
+@keyframes debito-apparizione{to{opacity:1}}
+/* --- MOBILE: etichette brevi, tipografia dell'SVG più grande --- */
+@media(max-width:700px){
+  .debito{padding:1rem 1rem .95rem;border-radius:var(--r-md)}
+  .debito-eti--ampia{display:none}
+  .debito-eti--stretta{display:block}
+  .debito-eti-curva{font-size:20px}
+  .debito-eti-zona{font-size:17px;letter-spacing:.6px}
+  .debito-eti-asse{font-size:16px}
+  .debito-eti-mis{font-size:16px}
+  /* La parola "soglia" è la più minuta: sotto questa larghezza sparisce e
+     resta il solo tratteggio. Il significato vive nel pannello e nella
+     didascalia, mai soltanto nel grafico. */
+  .debito-eti-soglia{display:none}
+  .debito-tela text{stroke-width:4.6px}
+  .debito-legenda{gap:.35rem}
+  .debito-gettone{font-size:.58rem;padding:.34rem .6rem}
+  .debito-firma{top:.4rem;right:.5rem;width:clamp(84px,24%,140px)}
+}
+/* Sotto i 480px la tela è disegnata a scala molto ridotta: le micro-etichette
+   crescono in unità di viewBox per restare leggibili sullo schermo. */
+@media(max-width:480px){
+  /* margine interno ridotto: la tela recupera larghezza, e con essa scala */
+  .debito{padding:.85rem .6rem .85rem}
+  .debito .debito-eyebrow{font-size:.55rem;letter-spacing:.11em}
+  .debito-eti-curva{font-size:26px}
+  .debito-eti-zona{font-size:24px;letter-spacing:0}
+  .debito-eti-asse{font-size:23px}
+  .debito-eti-mis{font-size:21px}
+  .debito-tela text{stroke-width:6px}
+}
+@media(max-width:380px){
+  .debito-gettone{width:100%;justify-content:flex-start}
+}
+/* --- DESKTOP: pannello a fianco del grafico quando c'è misura per due --- */
+@media(min-width:1024px){
+  .debito--larga .debito-corpo{
+    display:grid;grid-template-columns:minmax(0,1fr) 17rem;gap:1.1rem;align-items:start;
+  }
+  .debito--larga .debito-legenda{grid-column:1;margin-bottom:0}
+  .debito--larga .debito-pannello{grid-column:2;grid-row:1/3}
+}
+/* --- VARIANTE SCURA: per superfici in vetro scuro (testate, pannelli) --- */
+.debito--scura{
+  --d-superficie:linear-gradient(158deg,rgba(43,68,84,.5),rgba(15,27,35,.4));
+  --d-superficie-2:linear-gradient(158deg,rgba(58,90,110,.42),rgba(14,26,34,.34));
+  --d-bordo:var(--gd-brd);
+  --d-bordo-2:rgba(160,199,214,.12);
+  --d-ombra:var(--gd-shadow),var(--gd-inset);
+  --d-alone:rgba(9,18,24,.86);
+  --d-inn:var(--accent-hi);
+  --d-int:#A9BCC6;
+  --d-fascia-alto:rgba(125,194,218,.24);
+  --d-fascia-basso:rgba(125,194,218,.05);
+  --d-trama:rgba(160,199,214,.4);
+  --d-griglia:rgba(160,199,214,.22);
+  --d-fondo:rgba(255,255,255,.03);
+  --d-velo:#0C1720;
+  --d-testo:var(--on-dark-2);
+  --d-testo-2:var(--on-dark-4);
+  --d-kicker:var(--accent-hi);
+  -webkit-backdrop-filter:var(--blur-panel);backdrop-filter:var(--blur-panel);
+}
+.debito--scura .debito-titolo,.debito--scura .debito-voce-nome,.debito--scura .debito-chiusura b{color:var(--on-dark)}
+.debito--scura .debito-gettone{background:rgba(23,40,51,.5);border-color:var(--gd-brd)}
+.debito--scura .debito-gettone:hover{color:var(--on-dark);border-color:var(--accent-hi)}
+.debito--scura .debito-radio--innovazione:checked ~ .debito-legenda .debito-gettone--innovazione,
+.debito--scura .debito-radio--integrata:checked ~ .debito-legenda .debito-gettone--integrata,
+.debito--scura .debito-radio--debito:checked ~ .debito-legenda .debito-gettone--debito{
+  color:var(--on-dark);background:rgba(30,50,62,.72);border-color:var(--accent-hi);box-shadow:none;
+}
+.debito--scura .debito-pannello::before{background:linear-gradient(180deg,var(--accent-hi),rgba(125,194,218,.12))}
+.debito--scura .debito-voce-messaggio{border-left-color:rgba(125,194,218,.32)}
+.debito--scura .debito-campione--debito{border-color:rgba(160,199,214,.34);background-color:rgba(125,194,218,.16);background-image:repeating-linear-gradient(50deg,rgba(160,199,214,.4) 0 1px,rgba(0,0,0,0) 1px 5px)}
+/* --- Senza backdrop-filter: superfici più ferme, leggibilità invariata --- */
+@supports not ((backdrop-filter:blur(2px)) or (-webkit-backdrop-filter:blur(2px))){
+  .debito{background-image:linear-gradient(158deg,rgba(255,255,255,.97),rgba(255,255,255,.9))}
+  .debito-scena,.debito-pannello{background-image:linear-gradient(158deg,rgba(255,255,255,.95),rgba(255,255,255,.86))}
+  .debito--scura{background-image:linear-gradient(158deg,rgba(35,58,72,.96),rgba(14,26,34,.94))}
+  .debito--scura .debito-scena,.debito--scura .debito-pannello{background-image:linear-gradient(158deg,rgba(40,66,82,.96),rgba(16,29,38,.94))}
+}
+/* --- Movimento ridotto: nessuna comparsa, disegno completo da subito --- */
+@media(prefers-reduced-motion:reduce){
+  .debito--pronto .debito-curva{stroke-dasharray:none;stroke-dashoffset:0}
+  .debito--pronto .debito-gruppo-fascia{opacity:1}
+}

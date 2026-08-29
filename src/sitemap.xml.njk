@@ -1,0 +1,25 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for item in collections.all %}
+  {%- if item.data.seo and item.data.seo.indexable and item.data.seo.canonical and item.data.seo.family != "archivio" %}
+  <url>
+    <loc>{{ item.data.seo.canonical | escape }}</loc>
+    {%- if item.data.seo.lastmod %}
+    <lastmod>{{ item.data.seo.lastmod }}</lastmod>
+    {%- endif %}
+  </url>
+  {%- endif %}
+{%- endfor %}
+{# Eleventy non espone in collections.all tutte le pagine prodotte dalla
+   paginazione di archivio.njk. Gli archivi pubblici derivano quindi dalla loro
+   fonte unica, src/_data/sezioni.js, evitando omissioni e duplicati. #}
+{%- for sez in sezioni %}
+  <url>
+    <loc>{{ site.url | escape }}/archivio/{{ sez.slug | escape }}/</loc>
+  </url>
+{%- endfor %}
+</urlset>

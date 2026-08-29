@@ -1,0 +1,65 @@
+[
+  {
+    "idFase": "p0",
+    "numero": 0,
+    "numeroEtichetta": "P0",
+    "ordine": 0,
+    "titolo": "Asimmetria iniziale e decisione mancata",
+    "datazione": "24 febbraio – fine giugno 2022",
+    "anteprima": "Il monopolio russo della profondità non produce la paralisi rapida dell'Ucraina."
+  },
+  {
+    "idFase": "p1",
+    "numero": 1,
+    "numeroEtichetta": "P1",
+    "ordine": 1,
+    "titolo": "Interdizione operativa e arretramento logistico",
+    "datazione": "fine giugno – 9 ottobre 2022",
+    "anteprima": "HIMARS e M270 rendono ripetibile il colpo preciso a 70–80 km e costringono la logistica russa ad arretrare e disperdersi."
+  },
+  {
+    "idFase": "p2",
+    "numero": 2,
+    "numeroEtichetta": "P2",
+    "ordine": 2,
+    "titolo": "Coercizione energetica e profondità negata a Kyiv",
+    "datazione": "10 ottobre 2022 – maggio 2023",
+    "anteprima": "Mosca combina missili e Geran contro il sistema elettrico ucraino, trasformando energia e popolazione in teatro centrale."
+  },
+  {
+    "idFase": "p3",
+    "numero": 3,
+    "numeroEtichetta": "P3",
+    "ordine": 3,
+    "titolo": "Profondità selettiva ad alta qualità",
+    "datazione": "maggio 2023 – gennaio 2024",
+    "anteprima": "Storm Shadow, SCALP e ATACMS aprono Crimea, aeroporti e retro occupato a colpi selettivi ad alta qualità."
+  },
+  {
+    "idFase": "p4",
+    "numero": 4,
+    "numeroEtichetta": "P4",
+    "ordine": 4,
+    "titolo": "Autonomia embrionale e campagne concorrenti di scala",
+    "datazione": "gennaio – 17 novembre 2024",
+    "anteprima": "I droni indigeni ucraini rendono seriali i raid in Russia mentre le campagne profonde acquistano scala su entrambi i lati."
+  },
+  {
+    "idFase": "p5",
+    "numero": 5,
+    "numeroEtichetta": "P5",
+    "ordine": 5,
+    "titolo": "Industrializzazione e santuario penetrato",
+    "datazione": "18 novembre 2024 – dicembre 2025",
+    "anteprima": "Produzione indigena, Geran di massa e operazioni come Spiderweb penetrano o aggirano il santuario."
+  },
+  {
+    "idFase": "p6",
+    "numero": 6,
+    "numeroEtichetta": "P6",
+    "ordine": 6,
+    "titolo": "Attacco sistemico e profondità difesa",
+    "datazione": "gennaio 2026 – presente · fase aperta",
+    "anteprima": "Le salve russe e la campagna ucraina su raffinazione e industria si saldano alla fascia media; la fase resta aperta."
+  }
+]

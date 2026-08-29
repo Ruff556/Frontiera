@@ -1,0 +1,42 @@
+{% macro cartinaFase(config, luoghi, linee) %}
+{% from "partials/watermark.njk" import watermark %}
+{% set categorieTerritoriali = config | cartinaCategorie %}
+<figure class="phase-map-card" aria-labelledby="phase-map-title">
+  <div class="phase-map-head">
+    <span class="phase-map-kicker" id="phase-map-title">Geografia della fase</span>
+    {% if config.dataRiferimento %}<span class="phase-map-note">{{ config.dataRiferimento }}</span>{% endif %}
+  </div>
+  <div class="phase-map-stage">
+    <div class="phase-map-panel">
+      <svg xmlns="http://www.w3.org/2000/svg" class="phase-map-canvas" viewBox="0 0 1920 1290" preserveAspectRatio="none" role="img" aria-label="{{ config | cartinaAria(luoghi) }}" focusable="false">
+        <image class="phase-map-base" x="0" y="0" width="1920" height="1290" href="/immagini/cartografia/ukraine-administrative-base.png" preserveAspectRatio="none"></image>
+        <rect class="phase-map-wash" x="0" y="0" width="1920" height="1290" aria-hidden="true"></rect>
+        {{ config | cartinaSvg(luoghi, linee) | safe }}
+        <g id="phase-base-label-layer" aria-hidden="true">
+          <text class="phase-base-label phase-base-label--sea" x="936.96" y="1217.76" text-anchor="middle" dominant-baseline="middle">Mar Nero</text>
+          <text class="phase-base-label phase-base-label--sea" x="1505.28" y="1006.2" text-anchor="middle" dominant-baseline="middle">Mar d'Azov</text>
+          <g class="phase-base-label phase-base-label--capital">
+            <circle class="phase-base-label-dot" cx="910" cy="340.56" r="5.4"></circle>
+            <text x="932" y="340.56" text-anchor="start" dominant-baseline="middle">Kyiv</text>
+          </g>
+        </g>
+      </svg>
+      {{ watermark("standard", "phase-map-watermark") }}
+    </div>
+  </div>
+  <figcaption class="phase-map-detail">
+    <div class="phase-map-copy">
+      {% if config.territori %}{{ config | cartinaPercentuali }}{% elif config.datiTerritoriali %}{{ config.datiTerritoriali }}{% else %}Hotspot e linea di contatto selezionati per la fase.{% endif %}
+    </div>
+    <div class="phase-map-legend" aria-label="Legenda cartografica">
+      {% for categoria in categorieTerritoriali %}<span><i class="phase-legend-territory phase-legend-territory--{{ categoria.classe }}"></i> {{ categoria.etichetta }}</span>{% endfor %}
+      {% if config.hotspot and config.hotspot.length %}<span><i class="phase-legend-hotspot"></i> hotspot</span>{% endif %}
+      {% if config.lineaContatto %}<span><i class="phase-legend-frontline"></i> linea di contatto</span>{% endif %}
+    </div>
+  </figcaption>
+  {% if config.hotspot and config.hotspot.length %}
+  <span class="phase-map-a11y">Elementi evidenziati: {% for item in config.hotspot %}{{ item.etichetta }}{% if not loop.last %}; {% endif %}{% endfor %}.</span>
+  {% endif %}
+  <div class="phase-map-credit">Base cartografica: “Ukraine adm location map”, NordNordWest — CC BY-SA 3.0 DE. {% if config.territori %}Perimetri: ridigitalizzazione Frontiera da DeepStateMap e ISW/CTP; verifica indipendente VIINA 2.0. Metodo, date e licenze nel dataset allegato.{% else %}Adattamento cromatico, dati ed etichette: Frontiera.{% endif %}</div>
+</figure>
+{% endmacro %}

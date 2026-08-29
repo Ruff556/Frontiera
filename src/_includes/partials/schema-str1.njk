@@ -1,0 +1,111 @@
+{# STR1 — L'allocazione della penetrazione. Geometria e regia restano locali. #}
+{% macro schemaStr1(o) %}
+{% from "partials/schema-kit.njk" import schemaFrame, schemaStage, schemaConsole, schemaReading, schemaControls, schemaCaption %}
+{%- set o = o or {} -%}
+{%- set id = o.id or "schema-str1-penetrazione" -%}
+{% call schemaFrame({
+  id: id,
+  kind: "str1-allocazione-penetrazione",
+  className: "str1-schema",
+  navigationLabel: "Schema — L’allocazione della penetrazione",
+  eyebrow: "STR1 · SCHEMA DI STRATEGIA",
+  title: "L’allocazione della penetrazione",
+  subtitle: "Chi attraversa la difesa?",
+  watermark: "standard"
+}) %}
+  <nav class="str1-schema__navigation" aria-label="Stati dello schema">
+    <div class="str1-schema__nav-row">
+      <span class="str1-schema__nav-label" id="{{ id }}-modalita-label">MODALITÀ</span>
+      <div class="str1-schema__tabs str1-schema__tabs--modes" role="tablist" aria-labelledby="{{ id }}-modalita-label" data-str1-modes>
+        <button class="schema-kit__button str1-schema__tab" type="button" role="tab" id="{{ id }}-mode-stand-off" aria-selected="true" tabindex="0" data-str1-mode="stand-off">STAND-OFF</button>
+        <button class="schema-kit__button str1-schema__tab" type="button" role="tab" id="{{ id }}-mode-stand-in" aria-selected="false" tabindex="-1" data-str1-mode="stand-in">STAND-IN</button>
+        <button class="schema-kit__button str1-schema__tab" type="button" role="tab" id="{{ id }}-mode-infiltrazione" aria-selected="false" tabindex="-1" data-str1-mode="infiltrazione">INFILTRAZIONE</button>
+      </div>
+    </div>
+    <div class="str1-schema__nav-row">
+      <span class="str1-schema__nav-label" id="{{ id }}-momenti-label">MOMENTI</span>
+      <div class="str1-schema__tabs str1-schema__tabs--moments" role="tablist" aria-labelledby="{{ id }}-momenti-label" data-str1-moments>
+        <button class="schema-kit__button str1-schema__tab" type="button" role="tab" aria-selected="false" tabindex="0" data-str1-moment="1"><span class="str1-schema__tab-index">01</span><span data-str1-moment-label>AVVICINAMENTO</span></button>
+        <button class="schema-kit__button str1-schema__tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-str1-moment="2"><span class="str1-schema__tab-index">02</span><span data-str1-moment-label>INGAGGIO</span></button>
+        <button class="schema-kit__button str1-schema__tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-str1-moment="3"><span class="str1-schema__tab-index">03</span><span data-str1-moment-label>RIENTRO</span></button>
+      </div>
+    </div>
+  </nav>
+
+  {% call schemaStage({ className: "str1-schema__stage", label: "Campo schematico Blue e Red" }) %}
+    <svg class="str1-schema__canvas" viewBox="0 0 1000 410" role="img" aria-labelledby="{{ id }}-svg-title {{ id }}-svg-desc" focusable="false" data-str1-canvas>
+      <title id="{{ id }}-svg-title">Allocazione della penetrazione fra Blue e Red</title>
+      <desc id="{{ id }}-svg-desc" data-str1-desc>Campo iniziale in modalità Stand-off. Le basi e le difese Blue e Red sono visibili; nessun vettore ha ancora attraversato la difesa.</desc>
+      <defs>
+        <clipPath id="{{ id }}-clip"><rect x="0" y="0" width="1000" height="410" rx="12"/></clipPath>
+        <path id="{{ id }}-stand-off-out" data-str1-path="stand-off-out" d="M155 292 C275 290 410 252 555 222"/>
+        <path id="{{ id }}-stand-off-weapon" data-str1-path="stand-off-weapon" d="M555 222 C665 199 770 184 855 282"/>
+        <path id="{{ id }}-stand-off-return" data-str1-path="stand-off-return" d="M555 222 C474 116 322 126 155 292"/>
+        <path id="{{ id }}-stand-in-out" data-str1-path="stand-in-out" d="M155 292 C320 287 506 244 713 202"/>
+        <path id="{{ id }}-stand-in-weapon" data-str1-path="stand-in-weapon" d="M660 216 C735 208 802 232 855 282"/>
+        <path id="{{ id }}-stand-in-return" data-str1-path="stand-in-return" d="M713 202 C634 86 423 92 155 292"/>
+        <path id="{{ id }}-infiltration" data-str1-path="infiltration" d="M176 334 C310 318 446 344 566 323 C655 308 704 331 760 307"/>
+        <path id="{{ id }}-fpv-a" data-str1-path="fpv-a" d="M760 307 Q802 248 850 282"/>
+        <path id="{{ id }}-fpv-b" data-str1-path="fpv-b" d="M760 307 Q815 272 858 287"/>
+        <path id="{{ id }}-fpv-c" data-str1-path="fpv-c" d="M760 307 Q808 325 850 292"/>
+      </defs>
+      <g clip-path="url(#{{ id }}-clip)">
+        <path class="str1-schema__dome-field str1-schema__dome-field--blue" d="M0 360 V0 H288 C408 87 467 226 467 360 Z"/>
+        <path class="str1-schema__dome-field str1-schema__dome-field--red" d="M552 360 C552 220 618 82 736 0 H1000 V360 Z"/>
+        <path class="str1-schema__dome-arc str1-schema__dome-arc--blue" d="M288 0 C408 87 467 226 467 360"/>
+        <path class="str1-schema__dome-arc str1-schema__dome-arc--red" d="M552 360 C552 220 618 82 736 0"/>
+        <line class="str1-schema__ground" x1="0" y1="360" x2="1000" y2="360"/>
+        <text class="str1-schema__defence-label str1-schema__defence-label--blue" x="126" y="90">DIFESA BLUE</text>
+        <text class="str1-schema__defence-label str1-schema__defence-label--red" x="822" y="90">DIFESA RED</text>
+        <image href="/immagini/strategia/str1-aeroporto-blue.png" x="54" y="246" width="190" height="116" preserveAspectRatio="xMidYMid meet"/>
+        <image href="/immagini/strategia/str1-sam-blue.png" x="280" y="256" width="154" height="106" preserveAspectRatio="xMidYMid meet"/>
+        <image href="/immagini/strategia/str1-sam-red.png" x="572" y="256" width="154" height="106" preserveAspectRatio="xMidYMid meet"/>
+        <image href="/immagini/strategia/str1-aeroporto-red.png" x="756" y="246" width="190" height="116" preserveAspectRatio="xMidYMid meet" data-str1-airport-red/>
+        <g data-str1-dynamic aria-hidden="true"></g>
+      </g>
+      <text class="str1-schema__base-label str1-schema__base-label--blue" x="149" y="392" text-anchor="middle">BASE BLUE</text>
+      <text class="str1-schema__base-label str1-schema__base-label--red" x="851" y="392" text-anchor="middle">BASE RED</text>
+    </svg>
+  {% endcall %}
+
+  {% call schemaConsole({ className: "str1-schema__console" }) %}
+    {% call schemaReading({ className: "str1-schema__panel str1-schema__reading", label: "LETTURA", count: "00/03" }) %}
+      <div class="str1-schema__copy-stack str1-schema__reading-stack">
+        <div class="str1-schema__reading-copy">
+          <p class="str1-schema__reading-main" data-str1-reading-title>Tre modi di attraversare la difesa.</p>
+          <p class="str1-schema__reading-secondary" data-str1-reading-text>Avanza o seleziona un momento per osservare quale componente assume la penetrazione e dove compare l’esposizione.</p>
+        </div>
+        <div class="str1-schema__reading-copy str1-schema__copy-sizer" aria-hidden="true"><p class="str1-schema__reading-main">La piattaforma raggiunge un’area di lancio protetta.</p><p class="str1-schema__reading-secondary">Il vettore di trasporto resta fuori dal volume difensivo Red; la penetrazione non è ancora affidata alla munizione.</p></div>
+        <div class="str1-schema__reading-copy str1-schema__copy-sizer" aria-hidden="true"><p class="str1-schema__reading-main">La munizione riceve il tratto contestato.</p><p class="str1-schema__reading-secondary">La piattaforma separa il proprio rientro dalla rotta dell’arma; è il vettore offensivo a proseguire verso la difesa Red.</p></div>
+        <div class="str1-schema__reading-copy str1-schema__copy-sizer" aria-hidden="true"><p class="str1-schema__reading-main">La piattaforma rientra; la munizione attraversa la difesa.</p><p class="str1-schema__reading-secondary">La distanza sottrae il vettore di trasporto alla difesa di rotta, ma non elimina l’esposizione di basi, scorte e ricostituzione.</p></div>
+        <div class="str1-schema__reading-copy str1-schema__copy-sizer" aria-hidden="true"><p class="str1-schema__reading-main">La piattaforma entra nello spazio difeso Red.</p><p class="str1-schema__reading-secondary">La penetrazione viene affidata direttamente al sistema; la minaccia compare oltre la soglia difensiva.</p></div>
+        <div class="str1-schema__reading-copy str1-schema__copy-sizer" aria-hidden="true"><p class="str1-schema__reading-main">L’ingaggio avviene dall’interno del volume difensivo.</p><p class="str1-schema__reading-secondary">Piattaforma e munizione restano simultaneamente esposte; la prima concentra il livello di minaccia maggiore.</p></div>
+        <div class="str1-schema__reading-copy str1-schema__copy-sizer" aria-hidden="true"><p class="str1-schema__reading-main">La piattaforma esce; l’arma completa il tratto finale.</p><p class="str1-schema__reading-secondary">Il rientro conserva il valore della piattaforma riutilizzabile; l’accesso dipende dall’intero sistema che ne ha reso possibile l’ingresso.</p></div>
+        <div class="str1-schema__reading-copy str1-schema__copy-sizer" aria-hidden="true"><p class="str1-schema__reading-main">La penetrazione è affidata alla catena clandestina.</p><p class="str1-schema__reading-secondary">L'individuazione degli attori infiltrati non avviene, ma il rischio di operare in clandestinità dietro le linee nemiche è costante</p></div>
+        <div class="str1-schema__reading-copy str1-schema__copy-sizer" aria-hidden="true"><p class="str1-schema__reading-main">L’ingaggio rivela l’attacco nell’area della base.</p><p class="str1-schema__reading-secondary">L'attacco ha luogo nell'imminenza dell'obiettivo. Per gli infiltrati il rischio resta massimo; l’allerta non ne localizza automaticamente la posizione.</p></div>
+        <div class="str1-schema__reading-copy str1-schema__copy-sizer" aria-hidden="true"><p class="str1-schema__reading-main">L’esfiltrazione resta incerta.</p><p class="str1-schema__reading-secondary">Gli infiltrati continuano ad agire in clandestinità, il rischio rimane massimo</p></div>
+      </div>
+    {% endcall %}
+    <section class="str1-schema__panel str1-schema__architecture-panel" aria-labelledby="{{ id }}-architecture-label">
+      <div class="str1-schema__panel-meta"><span id="{{ id }}-architecture-label">ELEMENTI COINVOLTI</span><span data-str1-architecture-mode>STAND-OFF</span></div>
+      <div class="str1-schema__copy-stack str1-schema__architecture-stack">
+        <div class="str1-schema__architecture">
+          <div class="str1-schema__architecture-row"><span class="str1-schema__side str1-schema__side--blue">BLUE</span><span class="str1-schema__systems" data-str1-blue-elements>Intelligence · targeting · piattaforma di lancio · munizione stand-off · rifornimento · basi e ricostituzione</span></div>
+          <div class="str1-schema__architecture-row"><span class="str1-schema__side str1-schema__side--red">RED</span><span class="str1-schema__systems" data-str1-red-elements>Allarme precoce · sensori · comando · difesa di area · difesa di punto</span></div>
+        </div>
+        <div class="str1-schema__architecture str1-schema__copy-sizer" aria-hidden="true"><div class="str1-schema__architecture-row"><span class="str1-schema__side str1-schema__side--blue">BLUE</span><span class="str1-schema__systems">Intelligence · targeting · piattaforma di lancio · munizione stand-off · rifornimento · basi e ricostituzione</span></div><div class="str1-schema__architecture-row"><span class="str1-schema__side str1-schema__side--red">RED</span><span class="str1-schema__systems">Allarme precoce · sensori · comando · difesa di area · difesa di punto</span></div></div>
+        <div class="str1-schema__architecture str1-schema__copy-sizer" aria-hidden="true"><div class="str1-schema__architecture-row"><span class="str1-schema__side str1-schema__side--blue">BLUE</span><span class="str1-schema__systems">Intelligence · inganno · stealth · rifornimento · guerra elettronica · soppressione · scorta</span></div><div class="str1-schema__architecture-row"><span class="str1-schema__side str1-schema__side--red">RED</span><span class="str1-schema__systems">Sensori · comando · difesa di area · difesa di punto</span></div></div>
+        <div class="str1-schema__architecture str1-schema__copy-sizer" aria-hidden="true"><div class="str1-schema__architecture-row"><span class="str1-schema__side str1-schema__side--blue">BLUE</span><span class="str1-schema__systems">Intelligence · sicurezza operativa · logistica clandestina · operatori · droni FPV o altri vettori nel sabotaggio</span></div><div class="str1-schema__architecture-row"><span class="str1-schema__side str1-schema__side--red">RED</span><span class="str1-schema__systems">Controintelligence · sicurezza perimetrale · sorveglianza locale · difesa di punto · reazione</span></div></div>
+      </div>
+    </section>
+    {% call schemaControls({ className: "str1-schema__controls", label: "Controlli di STR1" }) %}
+      <button class="schema-kit__button str1-schema__button str1-schema__button--auto" type="button" aria-pressed="false" data-str1-auto><span>AUTO</span><b data-str1-auto-state>OFF</b></button>
+      <button class="schema-kit__button str1-schema__button str1-schema__button--next" type="button" data-str1-next><span class="str1-schema__next-label">AVANZA</span><span class="str1-schema__next-arrow" aria-hidden="true">→</span></button>
+    {% endcall %}
+  {% endcall %}
+
+  {% call schemaCaption({ className: "str1-schema__caption" }) %}
+    <p><b>Metodo.</b> Lo schema semplifica volumi difensivi, traiettorie e livelli di minaccia. Non rappresenta distanze, probabilità d’intercetto o composizioni di forza in scala. Tempi e velocità hanno valore illustrativo.</p>
+  {% endcall %}
+{% endcall %}
+{% endmacro %}

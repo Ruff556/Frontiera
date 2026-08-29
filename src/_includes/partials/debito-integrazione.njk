@@ -1,0 +1,183 @@
+{#
+  DEBITO D'INTEGRAZIONE — schema concettuale interattivo, riutilizzabile.
+
+  Componente modulare di Frontiera: due curve (frontiera dell'innovazione /
+  capacità integrata) e la fascia compresa fra esse. Nessuna dipendenza da
+  JavaScript: markup, SVG e stati vivono nell'HTML e nel CSS (radio + :checked).
+  Il modulo /js/debito-integrazione.js aggiunge soltanto ripristino su clic
+  esterno, Esc e comparsa progressiva delle curve.
+
+  Richiamo (in una pagina Markdown o Nunjucks), due righe:
+    from "partials/debito-integrazione.njk" import debitoIntegrazione
+    debitoIntegrazione({ id: "debito-mio-pezzo" })
+  — la prima dentro un tag di blocco, la seconda dentro un tag di stampa.
+
+  Parametri (tutti opzionali tranne `id` quando la pagina ospita più schemi):
+    id, eyebrow, titolo, intro, variante ("chiara" | "scura"), classe,
+    innovazioneNome/Testo, integrataNome/Testo, debitoNome/Testo,
+    frenataNome/Etichetta/Testo/Messaggio  (e idem governata, frammentazione),
+    chiusuraPrima, chiusuraSeconda, didascalia, fonte, descrizione,
+    watermark (false per disattivare la firma FRONTIERA).
+
+  I testi qui sotto sono i valori predefiniti: si modificano in questo file
+  (per tutti i richiami) o si sovrascrivono nel singolo richiamo.
+#}
+{% macro debitoIntegrazione(o) %}
+{% from "partials/watermark.njk" import watermark as renderWatermark %}
+{%- set o = o or {} -%}
+{%- set id = o.id or "debito-integrazione" -%}
+{%- set variante = o.variante or "chiara" -%}
+{%- set eyebrow = o.eyebrow or "Concetto Frontiera" -%}
+{%- set titolo = o.titolo or "Il debito d’integrazione" -%}
+{%- set intro = o.intro or "L’innovazione avanza per salti; l’integrazione la segue con maggiore inerzia. La distanza tra le due è il debito d’integrazione." -%}
+{%- set innovazioneNome = o.innovazioneNome or "Frontiera dell’innovazione" -%}
+{%- set innovazioneTesto = o.innovazioneTesto or "La capacità raggiunta dalle unità e dagli attori che sperimentano, iterano e adottano per primi una nuova soluzione. Procede per salti e brevi stabilizzazioni: ogni iterazione può rendere obsoleta la precedente." -%}
+{%- set integrataNome = o.integrataNome or "Capacità integrata" -%}
+{%- set integrataTesto = o.integrataTesto or "La capacità che l’organizzazione riesce a sostenere, riprodurre, combinare e trasferire su scala più ampia. Dipende da addestramento, procedure, logistica, interoperabilità e standard: ha più inerzia, e per questo cresce in modo continuo." -%}
+{%- set debitoNome = o.debitoNome or "Debito d’integrazione" -%}
+{%- set debitoTesto = o.debitoTesto or "La distanza tra una capacità già dimostrata e la capacità dell’organizzazione di assorbirla e sostenerla. Si apre a ogni salto della frontiera e si richiude quando l’integrazione accelera: è una distanza che respira, non una misura fissa." -%}
+{%- set frenataNome = o.frenataNome or "Innovazione frenata" -%}
+{%- set frenataEtichetta = o.frenataEtichetta or "Frenata" -%}
+{%- set frenataTesto = o.frenataTesto or "La distanza è minima perché la frontiera viene rallentata: l’introduzione delle soluzioni resta subordinata alla preparazione completa della forza, e l’innovazione procede al ritmo dell’apparato." -%}
+{%- set frenataMessaggio = o.frenataMessaggio or "Ridurre la distanza rallentando la frontiera non risolve il problema: sacrifica il vantaggio prima che possa essere assorbito." -%}
+{%- set governataNome = o.governataNome or "Distanza governata" -%}
+{%- set governataEtichetta = o.governataEtichetta or "Governata" -%}
+{%- set governataTesto = o.governataTesto or "La frontiera avanza e l’integrazione accelera insieme a essa: lo scarto si apre a ogni salto e viene recuperato prima di superare la soglia sostenibile." -%}
+{%- set governataMessaggio = o.governataMessaggio or "L’obiettivo non è annullare lo scarto, ma mantenerlo compatibile con la capacità dell’organizzazione di apprendere." -%}
+{%- set frammentazioneNome = o.frammentazioneNome or "Frammentazione" -%}
+{%- set frammentazioneEtichetta = o.frammentazioneEtichetta or "Frammentazione" -%}
+{%- set frammentazioneTesto = o.frammentazioneTesto or "L’integrazione perde velocità mentre la frontiera continua a salire: isole di efficacia, dipendenza da specialisti, sistemi incompatibili, logistica frammentata, conoscenze non trasferibili." -%}
+{%- set frammentazioneMessaggio = o.frammentazioneMessaggio or "Quando l’integrazione non tiene il passo, l’innovazione resta locale e non diventa potenza generale." -%}
+{%- set chiusuraPrima = o.chiusuraPrima or "Accelerare l’integrazione, non rallentare l’innovazione." -%}
+{%- set chiusuraSeconda = "" if o.chiusuraSeconda === false else (o.chiusuraSeconda or "Diffondere la capacità di apprendere, non imporre l’identità delle unità.") -%}
+{%- set didascalia = o.didascalia or "Schema concettuale: le curve non rappresentano dati quantitativi, ma il rapporto fra la velocità dell’innovazione e quella dell’assorbimento organizzativo. Il tratteggio segna una soglia di riferimento: non è un valore costante, dipende dalla durata prevista della soluzione e dal costo della disomogeneità che introduce." -%}
+{%- set fonte = o.fonte or "Elaborazione originale Frontiera." -%}
+{%- set titoloGrafico = o.titoloGrafico or "Frontiera dell’innovazione e capacità integrata: la distanza fra le due curve è il debito d’integrazione." -%}
+{%- set descrizione = o.descrizione or "Grafico concettuale a due curve. L’asse orizzontale rappresenta il tempo come ciclo di emersione, sperimentazione, adozione, diffusione, adattamento e obsolescenza di una soluzione: non contiene date. L’asse verticale rappresenta la capacità operativa, cioè la capacità di trasformare una soluzione in potenza militare sostenibile, combinabile e riproducibile. La curva superiore, frontiera dell’innovazione, sale per salti seguiti da brevi stabilizzazioni e da qualche arretramento dovuto alla risposta avversaria. La curva inferiore, capacità integrata, sale in modo continuo, più lento e con maggiore inerzia. La fascia compresa fra le due curve è il debito d’integrazione: la distanza fra una capacità già dimostrata e la capacità dell’organizzazione di assorbirla, sostenerla e riprodurla. La sua ampiezza cambia nel tempo: si apre a ogni salto della frontiera e si richiude quando l’integrazione accelera. Il grafico distingue tre momenti dello stesso processo. Primo momento, innovazione frenata: la distanza è minima perché la frontiera viene rallentata, e il vantaggio si consuma prima di essere diffuso. Secondo momento, distanza governata: la frontiera avanza mentre l’integrazione accelera; lo scarto si apre a ogni salto e viene recuperato entro una soglia sostenibile. Terzo momento, frammentazione: l’integrazione perde velocità, la distanza supera la soglia e l’innovazione resta eccellenza locale invece di diventare capacità generale. Conclusione del modello: il debito si governa accelerando l’integrazione, non rallentando l’innovazione; l’esito desiderabile non è la distanza zero né l’uniformità delle unità, ma una forza in cui tutte le unità siano capaci di apprendere." -%}
+{%- set watermark = (o.watermark !== false) -%}
+{%- set watermarkVariant = "standard" -%}
+{%- if variante == "scura" -%}{%- set watermarkVariant = "dark" -%}{%- endif -%}
+{#- Geometria: viewBox 720x440, area di tracciato x 96-692, y 44-392. -#}
+{%- set D_INN = "M96,355.5 C118,349 132,345 150,341.5 C170,337.6 186,334.5 200,331.1 C224,325.5 244,320 262,313.7 L272,311.3 C282,309.5 286,244.5 296,242.4 C310,240.5 324,238.4 338,237.1 C348,235.8 352,190.6 362,188.4 C375,186.4 388,184.4 400,183.2 C407,184.6 412,187 418,188.4 C428,189.4 432,146.6 442,144.9 C452,143.2 461,141 470,139.7 C480,138.4 484,119 492,117.1 C506,115.8 520,113.4 532,111.9 C542,110.6 550,80.6 560,78.8 C572,78 584,77.4 596,77.1 C608,76.4 612,54.6 624,52.7 C636,52.1 648,51.4 660,51 C672,50.3 682,48.6 692,47.5" -%}
+{%- set D_INT = "M96,371.1 C130,362 152,357 180,352 C214,344 236,336 262,325.9 C292,314 314,302 340,287.6 C372,271 396,258 420,244.1 C452,227 476,212 500,198.9 C524,187 542,181 560,176.2 C585,171 610,169 630,167.5 C652,166.3 674,164.6 692,164" -%}
+{%- set D_FASCIA = D_INN ~ " L692,164 C674,164.6 652,166.3 630,167.5 C610,169 585,171 560,176.2 C542,181 524,187 500,198.9 C476,212 452,227 420,244.1 C396,258 372,271 340,287.6 C314,302 292,314 262,325.9 C236,336 214,344 180,352 C152,357 130,362 96,371.1 Z" -%}
+<figure class="debito debito--{{ variante }}{% if o.classe %} {{ o.classe }}{% endif %}" id="{{ id }}" aria-labelledby="{{ id }}-titolo">
+<div class="debito-testa">
+<p class="debito-eyebrow">{{ eyebrow }}</p>
+<p class="debito-titolo" id="{{ id }}-titolo">{{ titolo }}</p>
+<p class="debito-intro">{{ intro }}</p>
+</div>
+<div class="debito-corpo">
+<input class="debito-radio debito-radio--innovazione" type="radio" name="{{ id }}-scelta" id="{{ id }}-el-innovazione">
+<input class="debito-radio debito-radio--integrata" type="radio" name="{{ id }}-scelta" id="{{ id }}-el-integrata">
+<input class="debito-radio debito-radio--debito debito-radio--predefinito" type="radio" name="{{ id }}-scelta" id="{{ id }}-el-debito" checked>
+<input class="debito-radio debito-radio--frenata" type="radio" name="{{ id }}-scelta" id="{{ id }}-st-frenata">
+<input class="debito-radio debito-radio--governata" type="radio" name="{{ id }}-scelta" id="{{ id }}-st-governata">
+<input class="debito-radio debito-radio--frammentazione" type="radio" name="{{ id }}-scelta" id="{{ id }}-st-frammentazione">
+<div class="debito-scena">
+<label class="debito-mira debito-mira--frenata" for="{{ id }}-st-frenata"><svg viewBox="0 0 720 440" aria-hidden="true" focusable="false"><rect class="debito-bersaglio debito-bersaglio--zona" x="84" y="44" width="178" height="386"></rect></svg><span class="debito-sr">Momento: {{ frenataNome | lower }}</span></label>
+<label class="debito-mira debito-mira--governata" for="{{ id }}-st-governata"><svg viewBox="0 0 720 440" aria-hidden="true" focusable="false"><rect class="debito-bersaglio debito-bersaglio--zona" x="262" y="44" width="258" height="386"></rect></svg><span class="debito-sr">Momento: {{ governataNome | lower }}</span></label>
+<label class="debito-mira debito-mira--frammentazione" for="{{ id }}-st-frammentazione"><svg viewBox="0 0 720 440" aria-hidden="true" focusable="false"><rect class="debito-bersaglio debito-bersaglio--zona" x="520" y="44" width="186" height="386"></rect></svg><span class="debito-sr">Momento: {{ frammentazioneNome | lower }}</span></label>
+<label class="debito-mira debito-mira--fascia" for="{{ id }}-el-debito"><svg viewBox="0 0 720 440" aria-hidden="true" focusable="false"><path class="debito-bersaglio debito-bersaglio--area" d="{{ D_FASCIA }}"></path></svg></label>
+<label class="debito-mira debito-mira--integrata" for="{{ id }}-el-integrata"><svg viewBox="0 0 720 440" aria-hidden="true" focusable="false"><path class="debito-bersaglio" d="{{ D_INT }}"></path></svg></label>
+<label class="debito-mira debito-mira--innovazione" for="{{ id }}-el-innovazione"><svg viewBox="0 0 720 440" aria-hidden="true" focusable="false"><path class="debito-bersaglio" d="{{ D_INN }}"></path></svg></label>
+<svg class="debito-tela" viewBox="0 0 720 440" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="{{ id }}-tela-titolo" aria-describedby="{{ id }}-descrizione" focusable="false">
+<title id="{{ id }}-tela-titolo">{{ titoloGrafico }}</title>
+<defs>
+<linearGradient id="{{ id }}-sfumatura" x1="0" y1="0" x2="0" y2="1"><stop class="debito-stop--alto" offset="0"></stop><stop class="debito-stop--basso" offset="1"></stop></linearGradient>
+<pattern id="{{ id }}-trama" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(-40)"><path class="debito-trama-segno" d="M0,0 V12"></path></pattern>
+<pattern id="{{ id }}-trama-densa" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><path class="debito-trama-segno" d="M0,0 V12"></path></pattern>
+</defs>
+<rect class="debito-fondo" x="96" y="44" width="596" height="348"></rect>
+<path class="debito-divisorio" d="M262,52 V392 M520,52 V392"></path>
+<g class="debito-gruppo-fascia">
+<path class="debito-fascia" d="{{ D_FASCIA }}" fill="url(#{{ id }}-sfumatura)"></path>
+<path class="debito-fascia-trama" d="{{ D_FASCIA }}" fill="url(#{{ id }}-trama)"></path>
+<path class="debito-fascia-trama debito-fascia-trama--densa" d="{{ D_FASCIA }}" fill="url(#{{ id }}-trama-densa)"></path>
+</g>
+<g class="debito-zone">
+<rect class="debito-zona debito-zona--a" x="96" y="44" width="166" height="348"></rect>
+<rect class="debito-zona debito-zona--b" x="262" y="44" width="258" height="348"></rect>
+<rect class="debito-zona debito-zona--c" x="520" y="44" width="172" height="348"></rect>
+</g>
+<path class="debito-curva debito-curva--integrata" pathLength="1" d="{{ D_INT }}"></path>
+<path class="debito-curva debito-curva--innovazione" pathLength="1" d="{{ D_INN }}"></path>
+<g class="debito-marcatori">
+<rect x="293.5" y="239.9" width="5" height="5"></rect><rect x="359.5" y="185.9" width="5" height="5"></rect><rect x="439.5" y="142.4" width="5" height="5"></rect><rect x="489.5" y="114.6" width="5" height="5"></rect><rect x="557.5" y="76.3" width="5" height="5"></rect><rect x="621.5" y="50.2" width="5" height="5"></rect>
+</g>
+<g class="debito-veli">
+<rect class="debito-velo debito-velo--a" x="96" y="44" width="166" height="348"></rect>
+<rect class="debito-velo debito-velo--b" x="262" y="44" width="258" height="348"></rect>
+<rect class="debito-velo debito-velo--c" x="520" y="44" width="172" height="348"></rect>
+</g>
+<g class="debito-misura debito-misura--a">
+<path class="debito-soglia" d="M166,251.4 H214"></path>
+<path class="debito-misura-linea" d="M190,333.2 V348.8"></path>
+<path class="debito-misura-cappello" d="M182,333.2 H198 M182,348.8 H198"></path>
+<text class="debito-eti-mis" x="202" y="378">scarto minimo</text>
+<text class="debito-eti-soglia" x="218" y="255.4">soglia</text>
+</g>
+<g class="debito-misura debito-misura--b">
+<path class="debito-soglia" d="M446,118.4 H494"></path>
+<path class="debito-misura-linea" d="M470,139.7 V215.8"></path>
+<path class="debito-misura-cappello" d="M462,139.7 H478 M462,215.8 H478"></path>
+<text class="debito-eti-mis" x="482" y="266">scarto governato</text>
+<text class="debito-eti-soglia" x="442" y="127" text-anchor="end">soglia</text>
+</g>
+<g class="debito-misura debito-misura--c">
+<path class="debito-soglia" d="M600,70.8 H648"></path>
+<path class="debito-misura-linea" d="M624,52.7 V168.2"></path>
+<path class="debito-misura-cappello" d="M616,52.7 H632 M616,168.2 H632"></path>
+<text class="debito-eti-mis" x="690" y="262" text-anchor="end">oltre la soglia</text>
+<text class="debito-eti-soglia" x="652" y="74.8">soglia</text>
+</g>
+<g class="debito-assi">
+<path class="debito-asse" d="M88,392 H698 M96,400 V44"></path>
+<path class="debito-freccia" d="M710,392 L698,387.4 L698,396.6 Z"></path>
+<path class="debito-freccia" d="M96,32 L91.4,44 L100.6,44 Z"></path>
+<path class="debito-tacca" d="M262,392 V401 M520,392 V401"></path>
+</g>
+<g class="debito-etichette">
+<text class="debito-eti-curva debito-eti--ampia" x="498" y="105" text-anchor="end">{{ innovazioneNome }}</text>
+<text class="debito-eti-curva debito-eti--stretta" x="498" y="105" text-anchor="end">Innovazione</text>
+<text class="debito-eti-curva debito-eti--ampia" x="686" y="212" text-anchor="end">{{ integrataNome }}</text>
+<text class="debito-eti-curva debito-eti--stretta" x="686" y="212" text-anchor="end">Integrata</text>
+<text class="debito-eti-zona debito-eti--ampia" x="179" y="420" text-anchor="middle">{{ frenataNome }}</text>
+<text class="debito-eti-zona debito-eti--stretta" x="179" y="420" text-anchor="middle">{{ frenataEtichetta }}</text>
+<text class="debito-eti-zona debito-eti--ampia" x="391" y="420" text-anchor="middle">{{ governataNome }}</text>
+<text class="debito-eti-zona debito-eti--stretta" x="391" y="420" text-anchor="middle">{{ governataEtichetta }}</text>
+<text class="debito-eti-zona debito-eti--ampia" x="606" y="420" text-anchor="middle">{{ frammentazioneNome }}</text>
+<text class="debito-eti-zona debito-eti--stretta" x="606" y="420" text-anchor="middle">{{ frammentazioneEtichetta }}</text>
+<text class="debito-eti-asse" x="690" y="384" text-anchor="end">Tempo</text>
+<text class="debito-eti-asse" x="32" y="218" text-anchor="middle" transform="rotate(-90 32 218)">Capacità operativa</text>
+</g>
+<g class="debito-fuochi">
+<rect class="debito-fuoco debito-fuoco--a" x="104" y="402" width="150" height="26" rx="4"></rect>
+<rect class="debito-fuoco debito-fuoco--b" x="270" y="402" width="242" height="26" rx="4"></rect>
+<rect class="debito-fuoco debito-fuoco--c" x="528" y="402" width="156" height="26" rx="4"></rect>
+</g>
+</svg>
+{% if watermark %}{{ renderWatermark(watermarkVariant, "debito-firma") }}{% endif %}
+</div>
+<div class="debito-legenda">
+<label class="debito-gettone debito-gettone--innovazione" for="{{ id }}-el-innovazione"><i class="debito-campione debito-campione--innovazione"></i>{{ innovazioneNome }}</label>
+<label class="debito-gettone debito-gettone--integrata" for="{{ id }}-el-integrata"><i class="debito-campione debito-campione--integrata"></i>{{ integrataNome }}</label>
+<label class="debito-gettone debito-gettone--debito" for="{{ id }}-el-debito"><i class="debito-campione debito-campione--debito"></i>{{ debitoNome }}</label>
+</div>
+<div class="debito-pannello">
+<div class="debito-pannello-testa"><span class="debito-pannello-kicker">Lettura</span><label class="debito-ripristino" for="{{ id }}-el-debito" aria-hidden="true"><span class="debito-ripristino-segno">↺</span> Vista d’insieme</label></div>
+<div class="debito-voci">
+<div class="debito-voce debito-voce--innovazione"><p class="debito-voce-nome">{{ innovazioneNome }}</p><p class="debito-voce-testo">{{ innovazioneTesto }}</p></div>
+<div class="debito-voce debito-voce--integrata"><p class="debito-voce-nome">{{ integrataNome }}</p><p class="debito-voce-testo">{{ integrataTesto }}</p></div>
+<div class="debito-voce debito-voce--debito"><p class="debito-voce-nome">{{ debitoNome }}</p><p class="debito-voce-testo">{{ debitoTesto }}</p></div>
+<div class="debito-voce debito-voce--frenata"><p class="debito-voce-nome">{{ frenataNome }}</p><p class="debito-voce-testo">{{ frenataTesto }}</p><p class="debito-voce-messaggio">{{ frenataMessaggio }}</p></div>
+<div class="debito-voce debito-voce--governata"><p class="debito-voce-nome">{{ governataNome }}</p><p class="debito-voce-testo">{{ governataTesto }}</p><p class="debito-voce-messaggio">{{ governataMessaggio }}</p></div>
+<div class="debito-voce debito-voce--frammentazione"><p class="debito-voce-nome">{{ frammentazioneNome }}</p><p class="debito-voce-testo">{{ frammentazioneTesto }}</p><p class="debito-voce-messaggio">{{ frammentazioneMessaggio }}</p></div>
+</div>
+</div>
+</div>
+<p class="debito-chiusura"><b>{{ chiusuraPrima }}</b>{% if chiusuraSeconda %}<span>{{ chiusuraSeconda }}</span>{% endif %}</p>
+<div class="debito-sr" id="{{ id }}-descrizione">{{ descrizione }}</div>
+<figcaption class="debito-didascalia">{{ didascalia }}{% if fonte %} <span class="debito-fonte">{{ fonte }}</span>{% endif %}</figcaption>
+</figure>
+{% endmacro %}

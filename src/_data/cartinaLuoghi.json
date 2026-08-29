@@ -1,0 +1,117 @@
+{
+  "antonivka-bridge": {
+    "nome": "Ponte di Antonivka",
+    "lat": 46.6701,
+    "lon": 32.7202
+  },
+  "avdiivka-donetsk": {
+    "nome": "Avdiivka",
+    "lat": 48.1402,
+    "lon": 37.7501
+  },
+  "bakhmut": {
+    "nome": "Bakhmut",
+    "lat": 48.5947,
+    "lon": 38.0008
+  },
+  "hostomel-airport": {
+    "nome": "Aeroporto di Hostomel",
+    "lat": 50.6035,
+    "lon": 30.1919
+  },
+  "izium": {
+    "nome": "Izium",
+    "lat": 49.1958,
+    "lon": 37.2803
+  },
+  "junakivka": {
+    "nome": "Junakivka",
+    "lat": 51.1202,
+    "lon": 35.0394
+  },
+  "kakhovka-dam": {
+    "nome": "Diga di Kakhovka",
+    "lat": 46.7786,
+    "lon": 33.3697
+  },
+  "kerch-bridge": {
+    "nome": "Ponte di Kerč",
+    "lat": 45.3086,
+    "lon": 36.5061
+  },
+  "kherson": {
+    "nome": "Kherson",
+    "lat": 46.6425,
+    "lon": 32.6250
+  },
+  "kostiantynivka-donetsk": {
+    "nome": "Kostjantynivka",
+    "lat": 48.5280,
+    "lon": 37.7060
+  },
+  "kupiansk": {
+    "nome": "Kupiansk",
+    "lat": 49.7114,
+    "lon": 37.6139
+  },
+  "kursk": {
+    "nome": "Kursk",
+    "lat": 51.7372,
+    "lon": 36.1872
+  },
+  "kyiv": {
+    "nome": "Kyiv",
+    "lat": 50.4500,
+    "lon": 30.5236
+  },
+  "lysychansk": {
+    "nome": "Lysychansk",
+    "lat": 48.9169,
+    "lon": 38.4306
+  },
+  "mala-tokmachka": {
+    "nome": "Mala Tokmachka",
+    "lat": 47.5375,
+    "lon": 35.8981
+  },
+  "mariupol-port": {
+    "nome": "Porto di Mariupol",
+    "lat": 47.0564,
+    "lon": 37.5108
+  },
+  "pokrovsk-donetsk": {
+    "nome": "Pokrovs'k",
+    "lat": 48.2820,
+    "lon": 37.1760
+  },
+  "robotyne": {
+    "nome": "Robotyne",
+    "lat": 47.4431,
+    "lon": 35.8261
+  },
+  "severodonetsk": {
+    "nome": "Severodonetsk",
+    "lat": 48.9481,
+    "lon": 38.4933
+  },
+  "sudzha": {
+    "nome": "Sudža",
+    "lat": 51.1914,
+    "lon": 35.2706
+  },
+  "tokmak-zaporizhzhia": {
+    "nome": "Tokmak",
+    "lat": 47.2514,
+    "lon": 35.7058
+  },
+  "vuhledar": {
+    "nome": "Vuhledar",
+    "lat": 47.7794,
+    "lon": 37.2475
+  },
+  "kharkiv": {
+    "nome": "Kharkiv",
+    "lat": 49.98177,
+    "lon": 36.25475
+  }
+}

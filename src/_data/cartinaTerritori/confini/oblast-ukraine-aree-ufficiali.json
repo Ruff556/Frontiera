@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "unita": "km2",
+  "fonte": "Portale Decentralization in Ukraine — elenco delle regioni",
+  "url": "https://decentralization.gov.ua/state",
+  "consultatoIl": "2026-08-25",
+  "nota": "Superfici amministrative terrestri usate esclusivamente come denominatore del controllo percentuale. Le geometrie territoriali e i confini ADM1 restano le fonti dell'intersezione spaziale.",
+  "aree": {
+    "Chernihiv Oblast": 31865,
+    "Sumy Oblast": 23834,
+    "Kyiv Oblast": 28131,
+    "Kharkiv Oblast": 31415,
+    "Luhansk Oblast": 26684,
+    "Donetsk Oblast": 26517,
+    "Zaporizhia Oblast": 27180,
+    "Mykolaiv Oblast": 24598,
+    "Kherson Oblast": 28461
+  }
+}

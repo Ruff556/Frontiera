@@ -1,0 +1,13 @@
+FRONTIERA — BASE CARTOGRAFICA DELLE FASI
+
+Asset: assets/ukraine-administrative-base.png
+Opera di origine: “Ukraine adm location map”
+Autore: NordNordWest
+Fonte: Wikimedia Commons
+URL: https://commons.wikimedia.org/wiki/File:Ukraine_adm_location_map.svg
+Licenza: Creative Commons Attribution-ShareAlike 3.0 Germany (CC BY-SA 3.0 DE)
+Licenza: https://creativecommons.org/licenses/by-sa/3.0/de/
+
+Modifiche nell'HTML: adattamento cromatico tramite CSS; aggiunta di etichette italiane,
+legenda e livelli SVG vuoti predisposti per i dati specifici delle schede-fase.
+La derivazione cartografica va distribuita nel rispetto della clausola ShareAlike.

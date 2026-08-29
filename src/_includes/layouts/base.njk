@@ -1,47 +1,88 @@
+{# Mappatura strutturale degli asset: il layout figlio è già renderizzato in
+   `content`, quindi ogni inclusione dipende dalla presenza reale del componente
+   e non dall'URL o da controlli lato client. #}
+{% set usesCarousel = 'id="slides"' in content %}
+{% set usesTimeline = 'class="linea-fasi"' in content %}
+{% set usesSystemsCluster = 'data-sistemi-track' in content %}
+{% set usesArchiveFilter = 'id="archfilters"' in content %}
+{% set usesSectionNav = 'data-section-navigation' in content %}
+{% set usesDebt = 'class="debito ' in content %}
+{% set usesSchemaKit = 'data-schema-kit=' in content %}
+{% set usesStr1 = 'data-schema-kit="str1-allocazione-penetrazione"' in content %}
+{% set usesStarlink = 'data-starlink-flow' in content %}
+{% set usesPalantir = 'data-palantir-schema' in content %}
+{% set usesInfobox = 'data-infobox-mobile-hook' in content %}
+{% set usesImageLightbox = 'data-image-lightbox-scope' in content %}
 <!DOCTYPE html>
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{% if titoloPagina %}{{ titoloPagina }} — {{ site.titolo }}{% else %}{{ site.titolo }} — {{ site.sottotitolo }}{% endif %}</title>
-<meta name="description" content="{{ descrizionePagina | default(site.sottotitolo) }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+{% include "partials/metadata.njk" %}
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2FBBF6">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="theme-color" content="#000E1A">
 {# Abilita i miglioramenti JS prima del paint per evitare flash #}
 <script>document.documentElement.className+=' js';</script>
 <link rel="preload" href="/fonts/spectral-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/archivo-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/frontiera.css">
+{% if usesStarlink %}<link rel="stylesheet" href="/css/schema-starlink.css">{% endif %}
+{% if usesPalantir %}<link rel="stylesheet" href="/css/schema-palantir.css">{% endif %}
+{% if usesDebt %}<link rel="stylesheet" href="/css/debito-integrazione.css">{% endif %}
+{% if usesSchemaKit %}<link rel="stylesheet" href="/css/schema-kit.css">{% endif %}
+{% if usesStr1 %}<link rel="stylesheet" href="/css/schema-str1.css">{% endif %}
+{% if usesImageLightbox %}<link rel="stylesheet" href="/css/image-lightbox.css">{% endif %}
 <link rel="alternate" type="application/rss+xml" title="{{ site.titolo }} — Analisi" href="/feed.xml">
 </head>
 <body>
 <a href="#main" class="skip">Salta al contenuto</a>
 
+{# ---- Ambiente: reticolo cartografico unico, sotto tutte le superfici ---- #}
+<div class="ambiente" aria-hidden="true">
+  <span class="ambiente-reticolo"></span>
+  <span class="ambiente-luce"></span>
+</div>
+
+{% if not minimalShell %}
 <header class="nav">
-  <a class="brand" href="/" aria-label="{{ site.titolo }} — home">
-    <span class="word">Fronti<b>era</b></span>
-    <span class="sub">{{ site.sottotitolo }}</span>
-  </a>
-  <nav class="navlinks" aria-label="Sezioni principali">
-    {% for item in site.nav %}
-      <a href="{{ item.url }}"{% if (item.url != '/' ) and page.url.startsWith(item.url) %} class="on" aria-current="page"{% endif %}>{{ item.nome }}</a>
-    {% endfor %}
-  </nav>
-  <button class="burger" id="burger" aria-label="Apri menù" aria-expanded="false" aria-controls="mobilemenu"><span></span><span></span><span></span></button>
+  <div class="nav-inner">
+    <a class="brand" href="/" aria-label="{{ site.titolo }} — home">
+      <span class="word">Fronti<b>era</b></span>
+      <span class="sub">{{ site.sottotitolo }}</span>
+    </a>
+    <nav class="navlinks" aria-label="Sezioni principali">
+      {% for item in site.nav %}
+        <a href="{{ item.url }}"{% if (item.url != '/' ) and page.url.startsWith(item.url) %} class="on" aria-current="page"{% endif %}><span>{{ item.nome }}</span></a>
+      {% endfor %}
+    </nav>
+    <button class="burger" id="burger" aria-label="Apri menù" aria-expanded="false" aria-controls="mobilemenu"><span></span><span></span><span></span></button>
+  </div>
 </header>
 
 <div class="scrim" id="scrim"></div>
 <aside class="mobilemenu" id="mobilemenu" aria-label="Menù mobile">
+  <p class="mobilemenu-cap mono">Sezioni</p>
   {% for item in site.nav %}
-    <a href="{{ item.url }}">{{ item.nome }}</a>
+    <a href="{{ item.url }}"{% if (item.url != '/' ) and page.url.startsWith(item.url) %} class="on" aria-current="page"{% endif %}>{{ item.nome }}</a>
   {% endfor %}
 </aside>
+{% endif %}
 
 <main id="main">
 {{ content | safe }}
 </main>
 
+{% if not minimalShell %}
 <footer>
   <div class="inner">
-    <div>
+    <div class="foot-brand">
       <div class="word">Fronti<b>era</b></div>
       <div class="sub">{{ site.sottotitolo }}</div>
     </div>
@@ -49,13 +90,25 @@
       {% for item in site.nav %}
         <a href="{{ item.url }}">{{ item.nome }}</a>
       {% endfor %}
-      <a href="/feed.xml">RSS</a>
     </nav>
+    <p class="license-note">Salvo diversa indicazione, i contenuti editoriali originali di Frontiera sono disponibili con licenza <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>. Codice e marchio esclusi.</p>
   </div>
 </footer>
+{% endif %}
 
-<script src="/js/menu-mobile.js" defer></script>
-<script src="/js/carosello.js" defer></script>
-<script src="/js/filtro-archivio.js" defer></script>
+{% if not minimalShell %}<script src="/js/menu-mobile.js" defer></script>{% endif %}
+{% if usesCarousel %}<script src="/js/carosello.js" defer></script>{% endif %}
+{% if usesTimeline %}<script src="/js/linea-temporale-mobile.js" defer></script>{% endif %}
+{% if usesSystemsCluster %}<script src="/js/sistemi-cluster-mobile.js" defer></script>{% endif %}
+{% if usesArchiveFilter %}<script src="/js/filtro-archivio.js" defer></script>{% endif %}
+{% if usesSectionNav %}<script src="/js/nav-sezioni.js" defer></script>{% endif %}
+{% if usesDebt %}<script src="/js/debito-integrazione.js" defer></script>{% endif %}
+{% if usesSchemaKit %}<script src="/js/schema-kit.js" defer></script>{% endif %}
+{% if usesStr1 %}<script src="/js/schema-str1.js" defer></script>{% endif %}
+{% if usesStarlink %}<script src="/js/schema-starlink.js" defer></script>{% endif %}
+{% if usesPalantir %}<script src="/js/schema-palantir.js" defer></script>{% endif %}
+{% if usesInfobox %}<script src="/js/infobox-scroll.js" defer></script>{% endif %}
+{% if usesInfobox %}<script src="/js/infobox-mobile.js" defer></script>{% endif %}
+{% if usesImageLightbox %}<script src="/js/image-lightbox.js" defer></script>{% endif %}
 </body>
 </html>

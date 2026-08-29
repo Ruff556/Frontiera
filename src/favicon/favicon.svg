@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Frontiera">
+  <defs><clipPath id="r"><rect width="256" height="256" rx="46"/></clipPath></defs>
+  <g clip-path="url(#r)">
+    <rect width="256" height="256" fill="#000E1A"/>
+    <g stroke="#78B8CB" stroke-width="1" opacity="0.09"><path d="M64 0V256M128 0V256M192 0V256M0 64H256M0 128H256M0 192H256"/></g>
+        <g fill="#8EC6D5" opacity="0.22"><path d="M61 63h6v1h-6zM64 61h1v6h-1zM125 127h6v1h-6zM128 125h1v6h-1zM189 63h6v1h-6zM192 61h1v6h-1zM189 191h6v1h-6zM192 189h1v6h-1z"/></g>
+    <g fill="none" stroke="#1CA9D8" stroke-width="1.15" opacity="0.28">
+          <path d="M-10 30C22 15 43 37 68 17S109 4 132-10"/>
+          <path d="M-8 46C28 29 48 51 74 31S115 17 139 3"/>
+          <path d="M-6 62C31 45 55 65 80 46S119 31 145 18"/>
+          <path d="M-8 175C22 154 47 168 66 145S107 126 132 139"/>
+          <path d="M-8 194C27 170 51 188 72 164S115 145 141 158"/>
+          <path d="M-8 214C31 188 57 207 80 183S122 164 149 177"/>
+          <path d="M-8 234C36 205 61 226 87 203S130 184 157 198"/>
+          <path d="M18 256C50 234 77 248 101 228S148 207 176 221"/>
+        </g>
+        <g fill="none" stroke="#B34A2C" stroke-width="1.2" stroke-dasharray="6 7" opacity="0.32">
+          <path d="M-5 82C32 61 59 80 88 59S124 45 151 31"/>
+          <path d="M18 241C55 220 77 237 105 214S149 196 175 208"/>
+        </g>
+    <path d="M67 49H170V82H101V116H158L143 132H101V209L67 228Z" fill="#F7F7F4"/>
+    <path d="M195 0V53L182 67V111M182 145V185L196 199V256" fill="none" stroke="#2FBBF6" stroke-width="5" stroke-linejoin="miter"/><circle cx="182" cy="128" r="10" fill="#000E1A" stroke="#2FBBF6" stroke-width="5"/>
+  </g>
+</svg>

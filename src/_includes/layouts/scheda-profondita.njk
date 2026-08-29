@@ -1,0 +1,82 @@
+---
+layout: layouts/base.njk
+---
+{# ===================================================================
+   SCHEDA P — "Il filo della profondità" (P0–P6)
+   Riusa la stessa impaginazione delle schede-fase (testata, colonna
+   sinistra con immagine + infobox, foglio di lettura a destra, navigatore
+   delle sezioni), ma è una famiglia editoriale DISTINTA:
+   - collezione propria collections.schedeProfondita (mai collections.fasi);
+   - ritorno in testata al "filo della profondità" della home, non alla Linea F;
+   - navigazione sequenziale fra le SOLE schede P realmente pubblicate;
+   - nello slot destro della testata NON vive la cartina delle schede F, ma
+     il diagramma funzionale della profondità: componente proprio della
+     linea P, obbligatorio in ogni scheda P pubblicata e interamente
+     governato da `diagrammaProfondita` nel front matter. Nessun ramo di
+     ripiego cartografico: la validazione di build (.eleventy.js) fa
+     fallire la pubblicazione di una scheda P priva del diagramma.
+   Il navigatore interno è attivato dal contratto comune data-section-navigation
+   sul contenitore del corpo editoriale (vedi docs/navigatore-sezioni.md).
+   =================================================================== #}
+{% from "partials/media.njk" import media %}
+{% from "partials/diagramma-profondita.njk" import diagrammaProfonditaFigura %}
+{% from "partials/infobox-dispatcher.njk" import renderInfobox %}
+{% set datiInfoboxStorici = {
+  datazione: datazione,
+  luoghi: luoghi,
+  intentoRusso: intentoRusso,
+  intentoUcraino: intentoUcraino,
+  soluzione: soluzione
+} %}
+{% set modelloInfobox = infobox | modelloInfobox("profondita", datiInfoboxStorici, null, page.inputPath) %}
+
+{# ============ INTESTAZIONE ============ #}
+<div class="testata testata--fase testata--condiagramma">
+  <div class="inner">
+    <a class="back" href="/#filo-profondita-titolo"><span aria-hidden="true">‹</span> Il filo della profondità</a>
+    <div class="fasehead-grid">
+      <div class="fasehead-copy">
+        {% if numeroEtichetta %}<div class="artkicker">{{ numeroEtichetta }} · {{ datazione }}</div>{% endif %}
+        <h1>{{ titolo }}</h1>
+        {% if soluzione %}<p class="testata-dek">{{ soluzione }}</p>{% endif %}
+      </div>
+      {{ diagrammaProfonditaFigura(diagrammaProfondita, slug, page.inputPath) }}
+    </div>
+  </div>
+</div>
+
+{# ============ CORPO A DUE COLONNE ============ #}
+<div class="fasewrap">
+
+  {# --- SINISTRA: immagine (crediti sotto) + infobox --- #}
+  <aside class="faseaside" aria-label="Scheda sintetica della fase">
+    <div class="fasefig" data-image-lightbox-scope>{{ media(immagine, "immagine di fase · 4:3") }}</div>
+    {{ renderInfobox(modelloInfobox, "Scheda sintetica della profondità", false) }}
+  </aside>
+
+  {# --- DESTRA: la lettura --- #}
+  {# Il contratto data-section-navigation sul .fasebody attiva il navigatore
+     comune (h2 del corpo). La navigazione sequenziale (.fasenav) è marcata come
+     apparato: non viene indicizzata e non riceve id in fase di build. #}
+  <div class="fasebody" data-section-navigation>
+    {{ content | safe }}
+
+    {# La navigazione sequenziale compare solo se esiste almeno un'altra scheda P
+       pubblicata: con la sola P0 non si stampa alcun controllo (niente link
+       fittizio verso P1, niente card disabilitata, niente strip vuota). Alla
+       pubblicazione di P1 la P0 riceve automaticamente il "Passaggio successivo". #}
+    {% set tutte = collections.schedeProfondita %}
+    {% if tutte.length > 1 %}
+    <nav class="fasenav" aria-label="Navigazione tra le schede P" data-section-navigation-ignore>
+      {% for f in tutte %}
+        {% if f.url == page.url %}
+          {% set prima = loop.index0 - 1 %}
+          {% set dopo = loop.index0 + 1 %}
+          {% if prima >= 0 %}<a class="prev" href="{{ tutte[prima].url }}"><span class="fasenav-k mono">Passaggio precedente</span><span class="fasenav-t">{{ tutte[prima].data.titolo }}</span></a>{% endif %}
+          {% if dopo < tutte.length %}<a class="next" href="{{ tutte[dopo].url }}"><span class="fasenav-k mono">Passaggio successivo</span><span class="fasenav-t">{{ tutte[dopo].data.titolo }}</span></a>{% endif %}
+        {% endif %}
+      {% endfor %}
+    </nav>
+    {% endif %}
+  </div>
+</div>

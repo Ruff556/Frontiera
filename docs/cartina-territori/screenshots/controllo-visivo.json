@@ -1,0 +1,106 @@
+[
+  {
+    "fase": 1,
+    "sorgenteHtml": "_site/fasi/duello-logistico/index.html",
+    "rendererControllo": "SVG generato da Eleventy, rasterizzato con libvips",
+    "viewBox": "0 0 1920 1290",
+    "territori": {
+      "totale": 3,
+      "controlloRusso": 2,
+      "controlloUcrainoInRussia": 0,
+      "conteso": 1
+    },
+    "lineaContattoLegacy": 0,
+    "screenshots": {
+      "desktop": {
+        "file": "docs/cartina-territori/screenshots/fase-1-desktop.png",
+        "width": 1200,
+        "height": 806
+      },
+      "mobile": {
+        "file": "docs/cartina-territori/screenshots/fase-1-mobile.png",
+        "width": 720,
+        "height": 484
+      }
+    },
+    "esito": "OK"
+  },
+  {
+    "fase": 2,
+    "sorgenteHtml": "_site/fasi/difesa-che-osserva/index.html",
+    "rendererControllo": "SVG generato da Eleventy, rasterizzato con libvips",
+    "viewBox": "0 0 1920 1290",
+    "territori": {
+      "totale": 3,
+      "controlloRusso": 2,
+      "controlloUcrainoInRussia": 0,
+      "conteso": 1
+    },
+    "lineaContattoLegacy": 0,
+    "screenshots": {
+      "desktop": {
+        "file": "docs/cartina-territori/screenshots/fase-2-desktop.png",
+        "width": 1200,
+        "height": 806
+      },
+      "mobile": {
+        "file": "docs/cartina-territori/screenshots/fase-2-mobile.png",
+        "width": 720,
+        "height": 484
+      }
+    },
+    "esito": "OK"
+  },
+  {
+    "fase": 4,
+    "sorgenteHtml": "_site/fasi/nervo-fuori-dallo-spettro/index.html",
+    "rendererControllo": "SVG generato da Eleventy, rasterizzato con libvips",
+    "viewBox": "0 0 1920 1290",
+    "territori": {
+      "totale": 4,
+      "controlloRusso": 2,
+      "controlloUcrainoInRussia": 1,
+      "conteso": 1
+    },
+    "lineaContattoLegacy": 0,
+    "screenshots": {
+      "desktop": {
+        "file": "docs/cartina-territori/screenshots/fase-4-desktop.png",
+        "width": 1200,
+        "height": 806
+      },
+      "mobile": {
+        "file": "docs/cartina-territori/screenshots/fase-4-mobile.png",
+        "width": 720,
+        "height": 484
+      }
+    },
+    "esito": "OK"
+  },
+  {
+    "fase": 5,
+    "sorgenteHtml": "_site/fasi/macchina-prima-delluomo/index.html",
+    "rendererControllo": "SVG generato da Eleventy, rasterizzato con libvips",
+    "viewBox": "0 0 1920 1290",
+    "territori": {
+      "totale": 4,
+      "controlloRusso": 2,
+      "controlloUcrainoInRussia": 1,
+      "conteso": 1
+    },
+    "lineaContattoLegacy": 0,
+    "screenshots": {
+      "desktop": {
+        "file": "docs/cartina-territori/screenshots/fase-5-desktop.png",
+        "width": 1200,
+        "height": 806
+      },
+      "mobile": {
+        "file": "docs/cartina-territori/screenshots/fase-5-mobile.png",
+        "width": 720,
+        "height": 484
+      }
+    },
+    "esito": "OK"
+  }
+]
