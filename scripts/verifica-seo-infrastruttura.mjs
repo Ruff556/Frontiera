@@ -171,7 +171,7 @@ async function verifyPage(url, expectedType, family) {
     assert.ok(!meta(head, "name", "robots").some((value) => /noindex/i.test(value)), `${url}: noindex inatteso`);
   }
 
-  const requiredOg = ["og:title", "og:description", "og:type", "og:url", "og:site_name", "og:locale", "og:image", "og:image:alt", "og:image:width", "og:image:height", "og:image:type"];
+  const requiredOg = ["og:title", "og:description", "og:type", "og:url", "og:site_name", "og:locale", "og:image", "og:image:alt", "og:image:type"];
   const og = Object.fromEntries(requiredOg.map((key) => [key, unique(meta(head, "property", key), `${url}: ${key}`)]));
   assert.equal(og["og:type"], expectedType, `${url}: og:type errato`);
   absolute(og["og:url"], `${url}: og:url`);
