@@ -10,11 +10,11 @@ module.exports = {
   lingua: "it",
   locale: "it_IT",
   ogImage: {
-    file: "/immagini/meta/frontiera-og-home.png",
+    file: "/immagini/meta/frontiera-og-home.jpg",
     alt: "Frontiera",
     width: 1200,
     height: 630,
-    type: "image/png",
+    type: "image/jpeg",
   },
   // Voci di navigazione: 2 archivi editoriali, la sezione Sistemi in homepage
   // e la pagina statica Il progetto Frontiera. Fonte unica per desktop, mobile e footer.

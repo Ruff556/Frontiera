@@ -179,12 +179,14 @@ async function verifyPage(url, expectedType, family) {
   assert.ok(fs.existsSync(imageFile), `${url}: og:image non pubblicata (${imageFile})`);
   assert.ok(og["og:image:alt"].trim(), `${url}: og:image:alt vuoto`);
 
-  if (og["og:image"].endsWith("/immagini/meta/frontiera-og-home.png")) {
+  if (og["og:image"].endsWith("/immagini/meta/frontiera-og-home.jpg")) {
     assert.equal(unique(meta(head, "property", "og:image:width"), `${url}: og:image:width`), "1200");
     assert.equal(unique(meta(head, "property", "og:image:height"), `${url}: og:image:height`), "630");
+    assert.equal(og["og:image:type"], "image/jpeg", `${url}: MIME fallback OG errato`);
     const image = await sharp(imageFile).metadata();
     assert.equal(image.width, 1200, `${url}: fallback OG non largo 1200 px`);
     assert.equal(image.height, 630, `${url}: fallback OG non alto 630 px`);
+    assert.ok(fs.statSync(imageFile).size < 300 * 1024, `${url}: fallback OG JPEG oltre 300 KB`);
   } else if (["attualita", "strategia"].includes(family)) {
     const image = await sharp(imageFile).metadata();
     const ratio = image.width / image.height;
