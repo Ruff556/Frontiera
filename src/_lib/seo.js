@@ -72,8 +72,23 @@ function isoDate(value) {
   return Number.isNaN(date.valueOf()) ? "" : date.toISOString().slice(0, 10);
 }
 
+function imageMimeType(value) {
+  const pathname = stringValue(value).split(/[?#]/, 1)[0];
+  const extension = pathname.slice(pathname.lastIndexOf(".") + 1).toLowerCase();
+  return {
+    avif: "image/avif",
+    gif: "image/gif",
+    jpeg: "image/jpeg",
+    jpg: "image/jpeg",
+    png: "image/png",
+    webp: "image/webp",
+  }[extension] || "";
+}
+
 function normalizeImage(value, fallbackAlt = "") {
-  if (typeof value === "string") return { file: value, alt: fallbackAlt };
+  if (typeof value === "string") {
+    return { file: value, alt: fallbackAlt, type: imageMimeType(value) };
+  }
   if (!value || typeof value !== "object" || Array.isArray(value)) return null;
   const file = stringValue(value.file || value.url || value.src).trim();
   if (!file) return null;
@@ -84,6 +99,7 @@ function normalizeImage(value, fallbackAlt = "") {
     alt: plainText(value.alt) || fallbackAlt,
     width: Number.isFinite(width) && width > 0 ? Math.round(width) : null,
     height: Number.isFinite(height) && height > 0 ? Math.round(height) : null,
+    type: stringValue(value.type).trim() || imageMimeType(file),
   };
 }
 
@@ -195,11 +211,12 @@ function buildSeo(data) {
   const isArticle = ["attualita", "strategia", "fasi", "profondita", "sistemi"].includes(family);
   const isAnalysis = ["attualita", "strategia"].includes(family);
   const explicitImage = data.ogImage === false ? null : normalizeImage(data.ogImage, title);
+  const pageImage = data.ogImage === false ? null : normalizeImage(data.immagine, title);
   const editorialImage = !explicitImage && data.ogImage !== false && isAnalysis && hasEditorialRights(data.immagine)
-    ? normalizeImage(data.immagine, title)
+    ? pageImage
     : null;
   const fallbackImage = normalizeImage(site.ogImage, `${site.titolo} — ${site.sottotitolo}`);
-  const selectedImage = explicitImage || editorialImage || fallbackImage;
+  const selectedImage = explicitImage || pageImage || fallbackImage;
   const pageUrl = stringValue(data.page?.url || (is404 ? "/404.html" : "/"));
   const canonical = is404 ? "" : absoluteUrl(pageUrl, base);
   const imageUrl = selectedImage ? absoluteUrl(selectedImage.file, base) : "";
@@ -227,6 +244,7 @@ function buildSeo(data) {
       alt: selectedImage?.alt || `${site.titolo} — ${site.sottotitolo}`,
       width: selectedImage?.width || null,
       height: selectedImage?.height || null,
+      type: selectedImage?.type || "",
     },
     imageIsEditorial: Boolean(editorialImage || explicitImage),
     isArticle,

@@ -10,10 +10,11 @@ module.exports = {
   lingua: "it",
   locale: "it_IT",
   ogImage: {
-    file: "/immagini/open-graph/frontiera-og-default.png",
-    alt: "Frontiera — analisi di tecnologia e strategia",
+    file: "/immagini/meta/frontiera-og-home.png",
+    alt: "Frontiera",
     width: 1200,
     height: 630,
+    type: "image/png",
   },
   // Voci di navigazione: 2 archivi editoriali, la sezione Sistemi in homepage
   // e la pagina statica Il progetto Frontiera. Fonte unica per desktop, mobile e footer.

@@ -171,7 +171,7 @@ async function verifyPage(url, expectedType, family) {
     assert.ok(!meta(head, "name", "robots").some((value) => /noindex/i.test(value)), `${url}: noindex inatteso`);
   }
 
-  const requiredOg = ["og:title", "og:description", "og:type", "og:url", "og:site_name", "og:locale", "og:image", "og:image:alt"];
+  const requiredOg = ["og:title", "og:description", "og:type", "og:url", "og:site_name", "og:locale", "og:image", "og:image:alt", "og:image:width", "og:image:height", "og:image:type"];
   const og = Object.fromEntries(requiredOg.map((key) => [key, unique(meta(head, "property", key), `${url}: ${key}`)]));
   assert.equal(og["og:type"], expectedType, `${url}: og:type errato`);
   absolute(og["og:url"], `${url}: og:url`);
@@ -179,7 +179,7 @@ async function verifyPage(url, expectedType, family) {
   assert.ok(fs.existsSync(imageFile), `${url}: og:image non pubblicata (${imageFile})`);
   assert.ok(og["og:image:alt"].trim(), `${url}: og:image:alt vuoto`);
 
-  if (og["og:image"].endsWith("/immagini/open-graph/frontiera-og-default.png")) {
+  if (og["og:image"].endsWith("/immagini/meta/frontiera-og-home.png")) {
     assert.equal(unique(meta(head, "property", "og:image:width"), `${url}: og:image:width`), "1200");
     assert.equal(unique(meta(head, "property", "og:image:height"), `${url}: og:image:height`), "630");
     const image = await sharp(imageFile).metadata();
@@ -263,7 +263,7 @@ async function main() {
 
   const robotsFile = path.join(SITE, "robots.txt");
   assert.ok(fs.existsSync(robotsFile), "robots.txt assente");
-  const robots = fs.readFileSync(robotsFile, "utf8").trim();
+  const robots = fs.readFileSync(robotsFile, "utf8").replace(/\r\n/g, "\n").trim();
   assert.equal(robots, `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl}/sitemap.xml`, "robots.txt inatteso");
 
   verifyNotFoundCss();
