@@ -7,7 +7,7 @@
   "scripts": {
     "font": "node scripts/copia-font.mjs",
     "assets:performance": "node scripts/genera-sfondi.cjs",
-    "build": "npm run font && npm run assets:performance && npm run verify:schemi && npm run verify:infobox && npm run verify:infobox-mobile && npm run verify:image-lightbox && npm run verify:cartina && npm run verify:territori && npm run verify:profondita && eleventy && npm run verify:seo && npm run verify:favicon && npm run verify:output && npm run verify:performance",
+    "build": "npm run font && npm run assets:performance && npm run verify:schemi && npm run verify:infobox && npm run verify:infobox-mobile && npm run verify:image-lightbox && npm run verify:cartina && npm run verify:territori && npm run verify:profondita && npm run verify:affidabilita-v1:source && eleventy && npm run verify:affidabilita-v1 && npm run verify:seo && npm run verify:favicon && npm run verify:output && npm run verify:performance",
     "serve": "npm run font && npm run assets:performance && eleventy --serve",
     "start": "npm run font && npm run assets:performance && eleventy --serve",
     "verify:cartina": "node scripts/verifica-cartina.cjs",
@@ -21,6 +21,8 @@
     "verify:favicon": "node scripts/verifica-favicon-output.mjs",
     "verify:seo": "node scripts/verifica-seo-infrastruttura.mjs",
     "verify:schemi": "node scripts/verifica-schema-kit.cjs",
+    "verify:affidabilita-v1:source": "node scripts/verifica-affidabilita-v1.cjs --source-only",
+    "verify:affidabilita-v1": "node scripts/verifica-affidabilita-v1.cjs",
     "report:performance-browser": "node scripts/calcola-performance-browser.cjs",
     "import:territori": "node scripts/importa-territori.mjs"
   },

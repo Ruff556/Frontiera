@@ -13,6 +13,7 @@
 {% set usesPalantir = 'data-palantir-schema' in content %}
 {% set usesInfobox = 'data-infobox-mobile-hook' in content %}
 {% set usesImageLightbox = 'data-image-lightbox-scope' in content %}
+{% set usesAffidabilitaV1 = 'data-aff-v1-trigger' in content %}
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -39,6 +40,7 @@
 {% if usesSchemaKit %}<link rel="stylesheet" href="/css/schema-kit.css">{% endif %}
 {% if usesStr1 %}<link rel="stylesheet" href="/css/schema-str1.css">{% endif %}
 {% if usesImageLightbox %}<link rel="stylesheet" href="/css/image-lightbox.css">{% endif %}
+{% if usesAffidabilitaV1 %}<link rel="stylesheet" href="/css/affidabilita-v1.css">{% endif %}
 <link rel="alternate" type="application/rss+xml" title="{{ site.titolo }} — Analisi" href="/feed.xml">
 </head>
 <body>
@@ -79,6 +81,8 @@
 {{ content | safe }}
 </main>
 
+{% if usesAffidabilitaV1 %}{% include "partials/affidabilita-v1-panel.njk" %}{% endif %}
+
 {% if not minimalShell %}
 <footer>
   <div class="inner">
@@ -110,5 +114,6 @@
 {% if usesInfobox %}<script src="/js/infobox-scroll.js" defer></script>{% endif %}
 {% if usesInfobox %}<script src="/js/infobox-mobile.js" defer></script>{% endif %}
 {% if usesImageLightbox %}<script src="/js/image-lightbox.js" defer></script>{% endif %}
+{% if usesAffidabilitaV1 %}<script src="/js/affidabilita-v1.js" defer></script>{% endif %}
 </body>
 </html>

@@ -20,6 +20,10 @@ const {
   vocabolario: profonditaVocabolario,
 } = require("./src/_lib/diagramma-profondita");
 const { normalizeInfobox } = require("./src/_lib/infobox");
+const {
+  creaRegistry: creaRegistryAffidabilitaV1,
+  renderIndicatore: renderIndicatoreAffidabilitaV1,
+} = require("./src/_lib/affidabilita-v1");
 
 // Profili commisurati ai componenti reali. Il fallback mantiene il formato
 // sorgente, mentre WebP è la sorgente moderna principale del <picture>.
@@ -109,6 +113,12 @@ function metadataForProfile(metadata, profile) {
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(rssPlugin);
+  const directoryAffidabilitaV1 = "data-sources/affidabilita-v1";
+  let registryAffidabilitaV1 = creaRegistryAffidabilitaV1({
+    root: __dirname,
+    directory: directoryAffidabilitaV1,
+  });
+  eleventyConfig.addWatchTarget(directoryAffidabilitaV1);
   // ---- Markdown: consenti HTML grezzo nel corpo (schemi .derivazione, ecc.) e
   //      classifica automaticamente i collegamenti della prosa. ----
   // La distinzione interno/esterno è semantica e avviene una sola volta, nel
@@ -220,6 +230,12 @@ module.exports = function (eleventyConfig) {
   // vecchia cartella generata, con un percorso assoluto e intenzionalmente
   // ristretto, prima di ogni compilazione.
   eleventyConfig.on("eleventy.before", async () => {
+    // Le sidecar sono esterne all'input Eleventy: ricaricarle a ogni ciclo evita
+    // dati stantii durante `--serve` e fa fallire la build prima del rendering.
+    registryAffidabilitaV1 = creaRegistryAffidabilitaV1({
+      root: __dirname,
+      directory: directoryAffidabilitaV1,
+    });
     Image ||= (await import("@11ty/eleventy-img")).default;
     fs.rmSync(path.join(__dirname, "_site", "archivio", "sistemi"), {
       recursive: true,
@@ -605,6 +621,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("affBadge", (livello) => {
     const m = AFF[String(livello || "").toLowerCase().trim()];
     return m ? `<span class="aff aff--${m.cls}">${m.label}</span>` : "";
+  });
+
+  // ---- Affidabilità V1: {% affV1 "id-logico" %} ----
+  // L'ID è l'unico dato editoriale nel marker. Pagina, livello e contenuto del
+  // panel vengono risolti contro le sidecar; il legacy sopra resta indipendente.
+  eleventyConfig.addShortcode("affV1", function (id) {
+    const inputPath = this.page && this.page.inputPath;
+    const record = registryAffidabilitaV1.risolvi(inputPath, id);
+    return renderIndicatoreAffidabilitaV1(record, inputPath);
   });
 
   // ---- Date helper (visualizzazione it) ----

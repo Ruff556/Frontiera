@@ -1,0 +1,28 @@
+{# Un solo shell per pagina. Contenuto e geometria vengono aggiornati dal
+   controller quando cambia l'indicatore attivo; non è una dialog modale. #}
+<aside
+  class="aff-v1-panel"
+  id="aff-v1-panel"
+  data-aff-v1-panel
+  data-verticale="below"
+  data-orizzontale="left"
+  aria-labelledby="aff-v1-panel-label aff-v1-panel-title"
+  tabindex="-1"
+  hidden
+>
+  <header class="aff-v1-panel__header">
+    <span id="aff-v1-panel-label">Base del giudizio</span>
+  </header>
+  <div class="aff-v1-panel__body">
+    <div class="aff-v1-panel__intro">
+      <h2 id="aff-v1-panel-title" data-aff-v1-title></h2>
+      <p><span class="aff-v1-panel__badge" data-aff-v1-level></span></p>
+      <p class="aff-v1-panel__reason" data-aff-v1-reason></p>
+    </div>
+    <div class="aff-v1-panel__divider" aria-hidden="true"></div>
+    <section class="aff-v1-panel__sources" aria-labelledby="aff-v1-sources-title">
+      <h3 id="aff-v1-sources-title">Fonti di riscontro</h3>
+      <div class="aff-v1-panel__source-list" data-aff-v1-sources></div>
+    </section>
+  </div>
+</aside>
