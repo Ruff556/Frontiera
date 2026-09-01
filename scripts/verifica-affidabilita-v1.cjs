@@ -156,11 +156,6 @@ function verificaSorgenti() {
     }
   }
 
-  const pilot = "contenuti/analisi/capacita-residua-bombardamento.md";
-  const markersPilot = markersPerPagina.get(pilot) || [];
-  verifica("pilot: attesi 15 marker V1", markersPilot.length === 15);
-  const testoPilot = fs.readFileSync(path.join(root, pilot), "utf8");
-  verifica("pilot: nessun marker legacy residuo", !/\{%\s*aff\s+/.test(testoPilot));
   return registry;
 }
 
@@ -168,32 +163,91 @@ function conta(testo, regex) {
   return (testo.match(regex) || []).length;
 }
 
+function fileHtml(directory) {
+  if (!fs.existsSync(directory)) return [];
+  const trovati = [];
+  const visita = (cartella) => {
+    for (const voce of fs.readdirSync(cartella, { withFileTypes: true })) {
+      const completo = path.join(cartella, voce.name);
+      if (voce.isDirectory()) visita(completo);
+      else if (voce.isFile() && /\.html?$/i.test(voce.name)) {
+        // Eleventy può scrivere sotto _site anche copie HTML di partial: non sono
+        // pagine pubblicate e non partecipano alla verifica dell'output.
+        const testo = fs.readFileSync(completo, "utf8");
+        if (/<html\b/i.test(testo)) trovati.push(completo);
+      }
+    }
+  };
+  visita(directory);
+  return trovati.sort();
+}
+
+function attributoTag(tag, nome) {
+  const pattern = new RegExp(`\\b${nome}\\s*=\\s*(["'])(.*?)\\1`, "i");
+  return pattern.exec(tag)?.[2] ?? null;
+}
+
+function triggerTags(testo) {
+  return [...testo.matchAll(/<button\b[^>]*\bdata-aff-v1-trigger(?![-\w])[^>]*>/gi)].map((m) => m[0]);
+}
+
+function verificaPaginaV1(file, testo) {
+  const dove = `output V1: ${path.relative(root, file)}`;
+  const triggers = triggerTags(testo);
+  const occorrenzeTrigger = conta(testo, /\bdata-aff-v1-trigger(?![-\w])/gi);
+  const idTrigger = triggers.map((tag) => attributoTag(tag, "id"));
+
+  verifica(`${dove}: almeno un trigger`, triggers.length > 0);
+  verifica(`${dove}: ogni trigger è un button`, triggers.length === occorrenzeTrigger);
+  verifica(
+    `${dove}: ID trigger univoci`,
+    triggers.length > 0 && idTrigger.every(Boolean) && new Set(idTrigger).size === triggers.length
+  );
+  verifica(
+    `${dove}: aria-controls su ogni trigger`,
+    triggers.length > 0 && triggers.every((tag) => attributoTag(tag, "aria-controls") === "aff-v1-panel")
+  );
+  verifica(
+    `${dove}: stato iniziale chiuso`,
+    triggers.length > 0 && triggers.every((tag) => attributoTag(tag, "aria-expanded") === "false")
+  );
+  verifica(`${dove}: un solo shell panel`, conta(testo, /\bid\s*=\s*(["'])aff-v1-panel\1/gi) === 1);
+  verifica(
+    `${dove}: panel non dialog`,
+    !/<dialog\b/i.test(testo) && !/\brole\s*=\s*(["'])dialog\1/i.test(testo)
+  );
+  verifica(
+    `${dove}: assenza di aria-modal`,
+    !/\baria-modal\s*=\s*(?:(["'])true\1|true)\b/i.test(testo)
+  );
+  verifica(
+    `${dove}: CSS V1 caricato una volta`,
+    conta(testo, /<link\b[^>]*\bhref\s*=\s*(["'])\/css\/affidabilita-v1\.css(?:[?#][^"']*)?\1[^>]*>/gi) === 1
+  );
+  verifica(
+    `${dove}: JS V1 caricato una volta`,
+    conta(testo, /<script\b[^>]*\bsrc\s*=\s*(["'])\/js\/affidabilita-v1\.js(?:[?#][^"']*)?\1[^>]*>/gi) === 1
+  );
+}
+
 function verificaOutput() {
-  const pilotPath = path.join(root, "_site", "analisi", "capacita-residua-bombardamento", "index.html");
-  const legacyPath = path.join(root, "_site", "analisi", "storm-shadow-ucraina-fabbrica-profondita", "index.html");
-  verifica("output: pagina pilot generata", fs.existsSync(pilotPath));
-  verifica("output: pagina legacy generata", fs.existsSync(legacyPath));
-  if (!fs.existsSync(pilotPath) || !fs.existsSync(legacyPath)) return;
+  const directory = path.join(root, "_site");
+  const files = fileHtml(directory);
+  verifica("output: directory _site presente", fs.existsSync(directory));
+  verifica("output: pagine HTML presenti", files.length > 0);
 
-  const pilot = fs.readFileSync(pilotPath, "utf8");
-  const legacy = fs.readFileSync(legacyPath, "utf8");
-  const idTrigger = [...pilot.matchAll(/<button[^>]+id="([^"]+)"[^>]+data-aff-v1-trigger/g)].map((m) => m[1]);
-  verifica("output pilot: 15 trigger", conta(pilot, /data-aff-v1-trigger/g) === 15);
-  verifica("output pilot: ID trigger univoci", idTrigger.length === 15 && new Set(idTrigger).size === 15);
-  verifica("output pilot: aria-controls su ogni trigger", conta(pilot, /aria-controls="aff-v1-panel"/g) === 15);
-  verifica("output pilot: stato iniziale chiuso", conta(pilot, /aria-expanded="false"/g) >= 15);
-  verifica("output pilot: un solo shell panel", conta(pilot, /id="aff-v1-panel"/g) === 1);
-  verifica("output pilot: panel non dialog", !/<dialog\b|role="dialog"|aria-modal="true"/i.test(pilot));
-  verifica("output pilot: CSS V1 caricato una volta", conta(pilot, /\/css\/affidabilita-v1\.css/g) === 1);
-  verifica("output pilot: JS V1 caricato una volta", conta(pilot, /\/js\/affidabilita-v1\.js/g) === 1);
-  verifica("output pilot: schema STR1 conservato", /data-schema-kit="str1-allocazione-penetrazione"/.test(pilot));
-  verifica("output pilot: navigatore sezioni conservato", /data-section-navigation/.test(pilot));
+  for (const file of files) {
+    const testo = fs.readFileSync(file, "utf8");
+    const percorso = path.relative(root, file);
+    if (/\bdata-aff-v1-trigger(?![-\w])/.test(testo)) {
+      verificaPaginaV1(file, testo);
+      continue;
+    }
 
-  verifica("output legacy: badge legacy ancora presente", /class="aff aff--(?:conf|plaus|nonver|disinfo)"/.test(legacy));
-  verifica("output legacy: nessun trigger V1", !/data-aff-v1-trigger/.test(legacy));
-  verifica("output legacy: nessun shell V1", !/id="aff-v1-panel"/.test(legacy));
-  verifica("output legacy: nessun CSS V1", !/\/css\/affidabilita-v1\.css/.test(legacy));
-  verifica("output legacy: nessun JS V1", !/\/js\/affidabilita-v1\.js/.test(legacy));
+    verifica(`output non V1: ${percorso} senza shell panel V1`, !/\bid\s*=\s*(["'])aff-v1-panel\1/i.test(testo));
+    verifica(`output non V1: ${percorso} senza CSS V1`, !/\/css\/affidabilita-v1\.css\b/i.test(testo));
+    verifica(`output non V1: ${percorso} senza JS V1`, !/\/js\/affidabilita-v1\.js\b/i.test(testo));
+  }
 }
 
 verificaSorgenti();
@@ -206,6 +260,6 @@ if (errori.length) {
 
 console.log(
   soloSorgenti
-    ? "[verify:affidabilita-v1] OK — schema, sidecar, scope, fixture e 15 marker pilot verificati."
-    : "[verify:affidabilita-v1] OK — dati, risoluzione, output V1 e regressione legacy verificati."
+    ? "[verify:affidabilita-v1] OK — schema, sidecar, scope, marker e contratti V1 verificati."
+    : "[verify:affidabilita-v1] OK — schema, sidecar, scope, marker, output V1 e pagine non V1 verificati."
 );
