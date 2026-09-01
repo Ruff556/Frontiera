@@ -62,19 +62,21 @@
   color:var(--aff-v1-on);
   background:var(--aff-v1-level);
   border-color:var(--aff-v1-level);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.2);
+  box-shadow:none;
 }
 @media(hover:hover) and (pointer:fine){
   .aff-v1-trigger:hover{
     color:var(--aff-v1-on);
     background:var(--aff-v1-level);
     border-color:var(--aff-v1-level);
+    box-shadow:none;
   }
 }
 .reading .aff-v1-trigger:focus-visible{
   color:var(--aff-v1-on);
   background:var(--aff-v1-level);
   border-color:var(--aff-v1-level);
+  box-shadow:none;
   outline:2px solid color-mix(in srgb,var(--aff-v1-level) 72%,#fff);
   outline-offset:2px;
 }
