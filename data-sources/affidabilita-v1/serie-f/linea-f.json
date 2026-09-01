@@ -1,0 +1,1865 @@
+{
+  "versione": 1,
+  "dataset": "linea-f",
+  "ambiti": {
+    "contenuti/fasi/0-prologo-manovra-fallita.md": [
+      {
+        "id": "F0-E001",
+        "livello": "confermato",
+        "titolo": "Gli ordini catturati e le ricostruzioni disponibili indicano un'operazione che prevedeva di passare rapidamente dall'invasione alla stabilizzazione dei territori occupati",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          }
+        ]
+      },
+      {
+        "id": "F0-E002",
+        "livello": "confermato",
+        "titolo": "Il fuoco antiaereo, con protagonisti i MANPADS — Man-Portable Air-Defense Systems — abbatte almeno due elicotteri durante le prime ondate",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          }
+        ]
+      },
+      {
+        "id": "F0-E003",
+        "livello": "confermato",
+        "titolo": "artiglieria e contrattacco terrestre investono i reparti sbarcati, mentre i combattimenti e i danni allo scalo impediscono di stabilire il ponte aereo previsto",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          },
+          {
+            "nome": "Battle for Kyiv: Ukrainian valor, Russian blunders combined to save the capital",
+            "data": "2022-08-24",
+            "url": "https://www.washingtonpost.com/national-security/interactive/2022/kyiv-battle-ukraine-survival/"
+          }
+        ]
+      },
+      {
+        "id": "F0-E004",
+        "livello": "plausibile",
+        "titolo": "La congestione era il segno visibile di una forza che, spinta in profondità, faceva dipendere testa e sostegno dagli stessi percorsi",
+        "motivazione": "Il nesso fra congestione, testa della colonna e sostegno usa fatti documentati, ma resta una ricostruzione causale non direttamente osservabile. La decisione editoriale è definitiva e recepita nel presente registro.",
+        "fonti": [
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          },
+          {
+            "nome": "Russia’s Ill-Fated Invasion of Ukraine: Lessons in Modern Warfare",
+            "data": "2022-06-01",
+            "url": "https://www.csis.org/analysis/russias-ill-fated-invasion-ukraine-lessons-modern-warfare"
+          }
+        ]
+      },
+      {
+        "id": "F0-E005",
+        "livello": "confermato",
+        "titolo": "colpiscono mezzi isolati e retrovie, mantengono sotto pressione le vie di comunicazione e impediscono ai russi di rendere permissiva la profondità attraversata",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Battle for Kyiv: Ukrainian valor, Russian blunders combined to save the capital",
+            "data": "2022-08-24",
+            "url": "https://www.washingtonpost.com/national-security/interactive/2022/kyiv-battle-ukraine-survival/"
+          },
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          }
+        ]
+      },
+      {
+        "id": "F0-E006",
+        "livello": "confermato",
+        "titolo": "nei primi giorni di aprile il ripiegamento dal nord diventa completo",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Russia’s Ill-Fated Invasion of Ukraine: Lessons in Modern Warfare",
+            "data": "2022-06-01",
+            "url": "https://www.csis.org/analysis/russias-ill-fated-invasion-ukraine-lessons-modern-warfare"
+          }
+        ]
+      },
+      {
+        "id": "F0-E007",
+        "livello": "confermato",
+        "titolo": "le forze russe superano gli accessi di Chonhar e le altre strozzature dalla penisola, occupano Melitopol e raggiungono Kherson con una resistenza molto inferiore a quella incontrata attorno a Kyiv",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          }
+        ]
+      },
+      {
+        "id": "F0-E008",
+        "livello": "plausibile",
+        "titolo": "Il ponte di Antonivka viene conteso nei primi giorni, ma non è distrutto prima che la Russia consolidi il controllo della città e della riva destra",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          },
+          {
+            "nome": "Battle for Kyiv: Ukrainian valor, Russian blunders combined to save the capital",
+            "data": "2022-08-24",
+            "url": "https://www.washingtonpost.com/national-security/interactive/2022/kyiv-battle-ukraine-survival/"
+          }
+        ]
+      },
+      {
+        "id": "F0-E009",
+        "livello": "confermato",
+        "titolo": "nelle città occupate, compresa Kherson, la resistenza civile e clandestina mostra inoltre che occupazione territoriale e controllo politico non coincidono",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Russia’s Ill-Fated Invasion of Ukraine: Lessons in Modern Warfare",
+            "data": "2022-06-01",
+            "url": "https://www.csis.org/analysis/russias-ill-fated-invasion-ukraine-lessons-modern-warfare"
+          }
+        ]
+      },
+      {
+        "id": "F0-E010",
+        "livello": "confermato",
+        "titolo": "La dichiarazione del generale russo Rustam Minnekayev del 22 aprile, secondo cui la «seconda fase» mirava al pieno controllo del Donbas e dell'Ucraina meridionale fino a creare un accesso verso la Transnistria, documenta la continuità e l'estensione dell'ambizione russa",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Russia says it plans full control of Donbas and southern Ukraine",
+            "data": "2022-04-22",
+            "url": "https://www.reuters.com/world/europe/russia-says-it-plans-full-control-donbas-southern-ukraine-2022-04-22/"
+          }
+        ]
+      }
+    ],
+    "contenuti/fasi/1-duello-logistico.md": [
+      {
+        "id": "F1-E001",
+        "livello": "confermato",
+        "titolo": "All'inizio di aprile 2022 la Russia ritira le proprie forze dal nord dell'Ucraina",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          }
+        ]
+      },
+      {
+        "id": "F1-E002",
+        "livello": "plausibile",
+        "titolo": "Il passaggio al fuoco d'artiglieria di massa non è dunque una seconda strada conservata accanto alla prima, ma il ripiego forzato di chi ha perduto la guerra di decisione e tenta ora di dare all'attrito una forma favorevole",
+        "motivazione": "Il passaggio dalla manovra al fuoco di massa è documentato; che esso discenda precisamente dalla perdita della guerra di decisione è inferenza Frontiera. La decisione editoriale è definitiva e recepita nel presente registro.",
+        "fonti": [
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          }
+        ]
+      },
+      {
+        "id": "F1-E003",
+        "livello": "plausibile",
+        "titolo": "Mette però alla prova la prima configurazione concreta scelta da Mosca: la superiorità materiale nel fuoco, con rapporti d'artiglieria stimati fino a circa 10:1 in alcuni settori",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          },
+          {
+            "nome": "Russian Military Logistics in the Ukraine War",
+            "data": "2023-09-29",
+            "url": "https://www.cna.org/reports/2023/10/Russian-Military-Logistics-in-the-Ukraine-War.pdf"
+          }
+        ]
+      },
+      {
+        "id": "F1-E004",
+        "livello": "plausibile",
+        "titolo": "deve logorare la difesa ucraina e convertire il consumo in guadagno territoriale — prima il Luhansk, poi l'intero Donbas, quest'ultimo da intendere come intento dichiarato",
+        "motivazione": "La configurazione è ricostruibile, ma l’intenzione unitaria attribuita a Mosca eccede ciò che le fonti dimostrano direttamente. La decisione editoriale è definitiva e recepita nel presente registro.",
+        "fonti": [
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          }
+        ]
+      },
+      {
+        "id": "F1-E005",
+        "livello": "confermato",
+        "titolo": "Con barrage massicci e avanzata incrementale, le forze russe prendono Severodonetsk — il ritiro ucraino è ordinato il 24 giugno e il controllo pieno arriva il 25",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          }
+        ]
+      },
+      {
+        "id": "F1-E006",
+        "livello": "confermato",
+        "titolo": "il 3 Mosca dichiara il controllo dell'intera regione",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          }
+        ]
+      },
+      {
+        "id": "F1-E007",
+        "livello": "confermato",
+        "titolo": "Lo Stato Maggiore ucraino motiva il ritiro con la «superiorità multipla» russa in artiglieria, aviazione, lanciarazzi, munizioni e uomini",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          }
+        ]
+      },
+      {
+        "id": "F1-E008",
+        "livello": "confermato",
+        "titolo": "I razzi guidati GMLRS — Guided Multiple Launch Rocket System — consentono, nella loro variante standard, fuoco di precisione tra i 70 e gli 80 chilometri, contro bersagli identificati mediante una catena di ricognizione, localizzazione e assegnazione",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Under Secretary Colin Kahl holds a press briefing",
+            "data": "2022-08-08",
+            "url": "https://www.defense.gov/News/Transcripts/Transcript/Article/3138872/undersecretary-of-defense-for-policy-dr-colin-kahl-holds-a-press-briefing-on-se/"
+          }
+        ]
+      },
+      {
+        "id": "F1-E009",
+        "livello": "plausibile",
+        "titolo": "Con i primi lanciatori Kyiv rivendica la distruzione di circa trenta depositi e posti di comando",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Under Secretary Colin Kahl holds a press briefing",
+            "data": "2022-08-08",
+            "url": "https://www.defense.gov/News/Transcripts/Transcript/Article/3138872/undersecretary-of-defense-for-policy-dr-colin-kahl-holds-a-press-briefing-on-se/"
+          },
+          {
+            "nome": "Secretary Austin and General Milley press conference",
+            "data": "2022-07-20",
+            "url": "https://www.defense.gov/News/Transcripts/Transcript/Article/3100301/secretary-of-defense-lloyd-j-austin-iii-and-chairman-of-the-joint-chiefs-of-sta/"
+          }
+        ]
+      },
+      {
+        "id": "F1-E010",
+        "livello": "confermato",
+        "titolo": "l’intensità del fuoco russo cala e depositi, comandi e snodi cominciano a essere colpiti a decine di chilometri dalla linea di contatto",
+        "motivazione": "L’ambito dell’indicatore è stato esteso all’intera proposizione causale approvata, eliminando l’ambiguità dell’ancora breve. La decisione editoriale è definitiva e recepita nel presente registro.",
+        "fonti": [
+          {
+            "nome": "Under Secretary Colin Kahl holds a press briefing",
+            "data": "2022-08-08",
+            "url": "https://www.defense.gov/News/Transcripts/Transcript/Article/3138872/undersecretary-of-defense-for-policy-dr-colin-kahl-holds-a-press-briefing-on-se/"
+          },
+          {
+            "nome": "Secretary Austin and General Milley press conference",
+            "data": "2022-07-20",
+            "url": "https://www.defense.gov/News/Transcripts/Transcript/Article/3100301/secretary-of-defense-lloyd-j-austin-iii-and-chairman-of-the-joint-chiefs-of-sta/"
+          }
+        ]
+      },
+      {
+        "id": "F1-E011",
+        "livello": "confermato",
+        "titolo": "Disperde e arretra i depositi oltre la gittata dei GMLRS, li frammenta, allontana comandi e snodi",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          }
+        ]
+      },
+      {
+        "id": "F1-E012",
+        "livello": "confermato",
+        "titolo": "Dall'agosto i GMLRS battono il ponte di Antonivka",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          }
+        ]
+      },
+      {
+        "id": "F1-E013",
+        "livello": "plausibile",
+        "titolo": "La pressione annunciata su Kherson il 29 agosto attira riserve russe verso il fiume e contribuisce ad assottigliare il fronte di Izium",
+        "motivazione": "Il trasferimento di forze è osservato; l’assottigliamento del settore di Izium come effetto causale della pressione su Kherson non è isolabile. La decisione editoriale è definitiva e recepita nel presente registro.",
+        "fonti": [
+          {
+            "nome": "Mapping Ukraine’s Military Advances",
+            "data": "2022-09-22",
+            "url": "https://www.csis.org/analysis/mapping-ukraines-military-advances"
+          },
+          {
+            "nome": "Under Secretary Colin Kahl holds a press briefing",
+            "data": "2022-08-08",
+            "url": "https://www.defense.gov/News/Transcripts/Transcript/Article/3138872/undersecretary-of-defense-for-policy-dr-colin-kahl-holds-a-press-briefing-on-se/"
+          }
+        ]
+      },
+      {
+        "id": "F1-E014",
+        "livello": "plausibile",
+        "titolo": "Nelle settimane precedenti l'interdizione aveva inoltre colpito depositi e basi fino a circa 70 chilometri dietro le linee, nell'area di Kupiansk e Kivsharivka",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Mapping Ukraine’s Military Advances",
+            "data": "2022-09-22",
+            "url": "https://www.csis.org/analysis/mapping-ukraines-military-advances"
+          },
+          {
+            "nome": "Under Secretary Colin Kahl holds a press briefing",
+            "data": "2022-08-08",
+            "url": "https://www.defense.gov/News/Transcripts/Transcript/Article/3138872/undersecretary-of-defense-for-policy-dr-colin-kahl-holds-a-press-briefing-on-se/"
+          }
+        ]
+      },
+      {
+        "id": "F1-E015",
+        "livello": "confermato",
+        "titolo": "Il 6 settembre l'Ucraina sfrutta la sorpresa e attacca dove le riserve sono insufficienti, evitando gli assalti frontali: Balakliia e Shevchenkove cadono l'8, Izium e Kupiansk il 10",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Mapping Ukraine’s Military Advances",
+            "data": "2022-09-22",
+            "url": "https://www.csis.org/analysis/mapping-ukraines-military-advances"
+          }
+        ]
+      },
+      {
+        "id": "F1-E016",
+        "livello": "confermato",
+        "titolo": "Tra il 9 e l'11 novembre le forze russe si ritirano oltre il Dnipro",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          }
+        ]
+      },
+      {
+        "id": "F1-E017",
+        "livello": "confermato",
+        "titolo": "Il 21 settembre — dopo Kharkiv e prima ancora del ritiro da Kherson — Vladimir Putin decreta una mobilitazione parziale di circa 300.000 uomini",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Mapping Ukraine’s Military Advances",
+            "data": "2022-09-22",
+            "url": "https://www.csis.org/analysis/mapping-ukraines-military-advances"
+          }
+        ]
+      },
+      {
+        "id": "F1-E018",
+        "livello": "confermato",
+        "titolo": "a fine mese Mosca dichiara l'annessione delle quattro regioni occupate",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Mapping Ukraine’s Military Advances",
+            "data": "2022-09-22",
+            "url": "https://www.csis.org/analysis/mapping-ukraines-military-advances"
+          }
+        ]
+      },
+      {
+        "id": "F1-E019",
+        "livello": "confermato",
+        "titolo": "L'affondamento dell'incrociatore Moskva il 14 aprile",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          }
+        ]
+      },
+      {
+        "id": "F1-E020",
+        "livello": "plausibile",
+        "titolo": "attribuito ai missili Neptune ucraini",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          },
+          {
+            "nome": "Secretary Austin and General Milley press conference",
+            "data": "2022-07-20",
+            "url": "https://www.defense.gov/News/Transcripts/Transcript/Article/3100301/secretary-of-defense-lloyd-j-austin-iii-and-chairman-of-the-joint-chiefs-of-sta/"
+          }
+        ]
+      },
+      {
+        "id": "F1-E021",
+        "livello": "plausibile",
+        "titolo": "e il primo attacco coordinato di droni navali contro Sebastopoli in ottobre",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          },
+          {
+            "nome": "Secretary Austin and General Milley press conference",
+            "data": "2022-07-20",
+            "url": "https://www.defense.gov/News/Transcripts/Transcript/Article/3100301/secretary-of-defense-lloyd-j-austin-iii-and-chairman-of-the-joint-chiefs-of-sta/"
+          }
+        ]
+      },
+      {
+        "id": "F1-E022",
+        "livello": "confermato",
+        "titolo": "Dopo il colpo al ponte di Kerch dell'8 ottobre",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine",
+            "data": "2022-11-30",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          }
+        ]
+      }
+    ],
+    "contenuti/fasi/2-difesa-che-osserva.md": [
+      {
+        "id": "F2-E001",
+        "livello": "confermato",
+        "titolo": "Il 21 settembre 2022 Vladimir Putin ordina una mobilitazione parziale di circa 300.000 uomini",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Perseverance and Adaptation: Ukraine’s Counteroffensive at Three Months",
+            "data": "2023-09-04",
+            "url": "https://warontherocks.com/2023/09/perseverance-and-adaptation-ukraines-counteroffensive-at-three-months/"
+          }
+        ]
+      },
+      {
+        "id": "F2-E002",
+        "livello": "confermato",
+        "titolo": "L'8 ottobre 2022 Sergej Surovikin viene nominato comandante del raggruppamento unificato delle forze russe in Ucraina",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "How Delays in Western Aid Gave Russia the Initiative",
+            "data": "2024-05-22",
+            "url": "https://understandingwar.org/research/russia-ukraine/how-delays-in-western-aid-gave-russia-the-initiative-from-the-ukrainian-counteroffensive-to-kharkiv/"
+          }
+        ]
+      },
+      {
+        "id": "F2-E003",
+        "livello": "confermato",
+        "titolo": "il ripiegamento viene compiuto fra il 9 e l'11 novembre",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "How Delays in Western Aid Gave Russia the Initiative",
+            "data": "2024-05-22",
+            "url": "https://understandingwar.org/research/russia-ukraine/how-delays-in-western-aid-gave-russia-the-initiative-from-the-ukrainian-counteroffensive-to-kharkiv/"
+          }
+        ]
+      },
+      {
+        "id": "F2-E004",
+        "livello": "confermato",
+        "titolo": "È un sistema di cinture successive",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Perseverance and Adaptation: Ukraine’s Counteroffensive at Three Months",
+            "data": "2023-09-04",
+            "url": "https://warontherocks.com/2023/09/perseverance-and-adaptation-ukraines-counteroffensive-at-three-months/"
+          }
+        ]
+      },
+      {
+        "id": "F2-E005",
+        "livello": "plausibile",
+        "titolo": "Alcune analisi la descrivono come il più esteso complesso fortificato costruito in Europa dal secondo dopoguerra",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Perseverance and Adaptation: Ukraine’s Counteroffensive at Three Months",
+            "data": "2023-09-04",
+            "url": "https://warontherocks.com/2023/09/perseverance-and-adaptation-ukraines-counteroffensive-at-three-months/"
+          },
+          {
+            "nome": "The Russia-Ukraine War: A Study in Analytic Failure",
+            "data": "2023-09-18",
+            "url": "https://www.csis.org/analysis/russia-ukraine-war-study-analytic-failure"
+          }
+        ]
+      },
+      {
+        "id": "F2-E006",
+        "livello": "plausibile",
+        "titolo": "con diffusi rapporti di mine anticarro sovrapposte, impilate per aumentare l'effetto contro i mezzi da sminamento",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Perseverance and Adaptation: Ukraine’s Counteroffensive at Three Months",
+            "data": "2023-09-04",
+            "url": "https://warontherocks.com/2023/09/perseverance-and-adaptation-ukraines-counteroffensive-at-three-months/"
+          },
+          {
+            "nome": "The Russia-Ukraine War: A Study in Analytic Failure",
+            "data": "2023-09-18",
+            "url": "https://www.csis.org/analysis/russia-ukraine-war-study-analytic-failure"
+          }
+        ]
+      },
+      {
+        "id": "F2-E007",
+        "livello": "confermato",
+        "titolo": "Il rinvio della controffensiva ucraina fino a giugno concede ai difensori mesi preziosi per completarla",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Perseverance and Adaptation: Ukraine’s Counteroffensive at Three Months",
+            "data": "2023-09-04",
+            "url": "https://warontherocks.com/2023/09/perseverance-and-adaptation-ukraines-counteroffensive-at-three-months/"
+          }
+        ]
+      },
+      {
+        "id": "F2-E008",
+        "livello": "confermato",
+        "titolo": "le unità avanzate possono ripiegare verso la cintura successiva, mentre riserve e fuochi intervengono sui reparti incanalati",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Perseverance and Adaptation: Ukraine’s Counteroffensive at Three Months",
+            "data": "2023-09-04",
+            "url": "https://warontherocks.com/2023/09/perseverance-and-adaptation-ukraines-counteroffensive-at-three-months/"
+          }
+        ]
+      },
+      {
+        "id": "F2-E009",
+        "livello": "confermato",
+        "titolo": "Corre in parallelo, dall'ottobre 2022, la campagna russa contro le infrastrutture energetiche ucraine",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "The Russia-Ukraine War: A Study in Analytic Failure",
+            "data": "2023-09-18",
+            "url": "https://www.csis.org/analysis/russia-ukraine-war-study-analytic-failure"
+          }
+        ]
+      },
+      {
+        "id": "F2-E010",
+        "livello": "confermato",
+        "titolo": "Fra la fine di gennaio e il febbraio 2023 Mosca lancia contro Vuhledar, nel Donetsk meridionale, assalti meccanizzati imperniati su reparti di fanteria di marina, fra cui la 155ª brigata della Flotta del Pacifico",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Perseverance and Adaptation: Ukraine’s Counteroffensive at Three Months",
+            "data": "2023-09-04",
+            "url": "https://warontherocks.com/2023/09/perseverance-and-adaptation-ukraines-counteroffensive-at-three-months/"
+          }
+        ]
+      },
+      {
+        "id": "F2-E011",
+        "livello": "plausibile",
+        "titolo": "Fonti giornalistiche indipendenti, citando ufficiali ucraini, parlano di oltre 130 mezzi corazzati perduti in circa tre settimane",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Tactical Developments During the Third Year of the Russo-Ukrainian War",
+            "url": "https://static.rusi.org/tactical-developments-third-year-russo-ukrainian-war-february-2205.pdf"
+          },
+          {
+            "nome": "The Russia-Ukraine War: A Study in Analytic Failure",
+            "data": "2023-09-18",
+            "url": "https://www.csis.org/analysis/russia-ukraine-war-study-analytic-failure"
+          }
+        ]
+      },
+      {
+        "id": "F2-E012",
+        "livello": "plausibile",
+        "titolo": "l'intelligence britannica valuta che la 155ª brigata abbia subito una riduzione grave della propria efficacia operativa entro la primavera — con perdite stimate all'80% dell'organico, abbondantemente oltre lo status di combat-ineffective",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Tactical Developments During the Third Year of the Russo-Ukrainian War",
+            "url": "https://static.rusi.org/tactical-developments-third-year-russo-ukrainian-war-february-2205.pdf"
+          },
+          {
+            "nome": "The Russia-Ukraine War: A Study in Analytic Failure",
+            "data": "2023-09-18",
+            "url": "https://www.csis.org/analysis/russia-ukraine-war-study-analytic-failure"
+          }
+        ]
+      },
+      {
+        "id": "F2-E013",
+        "livello": "confermato",
+        "titolo": "artiglieria e reparti professionali Wagner sfruttano poi le informazioni e il consumo prodotti",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Tactical Developments During the Third Year of the Russo-Ukrainian War",
+            "url": "https://static.rusi.org/tactical-developments-third-year-russo-ukrainian-war-february-2205.pdf"
+          }
+        ]
+      },
+      {
+        "id": "F2-E014",
+        "livello": "plausibile",
+        "titolo": "Le stime sul reclutamento sono nell'ordine delle decine di migliaia",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Tactical Developments During the Third Year of the Russo-Ukrainian War",
+            "url": "https://static.rusi.org/tactical-developments-third-year-russo-ukrainian-war-february-2205.pdf"
+          },
+          {
+            "nome": "The Russia-Ukraine War: A Study in Analytic Failure",
+            "data": "2023-09-18",
+            "url": "https://www.csis.org/analysis/russia-ukraine-war-study-analytic-failure"
+          }
+        ]
+      },
+      {
+        "id": "F2-E015",
+        "livello": "confermato",
+        "titolo": "Soledar cade nel gennaio 2023 e il 20 maggio Prigožin annuncia la conquista di Bakhmut",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "The Russia-Ukraine War: A Study in Analytic Failure",
+            "data": "2023-09-18",
+            "url": "https://www.csis.org/analysis/russia-ukraine-war-study-analytic-failure"
+          }
+        ]
+      },
+      {
+        "id": "F2-E016",
+        "livello": "confermato",
+        "titolo": "considerando l'intera campagna, i combattimenti per la città erano iniziati già nell'agosto precedente",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "The Russia-Ukraine War: A Study in Analytic Failure",
+            "data": "2023-09-18",
+            "url": "https://www.csis.org/analysis/russia-ukraine-war-study-analytic-failure"
+          }
+        ]
+      },
+      {
+        "id": "F2-E017",
+        "livello": "confermato",
+        "titolo": "Il 23-24 giugno Wagner occupa Rostov sul Don e muove verso Mosca, prima di fermarsi in seguito a un accordo mediato dal presidente bielorusso Aleksandr Lukašenko",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Perseverance and Adaptation: Ukraine’s Counteroffensive at Three Months",
+            "data": "2023-09-04",
+            "url": "https://warontherocks.com/2023/09/perseverance-and-adaptation-ukraines-counteroffensive-at-three-months/"
+          }
+        ]
+      },
+      {
+        "id": "F2-E018",
+        "livello": "confermato",
+        "titolo": "Il 23 agosto Prigožin muore nello schianto del proprio aereo",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Perseverance and Adaptation: Ukraine’s Counteroffensive at Three Months",
+            "data": "2023-09-04",
+            "url": "https://warontherocks.com/2023/09/perseverance-and-adaptation-ukraines-counteroffensive-at-three-months/"
+          }
+        ]
+      },
+      {
+        "id": "F2-E019",
+        "livello": "plausibile",
+        "titolo": "la causa resta indeterminata, mentre l'ipotesi di un assassinio politico è plausibile ma non dimostrata",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Perseverance and Adaptation: Ukraine’s Counteroffensive at Three Months",
+            "data": "2023-09-04",
+            "url": "https://warontherocks.com/2023/09/perseverance-and-adaptation-ukraines-counteroffensive-at-three-months/"
+          },
+          {
+            "nome": "How Delays in Western Aid Gave Russia the Initiative",
+            "data": "2024-05-22",
+            "url": "https://understandingwar.org/research/russia-ukraine/how-delays-in-western-aid-gave-russia-the-initiative-from-the-ukrainian-counteroffensive-to-kharkiv/"
+          }
+        ]
+      },
+      {
+        "id": "F2-E020",
+        "livello": "confermato",
+        "titolo": "Nella primavera del 2023 l'Ucraina costituisce nuove brigate, addestrate con il sostegno degli alleati ed equipaggiate con Leopard 2, Bradley e altri mezzi occidentali",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "The Russia-Ukraine War: A Study in Analytic Failure",
+            "data": "2023-09-18",
+            "url": "https://www.csis.org/analysis/russia-ukraine-war-study-analytic-failure"
+          }
+        ]
+      },
+      {
+        "id": "F2-E021",
+        "livello": "confermato",
+        "titolo": "Tokmak rappresenta una meta operativa intermedia nell'intento dichiarato",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "The Russia-Ukraine War: A Study in Analytic Failure",
+            "data": "2023-09-18",
+            "url": "https://www.csis.org/analysis/russia-ukraine-war-study-analytic-failure"
+          }
+        ]
+      },
+      {
+        "id": "F2-E022",
+        "livello": "confermato",
+        "titolo": "Il 4 giugno 2023 Kyiv avvia lo sforzo principale della controffensiva",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "The Russia-Ukraine War: A Study in Analytic Failure",
+            "data": "2023-09-18",
+            "url": "https://www.csis.org/analysis/russia-ukraine-war-study-analytic-failure"
+          }
+        ]
+      },
+      {
+        "id": "F2-E023",
+        "livello": "confermato",
+        "titolo": "Mezzi da genio, Bradley e Leopard si concentrano sul passaggio, alcuni restano immobilizzati e la colonna viene colpita da artiglieria, missili controcarro e Ka-52 mantenuti a distanza dalla difesa aerea tattica ucraina",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "The Russia-Ukraine War: A Study in Analytic Failure",
+            "data": "2023-09-18",
+            "url": "https://www.csis.org/analysis/russia-ukraine-war-study-analytic-failure"
+          }
+        ]
+      },
+      {
+        "id": "F2-E024",
+        "livello": "plausibile",
+        "titolo": "Le perdite osservate e stimate ammontano a circa venticinque mezzi fra corazzati e piattaforme del genio",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "The Russia-Ukraine War: A Study in Analytic Failure",
+            "data": "2023-09-18",
+            "url": "https://www.csis.org/analysis/russia-ukraine-war-study-analytic-failure"
+          },
+          {
+            "nome": "Perseverance and Adaptation: Ukraine’s Counteroffensive at Three Months",
+            "data": "2023-09-04",
+            "url": "https://warontherocks.com/2023/09/perseverance-and-adaptation-ukraines-counteroffensive-at-three-months/"
+          }
+        ]
+      },
+      {
+        "id": "F2-E025",
+        "livello": "confermato",
+        "titolo": "Dopo gli scacchi iniziali l'Ucraina riduce il peso degli assalti meccanizzati concentrati e passa sempre più all'infiltrazione appiedata per piccole unità",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "The Russia-Ukraine War: A Study in Analytic Failure",
+            "data": "2023-09-18",
+            "url": "https://www.csis.org/analysis/russia-ukraine-war-study-analytic-failure"
+          }
+        ]
+      },
+      {
+        "id": "F2-E026",
+        "livello": "confermato",
+        "titolo": "il 23 agosto la 47ª brigata issa la bandiera sulla scuola distrutta del villaggio",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "The Russia-Ukraine War: A Study in Analytic Failure",
+            "data": "2023-09-18",
+            "url": "https://www.csis.org/analysis/russia-ukraine-war-study-analytic-failure"
+          }
+        ]
+      },
+      {
+        "id": "F2-E027",
+        "livello": "confermato",
+        "titolo": "In autunno l'offensiva culmina, dopo aver consumato fanteria d'assalto e munizioni senza produrre lo sfruttamento atteso",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "How Delays in Western Aid Gave Russia the Initiative",
+            "data": "2024-05-22",
+            "url": "https://understandingwar.org/research/russia-ukraine/how-delays-in-western-aid-gave-russia-the-initiative-from-the-ukrainian-counteroffensive-to-kharkiv/"
+          }
+        ]
+      },
+      {
+        "id": "F2-E028",
+        "livello": "confermato",
+        "titolo": "All'inizio di novembre il comandante in capo ucraino Valerij Zalužnyj descrive all'Economist una situazione di «stallo» e indica in circa 17 chilometri l'avanzata massima ottenuta in cinque mesi",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "How Delays in Western Aid Gave Russia the Initiative",
+            "data": "2024-05-22",
+            "url": "https://understandingwar.org/research/russia-ukraine/how-delays-in-western-aid-gave-russia-the-initiative-from-the-ukrainian-counteroffensive-to-kharkiv/"
+          }
+        ]
+      },
+      {
+        "id": "F2-E029",
+        "livello": "confermato",
+        "titolo": "I vertici distribuiscono inizialmente lo sforzo su più direttrici, nonostante la preferenza statunitense per un unico asse principale, e lo concentrano maggiormente solo in seguito",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Perseverance and Adaptation: Ukraine’s Counteroffensive at Three Months",
+            "data": "2023-09-04",
+            "url": "https://warontherocks.com/2023/09/perseverance-and-adaptation-ukraines-counteroffensive-at-three-months/"
+          }
+        ]
+      }
+    ],
+    "contenuti/fasi/3-occhio-che-diventa-arma.md": [
+      {
+        "id": "F3-E001",
+        "livello": "confermato",
+        "titolo": "Il 31 ottobre 2023 Valerij Zalužnyj pubblica Modern Positional Warfare and How to Win It, nel quale descrive una guerra divenuta posizionale e indica superiorità informativa, guerra elettronica, controbatteria e integrazione delle capacità come problemi da sciogliere",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "How Delays in Western Aid Gave Russia the Initiative",
+            "data": "2024-05-22",
+            "url": "https://understandingwar.org/research/russia-ukraine/how-delays-in-western-aid-gave-russia-the-initiative-from-the-ukrainian-counteroffensive-to-kharkiv/"
+          }
+        ]
+      },
+      {
+        "id": "F3-E002",
+        "livello": "confermato",
+        "titolo": "La Russia apre la nuova offensiva contro Avdiivka il 10 ottobre 2023",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "The Evolution of Russia’s Precision Strike: Adopting Mass Precision in Ukraine",
+            "data": "2026-08-10",
+            "url": "https://static.rusi.org/the-evolution-of-russias-precision-strike_1.pdf"
+          }
+        ]
+      },
+      {
+        "id": "F3-E003",
+        "livello": "plausibile",
+        "titolo": "due stime indipendenti richiamate nello stesso quadro si avvicinavano già ai 200 mezzi",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "How Delays in Western Aid Gave Russia the Initiative",
+            "data": "2024-05-22",
+            "url": "https://understandingwar.org/research/russia-ukraine/how-delays-in-western-aid-gave-russia-the-initiative-from-the-ukrainian-counteroffensive-to-kharkiv/"
+          },
+          {
+            "nome": "The Evolution of Russia’s Precision Strike: Adopting Mass Precision in Ukraine",
+            "data": "2026-08-10",
+            "url": "https://static.rusi.org/the-evolution-of-russias-precision-strike_1.pdf"
+          }
+        ]
+      },
+      {
+        "id": "F3-E004",
+        "livello": "plausibile",
+        "titolo": "Nel dicembre 2023 una valutazione statunitense declassificata attribuiva inoltre all'asse Avdiivka–Novopavlivka, dall'inizio dell'offensiva, oltre 13.000 caduti e feriti russi e più di 220 veicoli da combattimento perduti",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "How Delays in Western Aid Gave Russia the Initiative",
+            "data": "2024-05-22",
+            "url": "https://understandingwar.org/research/russia-ukraine/how-delays-in-western-aid-gave-russia-the-initiative-from-the-ukrainian-counteroffensive-to-kharkiv/"
+          },
+          {
+            "nome": "The Evolution of Russia’s Precision Strike: Adopting Mass Precision in Ukraine",
+            "data": "2026-08-10",
+            "url": "https://static.rusi.org/the-evolution-of-russias-precision-strike_1.pdf"
+          }
+        ]
+      },
+      {
+        "id": "F3-E005",
+        "livello": "plausibile",
+        "titolo": "Nelle ultime settimane della battaglia i reparti ucraini descrivono decine di attacchi aerei al giorno insieme ad assalti di unità ridotte",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "How Delays in Western Aid Gave Russia the Initiative",
+            "data": "2024-05-22",
+            "url": "https://understandingwar.org/research/russia-ukraine/how-delays-in-western-aid-gave-russia-the-initiative-from-the-ukrainian-counteroffensive-to-kharkiv/"
+          },
+          {
+            "nome": "The Evolution of Russia’s Precision Strike: Adopting Mass Precision in Ukraine",
+            "data": "2026-08-10",
+            "url": "https://static.rusi.org/the-evolution-of-russias-precision-strike_1.pdf"
+          }
+        ]
+      },
+      {
+        "id": "F3-E006",
+        "livello": "confermato",
+        "titolo": "Una munizione nata per cadere quasi verticalmente diventa così una glide bomb: dopo lo sgancio percorre decine di chilometri verso coordinate assegnate, con gittata dipendente da quota, velocità, profilo di lancio e versione del kit",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Russian Glide Bombs Add Pressure on Ukraine’s Diminishing Air Defences",
+            "data": "2024-03-25",
+            "url": "https://www.iiss.org/online-analysis/military-balance/2024/03/russian-glide-bombs-add-pressure-on-ukraines-diminishing-air-defences/"
+          },
+          {
+            "nome": "How Delays in Western Aid Gave Russia the Initiative",
+            "data": "2024-05-22",
+            "url": "https://understandingwar.org/research/russia-ukraine/how-delays-in-western-aid-gave-russia-the-initiative-from-the-ukrainian-counteroffensive-to-kharkiv/"
+          }
+        ]
+      },
+      {
+        "id": "F3-E007",
+        "livello": "plausibile",
+        "titolo": "Il blocco degli aiuti statunitensi dalla fine del 2023, inoltre, aggrava la penuria di munizioni d'artiglieria e intercettori, ma non è una causa esclusiva della caduta: concorrono consumo precedente, allocazione della difesa aerea, densità delle minacce, difficoltà di colpire le basi e i vettori e pressione terrestre prolungata",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Russian Glide Bombs Add Pressure on Ukraine’s Diminishing Air Defences",
+            "data": "2024-03-25",
+            "url": "https://www.iiss.org/online-analysis/military-balance/2024/03/russian-glide-bombs-add-pressure-on-ukraines-diminishing-air-defences/"
+          },
+          {
+            "nome": "How Delays in Western Aid Gave Russia the Initiative",
+            "data": "2024-05-22",
+            "url": "https://understandingwar.org/research/russia-ukraine/how-delays-in-western-aid-gave-russia-the-initiative-from-the-ukrainian-counteroffensive-to-kharkiv/"
+          }
+        ]
+      },
+      {
+        "id": "F3-E008",
+        "livello": "confermato",
+        "titolo": "Il 17 febbraio 2024 Oleksandr Syrs'kyj annuncia il ritiro ucraino da Avdiivka per evitare l'accerchiamento",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "How Delays in Western Aid Gave Russia the Initiative",
+            "data": "2024-05-22",
+            "url": "https://understandingwar.org/research/russia-ukraine/how-delays-in-western-aid-gave-russia-the-initiative-from-the-ukrainian-counteroffensive-to-kharkiv/"
+          }
+        ]
+      },
+      {
+        "id": "F3-E009",
+        "livello": "plausibile",
+        "titolo": "Il nesso solido è qualitativo: entro il 2024 il data link è diventato una superficie d'attacco centrale, e nessuna unità può impiegare droni in scala senza organizzare protezione elettronica, ricambio delle frequenze, antenne direzionali, ripetitori e coordinamento delle proprie emissioni",
+        "motivazione": "La formulazione universale su ogni unità e sull’impiego in scala è più ampia delle evidenze pubbliche campionate. La decisione editoriale è definitiva e recepita nel presente registro.",
+        "fonti": [
+          {
+            "nome": "How Delays in Western Aid Gave Russia the Initiative",
+            "data": "2024-05-22",
+            "url": "https://understandingwar.org/research/russia-ukraine/how-delays-in-western-aid-gave-russia-the-initiative-from-the-ukrainian-counteroffensive-to-kharkiv/"
+          }
+        ]
+      },
+      {
+        "id": "F3-E010",
+        "livello": "plausibile",
+        "titolo": "In diversi settori la Russia dispone di una maggiore densità e integrazione di sistemi EW, ricognizione e fuochi, restringendo le finestre nelle quali gli FPV ucraini conservano controllo e video affidabili",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "The Evolution of Russia’s Precision Strike: Adopting Mass Precision in Ukraine",
+            "data": "2026-08-10",
+            "url": "https://static.rusi.org/the-evolution-of-russias-precision-strike_1.pdf"
+          },
+          {
+            "nome": "How Delays in Western Aid Gave Russia the Initiative",
+            "data": "2024-05-22",
+            "url": "https://understandingwar.org/research/russia-ukraine/how-delays-in-western-aid-gave-russia-the-initiative-from-the-ukrainian-counteroffensive-to-kharkiv/"
+          }
+        ]
+      },
+      {
+        "id": "F3-E011",
+        "livello": "plausibile",
+        "titolo": "La rete ucraina nota pubblicamente come Pokrova, emersa nelle comunicazioni ufficiali fra la fine del 2023 e l'inizio del 2024, applica il secondo principio soprattutto contro vettori a lungo raggio basati sulla navigazione satellitare",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "How Delays in Western Aid Gave Russia the Initiative",
+            "data": "2024-05-22",
+            "url": "https://understandingwar.org/research/russia-ukraine/how-delays-in-western-aid-gave-russia-the-initiative-from-the-ukrainian-counteroffensive-to-kharkiv/"
+          },
+          {
+            "nome": "The Evolution of Russia’s Precision Strike: Adopting Mass Precision in Ukraine",
+            "data": "2026-08-10",
+            "url": "https://static.rusi.org/the-evolution-of-russias-precision-strike_1.pdf"
+          }
+        ]
+      },
+      {
+        "id": "F3-E012",
+        "livello": "confermato",
+        "titolo": "Il 6 agosto 2024 l'Ucraina attraversa il confine nella regione russa di Kursk e apre un saliente attorno a Sudža",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "How Delays in Western Aid Gave Russia the Initiative",
+            "data": "2024-05-22",
+            "url": "https://understandingwar.org/research/russia-ukraine/how-delays-in-western-aid-gave-russia-the-initiative-from-the-ukrainian-counteroffensive-to-kharkiv/"
+          }
+        ]
+      },
+      {
+        "id": "F3-E013",
+        "livello": "confermato",
+        "titolo": "la frontiera è presidiata in parte da coscritti e unità meno addestrate, mentre la rete stradale offre spazio al movimento",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "The Evolution of Russia’s Precision Strike: Adopting Mass Precision in Ukraine",
+            "data": "2026-08-10",
+            "url": "https://static.rusi.org/the-evolution-of-russias-precision-strike_1.pdf"
+          }
+        ]
+      },
+      {
+        "id": "F3-E014",
+        "livello": "plausibile",
+        "titolo": "concentrazione e intento sono schermati mediante disciplina delle comunicazioni, ricognizione preventiva, inganno e copertura del terreno",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "The Evolution of Russia’s Precision Strike: Adopting Mass Precision in Ukraine",
+            "data": "2026-08-10",
+            "url": "https://static.rusi.org/the-evolution-of-russias-precision-strike_1.pdf"
+          },
+          {
+            "nome": "How Delays in Western Aid Gave Russia the Initiative",
+            "data": "2024-05-22",
+            "url": "https://understandingwar.org/research/russia-ukraine/how-delays-in-western-aid-gave-russia-the-initiative-from-the-ukrainian-counteroffensive-to-kharkiv/"
+          }
+        ]
+      },
+      {
+        "id": "F3-E015",
+        "livello": "plausibile",
+        "titolo": "All'apertura, difesa aerea e fuochi ucraini riducono la ricognizione russa, mentre guerra elettronica, artiglieria e mine disseminabili interferiscono con comando, collegamenti e afflusso delle riserve",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "The Evolution of Russia’s Precision Strike: Adopting Mass Precision in Ukraine",
+            "data": "2026-08-10",
+            "url": "https://static.rusi.org/the-evolution-of-russias-precision-strike_1.pdf"
+          },
+          {
+            "nome": "Russian Glide Bombs Add Pressure on Ukraine’s Diminishing Air Defences",
+            "data": "2024-03-25",
+            "url": "https://www.iiss.org/online-analysis/military-balance/2024/03/russian-glide-bombs-add-pressure-on-ukraines-diminishing-air-defences/"
+          }
+        ]
+      },
+      {
+        "id": "F3-E016",
+        "livello": "confermato",
+        "titolo": "Dentro quella finestra, unità meccanizzate e leggere tornano a muoversi con un ritmo che la linea fortificata del Donbas non consentiva, stabilendo in pochi giorni una presenza profonda in territorio russo",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "How Delays in Western Aid Gave Russia the Initiative",
+            "data": "2024-05-22",
+            "url": "https://understandingwar.org/research/russia-ukraine/how-delays-in-western-aid-gave-russia-the-initiative-from-the-ukrainian-counteroffensive-to-kharkiv/"
+          }
+        ]
+      },
+      {
+        "id": "F3-E017",
+        "livello": "confermato",
+        "titolo": "Non interrompe l'offensiva russa nel Donetsk, non produce una riallocazione tale da rovesciare il saldo aggregato e non restituisce a Kyiv l'iniziativa sull'intero teatro",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "How Delays in Western Aid Gave Russia the Initiative",
+            "data": "2024-05-22",
+            "url": "https://understandingwar.org/research/russia-ukraine/how-delays-in-western-aid-gave-russia-the-initiative-from-the-ukrainian-counteroffensive-to-kharkiv/"
+          }
+        ]
+      },
+      {
+        "id": "F3-E018",
+        "livello": "plausibile",
+        "titolo": "nel Kursk la soluzione compare in mano russa mentre la guerra elettronica ucraina mostra la propria efficacia contro i collegamenti ordinari",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "How Delays in Western Aid Gave Russia the Initiative",
+            "data": "2024-05-22",
+            "url": "https://understandingwar.org/research/russia-ukraine/how-delays-in-western-aid-gave-russia-the-initiative-from-the-ukrainian-counteroffensive-to-kharkiv/"
+          },
+          {
+            "nome": "The Evolution of Russia’s Precision Strike: Adopting Mass Precision in Ukraine",
+            "data": "2026-08-10",
+            "url": "https://static.rusi.org/the-evolution-of-russias-precision-strike_1.pdf"
+          }
+        ]
+      }
+    ],
+    "contenuti/fasi/4-nervo-fuori-dallo-spettro.md": [
+      {
+        "id": "F4-E001",
+        "livello": "confermato",
+        "titolo": "Il 7 marzo 2024 viene documentato un FPV russo controllato attraverso un collegamento ottico",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Ukrainian developers present optical-fibre FPV drone",
+            "data": "2024-03-18",
+            "url": "https://en.defence-ua.com/weapon_and_tech/ukrainian_developers_present_optical_fiber_fpv_drone_video-9873.html"
+          }
+        ]
+      },
+      {
+        "id": "F4-E002",
+        "livello": "confermato",
+        "titolo": "Pochi giorni dopo il laboratorio ucraino Dronarnia presenta il prototipo «Banderyk-Strička», con un raggio dichiarato di circa un chilometro, quindici minuti di autonomia e un carico utile fino a circa 3 kg",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Ukrainian developers present optical-fibre FPV drone",
+            "data": "2024-03-18",
+            "url": "https://en.defence-ua.com/weapon_and_tech/ukrainian_developers_present_optical_fiber_fpv_drone_video-9873.html"
+          }
+        ]
+      },
+      {
+        "id": "F4-E003",
+        "livello": "plausibile",
+        "titolo": "Una bobina da 10 km veniva allora indicata a circa 3.000 dollari, quasi un ordine di grandezza sopra il costo di molti FPV radio, mentre i primi prototipi offrivano raggio e carico ancora modesti",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Drone Line project launches",
+            "data": "2025-03-03",
+            "url": "https://mod.gov.ua/en/news/drone-line-project-launched-in-the-armed-forces-of-ukraine"
+          },
+          {
+            "nome": "Ukrainian developers present optical-fibre FPV drone",
+            "data": "2024-03-18",
+            "url": "https://en.defence-ua.com/weapon_and_tech/ukrainian_developers_present_optical_fiber_fpv_drone_video-9873.html"
+          }
+        ]
+      },
+      {
+        "id": "F4-E004",
+        "livello": "plausibile",
+        "titolo": "Il centro scientifico-produttivo Ushkujnik di Velikij Novgorod sviluppa il «Knjaz' Vandal Novgorodskij» — KVN — e ne documenta l'impiego nel Kursk nell'agosto 2024",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "odin.t2com.army.mil",
+            "url": "https://odin.t2com.army.mil/"
+          }
+        ]
+      },
+      {
+        "id": "F4-E005",
+        "livello": "plausibile",
+        "titolo": "La produzione seriale viene annunciata entro la fine dell'anno",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "odin.t2com.army.mil",
+            "url": "https://odin.t2com.army.mil/"
+          }
+        ]
+      },
+      {
+        "id": "F4-E006",
+        "livello": "confermato",
+        "titolo": "Il 5 gennaio 2025 Oleksandr Syrs'kyj — comandante in capo delle Forze Armate dell'Ucraina — conferma che le forze ucraine stanno impiegando droni in fibra «in risposta» a quelli russi",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Drone Line project launches",
+            "data": "2025-03-03",
+            "url": "https://mod.gov.ua/en/news/drone-line-project-launched-in-the-armed-forces-of-ukraine"
+          }
+        ]
+      },
+      {
+        "id": "F4-E007",
+        "livello": "plausibile",
+        "titolo": "Nella stessa finestra più imprese sostenute dall'ecosistema Brave1 avviano o ampliano la produzione, ma per alcuni mesi Kyiv deve rincorrere una soluzione che i propri sviluppatori avevano già mostrato e che l'apparato avversario aveva saputo scalare più rapidamente",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Drone Line project launches",
+            "data": "2025-03-03",
+            "url": "https://mod.gov.ua/en/news/drone-line-project-launched-in-the-armed-forces-of-ukraine"
+          },
+          {
+            "nome": "Ukrainian developers present optical-fibre FPV drone",
+            "data": "2024-03-18",
+            "url": "https://en.defence-ua.com/weapon_and_tech/ukrainian_developers_present_optical_fiber_fpv_drone_video-9873.html"
+          }
+        ]
+      },
+      {
+        "id": "F4-E008",
+        "livello": "confermato",
+        "titolo": "l'11 giugno le Forze dei Sistemi Senza Equipaggio ucraine — SBS dall'ucraino, o USF: Unmanned Systems Forces — vengono presentate pubblicamente sotto il comando del colonnello Vadym Sucharevs'kyj",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Ukraine officially presents unmanned systems forces",
+            "url": "https://kyivindependent.com/ukraine-officially-presents-unmanned-systems-forces/"
+          }
+        ]
+      },
+      {
+        "id": "F4-E009",
+        "livello": "confermato",
+        "titolo": "Il Ministero della Difesa istituisce in agosto il Centro per le tecnologie avanzate senza equipaggio «Rubikon», la cui esistenza diventa pubblica con la visita del ministro Andrej Belousov in ottobre",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Inside rubicon the structure of russias elite drone center",
+            "url": "https://www.fpri.org/article/2026/06/inside-rubicon-the-structure-of-russias-elite-drone-center/"
+          }
+        ]
+      },
+      {
+        "id": "F4-E010",
+        "livello": "confermato",
+        "titolo": "Il 12 novembre 2025 Mosca annuncia la costituzione delle proprie Forze dei Sistemi Senza Equipaggio come ramo dedicato: VBS",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Putin names head new russian drone forces military reshuffle 2026 08 05",
+            "url": "https://www.reuters.com/world/europe/putin-names-head-new-russian-drone-forces-military-reshuffle-2026-08-05/"
+          }
+        ]
+      },
+      {
+        "id": "F4-E011",
+        "livello": "confermato",
+        "titolo": "Fra il 10 e l'11 marzo le forze ucraine abbandonano Sudža e gran parte del saliente",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Ukraine keep fighting kursk long needed top army commander says 2025 03 12",
+            "url": "https://www.reuters.com/world/europe/ukraine-keep-fighting-kursk-long-needed-top-army-commander-says-2025-03-12/"
+          }
+        ]
+      },
+      {
+        "id": "F4-E012",
+        "livello": "plausibile",
+        "titolo": "L'interdizione dronica della linea di rifornimento è un fattore maggiore del collasso logistico",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Ukraine keep fighting kursk long needed top army commander says 2025 03 12",
+            "url": "https://www.reuters.com/world/europe/ukraine-keep-fighting-kursk-long-needed-top-army-commander-says-2025-03-12/"
+          },
+          {
+            "nome": "Musk ordered shutdown starlink satellite service ukraine retook territory russia 2025 07 25",
+            "url": "https://www.reuters.com/investigations/musk-ordered-shutdown-starlink-satellite-service-ukraine-retook-territory-russia-2025-07-25/"
+          }
+        ]
+      },
+      {
+        "id": "F4-E013",
+        "livello": "confermato",
+        "titolo": "Nell'aprile 2025 l'Ucraina mostra pubblicamente il sistema laser Tryzub, presentato come capace di danneggiare o accecare sensori elettro-ottici",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Ukraine showcases new anti drone laser weapon in action 7541",
+            "url": "https://united24media.com/latest-news/ukraine-showcases-new-anti-drone-laser-weapon-in-action-7541"
+          }
+        ]
+      },
+      {
+        "id": "F4-E014",
+        "livello": "non-verificato",
+        "titolo": "La dimostrazione non prova un impiego operativo efficace contro FPV in fibra",
+        "motivazione": "Le fonti accessibili attestano la rivendicazione o il contesto, ma non rendono osservabile la catena completa necessaria a stabilirne la verità. Il grado attuale conserva correttamente l’incertezza; non va trasformato in fatto accertato.",
+        "fonti": [
+          {
+            "nome": "Ukraine showcases new anti drone laser weapon in action 7541",
+            "url": "https://united24media.com/latest-news/ukraine-showcases-new-anti-drone-laser-weapon-in-action-7541"
+          }
+        ]
+      },
+      {
+        "id": "F4-E015",
+        "livello": "confermato",
+        "titolo": "Nella primavera 2025 il progetto ucraino «Drone Line» porta questa logica a una forma deliberata",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Drone Line project launches",
+            "data": "2025-03-03",
+            "url": "https://mod.gov.ua/en/news/drone-line-project-launched-in-the-armed-forces-of-ukraine"
+          }
+        ]
+      },
+      {
+        "id": "F4-E016",
+        "livello": "confermato",
+        "titolo": "Nei settori di Pokrovs'k e Kostjantynivka la pressione russa avanza, comprime le vie di rifornimento e porta alcune posizioni ucraine vicino alla rottura",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Ukraine keep fighting kursk long needed top army commander says 2025 03 12",
+            "url": "https://www.reuters.com/world/europe/ukraine-keep-fighting-kursk-long-needed-top-army-commander-says-2025-03-12/"
+          }
+        ]
+      },
+      {
+        "id": "F4-E017",
+        "livello": "confermato",
+        "titolo": "Centodiciassette droni nascosti in strutture trasportate da autocarri vengono lanciati in prossimità di basi aeree russe, dopo una preparazione clandestina durata molti mesi",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Operation Spiderweb — reconstruction",
+            "url": "https://www.reuters.com/graphics/UKRAINE-CRISIS/DRONES-RUSSIA/mypmjzayyvr/"
+          }
+        ]
+      },
+      {
+        "id": "F4-E018",
+        "livello": "confermato",
+        "titolo": "attacchi efficaci sono stati pubblicamente documentati su quattro",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Operation Spiderweb — reconstruction",
+            "url": "https://www.reuters.com/graphics/UKRAINE-CRISIS/DRONES-RUSSIA/mypmjzayyvr/"
+          }
+        ]
+      },
+      {
+        "id": "F4-E019",
+        "livello": "non-verificato",
+        "titolo": "Kyiv dichiarò 41 velivoli colpiti e il 34 per cento dei vettori russi di missili da crociera strategici coinvolto",
+        "motivazione": "Le fonti accessibili attestano la rivendicazione o il contesto, ma non rendono osservabile la catena completa necessaria a stabilirne la verità. Il grado attuale conserva correttamente l’incertezza; non va trasformato in fatto accertato.",
+        "fonti": [
+          {
+            "nome": "Satellite images show damage from Ukraine’s drone attack",
+            "url": "https://apnews.com/article/a27eb37cff14355acb8f9850e663c8bd"
+          }
+        ]
+      },
+      {
+        "id": "F4-E020",
+        "livello": "plausibile",
+        "titolo": "Una successiva valutazione statunitense riportata da Reuters stimò fino a circa venti velivoli colpiti e approssimativamente dieci distrutti",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Satellite images show damage from Ukraine’s drone attack",
+            "url": "https://apnews.com/article/a27eb37cff14355acb8f9850e663c8bd"
+          },
+          {
+            "nome": "Ukraine hit fewer Russian planes than it estimated, U.S. officials say",
+            "data": "2025-06-04",
+            "url": "https://www.reuters.com/business/aerospace-defense/ukraine-hit-fewer-russian-planes-than-it-estimated-us-officials-say-2025-06-04/"
+          }
+        ]
+      },
+      {
+        "id": "F4-E021",
+        "livello": "confermato",
+        "titolo": "Fonti ucraine hanno descritto l'uso di reti cellulari russe e funzioni di visione artificiale o guida terminale assistita",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Operation Spiderweb — reconstruction",
+            "url": "https://www.reuters.com/graphics/UKRAINE-CRISIS/DRONES-RUSSIA/mypmjzayyvr/"
+          }
+        ]
+      },
+      {
+        "id": "F4-E022",
+        "livello": "non-verificato",
+        "titolo": "Non è pubblicamente verificabile quale collegamento sia rimasto attivo in ogni attacco, dove si trovassero tutti gli operatori o in quale momento un algoritmo abbia effettivamente sostituito la guida umana",
+        "motivazione": "Le fonti accessibili attestano la rivendicazione o il contesto, ma non rendono osservabile la catena completa necessaria a stabilirne la verità. Il grado attuale conserva correttamente l’incertezza; non va trasformato in fatto accertato.",
+        "fonti": [
+          {
+            "nome": "Operation Spiderweb — reconstruction",
+            "url": "https://www.reuters.com/graphics/UKRAINE-CRISIS/DRONES-RUSSIA/mypmjzayyvr/"
+          }
+        ]
+      }
+    ],
+    "contenuti/fasi/5-macchina-prima-delluomo.md": [
+      {
+        "id": "F5-E001",
+        "livello": "plausibile",
+        "titolo": "Le oltre 22.000 missioni UGV dichiarate nei primi tre mesi dell'anno, la campagna nella fascia intermedia, l'intensificazione degli attacchi al sistema energetico russo, il centro di intelligenza artificiale A1 e il nuovo comando per l'impatto a lungo raggio sono indicatori della convergenza",
+        "motivazione": "Gli elementi di convergenza sono documentabili separatamente; la convergenza sistemica è una sintesi analitica ancora incompleta. La decisione editoriale è definitiva e recepita nel presente registro.",
+        "fonti": [
+          {
+            "nome": "Ukraine sets up new command for long-range strikes",
+            "data": "2026-07-10",
+            "url": "https://www.reuters.com/world/europe/ukraine-sets-up-new-command-long-range-strikes-official-says-2026-07-10/"
+          }
+        ]
+      },
+      {
+        "id": "F5-E002",
+        "livello": "confermato",
+        "titolo": "Il centro, istituito dal Ministero della Difesa ucraino nella primavera del 2026, dichiara come priorità l'analisi dei dati di combattimento, la previsione delle azioni avversarie, lo sviluppo di sistemi autonomi e nuovi strumenti di comando",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Ministry of Defence launches first AI center of excellence",
+            "url": "https://mod.gov.ua/en/news/ministry-of-defence-launches-first-ai-center-of-excellence-to-advance-ai-integration-in-defense-1"
+          }
+        ]
+      },
+      {
+        "id": "F5-E003",
+        "livello": "confermato",
+        "titolo": "Il 23 aprile 2026 il Ministero della Difesa ucraino ha comunicato che i veicoli terrestri senza equipaggio — gli UGV, uncrewed ground vehicles — avevano sostenuto oltre 22.000 missioni nei tre mesi precedenti e più di 9.000 nel solo marzo, mentre prevedeva contratti per 25.000 piattaforme nel primo semestre",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Bizon enters the battlefield",
+            "data": "2026-04-23",
+            "url": "https://mod.gov.ua/en/news/bizon-enters-the-battlefield-defence-forces-receive-a-ugv-capable-of-carrying-up-to-300-kg"
+          }
+        ]
+      },
+      {
+        "id": "F5-E004",
+        "livello": "confermato",
+        "titolo": "non misura da solo l'effetto di ciascuna missione",
+        "motivazione": "La proposizione delimita correttamente ciò che un conteggio di missioni può provare: il limite metodologico è certo, non soltanto plausibile. La decisione editoriale è definitiva e recepita nel presente registro.",
+        "fonti": [
+          {
+            "nome": "Bizon enters the battlefield",
+            "data": "2026-04-23",
+            "url": "https://mod.gov.ua/en/news/bizon-enters-the-battlefield-defence-forces-receive-a-ugv-capable-of-carrying-up-to-300-kg"
+          },
+          {
+            "nome": "Ukraine creates a unified A1 Defence Procurement Agency",
+            "data": "2026-03-17",
+            "url": "https://mod.gov.ua/en/news/a1-defence-procurement-agency-will-combine-arms-and-non-lethal-procurement"
+          }
+        ]
+      },
+      {
+        "id": "F5-E005",
+        "livello": "confermato",
+        "titolo": "Un veicolo di superficie senza equipaggio avrebbe trasportato e sbarcato un UGV armato, mentre un drone aereo osservava la missione e nessuna squadra era presente nel punto di contatto",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Putin names head new russian drone forces military reshuffle 2026 08 05",
+            "url": "https://www.reuters.com/world/europe/putin-names-head-new-russian-drone-forces-military-reshuffle-2026-08-05/"
+          }
+        ]
+      },
+      {
+        "id": "F5-E006",
+        "livello": "non-verificato",
+        "titolo": "il bersaglio, gli effetti e la ripetibilità dell'operazione restano non verificati",
+        "motivazione": "Le fonti accessibili attestano la rivendicazione o il contesto, ma non rendono osservabile la catena completa necessaria a stabilirne la verità. Il grado attuale conserva correttamente l’incertezza; non va trasformato in fatto accertato.",
+        "fonti": [
+          {
+            "nome": "Putin names head new russian drone forces military reshuffle 2026 08 05",
+            "url": "https://www.reuters.com/world/europe/putin-names-head-new-russian-drone-forces-military-reshuffle-2026-08-05/"
+          }
+        ]
+      },
+      {
+        "id": "F5-E007",
+        "livello": "confermato",
+        "titolo": "Le ricostruzioni giornalistiche collocano la fascia interessata fra circa 25 e 200 chilometri",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Ukrainian mid range strikes deal double blow russias war effort 2026 05 19",
+            "url": "https://www.reuters.com/business/aerospace-defense/ukrainian-mid-range-strikes-deal-double-blow-russias-war-effort-2026-05-19/"
+          }
+        ]
+      },
+      {
+        "id": "F5-E008",
+        "livello": "confermato",
+        "titolo": "Ad aprile il Ministero della Difesa ucraino ha dichiarato oltre 160 attacchi intermedi, condotti in prevalenza fra 120 e 150 chilometri, contro più di 65 obiettivi logistici e depositi di munizioni, 33 punti di controllo o laboratori droni e 17 posti di comando",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Ukrainian mid range strikes deal double blow russias war effort 2026 05 19",
+            "url": "https://www.reuters.com/business/aerospace-defense/ukrainian-mid-range-strikes-deal-double-blow-russias-war-effort-2026-05-19/"
+          }
+        ]
+      },
+      {
+        "id": "F5-E009",
+        "livello": "plausibile",
+        "titolo": "Gli effetti aggregati della campagna restano plausibili e non integralmente osservabili",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Ukrainian mid range strikes deal double blow russias war effort 2026 05 19",
+            "url": "https://www.reuters.com/business/aerospace-defense/ukrainian-mid-range-strikes-deal-double-blow-russias-war-effort-2026-05-19/"
+          }
+        ]
+      },
+      {
+        "id": "F5-E010",
+        "livello": "confermato",
+        "titolo": "Tra i fattori portanti di questo sistema integrato figura Starlink, il sistema satellitare di SpaceX che ha fornito comunicazioni satellitari resilienti e largamente disponibili sul campo di battaglia",
+        "motivazione": "La formulazione approvata elimina il carattere assoluto di «ininterrotte» e conserva il nucleo probatorio sostenuto dalle fonti. La decisione editoriale è definitiva e recepita nel presente registro.",
+        "fonti": [
+          {
+            "nome": "Starlink outage hit Ukrainian military communications",
+            "data": "2025-07-25",
+            "url": "https://www.reuters.com/business/media-telecom/ukraine-says-starlinks-global-outage-hit-its-military-communications-2025-07-25/"
+          }
+        ]
+      },
+      {
+        "id": "F5-E011",
+        "livello": "plausibile",
+        "titolo": "La limitazione dell'accesso russo non autorizzato alla rete ha contribuito a produrre una finestra asimmetrica favorevole all'Ucraina, mentre Mosca impiega disturbatori più potenti, camuffa i carichi e sviluppa collegamenti alternativi",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Starlink used by russian forces deactivated battlefield ukraine says 2026 02 05",
+            "url": "https://www.reuters.com/world/europe/starlink-used-by-russian-forces-deactivated-battlefield-ukraine-says-2026-02-05/"
+          }
+        ]
+      },
+      {
+        "id": "F5-E012",
+        "livello": "plausibile",
+        "titolo": "Gli attacchi sulla R-280 e sugli attraversamenti alternativi al ponte di Kerč hanno imposto protezione, occultamento e deviazioni ai flussi russi",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Ukrainian mid range strikes deal double blow russias war effort 2026 05 19",
+            "url": "https://www.reuters.com/business/aerospace-defense/ukrainian-mid-range-strikes-deal-double-blow-russias-war-effort-2026-05-19/"
+          }
+        ]
+      },
+      {
+        "id": "F5-E013",
+        "livello": "plausibile",
+        "titolo": "Alcune valutazioni in fonti aperte collegano la campagna intermedia a contrattacchi ucraini di scala superiore alla norma maturata dopo il 2023, in particolare nell'area di Oleksandrivka e sull'asse di Borova",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Ukrainian mid range strikes deal double blow russias war effort 2026 05 19",
+            "url": "https://www.reuters.com/business/aerospace-defense/ukrainian-mid-range-strikes-deal-double-blow-russias-war-effort-2026-05-19/"
+          }
+        ]
+      },
+      {
+        "id": "F5-E014",
+        "livello": "confermato",
+        "titolo": "Fra gennaio e maggio gli attacchi hanno colpito il doppio delle raffinerie rispetto allo stesso periodo del 2025, mentre impianti a Mosca, Omsk, Saratov e in altre regioni hanno subito arresti completi o parziali",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Russia’s gasoline output covers 65% of demand after Ukrainian strikes",
+            "data": "2026-07-10",
+            "url": "https://www.reuters.com/business/energy/russias-gasoline-output-covers-65-demand-after-ukrainian-strikes-sources-say-2026-07-10/"
+          }
+        ]
+      },
+      {
+        "id": "F5-E015",
+        "livello": "plausibile",
+        "titolo": "Il 10 luglio fonti industriali e calcoli Reuters stimavano la produzione russa di benzina attorno al 65% della domanda stagionale, con un deficit giornaliero fra 40.000 e 45.000 tonnellate",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Russia’s gasoline output covers 65% of demand after Ukrainian strikes",
+            "data": "2026-07-10",
+            "url": "https://www.reuters.com/business/energy/russias-gasoline-output-covers-65-demand-after-ukrainian-strikes-sources-say-2026-07-10/"
+          },
+          {
+            "nome": "Ukraine sets up new command for long-range strikes",
+            "data": "2026-07-10",
+            "url": "https://www.reuters.com/world/europe/ukraine-sets-up-new-command-long-range-strikes-official-says-2026-07-10/"
+          }
+        ]
+      },
+      {
+        "id": "F5-E016",
+        "livello": "confermato",
+        "titolo": "Il 10 luglio Kyiv ha annunciato la creazione di un comando per l'impatto a lungo raggio, destinato a concentrare risorse contro la capacità russa di proseguire la guerra",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Ukraine sets up new command for long-range strikes",
+            "data": "2026-07-10",
+            "url": "https://www.reuters.com/world/europe/ukraine-sets-up-new-command-long-range-strikes-official-says-2026-07-10/"
+          }
+        ]
+      },
+      {
+        "id": "F5-E017",
+        "livello": "confermato",
+        "titolo": "Nel maggio 2026 il ministro della Difesa Mykhailo Fedorov ha dichiarato che la cooperazione con Palantir — azienda statunitense di software e analisi di big data — aveva prodotto strumenti per l'analisi dettagliata degli attacchi aerei, il trattamento di grandi volumi di dati d'intelligence e l'integrazione di tecnologie nella pianificazione degli attacchi in profondità",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Zelenskiy meets palantir ceo ukraine expands use ai war 2026 05 12",
+            "url": "https://www.reuters.com/world/europe/zelenskiy-meets-palantir-ceo-ukraine-expands-use-ai-war-2026-05-12/"
+          }
+        ]
+      },
+      {
+        "id": "F5-E018",
+        "livello": "plausibile",
+        "titolo": "Le ricostruzioni pubbliche mostrano inoltre operatori dell'intelligence militare ucraina al lavoro con PRISMA: avanzato sistema di intelligenza artificiale sviluppato dall'azienda che riunisce rotte, attività della difesa aerea e dati delle missioni precedenti per sostenere la pianificazione e il coordinamento di attacchi a lungo raggio",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Inside ukraines palantir powered ai war room guiding drone strikes deep into russia 19356",
+            "url": "https://united24media.com/war-in-ukraine/inside-ukraines-palantir-powered-ai-war-room-guiding-drone-strikes-deep-into-russia-19356"
+          }
+        ]
+      },
+      {
+        "id": "F5-E019",
+        "livello": "confermato",
+        "titolo": "la prima applicazione dichiarata riguarda individuazione, classificazione e intercettazione autonoma delle minacce aeree",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Ministry of Defence launches first AI center of excellence",
+            "url": "https://mod.gov.ua/en/news/ministry-of-defence-launches-first-ai-center-of-excellence-to-advance-ai-integration-in-defense-1"
+          }
+        ]
+      },
+      {
+        "id": "F5-E020",
+        "livello": "confermato",
+        "titolo": "Gli attacchi contro la regione della capitale, le ripetute chiusure degli aeroporti e i danni alla raffineria moscovita rendono la guerra visibile in luoghi che il sistema aveva maggiormente protetto",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Ukraine creates long-range command to step up strikes on Russia",
+            "url": "https://www.reuters.com/business/energy/russian-refineries-oil-terminal-tankers-hit-ukraine-says-2026-07-10/"
+          }
+        ]
+      },
+      {
+        "id": "F5-E021",
+        "livello": "confermato",
+        "titolo": "Nel Mar d'Azov gli attacchi contro petroliere, traghetti, navi di supporto e canali di navigazione intrecciano logistica, esportazioni e assicurazione",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Ukraine creates long-range command to step up strikes on Russia",
+            "url": "https://www.reuters.com/business/energy/russian-refineries-oil-terminal-tankers-hit-ukraine-says-2026-07-10/"
+          }
+        ]
+      },
+      {
+        "id": "F5-E022",
+        "livello": "confermato",
+        "titolo": "Squadre mobili, posizioni fisse, intercettori, guerra elettronica contro i collegamenti satellitari, occultamento dei carichi, dispersione dei depositi e protezione delle arterie compaiono lungo le rotte colpite",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Four years update air war over ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/four-years-update-air-war-over-ukraine"
+          }
+        ]
+      },
+      {
+        "id": "F5-E023",
+        "livello": "confermato",
+        "titolo": "ma anche vecchi mezzi protagonisti della guerra fredda, come il semovente antiaereo tedesco Gepard contro piccoli UAV e Geran, o in impieghi più circoscritti, Yak-52 e altre piattaforme leggere o turboelica contro bersagli lenti",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Four years update air war over ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/four-years-update-air-war-over-ukraine"
+          }
+        ]
+      },
+      {
+        "id": "F5-E024",
+        "livello": "plausibile",
+        "titolo": "L'uso di velivoli a pistoni è documentato, ma la sua efficacia su scala resta plausibile e non conclusiva",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Four years update air war over ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/four-years-update-air-war-over-ukraine"
+          }
+        ]
+      },
+      {
+        "id": "F5-E025",
+        "livello": "confermato",
+        "titolo": "L'Ucraina rimane cronicamente corta di difesa antibalistica, e nel luglio 2026 l'elevato numero di missili balistici e la scarsità di intercettori Patriot hanno reso visibile il limite superiore dell'architettura",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Russia pounds kyiv with missiles 2026 07 31",
+            "url": "https://www.reuters.com/business/aerospace-defense/russia-pounds-kyiv-with-missiles-2026-07-31/"
+          }
+        ]
+      },
+      {
+        "id": "F5-E026",
+        "livello": "confermato",
+        "titolo": "Nel novembre 2025 ha annunciato la costituzione delle Forze dei Sistemi Senza Equipaggio, con comando dedicato e unità già formate",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Putin names head new russian drone forces military reshuffle 2026 08 05",
+            "url": "https://www.reuters.com/world/europe/putin-names-head-new-russian-drone-forces-military-reshuffle-2026-08-05/"
+          }
+        ]
+      },
+      {
+        "id": "F5-E027",
+        "livello": "plausibile",
+        "titolo": "Nello stesso periodo esemplari del V2U — una innovativa munizione circuitante/UAV russa — recuperati sul campo risultavano privi dei modem delle versioni precedenti e dotati di moduli di calcolo avanzati, compatibili con visione artificiale e navigazione senza collegamento continuo",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "How Russia Is Building a Sovereign Drone Ecosystem for AI-Driven Autonomy",
+            "data": "2026-04-13",
+            "url": "https://www.csis.org/analysis/how-russia-building-sovereign-drone-ecosystem-ai-driven-autonomy"
+          }
+        ]
+      },
+      {
+        "id": "F5-E028",
+        "livello": "non-verificato",
+        "titolo": "le ipotesi di coordinamento simile a uno sciame restano non dimostrate",
+        "motivazione": "Le fonti accessibili attestano la rivendicazione o il contesto, ma non rendono osservabile la catena completa necessaria a stabilirne la verità. Il grado attuale conserva correttamente l’incertezza; non va trasformato in fatto accertato.",
+        "fonti": [
+          {
+            "nome": "How Russia Is Building a Sovereign Drone Ecosystem for AI-Driven Autonomy",
+            "data": "2026-04-13",
+            "url": "https://www.csis.org/analysis/how-russia-building-sovereign-drone-ecosystem-ai-driven-autonomy"
+          }
+        ]
+      },
+      {
+        "id": "F5-E029",
+        "livello": "confermato",
+        "titolo": "Alla fine di giugno piccole unità russe risultavano infiltrate nelle periferie di Kostjantynivka, mentre la cintura fortificata del Donbas restava sotto pressione",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Ukrainian mid range strikes deal double blow russias war effort 2026 05 19",
+            "url": "https://www.reuters.com/business/aerospace-defense/ukrainian-mid-range-strikes-deal-double-blow-russias-war-effort-2026-05-19/"
+          }
+        ]
+      },
+      {
+        "id": "F5-E030",
+        "livello": "confermato",
+        "titolo": "nondimeno il fronte nel suo complesso resta largamente bloccato, i ritmi sono lenti e il costo umano e materiale è elevato",
+        "motivazione": "La proposizione è coerente con documentazione convergente e sufficientemente specifica. Poiché il testo canonico non conservava un collegamento puntuale, il registro integra la catena probatoria senza ampliare il significato dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Ukrainian mid range strikes deal double blow russias war effort 2026 05 19",
+            "url": "https://www.reuters.com/business/aerospace-defense/ukrainian-mid-range-strikes-deal-double-blow-russias-war-effort-2026-05-19/"
+          }
+        ]
+      },
+      {
+        "id": "F5-E031",
+        "livello": "plausibile",
+        "titolo": "Rallentamento, dispersione e necessità di difendere strade, impianti e convogli sono gli effetti già osservabili",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Ukrainian mid range strikes deal double blow russias war effort 2026 05 19",
+            "url": "https://www.reuters.com/business/aerospace-defense/ukrainian-mid-range-strikes-deal-double-blow-russias-war-effort-2026-05-19/"
+          },
+          {
+            "nome": "Four years update air war over ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/four-years-update-air-war-over-ukraine"
+          }
+        ]
+      }
+    ]
+  }
+}

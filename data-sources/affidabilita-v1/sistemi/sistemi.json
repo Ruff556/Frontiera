@@ -1,0 +1,650 @@
+{
+  "versione": 1,
+  "dataset": "sistemi",
+  "ambiti": {
+    "contenuti/schede/S1-Starlink.md": [
+      {
+        "id": "S1-E001",
+        "livello": "confermato",
+        "titolo": "Attacchi fisici, occupazione e perdita di energia investono contemporaneamente fibra, torri mobili e altri elementi della rete ucraina",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "ITU, Interim assessment on damages to telecommunication infrastructure in Ukraine, 2022",
+            "url": "https://www.itu.int/en/ITU-D/Regional-Presence/Europe/Documents/Interim%20assessment%20on%20damages%20to%20telecommunication%20infrastructure%20and%20resilience%20of%20the%20ICT%20ecosystem%20in%20Ukraine%20-2022-12-22_FINAL.pdf"
+          }
+        ]
+      },
+      {
+        "id": "S1-E002",
+        "livello": "confermato",
+        "titolo": "i primi kit arrivano visibilmente in Ucraina il 28 febbraio",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters, attivazione in Ucraina, 26 febbraio 2022",
+            "url": "https://www.reuters.com/technology/musk-says-starlink-active-ukraine-russian-invasion-disrupts-internet-2022-02-27/"
+          }
+        ]
+      },
+      {
+        "id": "S1-E003",
+        "livello": "confermato",
+        "titolo": "la distribuzione crescerà poi di un ordine di grandezza",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "USAID Office of Inspector General, Ukraine Response: USAID Did Not Fully Mitigate the Risk of Misuse of the Starlink Satellite Terminals It Delivered to Ukraine, 2025",
+            "url": "https://oig.usaid.gov/sites/default/files/2025-09/%5BREDACTED%5D%20Final%20Report%20-%20Inspection%20of%20USAID%27s%20Oversight%20of%20Starlink%20Terminals%20Delivered%20to%20Ukraine.pdf"
+          }
+        ]
+      },
+      {
+        "id": "S1-E004",
+        "livello": "plausibile",
+        "titolo": "RAND ricostruisce casi nei quali terminali venivano messi in servizio in meno di quindici minuti e il ciclo osservazione–ingaggio scendeva a trenta minuti o meno",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "USAID Office of Inspector General, Ukraine Response: USAID Did Not Fully Mitigate the Risk of Misuse of the Starlink Satellite Terminals It Delivered to Ukraine, 2025",
+            "url": "https://oig.usaid.gov/sites/default/files/2025-09/%5BREDACTED%5D%20Final%20Report%20-%20Inspection%20of%20USAID%27s%20Oversight%20of%20Starlink%20Terminals%20Delivered%20to%20Ukraine.pdf"
+          },
+          {
+            "nome": "RAND, Lessons from the War in Ukraine for Space, 2025",
+            "url": "https://www.rand.org/content/dam/rand/pubs/research_reports/RRA2900/RRA2950-1/RAND_RRA2950-1.pdf"
+          }
+        ]
+      },
+      {
+        "id": "S1-E005",
+        "livello": "confermato",
+        "titolo": "Durante le controffensive ucraine vengono segnalate interruzioni di Starlink in aree contestate, occupate o appena liberate",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters Investigates, presunto ordine di disattivazione del settembre 2022, 25 luglio 2025",
+            "url": "https://www.reuters.com/investigations/musk-ordered-shutdown-starlink-satellite-service-ukraine-retook-territory-russia-2025-07-25/"
+          }
+        ]
+      },
+      {
+        "id": "S1-E006",
+        "livello": "plausibile",
+        "titolo": "l'autore preciso della decisione, la sua estensione e il peso causale su specifiche operazioni restano contestati",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters Investigates, presunto ordine di disattivazione del settembre 2022, 25 luglio 2025",
+            "url": "https://www.reuters.com/investigations/musk-ordered-shutdown-starlink-satellite-service-ukraine-retook-territory-russia-2025-07-25/"
+          }
+        ]
+      },
+      {
+        "id": "S1-E007",
+        "livello": "confermato",
+        "titolo": "Musk rifiutò, dichiarando di temere un'escalation",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters, mancata attivazione su Sebastopoli, 8 settembre 2023",
+            "url": "https://www.reuters.com/world/europe/musk-says-he-refused-kyiv-request-use-starlink-attack-russia-2023-09-08/"
+          }
+        ]
+      },
+      {
+        "id": "S1-E008",
+        "livello": "confermato",
+        "titolo": "pochi mesi dopo il Dipartimento della Difesa statunitense stipula un contratto per servizi Starlink destinati all'Ucraina",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "USAID Office of Inspector General, Ukraine Response: USAID Did Not Fully Mitigate the Risk of Misuse of the Starlink Satellite Terminals It Delivered to Ukraine, 2025",
+            "url": "https://oig.usaid.gov/sites/default/files/2025-09/%5BREDACTED%5D%20Final%20Report%20-%20Inspection%20of%20USAID%27s%20Oversight%20of%20Starlink%20Terminals%20Delivered%20to%20Ukraine.pdf"
+          }
+        ]
+      },
+      {
+        "id": "S1-E009",
+        "livello": "plausibile",
+        "titolo": "le testimonianze convergono sull'impiego di guerra elettronica russa più potente e concentrata",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Ukrainska Pravda, disservizi durante l’offensiva di Kharkiv, 17 maggio 2024",
+            "url": "https://www.pravda.com.ua/eng/news/2024/05/17/7456272/"
+          },
+          {
+            "nome": "Consiglio dell’Unione europea, attribuzione dell’attacco a KA-SAT, 10 maggio 2022",
+            "url": "https://www.consilium.europa.eu/en/press/press-releases/2022/05/10/russian-cyber-operations-against-ukraine-declaration-by-the-high-representative-on-behalf-of-the-european-union/"
+          }
+        ]
+      },
+      {
+        "id": "S1-E010",
+        "livello": "plausibile",
+        "titolo": "Nel luglio 2026 comandanti e piloti ucraini descrivono a Reuters nuovi sforzi russi per disturbare i collegamenti impiegati da droni ucraini nella fascia intermedia",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Idrw617508072026rp1",
+            "url": "https://www.reuters.com/video/watch/idRW617508072026RP1/"
+          }
+        ]
+      },
+      {
+        "id": "S1-E011",
+        "livello": "confermato",
+        "titolo": "Dal 2024 l'intelligence ucraina documenta l'uso di terminali Starlink da parte di reparti russi nei territori occupati",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters, uso russo in territori occupati, 11 febbraio 2024",
+            "url": "https://www.reuters.com/world/europe/ukraines-military-intelligence-says-it-confirms-use-musks-starlink-by-russian-2024-02-11/"
+          }
+        ]
+      },
+      {
+        "id": "S1-E012",
+        "livello": "plausibile",
+        "titolo": "Le cifre e le catene d'acquisizione restano meno certe: terminali comprati tramite intermediari e Paesi terzi, account registrati altrove, materiale catturato o un insieme di questi canali possono permettere alla Russia di entrare nella stessa rete senza che SpaceX venda ufficialmente il servizio sul territorio russo",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters, uso russo in territori occupati, 11 febbraio 2024",
+            "url": "https://www.reuters.com/world/europe/ukraines-military-intelligence-says-it-confirms-use-musks-starlink-by-russian-2024-02-11/"
+          },
+          {
+            "nome": "Reuters, stima ucraina di migliaia di terminali russi, 15 febbraio 2024",
+            "url": "https://www.reuters.com/world/europe/russia-using-thousands-spacex-starlink-terminals-ukraine-wsj-says-2024-02-15/"
+          }
+        ]
+      },
+      {
+        "id": "S1-E013",
+        "livello": "confermato",
+        "titolo": "All'inizio del 2026 il problema sale ancora di grado: le autorità ucraine documentano terminali Starlink installati su droni d'attacco russi, usati per mantenere connettività a lunga distanza e controllo in tempo reale",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino, Resolving Starlink use on Russian UAVs, 29 gennaio 2026",
+            "url": "https://mod.gov.ua/en/news/the-ministry-of-defence-of-ukraine-and-space-x-are-resolving-the-issue-of-starlink-use-on-russian-ua-vs"
+          }
+        ]
+      },
+      {
+        "id": "S1-E014",
+        "livello": "confermato",
+        "titolo": "alcune missioni vengono rinviate e altre proseguono senza feed video",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters, outage globale e fronte ucraino, 25 luglio 2025",
+            "url": "https://www.reuters.com/business/media-telecom/ukraine-says-starlinks-global-outage-hit-its-military-communications-2025-07-25/"
+          }
+        ]
+      },
+      {
+        "id": "S1-E015",
+        "livello": "confermato",
+        "titolo": "il Ministero della Difesa ucraino organizza procedure differenziate per militari, civili e organizzazioni e aggiorna progressivamente l'elenco",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino — procedura di verifica Starlink e whitelist, febbraio 2026",
+            "url": "https://mod.gov.ua/en/news/how-to-complete-starlink-verification-the-ministry-of-defence-answers-the-most-frequently-asked-questions"
+          }
+        ]
+      },
+      {
+        "id": "S1-E016",
+        "livello": "plausibile",
+        "titolo": "fonti russe e indipendenti descrivono conseguenze sulle comunicazioni e su alcune operazioni",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters, stima ucraina di migliaia di terminali russi, 15 febbraio 2024",
+            "url": "https://www.reuters.com/world/europe/russia-using-thousands-spacex-starlink-terminals-ukraine-wsj-says-2024-02-15/"
+          },
+          {
+            "nome": "Consiglio dell’Unione europea, attribuzione dell’attacco a KA-SAT, 10 maggio 2022",
+            "url": "https://www.consilium.europa.eu/en/press/press-releases/2022/05/10/russian-cyber-operations-against-ukraine-declaration-by-the-high-representative-on-behalf-of-the-european-union/"
+          }
+        ]
+      },
+      {
+        "id": "S1-E017",
+        "livello": "confermato",
+        "titolo": "29.500 risultavano forniti dalla Polonia, il maggiore contributore singolo",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "USAID Office of Inspector General, Ukraine Response: USAID Did Not Fully Mitigate the Risk of Misuse of the Starlink Satellite Terminals It Delivered to Ukraine, 2025",
+            "url": "https://oig.usaid.gov/sites/default/files/2025-09/%5BREDACTED%5D%20Final%20Report%20-%20Inspection%20of%20USAID%27s%20Oversight%20of%20Starlink%20Terminals%20Delivered%20to%20Ukraine.pdf"
+          },
+          {
+            "nome": "Reuters, stima ucraina di migliaia di terminali russi, 15 febbraio 2024",
+            "url": "https://www.reuters.com/world/europe/russia-using-thousands-spacex-starlink-terminals-ukraine-wsj-says-2024-02-15/"
+          }
+        ]
+      },
+      {
+        "id": "S1-E018",
+        "livello": "plausibile",
+        "titolo": "Eutelsat OneWeb offre una seconda rete LEO — Low Earth Orbit — e nel 2026 ha presentato terminali militari più portatili, ma la sua presenza pubblicamente documentata non replica ancora la combinazione di scala installata, capacità e semplicità operativa raggiunta da Starlink in Ucraina",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Eutelsat, terminale OneWeb manpack, 12 febbraio 2026",
+            "url": "https://www.eutelsat.com/media-press/media-centre/news/eutelsat-and-intellian-introduce-first-leo-manpack-terminal"
+          }
+        ]
+      }
+    ],
+    "contenuti/schede/S2-Palantir.md": [
+      {
+        "id": "S2-E001",
+        "livello": "plausibile",
+        "titolo": "Il sistema si chiama PRISMA e le ricostruzioni pubbliche lo identificano come un’applicazione Palantir",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "UNITED24 Media, Inside Ukraine’s Palantir-Powered AI War Room, 1 giugno 2026",
+            "url": "https://united24media.com/war-in-ukraine/inside-ukraines-palantir-powered-ai-war-room-guiding-drone-strikes-deep-into-russia-19356"
+          }
+        ]
+      },
+      {
+        "id": "S2-E002",
+        "livello": "confermato",
+        "titolo": "La presidenza ucraina comunica che Palantir è pronta ad aprire un ufficio e a sviluppare soluzioni insieme a specialisti locali",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Presidenza ucraina, President of Ukraine and Palantir CEO discussed cooperation in the defense and security sector, 2 giugno 2022",
+            "url": "https://www.president.gov.ua/en/news/prezident-ukrayini-ta-seo-palantir-obgovorili-spivpracyu-v-s-75541"
+          }
+        ]
+      },
+      {
+        "id": "S2-E003",
+        "livello": "plausibile",
+        "titolo": "entro dicembre ricostruzioni giornalistiche descrivono software Palantir e MetaConstellation inseriti in catene di acquisizione dei bersagli",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters, Ukraine is using Palantir’s software for targeting, 1 febbraio 2023",
+            "url": "https://www.reuters.com/technology/ukraine-is-using-palantirs-software-targeting-ceo-says-2023-02-02/"
+          },
+          {
+            "nome": "Washington Post, How the algorithm tipped the balance in Ukraine, 19 dicembre 2022",
+            "url": "https://www.washingtonpost.com/opinions/2022/12/19/palantir-algorithm-data-ukraine-war/"
+          }
+        ]
+      },
+      {
+        "id": "S2-E004",
+        "livello": "non-verificato",
+        "titolo": "le fonti aperte non consentono di verificarne la quota",
+        "motivazione": "Le fonti accessibili attestano la rivendicazione o il contesto, ma non rendono osservabile la catena completa necessaria a stabilirne la verità. Il grado attuale conserva correttamente l’incertezza; non va trasformato in fatto accertato.",
+        "fonti": [
+          {
+            "nome": "Reuters, Ukraine is using Palantir’s software for targeting, 1 febbraio 2023",
+            "url": "https://www.reuters.com/technology/ukraine-is-using-palantirs-software-targeting-ceo-says-2023-02-02/"
+          }
+        ]
+      },
+      {
+        "id": "S2-E005",
+        "livello": "confermato",
+        "titolo": "Palantir stipula un accordo con l’Ufficio del Procuratore generale ucraino per collegare episodi, prove e unità russe nelle indagini sui crimini di guerra",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters, Data company Palantir to help Ukraine prosecute alleged Russian war crimes, 22 aprile 2023",
+            "url": "https://www.reuters.com/world/europe/data-company-palantir-help-ukraine-prosecute-alleged-russian-war-crimes-2023-04-22/"
+          }
+        ]
+      },
+      {
+        "id": "S2-E006",
+        "livello": "confermato",
+        "titolo": "Nello sminamento, dati sulla contaminazione, la popolazione, l’agricoltura, le infrastrutture e la disponibilità di squadre vengono combinati per proporre priorità e metodi",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Ministero dell’Economia ucraino, Automation of demining processes and the use of AI, 3 marzo 2024",
+            "url": "https://me.gov.ua/News/Detail/2e35612d-f83a-43af-bcd7-185b90c695c0?lang=en-GB&showMenuTree=true&title=AutomationOfDeminingProcessesAndTheUseOfAi-TheMinistryOfEconomySignsAPartnershipAgreementWithPalantir"
+          }
+        ]
+      },
+      {
+        "id": "S2-E007",
+        "livello": "confermato",
+        "titolo": "Il 12 maggio il ministro della Difesa Mykhailo Fedorov dichiara che la cooperazione con Palantir ha prodotto strumenti per l’analisi dettagliata degli attacchi aerei, il trattamento di grandi volumi d’intelligence e l’integrazione di tecnologie nella pianificazione degli attacchi in profondità",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters, Zelenskiy meets Palantir CEO as Ukraine expands use of AI in war, 12 maggio 2026",
+            "url": "https://www.reuters.com/world/europe/zelenskiy-meets-palantir-ceo-ukraine-expands-use-ai-war-2026-05-12/"
+          }
+        ]
+      },
+      {
+        "id": "S2-E008",
+        "livello": "plausibile",
+        "titolo": "Nelle settimane successive PRISMA viene osservata in un comando dell’intelligence militare dedicato agli attacchi con droni a lungo raggio",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters, Zelenskiy meets Palantir CEO as Ukraine expands use of AI in war, 12 maggio 2026",
+            "url": "https://www.reuters.com/world/europe/zelenskiy-meets-palantir-ceo-ukraine-expands-use-ai-war-2026-05-12/"
+          },
+          {
+            "nome": "Presidenza ucraina, President Met with CEO of Palantir, 12 maggio 2026",
+            "url": "https://www.president.gov.ua/en/news/prezident-zustrivsya-iz-ceo-kompaniyi-palantir-104349"
+          }
+        ]
+      },
+      {
+        "id": "S2-E009",
+        "livello": "confermato",
+        "titolo": "Nella stessa intervista attribuisce a Palantir una parte rilevante, ma parziale, del sistema ucraino: una quota ampia sarebbe stata costruita dagli stessi ucraini",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "UNITED24 Media",
+            "url": "https://united24media.com/interview/palantirs-ai-vision-meets-its-strongest-test-in-ukraine-interview-with-ceo-alex-karp-18727"
+          }
+        ]
+      },
+      {
+        "id": "S2-E010",
+        "livello": "confermato",
+        "titolo": "Il 21 gennaio 2026 il Ministero della Difesa, il Ministero della Trasformazione digitale, le Forze armate, un istituto di ricerca dell’intelligence militare e Palantir lanciano un ambiente protetto per addestrare, provare e validare modelli militari",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino",
+            "url": "https://mod.gov.ua/news/ponad-100-ukrainskykh-kompanii-uzhe-trenuiut-shi-na-danykh-brave1-dataroom"
+          }
+        ]
+      },
+      {
+        "id": "S2-E011",
+        "livello": "confermato",
+        "titolo": "Nel giugno 2026 il Ministero della Difesa ucraino dichiarava che più di cento aziende avevano già ottenuto accesso",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino",
+            "url": "https://mod.gov.ua/news/ponad-100-ukrainskykh-kompanii-uzhe-trenuiut-shi-na-danykh-brave1-dataroom"
+          }
+        ]
+      },
+      {
+        "id": "S2-E012",
+        "livello": "non-verificato",
+        "titolo": "configurazione, accessi amministrativi, condizioni contrattuali e portabilità completa non sono pubblicamente verificabili",
+        "motivazione": "Le fonti accessibili attestano la rivendicazione o il contesto, ma non rendono osservabile la catena completa necessaria a stabilirne la verità. Il grado attuale conserva correttamente l’incertezza; non va trasformato in fatto accertato.",
+        "fonti": [
+          {
+            "nome": "Presidenza ucraina, President Met with CEO of Palantir, 12 maggio 2026",
+            "url": "https://www.president.gov.ua/en/news/prezident-zustrivsya-iz-ceo-kompaniyi-palantir-104349"
+          }
+        ]
+      }
+    ],
+    "contenuti/schede/S3-Rassvet.md": [
+      {
+        "id": "S3-E001",
+        "livello": "confermato",
+        "titolo": "La missione si chiamava Rassvet-1 e la prova mostrò che una nuova impresa russa sapeva costruire il satellite, governarlo e trasmettere dati broadband con una latenza compatibile con una conversazione",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Bureau 1440, sito istituzionale e cronologia",
+            "url": "https://1440.space/en/"
+          }
+        ]
+      },
+      {
+        "id": "S3-E002",
+        "livello": "confermato",
+        "titolo": "nel 2026 Vladimir Putin ha collegato esplicitamente la costellazione al controllo satellitare dei droni",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Cremlino, Consiglio per lo sviluppo strategico, 6 giugno 2025",
+            "url": "https://special.kremlin.ru/catalog/keywords/76/events/77115"
+          }
+        ]
+      },
+      {
+        "id": "S3-E003",
+        "livello": "confermato",
+        "titolo": "Bureau 1440 dichiarò una connessione bidirezionale a 48 Mbit/s e 41 millisecondi durante le prove",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Bureau 1440, sito istituzionale e cronologia",
+            "url": "https://1440.space/en/"
+          }
+        ]
+      },
+      {
+        "id": "S3-E004",
+        "livello": "confermato",
+        "titolo": "Il 17 maggio 2024 altri tre apparati formarono Rassvet-2, con cui l’azienda sperimentò un collegamento laser intersatellitare a 10 Gbit/s e una connessione fra satellite e terminale basata sullo standard 5G NTN",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Bureau 1440, sito istituzionale e cronologia",
+            "url": "https://1440.space/en/"
+          }
+        ]
+      },
+      {
+        "id": "S3-E005",
+        "livello": "confermato",
+        "titolo": "un secondo lancio ne portò in orbita altri sedici il 19 luglio",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Interfax, secondo lancio RASSVET-3, 20 luglio 2026",
+            "url": "https://www.interfax.ru/russia/1104308"
+          }
+        ]
+      },
+      {
+        "id": "S3-E006",
+        "livello": "confermato",
+        "titolo": "gli altri occupavano quote molto diverse, così come la seconda serie, ancora attorno a 316–323 chilometri",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Bureau 1440, sito istituzionale e cronologia",
+            "url": "https://1440.space/en/"
+          }
+        ]
+      },
+      {
+        "id": "S3-E007",
+        "livello": "non-verificato",
+        "titolo": "Bureau 1440 continua a pubblicizzare una quota di progetto di 800 chilometri, ma non ha chiarito se gli apparati osservati stessero completando il trasferimento, eseguendo prove o anticipando una configurazione differente",
+        "motivazione": "Le fonti accessibili attestano la rivendicazione o il contesto, ma non rendono osservabile la catena completa necessaria a stabilirne la verità. Il grado attuale conserva correttamente l’incertezza; non va trasformato in fatto accertato.",
+        "fonti": [
+          {
+            "nome": "Bureau 1440, sito istituzionale e cronologia",
+            "url": "https://1440.space/en/"
+          }
+        ]
+      },
+      {
+        "id": "S3-E008",
+        "livello": "plausibile",
+        "titolo": "È una stima geometrica, non una misura della rete, e non può essere trasferita automaticamente sopra l’Ucraina",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "ComNews, costo e struttura della costellazione, 6 marzo 2025",
+            "data": "2025-03-06",
+            "url": "https://www.comnews.ru/content/238109/2025-03-06/2025-w10/1008/vice-premer-dmitriy-grigorenko-pereschital-sputniki-byuro-1440"
+          },
+          {
+            "nome": "ComNews, prezzi e clienti, 18 marzo 2025",
+            "data": "2025-03-18",
+            "url": "https://www.comnews.ru/content/238304/2025-03-18/2025-w12/1008/byuro-1440-rasschitalo-stoimost-uslug-dlya-zakazchikov"
+          }
+        ]
+      },
+      {
+        "id": "S3-E009",
+        "livello": "confermato",
+        "titolo": "Il programma federale russo prevede 292 satelliti attivi entro il 2027",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Ministero russo dello Sviluppo digitale, oltre 290 satelliti entro il 2027",
+            "url": "https://digital.gov.ru/news/ekonomika-dannyh-bolee-290-sputnikov-svyazi-planiruetsya-vyvesti-na-orbitu-k-konczu-2027-goda"
+          }
+        ]
+      },
+      {
+        "id": "S3-E010",
+        "livello": "non-verificato",
+        "titolo": "Bureau 1440 presenta questa configurazione come sufficiente alla copertura continuativa, ma la relazione fra numero e prestazione non è verificabile dai dati pubblici",
+        "motivazione": "Le fonti accessibili attestano la rivendicazione o il contesto, ma non rendono osservabile la catena completa necessaria a stabilirne la verità. Il grado attuale conserva correttamente l’incertezza; non va trasformato in fatto accertato.",
+        "fonti": [
+          {
+            "nome": "Ministero russo dello Sviluppo digitale, oltre 290 satelliti entro il 2027",
+            "url": "https://digital.gov.ru/news/ekonomika-dannyh-bolee-290-sputnikov-svyazi-planiruetsya-vyvesti-na-orbitu-k-konczu-2027-goda"
+          }
+        ]
+      },
+      {
+        "id": "S3-E011",
+        "livello": "non-verificato",
+        "titolo": "costo, consumo, robustezza e produzione seriale non sono pubblici",
+        "motivazione": "Le fonti accessibili attestano la rivendicazione o il contesto, ma non rendono osservabile la catena completa necessaria a stabilirne la verità. Il grado attuale conserva correttamente l’incertezza; non va trasformato in fatto accertato.",
+        "fonti": [
+          {
+            "nome": "Cremlino, Consiglio per lo sviluppo strategico, 6 giugno 2025",
+            "url": "https://special.kremlin.ru/catalog/keywords/76/events/77115"
+          }
+        ]
+      },
+      {
+        "id": "S3-E012",
+        "livello": "confermato",
+        "titolo": "Hardware acquistato attraverso intermediari e account registrati in Paesi terzi permisero a Mosca di usare una rete che SpaceX non vendeva ufficialmente in Russia",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino, terminali russi bloccati, 5 febbraio 2026",
+            "url": "https://mod.gov.ua/en/news/starlink-terminals-on-the-whitelist-remain-operational-while-russian-terminals-have-already-been-blocked"
+          }
+        ]
+      },
+      {
+        "id": "S3-E013",
+        "livello": "confermato",
+        "titolo": "il Ministero della Difesa ucraino dichiarò che quelli russi non autorizzati erano già stati bloccati",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino, terminali russi bloccati, 5 febbraio 2026",
+            "url": "https://mod.gov.ua/en/news/starlink-terminals-on-the-whitelist-remain-operational-while-russian-terminals-have-already-been-blocked"
+          }
+        ]
+      },
+      {
+        "id": "S3-E014",
+        "livello": "plausibile",
+        "titolo": "Fonti russe descrissero interruzioni importanti, ma la scala dell’effetto non è ricostruibile con inventari indipendenti",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino, terminali russi bloccati, 5 febbraio 2026",
+            "url": "https://mod.gov.ua/en/news/starlink-terminals-on-the-whitelist-remain-operational-while-russian-terminals-have-already-been-blocked"
+          },
+          {
+            "nome": "Ministero della Difesa ucraino, avvio della whitelist, 2 febbraio 2026",
+            "url": "https://mod.gov.ua/en/news/ukraine-rolls-out-starlink-terminal-verification-to-counter-russian-aerial-terror"
+          }
+        ]
+      },
+      {
+        "id": "S3-E015",
+        "livello": "confermato",
+        "titolo": "Le condizioni russe sulle frequenze prevedono inoltre che il traffico attraversi una stazione di accoppiamento nel Paese: la sovranità riguarda anche giurisdizione e osservabilità della rete",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Bureau 1440, sito istituzionale e cronologia",
+            "url": "https://1440.space/en/"
+          }
+        ]
+      },
+      {
+        "id": "S3-E016",
+        "livello": "confermato",
+        "titolo": "Nel giugno 2026 Putin ha indicato Bureau 1440 come risposta alla necessità di controllare droni pesanti via satellite e ha affermato che il sistema non sarebbe inferiore a Starlink",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Cremlino, Consiglio per lo sviluppo strategico, 6 giugno 2025",
+            "url": "https://special.kremlin.ru/catalog/keywords/76/events/77115"
+          }
+        ]
+      },
+      {
+        "id": "S3-E017",
+        "livello": "non-verificato",
+        "titolo": "Le fonti aperte mostrano finora un terminale da circa 15 kg, ma non consentono di stabilire se esistano soluzioni più leggere né se il terminale possa assolvere tutte queste funzioni in impiego operativo",
+        "motivazione": "La formulazione approvata rende autonoma la proposizione e delimita esplicitamente ciò che le fonti aperte non consentono di stabilire. La decisione editoriale è definitiva e recepita nel presente registro.",
+        "fonti": [
+          {
+            "nome": "Habr, prototipo di terminale, 24 gennaio 2025",
+            "url": "https://habr.com/ru/news/875750/"
+          }
+        ]
+      },
+      {
+        "id": "S3-E018",
+        "livello": "confermato",
+        "titolo": "Il 10 agosto il vicecapo dell’intelligence militare ucraina, Vadym Skibitskyi, ha dichiarato che Rassvet procedeva più rapidamente delle attese e poteva già fornire comunicazioni frammentarie durante i passaggi",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters, valutazione del GUR su Rassvet, 10 agosto 2026",
+            "url": "https://www.reuters.com/business/media-telecom/russia-rolling-out-starlink-style-network-faster-expected-kyiv-says-2026-08-10/"
+          }
+        ]
+      },
+      {
+        "id": "S3-E019",
+        "livello": "non-verificato",
+        "titolo": "Nessun aumento della continuità di comando, del controllo di droni o recupero della capacità perduta con la whitelist può essere attribuito alla rete",
+        "motivazione": "Le fonti accessibili attestano la rivendicazione o il contesto, ma non rendono osservabile la catena completa necessaria a stabilirne la verità. Il grado attuale conserva correttamente l’incertezza; non va trasformato in fatto accertato.",
+        "fonti": [
+          {
+            "nome": "Reuters, valutazione del GUR su Rassvet, 10 agosto 2026",
+            "url": "https://www.reuters.com/business/media-telecom/russia-rolling-out-starlink-style-network-faster-expected-kyiv-says-2026-08-10/"
+          }
+        ]
+      },
+      {
+        "id": "S3-E020",
+        "livello": "non-verificato",
+        "titolo": "Non esistono prove pubbliche di Rassvet sotto guerra elettronica ucraina",
+        "motivazione": "Le fonti accessibili attestano la rivendicazione o il contesto, ma non rendono osservabile la catena completa necessaria a stabilirne la verità. Il grado attuale conserva correttamente l’incertezza; non va trasformato in fatto accertato.",
+        "fonti": [
+          {
+            "nome": "Reuters, valutazione del GUR su Rassvet, 10 agosto 2026",
+            "url": "https://www.reuters.com/business/media-telecom/russia-rolling-out-starlink-style-network-faster-expected-kyiv-says-2026-08-10/"
+          }
+        ]
+      }
+    ]
+  }
+}

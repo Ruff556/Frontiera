@@ -1,0 +1,296 @@
+{
+  "versione": 1,
+  "dataset": "attualita",
+  "ambiti": {
+    "contenuti/analisi/Storm-Shadow-Ucraina-la-fabbrica-entra-nella-profondita.md": [
+      {
+        "id": "A2-E001",
+        "livello": "confermato",
+        "titolo": "È partito da un velivolo sovietico adattato per portarlo, ha attraversato la difesa russa a bassa quota e ha colpito bacini navali, posti di comando, infrastrutture militari e impianti dell’industria bellica",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters ricostruì l'attacco e i danni",
+            "url": "https://www.reuters.com/world/europe/ukraine-launches-missile-attack-sevastopol-crimea-russian-installed-governor-2023-09-13/"
+          },
+          {
+            "nome": "Zelenskiy says ukraines military hit key russian missile plant bryansk region 2026 03 10",
+            "url": "https://www.reuters.com/business/aerospace-defense/zelenskiy-says-ukraines-military-hit-key-russian-missile-plant-bryansk-region-2026-03-10/"
+          }
+        ]
+      },
+      {
+        "id": "A2-E002",
+        "livello": "confermato",
+        "titolo": "L’assenso completa sul versante britannico la dichiarazione franco-ucraina del 14 luglio, che prevede la produzione su licenza in Ucraina di AASM e SCALP, da avviare appena possibile ed entro la fine del 2026",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Governo britannico, autorizzazione sulle informazioni classificate e linee locali, 24 agosto 2026",
+            "url": "https://www.gov.uk/government/news/britain-is-100-behind-you-prime-minister-andy-burnham-visits-kyiv-on-ukrainian-independence-day-for-first-international-trip"
+          },
+          {
+            "nome": "Presidenza francese, dichiarazione congiunta Francia–Ucraina, 14 luglio 2026",
+            "url": "https://www.elysee.fr/en/emmanuel-macron/2026/07/14/joint-declaration-by-the-president-of-the-french-republic-and-the-president-of-ukraine"
+          }
+        ]
+      },
+      {
+        "id": "A2-E003",
+        "livello": "non-verificato",
+        "titolo": "Anche la profondità tecnica dell’assenso britannico è compartimentata",
+        "motivazione": "Le fonti accessibili attestano la rivendicazione o il contesto, ma non rendono osservabile la catena completa necessaria a stabilirne la verità. Il grado attuale conserva correttamente l’incertezza; non va trasformato in fatto accertato.",
+        "fonti": [
+          {
+            "nome": "Governo britannico, autorizzazione sulle informazioni classificate e linee locali, 24 agosto 2026",
+            "url": "https://www.gov.uk/government/news/britain-is-100-behind-you-prime-minister-andy-burnham-visits-kyiv-on-ukrainian-independence-day-for-first-international-trip"
+          }
+        ]
+      },
+      {
+        "id": "A2-E004",
+        "livello": "confermato",
+        "titolo": "Il profilo a bassa quota, la navigazione inerziale e satellitare assistita dal riferimento al terreno, il riconoscimento terminale a infrarossi e una testata penetrante a due stadi concorrono allo stesso compito: portare un effetto prevedibile dentro un bersaglio per il quale un errore di pochi metri può vanificare l’intera missione",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "MBDA, Storm Shadow / SCALP",
+            "url": "https://www.mbda-systems.com/products/deep-strike/storm-shadow-scalp"
+          }
+        ]
+      },
+      {
+        "id": "A2-E005",
+        "livello": "confermato",
+        "titolo": "Nel 2023 adattò i Su-24, velivoli concepiti in Unione Sovietica, a un’arma occidentale estranea alla loro architettura originaria",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Lanci da Su-24 e configurazioni con due missili",
+            "url": "https://militarnyi.com/en/news/how-russian-targets-are-destroyed-the-first-video-of-storm-shadow-launches-from-ukrainian-su-24s/"
+          }
+        ]
+      },
+      {
+        "id": "A2-E006",
+        "livello": "confermato",
+        "titolo": "Le immagini successive mostrarono i gravi danni alla nave da sbarco Minsk e al sottomarino Rostov-on-Don nel bacino di carenaggio",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters ricostruì l'attacco e i danni",
+            "url": "https://www.reuters.com/world/europe/ukraine-launches-missile-attack-sevastopol-crimea-russian-installed-governor-2023-09-13/"
+          },
+          {
+            "nome": "Quartier generale della Flotta a Sebastopoli",
+            "url": "https://www.reuters.com/world/europe/russian-official-says-ukraine-struck-black-sea-navy-hq-with-missile-2023-09-22/"
+          }
+        ]
+      },
+      {
+        "id": "A2-E007",
+        "livello": "plausibile",
+        "titolo": "l’arretramento della flotta appartiene all’effetto composito dell’intera campagna",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters ricostruì l'attacco e i danni",
+            "url": "https://www.reuters.com/world/europe/ukraine-launches-missile-attack-sevastopol-crimea-russian-installed-governor-2023-09-13/"
+          },
+          {
+            "nome": "Quartier generale della Flotta a Sebastopoli",
+            "url": "https://www.reuters.com/world/europe/russian-official-says-ukraine-struck-black-sea-navy-hq-with-missile-2023-09-22/"
+          }
+        ]
+      },
+      {
+        "id": "A2-E008",
+        "livello": "confermato",
+        "titolo": "Nel 2025 e nel 2026 Kyiv lo ha associato ad attacchi contro posti di comando e industria militare, compreso lo stabilimento microelettronico Kremniy El’ di Brjansk nel marzo 2026",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "20 novembre Reuters riferì",
+            "url": "https://www.reuters.com/world/europe/ukraine-fires-uk-storm-shadow-cruise-missiles-into-russia-day-after-using-us-2024-11-20/"
+          },
+          {
+            "nome": "Zelenskiy says ukraines military hit key russian missile plant bryansk region 2026 03 10",
+            "url": "https://www.reuters.com/business/aerospace-defense/zelenskiy-says-ukraines-military-hit-key-russian-missile-plant-bryansk-region-2026-03-10/"
+          }
+        ]
+      },
+      {
+        "id": "A2-E009",
+        "livello": "non-verificato",
+        "titolo": "Il regime attuale delle autorizzazioni geografiche, dei consensi sui bersagli e della partecipazione occidentale alla costruzione dei dati di missione conserva invece una zona opaca",
+        "motivazione": "Le fonti accessibili attestano la rivendicazione o il contesto, ma non rendono osservabile la catena completa necessaria a stabilirne la verità. Il grado attuale conserva correttamente l’incertezza; non va trasformato in fatto accertato.",
+        "fonti": [
+          {
+            "nome": "20 novembre Reuters riferì",
+            "url": "https://www.reuters.com/world/europe/ukraine-fires-uk-storm-shadow-cruise-missiles-into-russia-day-after-using-us-2024-11-20/"
+          },
+          {
+            "nome": "Zelenskiy says ukraines military hit key russian missile plant bryansk region 2026 03 10",
+            "url": "https://www.reuters.com/business/aerospace-defense/zelenskiy-says-ukraines-military-hit-key-russian-missile-plant-bryansk-region-2026-03-10/"
+          }
+        ]
+      },
+      {
+        "id": "A2-E010",
+        "livello": "confermato",
+        "titolo": "Le autorità ucraine ne confermano la produzione seriale e l’impiego reiterato",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino, risultati deep strike con FP-5, 9 marzo 2026",
+            "url": "https://mod.gov.ua/en/news/since-the-start-of-the-year-ukraine-s-defense-forces-have-struck-three-major-russian-military-plants-two-arsenals-and-a-key-test-range"
+          },
+          {
+            "nome": "Reuters, Fire Point: produzione e colli di bottiglia, 6 aprile 2026",
+            "url": "https://www.reuters.com/business/aerospace-defense/ukraine-missile-maker-targets-game-changer-air-defence-system-by-2027-2026-04-06/"
+          }
+        ]
+      },
+      {
+        "id": "A2-E011",
+        "livello": "non-verificato",
+        "titolo": "in luglio parlava di circa cento al mese",
+        "motivazione": "La cifra di circa cento al mese resta una dichiarazione non corroborata da serie produttive o d’impiego indipendenti. La decisione editoriale è definitiva e recepita nel presente registro.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino, risultati deep strike con FP-5, 9 marzo 2026",
+            "url": "https://mod.gov.ua/en/news/since-the-start-of-the-year-ukraine-s-defense-forces-have-struck-three-major-russian-military-plants-two-arsenals-and-a-key-test-range"
+          },
+          {
+            "nome": "Reuters, Fire Point: produzione e colli di bottiglia, 6 aprile 2026",
+            "url": "https://www.reuters.com/business/aerospace-defense/ukraine-missile-maker-targets-game-changer-air-defence-system-by-2027-2026-04-06/"
+          }
+        ]
+      },
+      {
+        "id": "A2-E012",
+        "livello": "plausibile",
+        "titolo": "Il motore figurava ancora fra i colli di bottiglia",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino, risultati deep strike con FP-5, 9 marzo 2026",
+            "url": "https://mod.gov.ua/en/news/since-the-start-of-the-year-ukraine-s-defense-forces-have-struck-three-major-russian-military-plants-two-arsenals-and-a-key-test-range"
+          },
+          {
+            "nome": "Reuters, Fire Point: produzione e colli di bottiglia, 6 aprile 2026",
+            "url": "https://www.reuters.com/business/aerospace-defense/ukraine-missile-maker-targets-game-changer-air-defence-system-by-2027-2026-04-06/"
+          }
+        ]
+      },
+      {
+        "id": "A2-E013",
+        "livello": "confermato",
+        "titolo": "Il comandante delle Forze dei sistemi senza equipaggio, Robert Brovdi, ha presentato questa pressione come apertura di corridoi per i colpi più profondi",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters, campagna ucraina di media profondità, 5 maggio 2026",
+            "url": "https://www.reuters.com/world/europe/ukraine-steps-up-medium-range-strikes-russian-forces-2026-05-05/"
+          }
+        ]
+      },
+      {
+        "id": "A2-E014",
+        "livello": "non-verificato",
+        "titolo": "la chiusura del ciclo, bersaglio dopo bersaglio, sfugge alle fonti aperte",
+        "motivazione": "Le fonti accessibili attestano la rivendicazione o il contesto, ma non rendono osservabile la catena completa necessaria a stabilirne la verità. Il grado attuale conserva correttamente l’incertezza; non va trasformato in fatto accertato.",
+        "fonti": [
+          {
+            "nome": "Reuters, campagna ucraina di media profondità, 5 maggio 2026",
+            "url": "https://www.reuters.com/world/europe/ukraine-steps-up-medium-range-strikes-russian-forces-2026-05-05/"
+          }
+        ]
+      },
+      {
+        "id": "A2-E015",
+        "livello": "plausibile",
+        "titolo": "Si può dunque parlare di un’architettura emergente e parzialmente coordinata",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Governo britannico, autorizzazione sulle informazioni classificate e linee locali, 24 agosto 2026",
+            "url": "https://www.gov.uk/government/news/britain-is-100-behind-you-prime-minister-andy-burnham-visits-kyiv-on-ukrainian-independence-day-for-first-international-trip"
+          },
+          {
+            "nome": "MBDA, Storm Shadow / SCALP",
+            "url": "https://www.mbda-systems.com/products/deep-strike/storm-shadow-scalp"
+          }
+        ]
+      },
+      {
+        "id": "A2-E016",
+        "livello": "confermato",
+        "titolo": "L’adattamento dei Su-24 e lo sviluppo di un portafoglio nazionale eterogeneo lo dimostrano",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino, risultati deep strike con FP-5, 9 marzo 2026",
+            "url": "https://mod.gov.ua/en/news/since-the-start-of-the-year-ukraine-s-defense-forces-have-struck-three-major-russian-military-plants-two-arsenals-and-a-key-test-range"
+          }
+        ]
+      },
+      {
+        "id": "A2-E017",
+        "livello": "plausibile",
+        "titolo": "Quanto di questo lavoro sarà ucraino dipenderà dalla ripartizione ancora riservata",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino, risultati deep strike con FP-5, 9 marzo 2026",
+            "url": "https://mod.gov.ua/en/news/since-the-start-of-the-year-ukraine-s-defense-forces-have-struck-three-major-russian-military-plants-two-arsenals-and-a-key-test-range"
+          },
+          {
+            "nome": "Presidenza francese, dichiarazione congiunta Francia–Ucraina, 14 luglio 2026",
+            "url": "https://www.elysee.fr/en/emmanuel-macron/2026/07/14/joint-declaration-by-the-president-of-the-french-republic-and-the-president-of-ukraine"
+          }
+        ]
+      },
+      {
+        "id": "A2-E018",
+        "livello": "plausibile",
+        "titolo": "Nel febbraio 2026 due grandi officine furono distrutte e la produzione di Flamingo subì un ritardo temporaneo",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Kyiv Independent",
+            "url": "https://kyivindependent.com/russian-strike-temporarily-delayed-production-of-ukraines-flamingo-missiles-zelensky-says/"
+          }
+        ]
+      },
+      {
+        "id": "A2-E019",
+        "livello": "confermato",
+        "titolo": "Qui il ciclo è intero e documentato: tecnologia britannica, prova ucraina, esperienza del campo, produzione in Ucraina, ritorno nella capacità britannica",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Governo britannico, Stone Cloak, 26 luglio 2026",
+            "url": "https://www.gov.uk/government/news/unbreakable-bond-between-uk-and-ukraine-will-continue-under-my-government-26-july-2026"
+          }
+        ]
+      },
+      {
+        "id": "A2-E020",
+        "livello": "plausibile",
+        "titolo": "La base industriale comincia comunque a condividere processi, problemi e tempi",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "MBDA–Luch, NEPTUNE2",
+            "url": "https://www.mbda-systems.com/mbda-develop-neptune2-cruise-missile-luch"
+          },
+          {
+            "nome": "Governo britannico, Stone Cloak, 26 luglio 2026",
+            "url": "https://www.gov.uk/government/news/unbreakable-bond-between-uk-and-ukraine-will-continue-under-my-government-26-july-2026"
+          }
+        ]
+      }
+    ]
+  }
+}

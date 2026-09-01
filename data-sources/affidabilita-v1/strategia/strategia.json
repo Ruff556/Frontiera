@@ -1,0 +1,196 @@
+{
+  "versione": 1,
+  "dataset": "strategia",
+  "ambiti": {
+    "contenuti/analisi/capacita-residua-bombardamento.md": [
+      {
+        "id": "STR1-E001",
+        "livello": "confermato",
+        "titolo": "La dottrina statunitense più recente include infatti nello strategic attack anche capacità non cinetiche e sistemi senza equipaggio di fascia bassa, purché siano ordinati a un effetto strategico (US Air Force, AFDP 3-02 Strategic Attack)",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "US Air Force, AFDP 3-02 Strategic Attack",
+            "url": "https://www.doctrine.af.mil/Portals/61/documents/AFDP_3-02/AFDP_3-02_Strategic_Attack.pdf"
+          }
+        ]
+      },
+      {
+        "id": "STR1-E002",
+        "livello": "confermato",
+        "titolo": "Lo United States Strategic Bombing Survey attribuì agli attacchi contro petrolio e trasporti un contributo importante alla vittoria in Europa, ma registrò anche produzioni proseguite o cresciute sotto le bombe e risultati inseparabili dal collasso militare complessivo (Air University, The United States Strategic Bombing Surveys)",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Air University, The United States Strategic Bombing Surveys",
+            "url": "https://www.airuniversity.af.edu/Portals/10/AUPress/Books/B_0020_SPANGRUD_STRATEGIC_BOMBING_SURVEYS.pdf"
+          }
+        ]
+      },
+      {
+        "id": "STR1-E003",
+        "livello": "confermato",
+        "titolo": "contro la profondità nazionale si consolida l’attacco a distanza (RUSI, Four Years On: An Update on the Air War over Ukraine)",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "RUSI, Four Years On: An Update on the Air War over Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/four-years-update-air-war-over-ukraine"
+          }
+        ]
+      },
+      {
+        "id": "STR1-E004",
+        "livello": "confermato",
+        "titolo": "Il ruolo portamissili dei bombardieri russi precede la guerra: il Kh-55 costituiva già l’armamento principale del Tu-95MS e del Tu-160, mentre Kh-101 e Kh-102 ne proseguivano la linea (Defense Intelligence Agency, Russia Military Power)",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Defense Intelligence Agency, Russia Military Power",
+            "url": "https://www.dia.mil/Portals/110/Images/News/Military_Powers_Publications/Russia_Military_Power_Report_2017.pdf"
+          }
+        ]
+      },
+      {
+        "id": "STR1-E005",
+        "livello": "confermato",
+        "titolo": "A Mariupol, nell’aprile 2022, bombardieri a lungo raggio furono impiegati con bombe non guidate contro il complesso di Azovstal (Reuters, 15 aprile 2022)",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters, 15 aprile 2022",
+            "url": "https://www.reuters.com/world/europe/ukraine-says-russia-used-long-range-bombers-mariupol-1st-time-war-2022-04-15/"
+          }
+        ]
+      },
+      {
+        "id": "STR1-E006",
+        "livello": "confermato",
+        "titolo": "Per questo le ondate russe del 2025–2026 combinano Geran, esche Gerbera, missili aviolanciati, vettori terrestri e una quota balistica: non scelgono un vincitore fra famiglie, assegnano loro compiti complementari",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "RUSI, Four Years On: An Update on the Air War over Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/four-years-update-air-war-over-ukraine"
+          }
+        ]
+      },
+      {
+        "id": "STR1-E007",
+        "livello": "confermato",
+        "titolo": "Mosca ammette vittime e danni limitati ai velivoli (Reuters, 5 dicembre 2022)",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters, 5 dicembre 2022",
+            "url": "https://www.reuters.com/world/europe/three-killed-fuel-tanker-explosion-russian-airfield-2022-12-05/"
+          }
+        ]
+      },
+      {
+        "id": "STR1-E008",
+        "livello": "confermato",
+        "titolo": "Nel marzo 2025 un nuovo attacco contro Engels provoca esplosioni secondarie nell’area della base (Reuters, 20 marzo 2025)",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters, 20 marzo 2025",
+            "url": "https://www.reuters.com/world/europe/ukraine-attacked-airfield-near-engels-strategic-bomber-base-russian-officials-2025-03-20/"
+          }
+        ]
+      },
+      {
+        "id": "STR1-E009",
+        "livello": "plausibile",
+        "titolo": "valutazioni esterne collocano intorno a dieci–dodici i bombardieri distrutti, mentre il totale degli aerei danneggiati resta conteso (Reuters Graphics, 5 giugno 2025)",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters Graphics, 5 giugno 2025",
+            "url": "https://www.reuters.com/graphics/UKRAINE-CRISIS/DRONES-RUSSIA/mypmjzayyvr/"
+          }
+        ]
+      },
+      {
+        "id": "STR1-E010",
+        "livello": "confermato",
+        "titolo": "L’effetto funzionale è più ristretto: la Russia continua a lanciare Kh-101 e non esiste una serie pubblica capace di attribuire al raid una riduzione stabile del ritmo delle salve",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters Graphics, 5 giugno 2025",
+            "url": "https://www.reuters.com/graphics/UKRAINE-CRISIS/DRONES-RUSSIA/mypmjzayyvr/"
+          },
+          {
+            "nome": "RUSI, Four Years On: An Update on the Air War over Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/four-years-update-air-war-over-ukraine"
+          }
+        ]
+      },
+      {
+        "id": "STR1-E011",
+        "livello": "plausibile",
+        "titolo": "Dispersione, maggiore separazione fra velivoli e munizioni, protezione ravvicinata e controlli sulla logistica civile rendono la rigenerazione più complessa e costosa",
+        "motivazione": "Le fonti sostengono le premesse fattuali e rendono la ricostruzione compatibile con l’evidenza disponibile, senza isolare integralmente il nesso causale, la quantità o la catena operativa. Il grado plausibile è quindi adeguato.",
+        "fonti": [
+          {
+            "nome": "Reuters Graphics, 5 giugno 2025",
+            "url": "https://www.reuters.com/graphics/UKRAINE-CRISIS/DRONES-RUSSIA/mypmjzayyvr/"
+          }
+        ]
+      },
+      {
+        "id": "STR1-E012",
+        "livello": "confermato",
+        "titolo": "La GBU-57 pesa circa 30.000 libbre e, nella configurazione operativa disponibile, può essere impiegata soltanto dal B-2 (Dipartimento della Difesa, 26 giugno 2025)",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "Dipartimento della Difesa, 26 giugno 2025",
+            "url": "https://www.defense.gov/News/Transcripts/Transcript/article/4227366/defense-secretary-pete-hegseth-and-joint-chiefs-of-staff-chairman-gen-dan-caine/"
+          }
+        ]
+      },
+      {
+        "id": "STR1-E013",
+        "livello": "confermato",
+        "titolo": "388th Fighter Wing)",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "LeMay Center, Doctrine Paragon — Operation Midnight Hammer",
+            "url": "https://www.doctrine.af.mil/Portals/61/Jul-25-Doctrine%20Paragon-Operation%20Midnight%20Hammer.pdf"
+          },
+          {
+            "nome": "388th Fighter Wing",
+            "url": "https://www.388fw.acc.af.mil/News/Article-Display/Article/4341061/388th-fw-pilots-f-35s-paved-the-way-for-midnight-hammer-strike/"
+          }
+        ]
+      },
+      {
+        "id": "STR1-E014",
+        "livello": "confermato",
+        "titolo": "La missione colpisce i siti designati senza perdite statunitensi osservate e produce danni fisici gravi",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "LeMay Center, Doctrine Paragon — Operation Midnight Hammer",
+            "url": "https://www.doctrine.af.mil/Portals/61/Jul-25-Doctrine%20Paragon-Operation%20Midnight%20Hammer.pdf"
+          }
+        ]
+      },
+      {
+        "id": "STR1-E015",
+        "livello": "confermato",
+        "titolo": "la stessa Air Force mantiene aperto il giudizio sull’obiettivo strategico di lungo periodo",
+        "motivazione": "La fonte associata copre il nucleo fattuale nella stessa estensione dell’ancora. Eventuali dichiarazioni di parte sono trattate come prova della dichiarazione, non automaticamente della sua verità; il grado confermato resta adeguato.",
+        "fonti": [
+          {
+            "nome": "LeMay Center, Doctrine Paragon — Operation Midnight Hammer",
+            "url": "https://www.doctrine.af.mil/Portals/61/Jul-25-Doctrine%20Paragon-Operation%20Midnight%20Hammer.pdf"
+          }
+        ]
+      }
+    ]
+  }
+}
