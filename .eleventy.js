@@ -224,6 +224,7 @@ module.exports = function (eleventyConfig) {
   // Documentazione e rapporti tecnici: restano nel repository, non nel sito pubblico.
   eleventyConfig.ignores.add("docs/**");
   eleventyConfig.ignores.add("reports/**");
+  eleventyConfig.ignores.add("Report-migrazione-epistemica-Tranche-B.md");
 
   // L'archivio Sistemi non è più una pagina pubblica. Eleventy non pulisce
   // automaticamente l'output fra due build: rimuoviamo quindi soltanto la

@@ -8,7 +8,7 @@ const LIVELLI = Object.freeze({
   disinformazione: Object.freeze({ classe: "disinfo", etichetta: "Probabile disinformazione" }),
 });
 
-const ID_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const ID_RE = /^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$/;
 const DATA_RE = /^\d{4}-\d{2}-\d{2}$/;
 const CAMPI_SIDECAR = new Set(["versione", "dataset", "ambiti"]);
 const CAMPI_RECORD = new Set(["id", "livello", "titolo", "motivazione", "fonti"]);
