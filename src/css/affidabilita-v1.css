@@ -82,12 +82,13 @@
 }
 
 .aff-v1-panel{
+  --aff-v1-max-height:30rem;
   position:absolute;
   z-index:47;
   display:flex;
   width:20rem;
   max-width:calc(100vw - 2rem);
-  max-height:var(--aff-v1-available-height,32rem);
+  max-height:var(--aff-v1-max-height);
   flex-direction:column;
   overflow:hidden;
   color:var(--text);
@@ -267,6 +268,7 @@
 
 @media(max-width:919px){
   .aff-v1-panel{
+    --aff-v1-max-height:23.75rem;
     width:calc(100vw - 3rem);
     max-width:20rem;
     border-radius:var(--r-md);

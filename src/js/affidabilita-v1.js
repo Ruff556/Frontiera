@@ -123,20 +123,10 @@
     const viewRight = vv.left + vv.width;
     const viewBottom = vv.top + vv.height;
     const panelWidth = larghezzaPanel(vv, mobile);
-    const limiteBase = mobile ? Math.min(380, vv.height * .56) : Math.min(480, vv.height * .72);
 
     panel.dataset.affV1Measuring = "true";
     panel.style.width = `${panelWidth}px`;
-    panel.style.setProperty("--aff-v1-available-height", `${Math.max(144, limiteBase)}px`);
-    let panelRect = panel.getBoundingClientRect();
-
-    const spazioSopra = anchorRect.top - vv.top;
-    const altezzaDisponibile = Math.max(
-      144,
-      Math.min(limiteBase, spazioSopra - COSTANTI.gap - COSTANTI.safe)
-    );
-    panel.style.setProperty("--aff-v1-available-height", `${altezzaDisponibile}px`);
-    panelRect = panel.getBoundingClientRect();
+    const panelRect = panel.getBoundingClientRect();
 
     let x;
     if (mobile) {

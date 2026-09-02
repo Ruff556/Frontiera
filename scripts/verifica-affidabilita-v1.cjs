@@ -102,6 +102,9 @@ function verificaContrattiClient() {
   verifica("client: placement verticale ABOVE-only", /anchorRect\.top - panelRect\.height - COSTANTI\.gap/.test(js));
   verifica("client: macchina ABOVE\/BELOW rimossa", !/\b(?:below|scegliVerticale|isteresi)\b/i.test(js));
   verifica("shell: attributo verticale legacy rimosso", !/data-verticale\s*=|\bbelow\b/i.test(partial));
+  verifica("client: altezza content-driven", !/aff-v1-available-height|limiteBase|spazioSopra/i.test(js));
+  verifica("CSS: max-height responsive fisso", /--aff-v1-max-height:30rem/.test(css) && /--aff-v1-max-height:23\.75rem/.test(css));
+  verifica("CSS: variabile altezza viewport rimossa", !/aff-v1-available-height/.test(css));
   verifica("client: nessun body lock", !/document\.body\.style\.(?:overflow|position)|classList\.(?:add|toggle)\([^\n]*(?:lock|modal)/i.test(js));
   verifica("shell: aside non modale", /<aside\b/.test(partial) && !/<dialog\b|aria-modal|backdrop/i.test(partial));
   verifica("legacy: shortcode aff conservato", /addShortcode\("aff"/.test(eleventy));
