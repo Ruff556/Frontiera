@@ -99,6 +99,9 @@ function verificaContrattiClient() {
   verifica("client: aggiornamenti coordinati con rAF", /requestAnimationFrame/.test(js));
   verifica("client: ResizeObserver previsto", /ResizeObserver/.test(js));
   verifica("client: visualViewport previsto", /visualViewport/.test(js));
+  verifica("client: placement verticale ABOVE-only", /anchorRect\.top - panelRect\.height - COSTANTI\.gap/.test(js));
+  verifica("client: macchina ABOVE\/BELOW rimossa", !/\b(?:below|scegliVerticale|isteresi)\b/i.test(js));
+  verifica("shell: attributo verticale legacy rimosso", !/data-verticale\s*=|\bbelow\b/i.test(partial));
   verifica("client: nessun body lock", !/document\.body\.style\.(?:overflow|position)|classList\.(?:add|toggle)\([^\n]*(?:lock|modal)/i.test(js));
   verifica("shell: aside non modale", /<aside\b/.test(partial) && !/<dialog\b|aria-modal|backdrop/i.test(partial));
   verifica("legacy: shortcode aff conservato", /addShortcode\("aff"/.test(eleventy));

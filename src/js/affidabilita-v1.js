@@ -14,7 +14,6 @@
   const COSTANTI = Object.freeze({
     gap: 8,
     safe: 16,
-    isteresi: 24,
     sogliaTap: 12,
     larghezzaDesktop: 320,
     rientroMobile: 12,
@@ -22,7 +21,6 @@
   const state = {
     anchor: null,
     record: null,
-    verticale: "below",
     orizzontale: "left",
     mobile: mediaMobile.matches,
     frame: 0,
@@ -110,18 +108,6 @@
     );
   }
 
-  function scegliVerticale(spazioSotto, spazioSopra, altezza) {
-    const richiesto = altezza + COSTANTI.gap + COSTANTI.safe;
-    if (state.verticale === "above") {
-      if (spazioSotto >= richiesto + COSTANTI.isteresi) return "below";
-      if (spazioSopra >= richiesto || spazioSopra >= spazioSotto) return "above";
-      return "below";
-    }
-    if (spazioSotto >= richiesto) return "below";
-    if (spazioSopra > spazioSotto + COSTANTI.isteresi) return "above";
-    return "below";
-  }
-
   function posiziona() {
     state.frame = 0;
     if (!state.anchor || panel.hidden) return;
@@ -144,13 +130,10 @@
     panel.style.setProperty("--aff-v1-available-height", `${Math.max(144, limiteBase)}px`);
     let panelRect = panel.getBoundingClientRect();
 
-    const spazioSotto = viewBottom - anchorRect.bottom;
     const spazioSopra = anchorRect.top - vv.top;
-    state.verticale = scegliVerticale(spazioSotto, spazioSopra, panelRect.height);
-    const spazioScelto = state.verticale === "below" ? spazioSotto : spazioSopra;
     const altezzaDisponibile = Math.max(
       144,
-      Math.min(limiteBase, spazioScelto - COSTANTI.gap - COSTANTI.safe)
+      Math.min(limiteBase, spazioSopra - COSTANTI.gap - COSTANTI.safe)
     );
     panel.style.setProperty("--aff-v1-available-height", `${altezzaDisponibile}px`);
     panelRect = panel.getBoundingClientRect();
@@ -173,13 +156,10 @@
       x = Math.max(safeLeft, Math.min(x, safeRight - panelRect.width));
     }
 
-    const y = state.verticale === "below"
-      ? window.scrollY + anchorRect.bottom + COSTANTI.gap
-      : window.scrollY + anchorRect.top - panelRect.height - COSTANTI.gap;
+    const y = window.scrollY + anchorRect.top - panelRect.height - COSTANTI.gap;
 
     panel.style.left = `${Math.round(x)}px`;
     panel.style.top = `${Math.round(y)}px`;
-    panel.dataset.verticale = state.verticale;
     panel.dataset.orizzontale = state.orizzontale;
 
     const anchorVisibile =
@@ -231,7 +211,6 @@
     state.anchor = anchor;
     state.record = record;
     state.mobile = mediaMobile.matches;
-    state.verticale = "below";
     state.orizzontale = state.mobile ? "centered" : "left";
     anchor.setAttribute("aria-expanded", "true");
     popola(record);
