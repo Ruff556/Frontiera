@@ -1,7 +1,7 @@
 # Infobox: contratto editoriale
 
-Ogni famiglia editoriale può usare uno dei tre formati dichiarando `infobox.tipo`
-come numero YAML (`1`, `2` o `3`). Un tipo dichiarato ma invalido interrompe la
+Ogni famiglia editoriale può usare uno dei quattro formati dichiarando `infobox.tipo`
+come numero YAML (`1`, `2`, `3` o `4`). Un tipo dichiarato ma invalido interrompe la
 build con il percorso del sorgente. Il vecchio payload con `infobox.voci` privo di
 `tipo` resta temporaneamente interpretato come tipo 2; non va usato nei nuovi contenuti.
 
@@ -69,6 +69,33 @@ infobox:
 `titolo` generale è facoltativo. `gruppi` deve contenere almeno un gruppo; ogni
 gruppo richiede titolo e almeno una voce; ogni voce richiede nome e descrizione.
 Accenti e alternanze cromatiche sono automatici e non fanno parte del front matter.
+
+## Tipo 4 — Contatti
+
+Pannello verticale istituzionale per i recapiti pubblici di Frontiera. L’immagine
+è un percorso locale; l’indirizzo email deve avere testo e `mailto:` corrispondenti.
+Il profilo X è facoltativo soltanto finché non è disponibile un handle definitivo;
+quando viene dichiarato, richiede entrambi i campi e un handle coerente con l’URL.
+
+```yaml
+infobox:
+  tipo: 4
+  titolo: "Contatti"
+  immagine: "/favicon-256x256.png"
+  email:
+    testo: "frontiera.redazione@gmail.com"
+    href: "mailto:frontiera.redazione@gmail.com"
+  x:
+    testo: "@HANDLE"
+    href: "https://x.com/HANDLE"
+```
+
+Sono ammessi soltanto `tipo`, `titolo`, `immagine`, `email` e `x`. Sono obbligatori
+`tipo`, `titolo`, `immagine`, `email.testo` e `email.href`; se presente, `x` deve
+contenere obbligatoriamente `testo` e `href`. Nel rendering l’immagine precede il
+divisore principale, il titolo, l’email e — quando disponibile — il divisore minore
+seguito dal collegamento X. Il richiamo e il dialogo mobile restano automatici e
+usano lo stesso nodo del dispatcher condiviso.
 
 ## Verifica
 

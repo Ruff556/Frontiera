@@ -1,0 +1,24 @@
+{% macro infoboxTipo4(modello) %}
+<div class="analisi-info infobox-panel infobox-panel--tipo-4 scrollable-infobox" data-infobox-tipo="4" tabindex="0">
+  <div class="infobox-contact-image">
+    <img src="{{ modello.immagine }}" alt="" aria-hidden="true" width="256" height="256" decoding="async">
+  </div>
+  <div class="infobox-contact-divider infobox-contact-divider--primary" aria-hidden="true"></div>
+  <h2 class="analisi-info-title infobox-contact-title">{{ modello.titolo }}</h2>
+
+  <div class="infobox-contact-list">
+    <section class="infobox-contact-item">
+      <span class="infobox-contact-label">Email</span>
+      <a class="infobox-contact-link" href="{{ modello.email.href }}">{{ modello.email.testo }}</a>
+    </section>
+
+    {% if modello.x %}
+      <div class="infobox-contact-divider infobox-contact-divider--minor" aria-hidden="true"></div>
+      <section class="infobox-contact-item">
+        <span class="infobox-contact-label">X</span>
+        <a class="infobox-contact-link" href="{{ modello.x.href }}">{{ modello.x.testo }}</a>
+      </section>
+    {% endif %}
+  </div>
+</div>
+{% endmacro %}

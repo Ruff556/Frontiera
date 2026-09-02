@@ -49,6 +49,34 @@ const type3 = normalize({
 assert.equal(type3.gruppi.length, 2);
 assert.equal(type3.gruppi[1].voci.length, 2);
 
+const type4 = normalize({
+  infobox: {
+    tipo: 4,
+    titolo: "Contatti",
+    immagine: "/favicon-256x256.png",
+    email: { testo: "frontiera.redazione@gmail.com", href: "mailto:frontiera.redazione@gmail.com" },
+    x: { testo: "@HANDLE", href: "https://x.com/HANDLE" },
+  },
+});
+assert.equal(type4.tipo, 4);
+assert.equal(type4.titolo, "Contatti");
+assert.equal(type4.immagine, "/favicon-256x256.png");
+assert.deepEqual(type4.email, {
+  testo: "frontiera.redazione@gmail.com",
+  href: "mailto:frontiera.redazione@gmail.com",
+});
+assert.deepEqual(type4.x, { testo: "@HANDLE", href: "https://x.com/HANDLE" });
+
+const type4WithoutX = normalize({
+  infobox: {
+    tipo: 4,
+    titolo: "Contatti",
+    immagine: "/favicon-256x256.png",
+    email: { testo: "frontiera.redazione@gmail.com", href: "mailto:frontiera.redazione@gmail.com" },
+  },
+});
+assert.equal(type4WithoutX.x, undefined, "un handle X assente non deve essere inventato");
+
 const legacySpecifiche = normalize({ specifiche: { Rete: "Distribuita", Stato: "" } });
 assert.equal(legacySpecifiche.tipo, 2);
 assert.equal(legacySpecifiche.voci[1].testo, "— (segnaposto)");
@@ -57,17 +85,21 @@ const legacyVoci = normalize({ infobox: { voci: [{ testo: "Compatibilità" }] } 
 assert.equal(legacyVoci.tipo, 2);
 
 const source = {
-  infobox: { tipo: 3, gruppi: [{ titolo: "Gruppo", voci: [{ nome: "Nome", descrizione: "Testo" }] }] },
-  famiglia: "sistemi",
+  infobox: {
+    tipo: 4,
+    titolo: "Contatti",
+    immagine: "/favicon-256x256.png",
+    email: { testo: "frontiera.redazione@gmail.com", href: "mailto:frontiera.redazione@gmail.com" },
+    x: { testo: "@HANDLE", href: "https://x.com/HANDLE" },
+  },
 };
 const snapshot = JSON.stringify(source);
 normalize(source);
 assert.equal(JSON.stringify(source), snapshot, "la normalizzazione non deve mutare i dati sorgente");
 
 rejects({ infobox: { gruppi: [] } }, /infobox\.tipo/);
-rejects({ infobox: { tipo: "2", voci: [{ testo: "x" }] } }, /numero intero 1, 2 o 3/);
-rejects({ infobox: { tipo: 2.5, voci: [{ testo: "x" }] } }, /numero intero 1, 2 o 3/);
-rejects({ infobox: { tipo: 4, voci: [{ testo: "x" }] } }, /numero intero 1, 2 o 3/);
+rejects({ infobox: { tipo: "2", voci: [{ testo: "x" }] } }, /numero intero 1, 2, 3 o 4/);
+rejects({ infobox: { tipo: 2.5, voci: [{ testo: "x" }] } }, /numero intero 1, 2, 3 o 4/);
 rejects({ infobox: { tipo: 1 }, famiglia: "analisi" }, /richiede infobox\.voci/);
 rejects({ infobox: { tipo: 1 }, famiglia: "fasi", storico: { ...storico, soluzione: "" } }, /soluzione/);
 rejects({ infobox: { tipo: 1, voci: [] } }, /array non vuoto/);
@@ -81,5 +113,16 @@ rejects({ infobox: { tipo: 3, gruppi: [{ titolo: "G", voci: [] }] } }, /array no
 rejects({ infobox: { tipo: 3, gruppi: [{ titolo: "G", voci: [{ nome: "", descrizione: "B" }] }] } }, /\.nome/);
 rejects({ infobox: { tipo: 3, gruppi: [{ titolo: "G", voci: [{ nome: "A", descrizione: "" }] }] } }, /\.descrizione/);
 rejects({ infobox: { tipo: 3, voci: [{ testo: "chiave incompatibile" }], gruppi: [{ titolo: "G", voci: [{ nome: "A", descrizione: "B" }] }] } }, /chiave non prevista/);
+rejects({ infobox: { tipo: 4, titolo: "Contatti", email: { testo: "a@b.it", href: "mailto:a@b.it" } } }, /infobox\.immagine/);
+rejects({ infobox: { tipo: 4, titolo: "Contatti", immagine: "/favicon-256x256.png" } }, /infobox\.email/);
+rejects({ infobox: { tipo: 4, titolo: "Contatti", immagine: "/favicon-256x256.png", email: { testo: "", href: "mailto:a@b.it" } } }, /infobox\.email\.testo/);
+rejects({ infobox: { tipo: 4, titolo: "Contatti", immagine: "/favicon-256x256.png", email: { testo: "non-email", href: "mailto:non-email" } } }, /indirizzo email valido/);
+rejects({ infobox: { tipo: 4, titolo: "Contatti", immagine: "/favicon-256x256.png", email: { testo: "a@b.it", href: "a@b.it" } } }, /infobox\.email\.href/);
+rejects({ infobox: { tipo: 4, titolo: "Contatti", immagine: "/favicon-256x256.png", email: { testo: "a@b.it", href: "mailto:a@b.it" }, x: {} } }, /infobox\.x\.testo/);
+rejects({ infobox: { tipo: 4, titolo: "Contatti", immagine: "/favicon-256x256.png", email: { testo: "a@b.it", href: "mailto:a@b.it" }, x: { testo: "@HANDLE", href: "https://example.com/HANDLE" } } }, /infobox\.x\.href/);
+rejects({ infobox: { tipo: 4, titolo: "Contatti", immagine: "/favicon-256x256.png", email: { testo: "a@b.it", href: "mailto:a@b.it" }, x: { testo: "@OTHER", href: "https://x.com/HANDLE" } } }, /corrispondere/);
+rejects({ infobox: { tipo: 4, titolo: "Contatti", immagine: "/favicon-256x256.png", email: { testo: "a@b.it", href: "mailto:a@b.it", extra: true } } }, /chiave non prevista/);
+rejects({ infobox: { tipo: 4, titolo: "Contatti", immagine: "/favicon-256x256.png", email: { testo: "a@b.it", href: "mailto:a@b.it" }, x: { testo: "@HANDLE", href: "https://x.com/HANDLE", extra: true } } }, /chiave non prevista/);
+rejects({ infobox: { tipo: 4, titolo: "Contatti", immagine: "/favicon-256x256.png", email: { testo: "a@b.it", href: "mailto:a@b.it" }, extra: true } }, /chiave non prevista/);
 
-console.log("Infobox: contratti 1/2/3, compatibilità, casi invalidi e immutabilità verificati.");
+console.log("Infobox: contratti 1/2/3/4, compatibilità, casi invalidi e immutabilità verificati.");

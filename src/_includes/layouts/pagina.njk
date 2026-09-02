@@ -1,6 +1,8 @@
 ---
 layout: layouts/base.njk
 ---
+{% from "partials/struttura-editoriale.njk" import corpoEditoriale %}
+{% set modelloInfobox = infobox | modelloInfobox("pagina", {}, null, page.inputPath) %}
 <div class="testata testata--articolo testata--pagina">
   <div class="inner">
     {% if kicker %}<div class="artkicker">{{ kicker }}</div>{% endif %}
@@ -8,8 +10,16 @@ layout: layouts/base.njk
   </div>
 </div>
 
-<article class="page foglio">
-  <div class="page-body" data-section-navigation>
-    {{ content | safe }}
-  </div>
-</article>
+{% if modelloInfobox %}
+  {% call corpoEditoriale(modelloInfobox, "Contatti", "page") %}
+    <div class="page-body" data-section-navigation>
+      {{ content | safe }}
+    </div>
+  {% endcall %}
+{% else %}
+  <article class="page foglio">
+    <div class="page-body" data-section-navigation>
+      {{ content | safe }}
+    </div>
+  </article>
+{% endif %}

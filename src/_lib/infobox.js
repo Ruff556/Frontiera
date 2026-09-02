@@ -1,7 +1,10 @@
 "use strict";
 
-const TIPI_AMMESSI = new Set([1, 2, 3]);
+const TIPI_AMMESSI = new Set([1, 2, 3, 4]);
 const RUOLI_TIPO_1 = new Set(["neutro", "russo", "ucraino", "evidenza"]);
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const HANDLE_X_RE = /^@[A-Za-z0-9_]{1,15}$/;
+const URL_X_RE = /^https:\/\/x\.com\/([A-Za-z0-9_]{1,15})\/?$/;
 
 function isObject(value) {
   return value !== null && typeof value === "object" && !Array.isArray(value);
@@ -132,6 +135,57 @@ function normalizeType3(box, context) {
   return { tipo: 3, ...(titolo ? { titolo } : {}), gruppi };
 }
 
+function normalizeType4(box, context) {
+  const { file } = context;
+  assertAllowedKeys(box, ["tipo", "titolo", "immagine", "email", "x"], file, "infobox");
+
+  const titolo = requiredText(box.titolo, file, "infobox.titolo");
+  const immagine = requiredText(box.immagine, file, "infobox.immagine");
+  if (!immagine.startsWith("/") || immagine.startsWith("//")) {
+    fail(file, '"infobox.immagine" deve essere un percorso locale assoluto');
+  }
+
+  assertObject(box.email, file, "infobox.email");
+  assertAllowedKeys(box.email, ["testo", "href"], file, "infobox.email");
+  const emailTesto = requiredText(box.email.testo, file, "infobox.email.testo");
+  const emailHref = requiredText(box.email.href, file, "infobox.email.href");
+  if (!EMAIL_RE.test(emailTesto)) {
+    fail(file, '"infobox.email.testo" deve essere un indirizzo email valido');
+  }
+  if (!/^mailto:[^\s]+$/i.test(emailHref) || emailHref !== `mailto:${emailTesto}`) {
+    fail(file, '"infobox.email.href" deve essere il mailto corrispondente a "infobox.email.testo"');
+  }
+
+  const normalized = {
+    tipo: 4,
+    titolo,
+    immagine,
+    email: { testo: emailTesto, href: emailHref },
+  };
+
+  // Il profilo X resta omissibile finché non è disponibile un recapito
+  // verificato. Un profilo dichiarato, invece, è sempre completo e rigoroso.
+  if (box.x !== undefined) {
+    assertObject(box.x, file, "infobox.x");
+    assertAllowedKeys(box.x, ["testo", "href"], file, "infobox.x");
+    const testo = requiredText(box.x.testo, file, "infobox.x.testo");
+    const href = requiredText(box.x.href, file, "infobox.x.href");
+    const match = URL_X_RE.exec(href);
+    if (!HANDLE_X_RE.test(testo)) {
+      fail(file, '"infobox.x.testo" deve essere un handle X nel formato @handle');
+    }
+    if (!match) {
+      fail(file, '"infobox.x.href" deve essere un URL X nel formato https://x.com/handle');
+    }
+    if (match[1].toLowerCase() !== testo.slice(1).toLowerCase()) {
+      fail(file, '"infobox.x.href" deve corrispondere a "infobox.x.testo"');
+    }
+    normalized.x = { testo, href };
+  }
+
+  return normalized;
+}
+
 function fromSpecifiche(specifiche, file) {
   assertObject(specifiche, file, "specifiche");
   const entries = Object.entries(specifiche);
@@ -166,14 +220,15 @@ function normalizeInfobox(options = {}) {
   // Compatibilità transitoria: il solo payload storico a voci è inequivocabilmente tipo 2.
   if (tipo === undefined && Array.isArray(infobox.voci)) tipo = 2;
   if (typeof tipo !== "number" || !Number.isInteger(tipo) || !TIPI_AMMESSI.has(tipo)) {
-    fail(file, '"infobox.tipo" deve essere il numero intero 1, 2 o 3');
+    fail(file, '"infobox.tipo" deve essere il numero intero 1, 2, 3 o 4');
   }
 
   const box = { ...infobox, tipo };
   const context = { file, famiglia, storico };
   if (tipo === 1) return normalizeType1(box, context);
   if (tipo === 2) return normalizeType2(box, context);
-  return normalizeType3(box, context);
+  if (tipo === 3) return normalizeType3(box, context);
+  return normalizeType4(box, context);
 }
 
 module.exports = {
