@@ -1,6 +1,7 @@
 {% from "partials/infobox-tipo-1.njk" import infoboxTipo1 %}
 {% from "partials/infobox-tipo-2.njk" import infoboxTipo2 %}
 {% from "partials/infobox-tipo-3.njk" import infoboxTipo3 %}
+{% from "partials/infobox-tipo-4.njk" import infoboxTipo4 %}
 
 {% macro renderInfobox(modello, ariaLabel="Sintesi del contenuto", conAside=true) %}
 {% if modello %}
@@ -12,6 +13,8 @@
       {{ infoboxTipo2(modello) }}
     {% elif modello.tipo == 3 %}
       {{ infoboxTipo3(modello) }}
+    {% elif modello.tipo == 4 %}
+      {{ infoboxTipo4(modello) }}
     {% endif %}
     <span class="infobox-mobile-sentinel" data-infobox-mobile-sentinel aria-hidden="true"></span>
   </div>

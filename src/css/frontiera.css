@@ -2706,7 +2706,7 @@ footer .license-note a:hover{color:#fff}
 
 /* Neutralizza, SOLO dentro la griglia, i valori globali di .reading (misura,
    margini automatici, margine inferiore): il foglio riempie la propria colonna. */
-.analisi-wrap .reading{max-width:none;margin:0}
+.analisi-wrap .reading,.analisi-wrap .page{max-width:none;margin:0}
 /* Variante senza infobox: foglio centrato sulla misura editoriale corrente. */
 .analisi-wrap--single .reading{
   max-width:calc(var(--maxread) + 2*clamp(1.2rem,3.4vw,3rem));
@@ -2827,6 +2827,41 @@ footer .license-note a:hover{color:#fff}
   font-family:'Spectral',serif;font-size:.89rem;line-height:1.47;
   color:var(--on-dark);margin:0;
 }
+
+/* Tipo 4 — Contatti: stesso pannello editoriale, gerarchia verticale propria. */
+.infobox-panel--tipo-4{display:flex;flex-direction:column;align-items:stretch}
+.infobox-contact-image{
+  position:relative;display:flex;align-items:center;justify-content:center;
+  min-height:5.8rem;padding:.1rem 0 .85rem;
+}
+.infobox-contact-image img{
+  display:block;width:clamp(4.5rem,42%,6.4rem);height:auto;max-width:100%;
+  object-fit:contain;
+}
+.infobox-contact-divider{position:relative;border-top:1px solid rgba(160,199,214,.22)}
+.infobox-contact-divider--primary{margin:0 0 1rem}
+.infobox-contact-divider--minor{width:82%;margin:1rem auto;opacity:.55;border-top-color:rgba(160,199,214,.17)}
+.infobox-panel--tipo-4 .infobox-contact-title{
+  margin:0 0 1.15rem;padding:0;border:0;
+  font-size:.86rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent-hi);
+}
+.infobox-contact-list{position:relative;display:flex;flex-direction:column}
+.infobox-contact-item{display:flex;flex-direction:column;gap:.28rem;min-width:0}
+.infobox-contact-label{
+  font-family:'IBM Plex Mono',monospace;font-size:.62rem;line-height:1.3;
+  letter-spacing:.1em;color:var(--on-dark-2);
+}
+.infobox-contact-link{
+  display:block;min-width:0;max-width:100%;overflow-wrap:anywhere;word-break:break-word;
+  font-family:'Archivo',sans-serif;font-size:.9rem;line-height:1.35;font-weight:600;
+  color:#fff;text-decoration:underline;text-decoration-thickness:1px;
+  text-decoration-color:rgba(125,194,218,.55);text-underline-offset:3px;
+  transition:color var(--t1),text-decoration-color var(--t1);
+}
+.infobox-contact-link:hover{color:var(--accent-hi);text-decoration-color:var(--accent-hi)}
+.infobox-contact-link:focus-visible{outline:2px solid var(--accent-hi);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.infobox-contact-link{transition:none}}
 .infobox-panel:focus-visible{
   outline:2px solid var(--accent-hi);outline-offset:3px;
 }

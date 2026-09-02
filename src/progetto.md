@@ -5,6 +5,13 @@ titoloPagina: Il progetto Frontiera
 titolo: Il progetto Frontiera
 kicker: Progetto
 descrizionePagina: "Identità, metodo, uso dell’intelligenza artificiale, autorialità, licenze e sostegno del progetto editoriale Frontiera."
+infobox:
+  tipo: 4
+  titolo: "Contatti"
+  immagine: "/favicon-256x256.png"
+  email:
+    testo: "frontiera.redazione@gmail.com"
+    href: "mailto:frontiera.redazione@gmail.com"
 ---
 
 **Frontiera è un progetto editoriale indipendente dedicato allo studio della guerra russo-ucraina e delle trasformazioni che il conflitto sta producendo nel modo contemporaneo di combattere.**

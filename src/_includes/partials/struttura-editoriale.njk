@@ -18,14 +18,14 @@
 </div>
 {% endmacro %}
 
-{% macro corpoEditoriale(box=null, boxAriaLabel="Sintesi del contenuto") %}
+{% macro corpoEditoriale(box=null, boxAriaLabel="Sintesi del contenuto", foglioClasse="reading") %}
 {% set hasInfobox = box and box.tipo %}
 <div class="analisi-wrap{% if not hasInfobox %} analisi-wrap--single{% endif %}">
   {% if hasInfobox %}
     {{ renderInfobox(box, boxAriaLabel) }}
   {% endif %}
 
-  <article class="reading foglio analisi-body">
+  <article class="{{ foglioClasse }} foglio analisi-body">
     {{ caller() }}
   </article>
 </div>

@@ -31,6 +31,9 @@ assert.doesNotThrow(() => mobile.pulseHaptic({ vibrate: () => { throw new Error(
 const dispatcher = read("src/_includes/partials/infobox-dispatcher.njk");
 assert.match(dispatcher, /data-infobox-mobile-hook/);
 assert.match(dispatcher, /data-infobox-mobile-sentinel/);
+assert.match(dispatcher, /infobox-tipo-4\.njk/);
+assert.match(read("src/_includes/partials/infobox-tipo-4.njk"), /data-infobox-tipo="4"/);
+assert.match(read("src/_includes/partials/infobox-tipo-4.njk"), /class="analisi-info-title infobox-contact-title"/);
 assert.equal((dispatcher.match(/data-infobox-mobile-hook/g) || []).length, 1);
 
 const base = read("src/_includes/layouts/base.njk");

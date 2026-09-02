@@ -568,7 +568,8 @@ module.exports = function (eleventyConfig) {
   );
   eleventyConfig.addFilter("limita", (items, n) => (items || []).slice(0, n));
 
-  // Pipeline unica per F, P, Attualità e Sistemi. L'adattatore storico
+  // Pipeline unica per F, P, Attualità, Sistemi e pagine statiche con infobox.
+  // L'adattatore storico
   // `specifiche` è normalizzato qui come modello esplicito di tipo 2.
   eleventyConfig.addFilter(
     "modelloInfobox",
