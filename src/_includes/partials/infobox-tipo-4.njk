@@ -9,14 +9,23 @@
   <div class="infobox-contact-list">
     <section class="infobox-contact-item">
       <span class="infobox-contact-label">Email</span>
-      <a class="infobox-contact-link" href="{{ modello.email.href }}">{{ modello.email.testo }}</a>
+      <a class="infobox-contact-link" href="{{ modello.email.href }}" aria-label="Scrivi a Frontiera" title="{{ modello.email.testo }}">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
     </section>
 
     {% if modello.x %}
       <div class="infobox-contact-divider infobox-contact-divider--minor" aria-hidden="true"></div>
       <section class="infobox-contact-item">
         <span class="infobox-contact-label">X</span>
-        <a class="infobox-contact-link" href="{{ modello.x.href }}">{{ modello.x.testo }}</a>
+        <a class="infobox-contact-link" href="{{ modello.x.href }}" aria-label="Frontiera su X" title="{{ modello.x.testo }}" target="_blank" rel="noopener noreferrer">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <path d="M5 4l14 16M19 4L5 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </a>
       </section>
     {% endif %}
   </div>
