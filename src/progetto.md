@@ -12,6 +12,9 @@ infobox:
   email:
     testo: "frontiera.redazione@gmail.com"
     href: "mailto:frontiera.redazione@gmail.com"
+  x:
+    testo: "@Frontieradpr4"
+    href: "https://x.com/Frontieradpr4"
 ---
 
 **Frontiera è un progetto editoriale indipendente dedicato allo studio della guerra russo-ucraina e delle trasformazioni che il conflitto sta producendo nel modo contemporaneo di combattere.**
