@@ -1,6 +1,6 @@
 "use strict";
 
-const TIPI_AMMESSI = new Set([1, 2, 3, 4]);
+const TIPI_AMMESSI = new Set(["1", "2", "3", "4"].map(Number));
 const RUOLI_TIPO_1 = new Set(["neutro", "russo", "ucraino", "evidenza"]);
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const HANDLE_X_RE = /^@[A-Za-z0-9_]{1,15}$/;
@@ -152,8 +152,11 @@ function normalizeType4(box, context) {
   if (!EMAIL_RE.test(emailTesto)) {
     fail(file, '"infobox.email.testo" deve essere un indirizzo email valido');
   }
-  if (!/^mailto:[^\s]+$/i.test(emailHref) || emailHref !== `mailto:${emailTesto}`) {
-    fail(file, '"infobox.email.href" deve essere il mailto corrispondente a "infobox.email.testo"');
+
+  const mailtoPrefix = `mailto:${emailTesto}`;
+  const mailtoValido = emailHref === mailtoPrefix || emailHref.startsWith(`${mailtoPrefix}?`);
+  if (!mailtoValido || /\s/.test(emailHref)) {
+    fail(file, '"infobox.email.href" deve essere il mailto corrispondente a "infobox.email.testo", con eventuali parametri dopo ?');
   }
 
   const normalized = {
