@@ -11,7 +11,7 @@ infobox:
   immagine: "/favicon-256x256.png"
   email:
     testo: "frontiera.redazione@gmail.com"
-    href: "mailto:frontiera.redazione@gmail.com"
+    href: "mailto:frontiera.redazione@gmail.com?subject=Contatto%20Frontiera"
   x:
     testo: "@Frontieradpr4"
     href: "https://x.com/Frontieradpr4"
