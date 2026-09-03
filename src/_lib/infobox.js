@@ -1,6 +1,6 @@
 "use strict";
 
-const TIPI_AMMESSI = new Set(["1", "2", "3", "4"].map(Number));
+const TIPI_AMMESSI = new Set([1, 2, 3, 4]);
 const RUOLI_TIPO_1 = new Set(["neutro", "russo", "ucraino", "evidenza"]);
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const HANDLE_X_RE = /^@[A-Za-z0-9_]{1,15}$/;
