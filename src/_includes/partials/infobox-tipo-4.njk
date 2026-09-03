@@ -9,23 +9,77 @@
   <div class="infobox-contact-list">
     <section class="infobox-contact-item">
       <span class="infobox-contact-label">Email</span>
-      <a class="infobox-contact-link" href="{{ modello.email.href }}" aria-label="Scrivi a Frontiera" title="{{ modello.email.testo }}">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-          <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/>
-          <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
+      <div style="display:flex;align-items:center;gap:.58rem;min-width:0;margin-top:.18rem;">
+        <a class="infobox-contact-link" href="{{ modello.email.href }}" aria-label="Scrivi a {{ modello.email.testo }}" title="Scrivi a {{ modello.email.testo }}" style="display:grid;place-items:center;flex:0 0 auto;text-decoration:none;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <span aria-hidden="true" style="width:1px;height:1.55rem;flex:0 0 1px;background:rgba(160,199,214,.28);"></span>
+        <button type="button" data-copy-email="{{ modello.email.testo }}" aria-label="Copia l'indirizzo email {{ modello.email.testo }}" title="Copia email" style="display:grid;place-items:center;flex:0 0 auto;width:28px;height:28px;padding:0;border:0;background:transparent;color:var(--on-dark-2);cursor:pointer;border-radius:var(--r-xs);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <rect x="8" y="8" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <span style="min-width:0;font-family:'Archivo',sans-serif;font-size:.84rem;line-height:1.35;font-weight:600;color:#fff;overflow-wrap:anywhere;word-break:break-word;">{{ modello.email.testo }}</span>
+      </div>
     </section>
 
     {% if modello.x %}
       <div class="infobox-contact-divider infobox-contact-divider--minor" aria-hidden="true"></div>
       <section class="infobox-contact-item">
         <span class="infobox-contact-label">X</span>
-        <a class="infobox-contact-link" href="{{ modello.x.href }}" aria-label="Frontiera su X" title="{{ modello.x.testo }}" target="_blank" rel="noopener noreferrer">
-          <img src="https://abs.twimg.com/favicons/twitter.3.ico" width="22" height="22" alt="" aria-hidden="true" decoding="async">
+        <a class="infobox-contact-link" href="{{ modello.x.href }}" aria-label="Apri il profilo X di Frontiera" title="{{ modello.x.testo }}" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.62rem;min-width:0;margin-top:.18rem;text-decoration:none;">
+          <img src="https://abs.twimg.com/favicons/twitter.3.ico" width="22" height="22" alt="" aria-hidden="true" decoding="async" style="flex:0 0 auto;">
+          <span aria-hidden="true" style="width:1px;height:1.55rem;flex:0 0 1px;background:rgba(160,199,214,.28);"></span>
+          <span style="min-width:0;font-size:.84rem;line-height:1.35;">Profilo X di Frontiera</span>
         </a>
       </section>
     {% endif %}
   </div>
 </div>
+
+<script>
+(function () {
+  const root = document.currentScript && document.currentScript.previousElementSibling;
+  if (!root) return;
+  const button = root.querySelector('[data-copy-email]');
+  if (!button) return;
+
+  async function copyText(value) {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(value);
+      return;
+    }
+    const area = document.createElement('textarea');
+    area.value = value;
+    area.setAttribute('readonly', '');
+    area.style.position = 'fixed';
+    area.style.opacity = '0';
+    document.body.appendChild(area);
+    area.select();
+    const copied = document.execCommand('copy');
+    area.remove();
+    if (!copied) throw new Error('copy failed');
+  }
+
+  button.addEventListener('click', async function () {
+    const value = button.getAttribute('data-copy-email');
+    const originalTitle = button.getAttribute('title') || 'Copia email';
+    try {
+      await copyText(value);
+      button.setAttribute('title', 'Email copiata');
+      button.setAttribute('aria-label', 'Email copiata: ' + value);
+      window.setTimeout(function () {
+        button.setAttribute('title', originalTitle);
+        button.setAttribute('aria-label', "Copia l'indirizzo email " + value);
+      }, 1800);
+    } catch (error) {
+      button.setAttribute('title', 'Copia non disponibile');
+    }
+  });
+})();
+</script>
 {% endmacro %}
