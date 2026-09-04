@@ -34,6 +34,17 @@
 <link rel="preload" href="/fonts/spectral-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/archivo-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/frontiera.css">
+{% if usesSectionNav %}
+<style>
+/* Mantiene il rullino mobile ancorato allo stesso punto fisico dello schermo
+   mentre la browser chrome modifica il viewport dinamico durante lo scroll. */
+@media (max-width:1139px){
+  @supports (height:1dvh) and (height:1svh){
+    .secroll{top:calc(57svh + 100dvh - 100svh)}
+  }
+}
+</style>
+{% endif %}
 {% if usesStarlink %}<link rel="stylesheet" href="/css/schema-starlink.css">{% endif %}
 {% if usesPalantir %}<link rel="stylesheet" href="/css/schema-palantir.css">{% endif %}
 {% if usesDebt %}<link rel="stylesheet" href="/css/debito-integrazione.css">{% endif %}
