@@ -23,8 +23,11 @@ Prerequisito: **Node.js 22 o superiore**.
 
 ```bash
 npm ci              # installazione deterministica di Eleventy e dei font open-source
-npm run build      # copia i font in src/fonts/ e genera il sito in _site/
-npm start          # anteprima con ricarica automatica su http://localhost:8080
+npx playwright install chromium  # installazione una tantum del browser di test
+npm run build       # copia i font in src/fonts/ e genera il sito in _site/
+npm run test:browser # regression test Chromium sull'output già generato
+npm run verify:all  # build deterministica + suite browser completa
+npm start           # anteprima con ricarica automatica su http://localhost:8080
 ```
 
 `npm start` prepara automaticamente font, sfondi e dati territoriali prima di avviare
@@ -33,7 +36,11 @@ Eleventy. `npm run serve` usa lo stesso percorso di preparazione. `verify:territ
 territoriale consumato da Eleventy.
 
 `npm run build` esegue prima `npm run font` (copia i woff2 self-hosted dai pacchetti
-`@fontsource` dentro `src/fonts/`, **senza rete**) e poi la build Eleventy.
+`@fontsource` dentro `src/fonts/`, **senza rete**) e poi la build Eleventy. La build
+normale non avvia un browser; `npm run verify:all` è il controllo completo locale e CI.
+La baseline versionata `tests/fixtures/public-urls-required.json` protegge le route
+pubbliche esistenti: nuove route restano ammesse e possono essere aggiunte alla
+baseline quando si desidera proteggerle da ritiri accidentali futuri.
 
 I tre formati di infobox e i relativi blocchi YAML pronti da copiare sono
 documentati in [`docs/infobox.md`](docs/infobox.md).

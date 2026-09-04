@@ -99,30 +99,28 @@ async function main() {
     .filter((file) => !/<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(fs.readFileSync(file, "utf8")))
     .map(pageUrl)
     .sort();
-  const baselineFile = path.join(ROOT, "reports", "performance-baseline.json");
-  if (fs.existsSync(baselineFile)) {
-    const baseline = JSON.parse(fs.readFileSync(baselineFile, "utf8"));
-    const expectedUrls = [...baseline.site.urls]
-      // La pagina indice della Linea F è stata rimossa in questa pre-release;
-      // le route figlie /fasi/<slug>/ restano invece parte del sito.
-      .filter((url) => url !== "/fasi/")
-      .map((url) => url === "/analisi/Storm-Shadow-Ucraina-la-fabbrica-entra-nella-profondita/"
-        ? "/analisi/storm-shadow-ucraina-fabbrica-profondita/"
-        : url)
-      .sort();
-    const redirectsFile = path.join(ROOT, "src", "_redirects");
-    const redirects = new Map();
-    if (fs.existsSync(redirectsFile)) {
-      for (const line of fs.readFileSync(redirectsFile, "utf8").split(/\r?\n/)) {
-        const [source, destination, status] = line.trim().split(/\s+/);
-        if (source && destination && status === "301") redirects.set(source, destination);
-      }
+  const problems = [];
+  const baselineFile = path.join(ROOT, "tests", "fixtures", "public-urls-required.json");
+  assert.ok(fs.existsSync(baselineFile), "baseline obbligatoria degli URL pubblici assente");
+  const requiredUrls = JSON.parse(fs.readFileSync(baselineFile, "utf8")).urls;
+  assert.ok(Array.isArray(requiredUrls), "baseline URL priva dell'array urls");
+  const publishedUrls = new Set(urls);
+  const redirects = new Map();
+  const redirectsFile = path.join(ROOT, "src", "_redirects");
+  if (fs.existsSync(redirectsFile)) {
+    for (const line of fs.readFileSync(redirectsFile, "utf8").split(/\r?\n/)) {
+      const [source, destination, status] = line.trim().split(/\s+/);
+      if (source && destination && status === "301") redirects.set(source, destination);
     }
-    const expectedUrlsMigrated = expectedUrls.map((url) => redirects.get(url) || url).sort();
-    assert.deepEqual(urls, expectedUrlsMigrated, "l'elenco degli URL è cambiato oltre la migrazione canonica A2 prevista");
+  }
+  for (const url of requiredUrls) {
+    if (publishedUrls.has(url)) continue;
+    const destination = redirects.get(url);
+    if (!destination || !publishedUrls.has(destination)) {
+      problems.push(`${url}: URL pubblico richiesto assente e privo di redirect 301 verso una route pubblicata`);
+    }
   }
 
-  const problems = [];
   let responsiveImages = 0;
   let checkedReferences = 0;
   const checkedFormats = new Set();
@@ -130,7 +128,10 @@ async function main() {
   for (const file of htmlFiles) {
     const html = fs.readFileSync(file, "utf8");
     const fromUrl = pageUrl(file);
-    const ids = new Set([...html.matchAll(/\bid=["']([^"']+)["']/g)].map((match) => match[1]));
+    const idList = [...html.matchAll(/\bid=["']([^"']+)["']/g)].map((match) => match[1]);
+    const duplicateIds = [...new Set(idList.filter((id, index) => idList.indexOf(id) !== index))].sort();
+    if (duplicateIds.length) problems.push(`${fromUrl}: ID duplicati ${duplicateIds.join(", ")}`);
+    const ids = new Set(idList);
     const references = [];
 
     for (const tag of html.match(/<(?:a|link|script|img|source|image)\b[^>]*>/gi) || []) {

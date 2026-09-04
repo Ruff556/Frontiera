@@ -1,0 +1,28 @@
+{
+  "description": "Route indicizzabili approvate. Nuove route sono ammesse e possono essere aggiunte qui quando diventano stabili.",
+  "urls": [
+    "/",
+    "/analisi/articolo-attualita-fedorov-syrskyj/",
+    "/analisi/capacita-residua-bombardamento/",
+    "/analisi/storm-shadow-ucraina-fabbrica-profondita/",
+    "/archivio/attualita/",
+    "/archivio/strategia/",
+    "/fasi/difesa-che-osserva/",
+    "/fasi/duello-logistico/",
+    "/fasi/macchina-prima-delluomo/",
+    "/fasi/manovra-fallita/",
+    "/fasi/nervo-fuori-dallo-spettro/",
+    "/fasi/occhio-che-diventa-arma/",
+    "/profondita/asimmetria-iniziale-decisione-mancata/",
+    "/profondita/attacco-sistemico-profondita-difesa/",
+    "/profondita/autonomia-embrionale-campagne-concorrenti-di-scala/",
+    "/profondita/coercizione-energetica-profondita-negata-a-kyiv/",
+    "/profondita/industrializzazione-santuario-penetrato/",
+    "/profondita/interdizione-operativa-arretramento-logistico/",
+    "/profondita/profondita-selettiva-alta-qualita/",
+    "/progetto/",
+    "/schede/palantir/",
+    "/schede/rassvet/",
+    "/schede/starlink/"
+  ]
+}

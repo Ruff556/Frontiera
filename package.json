@@ -27,6 +27,8 @@
     "verify:schemi": "node scripts/verifica-schema-kit.cjs",
     "verify:affidabilita-v1:source": "node scripts/verifica-affidabilita-v1.cjs --source-only",
     "verify:affidabilita-v1": "node scripts/verifica-affidabilita-v1.cjs",
+    "test:browser": "playwright test",
+    "verify:all": "npm run build && npm run test:browser",
     "report:performance-browser": "node scripts/calcola-performance-browser.cjs",
     "import:territori": "node scripts/importa-territori.mjs"
   },
@@ -39,6 +41,7 @@
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "7.0.0",
     "@11ty/eleventy-plugin-rss": "^2.0.2",
+    "@playwright/test": "^1.62.1",
     "polygon-clipping": "^0.15.7"
   }
 }
