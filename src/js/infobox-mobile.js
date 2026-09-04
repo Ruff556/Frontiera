@@ -62,7 +62,8 @@
     var lockedY = 0;
     var bodyStyles = null;
     var inertRecords = [];
-    var fallbackScrollBound = false;
+    var availabilityScrollBound = false;
+    var availabilityFrame = null;
     var visualViewportBound = false;
     var destroyed = false;
 
@@ -156,6 +157,31 @@
       setTriggerVisible(available);
     }
 
+    function scheduleAvailabilityUpdate() {
+      if (destroyed || availabilityFrame !== null) return;
+      availabilityFrame = win.requestAnimationFrame(function () {
+        availabilityFrame = null;
+        if (!destroyed) updateAvailability();
+      });
+    }
+
+    function setupAvailabilityScroll() {
+      if (availabilityScrollBound) return;
+      win.addEventListener("scroll", scheduleAvailabilityUpdate, { passive: true });
+      availabilityScrollBound = true;
+    }
+
+    function teardownAvailabilityScroll() {
+      if (availabilityFrame !== null) {
+        win.cancelAnimationFrame(availabilityFrame);
+        availabilityFrame = null;
+      }
+      if (availabilityScrollBound) {
+        win.removeEventListener("scroll", scheduleAvailabilityUpdate);
+        availabilityScrollBound = false;
+      }
+    }
+
     function setupSentinelObserver() {
       if (observer) observer.disconnect();
       observer = null;
@@ -166,9 +192,6 @@
           threshold: [0, 1],
         });
         observer.observe(sentinel);
-      } else if (!fallbackScrollBound) {
-        win.addEventListener("scroll", updateAvailability, { passive: true });
-        fallbackScrollBound = true;
       }
     }
 
@@ -391,6 +414,7 @@
       buildUI();
       measureHeader();
       setupSentinelObserver();
+      setupAvailabilityScroll();
       var header = doc.querySelector(".nav");
       if (header && typeof win.ResizeObserver === "function") {
         headerObserver = new win.ResizeObserver(onHeaderResize);
@@ -406,6 +430,7 @@
     }
 
     function teardownMobile() {
+      teardownAvailabilityScroll();
       if (!trigger) {
         state = "unavailable";
         return;
@@ -422,10 +447,6 @@
       if (headerObserver) headerObserver.disconnect();
       observer = null;
       headerObserver = null;
-      if (fallbackScrollBound) {
-        win.removeEventListener("scroll", updateAvailability);
-        fallbackScrollBound = false;
-      }
       win.removeEventListener("resize", onHeaderResize);
       if (visualViewportBound && win.visualViewport) {
         win.visualViewport.removeEventListener("resize", onHeaderResize);

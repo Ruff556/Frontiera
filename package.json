@@ -4,12 +4,16 @@
   "description": "Frontiera - analisi di tecnologia e strategia. Sito statico Eleventy.",
   "license": "UNLICENSED",
   "private": true,
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "font": "node scripts/copia-font.mjs",
     "assets:performance": "node scripts/genera-sfondi.cjs",
+    "prepare:dev": "npm run font && npm run assets:performance && npm run verify:territori",
     "build": "npm run font && npm run assets:performance && npm run verify:schemi && npm run verify:infobox && npm run verify:infobox-mobile && npm run verify:image-lightbox && npm run verify:cartina && npm run verify:territori && npm run verify:profondita && npm run verify:affidabilita-v1:source && eleventy && npm run verify:affidabilita-v1 && npm run verify:seo && npm run verify:favicon && npm run verify:output && npm run verify:performance",
-    "serve": "npm run font && npm run assets:performance && eleventy --serve",
-    "start": "npm run font && npm run assets:performance && eleventy --serve",
+    "serve": "npm run prepare:dev && eleventy --serve",
+    "start": "npm run prepare:dev && eleventy --serve",
     "verify:cartina": "node scripts/verifica-cartina.cjs",
     "verify:territori": "node scripts/verifica-territori.cjs",
     "verify:profondita": "node scripts/verifica-diagramma-profondita.cjs",

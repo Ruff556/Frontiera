@@ -19,11 +19,18 @@ Per i dettagli, le attribuzioni e le esclusioni, consulta [`LICENSE.md`](LICENSE
 
 ## Avvio rapido
 
+Prerequisito: **Node.js 22 o superiore**.
+
 ```bash
-npm install        # scarica Eleventy e i font open-source (@fontsource)
+npm ci              # installazione deterministica di Eleventy e dei font open-source
 npm run build      # copia i font in src/fonts/ e genera il sito in _site/
 npm start          # anteprima con ricarica automatica su http://localhost:8080
 ```
+
+`npm start` prepara automaticamente font, sfondi e dati territoriali prima di avviare
+Eleventy. `npm run serve` usa lo stesso percorso di preparazione. `verify:territori` non
+è un controllo puramente passivo: genera anche i dati necessari alle cartine e il report
+territoriale consumato da Eleventy.
 
 `npm run build` esegue prima `npm run font` (copia i woff2 self-hosted dai pacchetti
 `@fontsource` dentro `src/fonts/`, **senza rete**) e poi la build Eleventy.
@@ -168,7 +175,7 @@ ai link assoluti del feed RSS.
 3. Impostazioni di build:
    * **Build command:** `npm run build`
    * **Build output directory:** `_site`
-   * **Node version:** 18 o superiore (variabile d'ambiente `NODE_VERSION=20`).
+   * **Node version:** 22 o superiore (variabile d'ambiente `NODE_VERSION=22`).
 4. *Deploy*. Ogni push ricostruisce il sito.
 
 ### GitHub Pages (via Actions)
@@ -186,7 +193,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: 20 }
+        with: { node-version: 22 }
       - run: npm ci
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
