@@ -22,8 +22,12 @@
 
   chips.forEach(function (chip) {
     chip.addEventListener("click", function () {
-      chips.forEach(function (c) { c.classList.remove("on"); });
+      chips.forEach(function (c) {
+        c.classList.remove("on");
+        c.setAttribute("aria-pressed", "false");
+      });
       chip.classList.add("on");
+      chip.setAttribute("aria-pressed", "true");
       applica(chip.getAttribute("data-dominio") || "tutto");
     });
   });

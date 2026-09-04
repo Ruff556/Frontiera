@@ -22,9 +22,9 @@ eleventyComputed:
     <p class="testata-dek">{{ sez.descrizione }}</p>
     {% if sez.tipo == "analisi" %}
     <div class="filters" id="archfilters" role="group" aria-label="Filtra per dominio">
-      <button class="chip on" type="button" data-dominio="tutto">Tutto</button>
+      <button class="chip on" type="button" data-dominio="tutto" aria-pressed="true">Tutto</button>
       {% for d in dominiFiltro %}
-        <button class="chip" type="button" data-dominio="{{ d.chiave }}">{{ d.nome }}</button>
+        <button class="chip" type="button" data-dominio="{{ d.chiave }}" aria-pressed="false">{{ d.nome }}</button>
       {% endfor %}
     </div>
     {% endif %}

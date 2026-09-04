@@ -69,7 +69,7 @@
 </header>
 
 <div class="scrim" id="scrim"></div>
-<aside class="mobilemenu" id="mobilemenu" aria-label="Menù mobile">
+<aside class="mobilemenu" id="mobilemenu" aria-label="Menù mobile" aria-hidden="true" inert>
   <p class="mobilemenu-cap mono">Sezioni</p>
   {% for item in site.nav %}
     <a href="{{ item.url }}"{% if (item.url != '/' ) and page.url.startsWith(item.url) %} class="on" aria-current="page"{% endif %}>{{ item.nome }}</a>

@@ -443,7 +443,6 @@
   // dalla tastiera. Espone stato e pannello controllato per le AT.
   capsule.setAttribute("role", "button");
   capsule.setAttribute("tabindex", "0");
-  capsule.setAttribute("aria-haspopup", "true");
   capsule.setAttribute("aria-expanded", "false");
   capsule.setAttribute("aria-controls", "secroll-menu");
   capsule.setAttribute("aria-label", "Indice delle sezioni");
@@ -550,7 +549,6 @@
       popupText.textContent = sections[selected].title;
       popup.classList.add("is-open");
     }
-    capsule.setAttribute("aria-valuenow", String(selected + 1));
   }
 
   var dragging = false;
@@ -630,7 +628,6 @@
     if (dragging) return;
     selected = idx;
     renderRoll(idx);
-    capsule.setAttribute("aria-valuenow", String(idx + 1));
   });
 
   // ----- Comparsa del rullino -----
