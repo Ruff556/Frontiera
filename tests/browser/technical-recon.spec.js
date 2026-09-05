@@ -163,6 +163,66 @@ test.describe("A3 — asset WebP", () => {
   });
 });
 
+test.describe("Tornata 5 — hover dei controlli Schema Kit", () => {
+  test.use({ viewport: MOBILE, hasTouch: true, isMobile: true });
+
+  test("un tap touch su AVANZA mantiene il contrasto e avanza STR1", async ({ page }) => {
+    await page.goto("/analisi/capacita-residua-bombardamento/");
+    const schema = page.locator("#schema-str1-penetrazione");
+    const next = schema.locator('[data-str1-next]');
+
+    await expect(next).toBeVisible();
+    await expect(next).toBeEnabled();
+    await expect(next).toHaveText(/AVANZA/);
+
+    const state = await page.evaluate(() => {
+      const sheet = [...document.styleSheets]
+        .find((candidate) => candidate.href && new URL(candidate.href).pathname === "/css/schema-kit.css");
+      return {
+        hoverCapability: window.matchMedia("(hover: hover)").matches,
+        finePointer: window.matchMedia("(pointer: fine)").matches,
+        hoverRuleScoped: Boolean(sheet && [...sheet.cssRules].some((rule) =>
+          rule.conditionText === "(hover: hover) and (pointer: fine)"
+          && [...rule.cssRules].some((nestedRule) => nestedRule.selectorText === ".schema-kit__button:hover"))),
+      };
+    });
+    expect(state.hoverCapability).toBe(false);
+    expect(state.finePointer).toBe(false);
+    expect(state.hoverRuleScoped).toBe(true);
+
+    await next.tap();
+    await expect(schema.locator('[data-schema-count]')).toHaveText("01/03");
+
+    await expect.poll(() => next.evaluate((button) => {
+      const style = getComputedStyle(button);
+      return { background: style.backgroundColor, border: style.borderColor, color: style.color };
+    })).toEqual({
+      background: "rgb(21, 60, 120)",
+      border: "rgb(21, 60, 120)",
+      color: "rgb(255, 255, 255)",
+    });
+  });
+
+  test.describe("desktop con mouse", () => {
+    test.use({ viewport: DESKTOP, hasTouch: false, isMobile: false });
+
+    test("AVANZA conserva il suo hover desktop", async ({ page }) => {
+      await page.goto("/analisi/capacita-residua-bombardamento/");
+      const next = page.locator("#schema-str1-penetrazione [data-str1-next]");
+
+      await next.hover();
+      await expect.poll(() => next.evaluate((button) => {
+        const style = getComputedStyle(button);
+        return { background: style.backgroundColor, border: style.borderColor, color: style.color };
+      })).toEqual({
+        background: "rgb(18, 53, 104)",
+        border: "rgb(12, 47, 98)",
+        color: "rgb(255, 255, 255)",
+      });
+    });
+  });
+});
+
 test.describe("leggibilità senza JavaScript", () => {
   test.use({ javaScriptEnabled: false, viewport: DESKTOP });
 

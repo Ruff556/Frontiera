@@ -152,9 +152,11 @@
   transition: background var(--t1), color var(--t1), border-color var(--t1), opacity var(--t1);
 }
 
-.schema-kit__button:hover {
-  border-color: var(--schema-accent);
-  background: #fff;
+@media (hover: hover) and (pointer: fine) {
+  .schema-kit__button:hover {
+    border-color: var(--schema-accent);
+    background: #fff;
+  }
 }
 
 .schema-kit__button[aria-selected="true"],
