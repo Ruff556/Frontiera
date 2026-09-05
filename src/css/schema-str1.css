@@ -77,7 +77,6 @@
 .str1-schema__button--auto[aria-pressed="true"] b { color: rgba(255,255,255,.82); }
 .str1-schema__button--next { display: grid; place-items: center; background: var(--str1-blue); border-color: var(--str1-blue); color: #fff; text-align: center; }
 .str1-schema__next-label { justify-self: center; }
-.str1-schema__next-arrow { position: absolute; right: .65rem; }
 .str1-schema .str1-schema__caption p { font: inherit; }
 
 @media (hover: hover) and (pointer: fine) {
