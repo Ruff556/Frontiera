@@ -1,0 +1,490 @@
+{
+  "versione": 1,
+  "dataset": "preparare-conflitto",
+  "ambiti": {
+    "contenuti/analisi/Preparare-loffesa-la-guerra-prende-forma.md": [
+      {
+        "id": "PC1-E001",
+        "livello": "confermato",
+        "titolo": "Dispersione dei campi russi e proroga delle esercitazioni, 20 febbraio 2022",
+        "motivazione": "Le immagini commerciali e il resoconto contemporaneo documentano nuovi schieramenti fuori dai campi. L’aumento della prontezza è la lettura attribuita a Maxar; la proroga è un annuncio bielorusso dello stesso giorno. Reuters precisa di non avere verificato indipendentemente le immagini; il grado riguarda la documentazione e le attribuzioni esplicitate nel testo.",
+        "fonti": [
+          {
+            "nome": "Reuters, 20 febbraio",
+            "url": "https://www.reuters.com/world/europe/new-russian-deployments-armored-equipment-troops-near-ukraine-maxar-2022-02-20/"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E002",
+        "livello": "confermato",
+        "titolo": "Materiali della 41ª Armata lasciati a Pogonovo nel 2021",
+        "motivazione": "Janes ricostruisce il rientro annunciato il 22 aprile e la permanenza di equipaggiamento della 41ª Armata. L’impiego a Zapad era la giustificazione ufficiale: il record conferma la permanenza e l’annuncio, senza attribuire già in primavera una destinazione all’invasione. L’identificazione dell’equipaggiamento della 41ª Armata è una valutazione di Janes sulle immagini.",
+        "fonti": [
+          {
+            "nome": "Janes, ricostruzione dei movimenti da Pogonovo",
+            "url": "https://www.janes.com/defence-intelligence-insights/defence-news/security/russia-moves-equipment-away-from-training-ground-near-ukrainian-border"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E003",
+        "livello": "confermato",
+        "titolo": "Persistenza degli accumuli russi nell’autunno 2021",
+        "motivazione": "L’analisi CSIS del novembre 2021 confronta immagini e movimenti a Yelnya, Pogonovo e in Crimea. Documenta mezzi trasferiti da distretti lontani e rimasti a ovest; la loro presenza non prova l’ordine politico di attaccare.",
+        "fonti": [
+          {
+            "nome": "CSIS, *Moscow’s Continuing Ukrainian Buildup*, 17 novembre 2021",
+            "url": "https://www.csis.org/analysis/moscows-continuing-ukrainian-buildup"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E004",
+        "livello": "plausibile",
+        "titolo": "Nuovi alloggiamenti e indizi di afflusso del personale",
+        "motivazione": "Le immagini Maxar pubblicate da Sky News e CNN mostrano nuovi alloggiamenti tra fine gennaio e inizio febbraio. Maxar vi legge un indizio di afflusso del personale; CNN precisa che a Novoozerne le tende indicavano la capacità di accoglierlo, senza prova diretta del suo arrivo. Il grado distingue questa inferenza dalla presenza documentata degli alloggiamenti.",
+        "fonti": [
+          {
+            "nome": "Sky News, immagini Maxar, 3 febbraio 2022",
+            "url": "https://news.sky.com/story/russia-ukraine-tensions-new-satellite-images-reveal-extent-of-moscows-military-build-up-12530594"
+          },
+          {
+            "nome": "CNN, New satellite images show buildup of Russian military around Ukraine (ripubblicato da WRAL)",
+            "url": "https://www.wral.com/archive/20112039/",
+            "data": "2022-02-02"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E005",
+        "livello": "confermato",
+        "titolo": "Il raggruppamento russo in Bielorussia per Allied Resolve",
+        "motivazione": "Reuters del 18 gennaio documenta arrivi e programma delle esercitazioni; il resoconto del 9 febbraio conferma la provenienza dal Distretto militare orientale e la presenza delle capacità aeree. Entrambe le fonti precedono l’invasione; il dispiegamento non dimostra da solo l’ordine d’attacco.",
+        "fonti": [
+          {
+            "nome": "Reuters, 18 gennaio",
+            "url": "https://www.reuters.com/world/europe/belarus-says-joint-drills-with-russia-run-feb-10-20-2022-01-18/"
+          },
+          {
+            "nome": "Reuters, Vast drills spotlight Russia’s grip on Belarus",
+            "url": "https://www.reuters.com/world/vast-drills-spotlight-russias-grip-belarus-during-standoff-with-west-2022-02-09/",
+            "data": "2022-02-09"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E006",
+        "livello": "confermato",
+        "titolo": "Il Pentagono segnala la crescita dei sostegni russi il 1° febbraio",
+        "motivazione": "Il briefing è una fonte primaria contemporanea della valutazione statunitense su logistica, aviazione e sanità. Il grado riguarda ciò che il Pentagono dichiarò: il resoconto non rende pubbliche tutte le evidenze su cui poggiava la valutazione.",
+        "fonti": [
+          {
+            "nome": "briefing del Dipartimento della Difesa",
+            "url": "https://www.defense.gov/News/Transcripts/Transcript/Article/2919829/pentagon-press-secretary-john-f-kirby-holds-a-press-briefing/"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E007",
+        "livello": "confermato",
+        "titolo": "Sei navi da sbarco trasferite verso il Mar Nero",
+        "motivazione": "Reuters documenta le sei unità e il transito osservato negli stretti; USNI News specifica la provenienza dalle flotte del Nord e del Baltico. È confermato il trasferimento della capacità, non l’assegnazione delle navi a uno sbarco irrevocabilmente deciso.",
+        "fonti": [
+          {
+            "nome": "Reuters, 8 febbraio",
+            "url": "https://www.reuters.com/world/russia-says-six-warships-are-heading-black-sea-drills-ifax-2022-02-08/"
+          },
+          {
+            "nome": "USNI News, Russian Navy Amphibious Group Enters Black Sea",
+            "url": "https://news.usni.org/2022/02/08/six-ship-russian-navy-amphibious-group-attack-sub-approach-black-sea-as-warships-mass-in-the-mediterranean",
+            "data": "2022-02-08"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E008",
+        "livello": "plausibile",
+        "titolo": "La minaccia anfibia poteva impegnare la difesa della costa",
+        "motivazione": "Il trasferimento rendeva disponibile un’opzione anfibia. Nel giugno 2022 Prevail Partners interpretava dimostrazioni navali successive, senza ingaggio, come possibile minaccia volta a trattenere difensori: è una valutazione privata, non accesso agli ordini russi o alle assegnazioni ucraine. La funzione di diversione è plausibile; il suo peso effettivo resta non quantificato.",
+        "fonti": [
+          {
+            "nome": "Reuters, 8 febbraio",
+            "url": "https://www.reuters.com/world/russia-says-six-warships-are-heading-black-sea-drills-ifax-2022-02-08/"
+          },
+          {
+            "nome": "Prevail Partners, Odessa Threat Assessment 03",
+            "url": "https://www.prevail-partners.com/odessa-threat-assessment-03/",
+            "data": "2022-06-24"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E009",
+        "livello": "confermato",
+        "titolo": "Ponte, ospedale ed elicotteri segnalati da Maxar il 17 febbraio",
+        "motivazione": "Il resoconto contemporaneo delle immagini Maxar localizza in Bielorussia un ponte sul Pryp’jat’ vicino al confine, un ospedale da campo e un nuovo schieramento di elicotteri. Documenta capacità presenti; l’assegnazione a specifiche missioni resta un’inferenza. Reuters dichiara di non avere verificato indipendentemente le immagini: è confermata la segnalazione attribuita a Maxar.",
+        "fonti": [
+          {
+            "nome": "Reuters, 17 febbraio",
+            "url": "https://www.reuters.com/world/europe/images-show-russian-military-activity-near-ukraine-still-high-satellite-firm-2022-02-17/"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E010",
+        "livello": "confermato",
+        "titolo": "Blinken distingue capacità russa e decisione d’invasione",
+        "motivazione": "La trascrizione del 1° dicembre 2021 documenta direttamente la dichiarazione del segretario di Stato. L’incertezza è quella espressa pubblicamente dagli Stati Uniti in quel momento, non una prova dell’assenza di una decisione nel vertice russo.",
+        "fonti": [
+          {
+            "nome": "Dipartimento di Stato, conferenza alla NATO",
+            "url": "https://2021-2025.state.gov/secretary-antony-j-blinken-at-a-press-availability-at-the-nato-ministerial/"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E011",
+        "livello": "plausibile",
+        "titolo": "La preparazione regionale favorì la rapidità russa in Georgia",
+        "motivazione": "Kofman ricostruisce retrospettivamente piani di contingenza, esercitazioni e prontezza dei reparti. La loro relazione con la velocità dell’intervento è un’interpretazione operativa sostenuta dalla sequenza, senza accesso completo agli ordini e alle decisioni russe.",
+        "fonti": [
+          {
+            "nome": "Michael Kofman, *Russian Performance in the Russo-Georgian War Revisited*",
+            "url": "https://warontherocks.com/russian-performance-in-the-russo-georgian-war-revisited/"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E012",
+        "livello": "confermato",
+        "titolo": "Le conclusioni della missione internazionale sulla guerra del 2008",
+        "motivazione": "Il volume I della IIFFMCG, pp. 19–25, espone la cronologia delle ostilità su larga scala, i preparativi e i limiti della prova sulla precedente incursione russa. Il record conferma le conclusioni della missione del 2009, senza trasformare la mancata verifica in prova dell’assenza di presenze russe anteriori.",
+        "fonti": [
+          {
+            "nome": "rapporto IIFFMCG, volume I, pp. 19–25",
+            "url": "https://www.mpil.de/files/pdf4/IIFFMCG_Volume_I2.pdf"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E013",
+        "livello": "non-verificato",
+        "titolo": "Una decisione russa irrevocabile di iniziare la guerra del 2008",
+        "motivazione": "Il rapporto della missione e la ricostruzione di Kofman attestano preparativi e capacità di reazione. Non consentono di stabilire una precedente decisione irrevocabile di aprire quella guerra: un piano esercitato non documenta da solo la scelta politica di eseguirlo.",
+        "fonti": [
+          {
+            "nome": "rapporto IIFFMCG, volume I, pp. 19–25",
+            "url": "https://www.mpil.de/files/pdf4/IIFFMCG_Volume_I2.pdf"
+          },
+          {
+            "nome": "Michael Kofman, *Russian Performance in the Russo-Georgian War Revisited*",
+            "url": "https://warontherocks.com/russian-performance-in-the-russo-georgian-war-revisited/"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E014",
+        "livello": "confermato",
+        "titolo": "Basi e accessi russi preesistenti in Crimea",
+        "motivazione": "RAND documenta retrospettivamente la presenza della Flotta del Mar Nero e il vantaggio operativo offerto dalle installazioni già disponibili. Gli accordi legittimavano quella presenza, non l’occupazione delle istituzioni ucraine e le altre azioni del 2014.",
+        "fonti": [
+          {
+            "nome": "RAND, Lessons from Russia’s Operations in Crimea and Eastern Ukraine",
+            "url": "https://www.rand.org/pubs/research_reports/RR1498.html",
+            "data": "2017-03-06"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E015",
+        "livello": "confermato",
+        "titolo": "La presa dei nodi e il blocco delle unità ucraine in Crimea",
+        "motivazione": "Le ricostruzioni successive documentano la sequenza avviata nella notte del 26–27 febbraio 2014. Il grado incorpora acquisizioni retrospettive sull’operazione russa: identità e comando degli uomini senza insegne non erano altrettanto trasparenti durante l’azione.",
+        "fonti": [
+          {
+            "nome": "Tor Bukkvoll, Russian Special Operations Forces in Crimea and Donbas, Parameters 46(2)",
+            "url": "https://press.armywarcollege.edu/parameters/vol46/iss2/4/"
+          },
+          {
+            "nome": "RAND, Lessons from Russia’s Operations in Crimea and Eastern Ukraine",
+            "url": "https://www.rand.org/pubs/research_reports/RR1498.html",
+            "data": "2017-03-06"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E016",
+        "livello": "plausibile",
+        "titolo": "Le condizioni locali favorirono il successo russo in Crimea",
+        "motivazione": "RAND collega il risultato a condizioni politiche, geografiche e militari particolarmente favorevoli. La spiegazione causale e la limitata trasferibilità del metodo sono valutazioni comparative, non effetti separatamente misurati di ciascun fattore.",
+        "fonti": [
+          {
+            "nome": "RAND, Lessons from Russia’s Operations in Crimea and Eastern Ukraine",
+            "url": "https://www.rand.org/pubs/research_reports/RR1498.html",
+            "data": "2017-03-06"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E017",
+        "livello": "plausibile",
+        "titolo": "Il coinvolgimento russo nel Donbass si adattò alla campagna",
+        "motivazione": "RAND ricostruisce un processo meno lineare della Crimea, con sostegno ai separatisti e successiva escalation. Il rapporto fra andamento dei combattimenti e scelte del Cremlino è sostenuto dalla sequenza, ma la catena decisionale interna resta solo parzialmente accessibile.",
+        "fonti": [
+          {
+            "nome": "RAND, Lessons from Russia’s Operations in Crimea and Eastern Ukraine",
+            "url": "https://www.rand.org/pubs/research_reports/RR1498.html",
+            "data": "2017-03-06"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E018",
+        "livello": "confermato",
+        "titolo": "Fuochi russi oltreconfine nel 2014: acquisizione retrospettiva",
+        "motivazione": "Nel luglio 2014 PBS riportava immagini e attribuzioni statunitensi: da sole sostenevano un giudizio plausibile sui tiri. Le ricostruzioni successive corroborano la partecipazione dell’artiglieria russa. Il grado attuale riguarda il quadro generale, non la verifica di ogni singolo impatto né una certezza già disponibile allora.",
+        "fonti": [
+          {
+            "nome": "PBS, documentazione statunitense del 27 luglio",
+            "url": "https://www.pbs.org/newshour/world/us-claims-rockets-fired-russia-ukraine-releases-satellite-images"
+          },
+          {
+            "nome": "Bellingcat, Putin’s Undeclared War: Summer 2014 — Russian Artillery Strikes against Ukraine",
+            "url": "https://www.bellingcat.com/news/2016/12/21/russian-artillery-strikes-against-ukraine/",
+            "data": "2016-12-21"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E019",
+        "livello": "confermato",
+        "titolo": "L’intervento di unità regolari russe nell’agosto 2014",
+        "motivazione": "L’analisi OSW contemporanea ricostruisce l’ingresso di unità regolari e il mutamento operativo sugli assi di Ilovaisk e Novoazovsk. La documentazione aggiuntiva corrobora l’intervento; il suo innesco decisionale è valutato separatamente.",
+        "fonti": [
+          {
+            "nome": "OSW, 3 settembre 2014",
+            "url": "https://www.osw.waw.pl/en/publikacje/analyses/2014-09-03/russian-military-intervention-eastern-ukraine"
+          },
+          {
+            "nome": "RAND, Lessons from Russia’s Operations in Crimea and Eastern Ukraine",
+            "url": "https://www.rand.org/pubs/research_reports/RR1498.html",
+            "data": "2017-03-06"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E020",
+        "livello": "confermato",
+        "titolo": "L’apertura della campagna russa su più assi nel febbraio 2022",
+        "motivazione": "Il briefing contemporaneo documenta le direttrici terrestri e l’impiego di missili e aviazione. La ricostruzione successiva integra l’assalto a Hostomel: il quadro completo non viene retrodatato alla conoscenza disponibile nelle prime ore del 24 febbraio. La corrispondenza riguarda le grandi direttrici geografiche osservate prima e dopo l’attacco, non l’assegnazione anticipata di ogni reparto.",
+        "fonti": [
+          {
+            "nome": "Dipartimento della Difesa USA, briefing del 24 febbraio 2022",
+            "url": "https://www.defense.gov/News/Transcripts/Transcript/Article/2947614/senior-defense-official-holds-an-off-camera-press-briefing-feb-24-2022/"
+          },
+          {
+            "nome": "RUSI, Preliminary Lessons in Conventional Warfighting",
+            "url": "https://static.rusi.org/359-SR-Ukraine-Preliminary-Lessons-Feb-July-2022-web-final.pdf",
+            "data": "2022-11-30"
+          },
+          {
+            "nome": "Reuters, 18 gennaio",
+            "url": "https://www.reuters.com/world/europe/belarus-says-joint-drills-with-russia-run-feb-10-20-2022-01-18/"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E021",
+        "livello": "plausibile",
+        "titolo": "Il piano russo presupponeva una rapida caduta dello Stato ucraino",
+        "motivazione": "RUSI ricostruisce nel novembre 2022 una campagna iniziale di circa dieci giorni. Gli autori avvertono che molta documentazione ucraina sottostante non è pubblicabile: il piano è una ricostruzione testimoniale retrospettiva, non una sequenza di ordini interamente verificabile.",
+        "fonti": [
+          {
+            "nome": "RUSI, *Preliminary Lessons in Conventional Warfighting*, 2022",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-conventional-warfighting-russias-invasion-ukraine-february-july-2022"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E022",
+        "livello": "plausibile",
+        "titolo": "Sottostima del fabbisogno e insufficienze del sostegno russo",
+        "motivazione": "RAND valuta retrospettivamente pianificazione, struttura, manutenzione e personale. Le evidenze sostengono l’interazione fra aspettative errate e carenze materiali; non permettono di misurare separatamente il contributo di ciascuna causa al risultato.",
+        "fonti": [
+          {
+            "nome": "RAND, *Russian Logistics and Sustainment Failures in the Ukraine Conflict*, 2023",
+            "url": "https://www.rand.org/pubs/research_reports/RRA2033-1.html"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E023",
+        "livello": "plausibile",
+        "titolo": "La segretezza ridusse la preparazione dei subordinati russi",
+        "motivazione": "RUSI collega la compartimentazione alla tardiva informazione dei subordinati e alla preparazione tattica diseguale. È una ricostruzione retrospettiva basata anche su evidenze ucraine non pubbliche; ampiezza e conseguenze della pratica non sono verificabili unità per unità.",
+        "fonti": [
+          {
+            "nome": "RUSI, Preliminary Lessons in Conventional Warfighting",
+            "url": "https://static.rusi.org/359-SR-Ukraine-Preliminary-Lessons-Feb-July-2022-web-final.pdf",
+            "data": "2022-11-30"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E024",
+        "livello": "plausibile",
+        "titolo": "La concentrazione della primavera 2021 offriva pressione e opzioni offensive",
+        "motivazione": "CSIS ricostruisce nel settembre 2021 concentrazioni ed esercitazioni della primavera. La credibilità delle opzioni offensive e la funzione coercitiva sono una valutazione operativa del dispositivo, distinta dai movimenti documentati.",
+        "fonti": [
+          {
+            "nome": "CSIS, The Russian and Ukrainian Spring 2021 War Scare",
+            "url": "https://www.csis.org/analysis/russian-and-ukrainian-spring-2021-war-scare",
+            "data": "2021-09-21"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E025",
+        "livello": "plausibile",
+        "titolo": "La combinazione delle funzioni costruiva una minaccia su scala nazionale",
+        "motivazione": "È una sintesi dell’autore sulla convergenza di schieramenti, personale e sostegni. Le fonti contemporanee documentano le componenti; la loro lettura come dispositivo per una campagna nazionale è inferenziale e non certifica la completezza di ogni catena operativa.",
+        "fonti": [
+          {
+            "nome": "CSIS, *Moscow’s Continuing Ukrainian Buildup*, 17 novembre 2021",
+            "url": "https://www.csis.org/analysis/moscows-continuing-ukrainian-buildup"
+          },
+          {
+            "nome": "Sky News, immagini Maxar, 3 febbraio 2022",
+            "url": "https://news.sky.com/story/russia-ukraine-tensions-new-satellite-images-reveal-extent-of-moscows-military-build-up-12530594"
+          },
+          {
+            "nome": "Reuters, 18 gennaio",
+            "url": "https://www.reuters.com/world/europe/belarus-says-joint-drills-with-russia-run-feb-10-20-2022-01-18/"
+          },
+          {
+            "nome": "briefing del Dipartimento della Difesa",
+            "url": "https://www.defense.gov/News/Transcripts/Transcript/Article/2919829/pentagon-press-secretary-john-f-kirby-holds-a-press-briefing/"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E026",
+        "livello": "plausibile",
+        "titolo": "La campagna nazionale come lettura della convergenza dei preparativi",
+        "motivazione": "Il confronto fra accumuli autunnali, dispiegamento bielorusso e crescita degli alloggiamenti sostiene questa lettura retrospettiva della sequenza di gennaio. La maggiore capacità esplicativa dell’ipotesi è un giudizio analitico; non prova che la decisione d’invasione fosse già conosciuta allora.",
+        "fonti": [
+          {
+            "nome": "CSIS, *Moscow’s Continuing Ukrainian Buildup*, 17 novembre 2021",
+            "url": "https://www.csis.org/analysis/moscows-continuing-ukrainian-buildup"
+          },
+          {
+            "nome": "Reuters, 18 gennaio",
+            "url": "https://www.reuters.com/world/europe/belarus-says-joint-drills-with-russia-run-feb-10-20-2022-01-18/"
+          },
+          {
+            "nome": "Sky News, immagini Maxar, 3 febbraio 2022",
+            "url": "https://news.sky.com/story/russia-ukraine-tensions-new-satellite-images-reveal-extent-of-moscows-military-build-up-12530594"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E027",
+        "livello": "plausibile",
+        "titolo": "I movimenti terminali accorciavano il tempo all’impiego",
+        "motivazione": "La successione delle segnalazioni Maxar del 17 e del 20 febbraio sostiene una maggiore prossimità all’azione. Attribuire agli ultimi giorni soprattutto un aumento dell’imminenza è la sintesi operativa dell’autore; le immagini non forniscono l’ora dell’ordine né misurano la prontezza di ogni reparto.",
+        "fonti": [
+          {
+            "nome": "Reuters, 17 febbraio",
+            "url": "https://www.reuters.com/world/europe/images-show-russian-military-activity-near-ukraine-still-high-satellite-firm-2022-02-17/"
+          },
+          {
+            "nome": "Reuters, 20 febbraio",
+            "url": "https://www.reuters.com/world/europe/new-russian-deployments-armored-equipment-troops-near-ukraine-maxar-2022-02-20/"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E028",
+        "livello": "plausibile",
+        "titolo": "La crisi georgiana attivò e ampliò una possibilità preparata",
+        "motivazione": "Kofman e la missione internazionale permettono di collegare preparazione e svolgimento della campagna. È una ricostruzione retrospettiva delle condizioni operative; non risolve il punto distinto, non verificato, di una decisione irrevocabile anteriore.",
+        "fonti": [
+          {
+            "nome": "Michael Kofman, *Russian Performance in the Russo-Georgian War Revisited*",
+            "url": "https://warontherocks.com/russian-performance-in-the-russo-georgian-war-revisited/"
+          },
+          {
+            "nome": "rapporto IIFFMCG, volume I, pp. 19–25",
+            "url": "https://www.mpil.de/files/pdf4/IIFFMCG_Volume_I2.pdf"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E029",
+        "livello": "plausibile",
+        "titolo": "L’avanzata ucraina rese urgente l’escalation russa dell’agosto 2014",
+        "motivazione": "OSW interpreta l’intervento come reazione al deterioramento della posizione separatista; RAND corrobora retrospettivamente la sequenza. L’urgenza attribuita alla decisione del Cremlino è un’inferenza: l’intervento delle unità regolari è documentato nel richiamo successivo.",
+        "fonti": [
+          {
+            "nome": "OSW, 3 settembre 2014",
+            "url": "https://www.osw.waw.pl/en/publikacje/analyses/2014-09-03/russian-military-intervention-eastern-ukraine"
+          },
+          {
+            "nome": "RAND, Lessons from Russia’s Operations in Crimea and Eastern Ukraine",
+            "url": "https://www.rand.org/pubs/research_reports/RR1498.html",
+            "data": "2017-03-06"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E030",
+        "livello": "plausibile",
+        "titolo": "Guerra breve prevista e fabbisogno di fanteria nelle retrovie",
+        "motivazione": "Kofman e Lee collegano la struttura di forza alla carenza di fanteria e alle difficoltà di presidio. Il rapporto RAND sul sostegno integra il ruolo della resistenza incontrata. Il nesso fra aspettativa di cedimento e fabbisogno effettivo resta una spiegazione retrospettiva.",
+        "fonti": [
+          {
+            "nome": "Michael Kofman e Rob Lee, Not Built for Purpose: The Russian Military’s Ill-Fated Force Design",
+            "url": "https://www.cnas.org/publications/commentary/not-build-for-purpose-the-russian-militarys-ill-fated-force-design",
+            "data": "2022-06-02"
+          },
+          {
+            "nome": "RAND, *Russian Logistics and Sustainment Failures in the Ukraine Conflict*, 2023",
+            "url": "https://www.rand.org/pubs/research_reports/RRA2033-1.html"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E031",
+        "livello": "plausibile",
+        "titolo": "La sopravvivenza ucraina impedì la paralisi cercata dagli attacchi",
+        "motivazione": "RUSI ricostruisce dispersione e permanenza delle capacità ucraine dopo le prime salve. Il rapporto tra questa sopravvivenza e la mancata decisione terrestre è una spiegazione causale; le evidenze operative sottostanti sono parziali.",
+        "fonti": [
+          {
+            "nome": "RUSI, The Russian Air War and Ukrainian Requirements for Air Defence",
+            "url": "https://static.rusi.org/SR-Russian-Air-War-Ukraine-web-final.pdf",
+            "data": "2022-11-07"
+          },
+          {
+            "nome": "RUSI, Preliminary Lessons in Conventional Warfighting",
+            "url": "https://static.rusi.org/359-SR-Ukraine-Preliminary-Lessons-Feb-July-2022-web-final.pdf",
+            "data": "2022-11-30"
+          }
+        ]
+      },
+      {
+        "id": "PC1-E032",
+        "livello": "confermato",
+        "titolo": "L’offensiva dalla Crimea ottenne rapidi guadagni nel sud",
+        "motivazione": "La ricostruzione operativa documenta l’avanzata meridionale e permette di distinguerne gli esiti da quelli attorno a Kyiv. Il grado riguarda la differenza osservata fra settori; il peso relativo del sostegno e della risposta ucraina resta oggetto di interpretazione.",
+        "fonti": [
+          {
+            "nome": "RUSI, Preliminary Lessons in Conventional Warfighting",
+            "url": "https://static.rusi.org/359-SR-Ukraine-Preliminary-Lessons-Feb-July-2022-web-final.pdf",
+            "data": "2022-11-30"
+          }
+        ]
+      }
+    ]
+  }
+}
