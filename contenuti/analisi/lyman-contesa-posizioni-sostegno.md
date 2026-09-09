@@ -1,9 +1,9 @@
 ---
-titolo: "Lyman: la contesa delle posizioni comincia dal sostegno"
+titolo: "Lyman: logistica e contesa delle posizioni"
 slug: lyman-contesa-posizioni-sostegno
 data: 2026-09-09
 sezione: Strategia
-sommario: "A nord di Lyman l’Ucraina ha ridotto una posizione avanzata russa combinando pressione terrestre e interdizione del sostegno prossimo. Il caso mostra come l’iniziativa possa riemergere senza che l’ambiente smetta di essere osservato e colpito."
+sommario: "Come l'attrito di UAV e UGV ha ripristinato una progressiva manovra locale"
 teatro: "Ucraina · Lyman"
 domini: [terra, droni, logistica]
 in_evidenza: true
@@ -18,7 +18,7 @@ infobox:
     - occhiello: "Subentrare"
       titolo: "La presenza ucraina"
       testo: "Il terreno lasciato dalla presenza russa acquista valore dove uomini e mezzi riescono a entrarvi, rifornirsi, ruotare e difendersi."
-    - occhiello: "Durare"
+    - occhiello: "Consolidare"
       titolo: "La prova aperta"
       testo: "Il grado successivo è conservare il nuovo rapporto dentro la risposta russa e ripeterlo a costi sostenibili."
 ---
