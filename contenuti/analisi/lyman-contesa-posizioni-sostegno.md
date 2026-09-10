@@ -9,7 +9,7 @@ domini: [terra, droni, logistica]
 in_evidenza: true
 sistemi_citati: []
 immagine:
-  file: /immagini/strategia/STR2-lyman.jpg
+  file: /immagini/strategia/STR2-lyman.png
   alt: "Cartina del settore Lyman–Borova con le direttrici operative ucraine e russe e la riduzione del saliente a nord di Lyman."
   credito: "Clément Molin (@clement_molin)"
   fonte: "https://x.com/clement_molin/status/2097246426551955493"
@@ -57,7 +57,6 @@ Questo cambia il modo di leggere il successo. Non occorre immaginare un isolamen
 ## Colpire ciò che permette di tornare
 
 La scelta ucraina è visibile prima del risultato di settembre. Il 18 marzo ArmyInform ha riportato la testimonianza di Olena, responsabile della pianificazione del battaglione UAV *Mara*: il reparto aveva modificato il proprio metodo già nel 2025, aumentando la pressione su operatori di droni russi, ripari e collegamenti logistici {% affV1 "STR2-E005" %}. La stessa militare attribuiva a questo cambiamento una diminuzione degli assalti russi e recuperi locali; il nesso è plausibile, ma resta una valutazione belligerante priva di una serie indipendente capace di isolare l’effetto {% affV1 "STR2-E006" %}.
-
 La distinzione è importante soprattutto per ciò che rivela della scelta. Un drone può inseguire il combattente già arrivato al contatto oppure cercare l’operatore che gli permette di ricevere osservazione dall’alto. L’artiglieria può colpire una squadra o investire un punto attraverso cui devono passare munizioni e rinforzi. Lo stesso mezzo cambia rendimento quando cambia la funzione che il comando gli assegna.
 
 *Mara* non combatte contro una logistica astratta. Combatte contro persone, veicoli, antenne, ripari e percorsi che consentono a un reparto russo di ripetere domani ciò che ha fatto oggi. Altre pubblicazioni della 66ª Brigata, riprese da [ArmyInform](https://armyinform.com.ua/en/2026/03/10/they-staged-a-genocide-of-russian-communications-mara-battalion-pilots-destroyed-occupiers-antennas/), mostrano attacchi contro antenne russe; una seconda parte della testimonianza di marzo descrive la ricerca dei pezzi d’artiglieria mentre i russi impiegano mimetizzazione, falsi bersagli e mobilità. Il bersaglio non aspetta passivamente di essere trovato. Cerca di sottrarsi.
@@ -87,7 +86,6 @@ Per [*La macchina prima dell’uomo*](/fasi/macchina-prima-delluomo/) questo è 
 Ogni posizione recuperata modifica anche l’avversario. Se la linea russa arretra, alcuni collegamenti possono accorciarsi, il saliente può ridursi e nuove posizioni possono presentare una geometria più favorevole. Il successo ucraino può quindi consumare una parte della condizione che lo ha facilitato. Il passo successivo deve essere compiuto contro una risposta diversa.
 
 L’8 settembre, il portavoce della 66ª Brigata *Vasyl Denysiuk* ha descritto proprio un adattamento di questo tipo. Secondo la sua testimonianza, le forze russe incontrano difficoltà nel portare nuovi pezzi d’artiglieria a tubo dopo le perdite, ma compensano con sistemi a razzo a gittata maggiore e con un impiego crescente di UAV, inclusi FPV radio, sistemi a fibra e droni Molniya. La ricostruzione sostiene l’ipotesi di una degradazione locale accompagnata da compensazione, senza consentire di misurare il saldo finale del fuoco disponibile {% affV1 "STR2-E010" %}.
-
 È la funzione residua che conta. Se un pezzo viene distrutto e un altro sistema conserva abbastanza fuoco per impedire l’accesso, la perdita materiale è reale ma l’effetto operativo è più piccolo. Se la sostituzione arriva tardi, ha minore precisione, meno volume o costringe il comando a spostare risorse da un altro settore, il danno comincia invece a propagarsi.
 
 La stessa risposta russa restringe l’idea di un campo ormai dominato dai sensori ucraini. L’ISW ha riportato l’osservazione ucraina secondo cui piccoli gruppi russi possono sfruttare il tempo necessario ai droni per raggiungerli e nascondersi prima dell’ingaggio {% affV1 "STR2-E011" %}. Vedere non produce automaticamente fuoco tempestivo; colpire non garantisce che la funzione scompaia; avanzare non rende sicuro il terreno appena raggiunto.
