@@ -9,6 +9,7 @@
 {% set usesDebt = 'class="debito ' in content %}
 {% set usesSchemaKit = 'data-schema-kit=' in content %}
 {% set usesStr1 = 'data-schema-kit="str1-allocazione-penetrazione"' in content %}
+{% set usesStr2 = 'data-schema-kit="str2-saliente"' in content %}
 {% set usesStarlink = 'data-starlink-flow' in content %}
 {% set usesPalantir = 'data-palantir-schema' in content %}
 {% set usesInfobox = 'data-infobox-mobile-hook' in content %}
@@ -39,6 +40,7 @@
 {% if usesDebt %}<link rel="stylesheet" href="/css/debito-integrazione.css">{% endif %}
 {% if usesSchemaKit %}<link rel="stylesheet" href="/css/schema-kit.css">{% endif %}
 {% if usesStr1 %}<link rel="stylesheet" href="/css/schema-str1.css">{% endif %}
+{% if usesStr2 %}<link rel="stylesheet" href="/css/schema-str2.css">{% endif %}
 {% if usesImageLightbox %}<link rel="stylesheet" href="/css/image-lightbox.css">{% endif %}
 {% if usesAffidabilitaV1 %}<link rel="stylesheet" href="/css/affidabilita-v1.css">{% endif %}
 <link rel="alternate" type="application/rss+xml" title="{{ site.titolo }} — Analisi" href="/feed.xml">
@@ -109,6 +111,7 @@
 {% if usesDebt %}<script src="/js/debito-integrazione.js" defer></script>{% endif %}
 {% if usesSchemaKit %}<script src="/js/schema-kit.js" defer></script>{% endif %}
 {% if usesStr1 %}<script src="/js/schema-str1.js" defer></script>{% endif %}
+{% if usesStr2 %}<script src="/js/schema-str2.js" defer></script>{% endif %}
 {% if usesStarlink %}<script src="/js/schema-starlink.js" defer></script>{% endif %}
 {% if usesPalantir %}<script src="/js/schema-palantir.js" defer></script>{% endif %}
 {% if usesInfobox %}<script src="/js/infobox-scroll.js" defer></script>{% endif %}

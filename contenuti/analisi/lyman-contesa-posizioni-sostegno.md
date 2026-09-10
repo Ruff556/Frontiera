@@ -63,6 +63,9 @@ La distinzione è importante soprattutto per ciò che rivela della scelta. Un dr
 
 La pressione sul sostegno diventa così un duello fra cicli. L’Ucraina prova a rendere più difficile la reiterazione russa; la Russia prova a ricostituire o spostare ciò che viene colpito. **Se il primo ciclo corre abbastanza più rapidamente del secondo in un punto determinato, il rapporto di posizione può cambiare senza che la difesa scompaia**.
 
+{% from "partials/schema-str2.njk" import schemaStr2 %}
+{{ schemaStr2() }}
+
 L’avanzata terrestre entra qui, non dopo. Ricostruzioni pubbliche descrivono **piccoli assalti** e movimenti di fanteria **sostenuti da UAV** di osservazione e attacco; l’episodio verso Nove del 22 maggio mostra anche la sopravvivenza di una risposta dronica russa mentre gli ucraini cercano di portare uomini in avanti. La sequenza non è quella rassicurante di una difesa prima spenta e di una fanteria poi libera di passare. Fuoco, movimento, nuova esposizione e ulteriore interdizione si sovrappongono.
 
 Il successo nasce quando la combinazione diventa sufficiente localmente.

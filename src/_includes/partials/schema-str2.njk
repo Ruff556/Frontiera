@@ -1,0 +1,139 @@
+{# STR2 — un solo campo, tre stati, quattro momenti. #}
+{% macro schemaStr2(o) %}
+{% from "partials/schema-kit.njk" import schemaFrame, schemaStage, schemaCaption %}
+{% set o = o or {} %}
+{% set id = o.id or "schema-str2-saliente" %}
+{% set nodes = [{key: "upper", letter: "S", name: "Superiore", x: 680, y: 88}, {key: "center", letter: "C", name: "Centrale", x: 710, y: 185}, {key: "lower", letter: "I", name: "Inferiore", x: 680, y: 282}] %}
+{# L'output resta un blocco HTML continuo anche nel renderer Markdown. #}
+{% set markup %}
+{% call schemaFrame({
+  id: id,
+  kind: "str2-saliente",
+  className: "str2-schema",
+  navigationLabel: "Schema — Il saliente e le sue linee",
+  eyebrow: "STR2 · SCHEMA DI STRATEGIA",
+  title: "Il saliente e le sue linee",
+  subtitle: "Premere sulla posizione. Interrompere il sostegno.",
+  watermark: "standard"
+}) %}
+  <div class="str2-schema__navigation" data-str2-controls hidden>
+    <div class="str2-schema__modes" role="group" aria-label="Stati dello schema">
+      <button type="button" class="schema-kit__button str2-schema__mode" aria-pressed="true" data-str2-mode="off"><span>OFF</span>Assetto di base</button>
+      <button type="button" class="schema-kit__button str2-schema__mode" aria-pressed="false" data-str2-mode="direct"><span>STATO 1</span>Pressione diretta</button>
+      <button type="button" class="schema-kit__button str2-schema__mode" aria-pressed="false" data-str2-mode="combined"><span>STATO 2</span>Attacco combinato</button>
+    </div>
+    <div class="str2-schema__moments" role="group" aria-label="I quattro momenti dello Stato 2">
+      <button type="button" class="schema-kit__button str2-schema__moment" aria-pressed="false" data-str2-moment="1"><b>01</b><span>Attacco<br>combinato</span></button>
+      <button type="button" class="schema-kit__button str2-schema__moment" aria-pressed="false" data-str2-moment="2"><b>02</b><span>Nodo<br>superiore</span></button>
+      <button type="button" class="schema-kit__button str2-schema__moment" aria-pressed="false" data-str2-moment="3"><b>03</b><span>Sotto la<br>soglia</span></button>
+      <button type="button" class="schema-kit__button str2-schema__moment" aria-pressed="false" data-str2-moment="4"><b>04</b><span>Nuovo<br>equilibrio</span></button>
+    </div>
+  </div>
+
+  {% call schemaStage({className: "str2-schema__stage", label: "Campo schematico Blue e Red"}) %}
+    <div class="str2-schema__field">
+      <div class="str2-schema__field-head" aria-hidden="true"><span>BLUE</span><span data-str2-field-label>Assetto di base</span><span>RED</span></div>
+      <svg class="str2-schema__canvas" viewBox="0 0 1000 370" role="img" aria-labelledby="{{ id }}-svg-title {{ id }}-svg-desc" focusable="false" data-str2-canvas>
+        <title id="{{ id }}-svg-title">Il saliente Red e la rete che lo sostiene</title>
+        <desc id="{{ id }}-svg-desc" data-str2-desc>Assetto di base. Le posizioni Blue superiore e inferiore sono più avanzate della centrale e minacciano i fianchi del saliente Red. Tre nodi logistici, collegati alla Base Red, sostengono il saliente. Nessun attacco è attivo.</desc>
+        <defs>
+          <marker id="{{ id }}-red-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#bd3c37" stroke-width="1.5"/></marker>
+          <marker id="{{ id }}-blue-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#217da7" stroke-width="1.7"/></marker>
+        </defs>
+        <g aria-hidden="true">
+          <path class="str2-schema__rear-line" d="M680 88 Q740 185 680 282" data-str2-rear-line opacity="0"/>
+          <g class="str2-schema__blue-lines">
+            <path d="M82 185 Q175 88 340 88" data-str2-blue-line="upper"/>
+            <path d="M82 185 L210 185" data-str2-blue-line="center"/>
+            <path d="M82 185 Q175 282 340 282" data-str2-blue-line="lower"/>
+          </g>
+          <g class="str2-schema__rear-links" marker-end="url(#{{ id }}-red-arrow)">
+            <path d="M898 185 Q815 88 695 88" data-str2-rear-link="upper"/>
+            <path d="M898 185 L725 185" data-str2-rear-link="center"/>
+            <path d="M898 185 Q815 282 695 282" data-str2-rear-link="lower"/>
+          </g>
+          {% for node in nodes %}
+          <path class="str2-schema__supply-trace" data-str2-supply-trace="{{ node.key }}" d="{% if node.key == 'upper' %}M665 88 Q540 88 455 169{% elif node.key == 'center' %}M695 185 L465 185{% else %}M665 282 Q540 282 455 201{% endif %}"/>
+          <path class="str2-schema__supply" data-str2-supply="{{ node.key }}" marker-end="url(#{{ id }}-red-arrow)" d="{% if node.key == 'upper' %}M665 88 Q540 88 455 169{% elif node.key == 'center' %}M695 185 L465 185{% else %}M665 282 Q540 282 455 201{% endif %}"/>
+          {% endfor %}
+          <g data-str2-vectors>
+            {% for route in ["upper-salient", "center-salient", "lower-salient", "upper-node", "lower-node", "upper-center", "lower-center"] %}
+            <g data-str2-vector="{{ route }}" opacity="0">
+              <path class="str2-schema__vector-under"/>
+              <path class="str2-schema__vector" marker-end="url(#{{ id }}-blue-arrow)"/>
+              <path class="str2-schema__pulse" pathLength="100" stroke-dasharray="7 200" stroke-dashoffset="10"/>
+            </g>
+            {% endfor %}
+          </g>
+          <g class="str2-schema__base str2-schema__base--blue" data-str2-base="blue" transform="translate(70 185)"><rect x="-12" y="-12" width="24" height="24"/><rect class="str2-schema__base-inner" x="-8" y="-8" width="16" height="16"/><text y="36" text-anchor="middle">BASE</text></g>
+          <g class="str2-schema__base str2-schema__base--red" data-str2-base="red" transform="translate(910 185)"><rect x="-12" y="-12" width="24" height="24"/><rect class="str2-schema__base-inner" x="-8" y="-8" width="16" height="16"/><text y="36" text-anchor="middle">BASE</text></g>
+          {% for node in nodes %}
+          <g class="str2-schema__blue-position" data-str2-blue="{{ node.key }}" transform="translate({% if node.key == 'center' %}210{% else %}340{% endif %} {{ node.y }})"><circle r="11"/><circle class="str2-schema__blue-core" r="6.5"/></g>
+          <g class="str2-schema__red-node" data-str2-node="{{ node.key }}" transform="translate({{ node.x }} {{ node.y }})"><circle r="14"/><text text-anchor="middle" dy="4">{{ node.letter }}</text></g>
+          {% endfor %}
+          <g data-str2-salient transform="translate(440 185)" opacity="1"><path class="str2-schema__salient" d="M-19 0 L-9.5 -17 H9.5 L19 0 L9.5 17 H-9.5 Z"/><path class="str2-schema__salient-inner" d="M-14 0 L-7 -12 H7 L14 0 L7 12 H-7 Z"/></g>
+          <text class="str2-schema__salient-label" x="440" y="224" text-anchor="middle" data-str2-salient-label>Saliente</text>
+          <g class="str2-schema__warning" data-str2-warning opacity="0" transform="translate(440 142)"><path d="M0 -10 L10 8 H-10 Z"/><text text-anchor="middle" y="5">!</text></g>
+          <text class="str2-schema__after-label str2-schema__after-label--blue" x="330" y="345" text-anchor="middle" data-str2-blue-after opacity="0">Nuove posizioni da sostenere</text>
+          <text class="str2-schema__after-label str2-schema__after-label--red" x="730" y="345" text-anchor="middle" data-str2-red-after opacity="0">Nuova linea Red</text>
+        </g>
+      </svg>
+    </div>
+  {% endcall %}
+
+  <div class="str2-schema__reading" aria-labelledby="{{ id }}-reading-title">
+    <div class="str2-schema__actions" data-str2-controls hidden>
+      <button class="schema-kit__button str2-schema__back" type="button" data-str2-back disabled><span aria-hidden="true">←</span> Indietro</button>
+      <button class="schema-kit__button str2-schema__next" type="button" data-str2-next><span data-str2-next-label>Avanza</span><span aria-hidden="true">→</span></button>
+    </div>
+    <div class="str2-schema__reading-meta"><span data-str2-count>OFF · ASSETTO DI BASE</span><span data-str2-phase-label>Rete ridondante</span></div>
+    <div class="str2-schema__copy" data-str2-copy>
+      <div data-str2-reading-copy><h4 id="{{ id }}-reading-title" data-str2-reading-title>Tre linee sostengono la posizione avanzata.</h4><p data-str2-reading-text>Il saliente Red è esposto sui fianchi, ma riceve sostegno da una rete ancora integra. Nessun attacco è attivo.</p></div>
+    </div>
+
+  </div>
+
+  <div class="str2-schema__metrics">
+    <section class="str2-schema__panel str2-schema__ssa" aria-labelledby="{{ id }}-ssa-title">
+      <div class="str2-schema__panel-head"><h4 id="{{ id }}-ssa-title">Sufficienza degli approvvigionamenti</h4><span class="str2-schema__value"><span data-str2-ssa-value>100</span><small>%</small></span></div>
+      <p class="str2-schema__metric-detail">Sostegno complessivo al saliente · SSA</p>
+      <div class="str2-schema__scale" aria-hidden="true"><span>0%</span><span>60% · soglia</span><span>100%</span></div>
+      <div class="str2-schema__ssa-meter" role="meter" aria-label="Sufficienza degli approvvigionamenti del saliente, valore illustrativo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" data-str2-ssa-meter>
+        <span class="str2-schema__ssa-fill" data-str2-ssa-fill></span><span class="str2-schema__threshold" aria-hidden="true"></span>
+      </div>
+      <p class="str2-schema__ssa-status" data-str2-ssa-status>≥ 60% · Posizione generalmente sostenibile</p>
+      <p class="str2-schema__threshold-key">Sotto il 60%: posizione difficilmente mantenibile.</p>
+    </section>
+    <section class="str2-schema__panel" aria-labelledby="{{ id }}-nodes-title">
+      <div class="str2-schema__panel-head"><h4 id="{{ id }}-nodes-title">Sostegno dei nodi al saliente</h4><span class="str2-schema__unit">0–100%</span></div>
+      <div class="str2-schema__node-meters">
+        {% for node in nodes %}
+        <div class="str2-schema__node-row"><span class="str2-schema__node-name"><b>{{ node.letter }}</b>{{ node.name }}</span><div class="str2-schema__node-meter" role="meter" aria-label="Efficienza del sostegno del nodo {{ node.name | lower }}, valore illustrativo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" data-str2-node-meter="{{ node.key }}"><span data-str2-node-fill="{{ node.key }}"></span></div><span class="str2-schema__node-value"><span data-str2-node-value="{{ node.key }}">100</span>%</span></div>
+        {% endfor %}
+      </div>
+      <p class="str2-schema__node-note">L’efficienza riguarda il sostegno alla posizione avanzata.</p>
+    </section>
+  </div>
+
+  <div class="str2-schema__legend" role="group" aria-label="Legenda">
+    <span class="str2-schema__legend-title">LEGENDA</span>
+    <ul>
+      <li><i class="str2-schema__key str2-schema__key--position" aria-hidden="true"></i>Posizione Blue</li>
+      <li><i class="str2-schema__key str2-schema__key--blue-base" aria-hidden="true"></i>Base Blue</li>
+      <li><i class="str2-schema__key str2-schema__key--blue-line" aria-hidden="true"></i>Linea Blue</li>
+      <li><i class="str2-schema__key str2-schema__key--node" aria-hidden="true"></i>Nodo logistico Red</li>
+      <li><i class="str2-schema__key str2-schema__key--red-base" aria-hidden="true"></i>Base Red</li>
+      <li><i class="str2-schema__key str2-schema__key--red-line" aria-hidden="true"></i>Linea Red attiva</li>
+      <li><i class="str2-schema__key str2-schema__key--salient" aria-hidden="true"></i>Saliente Red</li>
+      <li><i class="str2-schema__key str2-schema__key--inactive" aria-hidden="true"></i>Linea Red degradata / inattiva</li>
+      <li><i class="str2-schema__key str2-schema__key--vector" aria-hidden="true"></i>Vettore offensivo Blue</li>
+    </ul>
+  </div>
+  {% call schemaCaption({className: "str2-schema__caption"}) %}
+    <p><b>Modello analitico.</b> Percentuali, soglia del 60% e tempi sono illustrativi: non sono misurazioni storiche del caso Lyman. La SSA sintetizza la sostenibilità e non è la media delle tre efficienze. La perdita del saliente non implica il collasso del dispositivo Red.</p>
+    <noscript><p>Per esplorare la pressione diretta e i quattro momenti dell’attacco combinato, abilita JavaScript. Il campo mostra l’assetto iniziale.</p></noscript>
+  {% endcall %}
+{% endcall %}
+{% endset %}
+{{ markup | replace("\r", "") | replace("\n", "") | trim | safe }}
+{% endmacro %}
