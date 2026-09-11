@@ -5,7 +5,6 @@ sezione: Attualità
 sommario: "La crisi ai vertici ucraini rivela due modi di governare l'innovazione: accelerarne la frontiera o preservare la coerenza dell'esercito."
 teatro: Ucraina
 domini: [aria, industria]
-in_evidenza: true
 sistemi_citati: []
 immagine:
   file: /immagini/attualita/F-D-S.png

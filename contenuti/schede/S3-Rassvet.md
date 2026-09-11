@@ -4,7 +4,6 @@ slug: rassvet
 categoria: Sistemi
 ruolo: "Il tentativo russo al collegamento sovrano"
 aggiornata: 2026-08-18
-in_evidenza: false
 
 immagine:
   file: /immagini/sistemi/s-rassvet.png

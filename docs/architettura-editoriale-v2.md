@@ -69,7 +69,6 @@ slug: <slug>
 categoria: Sistemi
 ruolo: <riga di sintesi>       # usata come sommario di card/slide se manca `sommario`
 aggiornata: 2026-07-29
-in_evidenza: true              # opzionale: candida la scheda allo slot Sistemi del carosello
 immagine: { file: …, alt: …, credito: …, licenza: … }
 ```
 
@@ -84,34 +83,23 @@ di Attualità, conservando metadati, specifiche e collegamenti bidirezionali.
 
 ## 3. Il carosello della home
 
-Il carosello rappresenta **famiglie di contenuto** (i tre nuclei), **non**
-periodizzazioni. Mostra al massimo un elemento per nucleo, in ordine fisso:
+Il carosello rappresenta una **regia editoriale centralizzata**, non uno stato
+distribuito nei singoli contenuti. La fonte unica è
+`src/_data/evidenza-home.json`, un array ordinato di esattamente tre slug.
 
-```
-Attualità → Strategia → Sistemi
-```
+L'ordine dell'array determina direttamente l'ordine delle slide.
 
 ### Selezione — `collections.inEvidenza` (`.eleventy.js`)
 
-Per ciascun nucleo:
+Ogni slug deve risolvere esattamente un contenuto ammesso: analisi con
+`sezione: Attualità` o `sezione: Strategia`, oppure schede con
+`categoria: Sistemi`. La configurazione invalida (struttura, cardinalità, tipo,
+slug vuoto, duplicato, non risolto o ambiguo) interrompe la build con un errore.
+La collezione `collections.inEvidenza` conserva il nome pubblico e restituisce gli
+item nell'ordine della configurazione; non applica fallback né ordinamenti propri.
 
-1. si considerano gli item del nucleo ordinati per **data editoriale** decrescente;
-2. si sceglie il più recente marcato `in_evidenza: true`;
-3. se nessuno è marcato, si usa come fallback il più recente in assoluto;
-4. se il nucleo non ha contenuti, **non** si genera alcuna slide.
-
-Fonti: Attualità e Strategia dalle **analisi** (per `sezione`); Sistemi dalle
-**schede** (per `categoria`). La collezione restituisce
-`[attualità, strategia, sistemi].filter(Boolean)`: da 0 a 3 slide, mai segnaposto
-«Prossimamente». La selezione è deterministica e **non** tocca `collections.fasi`
-né la fonte dati P0–P6.
-
-> **Nota tecnica sull'ordinamento.** L'ordinamento usa la data del front matter
-> (`data` per le analisi, `aggiornata` per le schede), **non** il `page.date` di
-> Eleventy. `eleventyComputed.date` popola `data.date` ma non il `page.date`
-> usato nel confronto, che ripiegherebbe sul timestamp del file — fragile e non
-> deterministico (p. es. azzerato da una copia della cartella). Per lo stesso
-> motivo anche `collections.analisi` è stata portata a ordinare per `data`.
+La selezione è deterministica e **non** tocca `collections.fasi` né la fonte dati
+P0–P6.
 
 ### Template (`src/index.njk`)
 
@@ -186,9 +174,9 @@ filtri `schedeBySlug`/`analisiPerScheda` e i permalink `/schede/<slug>/`.
 
 L'articolo `contenuti/analisi/articolo-attualita-fedorov-syrskyj.md` è passato da
 `sezione: Strategia` a `sezione: Attualità`. Nessun altro dato editoriale
-modificato (titolo, slug/permalink, data, sommario, corpo, immagine). Essendo il
-più recente e marcato `in_evidenza: true`, occupa lo slot Attualità del carosello
-e apre l'archivio Attualità.
+modificato (titolo, slug/permalink, data, sommario, corpo, immagine). La scelta
+dei contenuti della home non è più inferita dai front matter: è governata
+esclusivamente da `src/_data/evidenza-home.json`.
 
 ---
 
