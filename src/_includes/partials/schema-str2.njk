@@ -1,4 +1,4 @@
-{# STR2 — un solo campo, tre stati, quattro momenti. #}
+{# STR2 — un solo campo, assetto iniziale e due stati attivi, quattro momenti. #}
 {% macro schemaStr2(o) %}
 {% from "partials/schema-kit.njk" import schemaFrame, schemaStage, schemaCaption %}
 {% set o = o or {} %}
@@ -18,7 +18,6 @@
 }) %}
   <div class="str2-schema__navigation" data-str2-controls hidden>
     <div class="str2-schema__modes" role="group" aria-label="Stati dello schema">
-      <button type="button" class="schema-kit__button str2-schema__mode" aria-pressed="true" data-str2-mode="off"><span>OFF</span>Assetto di base</button>
       <button type="button" class="schema-kit__button str2-schema__mode" aria-pressed="false" data-str2-mode="direct"><span>STATO 1</span>Pressione diretta</button>
       <button type="button" class="schema-kit__button str2-schema__mode" aria-pressed="false" data-str2-mode="combined"><span>STATO 2</span>Attacco combinato</button>
     </div>
@@ -76,6 +75,13 @@
           <g class="str2-schema__warning" data-str2-warning opacity="0" transform="translate(440 142)"><path d="M0 -10 L10 8 H-10 Z"/><text text-anchor="middle" y="5">!</text></g>
           <text class="str2-schema__after-label str2-schema__after-label--blue" x="330" y="345" text-anchor="middle" data-str2-blue-after opacity="0">Nuove posizioni da sostenere</text>
           <text class="str2-schema__after-label str2-schema__after-label--red" x="730" y="345" text-anchor="middle" data-str2-red-after opacity="0">Nuova linea Red</text>
+          <g class="str2-schema__off-labels" data-str2-off-labels opacity="1">
+            {% for node in nodes %}
+            <text class="str2-schema__off-label--blue" text-anchor="middle" transform="translate({% if node.key == 'center' %}210{% else %}340{% endif %} {{ node.y + 26 }})" data-str2-blue-label="{{ node.key }}"><tspan x="0">Posizione</tspan> <tspan x="0" dy="13">Blue</tspan></text>
+            <text class="str2-schema__off-label--red" text-anchor="middle" transform="translate({{ node.x }} {{ node.y + 26 }})" data-str2-node-label="{{ node.key }}"><tspan x="0">Nodo</tspan> <tspan x="0" dy="13">logistico</tspan></text>
+            {% endfor %}
+            <text class="str2-schema__off-label--red" text-anchor="middle" transform="translate(660 146)" data-str2-lines-label><tspan x="0">Linee</tspan> <tspan x="0" dy="13">logistiche</tspan></text>
+          </g>
         </g>
       </svg>
     </div>
@@ -96,7 +102,7 @@
   <div class="str2-schema__metrics">
     <section class="str2-schema__panel str2-schema__ssa" aria-labelledby="{{ id }}-ssa-title">
       <div class="str2-schema__panel-head"><h4 id="{{ id }}-ssa-title">Sufficienza degli approvvigionamenti</h4><span class="str2-schema__value"><span data-str2-ssa-value>100</span><small>%</small></span></div>
-      <p class="str2-schema__metric-detail">Sostegno complessivo al saliente · SSA</p>
+      <p class="str2-schema__metric-detail">Soglia Sufficienza Approvvigionamenti (SSA)</p>
       <div class="str2-schema__scale" aria-hidden="true"><span>0%</span><span>60% · soglia</span><span>100%</span></div>
       <div class="str2-schema__ssa-meter" role="meter" aria-label="Sufficienza degli approvvigionamenti del saliente, valore illustrativo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" data-str2-ssa-meter>
         <span class="str2-schema__ssa-fill" data-str2-ssa-fill></span><span class="str2-schema__threshold" aria-hidden="true"></span>
@@ -115,20 +121,6 @@
     </section>
   </div>
 
-  <div class="str2-schema__legend" role="group" aria-label="Legenda">
-    <span class="str2-schema__legend-title">LEGENDA</span>
-    <ul>
-      <li><i class="str2-schema__key str2-schema__key--position" aria-hidden="true"></i>Posizione Blue</li>
-      <li><i class="str2-schema__key str2-schema__key--blue-base" aria-hidden="true"></i>Base Blue</li>
-      <li><i class="str2-schema__key str2-schema__key--blue-line" aria-hidden="true"></i>Linea Blue</li>
-      <li><i class="str2-schema__key str2-schema__key--node" aria-hidden="true"></i>Nodo logistico Red</li>
-      <li><i class="str2-schema__key str2-schema__key--red-base" aria-hidden="true"></i>Base Red</li>
-      <li><i class="str2-schema__key str2-schema__key--red-line" aria-hidden="true"></i>Linea Red attiva</li>
-      <li><i class="str2-schema__key str2-schema__key--salient" aria-hidden="true"></i>Saliente Red</li>
-      <li><i class="str2-schema__key str2-schema__key--inactive" aria-hidden="true"></i>Linea Red degradata / inattiva</li>
-      <li><i class="str2-schema__key str2-schema__key--vector" aria-hidden="true"></i>Vettore offensivo Blue</li>
-    </ul>
-  </div>
   {% call schemaCaption({className: "str2-schema__caption"}) %}
     <p><b>Modello analitico.</b> Percentuali, soglia del 60% e tempi sono illustrativi: non sono misurazioni storiche del caso Lyman. La SSA sintetizza la sostenibilità e non è la media delle tre efficienze. La perdita del saliente non implica il collasso del dispositivo Red.</p>
     <noscript><p>Per esplorare la pressione diretta e i quattro momenti dell’attacco combinato, abilita JavaScript. Il campo mostra l’assetto iniziale.</p></noscript>

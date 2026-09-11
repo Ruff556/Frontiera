@@ -1,5 +1,7 @@
 # STR2 — Rapporto di collaudo
 
+Questo rapporto conserva il collaudo della prima implementazione (`0a1868e`). Le rifiniture successive e le relative evidenze sono documentate nel [rapporto della fase 2](FASE-2.md).
+
 ## Esito
 
 `npm run verify:all` completato con successo: build e **78 test browser superati**, inclusi 14 test dedicati a STR2. Collaudo effettuato con Chromium tramite Playwright. Gli asset CSS e JavaScript generati coincidono con i sorgenti verificati.

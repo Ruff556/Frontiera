@@ -6,6 +6,7 @@ test.use({ contextOptions: { reducedMotion: "reduce" } });
 const URL = "/analisi/lyman-contesa-posizioni-sostegno/";
 const ROOT = "#schema-str2-saliente";
 const KEYS = ["upper", "center", "lower"];
+const SSA_DEFINITION = "Soglia Sufficienza Approvvigionamenti (SSA)";
 const EXPECTED = [
   { mode: "off", moment: 0, nodes: [100, 100, 100], ssa: 100 },
   { mode: "direct", moment: 0, nodes: [100, 100, 100], ssa: 85 },
@@ -36,6 +37,7 @@ async function snapshot(page) {
       fills: keys.map(k => Number(find(`[data-str2-node-fill="${k}"]`).style.transform.match(/scaleX\(([^)]+)/)[1])),
       ssa: Number(find("[data-str2-ssa-meter]").getAttribute("aria-valuenow")),
       salient: opacity("[data-str2-salient]"),
+      offLabels: opacity("[data-str2-off-labels]"),
       blue: keys.map(k => x(`[data-str2-blue="${k}"]`)),
       red: keys.map(k => opacity(`[data-str2-node="${k}"]`)),
       supplies: keys.map(k => opacity(`[data-str2-supply="${k}"]`)),
@@ -60,7 +62,10 @@ async function checkState(page, index, initialBlue) {
   expect(state.red).toEqual([1, 1, 1]);
   expect(state.rear).toEqual([1, 1, 1]);
   expect(state.svgNodes).toBe(true);
-  expect(state.svgTexts).toBe(9);
+  expect(state.svgTexts).toBe(16);
+  expect(state.offLabels).toBe(index === 0 ? 1 : 0);
+  await expect(page.locator(`${ROOT} .str2-schema__metric-detail`)).toHaveText(SSA_DEFINITION);
+  await expect(page.locator(`${ROOT} .str2-schema__metric-detail`)).toBeVisible();
   expect(state.pageOverflow).toBe(false);
   expect(state.blue[0]).toBeGreaterThan(state.blue[1]);
   expect(state.blue[2]).toBeGreaterThan(state.blue[1]);
@@ -87,6 +92,44 @@ async function checkState(page, index, initialBlue) {
   }
 }
 
+async function checkInitialLabels(page) {
+  const result = await page.locator("[data-str2-canvas]").evaluate(svg => {
+    const texts = Array.from(svg.querySelectorAll('[data-str2-off-labels] tspan, [data-str2-base] text, [data-str2-salient-label], [data-str2-node] text'));
+    const boxes = texts.map(e => ({ text: e.textContent, rect: e.getBoundingClientRect() }));
+    const field = svg.getBoundingClientRect();
+    const intersects = (a, b) => a.left < b.right - .1 && a.right > b.left + .1 && a.top < b.bottom - .1 && a.bottom > b.top + .1;
+    const collisions = [];
+    boxes.forEach((a, i) => boxes.slice(i + 1).forEach(b => {
+      if (intersects(a.rect, b.rect)) collisions.push([a.text, b.text]);
+    }));
+    const obstacles = Array.from(svg.querySelectorAll('[data-str2-blue] > circle:first-child, [data-str2-node] circle, [data-str2-base] > rect:first-child, .str2-schema__salient'), e => e.getBoundingClientRect());
+    const labels = Array.from(svg.querySelectorAll('[data-str2-off-labels] tspan'));
+    const lines = Array.from(svg.querySelectorAll('.str2-schema__blue-lines path, [data-str2-rear-link], [data-str2-supply]'));
+    const crossed = labels.filter(e => {
+      const r = e.getBoundingClientRect();
+      return lines.some(line => {
+        const matrix = line.getScreenCTM();
+        for (let d = 0; d <= line.getTotalLength(); d += 1) {
+          const p = line.getPointAtLength(d).matrixTransform(matrix);
+          if (p.x > r.left - 1 && p.x < r.right + 1 && p.y > r.top - 1 && p.y < r.bottom + 1) return true;
+        }
+        return false;
+      });
+    }).map(e => e.textContent);
+    return {
+      collisions, crossed,
+      covered: labels.filter(e => obstacles.some(r => intersects(e.getBoundingClientRect(), r))).map(e => e.textContent),
+      inside: boxes.every(({rect:r}) => r.left >= field.left && r.right <= field.right && r.top >= field.top && r.bottom <= field.bottom),
+      fonts: labels.map(e => getComputedStyle(e).fontSize)
+    };
+  });
+  expect(result.collisions).toEqual([]);
+  expect(result.crossed).toEqual([]);
+  expect(result.covered).toEqual([]);
+  expect(result.inside).toBe(true);
+  expect(result.fonts.every(f => parseFloat(f) >= 10)).toBe(true);
+}
+
 test("STR2: integrazione nel punto richiesto, HTML SVG valido e asset condizionali", async ({ page }) => {
   await open(page);
   await expect(page.locator(ROOT)).toHaveCount(1);
@@ -94,7 +137,19 @@ test("STR2: integrazione nel punto richiesto, HTML SVG valido e asset condiziona
   expect(previous).toContain("Se il primo ciclo corre abbastanza più rapidamente del secondo");
   expect(previous.trim().endsWith("senza che la difesa scompaia.")).toBe(true);
   await expect(page.locator(`${ROOT} [data-str2-moment]`)).toHaveCount(4);
-  await expect(page.locator(`${ROOT} .str2-schema__legend li`)).toHaveCount(9);
+  await expect(page.locator(`${ROOT} button[data-str2-mode]`)).toHaveCount(2);
+  await expect(page.locator(`${ROOT} button[data-str2-mode="off"]`)).toHaveCount(0);
+  await expect(page.locator(`${ROOT} button[data-str2-mode][aria-pressed="true"]`)).toHaveCount(0);
+  await expect(page.locator(`${ROOT} .str2-schema__legend`)).toHaveCount(0);
+  await expect(page.locator(`${ROOT} [data-str2-reading-title]`)).toHaveText("Tre linee sostengono la posizione avanzata.");
+  await expect(page.locator(`${ROOT} [data-str2-reading-text]`)).toHaveText("Il saliente Red è esposto sui fianchi, ma riceve sostegno da una rete ancora integra. Nessun attacco è attivo.");
+  await expect(page.locator(`${ROOT} [data-str2-blue-label]`)).toHaveText(["Posizione Blue", "Posizione Blue", "Posizione Blue"]);
+  await expect(page.locator(`${ROOT} [data-str2-node-label]`)).toHaveText(["Nodo logistico", "Nodo logistico", "Nodo logistico"]);
+  await expect(page.locator(`${ROOT} [data-str2-lines-label]`)).toHaveText("Linee logistiche");
+  await expect(page.locator("[data-str2-desc]")).toContainText("Tre nodi logistici, collegati alla Base Red, sostengono il saliente.");
+  const accessibility = await page.locator(ROOT).ariaSnapshot();
+  expect(accessibility).not.toContain('button "OFF');
+  expect(accessibility).not.toContain('text: Posizione Blue');
   await expect(page.locator(`${ROOT} .str2-schema__caption`)).toContainText("non sono misurazioni storiche");
   const svg = await page.locator("[data-str2-canvas]").evaluate(e => ({
     red: e.querySelectorAll("[data-str2-node]").length,
@@ -110,13 +165,31 @@ test("STR2: integrazione nel punto richiesto, HTML SVG valido e asset condiziona
 
 for (const width of [1440, 768, 500, 390, 308]) {
   test(`STR2: tre cicli reversibili, geometria e controlli a ${width}px`, async ({ page }) => {
-    test.setTimeout(60000);
+    test.setTimeout(90000);
     const errors = [];
     page.on("pageerror", e => errors.push(e.message));
     page.on("console", e => { if (e.type() === "error") errors.push(e.text()); });
     await page.setViewportSize({ width, height: 900 });
     await open(page);
     const initialBlue = (await snapshot(page)).blue;
+    await checkState(page, 0, initialBlue);
+    await checkInitialLabels(page);
+    await page.locator('button[data-str2-mode="combined"]').click();
+    await checkState(page, 2, initialBlue);
+    for (let cycle = 0; cycle < 3; cycle++) {
+      for (let i = 3; i <= 5; i++) {
+        await page.locator("[data-str2-next]").click();
+        await checkState(page, i, initialBlue);
+      }
+      await expect(page.locator("[data-str2-next]")).toHaveText(/Rivedi/);
+      await page.locator("[data-str2-next]").click();
+      await checkState(page, 2, initialBlue);
+      await expect(page.locator('button[data-str2-moment="1"]')).toHaveAttribute("aria-pressed", "true");
+      await expect(page.locator("[data-str2-next]")).toHaveText(/Avanza/);
+    }
+    await page.locator("[data-str2-back]").click();
+    await checkState(page, 1, initialBlue);
+    await page.locator("[data-str2-back]").click();
     await checkState(page, 0, initialBlue);
     for (let cycle = 0; cycle < 3; cycle++) {
       for (let i = 1; i <= 5; i++) {
@@ -187,8 +260,44 @@ test.describe("STR2: animazione reale", () => {
     }, selector);
   }
 
+  for (const mode of ["direct", "combined"]) {
+    test(`etichette iniziali e vettori si dissolvono/compariscono insieme: ${mode}`, async ({ page }) => {
+      await open(page);
+      const samples = await page.evaluate(async mode => {
+        const root = document.querySelector("#schema-str2-saliente");
+        const labels = root.querySelector("[data-str2-off-labels]");
+        const vector = root.querySelector('[data-str2-vector="center-salient"]');
+        const samples = [];
+        root.querySelector(`[data-str2-mode="${mode}"]`).click();
+        await new Promise(resolve => {
+          function read(now) {
+            samples.push({ at: now, labels: Number(labels.getAttribute("opacity")), vector: Number(vector.getAttribute("opacity")) });
+            if (root.dataset.str2Settled === "true") resolve();
+            else requestAnimationFrame(read);
+          }
+          requestAnimationFrame(read);
+        });
+        return samples;
+      }, mode);
+      expect(samples[0].labels).toBe(1);
+      expect(samples[0].vector).toBe(0);
+      expect(samples.some(s => s.labels > .1 && s.labels < .9)).toBe(true);
+      expect(new Set(samples.map(s => s.labels)).size).toBeGreaterThan(15);
+      samples.forEach(s => expect(s.labels + s.vector).toBeCloseTo(1, 3));
+      expect(samples.at(-1).labels).toBe(0);
+      expect(samples.at(-1).vector).toBe(1);
+      expect(samples.at(-1).at - samples[0].at).toBeGreaterThanOrEqual(940);
+      expect(samples.at(-1).at - samples[0].at).toBeLessThan(1400);
+      // Nessuna etichetta didattica può ricomparire nel finale, pur privo di vettori.
+      await page.locator('button[data-str2-moment="4"]').click();
+      await settled(page);
+      expect((await snapshot(page)).offLabels).toBe(0);
+    });
+  }
+
   test("barre continue e ordine vincolante: sostegno, perdita, avanzata", async ({ page }) => {
     await open(page);
+    const initialBlue = (await snapshot(page)).blue;
     await page.locator('button[data-str2-moment="1"]').click();
     await settled(page);
     const second = await samplesForClick(page, '[data-str2-moment="2"]');
@@ -209,6 +318,11 @@ test.describe("STR2: animazione reale", () => {
     expect(phases).toEqual(["collapse", "loss", "advance", "final"]);
     expect(fourth.at(-1).x).toBeGreaterThan(x);
     await expect(page.locator("[data-str2-next]")).toHaveText(/Rivedi/);
+    const replay = await samplesForClick(page, "[data-str2-next]");
+    expect([...new Set(replay.map(s => s.phase))]).toEqual(["combined1"]);
+    expect(new Set(replay.map(s => s.fill)).size).toBeGreaterThan(15);
+    await checkState(page, 2, initialBlue);
+    await expect(page.locator("[data-str2-next]")).toHaveText(/Avanza/);
   });
 
   for (const phase of ["collapse", "loss", "advance"]) {
@@ -263,13 +377,17 @@ test.describe("STR2: animazione reale", () => {
     await page.locator("[data-str2-canvas]").scrollIntoViewIfNeeded();
     await settled(page);
     expect((await snapshot(page)).phase).toBe("final");
+    await page.locator("[data-str2-next]").click();
+    await expect(page.locator(ROOT)).toHaveAttribute("data-str2-moment", "1");
+    // Interrompere anche il ritorno di Rivedi usa la stessa regia cancellabile.
     await page.evaluate(async () => {
       const root = document.querySelector("#schema-str2-saliente");
       for (let i = 0; i < 12; i++) {
         root.querySelector(`[data-str2-moment="${i % 4 + 1}"]`).click();
         await new Promise(r => requestAnimationFrame(r));
       }
-      root.querySelector('[data-str2-mode="off"]').click();
+      root.querySelector('[data-str2-mode="direct"]').click();
+      root.querySelector('[data-str2-back]').click();
     });
     await settled(page);
     const off = await snapshot(page);
@@ -283,9 +401,14 @@ test.describe("STR2: animazione reale", () => {
 
 test("STR2: tastiera, focus e movimento ridotto mantengono la sequenza causale", async ({ page }) => {
   await open(page);
-  await page.locator('button[data-str2-mode="off"]').focus();
+  await page.locator('button[data-str2-mode="direct"]').focus();
+  await page.keyboard.press("End");
+  await expect(page.locator('button[data-str2-mode="combined"]')).toBeFocused();
   await page.keyboard.press("ArrowRight");
   await expect(page.locator('button[data-str2-mode="direct"]')).toBeFocused();
+  await page.keyboard.press("ArrowLeft");
+  await expect(page.locator('button[data-str2-mode="combined"]')).toBeFocused();
+  await page.keyboard.press("Home");
   await page.keyboard.press("Enter");
   await settled(page);
   await expect(page.locator('button[data-str2-mode="direct"]')).toHaveAttribute("aria-pressed", "true");
@@ -304,6 +427,13 @@ test("STR2: tastiera, focus e movimento ridotto mantengono la sequenza causale",
   await settled(page);
   expect((await snapshot(page)).blue[1]).toBeGreaterThan(before[1]);
   await expect(page.locator("[data-schema-live]")).toContainText("alimentate, protette e mantenute");
+  await page.locator("[data-str2-next]").focus();
+  await page.keyboard.press("Enter");
+  await settled(page);
+  await expect(page.locator("[data-str2-next]")).toBeFocused();
+  await expect(page.locator("[data-str2-next]")).toHaveText(/Avanza/);
+  await expect(page.locator("[data-schema-live]")).toContainText("STATO 2 · MOMENTO 1 DI 4");
+  expect((await snapshot(page)).offLabels).toBe(0);
 });
 
 test("STR2: senza JavaScript il campo iniziale e la nota restano leggibili", async ({ browser }) => {
@@ -314,6 +444,13 @@ test("STR2: senza JavaScript il campo iniziale e la nota restano leggibili", asy
   await expect(page.locator("[data-str2-canvas] [data-str2-node]")).toHaveCount(3);
   await expect(page.locator("[data-str2-ssa-value]")).toHaveText("100");
   await expect(page.locator(ROOT + " noscript p")).toContainText("abilita JavaScript");
-  await expect(page.locator("[data-str2-mode=off]")).toBeHidden();
+  await expect(page.locator("button[data-str2-mode=off]")).toHaveCount(0);
+  await expect(page.locator("button[data-str2-mode]")).toHaveCount(2);
+  await expect(page.locator("[data-str2-controls]").first()).toBeHidden();
+  await expect(page.locator("[data-str2-off-labels]")).toBeVisible();
+  await expect(page.locator("[data-str2-blue-label]")).toHaveCount(3);
+  await expect(page.locator("[data-str2-node-label]")).toHaveCount(3);
+  await expect(page.locator(`${ROOT} .str2-schema__legend`)).toHaveCount(0);
+  await expect(page.locator(`${ROOT} .str2-schema__metric-detail`)).toHaveText(SSA_DEFINITION);
   await context.close();
 });

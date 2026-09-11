@@ -7,10 +7,10 @@
   // Valori illustrativi, modificabili qui. La SSA non è la media dei nodi.
   var THRESHOLD = 60;
   var DURATION = { change: 950, prepare: 600, collapse: 2600, loss: 1000, advance: 1050 };
-  var BASE = { upper: 100, center: 100, lower: 100, ssa: 100, salient: 1, advance: 0, direct: 0, flanks: 0, concentrate: 0, warning: 0, rear: 0 };
+  var BASE = { upper: 100, center: 100, lower: 100, ssa: 100, salient: 1, advance: 0, direct: 0, flanks: 0, concentrate: 0, warning: 0, rear: 0, offLabels: 0 };
   function scene(values) { return Object.assign({}, BASE, values); }
   var STATES = {
-    off: scene({}),
+    off: scene({ offLabels: 1 }),
     direct: scene({ ssa: 85, direct: 1 }),
     combined1: scene({ ssa: 85, direct: 1, flanks: 1 }),
     combined2: scene({ upper: 0, center: 70, lower: 70, ssa: 72, direct: 1, flanks: 1 }),
@@ -38,6 +38,8 @@
     function all(selector) { return Array.from(root.querySelectorAll(selector)); }
     var canvas = one("[data-str2-canvas]");
     var desc = one("[data-str2-desc]");
+    var initialDescription = desc.textContent;
+    var offLabels = one("[data-str2-off-labels]");
     var live = one("[data-schema-live]");
     var title = one("[data-str2-reading-title]");
     var text = one("[data-str2-reading-text]");
@@ -75,7 +77,7 @@
     });
     var mode = "off";
     var moment = 0;
-    var visual = scene({});
+    var visual = Object.assign({}, STATES.off);
     var phase = "off";
     var queue = [];
     var segment = null;
@@ -110,7 +112,7 @@
       phaseLabel.textContent = copy[0];
       fieldLabel.textContent = mode === "off" ? "Assetto di base" : mode === "direct" ? "Pressione diretta" : "Attacco combinato · " + moment + "/4";
       count.textContent = mode === "off" ? "OFF · ASSETTO DI BASE" : mode === "direct" ? "STATO 1 · PRESSIONE DIRETTA" : "STATO 2 · MOMENTO " + moment + " DI 4";
-      desc.textContent = count.textContent + ". " + copy[1] + " " + copy[2];
+      desc.textContent = mode === "off" ? initialDescription : count.textContent + ". " + copy[1] + " " + copy[2];
       if (announce) live.textContent = count.textContent + ". " + copy[1] + " " + copy[2];
     }
 
@@ -148,6 +150,8 @@
       var advance = visual.advance;
       var xSalient = g.salient;
       var yMid = g.center;
+      // Le indicazioni iniziali seguono la stessa interpolazione dei vettori.
+      opacity(offLabels, visual.offLabels);
       translate(salient, xSalient, yMid);
       opacity(salient, visual.salient);
       salientLabel.setAttribute("x", xSalient);
@@ -219,6 +223,17 @@
         upper: compact ? 61 : 54, center: height / 2, lower: height - (compact ? 61 : 54)
       };
       canvas.setAttribute("viewBox", "0 0 " + width + " " + height);
+      var narrow = width < 300;
+      NODE_KEYS.forEach(function (key) {
+        // Nei campi più stretti si adattano solo le nuove etichette, mai i simboli.
+        var blueLabel = one('[data-str2-blue-label="' + key + '"]');
+        var tightCenter = key === "center" && compact;
+        var labelOffset = tightCenter ? Math.min(7, 5.5 + Math.max(0, width - 220) / 20) : 0;
+        blueLabel.style.fontSize = narrow && tightCenter ? "10px" : "";
+        translate(blueLabel, key === "center" ? geometry.blueCenter + labelOffset : geometry.blueFlank, geometry[key] + (narrow && tightCenter ? 25 : 26));
+        translate(one('[data-str2-node-label="' + key + '"]'), key === "center" ? geometry.redCenter - (narrow ? 8 : 0) : geometry.redFlank, geometry[key] + (narrow && key === "upper" ? -31 : 26));
+      });
+      translate(one("[data-str2-lines-label]"), width * .66, geometry.center - 39);
       paint();
     }
 
@@ -296,7 +311,7 @@
     function advance() {
       if (mode === "off") choose("direct");
       else if (mode === "direct") choose("combined", 1);
-      else choose("combined", moment === 4 ? 4 : moment + 1);
+      else choose("combined", moment === 4 ? 1 : moment + 1);
     }
     function retreat() {
       if (mode === "direct") choose("off");

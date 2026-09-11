@@ -19,13 +19,13 @@ Inserimento nell'articolo `lyman-contesa-posizioni-sostegno`, subito dopo la fra
 | Stato 2, momento 3 | 0 / 70 / 0 | 45 | Opaco, difficilmente mantenibile |
 | Stato 2, momento 4 | 0 / 30 / 0 | 18 | Crollo del sostegno → trasparenza → avanzata Blue |
 
-Tre selettori di stato e quattro pulsanti di momento, più Indietro, Avanza e Rivedi nel finale. I momenti selezionati direttamente ricostruiscono lo stato necessario; il momento 4 riparte sempre dalla condizione del momento 3. Non esiste un quinto momento. Ogni comando sostituisce l'intera regia pendente e parte dai valori visivi correnti, senza salti nelle barre.
+Due selettori per gli stati attivi e quattro pulsanti di momento, più Indietro, Avanza e Rivedi nel finale. OFF è l'assetto iniziale non ancora attivato, senza una cella di selezione; Indietro dallo Stato 1 può ripristinarlo. I momenti selezionati direttamente ricostruiscono lo stato necessario; il momento 4 riparte sempre dalla condizione del momento 3. Rivedi torna allo Stato 2 / Momento 1 e permette di ripercorrere tutto il ciclo. Non esiste un quinto momento. Ogni comando sostituisce l'intera regia pendente e parte dai valori visivi correnti, senza salti nelle barre.
 
 Un solo ciclo requestAnimationFrame interpola valori, opacità e coordinate. Ogni impulso compie una sola traversata, senza animazioni perpetue. Uscita dal viewport e pagina nascosta sospendono il tempo della sequenza; il rientro riprende dal punto raggiunto, senza saltare la causalità. Con movimento ridotto sono mostrati quadri statici ordinati dentro il momento 4, con una breve permanenza per la lettura. Nessun timeout concorrente.
 
 ## Struttura e responsive
 
-Telaio Nunjucks e lifecycle dello Schema Kit, SVG unico con ID derivati dall'istanza, geometria locale ricomposta sulla larghezza effettiva mediante ResizeObserver. Le etichette SVG mantengono la dimensione in pixel; su schermi stretti il campo acquista altezza e i pannelli si dispongono verticalmente. Legenda sempre visibile, aree di controllo di almeno 44 px, focus visibile, pulsanti nativi con aria-pressed, descrizione SVG e live region aggiornata ai cambiamenti semantici. Il campo OFF e la nota metodologica restano leggibili senza JavaScript.
+Telaio Nunjucks e lifecycle dello Schema Kit, SVG unico con ID derivati dall'istanza, geometria locale ricomposta sulla larghezza effettiva mediante ResizeObserver. Le etichette SVG mantengono la dimensione in pixel; su schermi stretti il campo acquista altezza e i pannelli si dispongono verticalmente. La legenda inferiore è rimossa: nell'assetto OFF il campo identifica direttamente le tre posizioni Blue, i tre nodi logistici e le linee nodo → saliente. Queste indicazioni si dissolvono con la stessa interpolazione e durata della comparsa dei vettori; restano assenti anche nel finale privo di attacchi. La definizione «Soglia Sufficienza Approvvigionamenti (SSA)» è sempre presente nel pannello dedicato. Aree di controllo di almeno 44 px, focus visibile, pulsanti nativi con aria-pressed, descrizione SVG e live region aggiornata ai cambiamenti semantici. Il campo OFF e la nota metodologica restano leggibili senza JavaScript.
 
 ## Collaudo previsto
 
@@ -33,4 +33,4 @@ Tutti gli stati in avanti e indietro, selezione diretta, ripetizione di almeno t
 
 ## Deroghe motivate
 
-Non si usa createSequence: OFF è una scelta esplicita sempre disponibile e la navigazione termina al momento 4. Non è previsto Auto: la breve coreografia interna al momento 4 si esegue su comando; gli altri passaggi restano guidati dal lettore. Il runtime comune e STR1 non vengono modificati.
+Non si usa createSequence: la navigazione comprende un assetto iniziale, due stati e quattro momenti; Rivedi riparte dal primo momento dello Stato 2. Non è previsto Auto: la breve coreografia interna al momento 4 si esegue su comando; gli altri passaggi restano guidati dal lettore. Il runtime comune e STR1 non vengono modificati.
