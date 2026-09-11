@@ -84,7 +84,6 @@ teatro: Russia                # area geografica
 domini: [aria, terra]         # aria, terra, mare, spazio, cyber-ew, industria
 affidabilita: plausibile      # opzionale: badge su card/carosello
                               # confermato | plausibile | non-verificato | disinformazione
-in_evidenza: true             # opzionale: candida il pezzo al carosello della home
 tempo_lettura: 8              # conservato per compatibilità: NON è più mostrato
                               # nell'interfaccia (scelta editoriale)
 sistemi_citati: [starlink, palantir] # slug dei sistemi citati (vedi punto b)
@@ -101,8 +100,9 @@ Corpo in Markdown. Per marcare un'affermazione non consolidata usa lo shortcode:
 La notizia è {% aff "plausibile" %} ma manca conferma ufficiale.
 ```
 
-**Carosello della home:** rappresenta Attualità, Strategia e Sistemi con al massimo
-un contenuto per nucleo; `in_evidenza: true` candida il contenuto al proprio slot.
+**Carosello della home:** è regolato esclusivamente dall'array ordinato in
+`src/_data/evidenza-home.json`, che deve contenere esattamente tre slug di contenuti
+ammessi.
 
 ## Aggiungere una scheda
 

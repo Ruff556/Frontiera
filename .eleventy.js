@@ -62,6 +62,56 @@ const RESPONSIVE_WIDTHS = [...new Set(
 )].sort((a, b) => a - b);
 const responsiveMetadata = new Map();
 let responsiveOutputPrepared = false;
+const EVIDENZA_HOME_PATH = path.join(__dirname, "src", "_data", "evidenza-home.json");
+
+function leggiConfigurazioneEvidenzaHome() {
+  let testo;
+  try {
+    testo = fs.readFileSync(EVIDENZA_HOME_PATH, "utf8");
+  } catch (error) {
+    throw new Error(
+      `[carosello home] impossibile leggere ${EVIDENZA_HOME_PATH}: ${error.message}`
+    );
+  }
+
+  let configurazione;
+  try {
+    configurazione = JSON.parse(testo);
+  } catch (error) {
+    throw new Error(
+      `[carosello home] JSON non valido in ${EVIDENZA_HOME_PATH}: ${error.message}`
+    );
+  }
+
+  if (!Array.isArray(configurazione)) {
+    throw new Error(`[carosello home] ${EVIDENZA_HOME_PATH} deve contenere un array`);
+  }
+  if (configurazione.length !== 3) {
+    throw new Error(
+      `[carosello home] ${EVIDENZA_HOME_PATH} deve contenere esattamente 3 slug ` +
+      `(trovati: ${configurazione.length})`
+    );
+  }
+
+  const visti = new Set();
+  configurazione.forEach((slug, indice) => {
+    if (typeof slug !== "string") {
+      throw new Error(
+        `[carosello home] evidenza-home.json[${indice}] deve essere una stringa ` +
+        `(valore: ${JSON.stringify(slug)})`
+      );
+    }
+    if (slug.trim() === "") {
+      throw new Error(`[carosello home] evidenza-home.json[${indice}] non può essere vuoto`);
+    }
+    if (visti.has(slug)) {
+      throw new Error(`[carosello home] slug duplicato in evidenza-home.json: "${slug}"`);
+    }
+    visti.add(slug);
+  });
+
+  return configurazione;
+}
 
 function imageSourcePath(publicUrl) {
   if (typeof publicUrl !== "string" || !publicUrl.startsWith("/immagini/")) {
@@ -308,30 +358,34 @@ module.exports = function (eleventyConfig) {
     )
   );
 
-  // Carosello home: rappresenta i TRE nuclei editoriali, al massimo un elemento
-  // per nucleo e in ordine fisso (Attualità, Strategia, Sistemi).
-  // Per ciascun nucleo si sceglie il contenuto più recente marcato
-  // in_evidenza:true; in mancanza, il più recente in assoluto (fallback).
-  // Se un nucleo non ha contenuti, non produce alcuna slide (niente segnaposto).
+  // Carosello home: la configurazione editoriale è l'unica fonte di verità.
   // Attualità/Strategia pescano dalle analisi (per `sezione`); Sistemi pesca
-  // dalle schede (per `categoria`). La selezione è deterministica e NON tocca
-  // collections.fasi né la fonte dati P0–P6: le due linee temporali hanno già
-  // un proprio spazio in home e non compaiono nel carosello.
+  // dalle schede (per `categoria`). L'ordine della configurazione è autoritativo.
+  eleventyConfig.addWatchTarget("src/_data/evidenza-home.json");
   eleventyConfig.addCollection("inEvidenza", (c) => {
-    // Ordina per data editoriale (vedi nota su collections.analisi). Per le
-    // schede si usa `aggiornata`, coerentemente col resto del sistema schede.
-    const ordAnalisi = (i) => +new Date(i.data.data || i.date || 0);
-    const ordScheda = (i) => +new Date(i.data.aggiornata || i.data.data || i.date || 0);
-    const analisi = c.getFilteredByTag("analisi").sort((a, b) => ordAnalisi(b) - ordAnalisi(a));
-    const schede = c.getFilteredByTag("schede").sort((a, b) => ordScheda(b) - ordScheda(a));
-    // fra gli item già ordinati per data (desc): prima l'in_evidenza più recente,
-    // altrimenti il più recente disponibile.
-    const scegli = (pool) =>
-      pool.find((i) => i.data.in_evidenza === true) || pool[0] || null;
-    const attualita = scegli(analisi.filter((i) => i.data.sezione === "Attualità"));
-    const strategia = scegli(analisi.filter((i) => i.data.sezione === "Strategia"));
-    const sistemi = scegli(schede.filter((i) => i.data.categoria === "Sistemi"));
-    return [attualita, strategia, sistemi].filter(Boolean);
+    const slugs = leggiConfigurazioneEvidenzaHome();
+    const ammessi = [
+      ...c.getFilteredByTag("analisi").filter((item) =>
+        item.data.sezione === "Attualità" || item.data.sezione === "Strategia"
+      ),
+      ...c.getFilteredByTag("schede").filter((item) => item.data.categoria === "Sistemi"),
+    ];
+    const slugDi = (item) => item.data.slug || item.page.fileSlug;
+
+    return slugs.map((slug) => {
+      const corrispondenze = ammessi.filter((item) => slugDi(item) === slug);
+      if (corrispondenze.length === 0) {
+        throw new Error(
+          `[carosello home] slug non risolto o contenuto non ammesso: "${slug}"`
+        );
+      }
+      if (corrispondenze.length > 1) {
+        throw new Error(
+          `[carosello home] slug ambiguo "${slug}": corrisponde a più contenuti ammessi`
+        );
+      }
+      return corrispondenze[0];
+    });
   });
 
   // ---- Contratto dei sistemi citati e raccolta dei riferimenti ----

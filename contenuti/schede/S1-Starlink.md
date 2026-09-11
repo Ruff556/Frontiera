@@ -4,7 +4,6 @@ slug: starlink
 categoria: Sistemi
 ruolo: "La rete distribuita, il servizio governato"
 aggiornata: 2026-08-06
-in_evidenza: true
 immagine:
   file: /immagini/sistemi/s-starlink.jpg
   alt: "Logo Starlink in versione invertita"

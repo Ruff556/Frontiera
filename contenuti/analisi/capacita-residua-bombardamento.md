@@ -5,7 +5,6 @@ sezione: Strategia
 sommario: "Bombardamento strategico, penetrazione ed esposizione nell’era dei droni."
 teatro: Globale
 domini: [aria, industria]
-in_evidenza: true
 sistemi_citati: []
 immagine:
   file: /immagini/strategia/str1-bombardamento-strategico.webp

@@ -4,7 +4,6 @@ slug: palantir
 categoria: Sistemi
 ruolo: "Lo strato che traduce dati in azione"
 aggiornata: 2026-08-10
-in_evidenza: false
 
 immagine:
   file: /immagini/sistemi/s-palantir.png

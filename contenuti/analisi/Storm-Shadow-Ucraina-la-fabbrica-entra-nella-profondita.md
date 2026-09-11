@@ -6,7 +6,6 @@ sezione: Attualità
 sommario: "Storm Shadow/SCALP, produzione ucraina e autonomia dell’attacco in profondità."
 teatro: "Ucraina · Federazione Russa · Europa"
 domini: [aria, industria]
-in_evidenza: true
 tempo_lettura: 17
 infobox:
   tipo: 2

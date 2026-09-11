@@ -6,7 +6,6 @@ sezione: Strategia
 sommario: "Come l'attrito di UAV e UGV ha ripristinato una progressiva manovra locale"
 teatro: "Ucraina · Lyman"
 domini: [terra, droni, logistica]
-in_evidenza: true
 sistemi_citati: []
 immagine:
   file: /immagini/strategia/STR2-lyman.png
