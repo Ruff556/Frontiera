@@ -291,6 +291,508 @@
           }
         ]
       }
+    ],
+    "contenuti/analisi/patriot-tempo-ricostituzione.md": [
+      {
+        "id": "A3-E001",
+        "livello": "confermato",
+        "titolo": "Due impegni, due calendari di rifornimento",
+        "motivazione": "Lockheed Martin documenta un’azione contrattuale pluriennale da 58,62 miliardi di dollari, con condizioni ancora da definire integralmente. Il governo britannico annuncia 100 milioni di sterline attraverso PURL per Patriot e altri equipaggiamenti, da consegnare prima dell’inverno. Sono confermati i due annunci e i loro orizzonti; importi e promesse non attestano missili già disponibili in Ucraina. Il contributo britannico riguarda un pacchetto misto.",
+        "fonti": [
+          {
+            "nome": "Primaria industriale · Lockheed Martin — Department of War Awards Lockheed Martin $58.62B for Multiyear PAC-3 MSE Production to Strengthen the Arsenal of Freedom",
+            "url": "https://news.lockheedmartin.com/2026-07-29-Department-of-War-Awards-Lockheed-Martin-58-62B-for-Multiyear-PAC-3-MSE-Production-to-Strengthen-the-Arsenal-of-Freedom",
+            "data": "2026-07-29"
+          },
+          {
+            "nome": "Primaria istituzionale · Governo britannico — UK pledges winter air defence package to boost Ukraine’s defences",
+            "url": "https://www.gov.uk/government/news/uk-pledges-winter-air-defence-package-to-boost-ukraines-defences",
+            "data": "2026-09-08"
+          }
+        ]
+      },
+      {
+        "id": "A3-E002",
+        "livello": "confermato",
+        "titolo": "L’incertezza sui risultati antibalistici del 1991",
+        "motivazione": "Il rapporto GAO NSIAD-92-340, datato 22 settembre 1992 e reso pubblico il 29 settembre, esamina le prove sugli ingaggi Patriot nella guerra del Golfo. Rileva che i dati non consentono di stabilirne conclusivamente l’efficacia e distingue il danno al missile dalla distruzione della testata. Questa valutazione riguarda quell’impiego storico e non misura le prestazioni delle generazioni successive.",
+        "fonti": [
+          {
+            "nome": "Primaria istituzionale · U.S. Government Accountability Office — Operation Desert Storm: Data Does Not Exist to Conclusively Say How Well Patriot Performed",
+            "url": "https://www.gao.gov/products/nsiad-92-340",
+            "data": "1992-09-22"
+          }
+        ]
+      },
+      {
+        "id": "A3-E003",
+        "livello": "confermato",
+        "titolo": "Impatto diretto PAC-3 ed espansione dell’inviluppo MSE",
+        "motivazione": "La Missile Defense Agency descrive il principio hit-to-kill del PAC-3; Lockheed Martin attribuisce al motore a doppio impulso MSE un ampliamento di quota e portata rispetto alla versione precedente. Le fonti sostengono il salto tecnico descritto. La scheda del produttore non costituisce una misura indipendente della probabilità d’intercetto in combattimento.",
+        "fonti": [
+          {
+            "nome": "Primaria istituzionale · Missile Defense Agency — Patriot Advanced Capability-3 (PAC-3) — scheda del sistema, senza data di pubblicazione",
+            "url": "https://www.mda.mil/system/pac_3.html"
+          },
+          {
+            "nome": "Primaria industriale · Lockheed Martin — Lockheed Martin Accelerates Production to Meet Strong Demand, Delivers 1,000th PAC-3 MSE",
+            "url": "https://news.lockheedmartin.com/2021-11-17-lockheed-martin-accelerates-production-to-meet-strong-demand-delivers-1000th-pac-3-mse",
+            "data": "2021-11-17"
+          }
+        ]
+      },
+      {
+        "id": "A3-E004",
+        "livello": "confermato",
+        "titolo": "IBCS: integrazione sperimentata fra sensori ed effettori",
+        "motivazione": "Il resoconto dell’U.S. Army documenta una prova IBCS nella quale informazioni di sensori diversi concorrono all’ingaggio. Sostiene la possibilità di separare e integrare le funzioni della difesa. Il suo perimetro è una prova statunitense: la configurazione delle batterie ucraine non viene ricavata da questo risultato.",
+        "fonti": [
+          {
+            "nome": "Primaria istituzionale · U.S. Army — Army announces Integrated Battle Command System (IBCS) flight test",
+            "url": "https://www.army.mil/article/248655/army_announces_integrated_battle_command_system_ibcs_flight_test",
+            "data": "2021-07-23"
+          }
+        ]
+      },
+      {
+        "id": "A3-E005",
+        "livello": "confermato",
+        "titolo": "Alternative e complementarità dipendono dalla missione",
+        "motivazione": "Eurosam descrive SAMP/T e NG nella difesa di area e antibalistica; MDA colloca THAAD nella difesa terminale ad alta quota. RTX e Bundeswehr documentano i bersagli aerodinamici affrontabili da NASAMS e IRIS-T SLM. Le schede delimitano campi d’impiego e varianti, senza fornire una comparazione operativa omogenea né provare che sistemi trasferibili siano disponibili nelle quantità richieste da Kyiv.",
+        "fonti": [
+          {
+            "nome": "Primaria industriale · Eurosam — Ground systems — scheda SAMP/T e SAMP/T NG, senza data di pubblicazione",
+            "url": "https://eurosam.com/ground-systems/"
+          },
+          {
+            "nome": "Primaria istituzionale · Missile Defense Agency — Terminal High Altitude Area Defense (THAAD) — scheda del sistema, senza data di pubblicazione",
+            "url": "https://www.mda.mil/system/thaad.html"
+          },
+          {
+            "nome": "Primaria industriale · RTX / Raytheon — NASAMS — scheda del sistema, senza data di pubblicazione",
+            "url": "https://www.rtx.com/raytheon/what-we-do/integrated-air-and-missile-defense/nasams"
+          },
+          {
+            "nome": "Primaria istituzionale · Bundeswehr — Lenkflugkörper IRIS-T SLM",
+            "url": "https://www.bundeswehr.de/de/ausruestung-technik-bundeswehr/landsysteme-bundeswehr/lenkflugkoerper-iris-t-slm",
+            "data": "2024-09-03"
+          }
+        ]
+      },
+      {
+        "id": "A3-E006",
+        "livello": "plausibile",
+        "titolo": "Un ecosistema ampio offre sostegno e domanda concorrente",
+        "motivazione": "Il programma COMLOG riunisce ordini di quattro utilizzatori europei; gli annunci Lockheed Martin rispondono alla domanda statunitense e alleata, mentre Londra usa PURL per sostenere Kyiv. Su queste relazioni documentate l’articolo costruisce l’inferenza: più partner possono offrire sostegno, ma anche richiedere la medesima produzione. Non è disponibile una graduatoria completa delle precedenze contrattuali.",
+        "fonti": [
+          {
+            "nome": "Primaria industriale · RTX / Raytheon — NSPA awards COMLOG a contract for Patriot missiles",
+            "url": "https://www.rtx.com/news/news-center/2024/01/03/nspa-awards-comlog-a-contract-for-patriot-missiles",
+            "data": "2024-01-03"
+          },
+          {
+            "nome": "Primaria industriale · Lockheed Martin — Lockheed Martin and Department of War Advance Landmark Acquisition Transformation to Accelerate PAC-3 MSE Production",
+            "url": "https://news.lockheedmartin.com/2026-01-06-Lockheed-Martin-and-Department-of-War-Advance-Landmark-Acquisition-Transformation-to-Accelerate-PAC-3-R-MSE-Production",
+            "data": "2026-01-06"
+          },
+          {
+            "nome": "Primaria istituzionale · Governo britannico — UK pledges winter air defence package to boost Ukraine’s defences",
+            "url": "https://www.gov.uk/government/news/uk-pledges-winter-air-defence-package-to-boost-ukraines-defences",
+            "data": "2026-09-08"
+          }
+        ]
+      },
+      {
+        "id": "A3-E007",
+        "livello": "confermato",
+        "titolo": "L’accelerazione MSE era già avviata prima del 2022",
+        "motivazione": "Il comunicato Lockheed Martin del novembre 2021 riferisce una richiesta governativa di accelerazione nel 2020 e indica il traguardo di 500 MSE annui nel 2024. La cronologia rende verificabile l’anteriorità dell’espansione rispetto all’invasione su vasta scala. I mille MSE menzionati nel titolo della fonte sono una consegna cumulativa, non il rateo di un singolo anno.",
+        "fonti": [
+          {
+            "nome": "Primaria industriale · Lockheed Martin — Lockheed Martin Accelerates Production to Meet Strong Demand, Delivers 1,000th PAC-3 MSE",
+            "url": "https://news.lockheedmartin.com/2021-11-17-lockheed-martin-accelerates-production-to-meet-strong-demand-delivers-1000th-pac-3-mse",
+            "data": "2021-11-17"
+          }
+        ]
+      },
+      {
+        "id": "A3-E008",
+        "livello": "confermato",
+        "titolo": "Oltre 500 MSE nel 2024, 620 nel 2025; circa 2.000 annui come obiettivo",
+        "motivazione": "Il consuntivo aziendale riferisce oltre 500 MSE prodotti e consegnati nel 2024; l’accordo del gennaio 2026 riporta 620 consegne nel 2025 e punta a circa 2.000 annui. L’aggiornamento di luglio colloca l’espansione entro la fine del 2030. Si confrontano due risultati dichiarati dal produttore e un obiettivo di capacità futura: le cifre non descrivono consegne annue all’Ucraina, né possono essere sommate in un unico indicatore. Sono gli stessi dati ripresi nell’infobox.",
+        "fonti": [
+          {
+            "nome": "Primaria industriale · Lockheed Martin — Lockheed Martin’s PAC-3 MSE Achieves Record Production Year",
+            "url": "https://www.lockheedmartin.com/en-us/news/features/2025/lockheed-martins-pac-3mse-achieves-record-production-year.html",
+            "data": "2025-03-24"
+          },
+          {
+            "nome": "Primaria industriale · Lockheed Martin — Lockheed Martin and Department of War Advance Landmark Acquisition Transformation to Accelerate PAC-3 MSE Production",
+            "url": "https://news.lockheedmartin.com/2026-01-06-Lockheed-Martin-and-Department-of-War-Advance-Landmark-Acquisition-Transformation-to-Accelerate-PAC-3-R-MSE-Production",
+            "data": "2026-01-06"
+          },
+          {
+            "nome": "Primaria industriale · Lockheed Martin — Department of War Awards Lockheed Martin $58.62B for Multiyear PAC-3 MSE Production to Strengthen the Arsenal of Freedom",
+            "url": "https://news.lockheedmartin.com/2026-07-29-Department-of-War-Awards-Lockheed-Martin-58-62B-for-Multiyear-PAC-3-MSE-Production-to-Strengthen-the-Arsenal-of-Freedom",
+            "data": "2026-07-29"
+          }
+        ]
+      },
+      {
+        "id": "A3-E009",
+        "livello": "plausibile",
+        "titolo": "Consumo, reintegro e nuovi ordini insistono sulla stessa filiera",
+        "motivazione": "L’espansione MSE per la domanda statunitense e alleata, il programma europeo GEM-T e l’urgenza ucraina documentano esigenze simultanee. L’articolo ne ricava una relazione fra consumo, riserve dei partner e nuovi acquisti. Le fonti non offrono una serie omogenea con cui quantificare separatamente ciascuna componente o dimostrare che la domanda totale cresca sempre più della produzione.",
+        "fonti": [
+          {
+            "nome": "Primaria industriale · Lockheed Martin — Lockheed Martin and Department of War Advance Landmark Acquisition Transformation to Accelerate PAC-3 MSE Production",
+            "url": "https://news.lockheedmartin.com/2026-01-06-Lockheed-Martin-and-Department-of-War-Advance-Landmark-Acquisition-Transformation-to-Accelerate-PAC-3-R-MSE-Production",
+            "data": "2026-01-06"
+          },
+          {
+            "nome": "Primaria industriale · RTX / Raytheon — NSPA awards COMLOG a contract for Patriot missiles",
+            "url": "https://www.rtx.com/news/news-center/2024/01/03/nspa-awards-comlog-a-contract-for-patriot-missiles",
+            "data": "2024-01-03"
+          },
+          {
+            "nome": "Giornalistica · Reuters, ripubblicata da Yahoo / Currently — Ukraine contracting around 1,000 Patriot missiles from allies, defence chief says",
+            "url": "https://currently.att.yahoo.com/att/ukraine-contracting-around-1-000-205935964.html",
+            "data": "2026-09-08"
+          }
+        ]
+      },
+      {
+        "id": "A3-E010",
+        "livello": "plausibile",
+        "titolo": "Il vincolo dei seeker nell’espansione giapponese del 2024",
+        "motivazione": "Reuters riferisce, sulla base di fonti governative e industriali non tutte identificate, che la scarsità di seeker Boeing limita la prevista crescita dell’assemblaggio Mitsubishi. È una dipendenza circoscritta e sostenuta da reporting autorevole, priva nel materiale disponibile di un riscontro quantitativo pubblico completo. Il successivo ampliamento Boeing è coerente con l’esigenza di più seeker, ma non dimostra da solo l’entità di quella carenza nel 2024. La pagina Reuters è datata 20 luglio e aggiornata il 21.",
+        "fonti": [
+          {
+            "nome": "Giornalistica · Reuters — US-Japan Patriot missile production plan hits Boeing component roadblock",
+            "url": "https://www.reuters.com/business/aerospace-defense/us-japan-patriot-missile-production-plan-hits-boeing-component-roadblock-2024-07-20/",
+            "data": "2024-07-20"
+          },
+          {
+            "nome": "Primaria industriale · Boeing — Boeing and Department of War Sign 7-Year Framework to Expand PAC-3 Seeker Production",
+            "url": "https://boeing.mediaroom.com/news-releases-statements?item=131654",
+            "data": "2026-04-01"
+          }
+        ]
+      },
+      {
+        "id": "A3-E011",
+        "livello": "confermato",
+        "titolo": "Boeing: un quadro settennale per triplicare i seeker PAC-3",
+        "motivazione": "Boeing annuncia il 1º aprile 2026 un accordo quadro di sette anni per triplicare la produzione dei seeker e descrive investimenti a Huntsville avviati dal 2024. La prova riguarda il programma del fornitore e il componente che produce; non è un consuntivo di missili completi né certifica che l’intero aumento sia già disponibile.",
+        "fonti": [
+          {
+            "nome": "Primaria industriale · Boeing — Boeing and Department of War Sign 7-Year Framework to Expand PAC-3 Seeker Production",
+            "url": "https://boeing.mediaroom.com/news-releases-statements?item=131654",
+            "data": "2026-04-01"
+          }
+        ]
+      },
+      {
+        "id": "A3-E012",
+        "livello": "confermato",
+        "titolo": "L3Harris: subcontratto propulsivo e impianti attesi nel 2027",
+        "motivazione": "Il comunicato dell’8 settembre attribuisce a Lockheed Martin un subcontratto da 4,7 miliardi di dollari su sette anni, ancora da definire integralmente, per la propulsione MSE. Colloca a giugno l’avvio dei lavori di due strutture a Camden e ne prevede l’operatività nel 2027. Il valore è quello della fornitura pluriennale, non una misura della spesa per costruire gli impianti; l’entrata in funzione è una previsione aziendale.",
+        "fonti": [
+          {
+            "nome": "Primaria industriale · L3Harris — L3Harris Receives Landmark PAC-3 MSE Propulsion Contract to Power America’s Arsenal of Freedom",
+            "url": "https://www.l3harris.com/newsroom/press-release/2026/09/l3harris-receives-pac-3-mse-propulsion-arsenal-of-freedom",
+            "data": "2026-09-08"
+          }
+        ]
+      },
+      {
+        "id": "A3-E013",
+        "livello": "confermato",
+        "titolo": "Northrop Grumman come seconda fonte dei motori MSE",
+        "motivazione": "Il Department of War annuncia il 3 agosto un accordo quadro destinato a istituire una seconda fonte per i motori a propellente solido MSE. È documentata la decisione di diversificare l’approvvigionamento. Il comunicato non fornisce un consuntivo di motori aggiuntivi già accettati né permette di attribuire alla nuova fonte un rateo corrente.",
+        "fonti": [
+          {
+            "nome": "Primaria istituzionale · U.S. Department of War — Department of War Signs Framework Agreements With Northrop Grumman to Ramp Production of PAC-3, THAAD Components",
+            "url": "https://www.war.gov/News/Releases/Release/Article/4562167/department-of-war-signs-framework-agreements-with-northrop-grumman-to-ramp-prod/",
+            "data": "2026-08-03"
+          }
+        ]
+      },
+      {
+        "id": "A3-E014",
+        "livello": "confermato",
+        "titolo": "AUR III e il risultato della filiera integrata",
+        "motivazione": "Il bilancio Lockheed Martin sul 2024 ricorda l’apertura di AUR III nel 2022 e riferisce l’aumento dei MSE prodotti e consegnati. Documenta quindi un ampliamento dell’integrazione e un risultato complessivo successivo. L’attribuzione causale di singole quote di incremento ad AUR III, collaudi o componenti non è pubblicata e non viene calcolata nell’articolo.",
+        "fonti": [
+          {
+            "nome": "Primaria industriale · Lockheed Martin — Lockheed Martin’s PAC-3 MSE Achieves Record Production Year",
+            "url": "https://www.lockheedmartin.com/en-us/news/features/2025/lockheed-martins-pac-3mse-achieves-record-production-year.html",
+            "data": "2025-03-24"
+          }
+        ]
+      },
+      {
+        "id": "A3-E015",
+        "livello": "plausibile",
+        "titolo": "Il vincolo dominante può spostarsi fra i processi",
+        "motivazione": "Il caso giapponese individua una restrizione a monte dell’assemblaggio; i programmi 2026 intervengono sia sui seeker sia sulla propulsione. La possibilità che un vincolo si sposti è una deduzione dalla dipendenza fra processi complementari. Queste fonti non ricostruiscono una successione misurata dei colli di bottiglia e non identificano quale nodo determini nel settembre 2026 il flusso totale Patriot.",
+        "fonti": [
+          {
+            "nome": "Giornalistica · Reuters — US-Japan Patriot missile production plan hits Boeing component roadblock",
+            "url": "https://www.reuters.com/business/aerospace-defense/us-japan-patriot-missile-production-plan-hits-boeing-component-roadblock-2024-07-20/",
+            "data": "2024-07-20"
+          },
+          {
+            "nome": "Primaria industriale · Boeing — Boeing and Department of War Sign 7-Year Framework to Expand PAC-3 Seeker Production",
+            "url": "https://boeing.mediaroom.com/news-releases-statements?item=131654",
+            "data": "2026-04-01"
+          },
+          {
+            "nome": "Primaria industriale · L3Harris — L3Harris Receives Landmark PAC-3 MSE Propulsion Contract to Power America’s Arsenal of Freedom",
+            "url": "https://www.l3harris.com/newsroom/press-release/2026/09/l3harris-receives-pac-3-mse-propulsion-arsenal-of-freedom",
+            "data": "2026-09-08"
+          }
+        ]
+      },
+      {
+        "id": "A3-E016",
+        "livello": "confermato",
+        "titolo": "GEM-T e PAC-3 appartengono a rami distinti",
+        "motivazione": "La scheda Raytheon colloca GEM-T nell’evoluzione PAC-2 e ne descrive l’impiego contro minacce aeree e balistiche tattiche. MDA descrive per PAC-3 il principio d’impatto diretto. La distinzione di prodotto e meccanismo giustifica il trattamento separato delle filiere. Un GEM-T aggiuntivo non è contato come un MSE aggiuntivo; l’effettiva sostituibilità richiede di specificare la missione.",
+        "fonti": [
+          {
+            "nome": "Primaria industriale · RTX / Raytheon — Guidance Enhanced Missile — scheda GEM-T, senza data di pubblicazione",
+            "url": "https://www.rtx.com/raytheon/what-we-do/integrated-air-and-missile-defense/guidance-enhanced-missile"
+          },
+          {
+            "nome": "Primaria istituzionale · Missile Defense Agency — Patriot Advanced Capability-3 (PAC-3) — scheda del sistema, senza data di pubblicazione",
+            "url": "https://www.mda.mil/system/pac_3.html"
+          }
+        ]
+      },
+      {
+        "id": "A3-E017",
+        "livello": "confermato",
+        "titolo": "NSPA–COMLOG: fino a mille GEM-T, opzioni comprese",
+        "motivazione": "RTX riferisce un contratto NSPA a COMLOG per Germania, Paesi Bassi, Romania e Spagna. Il massimo di mille GEM-T presuppone l’esercizio di tutte le opzioni. La fonte industriale elenca nuovi fornitori, qualificazioni e attrezzature di prova nell’espansione europea; non documenta mille missili già prodotti o trasferiti all’Ucraina. L’infobox mantiene questo stesso perimetro.",
+        "fonti": [
+          {
+            "nome": "Primaria industriale · RTX / Raytheon — NSPA awards COMLOG a contract for Patriot missiles",
+            "url": "https://www.rtx.com/news/news-center/2024/01/03/nspa-awards-comlog-a-contract-for-patriot-missiles",
+            "data": "2024-01-03"
+          }
+        ]
+      },
+      {
+        "id": "A3-E018",
+        "livello": "confermato",
+        "titolo": "Un contratto GEM-T da 3,7 miliardi per l’Ucraina",
+        "motivazione": "Raytheon annuncia una fornitura commerciale da 3,7 miliardi di dollari per intercettori GEM-T destinati all’Ucraina, sostenuta anche dalla nuova capacità di Schrobenhausen. Il comunicato conferma l’impegno dichiarato e il ramo produttivo, ma non pubblica quantità e calendario completo. Il valore contrattuale non viene convertito in numero di missili.",
+        "fonti": [
+          {
+            "nome": "Primaria industriale · RTX / Raytheon — RTX’s Raytheon to deliver Patriot interceptors to Ukraine",
+            "url": "https://www.rtx.com/news/news-center/2026/04/14/rtxs-raytheon-to-deliver-patriot-interceptors-to-ukraine",
+            "data": "2026-04-14"
+          }
+        ]
+      },
+      {
+        "id": "A3-E019",
+        "livello": "confermato",
+        "titolo": "WZE: qualificazione e ordine per componenti PAC-3",
+        "motivazione": "L3Harris documenta un ordine a WZE per motori di controllo d’assetto PAC-3 dopo attrezzaggio, formazione e verifiche di prontezza. L’avvio a basso rateo è prospettato nel prossimo futuro rispetto al comunicato. La fonte riguarda componenti e una tappa della qualificazione: non attesta una produzione europea di MSE completi né un volume seriale già realizzato.",
+        "fonti": [
+          {
+            "nome": "Primaria industriale · L3Harris — L3Harris Strengthens Global Solid Rocket Motor Supply Chain With New PAC-3 Propulsion Supplier",
+            "url": "https://www.l3harris.com/newsroom/press-release/2026/05/l3harris-strengthens-global-srm-supply-chain-new-pac-3-supplier",
+            "data": "2026-05-26"
+          }
+        ]
+      },
+      {
+        "id": "A3-E020",
+        "livello": "confermato",
+        "titolo": "Kyiv dichiara circa mille Patriot in contrattualizzazione",
+        "motivazione": "Reuters riporta una dichiarazione attribuita al ministro ucraino della Difesa: circa mille Patriot in contrattualizzazione con gli alleati e risorse europee, in maggioranza attesi negli anni successivi. È confermato il contenuto della dichiarazione pubblica riportata; il dispaccio non certifica l’esecuzione di tutti i contratti. Varianti e calendario per lotto restano indeterminati. L’infobox conserva quantità, attribuzione e natura futura del dato.",
+        "fonti": [
+          {
+            "nome": "Giornalistica · Reuters, ripubblicata da Yahoo / Currently — Ukraine contracting around 1,000 Patriot missiles from allies, defence chief says",
+            "url": "https://currently.att.yahoo.com/att/ukraine-contracting-around-1-000-205935964.html",
+            "data": "2026-09-08"
+          }
+        ]
+      },
+      {
+        "id": "A3-E021",
+        "livello": "plausibile",
+        "titolo": "Produzione aggregata e disponibilità ucraina possono divergere",
+        "motivazione": "Londra destina una parte delle risorse a Kyiv attraverso PURL; la dichiarazione ucraina distingue ordini futuri e aiuti urgenti; il programma NSPA risponde a quattro clienti europei. Da queste destinazioni e tempistiche l’articolo ricava l’autonomia del problema di assegnazione. Non attribuisce una percentuale della scarsità a decisioni politiche, perché la distribuzione integrale dei lotti non è nota.",
+        "fonti": [
+          {
+            "nome": "Primaria istituzionale · Governo britannico — UK pledges winter air defence package to boost Ukraine’s defences",
+            "url": "https://www.gov.uk/government/news/uk-pledges-winter-air-defence-package-to-boost-ukraines-defences",
+            "data": "2026-09-08"
+          },
+          {
+            "nome": "Giornalistica · Reuters, ripubblicata da Yahoo / Currently — Ukraine contracting around 1,000 Patriot missiles from allies, defence chief says",
+            "url": "https://currently.att.yahoo.com/att/ukraine-contracting-around-1-000-205935964.html",
+            "data": "2026-09-08"
+          },
+          {
+            "nome": "Primaria industriale · RTX / Raytheon — NSPA awards COMLOG a contract for Patriot missiles",
+            "url": "https://www.rtx.com/news/news-center/2024/01/03/nspa-awards-comlog-a-contract-for-patriot-missiles",
+            "data": "2024-01-03"
+          }
+        ]
+      },
+      {
+        "id": "A3-E022",
+        "livello": "non-verificato",
+        "titolo": "Consumi per variante, scorte efficienti e assegnazione dei lotti",
+        "motivazione": "Il materiale esaminato entro il 12 settembre 2026 documenta consegne aggregate del produttore, richieste urgenti e impegni futuri. Non contiene serie comparabili sufficienti su consumi ucraini per variante, riserve efficienti e destinazione completa dei lotti. Il livello riguarda questi dati mancanti e il peso relativo delle cause, non l’esistenza degli annunci citati. L’indeterminazione non è assunta come valore zero o come prova che tali dati non esistano presso gli attori.",
+        "fonti": [
+          {
+            "nome": "Primaria industriale · Lockheed Martin — Lockheed Martin and Department of War Advance Landmark Acquisition Transformation to Accelerate PAC-3 MSE Production",
+            "url": "https://news.lockheedmartin.com/2026-01-06-Lockheed-Martin-and-Department-of-War-Advance-Landmark-Acquisition-Transformation-to-Accelerate-PAC-3-R-MSE-Production",
+            "data": "2026-01-06"
+          },
+          {
+            "nome": "Giornalistica · Reuters, ripubblicata da Yahoo / Currently — Ukraine contracting around 1,000 Patriot missiles from allies, defence chief says",
+            "url": "https://currently.att.yahoo.com/att/ukraine-contracting-around-1-000-205935964.html",
+            "data": "2026-09-08"
+          },
+          {
+            "nome": "Primaria industriale · RTX / Raytheon — RTX’s Raytheon to deliver Patriot interceptors to Ukraine",
+            "url": "https://www.rtx.com/news/news-center/2026/04/14/rtxs-raytheon-to-deliver-patriot-interceptors-to-ukraine",
+            "data": "2026-04-14"
+          }
+        ]
+      },
+      {
+        "id": "A3-E023",
+        "livello": "plausibile",
+        "titolo": "Il consumo corrente può degradare la risposta alla salva successiva",
+        "motivazione": "P6 sviluppa il meccanismo analitico della pressione ripetuta contro le funzioni del difensore; la richiesta ucraina di aiuto urgente rende concreto il problema del tempo di reintegro. L’articolo applica quel modello al consumo degli intercettori. Il rinvio a Frontiera chiarisce la continuità del ragionamento, non offre un riscontro indipendente: né la carenza né i ritardi provano una conoscenza russa degli inventari o un’unica origine avversaria della scarsità.",
+        "fonti": [
+          {
+            "nome": "Analisi editoriale · Frontiera — P6 — Attacco sistemico e profondità difesa",
+            "url": "https://frontiera.pages.dev/profondita/attacco-sistemico-profondita-difesa/"
+          },
+          {
+            "nome": "Giornalistica · Reuters, ripubblicata da Yahoo / Currently — Ukraine contracting around 1,000 Patriot missiles from allies, defence chief says",
+            "url": "https://currently.att.yahoo.com/att/ukraine-contracting-around-1-000-205935964.html",
+            "data": "2026-09-08"
+          }
+        ]
+      },
+      {
+        "id": "A3-E024",
+        "livello": "plausibile",
+        "titolo": "La profondità industriale esterna passa attraverso gli alleati",
+        "motivazione": "Gli ampliamenti statunitensi, la produzione tedesca GEM-T e il pacchetto britannico documentano una base di sostegno collocata fuori dall’Ucraina. La maggiore protezione dall’interdizione ordinaria del teatro e la dipendenza dall’accesso politico sono l’interpretazione geografica e strategica dell’articolo. Non si sostiene un’immunità assoluta dei siti industriali né si quantifica l’effetto di una specifica decisione alleata.",
+        "fonti": [
+          {
+            "nome": "Primaria industriale · L3Harris — L3Harris Receives Landmark PAC-3 MSE Propulsion Contract to Power America’s Arsenal of Freedom",
+            "url": "https://www.l3harris.com/newsroom/press-release/2026/09/l3harris-receives-pac-3-mse-propulsion-arsenal-of-freedom",
+            "data": "2026-09-08"
+          },
+          {
+            "nome": "Primaria industriale · RTX / Raytheon — RTX’s Raytheon to deliver Patriot interceptors to Ukraine",
+            "url": "https://www.rtx.com/news/news-center/2026/04/14/rtxs-raytheon-to-deliver-patriot-interceptors-to-ukraine",
+            "data": "2026-04-14"
+          },
+          {
+            "nome": "Primaria istituzionale · Governo britannico — UK pledges winter air defence package to boost Ukraine’s defences",
+            "url": "https://www.gov.uk/government/news/uk-pledges-winter-air-defence-package-to-boost-ukraines-defences",
+            "data": "2026-09-08"
+          }
+        ]
+      },
+      {
+        "id": "A3-E025",
+        "livello": "plausibile",
+        "titolo": "Gli altri strati possono conservare le opportunità d’impiego Patriot",
+        "motivazione": "Le schede NASAMS e IRIS-T documentano missioni contro minacce aerodinamiche; P6 colloca la difesa in un sistema di funzioni sottoposto a pressione ripetuta. Su questa base l’articolo distingue la possibile sostituzione di un ingaggio Patriot dall’estensione della copertura a un bene prima esposto. Il risparmio è condizionato da sensori, munizioni e opportunità d’intercetto: non viene stimato un numero di MSE conservati in Ucraina.",
+        "fonti": [
+          {
+            "nome": "Primaria industriale · RTX / Raytheon — NASAMS — scheda del sistema, senza data di pubblicazione",
+            "url": "https://www.rtx.com/raytheon/what-we-do/integrated-air-and-missile-defense/nasams"
+          },
+          {
+            "nome": "Primaria istituzionale · Bundeswehr — Lenkflugkörper IRIS-T SLM",
+            "url": "https://www.bundeswehr.de/de/ausruestung-technik-bundeswehr/landsysteme-bundeswehr/lenkflugkoerper-iris-t-slm",
+            "data": "2024-09-03"
+          },
+          {
+            "nome": "Analisi editoriale · Frontiera — P6 — Attacco sistemico e profondità difesa",
+            "url": "https://frontiera.pages.dev/profondita/attacco-sistemico-profondita-difesa/"
+          }
+        ]
+      },
+      {
+        "id": "A3-E026",
+        "livello": "plausibile",
+        "titolo": "Diversificare gli ingaggi redistribuisce anche la domanda industriale",
+        "motivazione": "RTX documenta l’impiego della famiglia AMRAAM in NASAMS; Eurosam descrive un programma Aster che alimenta difesa terrestre e navale. Questi legami sostengono l’inferenza che spostare missioni redistribuisca fabbisogni fra filiere. Il beneficio dipende dalla capacità e dalle scorte aggiuntive effettivamente utilizzabili; le fonti non provano che ogni diversificazione elimini un vincolo o ne generi automaticamente uno nuovo.",
+        "fonti": [
+          {
+            "nome": "Primaria industriale · RTX / Raytheon — NASAMS — scheda del sistema, senza data di pubblicazione",
+            "url": "https://www.rtx.com/raytheon/what-we-do/integrated-air-and-missile-defense/nasams"
+          },
+          {
+            "nome": "Primaria industriale · Eurosam — FSAF/PAAMS: increase and acceleration of Aster missiles production for France, Italy and the UK within the next generation of surface-to-air anti-missile systems",
+            "url": "https://eurosam.com/fsaf-paams-increase-and-acceleration-of-aster-missiles-production-for-france-italy-and-the-uk-within-the-next-generation-of-surface-to-air-anti-missile-systems/",
+            "data": "2025-03-11"
+          }
+        ]
+      },
+      {
+        "id": "A3-E027",
+        "livello": "confermato",
+        "titolo": "SAMP/T NG: sviluppo dell’integrazione fra Aster e VL MICA",
+        "motivazione": "Eurosam rende noto l’11 giugno 2026 il contratto francese del 30 aprile per sviluppare la configurazione multistrato SAMP/T NG con Aster e VL MICA. È un passaggio progettuale e contrattuale documentato. La conservazione delle munizioni nell’impiego è una possibile funzione della combinazione, non un risultato operativo già misurato dal comunicato.",
+        "fonti": [
+          {
+            "nome": "Primaria industriale · Eurosam — France orders the multi-layered version of the SAMP/T NG air and missile defence system",
+            "url": "https://eurosam.com/france-orders-the-multi-layered-version-of-the-samp-t-ng-air-and-missile-defence-system/",
+            "data": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "id": "A3-E028",
+        "livello": "plausibile",
+        "titolo": "Distribuire il consumo per conservare la capacità meno sostituibile",
+        "motivazione": "Il richiamo a F5 trasferisce al caso della difesa aerea una relazione sviluppata nell’analisi Frontiera: distribuire il consumo fra mezzi ricostituibili per preservare risorse più difficili da sostituire. Le missioni NASAMS e il programma multistrato SAMP/T NG ne rendono pertinente l’applicazione. È un raccordo analitico, non una prova empirica di risparmi Patriot già ottenuti.",
+        "fonti": [
+          {
+            "nome": "Analisi editoriale · Frontiera — F5 — La macchina prima dell’uomo",
+            "url": "https://frontiera.pages.dev/fasi/macchina-prima-delluomo/"
+          },
+          {
+            "nome": "Primaria industriale · RTX / Raytheon — NASAMS — scheda del sistema, senza data di pubblicazione",
+            "url": "https://www.rtx.com/raytheon/what-we-do/integrated-air-and-missile-defense/nasams"
+          },
+          {
+            "nome": "Primaria industriale · Eurosam — France orders the multi-layered version of the SAMP/T NG air and missile defence system",
+            "url": "https://eurosam.com/france-orders-the-multi-layered-version-of-the-samp-t-ng-air-and-missile-defence-system/",
+            "data": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "id": "A3-E029",
+        "livello": "plausibile",
+        "titolo": "Consegne pari al consumo possono coesistere con protezione insufficiente",
+        "motivazione": "La distinzione fra consegne future e bisogno urgente espressa da Kyiv motiva l’attenzione alla protezione mantenuta. L’articolo aggiunge un limite logico alla misura: riducendo gli ingaggi si può far scendere il consumo senza soddisfare il bisogno difensivo. La fonte non quantifica missioni omesse; il passaggio propone un criterio di valutazione e non una stima del razionamento ucraino.",
+        "fonti": [
+          {
+            "nome": "Giornalistica · Reuters, ripubblicata da Yahoo / Currently — Ukraine contracting around 1,000 Patriot missiles from allies, defence chief says",
+            "url": "https://currently.att.yahoo.com/att/ukraine-contracting-around-1-000-205935964.html",
+            "data": "2026-09-08"
+          }
+        ]
+      }
     ]
   }
 }
