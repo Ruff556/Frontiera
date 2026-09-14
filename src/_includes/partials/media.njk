@@ -24,8 +24,9 @@
    il contenitore con la classe di stile lo passa il chiamante.
    Se il front matter dichiara img.posizione la si applica come object-position;
    in assenza del campo il comportamento resta invariato (default del CSS).
-   `showCredits` resta true per compatibilità; le sole anteprime della homepage
-   lo disattivano esplicitamente, mentre le pagine editoriali conservano i diritti. #}
+   `showCredits` resta true per compatibilità; le anteprime della homepage e degli
+   archivi pubblici lo disattivano esplicitamente, mentre le pagine editoriali
+   conservano i diritti. #}
 {% macro fill(img, ph="immagine", showCredits=true, profile="archiveCard", loading="lazy", priority=false) %}
   {% if img and img.file %}
     {{ img | responsiveImage(profile, { alt: img.alt | default(""), loading: loading, fetchpriority: "high" if priority else "" }) | safe }}
