@@ -645,6 +645,285 @@
           }
         ]
       }
+    ],
+    "contenuti/schede/S4-DELTA.md": [
+      {
+        "id": "S4-E001",
+        "livello": "confermato",
+        "titolo": "Rapporti radar filtrati a Bentley Priory, distribuiti alle sale operative e integrati dall’Observer Corps",
+        "motivazione": "La ricostruzione istituzionale del museo descrive separatamente Filter Room, distribuzione ai livelli di gruppo e settore e contributo dell’Observer Corps dopo il passaggio delle incursioni sulla terraferma. La scheda di Historic England conferma i collegamenti telefonici. Le fonti sostengono questa sequenza organizzativa, senza ricostruire una singola intercettazione.",
+        "fonti": [
+          {
+            "nome": "Bentley Priory Museum — The Many: Those on the ground",
+            "url": "https://bentleypriorymuseum.org.uk/bentley-priory-and-the-battle-of-britain/the-many/"
+          },
+          {
+            "nome": "Historic England — Group Operations Room, Uxbridge",
+            "url": "https://historicengland.org.uk/listing/the-list/list-entry/1392556"
+          }
+        ]
+      },
+      {
+        "id": "S4-E002",
+        "livello": "confermato",
+        "titolo": "A Uxbridge, mappa, prontezza degli squadroni e orologio a colori sostenevano il comando attraverso le stazioni di settore",
+        "motivazione": "Historic England documenta la funzione della sala dell’11 Group, il quadro della prontezza, l’orologio e il comando dei settori. Il testo non identifica la ricostruzione museale dello Slat Board con l’allestimento dell’intera estate 1940 e non confonde Uxbridge con Bentley Priory.",
+        "fonti": [
+          {
+            "nome": "Historic England — Group Operations Room, Uxbridge",
+            "url": "https://historicengland.org.uk/listing/the-list/list-entry/1392556"
+          }
+        ]
+      },
+      {
+        "id": "S4-E003",
+        "livello": "confermato",
+        "titolo": "DELTA è sviluppato nel circuito ministeriale ucraino prima dell’invasione su larga scala e combina input umani e sensori in un ecosistema cloud",
+        "motivazione": "NATO ACT identifica gli sviluppatori ministeriali, colloca lo sviluppo prima del 2022 e descrive servizi cloud, inserimento manuale e integrazione con sensori. Il grado riguarda origine e architettura funzionale generale; non certifica completezza dei dati, topologia interna o prestazioni.",
+        "fonti": [
+          {
+            "nome": "NATO ACT — DELTA e interoperabilità a CWIX 2024",
+            "data": "2024-07-12",
+            "url": "https://www.act.nato.int/article/delta-system-cwix/"
+          }
+        ]
+      },
+      {
+        "id": "S4-E004",
+        "livello": "confermato",
+        "titolo": "Monitor sostiene il quadro cartografico e Vezha, accessibile in DELTA dall’ottobre 2024, il lavoro sui video",
+        "motivazione": "Il comunicato di ottobre documenta l’integrazione della piattaforma video; quello di gennaio nomina Monitor come modulo di consapevolezza situazionale e Vezha come piattaforma video nell’ecosistema. È confermata la funzione distinta dei due ambienti, non un percorso automatico di ogni avvistamento.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino — Vezha accessibile dentro DELTA",
+            "data": "2024-10-14",
+            "url": "https://mod.gov.ua/en/news/kateryna-chernohorenko-the-battlefield-video-analysis-platform-known-as-vezha-is-now-accessible-within-the-delta-combat-system"
+          },
+          {
+            "nome": "Ministero della Difesa ucraino — Mission Control disponibile a tutti gli utenti DELTA",
+            "data": "2025-01-27",
+            "url": "https://mod.gov.ua/en/news/kateryna-chernohorenko-the-mission-control-module-is-now-accessible-to-all-delta-users"
+          }
+        ]
+      },
+      {
+        "id": "S4-E005",
+        "livello": "confermato",
+        "titolo": "Il Ministero presenta Avengers come aiuto per rilevare mezzi e altri oggetti nei materiali video",
+        "motivazione": "La fonte primaria descrive la presentazione pubblica di Avengers e la funzione di rilevazione assistita da AI. L’ancora attribuisce questa descrizione al Ministero: non ne importa percentuali, tempi promozionali o un’autonomia decisionale.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino — DELTA e Avengers alla London Defence Conference",
+            "data": "2025-05-13",
+            "url": "https://mod.gov.ua/en/news/enemy-equipment-detected-in-2-seconds-the-ministry-of-defence-showcased-delta-and-avengers-systems-at-the-london-defence-conference"
+          }
+        ]
+      },
+      {
+        "id": "S4-E006",
+        "livello": "confermato",
+        "titolo": "Target Hub, presentato nel febbraio 2025 e collegato a Monitor, consente creazione, condivisione, assegnazione, priorità e visibilità del lavoro sui bersagli",
+        "motivazione": "Il comunicato elenca tali funzioni e distingue l’integrazione già esistente con Monitor dai collegamenti futuri con altri moduli. È confermata la descrizione funzionale pubblicata; la riduzione effettiva dei tempi e delle duplicazioni non è assunta come risultato generale misurato.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino — Target Hub e integrazione con Monitor",
+            "data": "2025-02-12",
+            "url": "https://mod.gov.ua/en/news/kateryna-chernohorenko-delta-has-introduced-a-module-that-facilitates-the-coordination-of-fire-missions-for-military-units"
+          }
+        ]
+      },
+      {
+        "id": "S4-E007",
+        "livello": "confermato",
+        "titolo": "Mission Control è attestato nel resoconto di un’esercitazione NATO del 2024",
+        "motivazione": "Il resoconto ministeriale del 4 ottobre 2024 nomina Mission Control nella pianificazione all’esercitazione C-UAS. Questa attestazione contemporanea prova l’esistenza anteriore al 2026, senza dedurne diffusione generale o prestazioni belliche.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino — DELTA nell’esercitazione C-UAS 2024",
+            "data": "2024-10-04",
+            "url": "https://mod.gov.ua/en/news/delta-at-nato-exercises-ukraine-shares-unique-counter-drone-expertise-1"
+          }
+        ]
+      },
+      {
+        "id": "S4-E008",
+        "livello": "confermato",
+        "titolo": "Nel gennaio 2025 Mission Control è reso disponibile agli utenti DELTA, con raccolta e analisi dei dati di missione già descritte",
+        "motivazione": "La fonte del 27 gennaio annuncia la disponibilità e menziona espressamente pianificazione, coordinamento, raccolta e analisi. La cronologia del riuso precede quindi il nuovo lancio del 2026; non vengono certificati i volumi o gli effetti di efficacia rivendicati dal comunicato.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino — Mission Control disponibile a tutti gli utenti DELTA",
+            "data": "2025-01-27",
+            "url": "https://mod.gov.ua/en/news/kateryna-chernohorenko-the-mission-control-module-is-now-accessible-to-all-delta-users"
+          }
+        ]
+      },
+      {
+        "id": "S4-E009",
+        "livello": "confermato",
+        "titolo": "Nel 2025 il Ministero dispone la diffusione generale di DELTA e mette a disposizione un corso Army+ che comprende Mission Control",
+        "motivazione": "Le due fonti documentano rispettivamente l’iniziativa ministeriale d’agosto e il corso d’ottobre, con Mission Control nel programma. Si confermano decisione e disponibilità della formazione, non un uso uniforme né il completamento del corso da parte di tutti i reparti.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino — diffusione di DELTA a tutti i livelli delle Forze di Difesa",
+            "data": "2025-08-06",
+            "url": "https://mod.gov.ua/en/news/the-delta-combat-system-has-been-deployed-across-all-levels-of-defence-forces-of-ukraine"
+          },
+          {
+            "nome": "Ministero della Difesa ucraino — corso DELTA in Army+",
+            "data": "2025-10-28",
+            "url": "https://mod.gov.ua/en/news/delta-basic-training-course-in-army"
+          }
+        ]
+      },
+      {
+        "id": "S4-E010",
+        "livello": "confermato",
+        "titolo": "Nel gennaio 2026 un nuovo ordine accompagna l’estensione sistematica di Mission Control alle operazioni con droni",
+        "motivazione": "Il Ministero riferisce la firma dell’ordine e l’intento di consolidare le operazioni con droni. L’ancora riguarda il passaggio istituzionale; la fonte non viene utilizzata per datare la nascita tecnica del modulo o per certificare il completamento del rollout.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino — ordine per il nuovo lancio di Mission Control",
+            "data": "2026-01-23",
+            "url": "https://mod.gov.ua/en/news/mykhailo-fedorov-signs-order-to-launch-mission-control-drone-command-and-control-system-in-delta"
+          }
+        ]
+      },
+      {
+        "id": "S4-E011",
+        "livello": "confermato",
+        "titolo": "Gli equipaggi inseriscono tipo di drone, punto di lancio, rotta e missione; il sistema può generare il rapporto digitale",
+        "motivazione": "Il comunicato di gennaio esplicita l’input degli equipaggi; quello di marzo descrive la generazione automatica dei rapporti. Le fonti sostengono la procedura pubblicamente descritta, mantenendo distinto l’inserimento umano dall’automazione del resoconto e dall’accertamento dell’effetto.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino — ordine per il nuovo lancio di Mission Control",
+            "data": "2026-01-23",
+            "url": "https://mod.gov.ua/en/news/mykhailo-fedorov-signs-order-to-launch-mission-control-drone-command-and-control-system-in-delta"
+          },
+          {
+            "nome": "Ministero della Difesa ucraino — rapporti digitali generati in Mission Control",
+            "data": "2026-03-06",
+            "url": "https://mod.gov.ua/en/news/over-150-000-digital-reports-mission-control-system-simplifies-drone-operations-control"
+          }
+        ]
+      },
+      {
+        "id": "S4-E012",
+        "livello": "confermato",
+        "titolo": "Nel marzo 2026 il Ministero riferisce uso di Mission Control in tutti i corpi e raggruppamenti, pannelli dal battaglione ai vertici e riduzione dei riepiloghi separati",
+        "motivazione": "La fonte primaria descrive copertura organizzativa, livelli di accesso analitico e sostituzione della precedente catena di reporting. Il grado confermato riguarda ciò che il Ministero riferisce; completezza e uniformità della compilazione non sono oggetto di un audit pubblico nella documentazione esaminata.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino — Mission Control nei corpi e raggruppamenti",
+            "data": "2026-03-26",
+            "url": "https://mod.gov.ua/en/news/two-months-since-the-launch-of-mission-control-within-the-delta-ecosystem-the-system-is-now-operational-across-all-corps-and-force-groupings"
+          }
+        ]
+      },
+      {
+        "id": "S4-E013",
+        "livello": "confermato",
+        "titolo": "Il 6 marzo 2026 il Ministero annuncia oltre 150.000 rapporti digitali generati in Mission Control",
+        "motivazione": "Il comunicato riporta direttamente il totale, l’unità di conto e la data dell’annuncio. È confermata la dichiarazione ministeriale, non verificato indipendentemente il conteggio. I rapporti non vengono equiparati a missioni uniche, bersagli o effetti accertati; la finestra iniziale non è definita.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino — rapporti digitali generati in Mission Control",
+            "data": "2026-03-06",
+            "url": "https://mod.gov.ua/en/news/over-150-000-digital-reports-mission-control-system-simplifies-drone-operations-control"
+          }
+        ]
+      },
+      {
+        "id": "S4-E014",
+        "livello": "confermato",
+        "titolo": "Mission Control comprende, nel resoconto ministeriale del marzo 2026, ricognizione, minamento, logistica ed evacuazione oltre all’attacco",
+        "motivazione": "La fonte elenca queste tipologie di attività dei sistemi senza equipaggio. L’affermazione rimane nel perimetro descritto e non estende la copertura a tutta la logistica o a tutte le evacuazioni delle Forze di Difesa.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino — Mission Control nei corpi e raggruppamenti",
+            "data": "2026-03-26",
+            "url": "https://mod.gov.ua/en/news/two-months-since-the-launch-of-mission-control-within-the-delta-ecosystem-the-system-is-now-operational-across-all-corps-and-force-groupings"
+          }
+        ]
+      },
+      {
+        "id": "S4-E015",
+        "livello": "confermato",
+        "titolo": "Nell’agosto 2026 il Ministero apre alle imprese Avengers Labs e dichiara cinque milioni di fotogrammi annotati, in maggioranza provenienti da DELTA",
+        "motivazione": "La fonte annuncia l’accesso e descrive esplicitamente unità di conto, annotazione e provenienza prevalente. È confermata la dichiarazione, non auditato indipendentemente il dataset. Fotogrammi non significa scene indipendenti, bersagli unici o prestazione dei modelli.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino — Avengers Labs, dataset e sviluppo dei modelli",
+            "data": "2026-08-10",
+            "url": "https://mod.gov.ua/en/news/ukrainian-defense-companies-to-train-their-own-ai-models-on-the-avengers-labs-platform"
+          }
+        ]
+      },
+      {
+        "id": "S4-E016",
+        "livello": "confermato",
+        "titolo": "Il Ministero attribuisce al dataset Avengers Labs l’addestramento di un rilevatore già impiegato in DELTA",
+        "motivazione": "Il comunicato del 10 agosto collega il dataset all’addestramento di un sistema di rilevamento usato in DELTA. Si conferma questa attribuzione della fonte primaria: il ritorno operativo è dichiarato e circoscritto a quel rilevatore. Efficacia indipendente e ritorno di tutti i modelli sviluppati dalle imprese non sono dimostrati.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino — Avengers Labs, dataset e sviluppo dei modelli",
+            "data": "2026-08-10",
+            "url": "https://mod.gov.ua/en/news/ukrainian-defense-companies-to-train-their-own-ai-models-on-the-avengers-labs-platform"
+          }
+        ]
+      },
+      {
+        "id": "S4-E017",
+        "livello": "confermato",
+        "titolo": "Il 10 marzo 2026 il Ministero annuncia un ordine firmato per formare la domanda di droni attraverso dati operativi, con il contributo di DELTA e Mission Control e requisiti dello Stato maggiore",
+        "motivazione": "La fonte riferisce la firma, identifica i sistemi che concorrono alla valutazione e conserva il ruolo dello Stato maggiore nella definizione dei requisiti su richiesta delle unità. È confermata la politica annunciata come formalizzata; contratti, consegne e miglioramenti causali non sono documentati dal comunicato.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino — domanda di droni basata sui dati operativi",
+            "data": "2026-03-10",
+            "url": "https://mod.gov.ua/en/news/ministry-of-defence-changes-approach-to-drone-procurement-demand-will-be-generated-automatically-based-on-frontline-data"
+          }
+        ]
+      },
+      {
+        "id": "S4-E018",
+        "livello": "confermato",
+        "titolo": "Cooperazione tecnica e standard di scambio entrano nello sviluppo di DELTA; a CWIX 2024 è verificata l’interoperabilità con sistemi alleati",
+        "motivazione": "ACT descrive la cooperazione con esperti NATO e i test di scambio del quadro operativo a CWIX. L’evidenza riguarda i profili e gli scenari provati, non la compatibilità universale o un’adozione generale alleata.",
+        "fonti": [
+          {
+            "nome": "NATO ACT — DELTA e interoperabilità a CWIX 2024",
+            "data": "2024-07-12",
+            "url": "https://www.act.nato.int/article/delta-system-cwix/"
+          }
+        ]
+      },
+      {
+        "id": "S4-E019",
+        "livello": "confermato",
+        "titolo": "Secondo il resoconto ucraino, a REPMUS 2025 DELTA è la piattaforma principale di comando per una squadra multinazionale",
+        "motivazione": "Il comunicato ministeriale attribuisce questo ruolo alla squadra rossa multinazionale dell’esercitazione. È confermata la dichiarazione del partecipante, mantenendo il perimetro della squadra e distinguendo esercitazione, impiego bellico e adozione istituzionale della NATO.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino — DELTA nella squadra multinazionale a REPMUS",
+            "data": "2025-10-03",
+            "url": "https://mod.gov.ua/en/news/ukrainian-combat-system-delta-became-primary-command-platform-for-combined-multinational-team-at-nato-exercises"
+          }
+        ]
+      },
+      {
+        "id": "S4-E020",
+        "livello": "confermato",
+        "titolo": "Nel giugno 2026 NATO ACT descrive con JATEC l’integrazione in corso di un modello per analizzare i movimenti delle forze",
+        "motivazione": "ACT presenta il modello come attualmente in integrazione e il suo uso in prima linea come obiettivo successivo. La formulazione conserva tale stato temporale, senza anticipare distribuzione consolidata, prestazione verificata o trasformazione dottrinale.",
+        "fonti": [
+          {
+            "nome": "NATO ACT — modello analitico ACT/JATEC in corso d’integrazione con DELTA",
+            "data": "2026-06-16",
+            "url": "https://www.act.nato.int/article/ai-supporting-ukraine/"
+          }
+        ]
+      }
     ]
   }
 }
