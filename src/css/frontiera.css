@@ -638,11 +638,9 @@ svg{display:block}
 }
 
 /* ---- forma mobile/touch: binario orizzontale a geometria stabile ----
-   La card conserva la larghezza calibrata nella prima iterazione; il solo
-   scrollport si estende verso destra oltre il gutter della .wrap, fino alla
-   safe area del viewport. La presenza visiva viene aggiornata dal
-   miglioramento progressivo JS; senza JS tutte le card restano complete,
-   leggibili e scorribili nativamente. */
+   Il box dello scrollport si estende fino ai bordi sicuri; il padding interno
+   sinistro conserva l'area utile e quindi larghezza card, snap e allineamento
+   editoriale. Senza JS le card restano complete, leggibili e scorribili. */
 @media(max-width:999px),(hover:none),(pointer:coarse){
   .linea{overflow-x:clip}
   /* Su touch l'alone ambientale del componente diventava una macchia ciano
@@ -650,16 +648,20 @@ svg{display:block}
   .linea::before{display:none}
   .linea-fasi{
     --lf-mobile-gap:.7rem;
-    --lf-mobile-bleed:calc(var(--gutter) - env(safe-area-inset-right,0px));
+    --lf-mobile-bleed-left:max(0px,calc(var(--gutter) - env(safe-area-inset-left,0px)));
+    --lf-mobile-bleed-right:calc(var(--gutter) - env(safe-area-inset-right,0px));
     /* 88% della larghezza utile originaria, anche dopo il full-bleed destro.
        max(.125rem,.5vw) equivale a un ottavo del gutter responsivo. */
-    --lf-mobile-card:calc(88% - var(--lf-mobile-bleed) + max(.125rem,.5vw));
+    --lf-mobile-card:calc(88% - var(--lf-mobile-bleed-right) + max(.125rem,.5vw));
     display:flex;align-items:stretch;gap:var(--lf-mobile-gap);
-    width:calc(100% + var(--lf-mobile-bleed));max-width:none;
-    margin-right:calc(0px - var(--lf-mobile-bleed));
+    width:calc(100% + var(--lf-mobile-bleed-left) + var(--lf-mobile-bleed-right));max-width:none;
+    margin-left:calc(0px - var(--lf-mobile-bleed-left));
+    margin-right:calc(0px - var(--lf-mobile-bleed-right));
+    padding-left:var(--lf-mobile-bleed-left);
     height:clamp(25rem,108vw,27rem);
     overflow-x:auto;overflow-y:hidden;
-    scroll-snap-type:x mandatory;scroll-padding-inline:0;
+    scroll-snap-type:x mandatory;
+    scroll-padding-inline-start:var(--lf-mobile-bleed-left);scroll-padding-inline-end:0;
     overscroll-behavior-x:contain;overscroll-behavior-inline:contain;
     touch-action:pan-x pan-y;
     -webkit-overflow-scrolling:touch;
@@ -1028,7 +1030,7 @@ svg{display:block}
 }
 
 /* Catalogo mobile: le card originali vengono impilate in pagine verticali e
-   il binario conserva il full-bleed destro già approvato per le linee F/P. */
+   il binario conserva la geometria full-bleed editoriale delle linee F/P. */
 @media(max-width:999px),(hover:none),(pointer:coarse){
   .sistemi{overflow-x:clip}
   .sistemi .sechead{align-items:center;flex-wrap:nowrap;gap:.7rem}
@@ -1064,23 +1066,27 @@ svg{display:block}
 
   .sistemi-grid.sistemi-grid--cluster{
     --sistemi-mobile-gap:.72rem;
-    --sistemi-mobile-bleed:calc(var(--gutter) - env(safe-area-inset-right,0px));
+    --sistemi-mobile-bleed-left:max(0px,calc(var(--gutter) - env(safe-area-inset-left,0px)));
+    --sistemi-mobile-bleed-right:calc(var(--gutter) - env(safe-area-inset-right,0px));
     --sistemi-cluster-width:min(
-      calc(92% - var(--sistemi-mobile-bleed) + max(.125rem,.5vw)),
+      calc(92% - var(--sistemi-mobile-bleed-right) + max(.125rem,.5vw)),
       31rem
     );
     display:flex;align-items:flex-start;gap:var(--sistemi-mobile-gap);
-    width:calc(100% + var(--sistemi-mobile-bleed));max-width:none;
-    margin-right:calc(0px - var(--sistemi-mobile-bleed));
+    width:calc(100% + var(--sistemi-mobile-bleed-left) + var(--sistemi-mobile-bleed-right));max-width:none;
+    margin-left:calc(0px - var(--sistemi-mobile-bleed-left));
+    margin-right:calc(0px - var(--sistemi-mobile-bleed-right));
+    padding-left:var(--sistemi-mobile-bleed-left);
     overflow-x:auto;overflow-y:hidden;
-    scroll-snap-type:x mandatory;scroll-padding-inline:0;
+    scroll-snap-type:x mandatory;
+    scroll-padding-inline-start:var(--sistemi-mobile-bleed-left);scroll-padding-inline-end:0;
     overscroll-behavior-x:contain;overscroll-behavior-inline:contain;
     touch-action:pan-x pan-y;-webkit-overflow-scrolling:touch;
     scrollbar-width:none;
   }
   .sistemi-grid.sistemi-grid--cluster[data-cluster-size="3"]{
     --sistemi-cluster-width:min(
-      calc(82% - var(--sistemi-mobile-bleed) + max(.125rem,.5vw)),
+      calc(82% - var(--sistemi-mobile-bleed-right) + max(.125rem,.5vw)),
       25rem
     );
   }
@@ -1111,8 +1117,8 @@ svg{display:block}
 
 @media(max-width:999px) and (orientation:landscape) and (max-height:600px),
        (hover:none) and (pointer:coarse) and (orientation:landscape) and (max-height:600px){
-  .sistemi-grid.sistemi-grid--cluster{--sistemi-cluster-width:min(calc(92% - var(--sistemi-mobile-bleed)),24rem)}
-  .sistemi-grid.sistemi-grid--cluster[data-cluster-size="3"]{--sistemi-cluster-width:min(calc(82% - var(--sistemi-mobile-bleed)),18.5rem)}
+  .sistemi-grid.sistemi-grid--cluster{--sistemi-cluster-width:min(calc(92% - var(--sistemi-mobile-bleed-right)),24rem)}
+  .sistemi-grid.sistemi-grid--cluster[data-cluster-size="3"]{--sistemi-cluster-width:min(calc(82% - var(--sistemi-mobile-bleed-right)),18.5rem)}
 }
 
 @media(prefers-reduced-motion:reduce){

@@ -29,7 +29,13 @@
 
     const targetScrollLeft = (card) => {
       const maximum = Math.max(0, track.scrollWidth - track.clientWidth);
-      return Math.min(card.offsetLeft, maximum);
+      const trackRect = track.getBoundingClientRect();
+      const cardRect = card.getBoundingClientRect();
+      const snapInset =
+        Number.parseFloat(window.getComputedStyle(track).scrollPaddingInlineStart) || 0;
+      const relativeLeft =
+        track.scrollLeft + cardRect.left - trackRect.left - track.clientLeft - snapInset;
+      return Math.min(Math.max(0, relativeLeft), maximum);
     };
 
     const isLocked = (card) =>

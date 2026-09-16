@@ -42,7 +42,10 @@
       const maximum = Math.max(0, track.scrollWidth - track.clientWidth);
       const trackRect = track.getBoundingClientRect();
       const clusterRect = cluster.getBoundingClientRect();
-      const relativeLeft = track.scrollLeft + clusterRect.left - trackRect.left;
+      const snapInset =
+        Number.parseFloat(window.getComputedStyle(track).scrollPaddingInlineStart) || 0;
+      const relativeLeft =
+        track.scrollLeft + clusterRect.left - trackRect.left - track.clientLeft - snapInset;
       return Math.min(Math.max(0, relativeLeft), maximum);
     };
 
