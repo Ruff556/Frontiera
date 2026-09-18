@@ -3,7 +3,16 @@ titolo: "DELTA"
 slug: delta
 categoria: Sistemi
 ruolo: "Rendere il campo computabile"
-aggiornata: 2026-09-15
+aggiornata: 2026-09-18
+
+immagine:
+  file: /immagini/sistemi/s-delta.png
+  alt: "Logo del sistema militare ucraino DELTA"
+  didascalia: "Logo del sistema DELTA."
+  credito: "Ministero della Difesa ucraino / Wikimedia Commons · adattamento 16:9 Frontiera"
+  fonte: "Wikimedia Commons — DELTA defence logo.svg"
+  licenza: "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/"
+  fit: contain
 
 infobox:
   tipo: 2
