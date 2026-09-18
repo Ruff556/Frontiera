@@ -3,7 +3,16 @@ titolo: "DELTA"
 slug: delta
 categoria: Sistemi
 ruolo: "Rendere il campo computabile"
-aggiornata: 2026-09-15
+aggiornata: 2026-09-18
+
+immagine:
+  file: /immagini/sistemi/s-delta.png
+  alt: "Logo del sistema militare ucraino DELTA"
+  didascalia: "Logo del sistema DELTA."
+  credito: "Ministero della Difesa ucraino / Wikimedia Commons · adattamento 16:9 Frontiera"
+  fonte: "Wikimedia Commons — DELTA defence logo.svg"
+  licenza: "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/"
+  fit: contain
 
 infobox:
   tipo: 2
@@ -48,9 +57,9 @@ Il passaggio diventa particolarmente visibile quando l’oggetto entra in *Targe
 
 Il tempo continua a lavorare contro questa composizione. Il reparto russo può spostarsi durante l’assegnazione; una squadra ucraina può perdere il collegamento o il mezzo con cui avrebbe dovuto intervenire. La validità del quadro e la disponibilità della forza cambiano insieme, ma a ritmi diversi. DELTA offre strumenti per renderle reciprocamente leggibili; il coordinamento prende corpo quando comandi e unità riescono a utilizzarle entro quella finestra. Le funzioni descritte possono concorrere allo stesso lavoro attraverso raccordi differenti: non ogni osservazione percorre tutti i moduli.
 
-È qui che si colloca il raccordo con [Palantir](/schede/palantir/). Anche le applicazioni esaminate in S2 organizzano missioni e riusano risultati. Le funzioni si sovrappongono; la distinzione riguarda soprattutto chi governa lo sviluppo e come il sistema entra nell’organizzazione. Palantir offre una famiglia di piattaforme configurabili, sviluppate da un’impresa per organizzazioni e impieghi diversi. DELTA cresce nel circuito militare ucraino, attraverso il rapporto fra sviluppatori, reparti e istituzioni che ne incorporano l’uso nelle proprie pratiche. Questa titolarità convive con contributi e infrastrutture esterni.
+È qui che il raccordo con [Palantir](/schede/palantir/) diventa istruttivo. Le funzioni possono sovrapporsi: comporre il quadro, organizzare missioni, assegnare oggetti e riportare gli esiti dentro la decisione successiva. **Cambia il baricentro dell’adattamento.** Palantir porta nell’organizzazione una famiglia di piattaforme industriali già dotate di una propria grammatica tecnica, che viene configurata sui dati, sulle procedure e sulle missioni dell’utilizzatore. DELTA cresce invece nel circuito militare-istituzionale ucraino: sviluppatori, reparti e ministero trasformano problemi incontrati nell’impiego in nuovi strumenti e incorporano progressivamente questi ultimi nelle pratiche della forza.
 
-Quando l’unità ha svolto il compito, il simbolo sulla carta ha ormai una storia. Per chi prepara l’iniziativa successiva diventa decisivo sapere quanta parte di quella storia sia tornata indietro.
+La distinzione non coincide con un’autonomia tecnologica assoluta: DELTA vive anche di infrastrutture e contributi esterni, mentre Palantir viene configurato insieme ai propri utilizzatori. Cambia piuttosto la direzione prevalente del rapporto. **Con Palantir è una capacità industriale a essere resa adatta alla forza; con DELTA è la forza stessa, combattendo, a contribuire continuamente a rendere adatta a sé la capacità.** Nel campo reale, infine, le due logiche non si escludono: si sovrappongono, si scambiano dati e concorrono alla stessa trasformazione. Sensori, piattaforme, operatori, missioni ed esiti vengono progressivamente ricondotti dentro una trama informativa continua, nella quale osservare, decidere, agire e registrare tendono a diventare momenti dello stesso ciclo. **È questa pervasività, più ancora del singolo software, a distinguere il campo contemporaneo.**
 
 ## Osservare la propria azione
 
