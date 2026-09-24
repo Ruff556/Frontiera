@@ -793,6 +793,558 @@
           }
         ]
       }
+    ],
+    "contenuti/analisi/guerra-datacenter.md": [
+      {
+        "id": "A4-E001",
+        "livello": "confermato",
+        "titolo": "Snowball e la fase fisica della migrazione ucraina",
+        "motivazione": "Amazon descrive l’incontro del 24 febbraio 2022 e l’invio dei dispositivi Snowball attraverso la Polonia per acquisire e trasferire dati ucraini. Il livello riguarda il resoconto attribuito al fornitore e la funzione dei dispositivi; non certifica un inventario indipendente dei trasferimenti né li identifica con dati di combattimento. L’articolo utilizza la base documentale chiusa al 16 settembre 2026, senza estenderla a sviluppi successivi.",
+        "fonti": [
+          {
+            "nome": "Primaria aziendale · Amazon — Safeguarding Ukraine’s data to preserve its present and build its future; pubblicata il 9 giugno 2022, aggiornata il 14 aprile 2023",
+            "url": "https://www.aboutamazon.com/news/aws/safeguarding-ukraines-data-to-preserve-its-present-and-build-its-future",
+            "data": "2023-04-14"
+          }
+        ]
+      },
+      {
+        "id": "A4-E002",
+        "livello": "confermato",
+        "titolo": "L’espansione UAS statunitense richiedeva già un apparato di sostegno",
+        "motivazione": "L’audit GAO censisce meno di cinquanta velivoli senza pilota del DoD nel 2000 e oltre 6.800 nell’ottobre 2009, comprendendo migliaia di piccoli sistemi. Individua carenze nella pianificazione di personale, infrastrutture e comunicazioni. Il dato misura un inventario eterogeneo, non il volume dei filmati né la sola flotta impiegata in Iraq e Afghanistan.",
+        "fonti": [
+          {
+            "nome": "Primaria istituzionale · U.S. Government Accountability Office — GAO-10-331, inventario UAS e pianificazione del sostegno",
+            "url": "https://www.gao.gov/assets/a302241.html",
+            "data": "2010-03-26"
+          }
+        ]
+      },
+      {
+        "id": "A4-E003",
+        "livello": "confermato",
+        "titolo": "La rete ISR USAF supera 1,3 petabyte al mese",
+        "motivazione": "Nel 2012 il tenente generale Larry D. James, allora Deputy Chief of Staff for Intelligence, Surveillance and Reconnaissance dell’U.S. Air Force, indicava per l’enterprise ISR dell’Air Force 1,3 petabyte di dati trasmessi e immagazzinati ogni mese, contro 255 terabyte mensili nel 2001. Nel gennaio 2013 Air Force Magazine, riportando James, collegava al DCGS un volume superiore a 1,3 petabyte al mese e lo rendeva intuitivamente come equivalente a circa 1.000 ore di full-motion video al giorno. Il dato descrive la scala dell’intera enterprise ISR e del relativo apparato distribuito di sfruttamento, non la sola produzione dei droni né esclusivamente le operazioni in Iraq e Afghanistan.",
+        "fonti": [
+          {
+            "nome": "Primaria · Lt Gen Larry D. James, U.S. Air Force — Airmen: Delivering Decision Advantage, Air & Space Power Journal",
+            "url": "https://www.airuniversity.af.edu/Portals/10/ASPJ/journals/Volume-26_Issue-6/SLP-James.pdf",
+            "data": "2012-12-01"
+          },
+          {
+            "nome": "Secondaria specialistica · Air Force Magazine — ISR After Afghanistan",
+            "url": "https://www.airandspaceforces.com/article/0113isr/",
+            "data": "2013-01-01"
+          }
+        ]
+      },
+      {
+        "id": "A4-E004",
+        "livello": "confermato",
+        "titolo": "Maven nasce per automatizzare parte dello sfruttamento dei dati",
+        "motivazione": "La comunicazione DoD del luglio 2017 colloca l’avvio di Project Maven nell’aprile dello stesso anno e descrive il compito iniziale di computer vision sui filmati, la preparazione dei dati, le risorse GPU e l’integrazione con il lavoro degli analisti. È confermato l’indirizzo del programma; le promesse di produttività non sono trattate come risultati misurati. Lo spostamento del carico verso verifica e priorità è il ragionamento funzionale dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Primaria istituzionale · U.S. Department of Defense — Project Maven to Deploy Computer Algorithms to War Zone by Year’s End",
+            "url": "https://www.war.gov/News/News-Stories/Article/Article/1254719/project-maven-to-deploy-computer-algorithms-to-war-zone-by-years-end/",
+            "data": "2017-07-21"
+          }
+        ]
+      },
+      {
+        "id": "A4-E005",
+        "livello": "confermato",
+        "titolo": "L’ordine di estendere DELTA a tutti i livelli",
+        "motivazione": "Il Ministero della Difesa ucraino annuncia il 6 agosto 2025 l’estensione di DELTA a tutti i livelli delle Forze di Difesa. Il grado si riferisce all’atto e al contenuto del comunicato. La fonte non costituisce un audit dell’impiego uniforme nelle unità, della disponibilità continua o dei risultati militari prodotti dal sistema.",
+        "fonti": [
+          {
+            "nome": "Primaria istituzionale · Ministero della Difesa ucraino — The DELTA combat system has been deployed across all levels of Defence Forces of Ukraine",
+            "url": "https://mod.gov.ua/en/news/the-delta-combat-system-has-been-deployed-across-all-levels-of-defence-forces-of-ukraine",
+            "data": "2025-08-06"
+          }
+        ]
+      },
+      {
+        "id": "A4-E006",
+        "livello": "confermato",
+        "titolo": "La copertura di Mission Control dichiarata nel marzo 2026",
+        "motivazione": "Il comunicato ministeriale del 26 marzo 2026 dichiara Mission Control operativo in tutti i corpi e raggruppamenti e descrive reporting e strumenti di analisi fra livelli organizzativi. È confermata la dichiarazione di copertura, con granularità insufficiente a misurare la completezza dei rapporti e la continuità per reparto. Il 2026 non è usato come data di nascita dell’intera funzione, già attestata in precedenza.",
+        "fonti": [
+          {
+            "nome": "Primaria istituzionale · Ministero della Difesa ucraino — Two months since the launch of Mission Control within the DELTA ecosystem: the system is now operational across all corps and force groupings",
+            "url": "https://mod.gov.ua/en/news/two-months-since-the-launch-of-mission-control-within-the-delta-ecosystem-the-system-is-now-operational-across-all-corps-and-force-groupings",
+            "data": "2026-03-26"
+          }
+        ]
+      },
+      {
+        "id": "A4-E007",
+        "livello": "plausibile",
+        "titolo": "L’incorporazione nelle procedure amplia la dipendenza dalla continuità",
+        "motivazione": "Dall’estensione istituzionale di DELTA, dalle funzioni dichiarate di Mission Control e dalla ricostruzione ETH dell’ecosistema, l’articolo ricava una trasformazione organizzativa: registrazioni e servizi possono concorrere a compiti di più unità e livelli. È una relazione analitica, non un primato mondiale misurato dell’Ucraina né una stima del contributo marginale del cloud ai risultati bellici. Il raccordo con S4 serve alla continuità editoriale, senza aggiungere una conferma indipendente.",
+        "fonti": [
+          {
+            "nome": "Primaria istituzionale · Ministero della Difesa ucraino — The DELTA combat system has been deployed across all levels of Defence Forces of Ukraine",
+            "url": "https://mod.gov.ua/en/news/the-delta-combat-system-has-been-deployed-across-all-levels-of-defence-forces-of-ukraine",
+            "data": "2025-08-06"
+          },
+          {
+            "nome": "Primaria istituzionale · Ministero della Difesa ucraino — Two months since the launch of Mission Control within the DELTA ecosystem: the system is now operational across all corps and force groupings",
+            "url": "https://mod.gov.ua/en/news/two-months-since-the-launch-of-mission-control-within-the-delta-ecosystem-the-system-is-now-operational-across-all-corps-and-force-groupings",
+            "data": "2026-03-26"
+          },
+          {
+            "nome": "Ricerca · Stefan Soesanto / ETH CSS — The Ukrainian Way of Digital Warfighting",
+            "url": "https://css.ethz.ch/content/dam/ethz/special-interest/gess/cis/center-for-securities-studies/pdfs/CSS_Cyberdefense_Report_Ukrainian_Way_of_Digital_Warfighting.pdf",
+            "data": "2024-07-29"
+          }
+        ]
+      },
+      {
+        "id": "A4-E008",
+        "livello": "confermato",
+        "titolo": "RTO e RPO sono obiettivi differenti di recupero",
+        "motivazione": "La documentazione AWS distingue l’obiettivo temporale di ripristino del servizio, RTO, dal punto temporale recuperabile dei dati, RPO, che definisce la perdita ammessa delle registrazioni recenti. L’articolo li tratta come obiettivi progettuali da confrontare con il recupero effettivo. L’RPO non è identificato con l’età dell’osservazione sul campo e non vengono assegnati valori a sistemi militari la cui configurazione non è pubblica.",
+        "fonti": [
+          {
+            "nome": "Primaria tecnica · Seth Eliot / AWS — Disaster Recovery (DR) Architecture on AWS, Part I: Strategies for Recovery in the Cloud",
+            "url": "https://aws.amazon.com/blogs/architecture/disaster-recovery-dr-architecture-on-aws-part-i-strategies-for-recovery-in-the-cloud/",
+            "data": "2021-04-05"
+          },
+          {
+            "nome": "Primaria tecnica · AWS — Disaster recovery options in the cloud; documentazione acquisita nella ricerca chiusa il 16 settembre 2026, senza data di pubblicazione",
+            "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html"
+          }
+        ]
+      },
+      {
+        "id": "A4-E009",
+        "livello": "plausibile",
+        "titolo": "Il recupero tecnico deve incontrare la finestra d’uso",
+        "motivazione": "A partire dalle definizioni tecniche di recupero, l’articolo distingue età dell’informazione, latenza fino all’utente e finestra dell’azione. Il mezzo mobile, il servizio interrotto e la successiva perdita di attualità costituiscono un esempio schematico, non una missione reale o una prestazione osservata di DELTA. Il valore temporale appartiene anche ai servizi civili; l’argomento militare riguarda la contesa intenzionale delle condizioni d’uso. Disponibilità, integrità e attendibilità dell’osservazione sono tenute distinte. Non si propone una soglia numerica universale.",
+        "fonti": [
+          {
+            "nome": "Primaria tecnica · Seth Eliot / AWS — Disaster Recovery (DR) Architecture on AWS, Part I: Strategies for Recovery in the Cloud",
+            "url": "https://aws.amazon.com/blogs/architecture/disaster-recovery-dr-architecture-on-aws-part-i-strategies-for-recovery-in-the-cloud/",
+            "data": "2021-04-05"
+          },
+          {
+            "nome": "Primaria tecnica · AWS — Disaster recovery options in the cloud; documentazione acquisita nella ricerca chiusa il 16 settembre 2026, senza data di pubblicazione",
+            "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html"
+          },
+          {
+            "nome": "Ricerca · Stefan Soesanto / ETH CSS — The Ukrainian Way of Digital Warfighting",
+            "url": "https://css.ethz.ch/content/dam/ethz/special-interest/gess/cis/center-for-securities-studies/pdfs/CSS_Cyberdefense_Report_Ukrainian_Way_of_Digital_Warfighting.pdf",
+            "data": "2024-07-29"
+          }
+        ]
+      },
+      {
+        "id": "A4-E010",
+        "livello": "confermato",
+        "titolo": "La deroga emergenziale per informazioni e registri pubblici",
+        "motivazione": "La risoluzione 263 del 12 marzo 2022 disciplina, durante la legge marziale, l’impiego di risorse e datacenter esteri per informazioni e registri pubblici, con esclusioni e obblighi. Il testo storico sostiene il passaggio descritto. L’articolo non lo confonde con l’adozione, la firma o l’entrata in vigore della legge generale sui servizi cloud e non presenta una ricostruzione del diritto consolidato al 2026.",
+        "fonti": [
+          {
+            "nome": "Primaria normativa · Gabinetto dei ministri ucraino — Risoluzione 263 sulle infrastrutture informative e i registri pubblici durante la legge marziale",
+            "url": "https://www.kmu.gov.ua/npas/deyaki-pitannya-zabezpechennya-funkcionuvannya-informacijno-komunikacijnih-sistem-elektronnih-komunikacijnih-sistem-publichnih-elektronnih-reyestriv-v-umovah-voyennogo-stanu-263",
+            "data": "2022-03-12"
+          }
+        ]
+      },
+      {
+        "id": "A4-E011",
+        "livello": "confermato",
+        "titolo": "Le migrazioni dichiarate da AWS e Microsoft",
+        "motivazione": "La pagina Amazon aggiornata il 14 aprile 2023 dichiara oltre dieci petabyte trasferiti in un insieme eterogeneo di migrazioni ucraine. La data dell’aggiornamento non certifica il momento di misurazione di ciascun valore. Microsoft descrive distintamente lo spostamento di operazioni governative su datacenter europei. Sono testimonianze di fornitori, senza audit indipendente dei volumi acquisito: le quantità non vengono sommate, attribuite alle sole forze armate o convertite in una misura del calcolo tattico.",
+        "fonti": [
+          {
+            "nome": "Primaria aziendale · Amazon — Safeguarding Ukraine’s data to preserve its present and build its future; pubblicata il 9 giugno 2022, aggiornata il 14 aprile 2023",
+            "url": "https://www.aboutamazon.com/news/aws/safeguarding-ukraines-data-to-preserve-its-present-and-build-its-future",
+            "data": "2023-04-14"
+          },
+          {
+            "nome": "Primaria aziendale · Brad Smith / Microsoft — Defending Ukraine: Early Lessons from the Cyber War",
+            "url": "https://blogs.microsoft.com/on-the-issues/2022/06/22/defending-ukraine-early-lessons-from-the-cyber-war/",
+            "data": "2022-06-22"
+          }
+        ]
+      },
+      {
+        "id": "A4-E012",
+        "livello": "confermato",
+        "titolo": "DELTA è autorizzato al cloud estero nel febbraio 2023",
+        "motivazione": "Il comunicato del governo ucraino del 4 febbraio 2023 documenta la decisione sull’introduzione di DELTA e l’autorizzazione a collocarlo su risorse cloud estere. Il fatto confermato è il permesso. La fonte non identifica provider, Paesi effettivamente utilizzati, regioni o configurazione delle istanze operative.",
+        "fonti": [
+          {
+            "nome": "Primaria istituzionale · Governo ucraino — Decisione sull’introduzione di DELTA nelle Forze di Difesa",
+            "url": "https://www.kmu.gov.ua/en/news/uriad-ukhvalyv-rishennia-shchodo-zaprovadzhennia-systemy-delta-v-sylakh-oborony",
+            "data": "2023-02-04"
+          }
+        ]
+      },
+      {
+        "id": "A4-E013",
+        "livello": "non-verificato",
+        "titolo": "Hosting e prestazioni di recupero effettivi di DELTA",
+        "motivazione": "La documentazione esaminata entro il 16 settembre 2026 non consente di stabilire provider, Paesi, repliche e RTO/RPO verificati di DELTA. RUSI, nel novembre 2025, considera probabile l’hosting estero ma lo lascia indeterminato nelle fonti pubbliche; ETH aveva rilevato una lacuna analoga nel luglio 2024. L’autorizzazione governativa non colma questa distanza. Il livello qualifica la configurazione e le prestazioni ignote, non nega l’esistenza del servizio o del permesso. Il rapporto RUSI è finanziato da AWS.",
+        "fonti": [
+          {
+            "nome": "Primaria istituzionale · Governo ucraino — Decisione sull’introduzione di DELTA nelle Forze di Difesa",
+            "url": "https://www.kmu.gov.ua/en/news/uriad-ukhvalyv-rishennia-shchodo-zaprovadzhennia-systemy-delta-v-sylakh-oborony",
+            "data": "2023-02-04"
+          },
+          {
+            "nome": "Ricerca · Joseph Jarnecki / RUSI — European Cloud Adoption for National Security, novembre 2025; rapporto finanziato da AWS",
+            "url": "https://static.rusi.org/european-cloud-adoption-for-national-security.pdf"
+          },
+          {
+            "nome": "Ricerca · Stefan Soesanto / ETH CSS — The Ukrainian Way of Digital Warfighting",
+            "url": "https://css.ethz.ch/content/dam/ethz/special-interest/gess/cis/center-for-securities-studies/pdfs/CSS_Cyberdefense_Report_Ukrainian_Way_of_Digital_Warfighting.pdf",
+            "data": "2024-07-29"
+          }
+        ]
+      },
+      {
+        "id": "A4-E014",
+        "livello": "plausibile",
+        "titolo": "La profondità digitale separa esposizioni mantenendo l’accesso",
+        "motivazione": "Le migrazioni governative descritte da AWS e Microsoft sostengono l’esistenza di una continuità statale selettiva oltre il territorio colpito. La definizione di profondità digitale è l’elaborazione analitica dell’articolo: il margine dipende dalla separazione delle perdite e da servizi ancora raggiungibili e ricostruibili. Non si assume immunità fisica o informatica del cloud estero né si estende automaticamente il caso amministrativo all’hosting di DELTA. Partner, gestori e tecnici rendono praticabile la separazione.",
+        "fonti": [
+          {
+            "nome": "Primaria aziendale · Amazon — Safeguarding Ukraine’s data to preserve its present and build its future; pubblicata il 9 giugno 2022, aggiornata il 14 aprile 2023",
+            "url": "https://www.aboutamazon.com/news/aws/safeguarding-ukraines-data-to-preserve-its-present-and-build-its-future",
+            "data": "2023-04-14"
+          },
+          {
+            "nome": "Primaria aziendale · Brad Smith / Microsoft — Defending Ukraine: Early Lessons from the Cyber War",
+            "url": "https://blogs.microsoft.com/on-the-issues/2022/06/22/defending-ukraine-early-lessons-from-the-cyber-war/",
+            "data": "2022-06-22"
+          },
+          {
+            "nome": "Primaria tecnica · AWS — Disaster recovery options in the cloud; documentazione acquisita nella ricerca chiusa il 16 settembre 2026, senza data di pubblicazione",
+            "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html"
+          }
+        ]
+      },
+      {
+        "id": "A4-E015",
+        "livello": "confermato",
+        "titolo": "Microsoft esercita una sospensione selettiva di servizi",
+        "motivazione": "Il 25 settembre 2025 Microsoft dichiara di avere cessato e disabilitato specifici servizi e abbonamenti di storage e AI a un’unità del ministero della Difesa israeliano, dopo la revisione sull’impiego dei servizi per sorveglianza di massa dei civili. Precisa che altre attività, inclusa la protezione informatica, continuano. La fonte primaria documenta una decisione propria e il suo perimetro; non fornisce una misura indipendente di tutti gli usi contestati o delle conseguenze operative della sospensione.",
+        "fonti": [
+          {
+            "nome": "Primaria aziendale · Brad Smith / Microsoft — Update on ongoing Microsoft review",
+            "url": "https://blogs.microsoft.com/on-the-issues/2025/09/25/update-on-ongoing-microsoft-review/",
+            "data": "2025-09-25"
+          }
+        ]
+      },
+      {
+        "id": "A4-E016",
+        "livello": "plausibile",
+        "titolo": "L’autonomia dipende anche dal tempo di sostituzione del fornitore",
+        "motivazione": "Il controllo esercitato da Microsoft e le dipendenze illustrate nella documentazione di disaster recovery sostengono la distinzione fra proprietà dei dati, autorizzazione all’uso e capacità di ricostituire il servizio. L’articolo ne deduce che la possibilità di uscita da un fornitore va valutata rispetto al tempo richiesto dal compito. Scala e assistenza possono accrescere la capacità disponibile; non viene dedotta una subordinazione totale dello Stato, né assimilato il fornitore a un avversario. Mancano misure dei tempi di sostituzione dei sistemi militari discussi.",
+        "fonti": [
+          {
+            "nome": "Primaria aziendale · Brad Smith / Microsoft — Update on ongoing Microsoft review",
+            "url": "https://blogs.microsoft.com/on-the-issues/2025/09/25/update-on-ongoing-microsoft-review/",
+            "data": "2025-09-25"
+          },
+          {
+            "nome": "Primaria tecnica · AWS — Disaster recovery options in the cloud; documentazione acquisita nella ricerca chiusa il 16 settembre 2026, senza data di pubblicazione",
+            "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html"
+          },
+          {
+            "nome": "Primaria tecnica · Seth Eliot / AWS — Disaster Recovery (DR) Architecture on AWS, Part I: Strategies for Recovery in the Cloud",
+            "url": "https://aws.amazon.com/blogs/architecture/disaster-recovery-dr-architecture-on-aws-part-i-strategies-for-recovery-in-the-cloud/",
+            "data": "2021-04-05"
+          }
+        ]
+      },
+      {
+        "id": "A4-E017",
+        "livello": "confermato",
+        "titolo": "Danni materiali e interruzioni AWS nel Golfo",
+        "motivazione": "Reuters riferisce a inizio marzo 2026, sulla base delle comunicazioni AWS, due strutture negli Emirati colpite direttamente da droni e danni in Bahrain dovuti a un attacco nelle vicinanze. Riporta conseguenze strutturali, elettriche e legate a incendi e spegnimento. Amazon conferma l’interruzione della regione Bahrain e invita alla migrazione. Il livello riguarda il danno e i disservizi documentati in questo perimetro; Reuters e il gestore non vengono contati come due perizie indipendenti, né si attribuisce una funzione militare a ogni struttura colpita.",
+        "fonti": [
+          {
+            "nome": "Giornalistica · Reuters — Danni e interruzioni AWS negli Emirati Arabi Uniti e in Bahrain; resoconto basato anche sulle dichiarazioni del gestore",
+            "url": "https://www.reuters.com/world/middle-east/amazon-cloud-unit-flags-issues-bahrain-uae-data-centers-amid-iran-strikes-2026-03-02/",
+            "data": "2026-03-02"
+          },
+          {
+            "nome": "Primaria aziendale · Amazon — AWS Bahrain Region disrupted by Middle East conflict; marzo 2026, giorno di pubblicazione non disponibile nel testo acquisito",
+            "url": "https://www.aboutamazon.com/news/aws-bahrain-region-middle-east-conflict"
+          }
+        ]
+      },
+      {
+        "id": "A4-E018",
+        "livello": "confermato",
+        "titolo": "Il perimetro della recuperabilità dichiarato il 15 settembre",
+        "motivazione": "Il dispaccio Reuters del 15 settembre 2026, acquisito attraverso la ripubblicazione WHBL, riporta la posizione AWS: in Bahrain una prima zona fu colpita in marzo e una seconda in aprile, mentre la maggior parte dei clienti migrò prima dell’indisponibilità regionale. Il gestore dichiara esaurite le opzioni di recupero per le risorse residue irraggiungibili. Negli Emirati l’impossibilità riguarda risorse e dati ospitati esclusivamente in mec1-az2; prosegue il lavoro sulle altre zone. Sono confermati il resoconto e il suo perimetro, non una perdita totale dei dati del Golfo o un tasso verificato di successo delle migrazioni.",
+        "fonti": [
+          {
+            "nome": "Giornalistica · Reuters, ripubblicata da WHBL — Amazon’s AWS is unable to restore access to Bahrain, one UAE cloud data zone after war damage",
+            "url": "https://whbl.com/2026/09/15/amazons-aws-is-unable-to-restore-access-to-bahrain-one-uae-cloud-data-zone-after-war-damage/",
+            "data": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "id": "A4-E019",
+        "livello": "plausibile",
+        "titolo": "La pressione bellica può superare la separazione prevista dal progetto",
+        "motivazione": "La documentazione AWS distingue zone, regioni e strategie di recupero secondo l’ampiezza del disastro. Il caso del Golfo descrive una crisi che coinvolge più zone e limiti di recupero. L’articolo ne ricava una conclusione architetturale: la separazione adatta a certi guasti può risultare insufficiente rispetto a eventi più ampi o correlati. Una zona non è identificata con un singolo edificio. Il caso non offre un audit delle architetture di tutti i clienti e non dimostra il fallimento universale di cloud o replica.",
+        "fonti": [
+          {
+            "nome": "Primaria tecnica · Seth Eliot / AWS — Disaster Recovery (DR) Architecture on AWS, Part I: Strategies for Recovery in the Cloud",
+            "url": "https://aws.amazon.com/blogs/architecture/disaster-recovery-dr-architecture-on-aws-part-i-strategies-for-recovery-in-the-cloud/",
+            "data": "2021-04-05"
+          },
+          {
+            "nome": "Primaria tecnica · AWS — Disaster recovery options in the cloud; documentazione acquisita nella ricerca chiusa il 16 settembre 2026, senza data di pubblicazione",
+            "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html"
+          },
+          {
+            "nome": "Giornalistica · Reuters, ripubblicata da WHBL — Amazon’s AWS is unable to restore access to Bahrain, one UAE cloud data zone after war damage",
+            "url": "https://whbl.com/2026/09/15/amazons-aws-is-unable-to-restore-access-to-bahrain-one-uae-cloud-data-zone-after-war-damage/",
+            "data": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "id": "A4-E020",
+        "livello": "non-verificato",
+        "titolo": "Carichi militari e conseguenze su specifiche operazioni nel Golfo",
+        "motivazione": "Le fonti sui danni e sul recupero AWS raccolte fino al 16 settembre 2026 non ricostruiscono la distribuzione dei carichi militari né dimostrano che un’interruzione abbia causato il fallimento di una determinata operazione. Non chiariscono neppure, per ogni impatto, l’intenzione di negare uno specifico servizio militare. Il livello riguarda questi nessi mancanti; danni e migrazioni restano documentati. Il ponte con l’Ucraina è una relazione condizionale fra funzione e dipendenza, non un esperimento controllato o una misura retroattiva della resilienza ucraina.",
+        "fonti": [
+          {
+            "nome": "Giornalistica · Reuters — Danni e interruzioni AWS negli Emirati Arabi Uniti e in Bahrain; resoconto basato anche sulle dichiarazioni del gestore",
+            "url": "https://www.reuters.com/world/middle-east/amazon-cloud-unit-flags-issues-bahrain-uae-data-centers-amid-iran-strikes-2026-03-02/",
+            "data": "2026-03-02"
+          },
+          {
+            "nome": "Primaria aziendale · Amazon — AWS Bahrain Region disrupted by Middle East conflict; marzo 2026, giorno di pubblicazione non disponibile nel testo acquisito",
+            "url": "https://www.aboutamazon.com/news/aws-bahrain-region-middle-east-conflict"
+          },
+          {
+            "nome": "Giornalistica · Reuters, ripubblicata da WHBL — Amazon’s AWS is unable to restore access to Bahrain, one UAE cloud data zone after war damage",
+            "url": "https://whbl.com/2026/09/15/amazons-aws-is-unable-to-restore-access-to-bahrain-one-uae-cloud-data-zone-after-war-damage/",
+            "data": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "id": "A4-E021",
+        "livello": "plausibile",
+        "titolo": "Le revisioni dei progetti emiratini sono piani in evoluzione",
+        "motivazione": "Reuters, nella ripubblicazione su Internazionale dell’11 settembre 2026, riferisce attraverso sei fonti revisioni dei progetti emiratini, comprendenti distribuzione, protezione e ipotesi sotterranee. G42 sostiene che i programmi procedono e che la configurazione è soggetta a revisione. L’articolo conserva entrambe le parti e usa la vicenda come indicazione di adattamento progettuale. Non presenta opzioni riferite da fonti in parte anonime come decisioni definitive, opere completate o efficacia protettiva dimostrata.",
+        "fonti": [
+          {
+            "nome": "Giornalistica · Reuters, ripubblicata da Internazionale — Exclusive: UAE revises AI data center plan after Iranian attacks, sources say",
+            "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/11/exclusive-uae-revises-ai-data-center-plan-after-iranian-attacks-sources-say",
+            "data": "2026-09-11"
+          }
+        ]
+      },
+      {
+        "id": "A4-E022",
+        "livello": "plausibile",
+        "titolo": "Concentrazione, replica e autonomia locale possono coesistere",
+        "motivazione": "Le strategie di recupero AWS e la disponibilità dichiarata di elaborazione disconnessa illustrano scelte differenti per conservare dati e lavoro. La specifica NVIDIA rende concreto l’accoppiamento di acceleratori e impianti in alcuni carichi concentrati. L’articolo compone queste proprietà in uno schema funzionale: centro profondo, copie e stati di avanzamento separati, nodi intermedi e funzioni locali. Non attribuisce tali prodotti o una topologia precisa a DELTA e non identifica una configurazione universalmente superiore. Requisiti, compatibilità e risorse alternative condizionano il subentro.",
+        "fonti": [
+          {
+            "nome": "Primaria tecnica · AWS — Disaster recovery options in the cloud; documentazione acquisita nella ricerca chiusa il 16 settembre 2026, senza data di pubblicazione",
+            "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html"
+          },
+          {
+            "nome": "Primaria tecnica · Seth Eliot / AWS — Disaster Recovery (DR) Architecture on AWS, Part I: Strategies for Recovery in the Cloud",
+            "url": "https://aws.amazon.com/blogs/architecture/disaster-recovery-dr-architecture-on-aws-part-i-strategies-for-recovery-in-the-cloud/",
+            "data": "2021-04-05"
+          },
+          {
+            "nome": "Primaria commerciale · Google Cloud — Google Distributed Cloud air-gapped appliance is generally available",
+            "url": "https://cloud.google.com/blog/topics/hybrid-cloud/google-distributed-cloud-air-gapped-appliance-is-ga",
+            "data": "2024-07-17"
+          },
+          {
+            "nome": "Primaria commerciale · NVIDIA — GB200 NVL72; specifica di prodotto acquisita nella ricerca chiusa il 16 settembre 2026, senza data di pubblicazione",
+            "url": "https://www.nvidia.com/en-us/data-center/gb200-nvl72/"
+          }
+        ]
+      },
+      {
+        "id": "A4-E023",
+        "livello": "confermato",
+        "titolo": "Componenti locali e funzioni offline descritte negli studi sull’Ucraina",
+        "motivazione": "RUSI descrive Monitor Mobile come componente offline di DELTA e considera componenti cloud e locali; ETH ricostruisce applicazioni con funzioni offline e l’organizzazione locale/remota di Terminal. È confermata l’esistenza di queste descrizioni di ricerca, non una certificazione delle prestazioni di ogni unità. Durata, copertura e comportamento sotto isolamento non sono quantificati in modo sufficiente. Il rapporto RUSI è finanziato da AWS; questa dipendenza è resa esplicita e il rapporto non viene trattato come audit indipendente della resilienza.",
+        "fonti": [
+          {
+            "nome": "Ricerca · Joseph Jarnecki / RUSI — European Cloud Adoption for National Security, novembre 2025; rapporto finanziato da AWS",
+            "url": "https://static.rusi.org/european-cloud-adoption-for-national-security.pdf"
+          },
+          {
+            "nome": "Ricerca · Stefan Soesanto / ETH CSS — The Ukrainian Way of Digital Warfighting",
+            "url": "https://css.ethz.ch/content/dam/ethz/special-interest/gess/cis/center-for-securities-studies/pdfs/CSS_Cyberdefense_Report_Ukrainian_Way_of_Digital_Warfighting.pdf",
+            "data": "2024-07-29"
+          }
+        ]
+      },
+      {
+        "id": "A4-E024",
+        "livello": "plausibile",
+        "titolo": "L’isolamento conserva alcuni compiti e accumula lavoro di riconciliazione",
+        "motivazione": "Le funzioni locali descritte da RUSI ed ETH sostengono la possibilità di continuare compiti circoscritti durante la disconnessione. L’invecchiamento del quadro remoto e il trattamento di duplicati, modifiche concorrenti e osservazioni superate sono conseguenze analitiche di una separazione dei nodi, da valutare per funzione. L’articolo non attribuisce a DELTA un meccanismo di sincronizzazione non pubblico, né una durata garantita di autonomia. Il ritorno del collegamento e la ricostruzione di una situazione attendibile sono distinti.",
+        "fonti": [
+          {
+            "nome": "Ricerca · Joseph Jarnecki / RUSI — European Cloud Adoption for National Security, novembre 2025; rapporto finanziato da AWS",
+            "url": "https://static.rusi.org/european-cloud-adoption-for-national-security.pdf"
+          },
+          {
+            "nome": "Ricerca · Stefan Soesanto / ETH CSS — The Ukrainian Way of Digital Warfighting",
+            "url": "https://css.ethz.ch/content/dam/ethz/special-interest/gess/cis/center-for-securities-studies/pdfs/CSS_Cyberdefense_Report_Ukrainian_Way_of_Digital_Warfighting.pdf",
+            "data": "2024-07-29"
+          },
+          {
+            "nome": "Primaria tecnica · AWS — Disaster recovery options in the cloud; documentazione acquisita nella ricerca chiusa il 16 settembre 2026, senza data di pubblicazione",
+            "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html"
+          }
+        ]
+      },
+      {
+        "id": "A4-E025",
+        "livello": "confermato",
+        "titolo": "Brave1 Dataroom: ambiente di sviluppo e ruolo software di Palantir",
+        "motivazione": "Il Ministero della Difesa ucraino annuncia il 21 gennaio 2026 Brave1 Dataroom come ambiente protetto per addestrare e verificare soluzioni AI, sviluppato con Palantir. Il ruolo pubblicato riguarda la piattaforma software. La fonte non identifica ubicazione dei server, provider infrastrutturale o capacità GPU. Il livello conferma l’annuncio e il suo oggetto, senza trasformarli in una pipeline militare interamente osservata o in prestazioni belliche verificate.",
+        "fonti": [
+          {
+            "nome": "Primaria istituzionale · Ministero della Difesa ucraino — Ministry of Defence launches Brave1 Dataroom, a secure environment for training military AI solutions",
+            "url": "https://mod.gov.ua/en/news/ministry-of-defence-launches-brave1-dataroom-a-secure-environment-for-training-military-ai-solutions",
+            "data": "2026-01-21"
+          }
+        ]
+      },
+      {
+        "id": "A4-E026",
+        "livello": "confermato",
+        "titolo": "Avengers Labs e i cinque milioni di fotogrammi annotati dichiarati",
+        "motivazione": "Il comunicato ministeriale del 10 agosto 2026 apre alle imprese ucraine l’accesso ad Avengers Labs e descrive cinque milioni di fotogrammi annotati, provenienti in maggioranza dall’ecosistema DELTA. Il numero è attribuito all’istituzione, senza audit indipendente acquisito. Conta fotogrammi, non altrettanti mezzi o bersagli distinti; non viene convertito in ore video, GPU-ore, consumo energetico o accuratezza dei modelli.",
+        "fonti": [
+          {
+            "nome": "Primaria istituzionale · Ministero della Difesa ucraino — Ukrainian defense companies to train their own AI models on the Avengers Labs platform",
+            "url": "https://mod.gov.ua/en/news/ukrainian-defense-companies-to-train-their-own-ai-models-on-the-avengers-labs-platform",
+            "data": "2026-08-10"
+          }
+        ]
+      },
+      {
+        "id": "A4-E027",
+        "livello": "plausibile",
+        "titolo": "L’autonomia locale dipende nel tempo dalla filiera di aggiornamento",
+        "motivazione": "Maven e gli annunci Brave1/Avengers documentano segmenti del lavoro su dati e modelli; l’offerta disconnessa Google esemplifica la possibilità tecnologica di eseguire elaborazioni localmente. La sequenza selezione, annotazione, addestramento, validazione, distribuzione e inferenza è uno schema funzionale dell’articolo, non la descrizione di una pipeline ucraina universale e automatica. La dipendenza di lungo periodo dagli aggiornamenti è un’inferenza condizionata al cambiamento dei compiti e delle condizioni osservate. L’esecuzione locale non stabilisce l’autorità d’ingaggio e non dimostra una prestazione bellica.",
+        "fonti": [
+          {
+            "nome": "Primaria istituzionale · U.S. Department of Defense — Project Maven to Deploy Computer Algorithms to War Zone by Year’s End",
+            "url": "https://www.war.gov/News/News-Stories/Article/Article/1254719/project-maven-to-deploy-computer-algorithms-to-war-zone-by-years-end/",
+            "data": "2017-07-21"
+          },
+          {
+            "nome": "Primaria istituzionale · Ministero della Difesa ucraino — Ministry of Defence launches Brave1 Dataroom, a secure environment for training military AI solutions",
+            "url": "https://mod.gov.ua/en/news/ministry-of-defence-launches-brave1-dataroom-a-secure-environment-for-training-military-ai-solutions",
+            "data": "2026-01-21"
+          },
+          {
+            "nome": "Primaria istituzionale · Ministero della Difesa ucraino — Ukrainian defense companies to train their own AI models on the Avengers Labs platform",
+            "url": "https://mod.gov.ua/en/news/ukrainian-defense-companies-to-train-their-own-ai-models-on-the-avengers-labs-platform",
+            "data": "2026-08-10"
+          },
+          {
+            "nome": "Primaria commerciale · Google Cloud — Google Distributed Cloud air-gapped appliance is generally available",
+            "url": "https://cloud.google.com/blog/topics/hybrid-cloud/google-distributed-cloud-air-gapped-appliance-is-ga",
+            "data": "2024-07-17"
+          }
+        ]
+      },
+      {
+        "id": "A4-E028",
+        "livello": "confermato",
+        "titolo": "NATO e JWCC: indirizzi e accesso contrattuale a capacità distribuite",
+        "motivazione": "La Alliance Digital Strategy del 13 gennaio 2026 formula requisiti di cloud ibrido e federato, continuità e tactical edge. L’aggiudicazione JWCC del 7 dicembre 2022 identifica AWS, Google, Microsoft e Oracle per servizi dal livello centrale all’edge. Il grado riguarda rispettivamente la strategia e il contratto. Non attesta dispiegamento NATO universale, replica di ogni applicazione su quattro fornitori o passaggio automatico fra questi ultimi.",
+        "fonti": [
+          {
+            "nome": "Primaria istituzionale · NATO — Alliance Digital Strategy",
+            "url": "https://www.nato.int/en/about-us/official-texts-and-resources/official-texts/2026/01/13/alliance-digital-strategy",
+            "data": "2026-01-13"
+          },
+          {
+            "nome": "Primaria istituzionale · U.S. Department of Defense — Department of Defense Announces Joint Warfighting Cloud Capability Procurement",
+            "url": "https://www.war.gov/News/Releases/Release/Article/3239378/department-of-defense-announces-joint-warfighting-cloud-capability-procurement/",
+            "data": "2022-12-07"
+          }
+        ]
+      },
+      {
+        "id": "A4-E029",
+        "livello": "confermato",
+        "titolo": "Google Londra: la riparazione termica precede il recupero completo dei servizi",
+        "motivazione": "Il post-mortem Google Cloud sull’incidente del 19–20 luglio 2022 descrive guasti al raffreddamento durante alte temperature, spegnimenti protettivi e problemi d’instradamento che ampliano l’impatto. Il recupero dei servizi si prolunga oltre il ripristino termico. È un resoconto del gestore relativo a un evento non bellico, usato soltanto per chiarire la distinzione fra impianto e funzione. Non entra nel conteggio degli attacchi ai datacenter.",
+        "fonti": [
+          {
+            "nome": "Primaria tecnica · Google Cloud — Rapporto d’incidente della regione Londra, 19–20 luglio 2022; guasti al raffreddamento e ripristino dei servizi",
+            "url": "https://status.cloud.google.com/incidents/fmEL9i2fArADKawkZAa2"
+          }
+        ]
+      },
+      {
+        "id": "A4-E030",
+        "livello": "plausibile",
+        "titolo": "La capacità di calcolo richiede logistica e governo del recupero",
+        "motivazione": "Il precedente GAO sul sostegno degli UAS, il caso Google e le strategie AWS rendono concrete dipendenze materiali, tecniche e organizzative. L’articolo le ricompone nella nozione di logistica del calcolo, distinguendo energia, trasporto e manutenzione da configurazioni e competenze, e ancora da autorizzazioni e priorità. È una sintesi analitica: non assimila il calcolo a una munizione, non attribuisce una nascita recente alla logistica digitale e non stima il fabbisogno energetico militare dei casi.",
+        "fonti": [
+          {
+            "nome": "Primaria istituzionale · U.S. Government Accountability Office — GAO-10-331, inventario UAS e pianificazione del sostegno",
+            "url": "https://www.gao.gov/assets/a302241.html",
+            "data": "2010-03-26"
+          },
+          {
+            "nome": "Primaria tecnica · Google Cloud — Rapporto d’incidente della regione Londra, 19–20 luglio 2022; guasti al raffreddamento e ripristino dei servizi",
+            "url": "https://status.cloud.google.com/incidents/fmEL9i2fArADKawkZAa2"
+          },
+          {
+            "nome": "Primaria tecnica · AWS — Disaster recovery options in the cloud; documentazione acquisita nella ricerca chiusa il 16 settembre 2026, senza data di pubblicazione",
+            "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html"
+          },
+          {
+            "nome": "Primaria aziendale · Brad Smith / Microsoft — Update on ongoing Microsoft review",
+            "url": "https://blogs.microsoft.com/on-the-issues/2025/09/25/update-on-ongoing-microsoft-review/",
+            "data": "2025-09-25"
+          }
+        ]
+      },
+      {
+        "id": "A4-E031",
+        "livello": "plausibile",
+        "titolo": "Il subentro può conservare il servizio consumando il margine per un’altra perdita",
+        "motivazione": "Dalla necessità di capacità alternativa e di lavoro di recupero, l’articolo deduce che il subentro può lasciare meno risorse libere, separazione e personale disponibili. Distingue quindi ripristino della funzione e ricostituzione della possibilità di ripristinarla ancora. È una dinamica condizionale, non un bilancio quantitativo delle riserve digitali ucraine o dei clienti AWS. Il raccordo con P6 esplicita la continuità del ragionamento su danno reiterato e ricostituzione; Frontiera non costituisce una conferma empirica indipendente del meccanismo applicato ai datacenter.",
+        "fonti": [
+          {
+            "nome": "Primaria tecnica · AWS — Disaster recovery options in the cloud; documentazione acquisita nella ricerca chiusa il 16 settembre 2026, senza data di pubblicazione",
+            "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html"
+          },
+          {
+            "nome": "Primaria tecnica · Seth Eliot / AWS — Disaster Recovery (DR) Architecture on AWS, Part I: Strategies for Recovery in the Cloud",
+            "url": "https://aws.amazon.com/blogs/architecture/disaster-recovery-dr-architecture-on-aws-part-i-strategies-for-recovery-in-the-cloud/",
+            "data": "2021-04-05"
+          },
+          {
+            "nome": "Analisi editoriale · Frontiera — P6, Attacco sistemico e profondità difesa",
+            "url": "https://frontiera.pages.dev/profondita/attacco-sistemico-profondita-difesa/"
+          }
+        ]
+      }
     ]
   }
 }
