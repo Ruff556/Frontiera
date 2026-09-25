@@ -8,12 +8,12 @@ teatro: "Ucraina · Europa · Golfo"
 domini: []
 
 immagine:
-  file: /immagini/attualita/a4-national-archives-server-room.jpg
-  alt: "File di armadi server accesi nella sala macchine dei National Archives britannici, con cablaggi e impianti visibili."
-  credito: "The National Archives (UK) · ridimensionamento e lieve ritaglio Frontiera"
-  fonte: "https://commons.wikimedia.org/wiki/File:A_view_of_the_server_room_at_The_National_Archives.jpg"
-  licenza: "CC BY 3.0 — https://creativecommons.org/licenses/by/3.0/"
-  didascalia: "La sala server dei National Archives britannici nel 2011. Immagine illustrativa della materialità dell’archiviazione digitale; non raffigura gli eventi descritti nell’articolo."
+  file: "a4-dcgs.jpg"
+  alt: "Postazioni del Distributed Common Ground System dell'U.S. Air Force, dedicate all'elaborazione e all'analisi delle informazioni militari."
+  credito: "U.S. Air Force"
+  fonte: "https://commons.wikimedia.org/wiki/File:Air_Force_Distributed_Common_Ground_System_AN_GSQ-272_SENTINEL.JPG"
+  licenza: "Pubblico dominio negli Stati Uniti (PD-USGov-Military-Air Force)"
+  didascalia: "Una sala operativa del Distributed Common Ground System (DCGS) dell'U.S. Air Force."
 
 infobox:
   tipo: 2
