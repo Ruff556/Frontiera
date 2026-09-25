@@ -3,7 +3,7 @@ titolo: "Guerra e datacenter, la capacità oltre il danno"
 slug: guerra-datacenter
 data: 2026-09-21
 sezione: Attualità
-sommario: "Dalle migrazioni ucraine agli attacchi contro i datacenter nel Golfo: il ruolo delle funzioni digitali e della loro conservazione."
+sommario: "Dalle migrazioni dati ucraine agli attacchi contro i datacenter nel Golfo: il ruolo delle funzioni digitali e della loro conservazione."
 teatro: "Ucraina · Europa · Golfo"
 domini: []
 
