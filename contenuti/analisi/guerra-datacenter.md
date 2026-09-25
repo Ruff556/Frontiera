@@ -8,12 +8,13 @@ teatro: "Ucraina · Europa · Golfo"
 domini: []
 
 immagine:
-  file: "a4-dcgs.jpg"
+  file: /immagini/attualita/a4-dcgs.jpg
   alt: "Postazioni del Distributed Common Ground System dell'U.S. Air Force, dedicate all'elaborazione e all'analisi delle informazioni militari."
   credito: "U.S. Air Force"
   fonte: "https://commons.wikimedia.org/wiki/File:Air_Force_Distributed_Common_Ground_System_AN_GSQ-272_SENTINEL.JPG"
   licenza: "Pubblico dominio negli Stati Uniti (PD-USGov-Military-Air Force)"
   didascalia: "Una sala operativa del Distributed Common Ground System (DCGS) dell'U.S. Air Force."
+
 
 infobox:
   tipo: 2
