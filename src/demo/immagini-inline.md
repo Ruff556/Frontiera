@@ -52,7 +52,7 @@ Un ultimo paragrafo conclude il caso di prova e usa tutta la larghezza che torna
 
 {% figura immagini_inline.lunga, "2/4", "right" %}
 
-La fotografia è ora sul lato destro. Anche la didascalia e le informazioni sui diritti allineano il proprio testo a destra. Questo paragrafo si dispone sul lato opposto mantenendo il gutter necessario alla lettura.
+La fotografia è ora sul lato destro. Quando il testo è affiancato, anche la didascalia e le informazioni sui diritti allineano il proprio testo a destra. Su mobile la figura torna a blocco e la didascalia si allinea a sinistra. Questo paragrafo mantiene il gutter necessario alla lettura.
 
 La descrizione estesa aumenta l’altezza complessiva della figura. Il wrapping deve quindi continuare anche mentre il testo passa accanto alla didascalia, fino al bordo inferiore della cella. Su uno schermo stretto l’immagine e la descrizione precedono invece il testo nell’ordine naturale del documento.
 
