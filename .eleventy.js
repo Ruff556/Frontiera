@@ -20,6 +20,7 @@ const {
   vocabolario: profonditaVocabolario,
 } = require("./src/_lib/diagramma-profondita");
 const { normalizeInfobox } = require("./src/_lib/infobox");
+const { normalizeFigura } = require("./src/_lib/figura");
 const {
   creaRegistry: creaRegistryAffidabilitaV1,
   renderIndicatore: renderIndicatoreAffidabilitaV1,
@@ -28,6 +29,20 @@ const {
 // Profili commisurati ai componenti reali. Il fallback mantiene il formato
 // sorgente, mentre WebP è la sorgente moderna principale del <picture>.
 const IMAGE_PROFILES = Object.freeze({
+  // `auto` misura la figura lazy nel layout reale, comprese container query e sidebar.
+  // Il fallback conserva una stima prudente per i browser senza auto-sizes.
+  figura4: {
+    widths: [360, 640, 960, 1280, 1600],
+    sizes: "auto, (min-width: 1280px) 46rem, (min-width: 900px) calc(100vw - 32rem), (min-width: 740px) 38rem, calc(100vw - 5rem)",
+  },
+  figura2: {
+    widths: [360, 640, 960, 1280],
+    sizes: "auto, (min-width: 1280px) 22rem, (min-width: 1140px) 18rem, (min-width: 900px) calc(100vw - 32rem), (min-width: 740px) 18rem, calc(100vw - 5rem)",
+  },
+  figura3: {
+    widths: [360, 640, 960, 1280, 1600],
+    sizes: "auto, (min-width: 1280px) 31rem, (min-width: 900px) calc(100vw - 32rem), (min-width: 740px) 26rem, calc(100vw - 5rem)",
+  },
   carousel: {
     widths: [480, 768, 960, 1280],
     sizes: "(min-width: 880px) min(42vw, 36rem), calc(100vw - 2rem)",
@@ -135,7 +150,7 @@ function findEditorialImageUrls() {
       if (entry.isDirectory()) visit(full);
       else if (/\.(?:md|njk|json|js)$/i.test(entry.name)) {
         const text = fs.readFileSync(full, "utf8");
-        for (const match of text.matchAll(/^\s*file:\s*(\/immagini\/[^\s#]+)\s*$/gm)) {
+        for (const match of text.matchAll(/^\s*file:\s*["']?(\/immagini\/[^\s#"']+)["']?\s*(?:#.*)?$/gm)) {
           if (/\.(?:jpe?g|png|webp|avif)$/i.test(match[1])) urls.add(match[1]);
         }
       }
@@ -163,6 +178,22 @@ function metadataForProfile(metadata, profile) {
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(rssPlugin);
+  let nunjucksEnvironment;
+  eleventyConfig.on("eleventy.engine.njk", ({ environment }) => { nunjucksEnvironment = environment; });
+  eleventyConfig.addNunjucksShortcode("figura", function (img, misura, lato) {
+    const modello = normalizeFigura(img, misura, lato, this.page?.inputPath);
+    try { imageSourcePath(modello.img.file); }
+    catch (error) { throw new Error(`[figura] ${this.page?.inputPath}: ${error.message}`); }
+    const html = nunjucksEnvironment.renderString(
+      '{% from "partials/media.njk" import figuraInline %}{{ figuraInline(modello) }}',
+      { modello }
+    ).trim().replace(/\n\s*/g, " ");
+    // Un HTML block Markdown termina alla prima riga vuota: il markup compatto
+    // evita paragrafi spurii nei crediti quando un campo opzionale è assente.
+    // Il clear nel flusso impedisce al testo di risalire sopra il secondo float.
+    return '<div class="figura-clear" aria-hidden="true"></div>\n' + html;
+  });
+  eleventyConfig.addNunjucksShortcode("clearFigura", () => '<div class="figura-clear" aria-hidden="true"></div>');
   const directoryAffidabilitaV1 = "data-sources/affidabilita-v1";
   let registryAffidabilitaV1 = creaRegistryAffidabilitaV1({
     root: __dirname,

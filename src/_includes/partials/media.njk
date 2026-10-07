@@ -1,5 +1,26 @@
 {# ---- Macro immagini: diritti incorporati (credito + licenza obbligatori) ---- #}
 
+{# Variante editoriale nel corpo: stesso renderer responsive e lessico media,
+   didascalia facoltativa, nessun full-src o trigger lightbox. #}
+{% macro figuraInline(modello) %}
+{% set img = modello.img %}
+<figure class="media figura-inline figura-inline--{{ modello.misura }} figura-inline--{{ modello.lato }} figura-inline--{{ modello.fit }}">
+  <div class="frame">
+    {{ img | responsiveImage(modello.profile) | safe }}
+  </div>
+  {% if img.didascalia or img.credito or img.fonte or img.licenza %}
+  <figcaption>
+    {% if img.didascalia %}<span class="cap">{{ img.didascalia | escape }}</span>{% endif %}
+    {% if img.credito or img.fonte or img.licenza %}<span class="rights">
+      {% if img.credito %}<span><b>Credito:</b> {{ img.credito | escape }}</span>{% endif %}
+      {% if img.fonte %}<span><b>Fonte:</b> {{ img.fonte | escape }}</span>{% endif %}
+      {% if img.licenza %}<span><b>Licenza:</b> {{ img.licenza | escape }}</span>{% endif %}
+    </span>{% endif %}
+  </figcaption>
+  {% endif %}
+</figure>
+{% endmacro %}
+
 {# Immagine d'articolo: figura con didascalia + credito/licenza sempre presenti.
    Se manca img.file mostra lo slot segnaposto petrolio. #}
 {% macro media(img, ph="Immagine — segnaposto") %}

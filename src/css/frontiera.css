@@ -2939,3 +2939,43 @@ footer .license-note a:hover{color:#fff}
     background:rgba(20,36,47,.94);
   }
 }
+
+/* Figure nel corpo: attive soltanto sui contenuti che le richiamano.
+   Il container coincide con la larghezza degli schemi, senza uscire dal foglio. */
+.articlebody:has(> .figura-inline){display:flow-root;container-type:inline-size;container-name:figure-editoriali}
+/* L'inline-size containment non deve azzerare la misura intrinseca del foglio
+   centrato senza sidebar (grid item con margini automatici). */
+.analisi-wrap--single .reading:has(.figura-inline){width:100%}
+/* Il testo e i float devono condividere il medesimo bordo destro. */
+.analisi-body .articlebody:has(> .figura-inline) > :is(p,ul,ol,h2,h3,blockquote){max-width:none}
+.articlebody > figure.figura-inline{
+  clear:both;float:none;width:100%;max-width:64rem;margin:0 0 1.25rem;
+  overflow-wrap:anywhere;
+}
+.articlebody > figure.figura-inline .frame{border-radius:var(--r-lg) var(--r-lg) 0 0}
+.articlebody > figure.figura-inline:not(:has(figcaption)) .frame{border-radius:var(--r-lg)}
+.articlebody > figure.figura-inline img{display:block;width:100%;height:auto;object-fit:contain}
+.articlebody > figure.figura-inline--cover img{object-fit:cover}
+.articlebody > figure.figura-inline figcaption{
+  display:flex;flex-direction:column;gap:.4rem;margin:0;padding:.7rem .85rem;
+  border:1px solid var(--hairline);border-top:0;border-radius:0 0 var(--r-lg) var(--r-lg);
+  background:rgba(255,255,255,.42);text-align:left;
+}
+.articlebody > figure.figura-inline .rights > span + span::before{content:" · "}
+.articlebody > figure.figura-inline--right figcaption{text-align:right}
+.articlebody:has(> .figura-inline) > :is(h1,h2,h3,h4,h5,h6,figure,table,pre,blockquote,ul,ol,hr,.schema-kit,.starlink-flow,.palantir-schema,.figura-clear){clear:both}
+.figura-clear{clear:both}
+/* 740px è solo la prima soglia: con sidebar una viewport desktop può lasciare
+   meno spazio di un tablet. In quel caso prevale il fallback verticale. */
+@media(min-width:740px){
+  @container figure-editoriali (min-width:30rem){
+    .articlebody > figure.figura-inline--2{width:47%}
+    .articlebody > figure.figura-inline--2.figura-inline--left{float:left;margin-right:1.25rem}
+    .articlebody > figure.figura-inline--2.figura-inline--right{float:right;margin-left:1.25rem}
+  }
+  @container figure-editoriali (min-width:38rem){
+    .articlebody > figure.figura-inline--3{width:66%}
+    .articlebody > figure.figura-inline--3.figura-inline--left{float:left;margin-right:1.25rem}
+    .articlebody > figure.figura-inline--3.figura-inline--right{float:right;margin-left:1.25rem}
+  }
+}

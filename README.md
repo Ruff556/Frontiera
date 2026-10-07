@@ -248,6 +248,12 @@ riusa la stessa struttura visuale e responsive degli articoli di Attualità.
 > Non incorporare immagini protette da copyright senza una licenza chiara: lascia il
 > segnaposto finché non hai un file con diritti d'uso espliciti.
 
+### Immagini nel corpo degli articoli
+
+Usa `{% figura immagini_inline.nome, "2/4", "right" %}` per una figura con
+testo affiancato. Sono disponibili le misure `4/4`, `2/4`, `3/4` e il comando
+`{% clearFigura %}`. [Guida completa, schema YAML e demo](docs/immagini-inline/README.md).
+
 ### Versioni responsive
 
 La build genera automaticamente varianti WebP e nel formato originale tramite
