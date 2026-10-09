@@ -15,6 +15,18 @@ async function expectSinglePressedFilter(page, label) {
   expect(state.on).toEqual([label]);
 }
 
+// Attendere lo scroll nativo: il primo pixel di End non significa che il
+// movimento sia concluso. Un Home immediato può essere assorbito da Chromium.
+async function pressScrollKey(page, key) {
+  await page.evaluate(() => {
+    window.__keyboardScrollDone = new Promise(resolve => {
+      window.addEventListener("scrollend", () => resolve(), { once: true });
+    });
+  });
+  await page.keyboard.press(key);
+  await page.evaluate(() => window.__keyboardScrollDone);
+}
+
 test.describe("A1 — menu mobile", () => {
   test.use({ viewport: MOBILE });
 
@@ -78,17 +90,17 @@ test.describe("A4 — richiamo infobox mobile", () => {
     await expect(trigger).toHaveAttribute("aria-hidden", "true");
     await expect(trigger).toHaveAttribute("tabindex", "-1");
 
-    await page.keyboard.press("End");
+    await pressScrollKey(page, "End");
     await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(0);
     await expect(trigger).toHaveAttribute("aria-hidden", "false");
     await expect(trigger).toHaveAttribute("tabindex", "0");
 
-    await page.keyboard.press("Control+Home");
+    await pressScrollKey(page, "Control+Home");
     await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0);
     await expect(trigger).toHaveAttribute("aria-hidden", "true");
     await expect(trigger).toHaveAttribute("tabindex", "-1");
 
-    await page.keyboard.press("End");
+    await pressScrollKey(page, "End");
     await expect(trigger).toHaveAttribute("aria-hidden", "false");
     await trigger.click();
     await expect(dialog).toBeVisible();
