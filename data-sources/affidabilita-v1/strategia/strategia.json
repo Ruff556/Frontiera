@@ -208,6 +208,933 @@
         "motivazione": "Le fonti disponibili descrivono un risultato locale e una risposta russa ancora in corso. Mancano una finestra temporale sufficiente, un bilancio dei costi e casi comparabili che permettano di stabilire permanenza, ripetibilità e trasferibilità della prestazione.",
         "fonti": [{"nome": "OSW, Ukrainian advances north of Lyman", "data": "2026-09-01", "url": "https://www.osw.waw.pl/en/publikacje/analyses/2026-09-01/ukrainian-advances-north-lyman-day-1651-war"}, {"nome": "ISW, Russian Offensive Campaign Assessment", "data": "2026-09-08", "url": "https://understandingwar.org/research/russia-ukraine/russian-offensive-campaign-assessment-september-8-2026/"}]
       }
+    ],
+    "contenuti/analisi/geran-5-difesa-economica.md": [
+      {
+        "id": "STR3-E001",
+        "livello": "plausibile",
+        "titolo": "L’Ucraina cerca una composizione difensiva corrispondente: assorbire una parte consistente della massa attraverso gruppi mobili, artiglieria, guerra elettronica e droni intercettori, conservando aviazione e munizioni più rare per gli impieghi che le richiedono.",
+        "motivazione": "RUSI documenta la combinazione dei mezzi e i vincoli di disponibilità. La complementarità economica fra gli strati è una lettura analitica coerente con quei riscontri; non è un bilancio completo di costi, consumi e assegnazioni della difesa ucraina.",
+        "fonti": [
+          {
+            "nome": "Justin Bronk / RUSI, Four Years On: An Update on the Air War Over Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/four-years-update-air-war-over-ukraine",
+            "data": "2026-07-28"
+          },
+          {
+            "nome": "Jack Watling / RUSI, Octopus Adds an Additional Layer to Ukraine’s Air Defences",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/octopus-adds-additional-layer-ukraines-air-defences",
+            "data": "2025-11-27"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E002",
+        "livello": "confermato",
+        "titolo": "Il 26, la Presidenza ucraina ha dichiarato una neutralizzazione del 55% dei droni a reazione, riferendo oltre 2.730 impieghi dall’inizio del mese e oltre 1.500 velivoli abbattuti o soppressi. La stessa comunicazione descriveva risultati sensibilmente migliori contro gli Shahed convenzionali.",
+        "motivazione": "È confermato il contenuto della dichiarazione presidenziale del 26 settembre. Il livello riguarda la comunicazione ufficiale, non una verifica indipendente del tasso. I conteggi introdotti da «oltre» non consentono un ricalcolo esatto; abbattimento e soppressione non coincidono necessariamente con distruzione fisica, né la quota residua con impatti accertati.",
+        "fonti": [
+          {
+            "nome": "Presidenza ucraina, discorso sui risultati del contrasto ai droni",
+            "url": "https://www.president.gov.ua/news/vzhe-viznacheni-perehoplyuvachi-yaki-mozhut-stati-osnovnim-z-106605",
+            "data": "2026-09-26"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E003",
+        "livello": "non-verificato",
+        "titolo": "Tasso di neutralizzazione specifico del Geran-5: non determinato",
+        "motivazione": "L’indicatore riguarda il tasso specifico del Geran-5, che resta non verificato nel quadro documentale chiuso al 29 settembre. La fonte fornisce soltanto dati aggregati sui reattivi: non permette di attribuire al modello il 55%, la quota complementare o una porzione determinata della difficoltà nazionale.",
+        "fonti": [
+          {
+            "nome": "Presidenza ucraina, discorso sui risultati del contrasto ai droni",
+            "url": "https://www.president.gov.ua/news/vzhe-viznacheni-perehoplyuvachi-yaki-mozhut-stati-osnovnim-z-106605",
+            "data": "2026-09-26"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E004",
+        "livello": "plausibile",
+        "titolo": "Il Geran-5 sposta il confine della difesa economica: nel rapporto con alcuni mezzi, la possibilità di scegliere una risposta sostenibile deve essere ricostruita.",
+        "motivazione": "La tesi combina le caratteristiche pubblicate dal GUR, le difficoltà dei reattivi dichiarate dall’Aeronautica e i primi intercetti attribuiti ai nuovi mezzi. Il nesso è relazionale e condizionato alle risposte disponibili: mancano esiti e consumi per modello che ne misurino l’estensione nazionale o dimostrino un vantaggio economico già consolidato.",
+        "fonti": [
+          {
+            "nome": "GUR / War & Sanctions, scheda tecnica Geran-5",
+            "url": "https://war-sanctions.gur.gov.ua/en/page-geran-5"
+          },
+          {
+            "nome": "ArmyInform, dichiarazioni del portavoce dell’Aeronautica Yurii Ihnat",
+            "url": "https://armyinform.com.ua/2026/09/23/%C2%ABkozhen-dron-maye-svoyu-czil%C2%BB-yurij-ignat-poyasnyv-logiku-rosijskyh-%C2%ABshahednyh%C2%BB-atak/",
+            "data": "2026-09-23"
+          },
+          {
+            "nome": "ArmyInform, filmato presidenziale dell’intercetto attribuito alla SBU",
+            "url": "https://armyinform.com.ua/2026/09/19/novyj-ukrayinskyj-dron-perehoplyuvach-vdruge-za-den-zbyv-reaktyvnyj-bpla/",
+            "data": "2026-09-19"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E005",
+        "livello": "confermato",
+        "titolo": "L’11, l’intelligence militare ucraina, il GUR, ne annunciò l’impiego nelle prime salve combinate dell’anno; il 19 pubblicò un esame più dettagliato dei componenti e delle caratteristiche.",
+        "motivazione": "Le due riproduzioni ufficiali documentano l’annuncio dell’11 gennaio e l’esame del 19. La fonte attribuisce il primo impiego alle salve di inizio anno senza fornire il giorno esatto della missione. Il livello conferma questa cronologia documentale e l’attribuzione del GUR.",
+        "fonti": [
+          {
+            "nome": "GUR, comunicato sul Geran-5 riprodotto da ArmyInform",
+            "url": "https://armyinform.com.ua/2026/01/11/vorog-vpershe-zastosuvav-bpla-geran-5-u-gur-rozpovily-pro-novu-rozrobku/",
+            "data": "2026-01-11"
+          },
+          {
+            "nome": "GUR, esame del Geran-5 riprodotto da ArmyInform",
+            "url": "https://armyinform.com.ua/2026/01/19/gur-rozkrylo-harakterystyky-ta-komponentnu-bazu-novogo-rosijskogo-bpla-geran-5/",
+            "data": "2026-01-19"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E006",
+        "livello": "confermato",
+        "titolo": "La scheda corrente del GUR indica 6,5 metri di lunghezza, 3,2 di apertura e una massa massima al decollo di 850 chilogrammi.",
+        "motivazione": "La configurazione e i valori sono quelli della scheda GUR consultata nel quadro documentale dell’articolo. Il livello conferma il dato pubblicato dall’esame tecnico, non una misura indipendente di tutti gli esemplari. Le dimensioni preliminari dell’11 gennaio differivano; non sono combinate con quelle della scheda dettagliata.",
+        "fonti": [
+          {
+            "nome": "GUR / War & Sanctions, scheda tecnica Geran-5",
+            "url": "https://war-sanctions.gur.gov.ua/en/page-geran-5"
+          },
+          {
+            "nome": "GUR, esame del Geran-5 riprodotto da ArmyInform",
+            "url": "https://armyinform.com.ua/2026/01/19/gur-rozkrylo-harakterystyky-ta-komponentnu-bazu-novogo-rosijskogo-bpla-geran-5/",
+            "data": "2026-01-19"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E007",
+        "livello": "plausibile",
+        "titolo": "Il valore pubblicato che incide più direttamente sul tempo difensivo è la velocità di crociera: 450–600 km/h. A esso si accompagnano una portata stimata di circa 950 chilometri e una durata fino a due ore.",
+        "motivazione": "Sono prestazioni pubblicate dal GUR sulla base dell’esame del velivolo; la portata è una stima. Nel corpus manca una validazione indipendente delle prestazioni in volo. Intervalli, massimi e durata non dimostrano che velocità, autonomia e carico siano raggiunti simultaneamente in una stessa missione.",
+        "fonti": [
+          {
+            "nome": "GUR / War & Sanctions, scheda tecnica Geran-5",
+            "url": "https://war-sanctions.gur.gov.ua/en/page-geran-5"
+          },
+          {
+            "nome": "GUR, esame del Geran-5 riprodotto da ArmyInform",
+            "url": "https://armyinform.com.ua/2026/01/19/gur-rozkrylo-harakterystyky-ta-komponentnu-bazu-novogo-rosijskogo-bpla-geran-5/",
+            "data": "2026-01-19"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E008",
+        "livello": "plausibile",
+        "titolo": "La testata da 90 chilogrammi conserva inoltre un carico significativo per l’attacco diretto.",
+        "motivazione": "Il GUR pubblica una testata da 90 kg. La qualificazione del carico come significativo è un giudizio analitico, non una misura dell’effetto sul bersaglio: massa della testata, quantità di esplosivo e danno prodotto restano grandezze distinte.",
+        "fonti": [
+          {
+            "nome": "GUR / War & Sanctions, scheda tecnica Geran-5",
+            "url": "https://war-sanctions.gur.gov.ua/en/page-geran-5"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E009",
+        "livello": "plausibile",
+        "titolo": "Portata e carico acquistano interesse nella loro unione con il nuovo profilo; autonomamente, hanno precedenti o valori superiori in altre configurazioni della famiglia.",
+        "motivazione": "GUR e CSIS sostengono l’esistenza di precedenti di carico o portata nella famiglia. Il confronto mantiene separati modelli e configurazioni; non costruisce un unico Geran-2 con tutti i massimi disponibili. La fonte GUR del 2025 conserva il controllo ereditato dal dossier, senza nuova lettura integrale in questa riedizione.",
+        "fonti": [
+          {
+            "nome": "GUR, modernizzazione dei droni Geran e delle testate",
+            "url": "https://gur.gov.ua/content/serii-y-ta-iak-rosiia-modernizuie-shakhedy-ta-inshi-udarni-bpla.html",
+            "data": "2025-02-18"
+          },
+          {
+            "nome": "CSIS Missile Threat, Shahed-131 e Shahed-136",
+            "url": "https://missilethreat.csis.org/missile/shahed-131-and-136/",
+            "data": "2026-06-02"
+          },
+          {
+            "nome": "GUR / War & Sanctions, scheda tecnica Geran-5",
+            "url": "https://war-sanctions.gur.gov.ua/en/page-geran-5"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E010",
+        "livello": "plausibile",
+        "titolo": "Il turbojet cinese Telefly TF-TJ2000A identificato sul Geran-5 compare, secondo la documentazione GUR ripresa nel dossier, su una configurazione del Geran-4.",
+        "motivazione": "L’identificazione sul Geran-5 è pubblicata dal GUR; per il Geran-4 il controllo disponibile è indiretto, attraverso LB. La comunanza riguarda una configurazione, non tutti gli esemplari. Le divergenze fra comunicato e scheda Geran-4 non consentono un confronto numerico omogeneo né una graduatoria della potenza dei motori.",
+        "fonti": [
+          {
+            "nome": "GUR, esame del Geran-5 riprodotto da ArmyInform",
+            "url": "https://armyinform.com.ua/2026/01/19/gur-rozkrylo-harakterystyky-ta-komponentnu-bazu-novogo-rosijskogo-bpla-geran-5/",
+            "data": "2026-01-19"
+          },
+          {
+            "nome": "LB, ripresa della documentazione GUR sul Geran-4",
+            "url": "https://lb.ua/society/2026/05/25/740622_rozvidka_oprilyudnila_dani.html",
+            "data": "2026-05-25"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E011",
+        "livello": "confermato",
+        "titolo": "Il GUR identifica inoltre navigazione inerziale, sistema satellitare Kometa-M12 con antenna anti-disturbo, telemetria Tracker V3 e un modem mesh.",
+        "motivazione": "Il comunicato tecnico identifica questi apparati, incluso il modem Xingkai Tech XK-F358. È confermata l’identificazione documentata dalla fonte; la presenza dell’hardware non dimostra autonomamente prestazioni anti-disturbo o cooperazione fra velivoli.",
+        "fonti": [
+          {
+            "nome": "GUR, esame del Geran-5 riprodotto da ArmyInform",
+            "url": "https://armyinform.com.ua/2026/01/19/gur-rozkrylo-harakterystyky-ta-komponentnu-bazu-novogo-rosijskogo-bpla-geran-5/",
+            "data": "2026-01-19"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E012",
+        "livello": "non-verificato",
+        "titolo": "Efficacia EW e funzioni operative della rete Geran-5: non misurate",
+        "motivazione": "L’efficacia sotto guerra elettronica e l’impiego operativo della rete non sono quantificati nel materiale esaminato. Il modem mesh documenta un componente; non prova sciami autonomi, coordinamento effettivo o un incremento misurato del successo delle missioni.",
+        "fonti": [
+          {
+            "nome": "GUR, esame del Geran-5 riprodotto da ArmyInform",
+            "url": "https://armyinform.com.ua/2026/01/19/gur-rozkrylo-harakterystyky-ta-komponentnu-bazu-novogo-rosijskogo-bpla-geran-5/",
+            "data": "2026-01-19"
+          },
+          {
+            "nome": "GUR / War & Sanctions, scheda tecnica Geran-5",
+            "url": "https://war-sanctions.gur.gov.ua/en/page-geran-5"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E013",
+        "livello": "confermato",
+        "titolo": "Il GUR pubblica per il Geran-5 un massimo di sei chilometri, ma nell’esame di gennaio distingueva impieghi effettivamente rilevati fra 200 metri e tre chilometri.",
+        "motivazione": "Il livello conferma la distinzione presente nel comunicato: quota massima dichiarata e intervallo riferito agli impieghi osservati. Non certifica il massimo con prove indipendenti e non trasforma quel campione di voli nel profilo ordinario di tutti i Geran-5.",
+        "fonti": [
+          {
+            "nome": "GUR, esame del Geran-5 riprodotto da ArmyInform",
+            "url": "https://armyinform.com.ua/2026/01/19/gur-rozkrylo-harakterystyky-ta-komponentnu-bazu-novogo-rosijskogo-bpla-geran-5/",
+            "data": "2026-01-19"
+          },
+          {
+            "nome": "GUR / War & Sanctions, scheda tecnica Geran-5",
+            "url": "https://war-sanctions.gur.gov.ua/en/page-geran-5"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E014",
+        "livello": "confermato",
+        "titolo": "Peraltro, l’adattamento di quota precede il Geran-5: nel novembre 2025 Jack Watling descriveva già la risposta russa ai gruppi mobili ucraini attraverso voli più alti e la successiva ricerca di intercettori dedicati.",
+        "motivazione": "Il rapporto RUSI documenta questa ricostruzione nel novembre 2025, prima dell’identificazione pubblica del Geran-5. Il precedente riguarda l’adattamento della campagna di droni; non fornisce una misura delle prestazioni o degli esiti specifici del nuovo modello.",
+        "fonti": [
+          {
+            "nome": "Jack Watling / RUSI, Octopus Adds an Additional Layer to Ukraine’s Air Defences",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/octopus-adds-additional-layer-ukraines-air-defences",
+            "data": "2025-11-27"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E015",
+        "livello": "confermato",
+        "titolo": "Nelle dichiarazioni riprese il 23 settembre, il portavoce dell’Aeronautica Yurii Ihnat collegava la difficoltà dei reattivi all’insufficienza dei mezzi idonei e indicava aviazione e sistemi missilistici a corto e medio raggio fra le risposte principali.",
+        "motivazione": "ArmyInform documenta le dichiarazioni del portavoce. Il livello conferma la valutazione ufficiale attribuita, riferita ai reattivi nel loro insieme; non certifica una causa unica delle penetrazioni, una necessità universale di usare missili o un consumo separato per Geran-5.",
+        "fonti": [
+          {
+            "nome": "ArmyInform, dichiarazioni del portavoce dell’Aeronautica Yurii Ihnat",
+            "url": "https://armyinform.com.ua/2026/09/23/%C2%ABkozhen-dron-maye-svoyu-czil%C2%BB-yurij-ignat-poyasnyv-logiku-rosijskyh-%C2%ABshahednyh%C2%BB-atak/",
+            "data": "2026-09-23"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E016",
+        "livello": "plausibile",
+        "titolo": "Il nuovo profilo può ridurre la libertà della difesa di scegliere una risposta sostenibile.",
+        "motivazione": "Velocità e quota pubblicate, insieme alla carenza dichiarata di mezzi adatti, sostengono il possibile superamento di soglie locali di ingaggio. Il nesso dipende da sensori, prontezza, geometria e caratteristiche dell’effettore; non dimostra l’inutilizzabilità generale di tutti i mezzi economici.",
+        "fonti": [
+          {
+            "nome": "GUR, esame del Geran-5 riprodotto da ArmyInform",
+            "url": "https://armyinform.com.ua/2026/01/19/gur-rozkrylo-harakterystyky-ta-komponentnu-bazu-novogo-rosijskogo-bpla-geran-5/",
+            "data": "2026-01-19"
+          },
+          {
+            "nome": "GUR / War & Sanctions, scheda tecnica Geran-5",
+            "url": "https://war-sanctions.gur.gov.ua/en/page-geran-5"
+          },
+          {
+            "nome": "ArmyInform, dichiarazioni del portavoce dell’Aeronautica Yurii Ihnat",
+            "url": "https://armyinform.com.ua/2026/09/23/%C2%ABkozhen-dron-maye-svoyu-czil%C2%BB-yurij-ignat-poyasnyv-logiku-rosijskyh-%C2%ABshahednyh%C2%BB-atak/",
+            "data": "2026-09-23"
+          },
+          {
+            "nome": "Jack Watling / RUSI, Octopus Adds an Additional Layer to Ukraine’s Air Defences",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/octopus-adds-additional-layer-ukraines-air-defences",
+            "data": "2025-11-27"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E017",
+        "livello": "plausibile",
+        "titolo": "La pressione dipende da come questa domanda si distribuisce nello spazio e nel tempo, oltre che dal numero complessivo dei lanci.",
+        "motivazione": "RUSI documenta salve eterogenee e vincoli delle risposte difensive. L’articolo ne ricava un meccanismo di allocazione di sensori, comando ed effettori. Il corpus non ricostruisce tutte le assegnazioni di una singola salva e non quantifica il contributo marginale del Geran-5 alla saturazione.",
+        "fonti": [
+          {
+            "nome": "Justin Bronk / RUSI, Four Years On: An Update on the Air War Over Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/four-years-update-air-war-over-ukraine",
+            "data": "2026-07-28"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E018",
+        "livello": "plausibile",
+        "titolo": "In questa architettura, introdurre jet può servire a erodere l’efficacia delle risposte che Kyiv ha costruito contro la massa precedente.",
+        "motivazione": "È un’interpretazione dell’iniziativa russa compatibile con l’adattamento di profilo e con le difficoltà dichiarate dagli ucraini. Le fonti non documentano un piano operativo russo che assegni al Geran-5 questa funzione in una quantità determinata; l’intenzione non è trattata come fatto accertato.",
+        "fonti": [
+          {
+            "nome": "Justin Bronk / RUSI, Four Years On: An Update on the Air War Over Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/four-years-update-air-war-over-ukraine",
+            "data": "2026-07-28"
+          },
+          {
+            "nome": "Jack Watling / RUSI, Octopus Adds an Additional Layer to Ukraine’s Air Defences",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/octopus-adds-additional-layer-ukraines-air-defences",
+            "data": "2025-11-27"
+          },
+          {
+            "nome": "ArmyInform, dichiarazioni del portavoce dell’Aeronautica Yurii Ihnat",
+            "url": "https://armyinform.com.ua/2026/09/23/%C2%ABkozhen-dron-maye-svoyu-czil%C2%BB-yurij-ignat-poyasnyv-logiku-rosijskyh-%C2%ABshahednyh%C2%BB-atak/",
+            "data": "2026-09-23"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E019",
+        "livello": "plausibile",
+        "titolo": "La continuità con la famiglia Geran può facilitare una parte del processo e concentrarne le dipendenze.",
+        "motivazione": "La comunanza attribuita di apparati e propulsori sostiene l’inferenza industriale. Mancano dati completi su costo, disponibilità dei componenti, scarti e tempi di integrazione: non è dimostrato quanto il riuso riduca i costi o quale dipendenza limiti effettivamente la produzione.",
+        "fonti": [
+          {
+            "nome": "GUR, esame del Geran-5 riprodotto da ArmyInform",
+            "url": "https://armyinform.com.ua/2026/01/19/gur-rozkrylo-harakterystyky-ta-komponentnu-bazu-novogo-rosijskogo-bpla-geran-5/",
+            "data": "2026-01-19"
+          },
+          {
+            "nome": "GUR / War & Sanctions, scheda tecnica Geran-5",
+            "url": "https://war-sanctions.gur.gov.ua/en/page-geran-5"
+          },
+          {
+            "nome": "LB, ripresa della documentazione GUR sul Geran-4",
+            "url": "https://lb.ua/society/2026/05/25/740622_rozvidka_oprilyudnila_dani.html",
+            "data": "2026-05-25"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E020",
+        "livello": "plausibile",
+        "titolo": "Il primo successo di un nuovo effettore apre il primo passaggio; la diffusione organizzata deve conquistare gli altri due.",
+        "motivazione": "La distinzione fra possibilità tecnica, copertura effettiva e sostenibilità è una costruzione analitica fondata sui vincoli descritti da RUSI e sui lavori produttivi dichiarati dalla Presidenza. Un episodio pubblicizzato sostiene la possibilità d’intercetto, senza provare disponibilità ordinaria o ricostituzione compatibile con il consumo.",
+        "fonti": [
+          {
+            "nome": "Jack Watling / RUSI, Octopus Adds an Additional Layer to Ukraine’s Air Defences",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/octopus-adds-additional-layer-ukraines-air-defences",
+            "data": "2025-11-27"
+          },
+          {
+            "nome": "Justin Bronk / RUSI, Four Years On: An Update on the Air War Over Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/four-years-update-air-war-over-ukraine",
+            "data": "2026-07-28"
+          },
+          {
+            "nome": "Presidenza ucraina, discorso sui risultati del contrasto ai droni",
+            "url": "https://www.president.gov.ua/news/vzhe-viznacheni-perehoplyuvachi-yaki-mozhut-stati-osnovnim-z-106605",
+            "data": "2026-09-26"
+          },
+          {
+            "nome": "ArmyInform, filmato presidenziale dell’intercetto attribuito alla SBU",
+            "url": "https://armyinform.com.ua/2026/09/19/novyj-ukrayinskyj-dron-perehoplyuvach-vdruge-za-den-zbyv-reaktyvnyj-bpla/",
+            "data": "2026-09-19"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E021",
+        "livello": "non-verificato",
+        "titolo": "Propagazione strategica e costo complessivo del Geran-5: non quantificati",
+        "motivazione": "Nel corpus non è ricostruita per il Geran-5 la catena fra penetrazioni, danni e continuità delle funzioni protette. Il tasso aggregato dei jet e i singoli filmati d’intercetto non bastano a misurare un effetto strategico o il costo complessivo imposto dal modello.",
+        "fonti": [
+          {
+            "nome": "Presidenza ucraina, discorso sui risultati del contrasto ai droni",
+            "url": "https://www.president.gov.ua/news/vzhe-viznacheni-perehoplyuvachi-yaki-mozhut-stati-osnovnim-z-106605",
+            "data": "2026-09-26"
+          },
+          {
+            "nome": "Justin Bronk / RUSI, Four Years On: An Update on the Air War Over Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/four-years-update-air-war-over-ukraine",
+            "data": "2026-07-28"
+          },
+          {
+            "nome": "ArmyInform, filmato presidenziale dell’intercetto attribuito alla SBU",
+            "url": "https://armyinform.com.ua/2026/09/19/novyj-ukrayinskyj-dron-perehoplyuvach-vdruge-za-den-zbyv-reaktyvnyj-bpla/",
+            "data": "2026-09-19"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E022",
+        "livello": "confermato",
+        "titolo": "Il 21 agosto il Ministero della Difesa ha annunciato l’ammissione all’impiego di Alexa, di Spatium, il primo intercettore ucraino a reazione inserito nell’arsenale secondo il comunicato. Geran-3, Geran-4 e Geran-5 figurano fra i bersagli per i quali è stato progettato.",
+        "motivazione": "Il comunicato ufficiale documenta l’ammissione e indica i bersagli di progetto. Il livello riguarda l’atto e il contenuto del comunicato, incluse le prove dichiarate; non attribuisce ad Alexa gli intercetti di altri mezzi né conferma prestazioni in combattimento, volumi distribuiti o costo per neutralizzazione.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino, ammissione di Alexa Spatium",
+            "url": "https://mod.gov.ua/en/news/defence-forces-arsenal-expands-with-the-addition-of-ukraines-first-jet-powered-drone-interceptor-alexa-spatium",
+            "data": "2026-08-21"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E023",
+        "livello": "plausibile",
+        "titolo": "Il 19 settembre compare un risultato attribuito al modello che interessa. ArmyInform ha ripreso un filmato pubblicato dalla Presidenza nel quale un nuovo intercettore impiegato dal controspionaggio militare della SBU colpisce un bersaglio identificato come Geran-5. La comunicazione riferiva il secondo impiego riuscito del nuovo mezzo nella giornata.",
+        "motivazione": "Comunicazione ufficiale e filmato danno un riscontro concreto all’intercetto attribuito al Geran-5, senza autenticazione forense indipendente di identità ed esito. L’intercettore non è nominato; il «secondo impiego riuscito» non dimostra due Geran-5 abbattuti e il materiale non offre il numero complessivo dei tentativi.",
+        "fonti": [
+          {
+            "nome": "ArmyInform, filmato presidenziale dell’intercetto attribuito alla SBU",
+            "url": "https://armyinform.com.ua/2026/09/19/novyj-ukrayinskyj-dron-perehoplyuvach-vdruge-za-den-zbyv-reaktyvnyj-bpla/",
+            "data": "2026-09-19"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E024",
+        "livello": "plausibile",
+        "titolo": "Nello stesso periodo, i materiali raccolti nel dossier attribuiscono a Sting S, di Wild Hornets, intercetti di Geran-5 e una sperimentazione in combattimento ancora collegata al successivo ampliamento della produzione.",
+        "motivazione": "Il riscontro deriva da filmati pubblicizzati e dichiarazioni del produttore riprese da due testate, consultate tramite gli estratti disponibili nel dossier. Non costituisce verifica integrale indipendente. Possibili sovrapposizioni con altri filmati impediscono un conteggio cumulativo; non è disponibile un tasso di successo o un costo per neutralizzazione di Sting S.",
+        "fonti": [
+          {
+            "nome": "Militarnyi, intercetto attribuito a Sting S",
+            "url": "https://militarnyi.com/en/news/sting-s-interceptor-drone-destroys-geran-5-small-cruise-missile/"
+          },
+          {
+            "nome": "Business Insider, dichiarazioni di Wild Hornets sugli intercettori reattivi",
+            "url": "https://www.businessinsider.com/new-ukrainian-interceptors-downing-fastest-russian-jet-powered-drones-2026-9"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E025",
+        "livello": "plausibile",
+        "titolo": "Il recupero tecnico è iniziato. I resoconti mostrano che la nuova configurazione offensiva può incontrare intercettori sviluppati per contrastarla.",
+        "motivazione": "L’ammissione di un mezzo dedicato e i risultati attribuiti ai nuovi intercettori sostengono un primo recupero della possibilità tecnica. La conclusione conserva i limiti delle prove di combattimento: non dimostra copertura diffusa, identificazione di tutti i sistemi impiegati o sostenibilità economica già raggiunta.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino, ammissione di Alexa Spatium",
+            "url": "https://mod.gov.ua/en/news/defence-forces-arsenal-expands-with-the-addition-of-ukraines-first-jet-powered-drone-interceptor-alexa-spatium",
+            "data": "2026-08-21"
+          },
+          {
+            "nome": "ArmyInform, filmato presidenziale dell’intercetto attribuito alla SBU",
+            "url": "https://armyinform.com.ua/2026/09/19/novyj-ukrayinskyj-dron-perehoplyuvach-vdruge-za-den-zbyv-reaktyvnyj-bpla/",
+            "data": "2026-09-19"
+          },
+          {
+            "nome": "Militarnyi, intercetto attribuito a Sting S",
+            "url": "https://militarnyi.com/en/news/sting-s-interceptor-drone-destroys-geran-5-small-cruise-missile/"
+          },
+          {
+            "nome": "Business Insider, dichiarazioni di Wild Hornets sugli intercettori reattivi",
+            "url": "https://www.businessinsider.com/new-ukrainian-interceptors-downing-fastest-russian-jet-powered-drones-2026-9"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E026",
+        "livello": "confermato",
+        "titolo": "La Presidenza descriveva a fine settembre prototipi già utilizzati in combattimento insieme a un lavoro ancora necessario su produzione, componenti, perfezionamento e diffusione.",
+        "motivazione": "È confermato il contenuto delle dichiarazioni presidenziali, non il completamento della diffusione. Il discorso del 26 settembre è stato controllato in produzione; quello del 28 conserva la lettura effettuata nell’Analisi 2, poiché la successiva riapertura non è riuscita. Le due comunicazioni hanno la stessa origine e non valgono come conferme indipendenti.",
+        "fonti": [
+          {
+            "nome": "Presidenza ucraina, discorso sui risultati del contrasto ai droni",
+            "url": "https://www.president.gov.ua/news/vzhe-viznacheni-perehoplyuvachi-yaki-mozhut-stati-osnovnim-z-106605",
+            "data": "2026-09-26"
+          },
+          {
+            "nome": "Presidenza ucraina, discorso su prototipi e diffusione degli intercettori",
+            "url": "https://www.president.gov.ua/news/uves-den-sogodni-ataki-shahediv-uzhe-bilsh-nizh-120-droniv-9-106613",
+            "data": "2026-09-28"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E027",
+        "livello": "confermato",
+        "titolo": "Il portale GUR attribuisce il Geran-5 ad Alabuga e identifica sul velivolo un propulsore cinese e componenti elettronici di più provenienze.",
+        "motivazione": "Scheda e comunicato tecnico documentano l’attribuzione produttiva e l’identificazione dei componenti. Il livello conferma la ricostruzione pubblicata dal GUR; non certifica la capacità della fabbrica, l’intera filiera, i flussi attuali di approvvigionamento o il ritmo effettivo delle consegne.",
+        "fonti": [
+          {
+            "nome": "GUR / War & Sanctions, scheda tecnica Geran-5",
+            "url": "https://war-sanctions.gur.gov.ua/en/page-geran-5"
+          },
+          {
+            "nome": "GUR, esame del Geran-5 riprodotto da ArmyInform",
+            "url": "https://armyinform.com.ua/2026/01/19/gur-rozkrylo-harakterystyky-ta-komponentnu-bazu-novogo-rosijskogo-bpla-geran-5/",
+            "data": "2026-01-19"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E028",
+        "livello": "plausibile",
+        "titolo": "Il 12 agosto Militarnyi riportava una stima GUR di circa 3.000 Geran-4 e Geran-5 al mese, insieme alla dichiarazione di produzione seriale ad Alabuga.",
+        "motivazione": "È una stima attribuita al GUR, consultata attraverso l’accesso indicizzato disponibile nell’Analisi 2. Metodo e perimetro non sono pubblici. La quantità aggrega Geran-4 e Geran-5 e non prova consegne mensili del solo Geran-5, impieghi nello stesso periodo o produzione effettiva verificata indipendentemente.",
+        "fonti": [
+          {
+            "nome": "Militarnyi, stima GUR sulla produzione Geran-4/5",
+            "url": "https://militarnyi.com/en/news/russia-produces-around-3-000-geran-4-5-kamikaze-drones-per-month/",
+            "data": "2026-08-12"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E029",
+        "livello": "plausibile",
+        "titolo": "Il 4 settembre RBC-Ukraine, citando fonti militari anonime, riferiva invece per quel mese un piano di 1.200 Geran-4 e 800 Geran-5.",
+        "motivazione": "RBC-Ukraine riferisce un piano mensile da fonti militari anonime, senza documentazione pubblica delle consegne. Le 800 unità Geran-5 sono un obiettivo riportato, non un consuntivo. Il dato non è omogeneo alla stima aggregata di agosto e non dimostra una contrazione della produzione.",
+        "fonti": [
+          {
+            "nome": "RBC-Ukraine, piano produttivo riferito da fonti militari anonime",
+            "url": "https://newsukraine.rbc.ua/news/russia-plans-to-produce-2-000-jet-powered-1788529865.html",
+            "data": "2026-09-04"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E030",
+        "livello": "non-verificato",
+        "titolo": "Consegne effettive e tendenza produttiva Geran-5: non determinate",
+        "motivazione": "Restano non verificati il consuntivo delle consegne Geran-5 e la relativa serie temporale. Le fonti disponibili differiscono per periodo, perimetro e natura del dato; non possono essere mediate, sottratte o confrontate con i lanci aggregati dei jet per ricavare produzione o scorte.",
+        "fonti": [
+          {
+            "nome": "Militarnyi, stima GUR sulla produzione Geran-4/5",
+            "url": "https://militarnyi.com/en/news/russia-produces-around-3-000-geran-4-5-kamikaze-drones-per-month/",
+            "data": "2026-08-12"
+          },
+          {
+            "nome": "RBC-Ukraine, piano produttivo riferito da fonti militari anonime",
+            "url": "https://newsukraine.rbc.ua/news/russia-plans-to-produce-2-000-jet-powered-1788529865.html",
+            "data": "2026-09-04"
+          },
+          {
+            "nome": "Presidenza ucraina, discorso sui risultati del contrasto ai droni",
+            "url": "https://www.president.gov.ua/news/vzhe-viznacheni-perehoplyuvachi-yaki-mozhut-stati-osnovnim-z-106605",
+            "data": "2026-09-26"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E031",
+        "livello": "confermato",
+        "titolo": "A gennaio il Ministero della Difesa dichiarava consegne medie superiori a 1.500 droni anti-Shahed al giorno nel periodo dicembre–gennaio;",
+        "motivazione": "Il comunicato del 7 gennaio documenta la media dichiarata delle consegne nel periodo dicembre–gennaio. Il livello conferma la dichiarazione ufficiale, senza verifica indipendente dei quantitativi. La categoria anti-Shahed non misura i nuovi intercettori adatti ai jet né la loro disponibilità a settembre.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino, consegne di droni anti-Shahed",
+            "url": "https://mod.gov.ua/en/news/denys-shmyhal-military-units-receive-over-1-500-anti-shahed-drones-daily",
+            "data": "2026-01-07"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E032",
+        "livello": "confermato",
+        "titolo": "il 30 aprile annunciava un ordine di 8.000 Octopus.",
+        "motivazione": "Il comunicato documenta l’acquisto annunciato di 8.000 Octopus. L’ordine non equivale a consegna, disponibilità nel reparto o numero di intercetti; non dimostra che le unità ordinate siano idonee al Geran-5.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino, acquisto di 8.000 Octopus",
+            "url": "https://mod.gov.ua/en/news/ministry-of-defence-procures-8-000-octopus-interceptors-for-the-defence-forces-of-ukraine",
+            "data": "2026-04-30"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E033",
+        "livello": "non-verificato",
+        "titolo": "Disponibilità diffusa e sostenibilità dei nuovi intercettori contro Geran-5: non misurate",
+        "motivazione": "Mancano nel corpus volumi consegnati, distribuzione ai reparti, prontezza, consumi e costi per neutralizzazione dei nuovi mezzi contro Geran-5. Gli acquisti e le consegne di programmi precedenti non colmano questa lacuna; i successi selezionati non misurano copertura ordinaria o ricostituzione.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino, consegne di droni anti-Shahed",
+            "url": "https://mod.gov.ua/en/news/denys-shmyhal-military-units-receive-over-1-500-anti-shahed-drones-daily",
+            "data": "2026-01-07"
+          },
+          {
+            "nome": "Ministero della Difesa ucraino, acquisto di 8.000 Octopus",
+            "url": "https://mod.gov.ua/en/news/ministry-of-defence-procures-8-000-octopus-interceptors-for-the-defence-forces-of-ukraine",
+            "data": "2026-04-30"
+          },
+          {
+            "nome": "Ministero della Difesa ucraino, ammissione di Alexa Spatium",
+            "url": "https://mod.gov.ua/en/news/defence-forces-arsenal-expands-with-the-addition-of-ukraines-first-jet-powered-drone-interceptor-alexa-spatium",
+            "data": "2026-08-21"
+          },
+          {
+            "nome": "Presidenza ucraina, discorso sui risultati del contrasto ai droni",
+            "url": "https://www.president.gov.ua/news/vzhe-viznacheni-perehoplyuvachi-yaki-mozhut-stati-osnovnim-z-106605",
+            "data": "2026-09-26"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E034",
+        "livello": "plausibile",
+        "titolo": "Una produzione elevata di intercettori precedenti diventa un vantaggio contro il Geran-5 nella misura in cui l’apparato riesce a convertirsi al nuovo compito.",
+        "motivazione": "È un’inferenza condizionata: l’esperienza produttiva può favorire l’adattamento, ma servono componenti, collaudi, operatori e integrazione appropriati. Le dichiarazioni disponibili non misurano la velocità di conversione né autorizzano a trasferire automaticamente ai nuovi intercettori quantità o prezzi dei precedenti.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino, consegne di droni anti-Shahed",
+            "url": "https://mod.gov.ua/en/news/denys-shmyhal-military-units-receive-over-1-500-anti-shahed-drones-daily",
+            "data": "2026-01-07"
+          },
+          {
+            "nome": "Ministero della Difesa ucraino, acquisto di 8.000 Octopus",
+            "url": "https://mod.gov.ua/en/news/ministry-of-defence-procures-8-000-octopus-interceptors-for-the-defence-forces-of-ukraine",
+            "data": "2026-04-30"
+          },
+          {
+            "nome": "Ministero della Difesa ucraino, ammissione di Alexa Spatium",
+            "url": "https://mod.gov.ua/en/news/defence-forces-arsenal-expands-with-the-addition-of-ukraines-first-jet-powered-drone-interceptor-alexa-spatium",
+            "data": "2026-08-21"
+          },
+          {
+            "nome": "Presidenza ucraina, discorso sui risultati del contrasto ai droni",
+            "url": "https://www.president.gov.ua/news/vzhe-viznacheni-perehoplyuvachi-yaki-mozhut-stati-osnovnim-z-106605",
+            "data": "2026-09-26"
+          },
+          {
+            "nome": "Jack Watling / RUSI, Octopus Adds an Additional Layer to Ukraine’s Air Defences",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/octopus-adds-additional-layer-ukraines-air-defences",
+            "data": "2025-11-27"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E035",
+        "livello": "plausibile",
+        "titolo": "Durante l’adattamento, la difesa potrebbe consumare riserve, rinviare altri impieghi o subire danni la cui riparazione richiede più tempo del recupero tecnico. È un meccanismo plausibile, ancora privo di una misura specifica per il Geran-5.",
+        "motivazione": "RUSI documenta vincoli di munizioni, ricostituzione e adattamento difensivo; l’articolo ne ricava il possibile costo del ritardo. Non sono ricostruiti consumi, danni o tempi di riparazione attribuibili al Geran-5. Il meccanismo generale non prova un effetto durevole già prodotto dal modello.",
+        "fonti": [
+          {
+            "nome": "Justin Bronk / RUSI, Four Years On: An Update on the Air War Over Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/four-years-update-air-war-over-ukraine",
+            "data": "2026-07-28"
+          },
+          {
+            "nome": "Jack Watling / RUSI, Octopus Adds an Additional Layer to Ukraine’s Air Defences",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/octopus-adds-additional-layer-ukraines-air-defences",
+            "data": "2025-11-27"
+          },
+          {
+            "nome": "Presidenza ucraina, discorso sui risultati del contrasto ai droni",
+            "url": "https://www.president.gov.ua/news/vzhe-viznacheni-perehoplyuvachi-yaki-mozhut-stati-osnovnim-z-106605",
+            "data": "2026-09-26"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E036",
+        "livello": "confermato",
+        "titolo": "Nel comunicato di gennaio il GUR segnalava lo studio di una configurazione Geran-5 con missili aria-aria R-73 e di modalità di lancio da Su-25.",
+        "motivazione": "Il comunicato dell’11 gennaio menziona lo studio delle due opzioni. È confermata la dichiarazione di sviluppo, non una capacità operativa: non sono documentate qui integrazioni completate, missioni aria-aria o lanci effettivi da Su-25.",
+        "fonti": [
+          {
+            "nome": "GUR, comunicato sul Geran-5 riprodotto da ArmyInform",
+            "url": "https://armyinform.com.ua/2026/01/11/vorog-vpershe-zastosuvav-bpla-geran-5-u-gur-rozpovily-pro-novu-rozrobku/",
+            "data": "2026-01-11"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E037",
+        "livello": "non-verificato",
+        "titolo": "Geran-5 con R-73 e lancio da Su-25: operatività non accertata",
+        "motivazione": "L’operatività del Geran-5 con R-73 o lancio da Su-25 resta non verificata nel quadro esaminato. La segnalazione di uno studio non dimostra integrazione riuscita, consegna o impiego; le modifiche documentate su altri Geran non possono essere trasferite al Geran-5.",
+        "fonti": [
+          {
+            "nome": "GUR, comunicato sul Geran-5 riprodotto da ArmyInform",
+            "url": "https://armyinform.com.ua/2026/01/11/vorog-vpershe-zastosuvav-bpla-geran-5-u-gur-rozpovily-pro-novu-rozrobku/",
+            "data": "2026-01-11"
+          },
+          {
+            "nome": "GUR, Geran-2 con missile R-60",
+            "url": "https://gur.gov.ua/content/warsanctions-hur-rozkryvaie-detali-novoi-modyfikatsii-rosiiskoi-erani-z-aviatsiinoiu-raketoiu-r60.html",
+            "data": "2025-12-15"
+          },
+          {
+            "nome": "GUR, Geran con Verba e testata",
+            "url": "https://gur.gov.ua/content/warsanctions-nova-modyfikatsiia-yerani-odnochasno-nese-na-bortu-pzrk-ta-boiovu-chastynu.html",
+            "data": "2026-01-12"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E038",
+        "livello": "plausibile",
+        "titolo": "Altri Geran hanno già presentato integrazioni materiali di armamento antiaereo o apparati di comunicazione differenti.",
+        "motivazione": "Le identificazioni GUR di R-60 e Verba e il resoconto Schemes sugli apparati Geran-4 sostengono il precedente materiale. Le verifiche sono quelle ereditate dal dossier; il livello conserva questa limitazione. I precedenti riguardano altri modelli e non provano capacità aria-aria o di rete operative del Geran-5.",
+        "fonti": [
+          {
+            "nome": "GUR, Geran-2 con missile R-60",
+            "url": "https://gur.gov.ua/content/warsanctions-hur-rozkryvaie-detali-novoi-modyfikatsii-rosiiskoi-erani-z-aviatsiinoiu-raketoiu-r60.html",
+            "data": "2025-12-15"
+          },
+          {
+            "nome": "GUR, Geran con Verba e testata",
+            "url": "https://gur.gov.ua/content/warsanctions-nova-modyfikatsiia-yerani-odnochasno-nese-na-bortu-pzrk-ta-boiovu-chastynu.html",
+            "data": "2026-01-12"
+          },
+          {
+            "nome": "Schemes / Radio Svoboda, apparati del Geran-4",
+            "url": "https://www.radiosvoboda.org/amp/news-skhemy-reaktyvnyy-bpla-heran-spetsreportazh/33858889.html",
+            "data": "2026-09-19"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E039",
+        "livello": "confermato",
+        "titolo": "Il 5 ottobre Ihnat ha dichiarato abbattimenti di Geran-5 mediante torrette robotizzate.",
+        "motivazione": "Confermato come dichiarazione ufficiale ripresa da ArmyInform e Interfax, non come verifica indipendente degli abbattimenti. Il resoconto non identifica modello della torretta, date e luoghi dei singoli ingaggi o un conteggio verificabile. Il 5 ottobre è la data dell’annuncio. Nella ricerca chiusa al 6 ottobre 2026 non è stato reperito materiale operativo che colleghi univocamente ciascun bersaglio Geran-5 a una specifica postazione.",
+        "fonti": [
+          {
+            "nome": "ArmyInform, dichiarazione di Yurii Ihnat sugli abbattimenti di Geran-5",
+            "url": "https://armyinform.com.ua/2026/10/05/urazhayut-navit-reaktyvni-bpla-tureli-z-mashynnym-zorom-vzhe-znyshhuyut-rosijski-geran-5/",
+            "data": "2026-10-05"
+          },
+          {
+            "nome": "Interfax-Ukraine, dichiarazione di Ihnat al telemaratona",
+            "url": "https://en.interfax.com.ua/news/general/1214481.html",
+            "data": "2026-10-05"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E040",
+        "livello": "confermato",
+        "titolo": "UNITED24 Media riporta l’identificazione delle postazioni di Kyiv come Sky Sentinel e successi contro droni a reazione.",
+        "motivazione": "L’identificazione proviene da un commento attribuito direttamente a Ihnat, distinto dall’annuncio generico sui Geran-5. Il precedente resoconto di Business Insider indicava il sistema come non divulgato: la successiva attribuzione esplicita aggiorna quel quadro. Conferma documentale del nome e della dichiarazione sui jet; non attribuisce individualmente ogni abbattimento di Geran-5 a Sky Sentinel né ne stabilisce il luogo. Carmine Sky non è identificata come operatore di questi ingaggi.",
+        "fonti": [
+          {
+            "nome": "UNITED24 Media, commento diretto di Ihnat sull’identificazione di Sky Sentinel",
+            "url": "https://united24media.com/war-in-ukraine/meet-kyivs-new-jet-drone-killer-12-sky-sentinel-turrets-are-already-on-the-hunt-23126",
+            "data": "2026-10-05"
+          },
+          {
+            "nome": "Business Insider, resoconto iniziale del 5 ottobre con sistema ancora non identificato",
+            "url": "https://www.businessinsider.com/ukraine-robotic-gun-turrets-got-first-kill-fastest-russian-drones-2026-10",
+            "data": "2026-10-05"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E041",
+        "livello": "confermato",
+        "titolo": "M2 Browning, automazione del tracciamento e del calcolo; consenso umano al fuoco documentato presso Carmine Sky.",
+        "motivazione": "Confermato come configurazione documentata e descrizione pubblica delle funzioni. Ukrinform identifica Sky Sentinel, M2 Browning e consenso dell’operatore presso Carmine Sky. UNITED24 descrive acquisizione assistita da dati radar, inseguimento e calcolo automatici; la presentazione promozionale e il reportage del 2025 descrivono anche il fuoco come autonomo. La divergenza non è risolta: modalità tecnicamente disponibili e procedure effettivamente adottate possono differire. Non si generalizza il ruolo dell’operatore a tutte le postazioni. Carmine Sky è qui l’utilizzatore documentato, non automaticamente il produttore.",
+        "fonti": [
+          {
+            "nome": "Ukrinform / Viacheslav Madiievskyi via Getty Images, Sky Sentinel presso Carmine Sky",
+            "url": "https://www.gettyimages.ae/detail/news-photo/an-automatic-turret-equipped-with-a-machine-gun-is-on-top-news-photo/2270924425",
+            "data": "2026-04-10"
+          },
+          {
+            "nome": "UNITED24, presentazione ufficiale Sky Sentinel",
+            "url": "https://u24.gov.ua/sky-sentinel"
+          },
+          {
+            "nome": "UNITED24 Media, reportage e interviste agli sviluppatori di Sky Sentinel",
+            "url": "https://united24media.com/war-in-ukraine/ai-powered-turret-that-hunts-russian-drones-meet-sky-sentinel-ukraines-new-air-defense-8589",
+            "data": "2025-05-26"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E042",
+        "livello": "plausibile",
+        "titolo": "Un effettore convenzionale con automazione avanzata può recuperare risposte sostenibili contro bersagli più rapidi.",
+        "motivazione": "Inferenza dall’architettura descritta: munizionamento convenzionale e funzioni automatiche possono alleggerire puntamento e inseguimento manuali. Mancano dati sufficienti su consumi per abbattimento, personale necessario, manutenzione e costo complessivo della copertura. La potenziale ricostituibilità riguarda munizioni, effettore e postazione su piani distinti; non si assume un vantaggio economico già misurato, né si propongono rapporti numerici di costo.",
+        "fonti": [
+          {
+            "nome": "UNITED24 Media, reportage e interviste agli sviluppatori di Sky Sentinel",
+            "url": "https://united24media.com/war-in-ukraine/ai-powered-turret-that-hunts-russian-drones-meet-sky-sentinel-ukraines-new-air-defense-8589",
+            "data": "2025-05-26"
+          },
+          {
+            "nome": "Ukrinform / Viacheslav Madiievskyi via Getty Images, Sky Sentinel presso Carmine Sky",
+            "url": "https://www.gettyimages.ae/detail/news-photo/an-automatic-turret-equipped-with-a-machine-gun-is-on-top-news-photo/2270924425",
+            "data": "2026-04-10"
+          },
+          {
+            "nome": "UNITED24, presentazione ufficiale Sky Sentinel",
+            "url": "https://u24.gov.ua/sky-sentinel"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E043",
+        "livello": "confermato",
+        "titolo": "Zelensky ha annunciato oltre dodici torrette installate a Kyiv e altre otto previste nella regione.",
+        "motivazione": "Confermato come annuncio del 4 ottobre, riportato con citazione diretta. Installazione dichiarata e ampliamento previsto sono distinti; il dato non certifica prontezza continua, copertura cittadina o distribuzione nazionale. ArmyInform e UNITED24 riportano anche dodici unità: si conserva «oltre dodici» attribuendolo alla formulazione presidenziale, senza sommare conteggi potenzialmente sovrapposti.",
+        "fonti": [
+          {
+            "nome": "UNITED24 Media, dichiarazioni di Zelensky del 4 ottobre sulla distribuzione delle torrette",
+            "url": "https://united24media.com/war-in-ukraine/kyiv-rolls-out-12-50-cal-turrets-to-hunt-russias-jet-powered-drones-23095",
+            "data": "2026-10-04"
+          },
+          {
+            "nome": "ArmyInform, dichiarazione di Yurii Ihnat sugli abbattimenti di Geran-5",
+            "url": "https://armyinform.com.ua/2026/10/05/urazhayut-navit-reaktyvni-bpla-tureli-z-mashynnym-zorom-vzhe-znyshhuyut-rosijski-geran-5/",
+            "data": "2026-10-05"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E044",
+        "livello": "plausibile",
+        "titolo": "Il recupero dello spazio difensivo dipende dalla copertura delle postazioni e dalla possibilità di mantenerle operative.",
+        "motivazione": "Ihnat dichiara il raggio limitato delle mitragliatrici; la documentazione Sky Sentinel richiede dati radar e continuità del tracciamento ottico. È analitica la conseguenza: quota, traiettoria e distribuzione condizionano l’utilità del mezzo, mentre munizioni e manutenzione ne condizionano la ripetibilità. Il reportage del 2025 segnala componenti importati per puntamento e telemetria, senza offrire una distinta aggiornata. L’incidenza sul mix difensivo e la scalabilità restano non verificate; nessun raggio numerico o tasso d’intercetto è assunto.",
+        "fonti": [
+          {
+            "nome": "ArmyInform, dichiarazione di Yurii Ihnat sugli abbattimenti di Geran-5",
+            "url": "https://armyinform.com.ua/2026/10/05/urazhayut-navit-reaktyvni-bpla-tureli-z-mashynnym-zorom-vzhe-znyshhuyut-rosijski-geran-5/",
+            "data": "2026-10-05"
+          },
+          {
+            "nome": "UNITED24, presentazione ufficiale Sky Sentinel",
+            "url": "https://u24.gov.ua/sky-sentinel"
+          },
+          {
+            "nome": "UNITED24 Media, reportage e interviste agli sviluppatori di Sky Sentinel",
+            "url": "https://united24media.com/war-in-ukraine/ai-powered-turret-that-hunts-russian-drones-meet-sky-sentinel-ukraines-new-air-defense-8589",
+            "data": "2025-05-26"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E045",
+        "livello": "plausibile",
+        "titolo": "La postazione statica con M2 può alleggerire parte del sostegno materiale rispetto a un Gepard.",
+        "motivazione": "Inferenza dal confronto delle architetture documentate. Una postazione statica elimina il sostegno della piattaforma cingolata integrata e della sua motorizzazione, ma richiede trasporto, alimentazione, attuatori, ottiche e manutenzione. Il Gepard integra due cannoni, radar di ricerca e inseguimento, mobilità e protezione. Non sono disponibili confronti pubblici omogenei di ore di manutenzione, personale o disponibilità; il vantaggio non è quantificato e non implica equivalenza di prestazioni.",
+        "fonti": [
+          {
+            "nome": "Ukrinform via Getty Images, Sky Sentinel con M2 Browning presso Carmine Sky",
+            "url": "https://www.gettyimages.ae/detail/news-photo/an-automatic-turret-equipped-with-a-machine-gun-is-on-top-news-photo/2270924425",
+            "data": "2026-04-10"
+          },
+          {
+            "nome": "Bundeswehr, architettura e funzioni del Gepard",
+            "url": "https://www.bundeswehr.de/de/meldungen/flugabwehrkanonenpanzer-gepard-5400072"
+          },
+          {
+            "nome": "UNITED24 Media, reportage e interviste agli sviluppatori: ottiche, meccanica e componenti importati",
+            "url": "https://united24media.com/war-in-ukraine/ai-powered-turret-that-hunts-russian-drones-meet-sky-sentinel-ukraines-new-air-defense-8589",
+            "data": "2025-05-26"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E046",
+        "livello": "confermato",
+        "titolo": "Il 12,7×99 mm NATO della Browning M2 è offerto da più produttori internazionali.",
+        "motivazione": "FN Herstal, Nammo e CBC documentano un’offerta plurale; FN e Nammo indicano l’impiego o la qualificazione sulle M2. Il calibro è comunemente designato .50 BMG. Il riscontro non determina scorte ucraine, capacità libera, tempi di consegna o idoneità di ogni caricamento all’ingaggio antidrone. Non sono state identificate le cartucce e le combinazioni di nastri dei singoli Sky Sentinel.",
+        "fonti": [
+          {
+            "nome": "FN Herstal, munizioni 12,7×99 mm NATO e impiego sulle M2",
+            "url": "https://fnherstal.com/en/defence/ammunition/127x99mm/"
+          },
+          {
+            "nome": "Nammo, 12,7×99 mm e qualificazione sulle Browning M2",
+            "url": "https://www.nammo.com/products/ammunition/small-caliber-ammunition/12-7mm-50-cal-series/12-7mm-x-99-multipurpose-50-cal/"
+          },
+          {
+            "nome": "CBC Defense, produzione di munizioni di piccolo calibro",
+            "url": "https://cbcdefense.com/small-caliber/"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E047",
+        "livello": "confermato",
+        "titolo": "L’approvvigionamento Gepard ha richiesto nuova produzione e adattamenti; nel 2026 Rheinmetall dichiara consegne cumulative di centinaia di migliaia di colpi.",
+        "motivazione": "Confermato come sequenza documentale del fornitore. Nel 2023 Rheinmetall descrisse scorte tedesche esaurite, ostacoli alle forniture estere e adattamento della munizione alla direzione del tiro. Il riepilogo 2026 segnala il recupero delle consegne senza certificare la sufficienza delle scorte. Nammo e Aerofina documentano altri fornitori del 35×228: il calibro non è un monopolio né esclusivo del Gepard.",
+        "fonti": [
+          {
+            "nome": "Rheinmetall, avvio delle consegne di nuove munizioni Gepard prodotte in Germania",
+            "url": "https://www.rheinmetall.com/en/media/news-watch/news/2023/9/2023-09-05-rheinmetall-supplies-35mm-gepard-ammunition-to-ukraine",
+            "data": "2023-09-05"
+          },
+          {
+            "nome": "Rheinmetall, riepilogo 2026 del sostegno all’Ucraina",
+            "url": "https://www.rheinmetall.com/en/media/stories/2026/rheinmetall-a-powerful-partner-at-ukraine-side"
+          },
+          {
+            "nome": "Nammo, famiglia di munizioni 35×228 mm",
+            "url": "https://www.nammo.com/products/ammunition/medium-caliber-ammunition/35-mm-series/"
+          },
+          {
+            "nome": "Aerofina, munizioni 35×228 mm destinate anche al Gepard",
+            "url": "https://aerofina.ro/en/military-ammunition-anti-aircraft-artillery-and-armored-vehicles/"
+          }
+        ]
+      },
+      {
+        "id": "STR3-E048",
+        "livello": "plausibile",
+        "titolo": "Una filiera diffusa può favorire la ricostituzione, ma il vantaggio deve essere valutato sulla copertura utile.",
+        "motivazione": "Inferenza qualitativa: la pluralità di offerta del 12,7×99 e la minore complessità della piattaforma statica possono agevolare rifornimento e sostegno. Manca un censimento comparabile delle capacità dei due calibri, quindi non si afferma una superiorità quantitativa della base produttiva. Sensori, collegamenti, energia e assistenza vanno conteggiati anche se esterni alla torretta. Non sono noti consumi per abbattimento, probabilità di colpo o fabbisogno di postazioni per una copertura equivalente. Il limite di portata e quota esclude una sostituibilità generale al Gepard.",
+        "fonti": [
+          {
+            "nome": "FN Herstal, munizioni 12,7×99 mm NATO e impiego sulle M2",
+            "url": "https://fnherstal.com/en/defence/ammunition/127x99mm/"
+          },
+          {
+            "nome": "Nammo, 12,7×99 mm e qualificazione sulle Browning M2",
+            "url": "https://www.nammo.com/products/ammunition/small-caliber-ammunition/12-7mm-50-cal-series/12-7mm-x-99-multipurpose-50-cal/"
+          },
+          {
+            "nome": "CBC Defense, produzione di munizioni di piccolo calibro",
+            "url": "https://cbcdefense.com/small-caliber/"
+          },
+          {
+            "nome": "UNITED24, presentazione Sky Sentinel e integrazione con i dati radar",
+            "url": "https://u24.gov.ua/sky-sentinel"
+          },
+          {
+            "nome": "UNITED24 Media, reportage e interviste agli sviluppatori: ottiche, meccanica e componenti importati",
+            "url": "https://united24media.com/war-in-ukraine/ai-powered-turret-that-hunts-russian-drones-meet-sky-sentinel-ukraines-new-air-defense-8589",
+            "data": "2025-05-26"
+          },
+          {
+            "nome": "ArmyInform, Ihnat sul raggio limitato delle torrette antidrone",
+            "url": "https://armyinform.com.ua/2026/10/05/urazhayut-navit-reaktyvni-bpla-tureli-z-mashynnym-zorom-vzhe-znyshhuyut-rosijski-geran-5/",
+            "data": "2026-10-05"
+          },
+          {
+            "nome": "Bundeswehr, architettura e funzioni del Gepard",
+            "url": "https://www.bundeswehr.de/de/meldungen/flugabwehrkanonenpanzer-gepard-5400072"
+          }
+        ]
+      }
     ]
   }
 }
