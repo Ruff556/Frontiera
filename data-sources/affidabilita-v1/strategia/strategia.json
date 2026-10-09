@@ -829,29 +829,6 @@
         ]
       },
       {
-        "id": "STR3-E035",
-        "livello": "plausibile",
-        "titolo": "Durante l’adattamento, la difesa potrebbe consumare riserve, rinviare altri impieghi o subire danni la cui riparazione richiede più tempo del recupero tecnico. È un meccanismo plausibile, ancora privo di una misura specifica per il Geran-5.",
-        "motivazione": "RUSI documenta vincoli di munizioni, ricostituzione e adattamento difensivo; l’articolo ne ricava il possibile costo del ritardo. Non sono ricostruiti consumi, danni o tempi di riparazione attribuibili al Geran-5. Il meccanismo generale non prova un effetto durevole già prodotto dal modello.",
-        "fonti": [
-          {
-            "nome": "Justin Bronk / RUSI, Four Years On: An Update on the Air War Over Ukraine",
-            "url": "https://www.rusi.org/explore-our-research/publications/commentary/four-years-update-air-war-over-ukraine",
-            "data": "2026-07-28"
-          },
-          {
-            "nome": "Jack Watling / RUSI, Octopus Adds an Additional Layer to Ukraine’s Air Defences",
-            "url": "https://www.rusi.org/explore-our-research/publications/commentary/octopus-adds-additional-layer-ukraines-air-defences",
-            "data": "2025-11-27"
-          },
-          {
-            "nome": "Presidenza ucraina, discorso sui risultati del contrasto ai droni",
-            "url": "https://www.president.gov.ua/news/vzhe-viznacheni-perehoplyuvachi-yaki-mozhut-stati-osnovnim-z-106605",
-            "data": "2026-09-26"
-          }
-        ]
-      },
-      {
         "id": "STR3-E036",
         "livello": "confermato",
         "titolo": "Nel comunicato di gennaio il GUR segnalava lo studio di una configurazione Geran-5 con missili aria-aria R-73 e di modalità di lancio da Su-25.",
