@@ -7,11 +7,14 @@ sommario: "Il Geran-5 tra innovazione, industria e risposta ucraina."
 domini: [aria, droni, industria]
 sistemi_citati: [Geran-5, Geran-4, Geran-2, Shahed-136, Alexa, Sting S, Octopus, Sky Sentinel, M2 Browning, Gepard, Patriot]
 immagine:
-  file: ""
-  alt: ""
-  credito: ""
-  licenza: ""
-  didascalia: ""
+  file: /immagini/strategia/str3-geran-relitto.jpg
+  alt: "Drone Geran-2 sul ghiaccio del bacino di Kyiv, febbraio 2026."
+  didascalia: "Un Geran-2 ritrovato sul bacino di Kyiv, febbraio 2026. Nelle salve composite, droni di questa famiglia affiancano i più recenti Geran-5."
+  credito: "Servizio statale ucraino per le emergenze (DSNS) / dsns.gov.ua"
+  fonte: "https://commons.wikimedia.org/wiki/File:Remains_of_Shahed_drone_in_Chernihiv_Oblast,_2026-02-19_(01).jpg"
+  licenza: "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/ — Adattamenti tecnici: ridimensionamento e ritaglio per impaginazione."
+  fit: cover
+  posizione: "50% 100%"
 immagini_inline:
   famiglia_geran:
     file: /immagini/strategia/famiglia-geran.png

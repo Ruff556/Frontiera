@@ -2687,6 +2687,7 @@ footer .license-note a:hover{color:#fff}
 .analisi-head-caption .analisi-caption-rights{
   font-family:'IBM Plex Mono',monospace;font-size:.58rem;letter-spacing:.03em;
   line-height:1.6;color:var(--on-dark-4);
+  overflow-wrap:anywhere;
 }
 .analisi-head-caption .analisi-caption-credit{display:inline}
 .analisi-head-caption .analisi-caption-rights b{font-weight:500;color:var(--on-dark-3)}
