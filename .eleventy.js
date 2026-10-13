@@ -268,6 +268,9 @@ module.exports = function (eleventyConfig) {
     return mdLib;
   });
 
+  eleventyConfig.addWatchTarget("src/_includes/modelli");
+  eleventyConfig.addWatchTarget("src/js/model-m1.js");
+
   // ---- Asset statici (passthrough) ----
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });
   eleventyConfig.addPassthroughCopy({ "src/js": "js" });

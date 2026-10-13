@@ -1,0 +1,163 @@
+# Model Reader — anteprima M1
+
+Il lettore è disponibile in sviluppo a `/anteprime/modelli/m1/` dopo `npm run serve`
+(porta predefinita Eleventy: 8080). Con la build statica e il server dei test:
+`npm run build`, poi `node tests/browser/static-server.cjs` e
+`http://127.0.0.1:4173/anteprime/modelli/m1/`.
+
+È un prototipo: `noindex: true`, `eleventyExcludeFromCollections: true`, nessun
+collegamento aggiunto a navigazione, home, archivi o feed. Non sono state modificate
+le sezioni pubbliche. La build genera l'anteprima per consentire deploy di prova;
+`noindex` non costituisce una protezione di accesso. La pubblicazione editoriale di
+M1 resta un'operazione successiva.
+
+## Anteprime visuali
+
+![Desktop, 1366×768](anteprime/desktop.png)
+
+![Mobile, panoramica](anteprime/mobile-panoramica.png)
+
+![Mobile, lettura e focus](anteprime/mobile-lettura.png)
+
+## Fonti e integrità
+
+`fonti-m1/` conserva i quattro allegati originali, esclusi dall'output insieme
+all'intera cartella `docs/`. Il Canone del 3 ottobre 2026, comprese le appendici,
+prevale sull'HTML. L'HTML fornito adotta già GC come inviluppo e gli estremi
+canonici: non sono state introdotte curve nuove. Le funzioni `arc`, `local`,
+`values`, `makePoints` sono estratte dalla sola visualizzazione M1. Non vengono
+caricati iframe, wrapper Ruby, messaggistica host, Floating UI o altri script
+esterni dell'allegato.
+
+`src/js/model-m1.js` è l'unica fonte geometrica, usata da Eleventy per gli SVG
+statici e dal browser per adattare il rendering. I valori originali sono mappati
+affinalmente nell'area di ciascun pannello; font, assi e comandi mantengono dimensioni
+leggibili in pixel CSS. Il focus modifica solo opacità/colore, mai i tracciati.
+Gli zeri distinti, gli inviluppi e i salti sono preservati; T2 non genera eventi.
+I colori sono derivati dalle famiglie petrolio, azzurro, ruggine e verdi del sito.
+
+`src/_includes/modelli/m1.md` conserva integralmente la prima stesura. L'H1 è
+reso nel layout; la formula e i suoi due simboli inline hanno markup HTML
+accessibile anziché delimitatori LaTeX non renderizzati. Nessuna frase è riscritta.
+Le occorrenze evidenziabili usano `data-term`, esplicito, senza sostituzioni globali.
+
+## Contratto per altri modelli
+
+- Un modulo `src/js/model-<id>.js` esporta `panels`, `defs`, `phases`,
+  `render(panel, width, height, event)`. Nel browser si registra in
+  `window.FrontieraModels[id]`; nel build usa CommonJS.
+- `defs` contiene `id`, `panel`, `symbol`, `name`, `description`. Il grafico usa
+  `data-series="id"`; le palette sono variabili CSS locali. I simboli possono
+  differire dagli identificativi interni (es. `KG` → KGᵤ).
+- Il contenuto Markdown usa `:::segment <indice-pannello> [id-variabile]`.
+  Ogni marcatore inizia un nuovo segmento; l'ultimo termina a fine documento.
+  Il renderer `src/_lib/modelli/content.js` valida i riferimenti e genera i soli
+  margini analitici dei segmenti di variabile. È Markdown di repository fidato.
+- Una pagina `.11ty.js` fornisce il modello al layout `layouts/modello.njk` e
+  passa la prosa al renderer. Il layout eredita la shell globale di Frontiera.
+- `model-reader.js` non conosce i nomi delle variabili né le geometrie M1.
+  I fogli/script sono caricati da `base.njk` solo in presenza del lettore.
+
+## Stati e comportamento
+
+Tre dimensioni indipendenti: `space` (panoramica/lettura/espanso), rappresentazione
+(`panel`, `focus`, `time`) e sincronizzazione (`syncPanel`, `syncFocus`). Il focus
+manuale è esclusivo; un secondo clic lo annulla. Una sola selezione aggiorna
+legenda, margine, tracciati e occorrenze marcate. Lo scroll desktop non la modifica.
+Il focus automatico mobile può essere scavalcato; “Allinea il focus al testo”
+ripristina il contesto. Le frecce e lo swipe nel selettore attivano la modalità
+libera; il nome del pannello ripristina quella sincronizzata. Queste azioni non
+spostano la prosa.
+
+Su mobile un solo contenitore scorre nativamente, anche dal fondo non interattivo
+del grafico. Non ci sono listener wheel/touch che impongono lo scroll, snap o
+catture verticali. Durante l'ingresso l'altezza del grafico deriva linearmente
+dall'offset; la prosa emerge dietro una maschera e un bordo fisso. Al confine dei
+capitoli il contenuto del grafico trasla lungo una zona proporzionale all'altezza
+di lettura, in entrambe le direzioni. Fermare il gesto ferma il passaggio. Le
+animazioni temporizzate sono riservate a espansione/contrazione manuale e selezione
+manuale dei pannelli; `prefers-reduced-motion` le elimina e rende discreto il
+cambio contestuale, preservando le funzioni.
+
+Durante la lettura compatta l'espansione modifica la geometria senza cambiare
+`scrollTop`, pannello o regime. Se l'esplorazione parte dalla panoramica iniziale,
+la linguetta completa l'ingresso nella lettura mostrando l'inizio dell'articolo.
+La linguetta riprende il testo allo stesso offset. Resize e orientamento conservano
+il contesto; i cambi fra layout ricollocano il segmento in lettura. Il layout
+senza JavaScript è un flusso ordinario con tre SVG e tutta la prosa.
+
+## Misura del layout
+
+La scelta non usa un breakpoint di dispositivo. Un duplicato inerte, fuori
+schermo e nascosto alle tecnologie assistive, misura la stessa colonna grafica
+nelle sue dimensioni desktop minime, senza duplicare ID o stato interattivo.
+
+- **X**: altezza intrinseca effettiva della colonna completa, inclusi pannelli,
+  controlli temporali, descrizione e note. Alla dimensione standard del testo:
+  circa **583 px** su desktop (565 px con le regole compatte sotto 600 px).
+- **Y**: header globale misurato + testata del modello + margini: circa
+  **149 px a 1024×768**, **158 px a 1366×768**.
+- Desktop quando l'altezza disponibile supera X di almeno 2 px e la larghezza
+  consente due colonne (56 rem complessivi, almeno 26 rem per colonna).
+- I tre grafici hanno minimi rispettivamente 5, 6 e 6,5 rem, verificati sui
+  viewport di prova; lo spazio supplementare viene distribuito fra i pannelli.
+  La descrizione ha altezza stabile per evitare oscillazioni con la selezione.
+- Misura tramite ResizeObserver, font caricati, resize e `visualViewport`.
+  Lo scroll usa coordinate dei segmenti memorizzate e aggiornamenti con rAF.
+
+1024×768 e 1366×768 usano desktop; 1000×660 e 768×1024 usano mobile.
+Con testo al 150%, 1024×768 passa correttamente a mobile. Gli SVG sono più densi
+nella panoramica 320×568: espansione e selezione consentono la lettura individuale.
+Con zoom estremo o viewport molto basso, la panoramica diventa scorrevole al
+proprio interno: i tracciati mantengono un minimo leggibile anziché appiattirsi.
+Le frecce consentono comunque di consultare un pannello per volta.
+
+## Verifiche
+
+- `npm run verify:model-m1`: 8.008 confronti con le equazioni dell'allegato
+  originale, monotonia, estremi, zeri, salti e inviluppi; confronto della prosa
+  dopo rimozione dei soli adattamenti strutturali dichiarati. Il controllo è
+  incluso in `npm run build`.
+- `npx playwright test tests/browser/model-reader.spec.js`: 20 casi per i nove
+  viewport richiesti, focus desktop/mobile, neutralità, assenza di scroll imposto,
+  contrazione nativa, passaggi reversibili, espansione animata, swipe touch emulato,
+  tastiera, menu globale, orientamento, testo ingrandito, viewport equivalente a
+  zoom 200%, variazioni di altezza e movimento ridotto, assenza di JavaScript e
+  isolamento dall'indicizzazione.
+- `npm run build` e `npm run test:browser`: controlli e regressioni del sito.
+- Screenshot prodotti dai test in `reports/modelli/` (cartella non versionata).
+  La revisione visuale comprende panoramiche, focus, espansione e mezzo passaggio.
+
+Nell'ambiente cloud il download del Chromium Playwright è vietato dalla policy di
+rete. È stato usato il Chromium già installato, con l'opzione facoltativa:
+`PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:browser`.
+Senza questa variabile il repository mantiene il comportamento Playwright normale.
+
+## Decisioni ancora editoriali e verifica su hardware
+
+La prosa è ancora la prima stesura: titoli, descrizioni sintetiche delle variabili,
+accostamenti cromatici e densità della panoramica piccola restano da approvare
+editorialmente. La metrica d, le unità e le misure operative restano non canonizzate;
+nessuna viene inventata dal lettore. Lo stress-test è un riferimento sui limiti del
+modello, non un nuovo contenuto aggiunto all'articolo.
+
+Le prove smartphone sono emulazioni Chromium, non attestano prestazioni su
+hardware di fascia media o compatibilità Safari iOS. Servono prove fisiche su
+questi dispositivi prima della pubblicazione definitiva. Non è stato eseguito
+alcun deploy pubblico né modificato `main`.
+
+## Esito della sessione del 13 ottobre 2026
+
+- Build completa: **PASS**, inclusi SEO, output, prestazioni, SVG, apparati e
+  controllo canonico M1.
+- Suite finale M1: **20/20 PASS**, Chromium 151.0.7922.173.
+- Suite completa eseguita prima dell'ultimo caso aggiunto: **123/124 PASS**.
+  Il solo fallimento è il test preesistente
+  `technical-recon.spec.js:72`, «End/Home aggiornano lo stato e il dialog restituisce
+  il focus»: dopo `Control+Home`, `scrollY` resta 18512 anziché 0.
+- Lo stesso test è stato ripetuto sia sulla branch sia in un checkout separato di
+  `main` a `6c27997`, con build e server autonomi: **medesimo fallimento**.
+  L'HTML di `/fasi/manovra-fallita/` coincide con quello di main, al netto degli
+  spazi fra tag. Il problema non è introdotto dal lettore; non è stato modificato
+  il comportamento globale dell'infobox per aggirare il test.
+- `git diff --check`: **PASS**. Nessun deploy o merge eseguito.

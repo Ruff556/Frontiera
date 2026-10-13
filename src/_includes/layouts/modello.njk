@@ -1,0 +1,50 @@
+---
+layout: layouts/base.njk
+---
+<div class="model-reader" data-model-reader="{{ model.id }}">
+  <header class="mr-heading">
+    <div><span class="mr-kicker">M | Modelli <span>· Anteprima</span></span><h1>{{ model.code }} <span aria-hidden="true">—</span> {{ model.title }}</h1></div>
+    <span class="mr-edition">Prima stesura · Canone 03.10.2026</span>
+  </header>
+  <div class="mr-workspace">
+    <aside class="mr-graph mr-cell" aria-label="Rappresentazione del modello">
+      <div class="mr-tools">
+        <div class="mr-selector" data-panel-selector>
+          <button type="button" data-panel-step="-1" aria-label="Pannello precedente">‹</button>
+          <button type="button" class="mr-sync" data-panel-sync aria-pressed="true" title="Ripristina la sincronizzazione con il testo"><span data-panel-name>{{ model.panels[0].name }}</span><small data-sync-label>Segue il testo</small></button>
+          <button type="button" data-panel-step="1" aria-label="Pannello successivo">›</button>
+        </div>
+        <button type="button" data-expand aria-expanded="false" aria-label="Espandi la rappresentazione">⤢</button>
+      </div>
+      <div class="mr-plots-window">
+        <div class="mr-plots">
+          {% for panel in model.panels %}
+          <section class="mr-panel" data-model-panel="{{ panel.index }}" aria-label="{{ panel.name }}">
+            <header><h2>{{ panel.name }}</h2><div class="mr-legend" aria-label="Focus variabili: {{ panel.name }}">
+              {% for variable in panel.defs %}<button type="button" class="mr-variable" data-focus="{{ variable.id }}" aria-pressed="false" aria-label="{{ variable.symbol }} · {{ variable.name }}">{{ variable.symbol }}</button>{% endfor %}
+            </div></header>
+            <svg class="mr-chart" viewBox="0 0 560 150" role="img" aria-label="{{ panel.description }}">{{ panel.svg | safe }}</svg>
+          </section>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="mr-context-tools"><button type="button" data-focus-sync hidden>Allinea il focus al testo</button></div>
+      <div class="mr-events" aria-label="Riferimenti temporali">
+        {% for phase in model.phases %}<button type="button" data-model-event="{{ loop.index0 }}" aria-pressed="{{ 'true' if loop.index0 == 3 else 'false' }}" title="{{ phase }}">T{{ loop.index0 }}</button>{% endfor %}
+      </div>
+      <p class="mr-phase" data-phase aria-live="polite">{{ model.phases[3] }}</p>
+      <div class="mr-description" aria-live="polite"><strong data-description-title>Nessuna variabile in focus</strong><p data-description>Seleziona una sigla nel grafico o nel testo per seguirne il significato.</p></div>
+      <p class="mr-caption">Geometrie concettuali · Scale distinte ·<br> Fasce di possibilità, non probabilità</p>
+    </aside>
+    <div class="mr-reading-frame mr-cell" aria-hidden="true"></div>
+    <div class="mr-reading" tabindex="0" role="region" aria-label="Testo del modello: scorri per leggere">
+      <article class="mr-paper" aria-label="Prima stesura di M1">
+        <p class="mr-draft-note">Anteprima di lavoro · Testo provvisorio</p>
+        {{ content | safe }}
+        <p class="mr-end">Fine della prima stesura · M1</p>
+      </article>
+    </div>
+    <button type="button" class="mr-reading-tab" data-resume>Leggi il modello <span aria-hidden="true">↓</span></button>
+  </div>
+  <noscript><p class="mr-noscript">La rappresentazione statica e il testo completo sono disponibili. Attiva JavaScript per sincronizzare pannelli e variabili.</p></noscript>
+</div>
