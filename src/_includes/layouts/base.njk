@@ -87,7 +87,7 @@
 
 {% if usesAffidabilitaV1 %}{% include "partials/affidabilita-v1-panel.njk" %}{% endif %}
 
-{% if not minimalShell %}
+{% if not minimalShell and not usesModelReader %}
 <footer>
   <div class="inner">
     <div class="foot-brand">

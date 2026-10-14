@@ -19,6 +19,8 @@ M1 resta un'operazione successiva.
 
 ![Mobile, lettura e focus](anteprime/mobile-lettura.png)
 
+![Mobile, panoramica espansa e linguetta](anteprime/mobile-espansa.png)
+
 ## Fonti e integrità
 
 `fonti-m1/` conserva i quattro allegati originali, esclusi dall'output insieme
@@ -60,14 +62,26 @@ Le occorrenze evidenziabili usano `data-term`, esplicito, senza sostituzioni glo
 
 ## Stati e comportamento
 
-Tre dimensioni indipendenti: `space` (panoramica/lettura/espanso), rappresentazione
-(`panel`, `focus`, `time`) e sincronizzazione (`syncPanel`, `syncFocus`). Il focus
-manuale è esclusivo; un secondo clic lo annulla. Una sola selezione aggiorna
-legenda, margine, tracciati e occorrenze marcate. Lo scroll desktop non la modifica.
-Il focus automatico mobile può essere scavalcato; “Allinea il focus al testo”
-ripristina il contesto. Le frecce e lo swipe nel selettore attivano la modalità
-libera; il nome del pannello ripristina quella sincronizzata. Queste azioni non
-spostano la prosa.
+Lo stato spaziale `space` (panoramica/lettura/espanso) e il riferimento temporale
+`time` sono indipendenti dalla modalità mobile `mode`. Un solo resolver determina
+insieme pannello e focus:
+
+| Modalità | Pannello | Focus |
+| --- | --- | --- |
+| `auto` | Segue il testo, con passaggio continuo e reversibile | Variabile contestuale o neutro |
+| `focus` | Quello della variabile scelta, anche scorrendo altri capitoli | Manuale persistente |
+| `free` | Quello scelto con frecce o swipe | Nessuno |
+
+Il primo tap su una variabile automatica la fissa manualmente. Il secondo tap
+sulla stessa selezione manuale ripristina AUTO. Frecce e swipe cancellano il focus
+precedente: prevale l'ultima scelta. “Allinea il focus al testo” è disponibile in
+entrambe le modalità manuali e richiama la stessa operazione del selettore del
+pannello: azzera gli override e ricalcola il contesto, senza spostare la prosa,
+cambiare l'espansione o il tempo selezionato.
+
+Su desktop il focus resta esclusivamente manuale: un secondo clic lo annulla,
+un'altra scelta lo trasferisce; lo scroll non lo modifica. Legenda, margine,
+tracciati e occorrenze marcate condividono la selezione.
 
 Su mobile un solo contenitore scorre nativamente, anche dal fondo non interattivo
 del grafico. Non ci sono listener wheel/touch che impongono lo scroll, snap o
@@ -79,10 +93,12 @@ animazioni temporizzate sono riservate a espansione/contrazione manuale e selezi
 manuale dei pannelli; `prefers-reduced-motion` le elimina e rende discreto il
 cambio contestuale, preservando le funzioni.
 
-Durante la lettura compatta l'espansione modifica la geometria senza cambiare
-`scrollTop`, pannello o regime. Se l'esplorazione parte dalla panoramica iniziale,
-la linguetta completa l'ingresso nella lettura mostrando l'inizio dell'articolo.
-La linguetta riprende il testo allo stesso offset. Resize e orientamento conservano
+L'espansione manuale mostra sempre i tre pannelli, senza cambiare `scrollTop`
+o modalità interattiva. La ripresa conserva l'offset esatto, anche durante un
+inserimento parziale, e ripristina il pannello del resolver. Dalla panoramica
+iniziale “Leggi il modello” completa l'ingresso nella lettura. La linguetta è alta
+2,75 rem più la safe area inferiore: la superficie raggiunge il bordo del viewport,
+mentre il contenuto del comando resta sopra l'area riservata al sistema. Resize e orientamento conservano
 il contesto; i cambi fra layout ricollocano il segmento in lettura. Il layout
 senza JavaScript è un flusso ordinario con tre SVG e tutta la prosa.
 
@@ -104,13 +120,20 @@ nelle sue dimensioni desktop minime, senza duplicare ID o stato interattivo.
   La descrizione ha altezza stabile per evitare oscillazioni con la selezione.
 - Misura tramite ResizeObserver, font caricati, resize e `visualViewport`.
   Lo scroll usa coordinate dei segmenti memorizzate e aggiornamenti con rAF.
+- Il workspace deriva da altezze intrinseche (header, testata, margini) e altezza
+  di `visualViewport`, mai dalla coordinata esterna del workspace.
+- Solo dopo un'inizializzazione riuscita, `html`, `body` e `main` sono contenuti
+  nel viewport; il lettore è fisso sotto l'header. Nessuna intercettazione touch
+  o wheel globale. Il footer è escluso dal solo layout Modelli. Senza JS, con
+  modulo assente o con un errore nel rendering iniziale, il testo resta nel
+  normale flusso del documento; nel caso di errore sono ripristinati gli SVG statici.
 
 1024×768 e 1366×768 usano desktop; 1000×660 e 768×1024 usano mobile.
 Con testo al 150%, 1024×768 passa correttamente a mobile. Gli SVG sono più densi
 nella panoramica 320×568: espansione e selezione consentono la lettura individuale.
 Con zoom estremo o viewport molto basso, la panoramica diventa scorrevole al
 proprio interno: i tracciati mantengono un minimo leggibile anziché appiattirsi.
-Le frecce consentono comunque di consultare un pannello per volta.
+Durante la lettura compatta, le frecce consentono di consultare un pannello per volta.
 
 ## Verifiche
 
@@ -124,6 +147,10 @@ Le frecce consentono comunque di consultare un pannello per volta.
   tastiera, menu globale, orientamento, testo ingrandito, viewport equivalente a
   zoom 200%, variazioni di altezza e movimento ridotto, assenza di JavaScript e
   isolamento dall'indicizzazione.
+- `npx playwright test tests/browser/model-reader-fixes.spec.js`: 18 casi aggiuntivi,
+  separati nei gruppi A e B. Comprendono i requisiti A1–A7/B1–B12, gesture touch
+  tramite CDP, wheel, navigazione effettiva dal menu, confini dello scroller,
+  offset parziale, safe area simulata, cambio viewport e fallimento del rendering.
 - `npm run build` e `npm run test:browser`: controlli e regressioni del sito.
 - Screenshot prodotti dai test in `reports/modelli/` (cartella non versionata).
   La revisione visuale comprende panoramiche, focus, espansione e mezzo passaggio.
@@ -161,3 +188,57 @@ alcun deploy pubblico né modificato `main`.
   spazi fra tag. Il problema non è introdotto dal lettore; non è stato modificato
   il comportamento globale dell'infobox per aggirare il test.
 - `git diff --check`: **PASS**. Nessun deploy o merge eseguito.
+
+
+## Correzioni del 14 ottobre 2026 — PR #9
+
+### A. Contenitori, panoramica e linguetta
+
+Il documento esterno restava scorrevole e la misura del workspace dipendeva da
+`getBoundingClientRect().top`: uno spostamento della pagina alterava anche la
+geometria successiva. Ora i contenitori esterni sono vincolati al viewport solo
+dopo il successo dell'inizializzazione. L'altezza si ricava da dimensioni
+intrinseche e viewport; lo scroll nativo resta interno. Il footer è escluso dalle
+pagine Modelli senza cambiare le altre pagine.
+
+L'espansione usava il valore di contrazione del pannello singolo: ora azzera la
+contrazione della rappresentazione, mostrando i tre pannelli nell'intera cella.
+La linguetta riserva 44 px alla dimensione standard, più la safe area, arriva al
+bordo inferiore e mantiene il gap fra le celle. Espansione e ripresa conservano
+anche gli offset anteriori alla completa contrazione iniziale.
+
+### B. Sincronizzazione e priorità
+
+I booleani indipendenti `syncPanel` e `syncFocus` consentivano un focus su un
+pannello nascosto e riallineamenti incompleti. La modalità unica `auto` / `focus`
+/ `free` e il resolver comune eliminano queste combinazioni. Entrambi i comandi
+di allineamento ripristinano tutto l'automatismo. Il tap distingue l'origine del
+focus; la navigazione manuale cancella selezioni precedenti. Il desktop conserva
+il focus esclusivamente manuale.
+
+Un ulteriore difetto emergeva nella sequenza swipe → tap sul nome del pannello:
+il listener di soppressione del clic restava in attesa quando il browser non
+emetteva un clic dopo lo swipe, consumando il tap successivo. La soppressione è
+ora limitata al gesto corrente; un nuovo pointerdown o un'attivazione da tastiera
+restano utilizzabili. Il test touch verifica anche il riallineamento immediato.
+
+### Verifica e limiti
+
+Build finale e controlli canonici: **PASS**. Suite M1 complessiva:
+**38/38 PASS** (20 casi precedenti e 18 nuove regressioni).
+Suite browser completa sul codice definitivo: **143/143 PASS**. `git diff --check`:
+**PASS**. Il test swipe → riallineamento fallisce ripristinando il vecchio gestore
+e passa con quello corretto.
+
+La prima esecuzione completa della sessione aveva dato **142/143 PASS** con il
+fallimento già osservato in `technical-recon.spec.js:72` (infobox, Control+Home),
+riprodotto nella sessione precedente anche sul main `6c27997`. Nell'esecuzione
+finale passa senza modifiche a quella pagina o ai suoi script: il comportamento
+va considerato intermittente nell'ambiente di prova, non corretto da questa PR.
+
+L'anteprima iniziale fornita
+(`825b2eed.frontiera.pages.dev`) non è raggiungibile dall'ambiente cloud: il proxy
+rifiuta la connessione con HTTP 403. Le verifiche sono sulla build locale del
+branch; non si deduce da esse una prova su Safari iOS o hardware fisico.
+
+PR mantenuta senza merge: <https://github.com/Ruff556/Frontiera/pull/9>.

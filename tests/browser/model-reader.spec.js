@@ -184,7 +184,7 @@ test('espansione animata cambia la geometria, mai la posizione della prosa',asyn
 test('esplorazione dalla panoramica: la linguetta porta all’inizio del testo',async({page})=>{
  await page.setViewportSize({width:390,height:844});await ready(page);
  const r=page.locator(ROOT);
- await r.locator('[data-panel-step="1"]').click();await expect(r).toHaveAttribute('data-space','expanded');
+ await r.locator('[data-panel-step="1"]').click();await expect(r).toHaveAttribute('data-space','overview');
  await r.locator('[data-resume]').click();await expect(r).toHaveAttribute('data-space','reading');
  await expect(r).toHaveAttribute('data-panel','1');await expect(r).toHaveAttribute('data-sync','free');
  await expect.poll(async()=>Math.round((await r.locator('.mr-graph').boundingBox()).height)).toBe(272);
