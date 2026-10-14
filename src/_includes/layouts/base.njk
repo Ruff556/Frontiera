@@ -1,6 +1,7 @@
 {# Mappatura strutturale degli asset: il layout figlio è già renderizzato in
    `content`, quindi ogni inclusione dipende dalla presenza reale del componente
    e non dall'URL o da controlli lato client. #}
+{% set usesModelReader = 'data-model-reader=' in content %}
 {% set usesCarousel = 'id="slides"' in content %}
 {% set usesTimeline = 'class="linea-fasi"' in content %}
 {% set usesSystemsCluster = 'data-sistemi-track' in content %}
@@ -35,6 +36,7 @@
 <link rel="preload" href="/fonts/spectral-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/archivo-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/frontiera.css">
+{% if usesModelReader %}<link rel="stylesheet" href="/css/model-reader.css">{% endif %}
 {% if usesStarlink %}<link rel="stylesheet" href="/css/schema-starlink.css">{% endif %}
 {% if usesPalantir %}<link rel="stylesheet" href="/css/schema-palantir.css">{% endif %}
 {% if usesDebt %}<link rel="stylesheet" href="/css/debito-integrazione.css">{% endif %}
@@ -85,7 +87,7 @@
 
 {% if usesAffidabilitaV1 %}{% include "partials/affidabilita-v1-panel.njk" %}{% endif %}
 
-{% if not minimalShell %}
+{% if not minimalShell and not usesModelReader %}
 <footer>
   <div class="inner">
     <div class="foot-brand">
@@ -118,5 +120,6 @@
 {% if usesInfobox %}<script src="/js/infobox-mobile.js" defer></script>{% endif %}
 {% if usesImageLightbox %}<script src="/js/image-lightbox.js" defer></script>{% endif %}
 {% if usesAffidabilitaV1 %}<script src="/js/affidabilita-v1.js" defer></script>{% endif %}
+{% if usesModelReader %}<script src="/js/model-{{ model.id }}.js" defer></script><script src="/js/model-reader.js" defer></script>{% endif %}
 </body>
 </html>
