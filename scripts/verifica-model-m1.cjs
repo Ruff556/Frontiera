@@ -57,8 +57,8 @@ for(let i=0;i<segments.length;i++) {
 for(const {id} of model.defs) {
   assert.ok(edited.includes(`data-term="${id}"`),`Richiamo alla variabile M1 mancante: ${id}`);
 }
-const equations=edited.match(/<div class="mr-equation"[^>]*>[\s\S]*?<\/div>/g)||[];
-assert.equal(equations.length,1,"Attesa una sola formula della divergenza");
-assert.ok(equations[0].includes('<span data-term="U">Δ<sub>U</sub>(t)</span>'),"Richiamo a ΔU mancante");
-assert.ok(equations[0].includes("d(R<sub>U</sub>(t), K<sub>C</sub>(t))"),"Formula della divergenza alterata");
+const editorialEquations=edited.match(/<div class="mr-equation"[^>]*>[\s\S]*?<\/div>/g)||[];
+assert.equal(editorialEquations.length,1,"Attesa una sola formula della divergenza");
+assert.ok(editorialEquations[0].includes('<span data-term="U">Δ<sub>U</sub>(t)</span>'),"Richiamo a ΔU mancante");
+assert.ok(editorialEquations[0].includes("d(R<sub>U</sub>(t), K<sub>C</sub>(t))"),"Formula della divergenza alterata");
 console.log("[model-m1] PASS: 8008 confronti geometrici, vincoli canonici e integrità strutturale dell’editoriale.");
