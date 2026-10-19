@@ -41,12 +41,24 @@ const reference={};vm.runInNewContext(`const times=${JSON.stringify(model.times)
 for (const def of model.defs) for(let i=0;i<=1000;i++) {
   assert.deepEqual([...reference.values(def.id,i/1000,p)],v(def.id,i/1000), `Original geometry changed: ${def.id} ${i}`);
 }
-// Removing only the declared structural markup must recover the supplied prose.
-const draft=fs.readFileSync("docs/modelli/fonti-m1/Frontiera-M1-Ritorno-alla-coerenza-Prima-stesura.md","utf8");
-let edited=fs.readFileSync("src/_includes/modelli/m1.md","utf8")
- .replace(/^:::segment .*\n/gm,"").replace(/<span data-term="[^"]+">(.*?)<\/span>/g,"$1")
- .replace(/<div class="mr-equation"[^>]*>.*?<\/div>/g,'\\[\n\\Delta_U(t)=d\\bigl(R_U(t),K_C(t)\\bigr).\n\\]')
- .replace(/R<sub>U<\/sub>/g,"$R_U$").replace(/K<sub>C<\/sub>/g,"$K_C$");
-const normalize=s=>s.replace(/^# M1 — Ritorno alla coerenza\n/,"").replace(/\s+/g," ").trim();
-assert.equal(normalize(edited),normalize(draft),"La prosa della prima stesura è cambiata");
-console.log("[model-m1] PASS: 8008 confronti con le geometrie originali, vincoli canonici e integrità della prosa.");
+// La prosa di M1 viene ora revisionata editorialmente: il confronto con la
+// prima stesura archiviata non è più un'invariante del modello.
+// Proteggiamo invece il contratto strutturale del lettore interattivo.
+const edited=fs.readFileSync("src/_includes/modelli/m1.md","utf8");
+const segments=[...edited.matchAll(/^:::segment ([012])(?: ([A-Z]+))?$/gm)];
+const actualOrder=segments.map(m=>m[2]?`${m[1]}:${m[2]}`:m[1]);
+const expectedOrder=["0","0","0:C","0:U","0","1","1:GC","1:KG","1:KL","1","2","2:SC","2:I","2:D","2"];
+assert.deepEqual(actualOrder,expectedOrder,"Sequenza dei segmenti M1 alterata");
+for(let i=0;i<segments.length;i++) {
+  const start=segments[i].index+segments[i][0].length;
+  const end=segments[i+1]?.index??edited.length;
+  assert.ok(edited.slice(start,end).trim(),`Segmento M1 vuoto: ${actualOrder[i]}`);
+}
+for(const {id} of model.defs) {
+  assert.ok(edited.includes(`data-term="${id}"`),`Richiamo alla variabile M1 mancante: ${id}`);
+}
+const equations=edited.match(/<div class="mr-equation"[^>]*>[\s\S]*?<\/div>/g)||[];
+assert.equal(equations.length,1,"Attesa una sola formula della divergenza");
+assert.ok(equations[0].includes('<span data-term="U">Δ<sub>U</sub>(t)</span>'),"Richiamo a ΔU mancante");
+assert.ok(equations[0].includes("d(R<sub>U</sub>(t), K<sub>C</sub>(t))"),"Formula della divergenza alterata");
+console.log("[model-m1] PASS: 8008 confronti geometrici, vincoli canonici e integrità strutturale dell’editoriale.");
