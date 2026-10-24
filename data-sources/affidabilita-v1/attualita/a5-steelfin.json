@@ -1,0 +1,394 @@
+{
+  "versione": 1,
+  "dataset": "a5-steelfin",
+  "ambiti": {
+    "contenuti/analisi/steelfin-lavoro-che-si-conserva.md": [
+      {
+        "id": "A5-E001",
+        "livello": "confermato",
+        "titolo": "L’annuncio Steelfin e l’impostazione della famiglia",
+        "motivazione": "Il comunicato del 12 ottobre 2026 documenta la presentazione di Steelfin e attribuisce ad Anduril la proposta di una famiglia configurabile attorno a una base condivisa. Il livello conferma l’annuncio e il suo contenuto dichiarato, non la qualificazione dell’intera famiglia o un vantaggio industriale già misurato. Il problema del cambiamento della domanda introduce il ragionamento dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Primaria aziendale · Anduril — Anduril Unveils the Steelfin Family of Surface-to-Air Interceptor Missiles",
+            "url": "https://www.anduril.com/news/steelfin",
+            "data": "2026-10-12"
+          }
+        ]
+      },
+      {
+        "id": "A5-E002",
+        "livello": "confermato",
+        "titolo": "MSE: consegne dichiarate e capacità futura",
+        "motivazione": "Nel briefing del 6 gennaio 2026 Lockheed Martin riferisce 620 consegne MSE nel 2025 e colloca il raggiungimento di circa 2.000 esemplari annui entro fine 2030. Descrive inoltre interventi su attrezzature, personale, automazione e fornitori. Il consuntivo è aziendale; il secondo dato è un obiettivo di capacità, non produzione già disponibile. Le due quantità non sono sommate.",
+        "fonti": [
+          {
+            "nome": "Primaria aziendale · Lockheed Martin — Press Briefing Transcript: PAC-3 MSE Production Acceleration",
+            "url": "https://www.lockheedmartin.com/en-us/news/statements-speeches/2026/press-briefing-transcript-pac-3-mse-production-acceleration.html",
+            "data": "2026-01-06"
+          }
+        ]
+      },
+      {
+        "id": "A5-E003",
+        "livello": "confermato",
+        "titolo": "L’architettura Steelfin dichiarata da Anduril",
+        "motivazione": "Annuncio e scheda prodotto descrivono un acceleratore a propellente solido e un intercettore terminale con base condivisa di cellula, avionica, software, controlli e interfacce. La configurabilità riguarda anche seeker e sottosistemi. È confermato ciò che il produttore presenta; non viene assunta l’identità fisica integrale del secondo stadio in tutte le varianti. Il testo aziendale è stato recuperato tramite indicizzazione delle pagine originali.",
+        "fonti": [
+          {
+            "nome": "Primaria aziendale · Anduril — Anduril Unveils the Steelfin Family of Surface-to-Air Interceptor Missiles",
+            "url": "https://www.anduril.com/news/steelfin",
+            "data": "2026-10-12"
+          },
+          {
+            "nome": "Primaria aziendale · Anduril — Steelfin, scheda prodotto; senza data editoriale, consultata il 14 ottobre 2026",
+            "url": "https://www.anduril.com/steelfin"
+          }
+        ]
+      },
+      {
+        "id": "A5-E004",
+        "livello": "plausibile",
+        "titolo": "Parte identica, architettura comune e risorse riutilizzabili",
+        "motivazione": "L’articolo distingue tre forme di conservazione del lavoro: componenti utilizzabili in più varianti, porzioni di progetto condivise e risorse produttive impiegabili anche per parti diverse. È un’interpretazione dell’architettura dichiarata, coerente con la letteratura sulla comunanza. Le interazioni fra acceleratore e terminale richiedono verifica della configurazione completa; non sono ricostruiti carichi o sollecitazioni quantitativi Steelfin.",
+        "fonti": [
+          {
+            "nome": "Primaria aziendale · Anduril — Anduril Unveils the Steelfin Family of Surface-to-Air Interceptor Missiles",
+            "url": "https://www.anduril.com/news/steelfin",
+            "data": "2026-10-12"
+          },
+          {
+            "nome": "Ricerca · Marshall Fisher, Kamalini Ramdas e Karl Ulrich — Component Sharing in the Management of Product Variety: A Study of Automotive Braking Systems, Management Science 45(3), 297–315; abstract dell’editore",
+            "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.45.3.297",
+            "data": "1999-03-01"
+          },
+          {
+            "nome": "Primaria tecnica · NASA, Systems Engineering Handbook — 5.3 Product Verification; senza data editoriale assunta, consultata il 14 ottobre 2026",
+            "url": "https://www.nasa.gov/reference/5-3-product-verification/"
+          }
+        ]
+      },
+      {
+        "id": "A5-E005",
+        "livello": "confermato",
+        "titolo": "Prove e calendario Steelfin dichiarati all’annuncio",
+        "motivazione": "Anduril riferisce prove balistiche con veicoli rappresentativi già svolte e prevede l’avvio delle prove in volo delle varianti nel 2027. Il grado riguarda l’attribuzione e il calendario annunciato, non risultati indipendenti di intercettazione né una qualificazione operativa. Le considerazioni sulle verifiche delle nuove combinazioni sono generali e non attestano una procedura aziendale specifica.",
+        "fonti": [
+          {
+            "nome": "Primaria aziendale · Anduril — Anduril Unveils the Steelfin Family of Surface-to-Air Interceptor Missiles",
+            "url": "https://www.anduril.com/news/steelfin",
+            "data": "2026-10-12"
+          },
+          {
+            "nome": "Primaria tecnica · NASA, Systems Engineering Handbook — 5.3 Product Verification; senza data editoriale assunta, consultata il 14 ottobre 2026",
+            "url": "https://www.nasa.gov/reference/5-3-product-verification/"
+          }
+        ]
+      },
+      {
+        "id": "A5-E006",
+        "livello": "confermato",
+        "titolo": "Doppio impulso MSE e distinzione dal bistadio",
+        "motivazione": "Il comunicato Lockheed del 16 agosto 2016 descrive PAC-3 MSE come intercettore hit-to-kill con motore a propellente solido a doppio impulso e ne riferisce la capacità operativa iniziale. L’annuncio Anduril distingue invece primo e secondo stadio Steelfin. Sono proprietà architetturali differenti, dalle quali l’articolo non deduce una graduatoria delle prestazioni.",
+        "fonti": [
+          {
+            "nome": "Primaria aziendale · Lockheed Martin — U.S. Army Declares Lockheed Martin’s PAC-3 MSE Initial Operational Capability",
+            "url": "https://news.lockheedmartin.com/2016-08-16-U-S-Army-Declares-Lockheed-Martins-PAC-3-MSE-Initial-Operational-Capability",
+            "data": "2016-08-16"
+          },
+          {
+            "nome": "Primaria aziendale · Anduril — Anduril Unveils the Steelfin Family of Surface-to-Air Interceptor Missiles",
+            "url": "https://www.anduril.com/news/steelfin",
+            "data": "2026-10-12"
+          }
+        ]
+      },
+      {
+        "id": "A5-E007",
+        "livello": "confermato",
+        "titolo": "Fascia Steelfin pubblicata e missione THAAD",
+        "motivazione": "La scheda Anduril indica una fascia dalla bassa quota all’alta endoatmosfera; la Missile Defense Agency attribuisce a THAAD l’intercettazione terminale di missili balistici dentro e fuori dall’atmosfera. Defense Daily riporta la dichiarazione di Steve Milano di Anduril che prospetta, per una configurazione avanzata, missioni paragonabili a quelle del THAAD. È confermata l’attribuzione di questa ambizione e la distinzione fra descrizioni pubblicate, non un’equivalenza operativa o un inviluppo Steelfin provato. Le pagine originali sono state consultate mediante testo indicizzato; non vengono ricavate quote numeriche.",
+        "fonti": [
+          {
+            "nome": "Primaria aziendale · Anduril — Steelfin, scheda prodotto; senza data editoriale, consultata il 14 ottobre 2026",
+            "url": "https://www.anduril.com/steelfin"
+          },
+          {
+            "nome": "Primaria istituzionale · Missile Defense Agency — Terminal High Altitude Area Defense; senza data editoriale, consultata il 14 ottobre 2026",
+            "url": "https://www.mda.mil/system/thaad.html"
+          },
+          {
+            "nome": "Frank Wolfe, Defense Daily — Anduril Industries Looks for Steelfin Variants To Take On Drone and Missile Threats; dichiarazioni di Steve Milano",
+            "url": "https://www.defensedaily.com/anduril-industries-looks-for-steelfin-variants-to-take-on-drone-and-missile-threats/missile-defense/",
+            "data": "2026-10-12"
+          }
+        ]
+      },
+      {
+        "id": "A5-E008",
+        "livello": "confermato",
+        "titolo": "Il precedente Aster 15/30 originario",
+        "motivazione": "La documentazione OCCAR descrive Aster come missile a due stadi e distingue Aster 15 e 30 per l’acceleratore, associando al booster del 30 un impulso più lungo. Il riferimento riguarda le configurazioni originarie e la loro porzione terminale comune; non estende l’identità del dart a ogni generazione successiva né assegna a Steelfin le capacità Aster.",
+        "fonti": [
+          {
+            "nome": "Primaria istituzionale · OCCAR — FSAF/PAAMS, sezione Aster; senza data editoriale, consultata il 14 ottobre 2026",
+            "url": "https://occar.int/our-work/programmes/fsafpaams-the-next-generation-of-surfacetoair-antimissile-systems"
+          }
+        ]
+      },
+      {
+        "id": "A5-E009",
+        "livello": "confermato",
+        "titolo": "La cooperazione che sostiene la famiglia Aster",
+        "motivazione": "La cronologia Eurosam documenta l’accordo franco-italiano FSAF del 1988, la costituzione del consorzio nel 1989 e l’estensione al Regno Unito per PAAMS nel 1996. La stessa fonte descrive la condivisione degli oneri di sviluppo. È documentata l’organizzazione cooperativa; non è stabilito il peso relativo delle motivazioni economico-produttive nella scelta originaria del terminale comune.",
+        "fonti": [
+          {
+            "nome": "Primaria consortile · Eurosam — History; senza data editoriale, consultata il 14 ottobre 2026",
+            "url": "https://eurosam.com/history/"
+          },
+          {
+            "nome": "Primaria istituzionale · OCCAR — FSAF/PAAMS, sezione Aster; senza data editoriale, consultata il 14 ottobre 2026",
+            "url": "https://occar.int/our-work/programmes/fsafpaams-the-next-generation-of-surfacetoair-antimissile-systems"
+          }
+        ]
+      },
+      {
+        "id": "A5-E010",
+        "livello": "confermato",
+        "titolo": "Il programma SAMP/T NG con Aster e VL MICA",
+        "motivazione": "Il comunicato Eurosam dell’11 giugno 2026 riferisce un contratto OCCAR del 30 aprile per sviluppare la versione multieffettore francese del SAMP/T NG, con aggiornamento del modulo d’ingaggio. Il livello riguarda contratto e contenuto del programma, non una capacità già operativa. La distinzione fra comunanza produttiva interna e distribuzione degli impieghi fra famiglie è il raccordo analitico dell’articolo.",
+        "fonti": [
+          {
+            "nome": "Primaria consortile · Eurosam — France orders the multi-layered version of the SAMP/T NG air and missile defence system",
+            "url": "https://eurosam.com/france-orders-the-multi-layered-version-of-the-samp-t-ng-air-and-missile-defence-system/",
+            "data": "2026-06-11"
+          }
+        ]
+      },
+      {
+        "id": "A5-E011",
+        "livello": "plausibile",
+        "titolo": "Volumi comuni e risorse condivise: scala e scopo",
+        "motivazione": "I due paragrafi propongono un esempio industriale ipotetico: gli ordini di più varianti possono alimentare una parte identica e condividere alcune risorse anche per lavorazioni diverse. La ricerca sui componenti comuni sostiene il ruolo di volumi, costi di progetto e attrezzature; non fornisce stime missilistiche. Il risparmio netto rimane condizionato ai costi della condivisione e non è misurato per Steelfin.",
+        "fonti": [
+          {
+            "nome": "Ricerca · Marshall Fisher, Kamalini Ramdas e Karl Ulrich — Component Sharing in the Management of Product Variety: A Study of Automotive Braking Systems, Management Science 45(3), 297–315; abstract dell’editore",
+            "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.45.3.297",
+            "data": "1999-03-01"
+          },
+          {
+            "nome": "Primaria aziendale · Anduril — Anduril Unveils the Steelfin Family of Surface-to-Air Interceptor Missiles",
+            "url": "https://www.anduril.com/news/steelfin",
+            "data": "2026-10-12"
+          }
+        ]
+      },
+      {
+        "id": "A5-E012",
+        "livello": "confermato",
+        "titolo": "La produzione condivisa proposta da Anduril",
+        "motivazione": "La sezione Producible by Design dell’annuncio attribuisce alle varianti Steelfin la possibilità di attraversare una linea comune utilizzando le stesse attrezzature, tecnici e strutture. È confermata la proposta industriale del produttore, non l’avvenuta qualifica di un processo multiprodotto o la sua produttività. Il rapporto fra attività identiche e risorse soltanto condivisibili costituisce il criterio di verifica proposto dall’articolo.",
+        "fonti": [
+          {
+            "nome": "Primaria aziendale · Anduril — Anduril Unveils the Steelfin Family of Surface-to-Air Interceptor Missiles",
+            "url": "https://www.anduril.com/news/steelfin",
+            "data": "2026-10-12"
+          }
+        ]
+      },
+      {
+        "id": "A5-E013",
+        "livello": "confermato",
+        "titolo": "GM Defense: primo lotto di componenti MSE",
+        "motivazione": "Lockheed Martin annuncia il 17 settembre 2026 un contratto con GM Defense firmato il 6 agosto e la consegna del primo lotto di componenti di alloggiamento MSE il 28 agosto. La fonte richiama competenze di fusione e lavorazione meccanica. I ventidue giorni misurano l’intervallo fra quei due eventi riferiti; non il tempo totale di preparazione del fornitore, il ciclo di un missile completo o un incremento annuale già quantificato.",
+        "fonti": [
+          {
+            "nome": "Primaria aziendale · Lockheed Martin — Fast-Tracks PAC-3 MSE Components in Less Than One Month in Partnership with GM Defense",
+            "url": "https://lockheedmartin.gcs-web.com/news-releases/news-release-details/lockheed-martin-fast-tracks-pac-3r-mse-components-less-one-month",
+            "data": "2026-09-17"
+          }
+        ]
+      },
+      {
+        "id": "A5-E014",
+        "livello": "plausibile",
+        "titolo": "Il costo della comunanza e il valore dell’adattamento",
+        "motivazione": "La letteratura collega la scelta delle parti comuni a volumi, requisiti e costi fissi e variabili; il GAO riconosce investimenti iniziali e possibili benefici futuri degli approcci modulari. L’articolo applica questi meccanismi a sovradimensionamento, attrezzaggi, coordinamento e flessibilità. Non somma due volte lo stesso lavoro evitato né presume che il costo unitario minimo coincida con la scelta più adattabile. Il saldo Steelfin non è disponibile.",
+        "fonti": [
+          {
+            "nome": "Ricerca · Marshall Fisher, Kamalini Ramdas e Karl Ulrich — Component Sharing in the Management of Product Variety: A Study of Automotive Braking Systems, Management Science 45(3), 297–315; abstract dell’editore",
+            "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.45.3.297",
+            "data": "1999-03-01"
+          },
+          {
+            "nome": "Primaria istituzionale · GAO — Weapon Systems Acquisition: DOD Needs Better Planning to Attain Benefits of Modular Open Systems, GAO-25-106931",
+            "url": "https://www.gao.gov/products/gao-25-106931",
+            "data": "2025-01-22"
+          }
+        ]
+      },
+      {
+        "id": "A5-E016",
+        "livello": "plausibile",
+        "titolo": "Cento sottogruppi: variazione del mix a volume invariato",
+        "motivazione": "Lee e Tang trattano la differenziazione ritardata come una scelta congiunta di prodotto e processo produttivo, attraverso la quale è possibile rinviare il momento in cui il lavoro comune viene destinato a configurazioni differenti. L’articolo applica questo principio, in via ipotetica, alla famiglia Steelfin, la cui architettura dichiarata prevede componenti e risorse produttive condivisi. L’annuncio Anduril non documenta il punto effettivo di differenziazione, i tempi residui di completamento o l’organizzazione degli ordini.\n\nL’esempio dei cento sottogruppi è un’elaborazione concettuale dell’articolo, non un dato industriale Steelfin né un caso empirico tratto da Lee e Tang. Il passaggio da cinquanta intercettori della variante A e cinquanta della B a settanta A e trenta B illustra la possibilità di riallocare venti sottogruppi comuni senza aumentare il volume complessivo. La riallocazione presuppone la disponibilità dei componenti specifici e tempi e capacità di completamento compatibili con la nuova richiesta. L’esperimento mostra il meccanismo della flessibilità nell’assortimento, non una prestazione produttiva già dimostrata.",
+        "fonti": [
+          {
+            "nome": "Ricerca · Hau L. Lee e Christopher S. Tang — Modelling the Costs and Benefits of Delayed Product Differentiation, Management Science 43(1), 40–53; abstract dell’editore",
+            "url": "https://pubsonline.informs.org/doi/abs/10.1287/mnsc.43.1.40",
+            "data": "1997-01-01"
+          },
+          {
+            "nome": "Primaria aziendale · Anduril — Anduril Unveils the Steelfin Family of Surface-to-Air Interceptor Missiles",
+            "url": "https://www.anduril.com/news/steelfin",
+            "data": "2026-10-12"
+          }
+        ]
+      },
+      {
+        "id": "A5-E017",
+        "livello": "plausibile",
+        "titolo": "Moduli specifici e momento dell’informazione",
+        "motivazione": "Il testo applica il meccanismo della differenziazione ritardata al caso ipotetico di sottogruppi comuni e sensori con approvvigionamento anticipato. Il componente mancante può determinare la consegna anche quando l’assemblaggio è rinviabile. Il richiamo a un avversario che cambia gli attacchi esprime una possibile causa del cambiamento della domanda, non un episodio documentato o una previsione degli ordini Steelfin.",
+        "fonti": [
+          {
+            "nome": "Ricerca · Hau L. Lee e Christopher S. Tang — Modelling the Costs and Benefits of Delayed Product Differentiation, Management Science 43(1), 40–53; abstract dell’editore",
+            "url": "https://pubsonline.informs.org/doi/abs/10.1287/mnsc.43.1.40",
+            "data": "1997-01-01"
+          },
+          {
+            "nome": "Primaria aziendale · Anduril — Steelfin, scheda prodotto; senza data editoriale, consultata il 14 ottobre 2026",
+            "url": "https://www.anduril.com/steelfin"
+          }
+        ]
+      },
+      {
+        "id": "A5-E018",
+        "livello": "plausibile",
+        "titolo": "Scorta comune e scorta di intercettori completi",
+        "motivazione": "L’articolo distingue la libertà di destinazione di un semilavorato dal minore lavoro residuo di un intercettore completato e accettato. Il confronto deriva dalla differenziazione ritardata e dalla distinzione generale fra integrazione, verifica e accettazione. La combinazione conveniente dei due inventari dipende da urgenza e tempi di completamento; non viene attribuita ad Anduril una politica di scorte già attuata.",
+        "fonti": [
+          {
+            "nome": "Ricerca · Hau L. Lee e Christopher S. Tang — Modelling the Costs and Benefits of Delayed Product Differentiation, Management Science 43(1), 40–53; abstract dell’editore",
+            "url": "https://pubsonline.informs.org/doi/abs/10.1287/mnsc.43.1.40",
+            "data": "1997-01-01"
+          },
+          {
+            "nome": "Primaria tecnica · NASA, Systems Engineering Handbook — 5.3 Product Verification; senza data editoriale assunta, consultata il 14 ottobre 2026",
+            "url": "https://www.nasa.gov/reference/5-3-product-verification/"
+          }
+        ]
+      },
+      {
+        "id": "A5-E019",
+        "livello": "plausibile",
+        "titolo": "L’assegnazione contrattuale della flessibilità",
+        "motivazione": "A3 tratta scorte, assegnazione e priorità come passaggi distinti della ricostituzione. A5 estende il ragionamento ai materiali ancora comuni: proprietà e impegni possono limitare la riallocazione tecnicamente possibile. È una condizione organizzativa generale; non descrive clausole Steelfin o Patriot non pubbliche. Il rinvio ad A3 assicura continuità editoriale e non costituisce una nuova verifica indipendente.",
+        "fonti": [
+          {
+            "nome": "Corpus editoriale · Frontiera — Patriot, il tempo della ricostituzione; testo pubblicato, versione corrente del repository letta il 14 ottobre 2026",
+            "url": "https://frontiera.pages.dev/analisi/patriot-tempo-ricostituzione/",
+            "data": "2026-09-12"
+          },
+          {
+            "nome": "Ricerca · Hau L. Lee e Christopher S. Tang — Modelling the Costs and Benefits of Delayed Product Differentiation, Management Science 43(1), 40–53; abstract dell’editore",
+            "url": "https://pubsonline.informs.org/doi/abs/10.1287/mnsc.43.1.40",
+            "data": "1997-01-01"
+          },
+          {
+            "nome": "Primaria istituzionale · GAO — Weapon Systems Acquisition: DOD Needs Better Planning to Attain Benefits of Modular Open Systems, GAO-25-106931",
+            "url": "https://www.gao.gov/products/gao-25-106931",
+            "data": "2025-01-22"
+          }
+        ]
+      },
+      {
+        "id": "A5-E020",
+        "livello": "plausibile",
+        "titolo": "Cento impieghi: conoscenza pertinente e condizioni di trasferimento",
+        "motivazione": "Il confronto fra cinquanta impieghi per ciascuna di due famiglie e cento impieghi di configurazioni Steelfin dotate di un componente comune costituisce un esperimento concettuale, non un dato operativo. La comunanza può ampliare le occasioni di osservare e comprendere il comportamento del medesimo componente, purché siano distinguibili revisioni, lotti, condizioni operative e cause delle anomalie. Può inoltre estendere a più configurazioni una criticità presente nella parte condivisa. La letteratura sull’apprendimento industriale sostiene il quadro generale del trasferimento delle conoscenze; il riferimento NASA sui guasti di causa comune illustra, per analogia, i rischi delle dipendenze condivise. Nessuna fonte documenta per Steelfin un incremento già conseguito dell’affidabilità, una probabilità di guasto specifica o l’indipendenza delle osservazioni.",
+        "fonti": [
+          {
+            "nome": "Ricerca · Linda Argote, Sara L. Beckman e Dennis Epple — The Persistence and Transfer of Learning in Industrial Settings, Management Science 36(2), 140–154; abstract dell’editore",
+            "url": "https://pubsonline.informs.org/doi/abs/10.1287/mnsc.36.2.140",
+            "data": "1990-02-01"
+          },
+          {
+            "nome": "Primaria tecnica · NASA, Systems Engineering Handbook — 6.5 Configuration Management; senza data editoriale assunta, consultata il 14 ottobre 2026",
+            "url": "https://www.nasa.gov/reference/6-5-configuration-management/"
+          },
+          {
+            "nome": "Primaria tecnica · NASA, Systems Engineering Handbook — 5.3 Product Verification; senza data editoriale assunta, consultata il 14 ottobre 2026",
+            "url": "https://www.nasa.gov/reference/5-3-product-verification/"
+          },
+          {
+            "nome": "Ricerca tecnica · Harry W. Jones / NASA Ames — Common Cause Failures Dominate and Defeat Redundancy, NTRS 20240013667; abstract del record consultato il 14 ottobre 2026, presentazione associata al RAMS 2025",
+            "url": "https://ntrs.nasa.gov/citations/20240013667"
+          }
+        ]
+      },
+      {
+        "id": "A5-E021",
+        "livello": "plausibile",
+        "titolo": "Dalla diagnosi alla correzione verificata",
+        "motivazione": "Il percorso osservazione–diagnosi–modifica–verifica è una costruzione analitica sostenuta dalla letteratura sulle attività di apprendimento e dai riferimenti generali di ingegneria dei sistemi. Una soluzione comune potrebbe ridurre il lavoro da ripetere nelle varianti pertinenti; il miglioramento richiede un intervento verificato. Non vengono attribuiti a Steelfin risultati di reliability growth, procedure aziendali documentate o coefficienti ricavati da altri settori.",
+        "fonti": [
+          {
+            "nome": "Ricerca · Michael A. Lapré, Amit S. Mukherjee e Luk N. Van Wassenhove — Behind the Learning Curve: Linking Learning Activities to Waste Reduction, Management Science 46(5), 597–611; abstract dell’editore",
+            "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.46.5.597.12049",
+            "data": "2000-05-01"
+          },
+          {
+            "nome": "Primaria tecnica · NASA, Systems Engineering Handbook — 6.5 Configuration Management; senza data editoriale assunta, consultata il 14 ottobre 2026",
+            "url": "https://www.nasa.gov/reference/6-5-configuration-management/"
+          },
+          {
+            "nome": "Primaria tecnica · NASA, Systems Engineering Handbook — 5.3 Product Verification; senza data editoriale assunta, consultata il 14 ottobre 2026",
+            "url": "https://www.nasa.gov/reference/5-3-product-verification/"
+          }
+        ]
+      },
+      {
+        "id": "A5-E022",
+        "livello": "confermato",
+        "titolo": "PAC-3 ACE e il riuso dichiarato di software e integrazione",
+        "motivazione": "Nel comunicato del 20 luglio 2026 Lockheed Martin presenta ACE e indica nel software PAC-3 e nell’integrazione IBCS risorse da riutilizzare per abbreviare sviluppo e introduzione. Il livello conferma l’annuncio della strategia, non il conseguimento dei tempi o dei risparmi prospettati. Il confronto con Steelfin riguarda la conservazione del lavoro conoscitivo, senza assumere identità materiale fra i programmi.",
+        "fonti": [
+          {
+            "nome": "Primaria aziendale · Lockheed Martin — Introduces PAC-3 ACE: A High-Performance, Low-Cost Interceptor",
+            "url": "https://news.lockheedmartin.com/2026-07-20-Lockheed-Martin-Introduces-PAC-3-ACE-TM-A-High-Performance,-Low-Cost-Interceptor",
+            "data": "2026-07-20"
+          }
+        ]
+      },
+      {
+        "id": "A5-E035",
+        "livello": "plausibile",
+        "titolo": "Giudicare la comunanza sulla capacità consegnata",
+        "motivazione": "La conclusione propone un criterio di valutazione analitico: osservare una variazione della domanda mentre la produzione è già avviata, distinguendo il lavoro che può essere riutilizzato, le attività da ripetere, i costi e i tempi della risposta e le conseguenze sulle consegne precedentemente impegnate. Le fonti documentano l’architettura proposta da Anduril e la trasformazione produttiva MSE dichiarata da Lockheed Martin, non un vantaggio comparato già misurato. Il criterio finale è la disponibilità della configurazione adatta alla minaccia nel tempo utile, non il solo numero complessivo degli intercettori prodotti. Nessun esito del programma Steelfin viene dato per acquisito.",
+        "fonti": [
+          {
+            "nome": "Primaria aziendale · Anduril — Anduril Unveils the Steelfin Family of Surface-to-Air Interceptor Missiles",
+            "url": "https://www.anduril.com/news/steelfin",
+            "data": "2026-10-12"
+          },
+          {
+            "nome": "Primaria aziendale · Lockheed Martin — Press Briefing Transcript: PAC-3 MSE Production Acceleration",
+            "url": "https://www.lockheedmartin.com/en-us/news/statements-speeches/2026/press-briefing-transcript-pac-3-mse-production-acceleration.html",
+            "data": "2026-01-06"
+          },
+          {
+            "nome": "Ricerca · Hau L. Lee e Christopher S. Tang — Modelling the Costs and Benefits of Delayed Product Differentiation, Management Science 43(1), 40–53; abstract dell’editore",
+            "url": "https://pubsonline.informs.org/doi/abs/10.1287/mnsc.43.1.40",
+            "data": "1997-01-01"
+          },
+          {
+            "nome": "Corpus editoriale · Frontiera — Patriot, il tempo della ricostituzione; testo pubblicato, versione corrente del repository letta il 14 ottobre 2026",
+            "url": "https://frontiera.pages.dev/analisi/patriot-tempo-ricostituzione/",
+            "data": "2026-09-12"
+          }
+        ]
+      }
+    ]
+  }
+}
