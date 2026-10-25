@@ -16,6 +16,46 @@ async function scrollToVariable(page,key) {
   reading.scrollTop+=segment.getBoundingClientRect().top-reading.getBoundingClientRect().top-compact+12;
  },key);
 }
+test('nuova articolazione: segmenti, legende, serie SVG e focus desktop coerenti',async({page})=>{
+ await page.setViewportSize({width:1366,height:768});await ready(page);
+ const r=page.locator(ROOT),groups=[['C','U'],['I','KG','KL'],['SC','GC','D']];
+ expect(await r.locator('[data-context-panel]').evaluateAll(nodes=>nodes.map(n=>n.dataset.contextPanel+(n.dataset.contextVariable?':'+n.dataset.contextVariable:''))))
+  .toEqual(['0','0','0:C','0:U','0','1','1:I','1:KG','1:KL','1','2','2:SC','2:GC','2:D','2']);
+ for(const [panel,ids] of groups.entries()) {
+  const chart=r.locator(`[data-model-panel="${panel}"]`);
+  expect(await chart.locator('.mr-legend [data-focus]').evaluateAll(nodes=>nodes.map(n=>n.dataset.focus))).toEqual(ids);
+  expect(await chart.locator('[data-series]').evaluateAll(nodes=>[...new Set(nodes.map(n=>n.dataset.series))].sort())).toEqual([...ids].sort());
+  for(const id of ids) {
+   const segment=r.locator(`[data-context-variable="${id}"]`);
+   await expect(segment).toHaveAttribute('data-context-panel',String(panel));
+   await scrollToVariable(page,id);await expect(r).toHaveAttribute('data-focus','');
+   await segment.locator('.mr-margin').click();await expect(r).toHaveAttribute('data-focus',id);
+   await expect(chart.locator(`[data-focus="${id}"]`)).toHaveAttribute('aria-pressed','true');
+   const series=chart.locator(`[data-series="${id}"]`);
+   for(const curve of await series.all()) await expect(curve).toHaveClass(/is-focused/);
+   // GC's escaped span is a pre-existing editorial defect; preserve the source.
+   const terms=r.locator(`[data-term="${id}"]`);
+   expect(await terms.count()).toBeGreaterThanOrEqual(id==='GC'?0:1);
+   for(const term of await terms.all()) await expect(term).toHaveClass(/is-focused/);
+   await expect(r.locator('[data-description-title]')).toContainText(await chart.locator(`[data-focus="${id}"]`).innerText());
+   await chart.locator(`[data-focus="${id}"]`).click();await expect(r).toHaveAttribute('data-focus','');
+   await expect(segment.locator('.mr-margin')).toHaveAttribute('aria-pressed','false');
+  }
+ }
+ // Shared upper bounds remain distinguishable through solid SC and dashed GC.
+ const upperSC=r.locator('[data-model-panel="2"] .mr-curve[data-series="SC"]').first();
+ const upperGC=r.locator('[data-model-panel="2"] .mr-curve[data-series="GC"]').first();
+ expect(await upperSC.getAttribute('d')).toBe(await upperGC.getAttribute('d'));
+ expect(await upperSC.getAttribute('stroke-dasharray')).toBeNull();
+ await expect(upperGC).toHaveAttribute('stroke-dasharray','7 4');
+});
+test('mobile: nuovo ordine singolare/aggregato reversibile allo scroll',async({page})=>{
+ await page.setViewportSize({width:390,height:844});await ready(page);const r=page.locator(ROOT);
+ const sequence=[['I','1'],['KG','1'],['KL','1'],['SC','2'],['GC','2'],['D','2']];
+ for(const [id,panel] of [...sequence,...sequence.slice().reverse()]) {
+  await scrollToVariable(page,id);await expect(r).toHaveAttribute('data-focus',id);await expect(r).toHaveAttribute('data-panel',panel);
+ }
+});
 for(const [width,height,layout] of viewports) test(`M1 ${width}×${height}: layout, geometrie visibili e assenza overflow`,async({page})=>{
  await page.setViewportSize({width,height});const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await ready(page);await expect(page.locator(ROOT)).toHaveAttribute('data-layout',layout);
@@ -76,8 +116,8 @@ test('mobile: focus contestuale, override, esplorazione libera ed espansione sen
  await page.setViewportSize({width:390,height:844});await ready(page);
  const r=page.locator(ROOT),read=r.locator('.mr-reading');
  await scrollToVariable(page,'KG');await expect(r).toHaveAttribute('data-focus','KG');await expect(r).toHaveAttribute('data-panel','1');
- await r.locator('.mr-legend [data-focus="GC"]').click();await expect(r).toHaveAttribute('data-focus','GC');
- await read.evaluate(e=>e.scrollTop+=120);await expect(r).toHaveAttribute('data-focus','GC');
+ await r.locator('.mr-legend [data-focus="I"]').click();await expect(r).toHaveAttribute('data-focus','I');
+ await read.evaluate(e=>e.scrollTop+=120);await expect(r).toHaveAttribute('data-focus','I');
  await r.locator('[data-focus-sync]').click();await expect(r).toHaveAttribute('data-focus','KG');
  const offset=await read.evaluate(e=>e.scrollTop);
  await r.locator('[data-panel-step="1"]').click();await expect(r).toHaveAttribute('data-sync','free');await expect(r).toHaveAttribute('data-panel','2');

@@ -7,7 +7,7 @@ const p = {zero:0,debt:260,x:t=>t};
 const v = (id,t) => model.values(id,t,p);
 const [t0,t1,t2,t3,t4] = model.times;
 for (const t of [t0,t1,t2,t3,t4]) assert.deepEqual(v("C",t),[0]);
-for (const id of ["U","GC","KG","D"]) {
+for (const id of ["U","KG","D"]) {
   const base=id==="D"?260:0;
   assert.ok(v(id,t1).every(y=>y===base));
   assert.ok(v(id,t4).every(y=>y===base));
@@ -19,16 +19,33 @@ for (const id of ["U","GC","KG","D"]) {
   }
 }
 assert.ok(v("KG",t3)[0]>0, "Coordinate SVG negative epistemicamente: KG sotto la baseline");
-assert.deepEqual(v("GC",t3),[0,57]);
 assert.ok(v("KL",t4)[0]<0 && v("KL",t4)[1]>0);
-assert.deepEqual(v("SC",t1),[0,27]);
-assert.deepEqual(v("SC",t3),[0,0]);
-assert.ok(v("SC",t3-1e-8)[1]>85.99);
+// Illustrative extents, not numerical operational thresholds or comparable units.
+for(const [id,extent] of [["SC",86],["GC",57]]) {
+  assert.deepEqual(v(id,t1-1e-8),[0,0],`${id}: chiuso prima di T1`);
+  for(let i=0;i<100;i++) {
+    const t=t1+(t3-t1)*i/100;
+    assert.deepEqual(v(id,t),[0,extent],`${id}: salto in T1 e plateau fino a T3`);
+  }
+  for(let i=0;i<=1000;i++) assert.equal(v(id,i/1000)[0],0,`${id}: bordo superiore sullo zero`);
+  assert.match(model.state(id,t1),/salto/);
+  assert.match(model.state(id,t2),/persistente/);
+  for(let i=0;i<=100;i++) {
+    const t=t3+(t4-t3)*i/100;
+    if(id==="SC") assert.deepEqual(v(id,t),[0,0],"SC: chiusura in T3 e fino a T4");
+    else if(i>0) assert.ok(v(id,t)[1]<v(id,t3+(t4-t3)*(i-1)/100)[1],"GC: recupero continuo T3–T4");
+  }
+  assert.deepEqual(v(id,t4),[0,0]);
+  assert.deepEqual(v(id,1),[0,0]);
+}
+assert.deepEqual(v("GC",t3),[0,57]);
+assert.ok(Math.abs(v("GC",t3+1e-8)[1]-v("GC",t3)[1])<1e-6,"GC: nessun salto in T3");
+assert.ok(v("GC",t4-1e-8)[1]<1e-6,"GC: chiusura continua in T4");
 assert.deepEqual([v("I",t1-1e-8)[0],v("I",t1)[0],v("I",t3-1e-8)[0],v("I",t3)[0]],[0,111,111,0]);
 assert.ok(v("D",t3)[0]<260 && v("D",t4)[0]===260);
-for(const id of ["SC","I"]) {
-  const points=model.makePoints(model.defs.find(d=>d.id===id),p,id==="SC"?1:0);
-  for(const t of [t1,t3]) {
+for(const id of ["SC","GC","I"]) {
+  const points=model.makePoints(model.defs.find(d=>d.id===id),p,id==="I"?0:1);
+  for(const t of id==="GC"?[t1]:[t1,t3]) {
     const near=points.filter(pt=>Math.abs(pt[0]-t)<1e-7);
     assert.ok(near.length>=2 && Math.max(...near.map(pt=>pt[1]))-Math.min(...near.map(pt=>pt[1]))>20);
   }
@@ -38,7 +55,8 @@ const original=fs.readFileSync("docs/modelli/fonti-m1/Modello-M1-Ritorno-alla-co
   .replace(/&quot;/g,'"').replace(/&#x27;/g,"'").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&amp;/g,"&");
 const equations=original.slice(original.indexOf("const smooth=q"),original.indexOf("function el(tag"));
 const reference={};vm.runInNewContext(`const times=${JSON.stringify(model.times)};${equations};this.values=values;`,reference);
-for (const def of model.defs) for(let i=0;i<=1000;i++) {
+const unchanged=model.defs.filter(d=>!["SC","GC"].includes(d.id));
+for (const def of unchanged) for(let i=0;i<=1000;i++) {
   assert.deepEqual([...reference.values(def.id,i/1000,p)],v(def.id,i/1000), `Original geometry changed: ${def.id} ${i}`);
 }
 // La prosa di M1 viene ora revisionata editorialmente: il confronto con la
@@ -47,8 +65,18 @@ for (const def of model.defs) for(let i=0;i<=1000;i++) {
 const edited=fs.readFileSync("src/_includes/modelli/m1.md","utf8");
 const segments=[...edited.matchAll(/^:::segment ([012])(?: ([A-Z]+))?$/gm)];
 const actualOrder=segments.map(m=>m[2]?`${m[1]}:${m[2]}`:m[1]);
-const expectedOrder=["0","0","0:C","0:U","0","1","1:GC","1:KG","1:KL","1","2","2:SC","2:I","2:D","2"];
+const expectedOrder=["0","0","0:C","0:U","0","1","1:I","1:KG","1:KL","1","2","2:SC","2:GC","2:D","2"];
 assert.deepEqual(actualOrder,expectedOrder,"Sequenza dei segmenti M1 alterata");
+const panelVariables=[["C","U"],["I","KG","KL"],["SC","GC","D"]];
+assert.equal(new Set(model.defs.map(d=>d.id)).size,8,"Identificativi univoci");
+for(const [panel,ids] of panelVariables.entries()) {
+  assert.deepEqual(model.defs.filter(d=>d.panel===panel).map(d=>d.id),ids,"Appartenenza e ordine delle variabili");
+  const svg=model.render(panel);
+  assert.deepEqual([...new Set([...svg.matchAll(/data-series="([A-Z]+)"/g)].map(m=>m[1]))].sort(),[...ids].sort(),"Serie SVG del pannello");
+}
+const html=require("../src/_lib/modelli/content")(edited,model);
+assert.deepEqual([...html.matchAll(/data-context-panel="([012])" data-context-variable="([A-Z]*)"/g)].map(m=>m[2]?`${m[1]}:${m[2]}`:m[1]),expectedOrder,"Contesti del rendering statico");
+assert.deepEqual([...html.matchAll(/class="mr-variable mr-margin" data-focus="([A-Z]+)"/g)].map(m=>m[1]),panelVariables.flat(),"Celle marginali e focus");
 for(let i=0;i<segments.length;i++) {
   const start=segments[i].index+segments[i][0].length;
   const end=segments[i+1]?.index??edited.length;
@@ -61,4 +89,4 @@ const editorialEquations=edited.match(/<div class="mr-equation"[^>]*>[\s\S]*?<\/
 assert.equal(editorialEquations.length,1,"Attesa una sola formula della divergenza");
 assert.ok(editorialEquations[0].includes('<span data-term="U">Δ<sub>U</sub>(t)</span>'),"Richiamo a ΔU mancante");
 assert.ok(editorialEquations[0].includes("d(R<sub>U</sub>(t), K<sub>C</sub>(t))"),"Formula della divergenza alterata");
-console.log("[model-m1] PASS: 8008 confronti geometrici, vincoli canonici e integrità strutturale dell’editoriale.");
+console.log(`[model-m1] PASS: ${unchanged.length*1001} confronti geometrici storici, nuove geometrie SC/GC e integrità strutturale del lettore.`);
