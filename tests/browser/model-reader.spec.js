@@ -20,7 +20,9 @@ test('nuova articolazione: segmenti, legende, serie SVG e focus desktop coerenti
  await page.setViewportSize({width:1366,height:768});await ready(page);
  const r=page.locator(ROOT),groups=[['C','U'],['I','KG','KL'],['SC','GC','D']];
  expect(await r.locator('[data-context-panel]').evaluateAll(nodes=>nodes.map(n=>n.dataset.contextPanel+(n.dataset.contextVariable?':'+n.dataset.contextVariable:''))))
-  .toEqual(['0','0','0:C','0:U','0','1','1:I','1:KG','1:KL','1','2','2:SC','2:GC','2:D','2']);
+  .toEqual(['0','0','0:C','0:U','0','1','1:I','1:KG','1:KL','2','2:SC','2:GC','2:D','2']);
+ // La chiusura editoriale appartiene ancora al contesto interattivo KL.
+ await expect(r.locator('[data-context-variable="KL"]')).toContainText('Resta un’ultima conseguenza.');
  for(const [panel,ids] of groups.entries()) {
   const chart=r.locator(`[data-model-panel="${panel}"]`);
   expect(await chart.locator('.mr-legend [data-focus]').evaluateAll(nodes=>nodes.map(n=>n.dataset.focus))).toEqual(ids);
@@ -33,9 +35,9 @@ test('nuova articolazione: segmenti, legende, serie SVG e focus desktop coerenti
    await expect(chart.locator(`[data-focus="${id}"]`)).toHaveAttribute('aria-pressed','true');
    const series=chart.locator(`[data-series="${id}"]`);
    for(const curve of await series.all()) await expect(curve).toHaveClass(/is-focused/);
-   // GC's escaped span is a pre-existing editorial defect; preserve the source.
+   // Tutti i richiami HTML devono partecipare al focus, incluso GC.
    const terms=r.locator(`[data-term="${id}"]`);
-   expect(await terms.count()).toBeGreaterThanOrEqual(id==='GC'?0:1);
+   expect(await terms.count()).toBeGreaterThanOrEqual(1);
    for(const term of await terms.all()) await expect(term).toHaveClass(/is-focused/);
    await expect(r.locator('[data-description-title]')).toContainText(await chart.locator(`[data-focus="${id}"]`).innerText());
    await chart.locator(`[data-focus="${id}"]`).click();await expect(r).toHaveAttribute('data-focus','');
