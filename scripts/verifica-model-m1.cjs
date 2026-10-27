@@ -65,8 +65,10 @@ for (const def of unchanged) for(let i=0;i<=1000;i++) {
 const edited=fs.readFileSync("src/_includes/modelli/m1.md","utf8");
 const segments=[...edited.matchAll(/^:::segment ([012])(?: ([A-Z]+))?$/gm)];
 const actualOrder=segments.map(m=>m[2]?`${m[1]}:${m[2]}`:m[1]);
-const expectedOrder=["0","0","0:C","0:U","0","1","1:I","1:KG","1:KL","1","2","2:SC","2:GC","2:D","2"];
+const expectedOrder=["0","0","0:C","0:U","0","1","1:I","1:KG","1:KL","2","2:SC","2:GC","2:D","2"];
 assert.deepEqual(actualOrder,expectedOrder,"Sequenza dei segmenti M1 alterata");
+// La chiusura di KL rimane nel contesto della variabile, senza segmento neutro vuoto.
+assert.doesNotMatch(edited,/\\<\/?span\b/,"Tag span M1 erroneamente escapati");
 const panelVariables=[["C","U"],["I","KG","KL"],["SC","GC","D"]];
 assert.equal(new Set(model.defs.map(d=>d.id)).size,8,"Identificativi univoci");
 for(const [panel,ids] of panelVariables.entries()) {
