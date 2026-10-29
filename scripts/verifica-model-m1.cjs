@@ -117,9 +117,37 @@ assert.equal(editorialEquations.length,1,"Attesa una sola formula della divergen
 assert.ok(editorialEquations[0].includes('<span data-term="U">Δ<sub>U</sub>(t)</span>'),"Richiamo a ΔU mancante");
 assert.ok(editorialEquations[0].includes("d(R<sub>U</sub>(t), K<sub>C</sub>(t))"),"Formula della divergenza alterata");
 const svg=model.render(2);
-assert.equal((svg.match(/data-series="DF"/g)||[]).length,2,"Due tracciati per un unico focus DF");
+assert.equal((svg.match(/data-series="DF"/g)||[]).length,3,"Due curve e un riempimento per un unico focus DF");
 assert.match(svg,/data-scenario="A"/);assert.match(svg,/data-scenario="B"/);
-assert.doesNotMatch(svg,/<path[^>]*data-series="DF"[^>]*class="mr-band"/);
+assert.equal(model.defs.find(d=>d.id==="DF").description,"Debito rappresentato dalla pendenza informativa da lavorare ed integrare nel quadro aggregato");
+assert.doesNotMatch(svg,/<text[^>]*>Df:/,"Etichetta secondaria Df rimossa");
+// The fill has two simple lobes sharing only the intersection of A and B.
+const fill=svg.match(/<path data-series="DF" class="mr-band" d="([^"]+)"/)[1];
+const polygons=fill.split("Z").filter(s=>s.trim()).map(s=>[...s.matchAll(/[ML](-?[\d.]+),(-?[\d.]+)/g)].map(m=>[Number(m[1]),Number(m[2])]));
+assert.equal(polygons.length,2,"Riempimento diviso all’incrocio, senza poligono a farfalla");
+const cross=(a,b,c)=>(b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0]);
+for(const polygon of polygons) {
+  for(let i=0;i<polygon.length;i++) for(let j=i+2;j<polygon.length;j++) {
+    if(i===0 && j===polygon.length-1) continue;
+    const a=polygon[i],b=polygon[(i+1)%polygon.length],c=polygon[j],d=polygon[(j+1)%polygon.length];
+    assert.ok(!(cross(a,b,c)*cross(a,b,d)<-1e-8 && cross(c,d,a)*cross(c,d,b)<-1e-8),"Nessuna autointersezione nel riempimento Df");
+  }
+}
+const baseline=Number(svg.match(/class="mr-baseline"[^>]*y1="([^"]+)"/)[1]);
+assert.ok(polygons[0].some(p=>p[1]>baseline),"Riempimento durante l’isolamento");
+assert.ok(polygons[1].some(p=>p[1]<baseline),"Riempimento dello spike sopra lo zero");
+assert.ok(svg.indexOf('data-series="DF" class="mr-band"')<svg.indexOf('data-series="DF" data-scenario="A"'),"Curve Df sopra il riempimento");
+const curve=scenario=>[...svg.match(new RegExp(`data-scenario="${scenario}"[^>]* d="([^"]+)"`))[1].matchAll(/[ML](-?[\d.]+),(-?[\d.]+)/g)].map(m=>[Number(m[1]),Number(m[2])]);
+const a=curve("A"),b=curve("B");
+let expectedArea=0;
+for(let i=1;i<a.length;i++) {
+  const dx=a[i][0]-a[i-1][0],before=a[i-1][1]-b[i-1][1],after=a[i][1]-b[i][1];
+  expectedArea+=dx*(before*after<0?(before*before+after*after)/(2*(Math.abs(before)+Math.abs(after))):(Math.abs(before)+Math.abs(after))/2);
+}
+const filledArea=polygons.reduce((total,polygon)=>total+Math.abs(polygon.reduce((sum,p,i)=>{
+  const next=polygon[(i+1)%polygon.length];return sum+p[0]*next[1]-next[0]*p[1];
+},0))/2,0);
+assert.ok(Math.abs(filledArea-expectedArea)<.1,"Area completa fra le curve, incluso il tratto dopo l’incrocio");
 for(const source of [edited,svg,JSON.stringify(model.defs),JSON.stringify(model.phases),fs.readFileSync("src/css/model-reader.css","utf8")]) {
   assert.doesNotMatch(source,/Dᵤ|debito straordinario|data-(?:term|focus|series|context-variable)="D"|--mr-D\b|:::segment 2 D\b/i,"Nessun riferimento attivo alla vecchia variabile");
 }

@@ -78,13 +78,28 @@ for(const [width,height] of [[320,568],[390,844],[1366,768],[1440,900]]) test(`P
  await expect(r).toHaveAttribute('data-focus','');
  await expect(panel).toBeInViewport();
  await expect(panel.locator('.mr-legend [data-focus="DF"]')).toHaveCount(1);
- const curves=panel.locator('[data-series="DF"]');
+ const curves=panel.locator('.mr-curve[data-series="DF"]');
  await expect(curves).toHaveCount(2);
  await expect(curves.nth(0)).toHaveAttribute('data-scenario','A');
  await expect(curves.nth(0)).toHaveAttribute('stroke-dasharray','4 3');
  await expect(curves.nth(1)).toHaveAttribute('data-scenario','B');
  expect(await curves.nth(1).getAttribute('stroke-dasharray')).toBeNull();
- await expect(panel.locator('.mr-band[data-series="DF"]')).toHaveCount(0);
+ const fill=panel.locator('.mr-band[data-series="DF"]');
+ await expect(fill).toHaveCount(1);
+ expect(await panel.locator('svg text').allTextContents()).not.toEqual(expect.arrayContaining([expect.stringMatching(/Df:/)]));
+ const fillChecks=await fill.evaluate(el=>{
+  const svg=el.ownerSVGElement,model=window.FrontieraModels.m1;
+  const left=49,right=svg.viewBox.baseVal.width-13,top=12,bottom=svg.viewBox.baseVal.height-23;
+  const y=v=>top+(v-26)/250*(bottom-top);
+  return [.3,.55,.74,.82,.88,.92].map(t=>{
+   const [a,b]=model.values('DF',t,{zero:151});
+   return el.isPointInFill(new DOMPoint(left+t*(right-left),y((a+b)/2)));
+  });
+ });
+ expect(fillChecks).toEqual([true,true,true,true,true,true]);
+ const fillStyle=await fill.evaluate(el=>{const style=getComputedStyle(el),other=getComputedStyle(el.parentNode.querySelector('.mr-band[data-series="SC"]'));return {fill:style.fill,opacity:style.fillOpacity,otherOpacity:other.fillOpacity,curve:getComputedStyle(el.parentNode.querySelector('.mr-curve[data-series="DF"]')).stroke};});
+ expect(fillStyle.fill).toBe(fillStyle.curve);
+ expect(fillStyle.opacity).toBe(fillStyle.otherOpacity);
  expect(await r.locator('[data-series].is-muted').count()).toBe(0);
  const geometry=await panel.locator('svg').evaluate(svg=>{
   const baseline=Number(svg.querySelector('.mr-baseline').getAttribute('y1'));
@@ -102,17 +117,21 @@ for(const [width,height] of [[320,568],[390,844],[1366,768],[1440,900]]) test(`P
  await panel.screenshot({path:`reports/modelli/panel2b-${width}-dettaglio.png`});
  await panel.locator('[data-focus="DF"]').click();
  await expect(r).toHaveAttribute('data-focus','DF');
- for(const curve of await curves.all()) {
+ for(const curve of await panel.locator('[data-series="DF"]').all()) {
   await expect(curve).toHaveClass(/is-focused/);
   expect(await curve.evaluate(el=>getComputedStyle(el).opacity)).toBe('1');
  }
  await expect(r.locator('[data-term="DF"]')).toHaveClass(/is-focused/);
+ if(await r.getAttribute('data-layout')==='desktop') {
+  await expect(r.locator('[data-description-title]')).toHaveText('Df · Debito funzionale');
+  await expect(r.locator('[data-description]')).toHaveText('Debito rappresentato dalla pendenza informativa da lavorare ed integrare nel quadro aggregato');
+ }
  await page.screenshot({path:`reports/modelli/panel2b-${width}-focus-df.png`});
  await panel.screenshot({path:`reports/modelli/panel2b-${width}-dettaglio-focus-df.png`});
  // A time change redraws all SVG nodes; both scenarios must retain focus.
  if(await r.getAttribute('data-layout')==='desktop') {
   await r.locator('[data-model-event="4"]').click();
-  for(const curve of await curves.all()) await expect(curve).toHaveClass(/is-focused/);
+  for(const curve of await panel.locator('[data-series="DF"]').all()) await expect(curve).toHaveClass(/is-focused/);
   await r.locator('.mr-margin[data-focus="DF"]').click();
   await expect(r).toHaveAttribute('data-focus','');
   expect(await r.locator('[data-series].is-muted').count()).toBe(0);

@@ -14,7 +14,7 @@ const times = [0, .18, .43, .67, .94];
 const panels = [
  {name: "1 · Relazione C/U", description: "C è il riferimento relativo, mentre il canone evolve. U rappresenta la divergenza Δᵤ: massimo in T3, zero in T4."},
  {name: "2A · Dinamiche singolari", description: "Iᵤ꜀ è binaria: zero nell’isolamento, uno prima e dopo. KGᵤ ha minimo in T3. KLᵤ resta aperto sopra e sotto zero anche in T4. Riferimenti distinti anche quando coincidono graficamente."},
- {name: "2B · Dinamiche aggregate", description: "SC, GC e Df condividono la posizione mediana dello zero operativo, con significati e scale distinti. SC e GC hanno il bordo superiore sullo zero; il limite inferiore salta alla criticità in T1 e resta orizzontale fino a T3. SC chiude in T3; GC recupera fino a T4. Criticità: insufficienza rispetto alle esigenze di C, non assenza completa di osservazioni. Df mostra due scenari qualitativi: A, riduzione limitata (tratteggio); B, riduzione pronunciata e possibile picco dopo T3 (linea continua). Si incrociano e tornano al riferimento fisiologico in T4; non delimitano un inviluppo né esauriscono le possibilità. Sotto zero significa carico inferiore al riferimento, non debito assoluto negativo. Df non misura la qualità conoscitiva e non si ricava da SC o GC."}
+ {name: "2B · Dinamiche aggregate", description: "SC, GC e Df condividono la posizione mediana dello zero operativo, con significati e scale distinti. SC e GC hanno il bordo superiore sullo zero; il limite inferiore salta alla criticità in T1 e resta orizzontale fino a T3. SC chiude in T3; GC recupera fino a T4. Criticità: insufficienza rispetto alle esigenze di C, non assenza completa di osservazioni. Df mostra due scenari qualitativi: A, riduzione limitata (tratteggio); B, riduzione pronunciata e possibile picco dopo T3 (linea continua). Si incrociano e tornano al riferimento fisiologico in T4. Il riempimento fra i due scenari è una convenzione grafica, non un inviluppo esaustivo né una distribuzione di probabilità. Sotto zero significa carico inferiore al riferimento, non debito assoluto negativo. Df non misura la qualità conoscitiva e non si ricava da SC o GC."}
 ];
 const defs = [
  {id:"C",panel:0,symbol:"C",name:"Canone condiviso",description:"Riferimento relativo: il quadro condiviso continua a evolvere anche mentre la sua linea resta orizzontale.",dash:"3 4"},
@@ -24,7 +24,7 @@ const defs = [
  {id:"KL",panel:1,symbol:"KLᵤ",name:"Conoscenza locale",description:"Possibili evoluzioni della conoscenza prodotta localmente da U. L’autonomia non si chiude in T4.",band:true,dash:"3 4"},
  {id:"SC",panel:2,symbol:"SC",name:"Copertura corrente",description:"Copertura sensoriale effettiva disponibile a C. Il ripristino del presente non ricrea le osservazioni perdute.",band:true,dash:"7 4"},
  {id:"GC",panel:2,symbol:"GC",name:"Grado di controllo",description:"Inviluppo del controllo raggiunto sul quadro canonico rispetto allo standard operativo; non una probabilità.",band:true,dash:"7 4"},
- {id:"DF",panel:2,symbol:"Df",name:"Debito funzionale",description:"Lavoro informativo acquisito da C, in attesa o in corso di trattamento. Scostamento d_f(t) = D_f(t) − D_rif: sotto zero il carico è inferiore al riferimento fisiologico, non negativo in assoluto. A (tratteggio): lieve riduzione; B (continua): forte riduzione e possibile picco. Scenari, non limiti fissi né misure della qualità conoscitiva.",scenarios:["A","B"]}
+ {id:"DF",panel:2,symbol:"Df",name:"Debito funzionale",description:"Debito rappresentato dalla pendenza informativa da lavorare ed integrare nel quadro aggregato",scenarios:["A","B"]}
 ];
 const phases = [
  "T0 · Condizione precedente: collegamento attivo e riferimenti operativi raggiunti.",
@@ -86,6 +86,33 @@ function state(id,t) {
 }
 
 const escape = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c]);
+// Split the space between the rendered polylines at each crossing/contact.
+// Each lobe is a simple polygon; neither scenario becomes a permanent bound.
+function scenarioAreas(a,b) {
+ const areas=[];
+ let first=[],second=[];
+ const close=()=>{
+  const polygon=[...first,...second.reverse()].filter((p,i,all)=>!i||p[0]!==all[i-1][0]||p[1]!==all[i-1][1]);
+  if(polygon.length && polygon[0][0]===polygon.at(-1)[0] && polygon[0][1]===polygon.at(-1)[1]) polygon.pop();
+  if(polygon.length>=3) areas.push(polygon);
+  first=[];second=[];
+ };
+ for(let i=1;i<a.length;i++) {
+  if(a[i][0]===a[i-1][0]) continue;
+  const before=a[i-1][1]-b[i-1][1],after=a[i][1]-b[i][1];
+  if(before===0 && after===0){close();continue;}
+  if(!first.length){first.push(a[i-1]);second.push(b[i-1]);}
+  if(before*after<0) {
+   const q=before/(before-after);
+   const crossing=[a[i-1][0]+q*(a[i][0]-a[i-1][0]),a[i-1][1]+q*(a[i][1]-a[i-1][1])];
+   first.push(crossing);second.push(crossing);close();
+   first.push(crossing);second.push(crossing);
+  }
+  first.push(a[i]);second.push(b[i]);
+  if(after===0) close();
+ }
+ close();return areas;
+}
 function render(panel, width=560, height=150, event=3) {
  const originalHeight=[210,310,327][panel];
  const left=49, right=width-13, top=12, bottom=height-23;
@@ -99,7 +126,6 @@ function render(panel, width=560, height=150, event=3) {
  out+=line(left,y(p.zero),right,y(p.zero),panel===2?"mr-baseline":"mr-axis");
  if(panel===2) {
   out+=label(left-7,y(p.zero)+4,"0");
-  out+=label(left+7,top+12,"Df: A ┄  B ━","start");
  } else {
   out+=label(left-7,y(p.zero)+4,"0");
   if(panel===1) out+=label(left-7,y(p.zero)-8,"Iᵤ꜀ 1")+label(left-7,y(p.zero+111)+4,"Iᵤ꜀ 0")+label(left-7,y(p.zero-76),"+")+label(left-7,y(p.zero+87),"−");
@@ -108,6 +134,10 @@ function render(panel, width=560, height=150, event=3) {
  const bands=[...series].sort((a,b)=>(a.id==="KL"?-1:0)-(b.id==="KL"?-1:0));
  bands.filter(d=>d.band).forEach(d=> {
   out+=`<path data-series="${d.id}" class="mr-band" d="${path([...makePoints(d,p,0),...makePoints(d,p,1).reverse()])}Z"/>`;
+ });
+ series.filter(d=>d.scenarios).forEach(d=> {
+  const areas=scenarioAreas(makePoints(d,p,0),makePoints(d,p,1));
+  out+=`<path data-series="${d.id}" class="mr-band" d="${areas.map(area=>path(area)+"Z").join(" ")}"/>`;
  });
  series.forEach(d=> {
   // A solid SC upper edge remains visible through GC's dashes on their shared zero.
