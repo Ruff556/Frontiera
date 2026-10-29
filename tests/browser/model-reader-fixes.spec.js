@@ -98,8 +98,8 @@ test.describe('A — contenitori e rappresentazione',()=>{
   await page.goto(`http://127.0.0.1:4173${URL}`);await page.waitForTimeout(150);
   await expect(page.locator(ROOT)).not.toHaveAttribute('data-ready','true');
   await page.mouse.move(180,700);await page.mouse.wheel(0,800);await expect.poll(()=>page.evaluate(()=>scrollY)).toBeGreaterThan(0);
-  await page.getByText('Perché T4: la coerenza di un presente diverso',{exact:true}).scrollIntoViewIfNeeded();
-  await expect(page.getByText('Perché T4: la coerenza di un presente diverso',{exact:true})).toBeInViewport();
+  await page.locator(`${ROOT} .mr-end`).scrollIntoViewIfNeeded();
+  await expect(page.locator(`${ROOT} .mr-end`)).toBeInViewport();
   await page.setViewportSize({width:430,height:932});await expect(page.locator('html')).not.toHaveAttribute('data-model-reader-ready','true');
   await context.close();
  });

@@ -18,9 +18,9 @@ async function scrollToVariable(page,key) {
 }
 test('nuova articolazione: segmenti, legende, serie SVG e focus desktop coerenti',async({page})=>{
  await page.setViewportSize({width:1366,height:768});await ready(page);
- const r=page.locator(ROOT),groups=[['C','U'],['I','KG','KL'],['SC','GC','D']];
+ const r=page.locator(ROOT),groups=[['C','U'],['I','KG','KL'],['SC','GC','DF']];
  expect(await r.locator('[data-context-panel]').evaluateAll(nodes=>nodes.map(n=>n.dataset.contextPanel+(n.dataset.contextVariable?':'+n.dataset.contextVariable:''))))
-  .toEqual(['0','0','0:C','0:U','0','1','1:I','1:KG','1:KL','2','2:SC','2:GC','2:D','2']);
+  .toEqual(['0','0','0:C','0:U','0','1','1:I','1:KG','1:KL','2','2:SC','2:GC','2:DF','2']);
  // La chiusura editoriale appartiene ancora al contesto interattivo KL.
  await expect(r.locator('[data-context-variable="KL"]')).toContainText('Resta un’ultima conseguenza.');
  for(const [panel,ids] of groups.entries()) {
@@ -53,9 +53,69 @@ test('nuova articolazione: segmenti, legende, serie SVG e focus desktop coerenti
 });
 test('mobile: nuovo ordine singolare/aggregato reversibile allo scroll',async({page})=>{
  await page.setViewportSize({width:390,height:844});await ready(page);const r=page.locator(ROOT);
- const sequence=[['I','1'],['KG','1'],['KL','1'],['SC','2'],['GC','2'],['D','2']];
+ const sequence=[['I','1'],['KG','1'],['KL','1'],['SC','2'],['GC','2'],['DF','2']];
  for(const [id,panel] of [...sequence,...sequence.slice().reverse()]) {
   await scrollToVariable(page,id);await expect(r).toHaveAttribute('data-focus',id);await expect(r).toHaveAttribute('data-panel',panel);
+ }
+});
+for(const [width,height] of [[320,568],[390,844],[1366,768],[1440,900]]) test(`Panel 2B ${width}×${height}: scenari Df, zero mediano e focus comune`,async({page})=>{
+ await page.setViewportSize({width,height});await ready(page);
+ const r=page.locator(ROOT),panel=r.locator('[data-model-panel="2"]');
+ if(await r.getAttribute('data-layout')==='mobile') {
+  await r.locator('[data-resume]').click();
+  await r.locator('.mr-reading').evaluate(el=>el.scrollTop+=200);
+  await r.locator('[data-panel-step="1"]').click();
+  await r.locator('[data-panel-step="1"]').click();
+  await scrollToVariable(page,'DF');
+  await expect(r).toHaveAttribute('data-overview','false');
+  // ResizeObserver may need another frame after the compact layout settles.
+  await expect.poll(()=>r.evaluate(r=>Math.abs(
+   r.querySelector('[data-model-panel="2"]').getBoundingClientRect().top-
+   r.querySelector('.mr-plots-window').getBoundingClientRect().top
+  ))).toBeLessThan(.5);
+  await page.waitForTimeout(200); // Capture the settled ResizeObserver layout.
+ } else await scrollToVariable(page,'DF');
+ await expect(r).toHaveAttribute('data-focus','');
+ await expect(panel).toBeInViewport();
+ await expect(panel.locator('.mr-legend [data-focus="DF"]')).toHaveCount(1);
+ const curves=panel.locator('[data-series="DF"]');
+ await expect(curves).toHaveCount(2);
+ await expect(curves.nth(0)).toHaveAttribute('data-scenario','A');
+ await expect(curves.nth(0)).toHaveAttribute('stroke-dasharray','4 3');
+ await expect(curves.nth(1)).toHaveAttribute('data-scenario','B');
+ expect(await curves.nth(1).getAttribute('stroke-dasharray')).toBeNull();
+ await expect(panel.locator('.mr-band[data-series="DF"]')).toHaveCount(0);
+ expect(await r.locator('[data-series].is-muted').count()).toBe(0);
+ const geometry=await panel.locator('svg').evaluate(svg=>{
+  const baseline=Number(svg.querySelector('.mr-baseline').getAttribute('y1'));
+  return {baseline,height:svg.viewBox.baseVal.height,
+   paths:[...svg.querySelectorAll('.mr-curve')].map(path=>{const {x,y,width,height}=path.getBBox();return {id:path.dataset.series,bounds:{x,y,width,height}};})};
+ });
+ expect(geometry.baseline).toBeCloseTo((12+geometry.height-23)/2,2);
+ for(const {id,bounds} of geometry.paths) {
+  expect(bounds.y).toBeGreaterThanOrEqual(11.99);
+  expect(bounds.y+bounds.height).toBeLessThanOrEqual(geometry.height-22.99);
+  if(id!=='DF') expect(bounds.y).toBeGreaterThanOrEqual(geometry.baseline-.01);
+ }
+ fs.mkdirSync('reports/modelli',{recursive:true});
+ await page.screenshot({path:`reports/modelli/panel2b-${width}-neutro.png`});
+ await panel.screenshot({path:`reports/modelli/panel2b-${width}-dettaglio.png`});
+ await panel.locator('[data-focus="DF"]').click();
+ await expect(r).toHaveAttribute('data-focus','DF');
+ for(const curve of await curves.all()) {
+  await expect(curve).toHaveClass(/is-focused/);
+  expect(await curve.evaluate(el=>getComputedStyle(el).opacity)).toBe('1');
+ }
+ await expect(r.locator('[data-term="DF"]')).toHaveClass(/is-focused/);
+ await page.screenshot({path:`reports/modelli/panel2b-${width}-focus-df.png`});
+ await panel.screenshot({path:`reports/modelli/panel2b-${width}-dettaglio-focus-df.png`});
+ // A time change redraws all SVG nodes; both scenarios must retain focus.
+ if(await r.getAttribute('data-layout')==='desktop') {
+  await r.locator('[data-model-event="4"]').click();
+  for(const curve of await curves.all()) await expect(curve).toHaveClass(/is-focused/);
+  await r.locator('.mr-margin[data-focus="DF"]').click();
+  await expect(r).toHaveAttribute('data-focus','');
+  expect(await r.locator('[data-series].is-muted').count()).toBe(0);
  }
 });
 for(const [width,height,layout] of viewports) test(`M1 ${width}×${height}: layout, geometrie visibili e assenza overflow`,async({page})=>{
@@ -148,9 +208,9 @@ test('mobile: transizione fra pannelli proporzionale, reversibile e ferma a met�
 });
 test('resize, orientamento e testo ingrandito preservano focus e non oscillano',async({page})=>{
  await page.setViewportSize({width:1366,height:768});await ready(page);const r=page.locator(ROOT);
- await r.locator('.mr-legend [data-focus="D"]').click();
- await page.setViewportSize({width:390,height:844});await expect(r).toHaveAttribute('data-layout','mobile');await expect(r).toHaveAttribute('data-focus','D');
- await page.setViewportSize({width:1024,height:768});await expect(r).toHaveAttribute('data-layout','desktop');await expect(r).toHaveAttribute('data-focus','D');
+ await r.locator('.mr-legend [data-focus="DF"]').click();
+ await page.setViewportSize({width:390,height:844});await expect(r).toHaveAttribute('data-layout','mobile');await expect(r).toHaveAttribute('data-focus','DF');
+ await page.setViewportSize({width:1024,height:768});await expect(r).toHaveAttribute('data-layout','desktop');await expect(r).toHaveAttribute('data-focus','DF');
  await page.addStyleTag({content:'html{font-size:24px!important}'});
  await page.setViewportSize({width:1025,height:768});await expect(r).toHaveAttribute('data-layout','mobile');
  await page.waitForTimeout(200);await expect(r).toHaveAttribute('data-layout','mobile');
@@ -182,7 +242,7 @@ test('tastiera, controlli alternativi allo swipe e navigazione globale',async({p
 test('senza JavaScript: testo completo, tre SVG e anteprima esclusa dagli indici',async({browser,request})=>{
  const context=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});const page=await context.newPage();await page.goto(`http://127.0.0.1:4173${URL}`);
  await expect(page.locator(`${ROOT} .mr-chart`)).toHaveCount(3);
- await expect(page.getByText('Perché T4: la coerenza di un presente diverso',{exact:true})).toBeVisible();
+ await expect(page.locator(`${ROOT} .mr-end`)).toBeVisible();
  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content','noindex, follow');
  expect(await (await request.get('/sitemap.xml')).text()).not.toContain(URL);
  expect(await (await request.get('/feed.xml')).text()).not.toContain(URL);

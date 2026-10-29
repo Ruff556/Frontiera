@@ -2,7 +2,7 @@
    retain their own scroll, type and palette. */
 .model-reader{
   --mr-C:#E9EFF1;--mr-U:#7DC2DA;--mr-GC:#D6B978;--mr-KG:#E08D72;
-  --mr-KL:#A6B9E2;--mr-SC:#91C5AF;--mr-I:#C2CCDA;--mr-D:#DCA4BD;
+  --mr-KL:#A6B9E2;--mr-SC:#91C5AF;--mr-I:#C2CCDA;--mr-DF:#DCA4BD;
   --mr-safe-bottom:env(safe-area-inset-bottom,0px);--mr-gap:.65rem;--mr-compact:16rem;--mr-expanded:40rem;--mr-graph-h:var(--mr-expanded);
   color:var(--on-dark);margin:0 auto;padding:1rem;max-width:1800px;
 }
@@ -13,7 +13,7 @@
 .model-reader [data-focus="KL"],.model-reader [data-series="KL"],.model-reader [data-term="KL"]{--variable:var(--mr-KL)}
 .model-reader [data-focus="SC"],.model-reader [data-series="SC"],.model-reader [data-term="SC"]{--variable:var(--mr-SC)}
 .model-reader [data-focus="I"],.model-reader [data-series="I"],.model-reader [data-term="I"]{--variable:var(--mr-I)}
-.model-reader [data-focus="D"],.model-reader [data-series="D"],.model-reader [data-term="D"]{--variable:var(--mr-D)}
+.model-reader [data-focus="DF"],.model-reader [data-series="DF"],.model-reader [data-term="DF"]{--variable:var(--mr-DF)}
 .mr-heading{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:.7rem}
 .mr-heading h1{font:600 clamp(1.2rem,2.1vw,1.85rem)/1.15 Archivo,sans-serif;margin:.25rem 0 0;letter-spacing:-.03em}
 .mr-kicker,.mr-edition{font:400 .65rem/1.4 'IBM Plex Mono',monospace;letter-spacing:.05em;color:var(--accent-hi)}
@@ -34,6 +34,7 @@
 .mr-chart{display:block;width:100%;height:9rem;min-height:0;overflow:visible;flex:1;color:var(--on-dark-2)}
 .mr-chart text{font:400 11px 'IBM Plex Mono',monospace;fill:currentColor}
 .mr-axis{stroke:var(--on-dark);stroke-opacity:.16;stroke-width:1}
+.mr-baseline{stroke:var(--on-dark);stroke-opacity:.5;stroke-width:1;stroke-dasharray:5 4}
 .mr-guide{stroke:var(--on-dark);stroke-opacity:.65;stroke-width:1;stroke-dasharray:2 3}
 .mr-band{fill:var(--variable);fill-opacity:.14;stroke:none}
 .mr-curve{stroke:var(--variable);stroke-width:2.2;fill:none;stroke-linejoin:round}

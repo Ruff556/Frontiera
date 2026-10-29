@@ -4,7 +4,7 @@ layout: layouts/base.njk
 <div class="model-reader" data-model-reader="{{ model.id }}">
   <header class="mr-heading">
     <div><span class="mr-kicker">M | Modelli <span>· Anteprima</span></span><h1>{{ model.code }} <span aria-hidden="true">—</span> {{ model.title }}</h1></div>
-    <span class="mr-edition">Prima stesura · Canone 03.10.2026</span>
+    <span class="mr-edition">Revisione · 29.10.2026</span>
   </header>
   <div class="mr-workspace">
     <aside class="mr-graph mr-cell" aria-label="Rappresentazione del modello">
@@ -34,14 +34,14 @@ layout: layouts/base.njk
       </div>
       <p class="mr-phase" data-phase aria-live="polite">{{ model.phases[3] }}</p>
       <div class="mr-description" aria-live="polite"><strong data-description-title>Nessuna variabile in focus</strong><p data-description>Seleziona una sigla nel grafico o nel testo per seguirne il significato.</p></div>
-      <p class="mr-caption">Geometrie concettuali · Scale distinte ·<br> Fasce di possibilità, non probabilità</p>
+      <p class="mr-caption">Geometrie concettuali · Scale distinte ·<br> Scenari e fasce di possibilità, non probabilità</p>
     </aside>
     <div class="mr-reading-frame mr-cell" aria-hidden="true"></div>
     <div class="mr-reading" tabindex="0" role="region" aria-label="Testo del modello: scorri per leggere">
-      <article class="mr-paper" aria-label="Prima stesura di M1">
-        <p class="mr-draft-note">Anteprima di lavoro · Testo provvisorio</p>
+      <article class="mr-paper" aria-label="Testo di M1">
+        <p class="mr-draft-note">Anteprima di lavoro · Revisione editoriale 29.10.2026</p>
         {{ content | safe }}
-        <p class="mr-end">Fine della prima stesura · M1</p>
+        <p class="mr-end">Fine del modello · M1</p>
       </article>
     </div>
     <button type="button" class="mr-reading-tab" data-resume>Leggi il modello <span aria-hidden="true">↓</span></button>

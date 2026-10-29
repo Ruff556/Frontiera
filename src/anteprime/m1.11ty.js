@@ -9,7 +9,7 @@ module.exports = class {
       layout: "layouts/modello.njk",
       permalink: "/anteprime/modelli/m1/",
       titolo: "M1 — Ritorno alla coerenza",
-      descrizione: "Anteprima del lettore Modelli di Frontiera. Prima stesura editoriale, canone del 3 ottobre 2026.",
+      descrizione: "Anteprima del lettore Modelli di Frontiera. Revisione editoriale del 29 ottobre 2026, con debito funzionale Df.",
       noindex: true,
       eleventyExcludeFromCollections: true,
       model: {
