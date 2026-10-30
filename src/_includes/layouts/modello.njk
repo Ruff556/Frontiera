@@ -21,7 +21,9 @@ layout: layouts/base.njk
           {% for panel in model.panels %}
           <section class="mr-panel" data-model-panel="{{ panel.index }}" aria-label="{{ panel.name }}">
             <header><h2>{{ panel.name }}</h2><div class="mr-legend" aria-label="Focus variabili: {{ panel.name }}">
-              {% for variable in panel.defs %}<button type="button" class="mr-variable" data-focus="{{ variable.id }}" aria-pressed="false" aria-label="{{ variable.symbol }} · {{ variable.name }}">{{ variable.symbol }}</button>{% endfor %}
+              {% for variable in panel.defs %}
+              <button type="button" class="mr-variable" data-focus="{{ variable.id }}" aria-pressed="false" aria-label="{{ variable.symbol }} · {{ variable.name }}"><span class="mr-variable-symbol" aria-hidden="true">{{ variable.symbol }}</span><span class="mr-variable-label" aria-hidden="true">{{ variable.symbol }} · {{ variable.name }}</span></button>
+              {% endfor %}
             </div></header>
             <svg class="mr-chart" viewBox="0 0 560 150" role="img" aria-label="{{ panel.description }}">{{ panel.svg | safe }}</svg>
           </section>

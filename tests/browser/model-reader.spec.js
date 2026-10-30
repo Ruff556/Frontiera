@@ -318,3 +318,145 @@ test('esplorazione dalla panoramica: la linguetta porta all’inizio del testo',
  await expect.poll(async()=>Math.round((await r.locator('.mr-graph').boundingBox()).height)).toBe(272);
  await expect(r.locator('.mr-prose p').first()).toBeVisible();
 });
+
+// The elastic strip is a presentation of the existing focus, never a second
+// interaction state. Canonical definitions drive the labels and expectations.
+async function elasticCells(r) {
+ return r.locator('.mr-legend .mr-variable').evaluateAll(buttons=>buttons.map(b=>{
+  const label=b.querySelector('.mr-variable-label'),rect=b.getBoundingClientRect();
+  const range=document.createRange();range.selectNodeContents(label);
+  return {id:b.dataset.focus,pressed:b.getAttribute('aria-pressed'),width:rect.width,height:rect.height,
+   x:rect.x,right:rect.right,y:rect.y,label:label.textContent,opacity:getComputedStyle(label).opacity,
+   display:getComputedStyle(label).display,lines:[...range.getClientRects()].map(r=>r.toJSON()),
+   labelRect:label.getBoundingClientRect().toJSON(),symbol:b.querySelector('.mr-variable-symbol').getBoundingClientRect().toJSON()};
+ }));
+}
+for(const [width,height] of [[320,568],[390,844],[430,932],[768,1024],[1000,660]]) {
+ test(`celle elastiche ${width}×${height}: AUTO, manuale, neutro e nomi canonici`,async({page})=>{
+  await page.setViewportSize({width,height});await page.emulateMedia({reducedMotion:'reduce'});await ready(page);
+  const r=page.locator(ROOT),read=r.locator('.mr-reading');
+  await expect(r).toHaveAttribute('data-layout','mobile');
+  expect((await elasticCells(r)).every(c=>c.display==='none')).toBe(true);
+  // Even a manual selection in the initial overview keeps all cells compact.
+  await r.locator('.mr-legend [data-focus="KG"]').click();
+  expect((await elasticCells(r)).every(c=>c.display==='none')).toBe(true);
+  await r.locator('[data-panel-sync]').click();
+  const defs=await page.evaluate(()=>window.FrontieraModels.m1.defs);
+  for(const def of defs) {
+   await scrollToVariable(page,def.id);
+   await expect(r).toHaveAttribute('data-focus',def.id);
+   await expect(r).toHaveAttribute('data-overview','false');
+   // Marginal prose controls share .mr-variable but must keep their mobile
+   // display:none; exposing them would reflow the article and move scrollTop.
+   expect(await r.locator('.mr-margin').evaluateAll(nodes=>nodes.every(n=>getComputedStyle(n).display==='none'))).toBe(true);
+   const button=r.locator(`.mr-legend [data-focus="${def.id}"]`);
+   await expect(button).toHaveAccessibleName(`${def.symbol} · ${def.name}`);
+   await expect(button.locator('.mr-variable-label')).toHaveCSS('opacity','1');
+   const cells=await elasticCells(r),active=cells.find(c=>c.id===def.id);
+   expect(active.label).toBe(`${def.symbol} · ${def.name}`);
+   expect(active.opacity).toBe('1');
+   expect(cells.filter(c=>c.opacity==='1').map(c=>c.id)).toEqual([def.id]);
+   const peers=cells.filter(c=>defs.find(d=>d.id===c.id).panel===def.panel);
+   for(const cell of peers) {
+    expect(cell.width).toBeGreaterThanOrEqual(44);expect(cell.height).toBeGreaterThanOrEqual(44);
+    expect(cell.x).toBeGreaterThanOrEqual(0);expect(cell.right).toBeLessThanOrEqual(width);
+    expect(cell.y).toBeCloseTo(active.y,1);
+    if(cell.id!==def.id) {
+     expect(active.width).toBeGreaterThan(cell.width);
+     expect(cell.opacity).toBe('0');
+     expect(cell.symbol.y+cell.symbol.height/2).toBeCloseTo(cell.y+cell.height/2,0);
+    }
+   }
+   for(const line of active.lines) {
+    expect(line.x).toBeGreaterThanOrEqual(active.labelRect.x-.5);
+    expect(line.right).toBeLessThanOrEqual(active.labelRect.right+.5);
+    expect(line.bottom).toBeLessThanOrEqual(active.y+active.height);
+   }
+   expect(new Set(active.lines.map(l=>Math.round(l.y))).size).toBeLessThanOrEqual(2);
+   const before=await r.evaluate(r=>({scroll:r.querySelector('.mr-reading').scrollTop,
+    chart:r.querySelector('.mr-chart').getBoundingClientRect().toJSON(),paper:r.querySelector('.mr-paper').getBoundingClientRect().toJSON()}));
+   // Toggle with the keyboard and return to AUTO without changing the prose.
+   await button.focus();await page.keyboard.press('Enter');
+   await expect(r).toHaveAttribute('data-sync','focus');
+   await button.press('Enter');await expect(r).toHaveAttribute('data-sync','auto');
+   const after=await r.evaluate(r=>({scroll:r.querySelector('.mr-reading').scrollTop,
+    chart:r.querySelector('.mr-chart').getBoundingClientRect().toJSON(),paper:r.querySelector('.mr-paper').getBoundingClientRect().toJSON()}));
+   expect(after).toEqual(before);
+  }
+  await scrollToVariable(page,'KG');await expect(r).toHaveAttribute('data-focus','KG');
+  await r.locator('.mr-legend [data-focus="I"]').click();
+  await read.evaluate(e=>e.scrollTop+=25);await expect(r).toHaveAttribute('data-focus','I');
+  await expect(r.locator('.mr-legend [data-focus="I"] .mr-variable-label')).toHaveCSS('opacity','1');
+  expect((await elasticCells(r)).filter(c=>c.opacity==='1').map(c=>c.id)).toEqual(['I']);
+  await r.locator('[data-panel-sync]').click();await expect(r).toHaveAttribute('data-focus','KG');
+  if([320,390,430].includes(width)) {
+   fs.mkdirSync('reports/modelli',{recursive:true});
+   await page.screenshot({path:`reports/modelli/elastic-${width}-kg.png`});
+   await r.locator('.mr-legend [data-focus="KL"]').click();
+   await page.screenshot({path:`reports/modelli/elastic-${width}-kl.png`});
+   await r.locator('[data-panel-sync]').click();
+  }
+  await r.locator('[data-panel-step="1"]').click();await expect(r).toHaveAttribute('data-focus','');
+  expect((await elasticCells(r)).every(c=>c.opacity==='0')).toBe(true);
+  await r.locator('[data-panel-sync]').click();await expect(r).toHaveAttribute('data-focus','KG');
+  // A neutral prose segment collapses every label while staying in reading mode.
+  await r.evaluate(r=>{const read=r.querySelector('.mr-reading'),segment=r.querySelector('[data-context-panel="2"][data-context-variable=""]');
+   read.scrollTop+=segment.getBoundingClientRect().top-read.getBoundingClientRect().top-parseFloat(getComputedStyle(r).getPropertyValue('--mr-compact'))+12;});
+  await expect(r).toHaveAttribute('data-focus','');
+  expect((await elasticCells(r)).every(c=>c.opacity==='0')).toBe(true);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false);
+ });
+}
+
+test('celle elastiche: animazione continua, interrompibile e confinata alla fascia',async({page})=>{
+ await page.setViewportSize({width:390,height:844});await page.emulateMedia({reducedMotion:'no-preference'});await ready(page);
+ const r=page.locator(ROOT);await scrollToVariable(page,'I');await expect(r).toHaveAttribute('data-focus','I');
+ await page.waitForTimeout(350);
+ // Sample actual rendered frames, including a mid-flight reversal and a third
+ // destination. SVG mutations would expose redundant redraw/measurement loops.
+ const result=await r.evaluate(async r=>{
+  const panel=r.querySelector('[data-model-panel="1"]'),buttons=[...panel.querySelectorAll('.mr-variable')];
+  const chart=panel.querySelector('.mr-chart'),read=r.querySelector('.mr-reading'),paper=r.querySelector('.mr-paper');
+  const snapshot=()=>({widths:buttons.map(b=>b.getBoundingClientRect().width),xs:buttons.map(b=>b.getBoundingClientRect().x),
+   chart:chart.getBoundingClientRect().toJSON(),graph:r.querySelector('.mr-graph').getBoundingClientRect().toJSON(),
+   paper:paper.getBoundingClientRect().toJSON(),scroll:read.scrollTop,
+   opacity:buttons.map(b=>getComputedStyle(b.querySelector('.mr-variable-label')).opacity)});
+  let mutations=0;const observer=new MutationObserver(records=>mutations+=records.length);
+  observer.observe(chart,{childList:true,subtree:true});
+  const before=snapshot(),frames=[];buttons[1].click();let reversed=false,third=false,start=performance.now();
+  await new Promise(resolve=>{function frame(now){const t=now-start;
+   frames.push({...snapshot(),t});
+   if(t>=90&&!reversed){buttons[0].click();reversed=true;}
+   if(t>=150&&!third){buttons[2].click();third=true;}
+   if(t<500)requestAnimationFrame(frame);else resolve();}requestAnimationFrame(frame);});
+  observer.disconnect();return {before,frames,mutations};
+ });
+ expect(result.frames.length).toBeGreaterThan(10);expect(result.mutations).toBe(0);
+ const first=result.frames.filter(f=>f.t<90);
+ expect(first.some(f=>f.widths[1]>result.before.widths[1]+5)).toBe(true);
+ expect(first.every(f=>Number(f.opacity[1])===0)).toBe(true);
+ for(const frame of result.frames) {
+  expect(frame.chart).toEqual(result.before.chart);expect(frame.graph).toEqual(result.before.graph);
+  expect(frame.paper).toEqual(result.before.paper);expect(frame.scroll).toBe(result.before.scroll);
+  expect(frame.widths.reduce((a,b)=>a+b,0)).toBeCloseTo(result.before.widths.reduce((a,b)=>a+b,0),0);
+  for(let i=1;i<3;i++)expect(frame.xs[i]).toBeGreaterThanOrEqual(frame.xs[i-1]+frame.widths[i-1]);
+ }
+ expect(new Set(result.frames.map(f=>Math.round(f.widths[2]))).size).toBeGreaterThan(5);
+ expect(result.frames.at(-1).widths[2]).toBeGreaterThan(result.frames.at(-1).widths[0]);
+ expect(result.frames.at(-1).opacity).toEqual(['0','0','1']);
+ await page.emulateMedia({reducedMotion:'reduce'});
+ const reduced=await r.evaluate(r=>{const b=r.querySelector('.mr-legend [data-focus="KG"]');b.click();return {
+  transition:getComputedStyle(b).transitionDuration,opacity:getComputedStyle(b.querySelector('.mr-variable-label')).opacity,
+  animations:b.closest('.mr-legend').getAnimations({subtree:true}).length};});
+ expect(reduced).toEqual({transition:'0s',opacity:'1',animations:0});
+});
+
+test('celle elastiche: desktop conserva simboli compatti e geometria',async({page})=>{
+ await page.setViewportSize({width:1366,height:768});await ready(page);const r=page.locator(ROOT);
+ const before=(await elasticCells(r)).map(c=>({width:c.width,height:c.height}));
+ for(const id of ['C','U','I','KG','KL','SC','GC','DF']) {
+  await scrollToVariable(page,id);await expect(r).toHaveAttribute('data-focus',id);
+  const cells=await elasticCells(r);expect(cells.every(c=>c.display==='none')).toBe(true);
+  expect(cells.map(c=>({width:c.width,height:c.height}))).toEqual(before);
+ }
+});
