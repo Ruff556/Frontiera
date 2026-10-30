@@ -96,7 +96,7 @@
 .mr-sync small{font-size:.57rem;color:var(--on-dark-3);margin-top:.2rem}
 .mr-sync[aria-pressed="true"]{border-color:var(--accent-hi);background:#193e50;box-shadow:inset 0 0 16px #7dc2da12}
 [data-layout="mobile"] .mr-description,[data-layout="mobile"] .mr-events,[data-layout="mobile"] .mr-phase{display:none}
-[data-layout="mobile"] .mr-context-tools{display:block;height:1rem;flex:none;text-align:center;font:400 .6rem/1.2 Archivo,sans-serif}
+[data-layout] .mr-context-tools{display:block;height:1rem;flex:none;text-align:center;font:400 .6rem/1.2 Archivo,sans-serif}
 .mr-context-tools button{background:transparent;color:var(--accent-hi);border:0;text-decoration:underline;font:inherit;padding:.2rem .4rem}
 [data-layout="mobile"] .mr-caption{font-size:.56rem;flex:none}
 [data-layout="mobile"] .mr-caption br{display:none}

@@ -33,7 +33,7 @@ Il testo di partenza ha SHA-256
   fisiologico può essere positivo in assoluto. Un tratto sotto lo zero non
   indica debito assoluto negativo. Nessun legame deterministico con SC o GC;
   nessuna ampiezza calibrata o misura diretta della qualità conoscitiva.
-- Conservati colori del lettore, focus esclusivo manuale desktop, neutralità
+- Conservati colori del lettore, focus esclusivo con override manuale, neutralità
   senza attenuazione, sincronizzazione contestuale mobile e renderer generico
   `model-reader.js`, che già gestisce tutti gli elementi della stessa serie.
 - Prosa preservata: solo due identificativi tecnici e quattro correzioni
@@ -52,7 +52,7 @@ La discrepanza è già presente in `main`: questa revisione conserva sia la pros
 sia la geometria di Panel 2A, come richiesto dal mandato. Un eventuale
 allineamento di KGᵤ richiede un intervento successivo esplicito.
 
-### Verifica corrente
+### Verifica della revisione Df
 
 - `npm run verify:model-m1`: **PASS**, inclusi 5.005 confronti geometrici storici.
 - `npm run build`: **PASS**, build completa e tutti i verificatori di output.
@@ -161,25 +161,38 @@ Le occorrenze evidenziabili usano `data-term`, esplicito, senza sostituzioni glo
 ## Stati e comportamento
 
 Lo stato spaziale `space` (panoramica/lettura/espanso) e il riferimento temporale
-`time` sono indipendenti dalla modalità mobile `mode`. Un solo resolver determina
+`time` sono indipendenti dalla modalità di interazione `mode`. Un solo resolver determina
 insieme pannello e focus:
 
 | Modalità | Pannello | Focus |
 | --- | --- | --- |
-| `auto` | Segue il testo, con passaggio continuo e reversibile | Variabile contestuale o neutro |
-| `focus` | Quello della variabile scelta, anche scorrendo altri capitoli | Manuale persistente |
+| `auto` | Segue il testo; passaggio continuo e reversibile su mobile | Variabile contestuale o neutro |
+| `focus` | Quello della variabile scelta, anche scorrendo altri capitoli | Manuale persistente; anche neutro su desktop |
 | `free` | Quello scelto con frecce o swipe | Nessuno |
 
-Il primo tap su una variabile automatica la fissa manualmente. Il secondo tap
+Su mobile il primo tap su una variabile automatica la fissa manualmente. Il secondo tap
 sulla stessa selezione manuale ripristina AUTO. Frecce e swipe cancellano il focus
 precedente: prevale l'ultima scelta. “Allinea il focus al testo” è disponibile in
 entrambe le modalità manuali e richiama la stessa operazione del selettore del
 pannello: azzera gli override e ricalcola il contesto, senza spostare la prosa,
 cambiare l'espansione o il tempo selezionato.
 
-Su desktop il focus resta esclusivamente manuale: un secondo clic lo annulla,
-un'altra scelta lo trasferisce; lo scroll non lo modifica. Legenda, margine,
-tracciati e occorrenze marcate condividono la selezione.
+Su desktop AUTO è la modalità predefinita: il focus segue il segmento a 32 px
+dall’inizio dell’area di lettura; i segmenti neutri mostrano tutte le curve senza
+attenuazione. Su mobile il riferimento resta sotto il grafico compatto, secondo
+il comportamento già esistente. Entrambi i layout usano lo stesso resolver e la
+stessa evidenziazione di legenda, margini, tracciati e richiami testuali.
+
+Una selezione esplicita blocca il focus in modalità manuale, anche durante lo
+scroll. Su desktop il secondo clic sulla stessa variabile disattiva il focus e
+mantiene lo stato manuale neutro; «Allinea il focus al testo», ora disponibile
+anche su desktop, ripristina immediatamente AUTO. Su mobile il secondo tap
+continua a ripristinare AUTO. La navigazione libera fra pannelli resta distinta.
+
+Le variazioni di altezza dei segmenti aggiornano le coordinate memorizzate tramite
+ResizeObserver. Il cambio di layout conserva l’ultimo contesto di lettura stabile.
+Il focus automatico non scrive la posizione dello scroller: scorrimento, velocità
+e inerzia rimangono nativi; nessuno snapping o inseguimento del testo.
 
 Su mobile un solo contenitore scorre nativamente, anche dal fondo non interattivo
 del grafico. Non ci sono listener wheel/touch che impongono lo scroll, snap o
@@ -241,6 +254,16 @@ Durante la lettura compatta, le frecce consentono di consultare un pannello per 
   identificativi coerenti e assenza di riferimenti attivi a Dᵤ. Il controllo
   accetta il marcatore neutro finale vuoto presente nella revisione canonica,
   senza ripristinare la conclusione della prima stesura. È incluso nella build.
+- `npx playwright test tests/browser/model-reader-desktop-auto.spec.js`: 5 casi
+  dedicati ad AUTO desktop a 1366×768 e 1440×900: wheel nativa avanti/indietro,
+  neutri, focus comune dei tre elementi Df, override manuale e disattivazione,
+  riallineamento da tastiera senza nuovo scroll, cambi di layout, confini,
+  scroll rapido, altezze variabili e assenza di aggiornamenti ridondanti.
+  La suite M1 complessiva comprende ora **49 casi**.
+  Nella verifica della sincronizzazione desktop: **49/49 PASS**; verificatore
+  M1 e build completa **PASS**; suite browser globale **155/156 PASS**.
+  Il solo fallimento è il problema End/Home dell’infobox già riprodotto su
+  `main`: `scrollY` resta 18512 invece di 0. Nessuna modifica a quell’apparato.
 - `npx playwright test tests/browser/model-reader.spec.js`: 26 casi per i nove
   viewport richiesti, focus desktop/mobile, neutralità, assenza di scroll imposto,
   contrazione nativa, passaggi reversibili, espansione animata, swipe touch emulato,

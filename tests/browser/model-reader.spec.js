@@ -12,7 +12,7 @@ async function ready(page) {
 async function scrollToVariable(page,key) {
  await page.locator(ROOT).evaluate((r,key)=>{
   const reading=r.querySelector('.mr-reading'), segment=r.querySelector(`[data-context-variable="${key}"]`);
-  const compact=parseFloat(getComputedStyle(r).getPropertyValue('--mr-compact'));
+  const compact=r.dataset.layout==='mobile'?parseFloat(getComputedStyle(r).getPropertyValue('--mr-compact')):0;
   reading.scrollTop+=segment.getBoundingClientRect().top-reading.getBoundingClientRect().top-compact+12;
  },key);
 }
@@ -30,7 +30,9 @@ test('nuova articolazione: segmenti, legende, serie SVG e focus desktop coerenti
   for(const id of ids) {
    const segment=r.locator(`[data-context-variable="${id}"]`);
    await expect(segment).toHaveAttribute('data-context-panel',String(panel));
-   await scrollToVariable(page,id);await expect(r).toHaveAttribute('data-focus','');
+   if(await r.locator('[data-focus-sync]').isVisible()) await r.locator('[data-focus-sync]').click();
+   await scrollToVariable(page,id);await expect(r).toHaveAttribute('data-focus',id);
+   await expect(r).toHaveAttribute('data-sync','auto');
    await segment.locator('.mr-margin').click();await expect(r).toHaveAttribute('data-focus',id);
    await expect(chart.locator(`[data-focus="${id}"]`)).toHaveAttribute('aria-pressed','true');
    const series=chart.locator(`[data-series="${id}"]`);
@@ -74,7 +76,12 @@ for(const [width,height] of [[320,568],[390,844],[1366,768],[1440,900]]) test(`P
    r.querySelector('.mr-plots-window').getBoundingClientRect().top
   ))).toBeLessThan(.5);
   await page.waitForTimeout(200); // Capture the settled ResizeObserver layout.
- } else await scrollToVariable(page,'DF');
+ } else {
+  await scrollToVariable(page,'DF');
+  await expect(r).toHaveAttribute('data-focus','DF');
+  await panel.locator('[data-focus="DF"]').click();
+  await panel.locator('[data-focus="DF"]').click();
+ }
  await expect(r).toHaveAttribute('data-focus','');
  await expect(panel).toBeInViewport();
  await expect(panel.locator('.mr-legend [data-focus="DF"]')).toHaveCount(1);
@@ -156,7 +163,7 @@ for(const [width,height,layout] of viewports) test(`M1 ${width}×${height}: layo
  expect(errors).toEqual([]);
  fs.mkdirSync('reports/modelli',{recursive:true});await page.screenshot({path:`reports/modelli/${width}x${height}.png`});
 });
-test('desktop: focus esclusivo bidirezionale, neutro, niente scroll imposto',async({page})=>{
+test('desktop: override manuale esclusivo, neutro, niente scroll imposto',async({page})=>{
  await page.setViewportSize({width:1366,height:768});await ready(page);
  const r=page.locator(ROOT),read=r.locator('.mr-reading');
  expect(await r.locator('[data-series].is-muted').count()).toBe(0);

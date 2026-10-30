@@ -1,6 +1,6 @@
 /* Shared scientific/editorial reader. Model modules supply only canonical
    rendering and definitions. Spatial and temporal state stay independent of
-   the unified mobile interaction mode. No wheel interception or scroll snapping. */
+   the shared interaction mode. No wheel interception or scroll snapping. */
 (() => {
   "use strict";
   const clamp = (value, low, high) => Math.max(low, Math.min(high, value));
@@ -18,9 +18,9 @@
     const state = {
       layout: null, space: "overview", panel: 0, focus: null, time: 3,
       mode: "auto", freePanel: null, manualFocus: null,
-      desktopFocus: null, contextPanel: 0, contextFocus: null, progress: 0,
+      contextPanel: 0, contextFocus: null, progress: 0,
     };
-    let dimensions = {}, contexts = [], frame = 0, measureFrame = 0, animationTimer, failed = false;
+    let dimensions = {}, contexts = [], readingAnchor = null, frame = 0, measureFrame = 0, animationTimer, failed = false;
     let lastRenderSizes = [], lastFocus, pointer, panelAnimationTimer, suppressSelectorClick = false;
 
     // An inert, hidden intrinsic-size probe uses the same desktop CSS. It has
@@ -74,9 +74,9 @@
       if (fits) available -= desktopBottom;
       const layout = fits ? "desktop" : "mobile";
       const old = state.layout;
-      const anchor = contexts.find(c => c.bottom > reading.scrollTop + (old === "mobile" ? dimensions.compact + 24 : 24));
-      const anchorElement = anchor ? segments[contexts.indexOf(anchor)] : null;
-      const anchorOffset = anchor ? reading.scrollTop - anchor.top : 0;
+      // Use the last stable reading context: native scroll anchoring may already
+      // have adjusted scrollTop while the new viewport reflows the prose.
+      const anchor = readingAnchor;
       dimensions = {
         available, minimum, compact: Math.min(available - tabHeight - gap, Math.max(12.5 * rem, Math.min(17 * rem, available * .53))),
         expanded: available - tabHeight - gap, gap,
@@ -89,18 +89,20 @@
       root.dataset.layout = layout;
       root.dataset.ready = "true";
       state.layout = layout;
-      if (old && old !== layout && anchorElement) {
+      if (old && old !== layout && anchor) {
         measureContexts();
-        const next = contexts[segments.indexOf(anchorElement)];
-        reading.scrollTop = Math.max(0, next.top + anchorOffset);
+        const next = contexts[anchor.index];
+        const inset = layout === "mobile" ? dimensions.compact + 32 : 32;
+        const offset = Math.min(anchor.offset, Math.max(0, next.bottom - next.top - 1));
+        reading.scrollTop = Math.max(0, next.top + offset - inset);
       }
       measureContexts();
-      lastRenderSizes = [];
       update();
     }
     function context() {
-      const line = reading.scrollTop + dimensions.compact + 32;
+      const line = reading.scrollTop + (state.layout === "mobile" ? dimensions.compact : 0) + 32;
       const current = contexts.find(c => line >= c.top && line < c.bottom);
+      readingAnchor = current ? {index: contexts.indexOf(current), offset: line - current.top} : null;
       state.contextFocus = current?.variable || null;
       const starts = model.panels.map((_, i) => contexts.find(c => c.panel === i)?.top ?? Infinity);
       let progress = 0;
@@ -109,24 +111,23 @@
         progress += clamp((line - starts[i] + zone / 2) / zone, 0, 1);
       }
       state.progress = progress;
-      state.contextPanel = Math.round(progress);
+      state.contextPanel = state.layout === "desktop" && current ? current.panel : Math.round(progress);
     }
     function resolveInteraction() {
-      if (state.layout === "desktop") { state.focus = state.desktopFocus; return; }
       if (state.mode === "focus") {
         state.focus = state.manualFocus;
-        state.panel = model.defs.find(d => d.id === state.manualFocus).panel;
+        if (state.manualFocus) state.panel = model.defs.find(d => d.id === state.manualFocus).panel;
       } else if (state.mode === "free") {
         state.focus = null;
         state.panel = state.freePanel;
       } else {
         state.panel = state.contextPanel;
-        state.focus = state.space === "overview" ? null : state.contextFocus;
+        state.focus = state.layout === "mobile" && state.space === "overview" ? null : state.contextFocus;
       }
     }
     function realign() {
       state.mode = "auto";
-      state.manualFocus = state.freePanel = state.desktopFocus = null;
+      state.manualFocus = state.freePanel = null;
     }
     function focus() {
       const next = state.focus;
@@ -156,11 +157,11 @@
     }
     function update() {
       frame = 0;
-      if (failed || !state.layout) return;
+      if (failed || !state.layout || measureFrame) return;
+      if (state.layout === "mobile" && state.space !== "expanded") state.space = reading.scrollTop > 1 ? "reading" : "overview";
+      context();
+      resolveInteraction();
       if (state.layout === "mobile") {
-        if (state.space !== "expanded") state.space = reading.scrollTop > 1 ? "reading" : "overview";
-        context();
-        resolveInteraction();
         const distance = Math.max(1, dimensions.expanded - dimensions.compact);
         const collapse = state.space === "expanded" ? 0 : clamp(reading.scrollTop / distance, 0, 1);
         const graphHeight = state.space === "expanded" ? dimensions.expanded : dimensions.expanded - collapse * distance;
@@ -184,7 +185,6 @@
           panel.setAttribute("aria-hidden", String(!visible));
         });
       } else {
-        resolveInteraction();
         track.style.transform = "";
         panels.forEach(panel => { panel.style.height = ""; panel.style.flexBasis = ""; panel.inert = false; panel.removeAttribute("aria-hidden"); });
       }
@@ -228,7 +228,7 @@
       animatePanel();
       state.freePanel = clamp(state.panel + delta, 0, panels.length - 1);
       state.mode = "free";
-      state.manualFocus = state.desktopFocus = null;
+      state.manualFocus = null;
       update();
     }
     root.addEventListener("click", event => {
@@ -236,16 +236,12 @@
       if (!button) return;
       if (button.hasAttribute("data-focus")) {
         const key = button.dataset.focus;
-        if (state.layout === "desktop") {
-          state.desktopFocus = state.desktopFocus === key ? null : key;
-          state.manualFocus = state.desktopFocus;
-          state.mode = state.manualFocus ? "focus" : "auto";
-          state.freePanel = null;
-        } else if (state.mode === "focus" && state.manualFocus === key) {
-          realign();
+        if (state.mode === "focus" && state.manualFocus === key) {
+          if (state.layout === "mobile") realign();
+          else state.manualFocus = null; // Explicit desktop off: stay manual until realignment.
         } else {
           state.mode = "focus";
-          state.manualFocus = state.desktopFocus = key;
+          state.manualFocus = key;
           state.freePanel = null;
         }
       } else if (button.hasAttribute("data-focus-sync")) {
@@ -293,6 +289,9 @@
     // it never writes dimensions of the observed element itself.
     new ResizeObserver(schedule).observe(plotWindow);
     new ResizeObserver(scheduleMeasure).observe(q(".mr-heading"));
+    // Keep cached segment coordinates current when content height changes.
+    const contentObserver = new ResizeObserver(scheduleMeasure);
+    segments.forEach(segment => contentObserver.observe(segment));
     const nav = document.querySelector(".nav");
     if (nav) new ResizeObserver(scheduleMeasure).observe(nav);
     document.fonts.ready.then(scheduleMeasure);
@@ -310,6 +309,7 @@
       delete document.documentElement.dataset.modelReaderReady;
       charts.forEach((svg, i) => { svg.setAttribute("viewBox", staticCharts[i].viewBox); svg.innerHTML = staticCharts[i].markup; });
       probe.remove();
+      contentObserver.disconnect();
       console.error("Model Reader initialization failed", error);
     }
   });
