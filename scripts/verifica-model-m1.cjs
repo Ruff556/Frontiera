@@ -6,6 +6,19 @@ const model = require("../src/js/model-m1");
 const p = {zero:0,x:t=>t};
 const v = (id,t) => model.values(id,t,p);
 const [t0,t1,t2,t3,t4] = model.times;
+assert.deepEqual(model.phases,["Condizione precedente all’isolamento","Inizio interdizione dei collegamenti","Interdizione in corso","Ripristino dei collegamenti","Riconciliazione fra U e C"]);
+assert.deepEqual(Object.fromEntries(model.defs.map(d=>[d.id,d.description])),{
+  C:"Quadro informativo aggregato assunto come riferimento comune.",
+  U:"Scostamento fra la rappresentazione di U e il canone C.",
+  I:"Disponibilità del collegamento informativo fra U e C.",
+  KG:"Attualità delle informazioni sul quadro globale disponibili a U.",
+  KL:"Conoscenza del settore operativo sviluppata direttamente da U.",
+  SC:"Copertura osservativa effettiva del settore garantita dalle fonti accessibili a C.",
+  GC:"Grado di verifica e controllo del quadro condiviso raggiunto da C.",
+  DF:"Quantità di lavoro informativo acquisito da C e non ancora completato."
+});
+assert.equal(model.defs.find(d=>d.id==="SC").name,"Copertura sensoriale");
+assert.doesNotMatch(fs.readFileSync("src/_includes/layouts/modello.njk","utf8"),/mr-end|Fine del modello/);
 for (const t of [t0,t1,t2,t3,t4]) assert.deepEqual(v("C",t),[0]);
 for (const id of ["U","KG"]) {
   const base=0;
@@ -119,7 +132,7 @@ assert.ok(editorialEquations[0].includes("d(R<sub>U</sub>(t), K<sub>C</sub>(t))"
 const svg=model.render(2);
 assert.equal((svg.match(/data-series="DF"/g)||[]).length,3,"Due curve e un riempimento per un unico focus DF");
 assert.match(svg,/data-scenario="A"/);assert.match(svg,/data-scenario="B"/);
-assert.equal(model.defs.find(d=>d.id==="DF").description,"Debito rappresentato dalla pendenza informativa da lavorare ed integrare nel quadro aggregato");
+assert.equal(model.defs.find(d=>d.id==="DF").description,"Quantità di lavoro informativo acquisito da C e non ancora completato.");
 assert.doesNotMatch(svg,/<text[^>]*>Df:/,"Etichetta secondaria Df rimossa");
 // The fill has two simple lobes sharing only the intersection of A and B.
 const fill=svg.match(/<path data-series="DF" class="mr-band" d="([^"]+)"/)[1];

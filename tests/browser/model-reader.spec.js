@@ -131,7 +131,7 @@ for(const [width,height] of [[320,568],[390,844],[1366,768],[1440,900]]) test(`P
  await expect(r.locator('[data-term="DF"]')).toHaveClass(/is-focused/);
  if(await r.getAttribute('data-layout')==='desktop') {
   await expect(r.locator('[data-description-title]')).toHaveText('Df · Debito funzionale');
-  await expect(r.locator('[data-description]')).toHaveText('Debito rappresentato dalla pendenza informativa da lavorare ed integrare nel quadro aggregato');
+  await expect(r.locator('[data-description]')).toHaveText('Quantità di lavoro informativo acquisito da C e non ancora completato.');
  }
  await page.screenshot({path:`reports/modelli/panel2b-${width}-focus-df.png`});
  await panel.screenshot({path:`reports/modelli/panel2b-${width}-dettaglio-focus-df.png`});
@@ -268,7 +268,7 @@ test('tastiera, controlli alternativi allo swipe e navigazione globale',async({p
 test('senza JavaScript: testo completo, tre SVG e anteprima esclusa dagli indici',async({browser,request})=>{
  const context=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});const page=await context.newPage();await page.goto(`http://127.0.0.1:4173${URL}`);
  await expect(page.locator(`${ROOT} .mr-chart`)).toHaveCount(3);
- await expect(page.locator(`${ROOT} .mr-end`)).toBeVisible();
+ await expect(page.locator(`${ROOT} .mr-prose p`).last()).toBeVisible();
  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content','noindex, follow');
  expect(await (await request.get('/sitemap.xml')).text()).not.toContain(URL);
  expect(await (await request.get('/feed.xml')).text()).not.toContain(URL);

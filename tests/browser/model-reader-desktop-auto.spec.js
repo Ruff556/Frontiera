@@ -7,6 +7,7 @@ async function open(page,width,height) {
  const r=page.locator(ROOT);
  await expect(r).toHaveAttribute('data-layout','desktop');
  await page.evaluate(()=>document.fonts.ready);
+ await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
  // Native wheel scrolling does not invoke this JS setter. Count only writes
  // made by the reader itself, without replacing the browser's scroll behavior.
  await r.locator('.mr-reading').evaluate(el=>{
@@ -18,9 +19,16 @@ async function open(page,width,height) {
 }
 async function wheelTo(page,r,selector) {
  const read=r.locator('.mr-reading'),box=await read.boundingBox();
- const delta=await r.evaluate((r,selector)=>r.querySelector(selector).getBoundingClientRect().top-r.querySelector('.mr-reading').getBoundingClientRect().top-24,selector);
+ const {delta,target}=await r.evaluate((r,selector)=>{
+  const read=r.querySelector('.mr-reading'),delta=r.querySelector(selector).getBoundingClientRect().top-read.getBoundingClientRect().top-24;
+  return {delta,target:Math.max(0,Math.min(read.scrollHeight-read.clientHeight,read.scrollTop+delta))};
+ },selector);
  await page.mouse.move(box.x+box.width*.65,box.y+box.height*.6);
  await page.mouse.wheel(0,delta);
+ // wheel() returns before Chromium dispatches the native scroll. Wait for it
+ // before measuring the next target, without writing the scroll position.
+ await expect.poll(()=>read.evaluate((el,target)=>Math.abs(el.scrollTop-target),target)).toBeLessThanOrEqual(1);
+ await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
 }
 const variable=id=>`[data-context-variable="${id}"]`;
 for(const [width,height] of [[1366,768],[1440,900]]) {

@@ -17,21 +17,21 @@ const panels = [
  {name: "2B · Dinamiche aggregate", description: "SC, GC e Df condividono la posizione mediana dello zero operativo, con significati e scale distinti. SC e GC hanno il bordo superiore sullo zero; il limite inferiore salta alla criticità in T1 e resta orizzontale fino a T3. SC chiude in T3; GC recupera fino a T4. Criticità: insufficienza rispetto alle esigenze di C, non assenza completa di osservazioni. Df mostra due scenari qualitativi: A, riduzione limitata (tratteggio); B, riduzione pronunciata e possibile picco dopo T3 (linea continua). Si incrociano e tornano al riferimento fisiologico in T4. Il riempimento fra i due scenari è una convenzione grafica, non un inviluppo esaustivo né una distribuzione di probabilità. Sotto zero significa carico inferiore al riferimento, non debito assoluto negativo. Df non misura la qualità conoscitiva e non si ricava da SC o GC."}
 ];
 const defs = [
- {id:"C",panel:0,symbol:"C",name:"Canone condiviso",description:"Riferimento relativo: il quadro condiviso continua a evolvere anche mentre la sua linea resta orizzontale.",dash:"3 4"},
- {id:"U",panel:0,symbol:"U / Δᵤ",name:"Divergenza attuale",description:"Divergenza fra la rappresentazione attuale di U e il canone attuale. Non è la quantità totale di conoscenza."},
- {id:"I",panel:1,symbol:"Iᵤ꜀",name:"Collegamento",description:"Disponibilità binaria del collegamento per il contributo U→C. Riconnettersi non conclude la riconciliazione."},
- {id:"KG",panel:1,symbol:"KGᵤ",name:"Attualità globale",description:"Attualità della conoscenza globale di U rispetto al quadro corrente. Il patrimonio ricevuto non scompare."},
- {id:"KL",panel:1,symbol:"KLᵤ",name:"Conoscenza locale",description:"Possibili evoluzioni della conoscenza prodotta localmente da U. L’autonomia non si chiude in T4.",band:true,dash:"3 4"},
- {id:"SC",panel:2,symbol:"SC",name:"Copertura corrente",description:"Copertura sensoriale effettiva disponibile a C. Il ripristino del presente non ricrea le osservazioni perdute.",band:true,dash:"7 4"},
- {id:"GC",panel:2,symbol:"GC",name:"Grado di controllo",description:"Inviluppo del controllo raggiunto sul quadro canonico rispetto allo standard operativo; non una probabilità.",band:true,dash:"7 4"},
- {id:"DF",panel:2,symbol:"Df",name:"Debito funzionale",description:"Debito rappresentato dalla pendenza informativa da lavorare ed integrare nel quadro aggregato",scenarios:["A","B"]}
+ {id:"C",panel:0,symbol:"C",name:"Canone condiviso",description:"Quadro informativo aggregato assunto come riferimento comune.",dash:"3 4"},
+ {id:"U",panel:0,symbol:"U / Δᵤ",name:"Divergenza attuale",description:"Scostamento fra la rappresentazione di U e il canone C."},
+ {id:"I",panel:1,symbol:"Iᵤ꜀",name:"Collegamento",description:"Disponibilità del collegamento informativo fra U e C."},
+ {id:"KG",panel:1,symbol:"KGᵤ",name:"Attualità globale",description:"Attualità delle informazioni sul quadro globale disponibili a U."},
+ {id:"KL",panel:1,symbol:"KLᵤ",name:"Conoscenza locale",description:"Conoscenza del settore operativo sviluppata direttamente da U.",band:true,dash:"3 4"},
+ {id:"SC",panel:2,symbol:"SC",name:"Copertura sensoriale",description:"Copertura osservativa effettiva del settore garantita dalle fonti accessibili a C.",band:true,dash:"7 4"},
+ {id:"GC",panel:2,symbol:"GC",name:"Grado di controllo",description:"Grado di verifica e controllo del quadro condiviso raggiunto da C.",band:true,dash:"7 4"},
+ {id:"DF",panel:2,symbol:"Df",name:"Debito funzionale",description:"Quantità di lavoro informativo acquisito da C e non ancora completato.",scenarios:["A","B"]}
 ];
 const phases = [
- "T0 · Condizione precedente: collegamento attivo e riferimenti operativi raggiunti.",
- "T1 · Inizio isolamento: Iᵤ꜀ passa a 0; SC e GC possono raggiungere subito la criticità operativa.",
- "T2 · Isolamento in corso: limiti inferiori SC/GC orizzontali; nessuna nuova soglia o evento.",
- "T3 · Riconnessione: collegamento e copertura ripristinati; riconciliazione ancora da compiere.",
- "T4 · Riconciliazione pertinente: Df al riferimento fisiologico, GC allo standard; KLᵤ conserva autonomia."
+ "Condizione precedente all’isolamento",
+ "Inizio interdizione dei collegamenti",
+ "Interdizione in corso",
+ "Ripristino dei collegamenti",
+ "Riconciliazione fra U e C"
 ];
 const smooth=q=>q*q*(3-2*q);
 function arc(t,kind) {
