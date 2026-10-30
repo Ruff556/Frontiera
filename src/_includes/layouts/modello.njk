@@ -38,7 +38,7 @@ layout: layouts/base.njk
     </aside>
     <div class="mr-reading-frame mr-cell" aria-hidden="true"></div>
     <div class="mr-reading" tabindex="0" role="region" aria-label="Testo del modello: scorri per leggere">
-      <article class="mr-paper" aria-label="Testo di M1">
+      <article class="mr-paper" aria-label="Testo di M1" data-section-navigation data-section-navigation-scroll-root=".mr-reading">
         <p class="mr-draft-note">Anteprima di lavoro · Revisione editoriale 29.10.2026</p>
         {{ content | safe }}
       </article>

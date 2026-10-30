@@ -26,12 +26,21 @@ for (const id of ["U","KG"]) {
   assert.ok(v(id,t4).every(y=>y===base));
   for(let i=1;i<=100;i++) {
     const a=t1+(t3-t1)*(i-1)/100,b=t1+(t3-t1)*i/100;
-    assert.ok(Math.abs(v(id,b).at(-1)-base)>Math.abs(v(id,a).at(-1)-base), `${id}: crescita fino a T3`);
+    assert.ok(Math.abs(v(id,b)[0]-base)>Math.abs(v(id,a)[0]-base), `${id}: crescita fino a T3`);
     const c=t3+(t4-t3)*(i-1)/100,d=t3+(t4-t3)*i/100;
-    assert.ok(Math.abs(v(id,d).at(-1)-base)<Math.abs(v(id,c).at(-1)-base), `${id}: rientro dopo T3`);
+    assert.ok(Math.abs(v(id,d)[0]-base)<Math.abs(v(id,c)[0]-base), `${id}: rientro dopo T3`);
   }
 }
 assert.ok(v("KG",t3)[0]>0, "Coordinate SVG negative epistemicamente: KG sotto la baseline");
+assert.equal(model.defs.find(d=>d.id==="KG").band,true);
+assert.deepEqual(v("KG",t3-1e-8),[v("KG",t3-1e-8)[0],v("KG",t3-1e-8)[0]]);
+assert.deepEqual(v("KG",t3),[83,0],"KG: apertura immediata sullo zero in T3");
+for(let i=0;i<=1000;i++) {
+  const t=i/1000;
+  assert.equal(v("KG",t)[1],t<t3?v("KG",t)[0]:0,"KG: bordi coincidenti prima di T3, nuovo bordo sullo zero dopo T3");
+}
+const kgJump=model.makePoints(model.defs.find(d=>d.id==="KG"),p,1).filter(([t])=>Math.abs(t-t3)<1e-7);
+assert.ok(Math.max(...kgJump.map(pt=>pt[1]))-Math.min(...kgJump.map(pt=>pt[1]))>82,"KG: segmento verticale in T3");
 assert.ok(v("KL",t4)[0]<0 && v("KL",t4)[1]>0);
 // Illustrative extents, not numerical operational thresholds or comparable units.
 for(const [id,extent] of [["SC",86],["GC",57]]) {
@@ -90,7 +99,7 @@ const equations=original.slice(original.indexOf("const smooth=q"),original.index
 const reference={};vm.runInNewContext(`const times=${JSON.stringify(model.times)};${equations};this.values=values;`,reference);
 const unchanged=model.defs.filter(d=>!["SC","GC","DF"].includes(d.id));
 for (const def of unchanged) for(let i=0;i<=1000;i++) {
-  assert.deepEqual([...reference.values(def.id,i/1000,p)],v(def.id,i/1000), `Original geometry changed: ${def.id} ${i}`);
+  assert.deepEqual([...reference.values(def.id,i/1000,p)],def.id==="KG"?[v(def.id,i/1000)[0]]:v(def.id,i/1000), `Original geometry changed: ${def.id} ${i}`);
 }
 // La prosa di M1 viene ora revisionata editorialmente: il confronto con la
 // prima stesura archiviata non è più un'invariante del modello.
@@ -112,6 +121,7 @@ for(const [panel,ids] of panelVariables.entries()) {
 const html=require("../src/_lib/modelli/content")(edited,model);
 assert.deepEqual([...html.matchAll(/data-context-panel="([012])" data-context-variable="([A-Z]*)"/g)].map(m=>m[2]?`${m[1]}:${m[2]}`:m[1]),expectedOrder,"Contesti del rendering statico");
 assert.deepEqual([...html.matchAll(/class="mr-variable mr-margin" data-focus="([A-Z]+)"/g)].map(m=>m[1]),panelVariables.flat(),"Celle marginali e focus");
+assert.deepEqual([...html.matchAll(/id="mr-variable-([a-z]+)" data-section-navigation-stop/g)].map(m=>m[1]),panelVariables.flat().map(id=>id.toLowerCase()),"Otto tappe del navigatore editoriale, una per variabile");
 for(let i=0;i<segments.length;i++) {
   const start=segments[i].index+segments[i][0].length;
   const end=segments[i+1]?.index??edited.length;

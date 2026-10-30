@@ -25,6 +25,12 @@
   // Contratto comune: il contenitore del solo corpo editoriale indicizzabile.
   var body = document.querySelector("[data-section-navigation]");
   if (!body) return; // Nessun contenuto abilitato in pagina.
+  // Optional native inner scroller (Model Reader). The same desktop rail,
+  // links and navigation are reused; its mobile reader keeps its own controls.
+  var scrollRootSelector = body.getAttribute("data-section-navigation-scroll-root");
+  var scrollRoot = scrollRootSelector ? body.closest(scrollRootSelector) : null;
+  var scrollTarget = scrollRoot || window;
+  function scrollY() { return scrollRoot ? scrollRoot.scrollTop : window.pageYOffset; }
 
   // Sequenza ordinata delle tappe, nell'ordine DOM reale del corpo:
   //  - tutti gli h2 figli diretti del contenitore (i titoli attuali);
@@ -102,7 +108,7 @@
     return parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
   }
   function scrollMarginPx() {
-    return 5.5 * rootFontPx(); // deve combaciare con scroll-margin-top in CSS
+    return scrollRoot ? 24 : 5.5 * rootFontPx(); // inside the reader's 32px context line
   }
   function measure() {
     navH = headerEl ? Math.round(headerEl.getBoundingClientRect().height) : 60;
@@ -126,7 +132,7 @@
      esattamente quando un titolo la attraversa: nessun aggiornamento tardivo.
      ===================================================================== */
   function activationLine() {
-    return navH + Math.min(window.innerHeight * 0.22, 220);
+    return scrollRoot ? scrollRoot.getBoundingClientRect().top + 32 : navH + Math.min(window.innerHeight * 0.22, 220);
   }
   function computeActive() {
     // Durante una navigazione programmata lo stato resta bloccato sul target.
@@ -142,10 +148,11 @@
     }
     // Ultima sezione: se il fondo di una pagina scrollabile è raggiunto, forza
     // l'ultima (evita che resti "attiva" una sezione più in alto a fine articolo).
-    var doc = document.documentElement;
+    var doc = scrollRoot || document.documentElement;
+    var viewportHeight = scrollRoot ? scrollRoot.clientHeight : window.innerHeight;
     if (
-      doc.scrollHeight > window.innerHeight + 4 &&
-      window.innerHeight + window.pageYOffset >= doc.scrollHeight - 2
+      doc.scrollHeight > viewportHeight + 4 &&
+      viewportHeight + scrollY() >= doc.scrollHeight - 2
     ) {
       idx = sections.length - 1;
     }
@@ -155,10 +162,10 @@
   var io = null;
   function setupObserver() {
     if (io) io.disconnect();
-    var line = Math.round(activationLine());
+    var line = scrollRoot ? 32 : Math.round(activationLine());
     io = new IntersectionObserver(function () {
       computeActive();
-    }, { rootMargin: "-" + line + "px 0px 0px 0px", threshold: [0, 1] });
+    }, { root: scrollRoot, rootMargin: "-" + line + "px 0px 0px 0px", threshold: [0, 1] });
     sections.forEach(function (s) {
       io.observe(s.el);
     });
@@ -188,7 +195,7 @@
       navTimer = 0;
     }
     if (navScrollEnd) {
-      window.removeEventListener("scrollend", navScrollEnd);
+      scrollTarget.removeEventListener("scrollend", navScrollEnd);
       navScrollEnd = null;
     }
   }
@@ -199,10 +206,10 @@
   }
 
   function targetScrollY(el) {
-    var top = el.getBoundingClientRect().top + window.pageYOffset;
+    var top = el.getBoundingClientRect().top + scrollY() - (scrollRoot ? scrollRoot.getBoundingClientRect().top : 0);
     var y = top - scrollMarginPx();
     var doc = document.documentElement;
-    var max = Math.max(0, doc.scrollHeight - window.innerHeight);
+    var max = Math.max(0, scrollRoot ? scrollRoot.scrollHeight - scrollRoot.clientHeight : doc.scrollHeight - window.innerHeight);
     return Math.max(0, Math.min(y, max));
   }
 
@@ -239,7 +246,8 @@
     clearNavWatch();
 
     if (reduceMotion) {
-      s.el.scrollIntoView({ block: "start" });
+      if (scrollRoot) scrollRoot.scrollTo({top:targetScrollY(s.el),behavior:"instant"});
+      else s.el.scrollIntoView({ block: "start" });
       focusTitle();
       releaseNav();
       return;
@@ -247,9 +255,11 @@
 
     var ty = targetScrollY(s.el);
     try {
-      s.el.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (scrollRoot) scrollRoot.scrollTo({top:ty,behavior:"smooth"});
+      else s.el.scrollIntoView({ behavior: "smooth", block: "start" });
     } catch (e) {
-      s.el.scrollIntoView();
+      if (scrollRoot) scrollRoot.scrollTop=ty;
+      else s.el.scrollIntoView();
     }
     focusTitle();
 
@@ -257,8 +267,8 @@
     navScrollEnd = function () {
       if (navLock && navTarget === idx) releaseNav();
     };
-    if ("onscrollend" in window)
-      window.addEventListener("scrollend", navScrollEnd);
+    if ("onscrollend" in scrollTarget)
+      scrollTarget.addEventListener("scrollend", navScrollEnd);
 
     // … e/o quando lo scroll si ferma (target raggiunto o posizione stabile),
     //     indipendente da durata, browser e preferenze.
@@ -266,7 +276,7 @@
     var lastY = null;
     function watch() {
       if (!navLock || navTarget !== idx) return;
-      var y = window.pageYOffset;
+      var y = scrollY();
       if (Math.abs(y - ty) <= 2 || (lastY !== null && Math.abs(y - lastY) < 0.5))
         stable++;
       else stable = 0;
@@ -297,7 +307,7 @@
   // di posizionamento (position:relative) e la misura editoriale. Nelle schede
   // F/P è .fasewrap (griglia a due colonne); negli articoli è il foglio .reading
   // (.foglio è già relative). Fallback prudente: il genitore del corpo.
-  var wrap = body.closest(".fasewrap") || body.closest(".reading") || body.parentNode;
+  var wrap = scrollRoot ? scrollRoot.parentNode : body.closest(".fasewrap") || body.closest(".reading") || body.parentNode;
   var tickItems = [];
   var titleItems = [];
   var titlesUl = null;
@@ -410,6 +420,25 @@
         else titleItems[i].removeAttribute("aria-current");
       }
     });
+  }
+
+  if (scrollRoot) {
+    // Only the shared rail is enabled for an inner reader. No mobile roller,
+    // wheel interception, focus override or automatic text repositioning.
+    var innerFrame = 0;
+    function refreshInner() {
+      innerFrame=0;measure();computeActive();
+    }
+    function scheduleInner() {
+      if (!innerFrame) innerFrame=requestAnimationFrame(refreshInner);
+    }
+    scrollRoot.addEventListener("scroll",scheduleInner,{passive:true});
+    window.addEventListener("resize",scheduleInner,{passive:true});
+    var innerResize=new ResizeObserver(scheduleInner);
+    innerResize.observe(scrollRoot);innerResize.observe(body);
+    document.fonts.ready.then(scheduleInner);
+    computeActive();
+    return;
   }
 
   /* =====================================================================

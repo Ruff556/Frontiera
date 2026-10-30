@@ -1,7 +1,8 @@
 /* M1 — geometrie concettuali, revisione Df del 29 ottobre 2026.
  * SC e GC: salto alla criticità in T1, plateau fino a T3, chiusura in T3/T4.
  * Df: due scenari espliciti sullo zero mediano condiviso visivamente con SC/GC.
- * Panel 1 e 2A mantengono la geometria originale.
+ * KG: curva originaria e nuovo bordo sullo zero con riempimento post-T3.
+ * Le altre curve di Panel 1 e 2A mantengono la geometria originale.
  * Coordinate illustrative: non dati, probabilità o scale confrontabili.
  * Modulo condiviso fra Eleventy (SVG statici) e browser (ridimensionamento).
  */
@@ -20,7 +21,7 @@ const defs = [
  {id:"C",panel:0,symbol:"C",name:"Canone condiviso",description:"Quadro informativo aggregato assunto come riferimento comune.",dash:"3 4"},
  {id:"U",panel:0,symbol:"U / Δᵤ",name:"Divergenza attuale",description:"Scostamento fra la rappresentazione di U e il canone C."},
  {id:"I",panel:1,symbol:"Iᵤ꜀",name:"Collegamento",description:"Disponibilità del collegamento informativo fra U e C."},
- {id:"KG",panel:1,symbol:"KGᵤ",name:"Attualità globale",description:"Attualità delle informazioni sul quadro globale disponibili a U."},
+ {id:"KG",panel:1,symbol:"KGᵤ",name:"Attualità globale",description:"Attualità delle informazioni sul quadro globale disponibili a U.",band:true},
  {id:"KL",panel:1,symbol:"KLᵤ",name:"Conoscenza locale",description:"Conoscenza del settore operativo sviluppata direttamente da U.",band:true,dash:"3 4"},
  {id:"SC",panel:2,symbol:"SC",name:"Copertura sensoriale",description:"Copertura osservativa effettiva del settore garantita dalle fonti accessibili a C.",band:true,dash:"7 4"},
  {id:"GC",panel:2,symbol:"GC",name:"Grado di controllo",description:"Grado di verifica e controllo del quadro condiviso raggiunto da C.",band:true,dash:"7 4"},
@@ -57,7 +58,7 @@ function values(id,t,p) {
  if(id==='C')return [z];
  if(id==='U')return [z-100*arc(t,'U')];
  if(id==='GC')return [z,t<times[1]?z:t<=times[3]?z+57:z+57*arc(t,'GC')];
- if(id==='KG')return [z+83*arc(t,'KG')];
+ if(id==='KG'){const existing=z+83*arc(t,'KG');return [existing,t<times[3]?existing:z];}
  if(id==='KL'){const [a,b]=local(t);return [z-88*a,z+99*b];}
  if(id==='SC')return [z,t<times[1]||t>=times[3]?z:z+86];
  if(id==='I')return [t<times[1]||t>=times[3]?z:z+111];
@@ -70,7 +71,9 @@ function makePoints(d,p,edge) {
   ts=ts.filter(t=>Math.abs(t-times[1])>.00001&&Math.abs(t-times[3])>.00001);
   ts.push(times[1]-1e-8,times[1],times[3]-1e-8,times[3]);
  }
+ if(d.id==='KG'&&edge===1)ts.push(times[3]-1e-8,times[3]);
  ts.push(...times);ts.sort((a,b)=>a-b);
+ if(d.id==='KG'&&edge===1)ts=ts.filter(t=>t>=times[3]-1e-8&&t<=times[4]);
  return ts.map(t=>[p.x(t),values(d.id,t,p)[edge]]);
 }
 function state(id,t) {
@@ -133,7 +136,9 @@ function render(panel, width=560, height=150, event=3) {
  const series=defs.filter(d=>d.panel===panel);
  const bands=[...series].sort((a,b)=>(a.id==="KL"?-1:0)-(b.id==="KL"?-1:0));
  bands.filter(d=>d.band).forEach(d=> {
-  out+=`<path data-series="${d.id}" class="mr-band" d="${path([...makePoints(d,p,0),...makePoints(d,p,1).reverse()])}Z"/>`;
+  const first=makePoints(d,p,0),second=makePoints(d,p,1);
+  const border=d.id==="KG"?first.filter(([x])=>x>=p.x(times[3])&&x<=p.x(times[4])):first;
+  out+=`<path data-series="${d.id}" class="mr-band" d="${path([...border,...second.reverse()])}Z"/>`;
  });
  series.filter(d=>d.scenarios).forEach(d=> {
   const areas=scenarioAreas(makePoints(d,p,0),makePoints(d,p,1));

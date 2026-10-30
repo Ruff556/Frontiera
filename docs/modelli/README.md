@@ -43,14 +43,19 @@ Il testo di partenza ha SHA-256
 - Metadati e cornice dell’anteprima riportano la revisione del 29 ottobre,
   mantenendo `noindex` e l’esclusione dagli indici del sito.
 
-### Discrepanza preesistente da sottoporre alla revisione editoriale
+### Aggiornamento KGᵤ e navigatore editoriale
 
-Il testo canonico di KGᵤ (Panel 2A) descrive un inviluppo che si apre in T3,
-con bordo superiore che recupera immediatamente e bordo inferiore progressivo.
-L’implementazione storica rappresenta invece una sola curva di recupero.
-La discrepanza è già presente in `main`: questa revisione conserva sia la prosa
-sia la geometria di Panel 2A, come richiesto dal mandato. Un eventuale
-allineamento di KGᵤ richiede un intervento successivo esplicito.
+KGᵤ conserva integralmente la curva graduale già presente. Da T3 viene aggiunto
+un secondo bordo che raggiunge immediatamente lo zero operativo e vi resta fino
+a T4, con riempimento nel colore KGᵤ. Il tracciato preesistente è invariato;
+le nuove primitive sono limitate a T3–T4. Iᵤ꜀, KLᵤ e le altre geometrie restano
+invariate. La prosa e le definizioni sintetiche non vengono riscritte.
+
+La guida di lettura riusa `nav-sezioni.js` e `.secnav` degli articoli Frontiera,
+con otto stop custom (uno per variabile) e uno scroller nativo interno.
+Vedere `../navigatore-sezioni.md`. Il controller AUTO/MANUALE non è modificato.
+La carta chiara viene applicata anche alla prosa mobile e alla sua cornice;
+solo l’info box desktop torna alla superficie scura originaria.
 
 ### Verifica della revisione Df
 
@@ -120,7 +125,8 @@ Mobile, tutte le variabili e focus Df:
 all'intera cartella `docs/`. Per la revisione corrente la fonte editoriale canonica è
 `src/_includes/modelli/m1.md`, commit `be980815f60b374736cefdc3bc53147c68aefe36`
 («Revisione testo terminata», 29 ottobre 2026). L’HTML originario rimane
-un riferimento storico per le sole geometrie invariate di Panel 1 e 2A. Le funzioni `arc`, `local`,
+un riferimento storico per le curve preesistenti di Panel 1 e 2A
+(per KGᵤ, il bordo graduale conservato). Le funzioni `arc`, `local`,
 `values`, `makePoints` sono estratte dalla sola visualizzazione M1. Non vengono
 caricati iframe, wrapper Ruby, messaggistica host, Floating UI o altri script
 esterni dell'allegato.
@@ -129,7 +135,8 @@ esterni dell'allegato.
 statici e dal browser per adattare il rendering. I valori originali sono mappati
 affinalmente nell'area di ciascun pannello; font, assi e comandi mantengono dimensioni
 leggibili in pixel CSS. Il focus modifica solo opacità/colore, mai i tracciati.
-Panel 1 e 2A conservano le geometrie storiche. Panel 2B usa uno zero mediano
+Panel 1 e le curve originarie di 2A restano invariate; KGᵤ aggiunge un bordo
+sullo zero e un riempimento da T3 a T4. Panel 2B usa uno zero mediano
 visivamente condiviso, con standard e scale distinti. SC/GC mantengono salti
 e inviluppi; Df ha due traiettorie qualitative, con assestamento intorno a T2,
 che non rappresenta un nuovo evento operativo.

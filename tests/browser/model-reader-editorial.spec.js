@@ -31,7 +31,8 @@ async function contrast(locator,background) {
    const color=rgba(getComputedStyle(node).backgroundColor);layers.push(color);if(color[3]===1) break;
   }
   const backdrop=layers.reverse().reduce((base,color)=>base.map((v,i)=>color[i]*color[3]+v*(1-color[3])),[255,255,255]);
-  const a=luminance(rgba(getComputedStyle(el).color)),b=luminance(backdrop);
+  const foreground=rgba(getComputedStyle(el).color);
+  const a=luminance(backdrop.map((v,i)=>foreground[i]*foreground[3]+v*(1-foreground[3]))),b=luminance(backdrop);
   return (Math.max(a,b)+.05)/(Math.min(a,b)+.05);
  },background);
 }
@@ -64,10 +65,10 @@ for(const [width,height] of [[1366,768],[1440,900]]) {
     infoTitle:style('.mr-description strong').color,infoHeight:style('.mr-description').height,overflow:style('.mr-description').overflow,
     graph:style('.mr-graph').backgroundImage,curve:style('[data-series="DF"].mr-curve').stroke};
   });
-  expect(styles).toMatchObject({paper:'rgb(244, 246, 244)',text:'rgb(26, 39, 48)',strong:'rgb(15, 26, 34)',heading:'rgb(15, 26, 34)',info:'rgb(244, 246, 244)',infoText:'rgb(26, 39, 48)',infoTitle:'rgb(28, 110, 140)',overflow:'auto',curve:'rgb(220, 164, 189)'});
+  expect(styles).toMatchObject({paper:'rgb(244, 246, 244)',text:'rgb(26, 39, 48)',strong:'rgb(15, 26, 34)',heading:'rgb(15, 26, 34)',info:'rgba(0, 14, 26, 0.55)',infoText:'rgba(233, 239, 241, 0.82)',infoTitle:'rgb(125, 194, 218)',overflow:'auto',curve:'rgb(220, 164, 189)'});
   expect(parseFloat(styles.infoHeight)).toBeCloseTo(70.4,0);expect(styles.graph).toContain('23, 44, 57');
-  expect(await contrast(paper)).toBeGreaterThan(4.5);expect(await contrast(info.locator('p'),styles.info)).toBeGreaterThan(4.5);
-  expect(await contrast(info.locator('strong'),styles.info)).toBeGreaterThan(4.5);
+  expect(await contrast(paper)).toBeGreaterThan(4.5);expect(await contrast(info.locator('p'),'rgb(11, 25, 35)')).toBeGreaterThan(4.5);
+  expect(await contrast(info.locator('strong'),'rgb(11, 25, 35)')).toBeGreaterThan(4.5);
   // Exercise every variable color on the new paper surface, including pale C.
   for(const id of Object.keys(definitions)) {
    await r.locator(`.mr-legend [data-focus="${id}"]`).click();
@@ -84,11 +85,11 @@ for(const [width,height] of [[1366,768],[1440,900]]) {
   await page.screenshot({path:`reports/modelli/editorial-paper-${width}.png`});
  });
 }
-test('M1 mobile: superficie blu e interazioni conservate, senza dicitura finale',async({page})=>{
+test('M1 mobile: carta editoriale e interazioni conservate, senza dicitura finale',async({page})=>{
  const r=await open(page,390,844);await expect(r).toHaveAttribute('data-layout','mobile');
- expect(await r.locator('.mr-paper').evaluate(el=>getComputedStyle(el).backgroundColor)).toBe('rgba(0, 0, 0, 0)');
- expect(await r.locator('.mr-reading-frame').evaluate(el=>getComputedStyle(el).backgroundColor)).toBe('rgb(17, 31, 43)');
- expect(await r.locator('.mr-paper strong').first().evaluate(el=>getComputedStyle(el).color)).toBe('rgb(255, 255, 255)');
+ expect(await r.locator('.mr-paper').evaluate(el=>getComputedStyle(el).backgroundColor)).toBe('rgb(244, 246, 244)');
+ expect(await r.locator('.mr-reading-frame').evaluate(el=>getComputedStyle(el).backgroundColor)).toBe('rgb(244, 246, 244)');
+ expect(await r.locator('.mr-paper strong').first().evaluate(el=>getComputedStyle(el).color)).toBe('rgb(15, 26, 34)');
  await expect(r.locator('.mr-description')).toBeHidden();await expect(r.locator('.mr-end')).toHaveCount(0);
  await r.locator('[data-resume]').click();await r.locator('[data-panel-step="1"]').click();await r.locator('[data-panel-step="1"]').click();
  await r.locator('.mr-legend [data-focus="DF"]').click();await expect(r.locator('[data-series="DF"].is-focused')).toHaveCount(3);

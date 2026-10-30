@@ -2185,9 +2185,8 @@ figure.media figcaption .rights b{color:#4A5A64;font-weight:500}
    nel guscio e il guscio simmetrico rispetto all'asse. */
 .secnav ul{margin:0;padding:0;list-style:none}
 .secnav li{margin:0}
-@media(min-width:1140px){
   .secnav{
-    display:block;position:absolute;top:0;bottom:0;right:.4rem;
+    position:absolute;top:0;bottom:0;right:.4rem;
     width:2.5rem;z-index:30;pointer-events:none;
   }
   .secnav-sticky{
@@ -2280,7 +2279,7 @@ figure.media figcaption .rights b{color:#4A5A64;font-weight:500}
      invece a vivere sul margine destro di .fasewrap (regola predefinita sopra).
      .foglio è già position:relative: il contesto di posizionamento esiste. */
   :is(.reading,.page) > .secnav{right:auto;left:100%;margin-left:.5rem}
- }
+@media(min-width:1140px){.secnav{display:block}}
  /* Ancoraggio con hash coerente con l'header sticky anche negli articoli
     (le schede F/P hanno già .fasebody > h2{scroll-margin-top}). */
  :is(.reading,.page) h2{scroll-margin-top:5.5rem}

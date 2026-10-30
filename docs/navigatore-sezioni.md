@@ -53,6 +53,28 @@ corpo indicizzabile», non «una specifica classe».
 
 ---
 
+## Lettore con scroller interno (M1)
+
+M1 riusa lo stesso `nav-sezioni.js`, lo stesso markup `.secnav` e gli stessi
+stili della sezione 17 di `frontiera.css`. Il corpo dichiara anche
+`data-section-navigation-scroll-root=".mr-reading"`: l’adattatore usa lo scroller
+nativo indicato, anziché `window`, e colloca la rail nel suo contenitore.
+
+Le otto sezioni di variabile sono stop custom con ID `mr-variable-c`, `-u`,
+`-i`, `-kg`, `-kl`, `-sc`, `-gc`, `-df`, generati dal renderer dei segmenti.
+Le tacche e i titoli sono quelli del componente comune, con hover, tastiera,
+stato attivo e navigazione esplicita. Solo il click/attivazione di un link
+sposta il testo; lo scroll normale resta nativo e il focus AUTO/MANUALE di M1
+non viene modificato dal navigatore. L’indicatore segue la lettura anche quando
+una variabile grafica resta bloccata manualmente.
+
+L’adattatore abilita la rail nel layout desktop (anche a 1024 px) e riserva una
+fascia a destra della lettura. La scrollbar nativa è nascosta. Sul layout mobile
+la rail è nascosta e il rullino non viene creato, preservando i controlli e le
+interazioni attuali del lettore. Gli articoli normali mantengono rail e rullino.
+
+---
+
 ## 2. Che cosa diventa una tappa
 
 La fonte unica dei titoli è **il corpo reale del contenuto**:
