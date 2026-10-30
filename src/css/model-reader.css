@@ -163,6 +163,10 @@ html[data-model-reader-ready] #main{height:100%;overflow:hidden}
 /* Editorial paper in both layouts; graph panels keep their blue surface. */
 [data-layout="desktop"] .mr-reading{background:var(--paper)}
 [data-layout] .mr-paper{background:var(--paper);color:var(--text);border-color:var(--hairline)}
+/* The fixed mobile cell owns the paper surface; scrolling prose must not
+   paint a rectangle over its original rounded frame. */
+[data-layout="mobile"] .mr-paper{background:transparent;border-color:transparent}
+[data-layout="mobile"] .mr-reading-frame{border-color:var(--hairline)}
 [data-layout] .mr-paper :is(h2,h3,strong){color:var(--ink)}
 [data-layout] .mr-paper a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
 [data-layout] .mr-paper a:hover{color:var(--ink)}

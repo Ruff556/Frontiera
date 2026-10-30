@@ -36,13 +36,22 @@ for(const [width,height] of [[1024,768],[1366,768],[1440,900]]) test(`M1 ${width
  await r.locator('[data-focus-sync]').click();await expect(r).toHaveAttribute('data-focus','DF');
  expect(await page.evaluate(()=>scrollY)).toBe(0);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });
-test('M1 mobile: lettura chiara, rail non sovrapposta e pannelli blu in espansione',async({page})=>{
- const r=await open(page,390,844);await expect(r).toHaveAttribute('data-layout','mobile');await expect(r.locator('.secnav')).toBeHidden();
+for(const [width,height] of [[390,844],[430,932]]) test(`M1 mobile ${width}×${height}: cella chiara arrotondata, scroll e pannelli blu in espansione`,async({page})=>{
+ const r=await open(page,width,height);await expect(r).toHaveAttribute('data-layout','mobile');await expect(r.locator('.secnav')).toBeHidden();
  await expect(page.locator('.secroll')).toHaveCount(0);await r.locator('[data-resume]').click();
  await r.locator('.mr-reading').evaluate(el=>el.scrollTop+=600);
  const styles=await r.evaluate(r=>({paper:getComputedStyle(r.querySelector('.mr-paper')).backgroundColor,frame:getComputedStyle(r.querySelector('.mr-reading-frame')).backgroundColor,text:getComputedStyle(r.querySelector('.mr-paper')).color,strong:getComputedStyle(r.querySelector('.mr-paper strong')).color,graph:getComputedStyle(r.querySelector('.mr-graph')).backgroundImage}));
- expect(styles).toMatchObject({paper:'rgb(244, 246, 244)',frame:'rgb(244, 246, 244)',text:'rgb(26, 39, 48)',strong:'rgb(15, 26, 34)'});
- expect(styles.graph).toContain('23, 44, 57');await page.screenshot({path:'reports/modelli/kg-rail-mobile-reading.png'});
+ expect(styles).toMatchObject({paper:'rgba(0, 0, 0, 0)',frame:'rgb(244, 246, 244)',text:'rgb(26, 39, 48)',strong:'rgb(15, 26, 34)'});
+ const frame=r.locator('.mr-reading-frame');
+ const geometry=await frame.evaluate(el=>{const s=getComputedStyle(el);return {radius:s.borderRadius,border:s.border,shadow:s.boxShadow};});
+ expect(geometry.radius).toBe(await r.locator('.mr-graph').evaluate(el=>getComputedStyle(el).borderRadius));
+ expect(parseFloat(geometry.radius)).toBeGreaterThan(0);expect(geometry.border).toBe('1px solid rgb(220, 225, 221)');expect(geometry.shadow).not.toBe('none');
+ const bounds=await frame.boundingBox(),beforeWheel=await r.locator('.mr-reading').evaluate(el=>el.scrollTop);
+ await r.locator('.mr-reading').hover();await page.mouse.wheel(0,260);
+ await expect.poll(()=>r.locator('.mr-reading').evaluate(el=>el.scrollTop)).toBeGreaterThan(beforeWheel);
+ expect(await frame.boundingBox()).toEqual(bounds);expect(await page.evaluate(()=>scrollY)).toBe(0);
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ expect(styles.graph).toContain('23, 44, 57');await page.screenshot({path:`reports/modelli/mobile-card-${width}.png`});
  const offset=await r.locator('.mr-reading').evaluate(el=>el.scrollTop);
  await r.locator('[data-expand]').click();await expect(r).toHaveAttribute('data-overview','true');
  await r.locator('[data-resume]').click();expect(await r.locator('.mr-reading').evaluate(el=>el.scrollTop)).toBe(offset);

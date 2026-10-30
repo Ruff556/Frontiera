@@ -87,7 +87,7 @@ for(const [width,height] of [[1366,768],[1440,900]]) {
 }
 test('M1 mobile: carta editoriale e interazioni conservate, senza dicitura finale',async({page})=>{
  const r=await open(page,390,844);await expect(r).toHaveAttribute('data-layout','mobile');
- expect(await r.locator('.mr-paper').evaluate(el=>getComputedStyle(el).backgroundColor)).toBe('rgb(244, 246, 244)');
+ expect(await r.locator('.mr-paper').evaluate(el=>getComputedStyle(el).backgroundColor)).toBe('rgba(0, 0, 0, 0)');
  expect(await r.locator('.mr-reading-frame').evaluate(el=>getComputedStyle(el).backgroundColor)).toBe('rgb(244, 246, 244)');
  expect(await r.locator('.mr-paper strong').first().evaluate(el=>getComputedStyle(el).color)).toBe('rgb(15, 26, 34)');
  await expect(r.locator('.mr-description')).toBeHidden();await expect(r.locator('.mr-end')).toHaveCount(0);
