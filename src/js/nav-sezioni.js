@@ -25,8 +25,8 @@
   // Contratto comune: il contenitore del solo corpo editoriale indicizzabile.
   var body = document.querySelector("[data-section-navigation]");
   if (!body) return; // Nessun contenuto abilitato in pagina.
-  // Optional native inner scroller (Model Reader). The same desktop rail,
-  // links and navigation are reused; its mobile reader keeps its own controls.
+  // Optional native inner scroller (Model Reader). Both layouts reuse the
+  // same links, active section and scroll navigation.
   var scrollRootSelector = body.getAttribute("data-section-navigation-scroll-root");
   var scrollRoot = scrollRootSelector ? body.closest(scrollRootSelector) : null;
   var scrollTarget = scrollRoot || window;
@@ -96,6 +96,7 @@
     return {
       id: id,
       title: st.label || el.textContent.trim(),
+      shortTitle: el.getAttribute("data-section-navigation-short-label") || String(i + 1),
       el: el,
       index: i,
     };
@@ -108,7 +109,12 @@
     return parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
   }
   function scrollMarginPx() {
-    return scrollRoot ? 24 : 5.5 * rootFontPx(); // inside the reader's 32px context line
+    return scrollRoot ? innerInset() + 24 : 5.5 * rootFontPx(); // inside the reader's context line
+  }
+  function innerInset() {
+    // The host declares the area covered by its fixed graph. No focus state
+    // or graph geometry is owned by the shared navigator.
+    return scrollRoot ? parseFloat(getComputedStyle(scrollRoot).getPropertyValue("--section-navigation-inset")) || 0 : 0;
   }
   function measure() {
     navH = headerEl ? Math.round(headerEl.getBoundingClientRect().height) : 60;
@@ -132,7 +138,7 @@
      esattamente quando un titolo la attraversa: nessun aggiornamento tardivo.
      ===================================================================== */
   function activationLine() {
-    return scrollRoot ? scrollRoot.getBoundingClientRect().top + 32 : navH + Math.min(window.innerHeight * 0.22, 220);
+    return scrollRoot ? scrollRoot.getBoundingClientRect().top + innerInset() + 32 : navH + Math.min(window.innerHeight * 0.22, 220);
   }
   function computeActive() {
     // Durante una navigazione programmata lo stato resta bloccato sul target.
@@ -162,7 +168,7 @@
   var io = null;
   function setupObserver() {
     if (io) io.disconnect();
-    var line = scrollRoot ? 32 : Math.round(activationLine());
+    var line = scrollRoot ? innerInset() + 32 : Math.round(activationLine());
     io = new IntersectionObserver(function () {
       computeActive();
     }, { root: scrollRoot, rootMargin: "-" + line + "px 0px 0px 0px", threshold: [0, 1] });
@@ -339,6 +345,21 @@
       ta.className = "secnav-title";
       ta.href = "#" + s.id;
       ta.textContent = s.title;
+      if (scrollRoot) {
+        // One real link per stop, with full accessible names in both layouts.
+        // The host can show the compact label without a second mobile index.
+        ta.textContent = "";
+        ta.setAttribute("aria-label", s.title);
+        var fullTitle = document.createElement("span");
+        fullTitle.className = "secnav-full-label";
+        fullTitle.textContent = s.title;
+        var shortTitle = document.createElement("span");
+        shortTitle.className = "secnav-short-label";
+        shortTitle.textContent = s.shortTitle;
+        shortTitle.setAttribute("aria-hidden", "true");
+        ta.appendChild(fullTitle);
+        ta.appendChild(shortTitle);
+      }
       ta.addEventListener("click", function (ev) {
         ev.preventDefault();
         var kb = ev.detail === 0; // detail 0 = attivazione da tastiera
@@ -386,7 +407,10 @@
     wrap.appendChild(rootNav);
 
     // All'apertura porta la voce attiva nell'area visibile del pannello.
-    function revealActive() {
+    function revealActive(event) {
+      // On a short mobile rail, native focus/click may already have scrolled
+      // the chosen link into view. Do not move it away before activation.
+      if (event && scrollRoot && getComputedStyle(railBox).display === "none") return;
       var it = titleItems[activeIndex];
       if (!it || !titlesUl) return;
       var top = it.offsetTop;
@@ -419,11 +443,12 @@
         if (on) titleItems[i].setAttribute("aria-current", "true");
         else titleItems[i].removeAttribute("aria-current");
       }
+      if (scrollRoot && getComputedStyle(railBox).display === "none") revealActive();
     });
   }
 
   if (scrollRoot) {
-    // Only the shared rail is enabled for an inner reader. No mobile roller,
+    // Only the shared rail is enabled for an inner reader. No separate roller,
     // wheel interception, focus override or automatic text repositioning.
     var innerFrame = 0;
     function refreshInner() {

@@ -69,9 +69,18 @@ non viene modificato dal navigatore. L’indicatore segue la lettura anche quand
 una variabile grafica resta bloccata manualmente.
 
 L’adattatore abilita la rail nel layout desktop (anche a 1024 px) e riserva una
-fascia a destra della lettura. La scrollbar nativa è nascosta. Sul layout mobile
-la rail è nascosta e il rullino non viene creato, preservando i controlli e le
-interazioni attuali del lettore. Gli articoli normali mantengono rail e rullino.
+fascia a destra della lettura. La scrollbar nativa è nascosta. Durante la lettura
+mobile gli stessi link diventano una rail compatta di sigle, in un margine
+riservato della prosa: nessuna sovrapposizione ai paragrafi e nessun cambiamento
+alla sagoma della card. La rail è nascosta nella panoramica e a grafici espansi.
+Il rullino non viene creato per lo scroller interno; gli articoli normali
+mantengono rail e rullino.
+
+Gli stop possono dichiarare `data-section-navigation-short-label` (per M1 il
+simbolo canonico); il nome accessibile del link resta quello completo. Il
+contenitore di scroll dichiara `--section-navigation-inset` per compensare
+l’area coperta dal grafico mobile: arrivo dei salti e indicatore di lettura
+usano lo stesso offset, senza modificare il focus AUTO/MANUALE del modello.
 
 ---
 
