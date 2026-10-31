@@ -325,7 +325,10 @@ async function elasticCells(r) {
  return r.locator('.mr-legend .mr-variable').evaluateAll(buttons=>buttons.map(b=>{
   const label=b.querySelector('.mr-variable-label'),rect=b.getBoundingClientRect();
   const range=document.createRange();range.selectNodeContents(label);
+  const symbolRange=document.createRange();symbolRange.selectNodeContents(b.querySelector('.mr-variable-symbol'));
+  const style=getComputedStyle(b);
   return {id:b.dataset.focus,pressed:b.getAttribute('aria-pressed'),width:rect.width,height:rect.height,
+   compactWidth:symbolRange.getBoundingClientRect().width+parseFloat(style.paddingLeft)+parseFloat(style.paddingRight)+parseFloat(style.borderLeftWidth)+parseFloat(style.borderRightWidth),
    x:rect.x,right:rect.right,y:rect.y,label:label.textContent,opacity:getComputedStyle(label).opacity,
    display:getComputedStyle(label).display,lines:[...range.getClientRects()].map(r=>r.toJSON()),
    labelRect:label.getBoundingClientRect().toJSON(),symbol:b.querySelector('.mr-variable-symbol').getBoundingClientRect().toJSON()};
@@ -342,6 +345,7 @@ for(const [width,height] of [[320,568],[390,844],[430,932],[768,1024],[1000,660]
   expect((await elasticCells(r)).every(c=>c.display==='none')).toBe(true);
   await r.locator('[data-panel-sync]').click();
   const defs=await page.evaluate(()=>window.FrontieraModels.m1.defs);
+  const originalHeight=await page.evaluate(()=>1.75*parseFloat(getComputedStyle(document.documentElement).fontSize));
   for(const def of defs) {
    await scrollToVariable(page,def.id);
    await expect(r).toHaveAttribute('data-focus',def.id);
@@ -357,11 +361,19 @@ for(const [width,height] of [[320,568],[390,844],[430,932],[768,1024],[1000,660]
    expect(active.opacity).toBe('1');
    expect(cells.filter(c=>c.opacity==='1').map(c=>c.id)).toEqual([def.id]);
    const peers=cells.filter(c=>defs.find(d=>d.id===c.id).panel===def.panel);
+   const interval=await r.locator(`[data-model-panel="${def.panel}"] .mr-chart`).evaluate(svg=>{
+    const markers=[...svg.querySelectorAll('text')];
+    const x=n=>Number(markers.find(el=>el.textContent===n).getAttribute('x'));
+    return x('T3')-x('T1');
+   });
+   expect(active.width).toBeGreaterThan(interval);
+   expect(active.width).toBeLessThan(interval*1.2);
    for(const cell of peers) {
-    expect(cell.width).toBeGreaterThanOrEqual(44);expect(cell.height).toBeGreaterThanOrEqual(44);
+    expect(cell.height).toBeCloseTo(originalHeight,1);
     expect(cell.x).toBeGreaterThanOrEqual(0);expect(cell.right).toBeLessThanOrEqual(width);
     expect(cell.y).toBeCloseTo(active.y,1);
     if(cell.id!==def.id) {
+     expect(cell.width).toBeCloseTo(cell.compactWidth,0);
      expect(active.width).toBeGreaterThan(cell.width);
      expect(cell.opacity).toBe('0');
      expect(cell.symbol.y+cell.symbol.height/2).toBeCloseTo(cell.y+cell.height/2,0);
@@ -403,7 +415,12 @@ for(const [width,height] of [[320,568],[390,844],[430,932],[768,1024],[1000,660]
   await r.evaluate(r=>{const read=r.querySelector('.mr-reading'),segment=r.querySelector('[data-context-panel="2"][data-context-variable=""]');
    read.scrollTop+=segment.getBoundingClientRect().top-read.getBoundingClientRect().top-parseFloat(getComputedStyle(r).getPropertyValue('--mr-compact'))+12;});
   await expect(r).toHaveAttribute('data-focus','');
-  expect((await elasticCells(r)).every(c=>c.opacity==='0')).toBe(true);
+  const neutral=await elasticCells(r);
+  expect(neutral.every(c=>c.opacity==='0')).toBe(true);
+  for(const cell of neutral) {
+   expect(cell.width).toBeCloseTo(cell.compactWidth,0);
+   expect(cell.height).toBeCloseTo(originalHeight,1);
+  }
   expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false);
  });
 }
@@ -418,6 +435,7 @@ test('celle elastiche: animazione continua, interrompibile e confinata alla fasc
   const panel=r.querySelector('[data-model-panel="1"]'),buttons=[...panel.querySelectorAll('.mr-variable')];
   const chart=panel.querySelector('.mr-chart'),read=r.querySelector('.mr-reading'),paper=r.querySelector('.mr-paper');
   const snapshot=()=>({widths:buttons.map(b=>b.getBoundingClientRect().width),xs:buttons.map(b=>b.getBoundingClientRect().x),
+   heights:buttons.map(b=>b.getBoundingClientRect().height),ys:buttons.map(b=>b.getBoundingClientRect().y),
    chart:chart.getBoundingClientRect().toJSON(),graph:r.querySelector('.mr-graph').getBoundingClientRect().toJSON(),
    paper:paper.getBoundingClientRect().toJSON(),scroll:read.scrollTop,
    opacity:buttons.map(b=>getComputedStyle(b.querySelector('.mr-variable-label')).opacity)});
@@ -438,7 +456,8 @@ test('celle elastiche: animazione continua, interrompibile e confinata alla fasc
  for(const frame of result.frames) {
   expect(frame.chart).toEqual(result.before.chart);expect(frame.graph).toEqual(result.before.graph);
   expect(frame.paper).toEqual(result.before.paper);expect(frame.scroll).toBe(result.before.scroll);
-  expect(frame.widths.reduce((a,b)=>a+b,0)).toBeCloseTo(result.before.widths.reduce((a,b)=>a+b,0),0);
+  expect(frame.heights).toEqual(result.before.heights);expect(frame.ys).toEqual(result.before.ys);
+  expect(frame.widths.reduce((a,b)=>a+b,0)).toBeLessThan(result.before.graph.width*.8);
   for(let i=1;i<3;i++)expect(frame.xs[i]).toBeGreaterThanOrEqual(frame.xs[i-1]+frame.widths[i-1]);
  }
  expect(new Set(result.frames.map(f=>Math.round(f.widths[2]))).size).toBeGreaterThan(5);

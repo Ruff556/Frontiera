@@ -108,21 +108,21 @@
 [data-layout="mobile"] .mr-variable{min-height:1.75rem;padding:.25rem .6rem}
 /* Only the contextual strip is elastic. aria-pressed remains the single
    focus source; the overview and the desktop measurement probe stay compact.
-   Intrinsic symbol widths reserve touch targets, flex-grow shares the rest.
-   Positive weights keep the strip full even when transitions are interrupted.
-   A fixed two-line slot prevents focus changes from resizing charts/prose. */
-[data-layout="mobile"][data-overview="false"] .mr-panel header{height:2.75rem;min-height:44px;flex-wrap:nowrap}
-[data-layout="mobile"][data-overview="false"] .mr-legend{width:100%;height:100%;min-width:0;justify-content:center}
+   Keep the original symbol widths and 1.75rem button height. Only the active
+   flex basis grows, to slightly more than the chart's T1–T3 interval (about
+   half the plot width). The centered group leaves space on both sides. */
+[data-layout="mobile"][data-overview="false"] .mr-panel header{flex-wrap:nowrap}
+[data-layout="mobile"][data-overview="false"] .mr-legend{width:100%;min-width:0;justify-content:center;align-items:center}
 [data-layout="mobile"][data-overview="false"] .mr-legend .mr-variable{
- display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);align-items:center;flex:1 0 auto;min-width:44px;min-height:44px;
- padding:.25rem .35rem;overflow:hidden;
- transition:flex-grow var(--t2) var(--e-out),background var(--t1),color var(--t1),box-shadow var(--t1);
+ display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);align-items:center;flex:0 1 0px;min-width:max-content;height:1.75rem;
+ padding:0 .6rem;overflow:hidden;
+ transition:flex-basis var(--t2) var(--e-out),background var(--t1),color var(--t1),box-shadow var(--t1);
 }
-[data-layout="mobile"][data-overview="false"] .mr-legend .mr-variable[aria-pressed="true"]{flex-grow:8}
+[data-layout="mobile"][data-overview="false"] .mr-legend .mr-variable[aria-pressed="true"]{flex-basis:calc(52% - 1.5rem)}
 [data-layout="mobile"][data-overview="false"] :is(.mr-variable-symbol,.mr-variable-label){grid-area:1/1;transition:opacity .1s var(--e-out)}
 [data-layout="mobile"][data-overview="false"] .mr-legend .mr-variable-symbol{white-space:nowrap}
 [data-layout="mobile"][data-overview="false"] .mr-legend .mr-variable-label{
- display:block;contain:inline-size;min-width:0;max-height:100%;overflow:hidden;opacity:0;font:400 .7rem/1.25 Archivo,sans-serif;text-wrap:balance;
+ display:block;contain:inline-size;min-width:0;max-height:100%;overflow:hidden;opacity:0;font:400 .7rem/1.1 Archivo,sans-serif;text-wrap:balance;
 }
 [data-layout="mobile"][data-overview="false"] .mr-legend .mr-variable[aria-pressed="true"] .mr-variable-symbol{opacity:0}
 [data-layout="mobile"][data-overview="false"] .mr-legend .mr-variable[aria-pressed="true"] .mr-variable-label{opacity:1;transition:opacity .14s var(--e-out) .14s}
