@@ -96,7 +96,6 @@
     return {
       id: id,
       title: st.label || el.textContent.trim(),
-      shortTitle: el.getAttribute("data-section-navigation-short-label") || String(i + 1),
       el: el,
       index: i,
     };
@@ -345,21 +344,6 @@
       ta.className = "secnav-title";
       ta.href = "#" + s.id;
       ta.textContent = s.title;
-      if (scrollRoot) {
-        // One real link per stop, with full accessible names in both layouts.
-        // The host can show the compact label without a second mobile index.
-        ta.textContent = "";
-        ta.setAttribute("aria-label", s.title);
-        var fullTitle = document.createElement("span");
-        fullTitle.className = "secnav-full-label";
-        fullTitle.textContent = s.title;
-        var shortTitle = document.createElement("span");
-        shortTitle.className = "secnav-short-label";
-        shortTitle.textContent = s.shortTitle;
-        shortTitle.setAttribute("aria-hidden", "true");
-        ta.appendChild(fullTitle);
-        ta.appendChild(shortTitle);
-      }
       ta.addEventListener("click", function (ev) {
         ev.preventDefault();
         var kb = ev.detail === 0; // detail 0 = attivazione da tastiera
@@ -407,10 +391,7 @@
     wrap.appendChild(rootNav);
 
     // All'apertura porta la voce attiva nell'area visibile del pannello.
-    function revealActive(event) {
-      // On a short mobile rail, native focus/click may already have scrolled
-      // the chosen link into view. Do not move it away before activation.
-      if (event && scrollRoot && getComputedStyle(railBox).display === "none") return;
+    function revealActive() {
       var it = titleItems[activeIndex];
       if (!it || !titlesUl) return;
       var top = it.offsetTop;
@@ -443,27 +424,7 @@
         if (on) titleItems[i].setAttribute("aria-current", "true");
         else titleItems[i].removeAttribute("aria-current");
       }
-      if (scrollRoot && getComputedStyle(railBox).display === "none") revealActive();
     });
-  }
-
-  if (scrollRoot) {
-    // Only the shared rail is enabled for an inner reader. No separate roller,
-    // wheel interception, focus override or automatic text repositioning.
-    var innerFrame = 0;
-    function refreshInner() {
-      innerFrame=0;measure();computeActive();
-    }
-    function scheduleInner() {
-      if (!innerFrame) innerFrame=requestAnimationFrame(refreshInner);
-    }
-    scrollRoot.addEventListener("scroll",scheduleInner,{passive:true});
-    window.addEventListener("resize",scheduleInner,{passive:true});
-    var innerResize=new ResizeObserver(scheduleInner);
-    innerResize.observe(scrollRoot);innerResize.observe(body);
-    document.fonts.ready.then(scheduleInner);
-    computeActive();
-    return;
   }
 
   /* =====================================================================
@@ -545,7 +506,9 @@
   menu.appendChild(menuList);
   roll.appendChild(menu);
 
-  document.body.appendChild(roll);
+  // Keep the original roller outside the clipped scroller. Inner hosts can
+  // scope its placement and responsive visibility without changing its skin.
+  (scrollRoot ? wrap : document.body).appendChild(roll);
 
   var STEP = 22; // px per sezione nel rullino
   var position = 0;
@@ -687,7 +650,11 @@
   // ----- Comparsa del rullino -----
   var pastStart = false;
   function updateRollVisibility() {
-    var show = narrowMQ.matches && pastStart;
+    if (scrollRoot) pastStart = startMarker.getBoundingClientRect().top <= startLine();
+    var available = scrollRoot
+      ? getComputedStyle(roll).display !== "none" && getComputedStyle(scrollRoot).overflowY !== "hidden"
+      : narrowMQ.matches;
+    var show = available && pastStart;
     roll.classList.toggle("is-visible", show);
     // Se il rullino non è più visibile (sopra il corpo o viewport tornato largo)
     // il menu eventualmente aperto va chiuso.
@@ -706,16 +673,20 @@
   body.insertBefore(startMarker, body.firstChild);
 
   var startObs = null;
+  function startLine() {
+    return scrollRoot ? scrollRoot.getBoundingClientRect().top + innerInset() + 12 : navH + 12;
+  }
   function setupStartObserver() {
     if (startObs) startObs.disconnect();
-    var line = Math.round(navH + 12);
+    var line = Math.round(startLine());
+    var inset = scrollRoot ? innerInset() + 12 : line;
     startObs = new IntersectionObserver(
       function (entries) {
         var top = entries[0].boundingClientRect.top;
         pastStart = top <= line;
         updateRollVisibility();
       },
-      { rootMargin: "-" + line + "px 0px 0px 0px", threshold: 0 }
+      { root: scrollRoot, rootMargin: "-" + inset + "px 0px 0px 0px", threshold: 0 }
     );
     startObs.observe(startMarker);
     pastStart = startMarker.getBoundingClientRect().top <= line;
@@ -889,6 +860,49 @@
   /* ---- avvio ---- */
   renderRoll(0);
   computeActive();
+
+  if (scrollRoot) {
+    // Reuse the same section state, navigation and drag for native inner scroll.
+    // Host layout/space changes also hide the roller while its graph is expanded.
+    var innerFrame = 0;
+    function refreshInner() {
+      innerFrame = 0;
+      computeActive();
+      updateRollVisibility();
+    }
+    function scheduleInner() {
+      if (!innerFrame) innerFrame = requestAnimationFrame(refreshInner);
+    }
+    scrollRoot.addEventListener("scroll", scheduleInner, { passive: true });
+    var innerResize = new ResizeObserver(function () {
+      setupObserver();
+      setupStartObserver();
+      scheduleInner();
+    });
+    innerResize.observe(scrollRoot);
+    innerResize.observe(body);
+    new MutationObserver(scheduleInner).observe(wrap.parentNode, {
+      attributes: true, attributeFilter: ["data-layout", "data-space"],
+    });
+    // Native hash alignment ignores the area covered by the inner host's
+    // graph. Reuse goTo after layout/fonts settle and for subsequent deep links.
+    function alignInnerHash() {
+      var id = location.hash.slice(1);
+      for (var i = 0; i < sections.length; i++) {
+        if (sections[i].id === id) {
+          goTo(i, false, false);
+          break;
+        }
+      }
+    }
+    window.addEventListener("hashchange", alignInnerHash);
+    document.fonts.ready.then(function () {
+      requestAnimationFrame(function () {
+        alignInnerHash();
+        scheduleInner();
+      });
+    });
+  }
 
   var reT = null;
   window.addEventListener(

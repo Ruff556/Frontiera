@@ -207,35 +207,23 @@ html[data-model-reader-ready] #main{height:100%;overflow:hidden}
 /* Native text scrolling, with the article section navigator in its own gutter. */
 .mr-reading::-webkit-scrollbar{display:none}
 .model-reader .secnav{display:none}
-.model-reader .secnav-short-label{display:none}
 [data-layout="desktop"] .mr-reading{margin-right:3rem}
 [data-layout="desktop"] .mr-workspace > .secnav{display:block;right:.2rem}
 [data-layout="desktop"] .secnav-sticky{position:relative;top:0;height:100%}
 [data-layout="desktop"] .secnav-panel{max-height:calc(var(--mr-available) - 2rem)}
 [data-layout="desktop"] .secnav-titles{max-height:calc(var(--mr-available) - 3rem)}
-/* Reuse the title links as a quiet mobile rail inside a reserved prose gutter.
-   The outer reading card and the graph/variable strip retain their geometry. */
+/* The original article roller sits beside the reading cell. Reserve only its
+   existing width and touch clearance; graph and outer paper geometry stay fixed. */
 [data-layout="mobile"] .mr-reading{--section-navigation-inset:var(--mr-compact)}
-[data-layout="mobile"] .mr-paper{padding-right:2.75rem}
-[data-layout="mobile"][data-space="reading"] .mr-workspace > .secnav{
- display:block;top:calc(var(--mr-graph-h) + var(--mr-gap) + .5rem);bottom:.5rem;right:.3rem;width:1.75rem;z-index:3;
+[data-layout="mobile"] .mr-paper{padding-right:calc(var(--secroll-w) + 2rem)}
+.model-reader .secroll{display:none}
+.model-reader[data-layout="mobile"] .secroll{
+ display:block;top:calc(var(--mr-viewport-h) - (var(--mr-available) - var(--mr-graph-h) - var(--mr-gap))/2);
 }
-[data-layout="mobile"] .secnav-sticky{position:static;top:auto;height:100%;min-height:0}
-[data-layout="mobile"] .secnav-rail,[data-layout="mobile"] .secnav-full-label{display:none}
-[data-layout="mobile"] .secnav-short-label{display:inline}
-[data-layout="mobile"] .secnav .secnav-panel{
- position:static;transform:none;opacity:1;pointer-events:auto;display:flex;flex-direction:column;width:100%;max-height:100%;padding:.15rem 0;
- background:var(--paper);border:1px solid var(--hairline);border-radius:var(--r-sm);box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;
-}
-[data-layout="mobile"] .secnav-panel::before{display:none}
-[data-layout="mobile"] .secnav-titles{max-height:100%;min-height:0;display:flex;flex-direction:column;gap:2px;scrollbar-width:none}
-[data-layout="mobile"] .secnav-titles::-webkit-scrollbar{display:none}
-[data-layout="mobile"] .secnav-title{
- display:flex;align-items:center;justify-content:center;min-height:26px;padding:2px 1px;
- font:400 .6rem/1.1 'IBM Plex Mono',monospace;text-align:center;border-radius:3px;color:var(--ink-3);
-}
-[data-layout="mobile"] .secnav-title.is-active{color:var(--ink);background:color-mix(in srgb,var(--accent) 12%,var(--paper));box-shadow:inset 2px 0 0 var(--accent)}
-[data-layout="mobile"] .secnav-title:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+/* Centering is placement, including when motion is reduced. */
+.model-reader[data-layout="mobile"] .secroll.is-visible{transform:translateY(-50%)}
+/* Keep the existing menu inside the available reading cell, below the graph. */
+.model-reader[data-layout="mobile"] .secroll-menu{max-height:calc(var(--mr-available) - var(--mr-graph-h) - var(--mr-gap) - 1rem)}
 /* Restore the original desktop information card, without changing its size. */
 [data-layout="desktop"] .mr-description{background:rgba(0,14,26,.55);color:var(--on-dark);border-color:var(--gd-brd-hi)}
 [data-layout="desktop"] .mr-description strong{color:var(--accent-hi)}
