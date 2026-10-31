@@ -11,7 +11,105 @@ le sezioni pubbliche. La build genera l'anteprima per consentire deploy di prova
 `noindex` non costituisce una protezione di accesso. La pubblicazione editoriale di
 M1 resta un'operazione successiva.
 
-## Anteprime visuali
+## Revisione Panel 2B e Df — 29 ottobre 2026
+
+Branch derivato da `main` al commit canonico `be980815f60b374736cefdc3bc53147c68aefe36`.
+Il testo di partenza ha SHA-256
+`a6adda8e9358dbb6b7fb697f3e13231e009d6af130d70ff665aa498efa48eb09`.
+
+- Zero operativo al centro dell’area utile, identico come coordinata per SC,
+  GC e Df, senza equivalenze fra unità o significati. Rimossa la baseline
+  separata del vecchio debito. SC/GC conservano le escursioni e le dinamiche
+  precedenti, con sola traslazione verticale: SC chiude in T3, GC in T4.
+- `DF` è l’unico identificativo di variabile; simbolo pubblico `Df`, nome
+  «Debito funzionale». Il renderer produce due path `data-series="DF"`,
+  distinguibili tramite `data-scenario="A"`/`"B"`. Un’unica voce di legenda,
+  una cella e un richiamo testuale selezionano entrambe le traiettorie.
+- A è tratteggiata: lieve riduzione, plateau e ritorno graduale. B è continua:
+  riduzione pronunciata intorno a T2, plateau fino a T3, risalita con incrocio
+  di A e possibile picco positivo, riassestamento in T4. Nessuna fascia Df.
+  Il picco è uno scenario contingente, non una previsione necessaria.
+- Le ordinate rappresentano `d_f(t) = D_f(t) − D_rif`; il riferimento
+  fisiologico può essere positivo in assoluto. Un tratto sotto lo zero non
+  indica debito assoluto negativo. Nessun legame deterministico con SC o GC;
+  nessuna ampiezza calibrata o misura diretta della qualità conoscitiva.
+- Conservati colori del lettore, focus esclusivo con override manuale, neutralità
+  senza attenuazione, sincronizzazione contestuale mobile e renderer generico
+  `model-reader.js`, che già gestisce tutti gli elementi della stessa serie.
+- Prosa preservata: solo due identificativi tecnici e quattro correzioni
+  circoscritte nel capitolo Df (inviluppo → scenari A/B, con chiarimento
+  sull’incrocio). Nessuna modifica ai paragrafi fisiologia, sottoalimentazione,
+  acquisizione/trattamento, recupero e distinzione dal controllo.
+- Metadati e cornice dell’anteprima riportano la revisione del 29 ottobre,
+  mantenendo `noindex` e l’esclusione dagli indici del sito.
+
+### Aggiornamento KGᵤ e navigatore editoriale
+
+KGᵤ conserva integralmente la curva graduale già presente. Da T3 viene aggiunto
+un secondo bordo che raggiunge immediatamente lo zero operativo e vi resta fino
+a T4, con riempimento nel colore KGᵤ. Il tracciato preesistente è invariato;
+le nuove primitive sono limitate a T3–T4. Iᵤ꜀, KLᵤ e le altre geometrie restano
+invariate. La prosa e le definizioni sintetiche non vengono riscritte.
+
+La guida di lettura riusa `nav-sezioni.js` e `.secnav` degli articoli Frontiera,
+con otto stop custom (uno per variabile) e uno scroller nativo interno.
+Vedere `../navigatore-sezioni.md`. Il controller AUTO/MANUALE non è modificato.
+La carta chiara viene applicata anche alla prosa mobile e alla sua cornice;
+solo l’info box desktop torna alla superficie scura originaria.
+
+### Verifica della revisione Df
+
+- `npm run verify:model-m1`: **PASS**, inclusi 5.005 confronti geometrici storici.
+- `npm run build`: **PASS**, build completa e tutti i verificatori di output.
+- `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:browser`:
+  **149/151 PASS**, inclusi **44/44** test del lettore M1.
+- Quattro verifiche Panel 2B ripetute dopo aver stabilizzato l’attesa del layout
+  per gli screenshot: **4/4 PASS**.
+- `git diff --check`: **PASS**.
+
+La ripetizione mirata su `main` e sul branch dà in entrambi i casi
+**1 PASS (STR2), 1 FAIL (End/Home)**.
+
+I due fallimenti della suite globale riguardano componenti esterni al mandato:
+
+1. `schema-str2.spec.js:167`, caso 1440 px: timeout nell’attesa di
+   `data-str2-settled="true"` durante il momento 4. Il medesimo caso passa sul
+   checkout separato di `main` e alla ripetizione sul branch, senza modifiche
+   a STR2: timeout intermittente nella suite completa.
+2. `technical-recon.spec.js:72`: dopo Control+Home, `scrollY` resta 18512 invece
+   di 0. Il fallimento si riproduce identico sul `main` canonico
+   `be980815f60b374736cefdc3bc53147c68aefe36`, coerentemente con la nota storica
+   del 13–14 ottobre. La ripetizione sul branch conferma lo stesso errore.
+
+Le build delle due pagine coinvolte (`/analisi/lyman-contesa-posizioni-sostegno/`
+e `/fasi/manovra-fallita/`) coincidono **byte per byte** con quelle del checkout
+separato di `main`. Coincidono anche tutti i JS e CSS esterni al lettore M1.
+Il confronto usa Eleventy con i prerequisiti font e territori, senza modifiche
+al testo o ai file versionati di `main`. Non sono stati alterati infobox, STR2,
+i relativi test o timeout per aggirare questi esiti.
+
+Screenshot riproducibili dei test in `reports/modelli/panel2b-*.png`:
+320×568, 390×844, 1366×768 e 1440×900, ciascuno senza focus e con focus Df,
+oltre al dettaglio del solo pannello. I test verificano entrambe le traiettorie,
+focus dopo ridisegno SVG, zero mediano e contenimento nell’area utile.
+I test di fallback e assenza di JavaScript verificano la fine del testo
+canonico, anziché un titolo eliminato dalla revisione editoriale.
+
+## Anteprime Panel 2B — revisione Df
+
+Desktop, tutte le variabili e focus Df:
+
+![Panel 2B desktop senza focus](anteprime/m1-df-desktop-neutro.png)
+
+![Panel 2B desktop con focus Df](anteprime/m1-df-desktop-focus.png)
+
+Mobile, tutte le variabili e focus Df:
+
+![Panel 2B mobile senza focus](anteprime/m1-df-mobile-neutro.png)
+
+![Panel 2B mobile con focus Df](anteprime/m1-df-mobile-focus.png)
+
+## Anteprime storiche del lettore
 
 ![Desktop, 1366×768](anteprime/desktop.png)
 
@@ -24,9 +122,11 @@ M1 resta un'operazione successiva.
 ## Fonti e integrità
 
 `fonti-m1/` conserva i quattro allegati originali, esclusi dall'output insieme
-all'intera cartella `docs/`. Il Canone del 3 ottobre 2026, comprese le appendici,
-prevale sull'HTML. L'HTML fornito adotta già GC come inviluppo e gli estremi
-canonici: non sono state introdotte curve nuove. Le funzioni `arc`, `local`,
+all'intera cartella `docs/`. Per la revisione corrente la fonte editoriale canonica è
+`src/_includes/modelli/m1.md`, commit `be980815f60b374736cefdc3bc53147c68aefe36`
+(«Revisione testo terminata», 29 ottobre 2026). L’HTML originario rimane
+un riferimento storico per le curve preesistenti di Panel 1 e 2A
+(per KGᵤ, il bordo graduale conservato). Le funzioni `arc`, `local`,
 `values`, `makePoints` sono estratte dalla sola visualizzazione M1. Non vengono
 caricati iframe, wrapper Ruby, messaggistica host, Floating UI o altri script
 esterni dell'allegato.
@@ -35,12 +135,17 @@ esterni dell'allegato.
 statici e dal browser per adattare il rendering. I valori originali sono mappati
 affinalmente nell'area di ciascun pannello; font, assi e comandi mantengono dimensioni
 leggibili in pixel CSS. Il focus modifica solo opacità/colore, mai i tracciati.
-Gli zeri distinti, gli inviluppi e i salti sono preservati; T2 non genera eventi.
+Panel 1 e le curve originarie di 2A restano invariate; KGᵤ aggiunge un bordo
+sullo zero e un riempimento da T3 a T4. Panel 2B usa uno zero mediano
+visivamente condiviso, con standard e scale distinti. SC/GC mantengono salti
+e inviluppi; Df ha due traiettorie qualitative, con assestamento intorno a T2,
+che non rappresenta un nuovo evento operativo.
 I colori sono derivati dalle famiglie petrolio, azzurro, ruggine e verdi del sito.
 
-`src/_includes/modelli/m1.md` conserva integralmente la prima stesura. L'H1 è
+`src/_includes/modelli/m1.md` conserva la revisione editoriale definitiva del 29 ottobre. L'H1 è
 reso nel layout; la formula e i suoi due simboli inline hanno markup HTML
-accessibile anziché delimitatori LaTeX non renderizzati. Nessuna frase è riscritta.
+accessibile anziché delimitatori LaTeX non renderizzati. Le sole correzioni
+editoriali correnti distinguono gli scenari Df dagli estremi di un inviluppo.
 Le occorrenze evidenziabili usano `data-term`, esplicito, senza sostituzioni globali.
 
 ## Contratto per altri modelli
@@ -63,25 +168,38 @@ Le occorrenze evidenziabili usano `data-term`, esplicito, senza sostituzioni glo
 ## Stati e comportamento
 
 Lo stato spaziale `space` (panoramica/lettura/espanso) e il riferimento temporale
-`time` sono indipendenti dalla modalità mobile `mode`. Un solo resolver determina
+`time` sono indipendenti dalla modalità di interazione `mode`. Un solo resolver determina
 insieme pannello e focus:
 
 | Modalità | Pannello | Focus |
 | --- | --- | --- |
-| `auto` | Segue il testo, con passaggio continuo e reversibile | Variabile contestuale o neutro |
-| `focus` | Quello della variabile scelta, anche scorrendo altri capitoli | Manuale persistente |
+| `auto` | Segue il testo; passaggio continuo e reversibile su mobile | Variabile contestuale o neutro |
+| `focus` | Quello della variabile scelta, anche scorrendo altri capitoli | Manuale persistente; anche neutro su desktop |
 | `free` | Quello scelto con frecce o swipe | Nessuno |
 
-Il primo tap su una variabile automatica la fissa manualmente. Il secondo tap
+Su mobile il primo tap su una variabile automatica la fissa manualmente. Il secondo tap
 sulla stessa selezione manuale ripristina AUTO. Frecce e swipe cancellano il focus
 precedente: prevale l'ultima scelta. “Allinea il focus al testo” è disponibile in
 entrambe le modalità manuali e richiama la stessa operazione del selettore del
 pannello: azzera gli override e ricalcola il contesto, senza spostare la prosa,
 cambiare l'espansione o il tempo selezionato.
 
-Su desktop il focus resta esclusivamente manuale: un secondo clic lo annulla,
-un'altra scelta lo trasferisce; lo scroll non lo modifica. Legenda, margine,
-tracciati e occorrenze marcate condividono la selezione.
+Su desktop AUTO è la modalità predefinita: il focus segue il segmento a 32 px
+dall’inizio dell’area di lettura; i segmenti neutri mostrano tutte le curve senza
+attenuazione. Su mobile il riferimento resta sotto il grafico compatto, secondo
+il comportamento già esistente. Entrambi i layout usano lo stesso resolver e la
+stessa evidenziazione di legenda, margini, tracciati e richiami testuali.
+
+Una selezione esplicita blocca il focus in modalità manuale, anche durante lo
+scroll. Su desktop il secondo clic sulla stessa variabile disattiva il focus e
+mantiene lo stato manuale neutro; «Allinea il focus al testo», ora disponibile
+anche su desktop, ripristina immediatamente AUTO. Su mobile il secondo tap
+continua a ripristinare AUTO. La navigazione libera fra pannelli resta distinta.
+
+Le variazioni di altezza dei segmenti aggiornano le coordinate memorizzate tramite
+ResizeObserver. Il cambio di layout conserva l’ultimo contesto di lettura stabile.
+Il focus automatico non scrive la posizione dello scroller: scorrimento, velocità
+e inerzia rimangono nativi; nessuno snapping o inseguimento del testo.
 
 Su mobile un solo contenitore scorre nativamente, anche dal fondo non interattivo
 del grafico. Non ci sono listener wheel/touch che impongono lo scroll, snap o
@@ -137,16 +255,29 @@ Durante la lettura compatta, le frecce consentono di consultare un pannello per 
 
 ## Verifiche
 
-- `npm run verify:model-m1`: 8.008 confronti con le equazioni dell'allegato
-  originale, monotonia, estremi, zeri, salti e inviluppi; confronto della prosa
-  dopo rimozione dei soli adattamenti strutturali dichiarati. Il controllo è
-  incluso in `npm run build`.
-- `npx playwright test tests/browser/model-reader.spec.js`: 20 casi per i nove
+- `npm run verify:model-m1`: 5.005 confronti storici per C, U, I, KG e KL;
+  salti e recuperi SC/GC, zero mediano, scenari Df sotto la baseline, incrocio,
+  picco contingente e ritorno in T4; contenimento SVG a due dimensioni,
+  identificativi coerenti e assenza di riferimenti attivi a Dᵤ. Il controllo
+  accetta il marcatore neutro finale vuoto presente nella revisione canonica,
+  senza ripristinare la conclusione della prima stesura. È incluso nella build.
+- `npx playwright test tests/browser/model-reader-desktop-auto.spec.js`: 5 casi
+  dedicati ad AUTO desktop a 1366×768 e 1440×900: wheel nativa avanti/indietro,
+  neutri, focus comune dei tre elementi Df, override manuale e disattivazione,
+  riallineamento da tastiera senza nuovo scroll, cambi di layout, confini,
+  scroll rapido, altezze variabili e assenza di aggiornamenti ridondanti.
+  La suite M1 complessiva comprende ora **49 casi**.
+  Nella verifica della sincronizzazione desktop: **49/49 PASS**; verificatore
+  M1 e build completa **PASS**; suite browser globale **155/156 PASS**.
+  Il solo fallimento è il problema End/Home dell’infobox già riprodotto su
+  `main`: `scrollY` resta 18512 invece di 0. Nessuna modifica a quell’apparato.
+- `npx playwright test tests/browser/model-reader.spec.js`: 26 casi per i nove
   viewport richiesti, focus desktop/mobile, neutralità, assenza di scroll imposto,
   contrazione nativa, passaggi reversibili, espansione animata, swipe touch emulato,
   tastiera, menu globale, orientamento, testo ingrandito, viewport equivalente a
   zoom 200%, variazioni di altezza e movimento ridotto, assenza di JavaScript e
-  isolamento dall'indicizzazione.
+  isolamento dall'indicizzazione; quattro casi dedicati al Panel 2B verificano
+  le due traiettorie Df, il focus comune e le schermate neutre/con focus.
 - `npx playwright test tests/browser/model-reader-fixes.spec.js`: 18 casi aggiuntivi,
   separati nei gruppi A e B. Comprendono i requisiti A1–A7/B1–B12, gesture touch
   tramite CDP, wheel, navigazione effettiva dal menu, confini dello scroller,
@@ -162,9 +293,8 @@ Senza questa variabile il repository mantiene il comportamento Playwright normal
 
 ## Decisioni ancora editoriali e verifica su hardware
 
-La prosa è ancora la prima stesura: titoli, descrizioni sintetiche delle variabili,
-accostamenti cromatici e densità della panoramica piccola restano da approvare
-editorialmente. La metrica d, le unità e le misure operative restano non canonizzate;
+La prosa segue la revisione definitiva del 29 ottobre 2026. Restano da
+revisionare editorialmente le correzioni terminologiche Df e la loro resa grafica. La metrica d, le unità e le misure operative restano non canonizzate;
 nessuna viene inventata dal lettore. Lo stress-test è un riferimento sui limiti del
 modello, non un nuovo contenuto aggiunto all'articolo.
 

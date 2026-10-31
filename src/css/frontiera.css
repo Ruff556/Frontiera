@@ -2185,9 +2185,8 @@ figure.media figcaption .rights b{color:#4A5A64;font-weight:500}
    nel guscio e il guscio simmetrico rispetto all'asse. */
 .secnav ul{margin:0;padding:0;list-style:none}
 .secnav li{margin:0}
-@media(min-width:1140px){
   .secnav{
-    display:block;position:absolute;top:0;bottom:0;right:.4rem;
+    position:absolute;top:0;bottom:0;right:.4rem;
     width:2.5rem;z-index:30;pointer-events:none;
   }
   .secnav-sticky{
@@ -2280,25 +2279,25 @@ figure.media figcaption .rights b{color:#4A5A64;font-weight:500}
      invece a vivere sul margine destro di .fasewrap (regola predefinita sopra).
      .foglio è già position:relative: il contesto di posizionamento esiste. */
   :is(.reading,.page) > .secnav{right:auto;left:100%;margin-left:.5rem}
- }
+@media(min-width:1140px){.secnav{display:block}}
  /* Ancoraggio con hash coerente con l'header sticky anche negli articoli
     (le schede F/P hanno già .fasebody > h2{scroll-margin-top}). */
  :is(.reading,.page) h2{scroll-margin-top:5.5rem}
 
 /* ---------------- Rullino mobile / schermi stretti ---------------- */
-.secroll{display:none}
-@media(max-width:1139px){
-  .secroll{
-    display:block;position:fixed;z-index:40;
-    /* Il centro usa svh: non segue le oscillazioni della browser chrome mobile. */
-    top:57vh;
-    right:calc(env(safe-area-inset-right,0px) + .7rem);
-    opacity:0;transform:translateY(calc(-50% - 8px)) scale(.94);pointer-events:none;
-    transition:opacity var(--t2) ease,transform var(--t2) ease;
-  }
-  .secroll.is-visible{opacity:1;transform:translateY(-50%);pointer-events:auto}
-  @supports (height:1svh){.secroll{top:57svh}}
+/* Shared placement/visibility styles also serve intrinsic mobile hosts (M1),
+   whose mobile layout can be active above the article's viewport breakpoint. */
+.secroll{
+  display:none;position:fixed;z-index:40;
+  /* Il centro usa svh: non segue le oscillazioni della browser chrome mobile. */
+  top:57vh;
+  right:calc(env(safe-area-inset-right,0px) + .7rem);
+  opacity:0;transform:translateY(calc(-50% - 8px)) scale(.94);pointer-events:none;
+  transition:opacity var(--t2) ease,transform var(--t2) ease;
 }
+.secroll.is-visible{opacity:1;transform:translateY(-50%);pointer-events:auto}
+@supports (height:1svh){.secroll{top:57svh}}
+@media(max-width:1139px){.secroll{display:block}}
 /* Ancora assoluta per il marker d'ingresso: non occupa spazio nel testo. */
 .secnav-start-anchor{position:relative}
 .secroll-start-marker{display:block}

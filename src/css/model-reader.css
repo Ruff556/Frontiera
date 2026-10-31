@@ -2,7 +2,7 @@
    retain their own scroll, type and palette. */
 .model-reader{
   --mr-C:#E9EFF1;--mr-U:#7DC2DA;--mr-GC:#D6B978;--mr-KG:#E08D72;
-  --mr-KL:#A6B9E2;--mr-SC:#91C5AF;--mr-I:#C2CCDA;--mr-D:#DCA4BD;
+  --mr-KL:#A6B9E2;--mr-SC:#91C5AF;--mr-I:#C2CCDA;--mr-DF:#DCA4BD;
   --mr-safe-bottom:env(safe-area-inset-bottom,0px);--mr-gap:.65rem;--mr-compact:16rem;--mr-expanded:40rem;--mr-graph-h:var(--mr-expanded);
   color:var(--on-dark);margin:0 auto;padding:1rem;max-width:1800px;
 }
@@ -13,7 +13,7 @@
 .model-reader [data-focus="KL"],.model-reader [data-series="KL"],.model-reader [data-term="KL"]{--variable:var(--mr-KL)}
 .model-reader [data-focus="SC"],.model-reader [data-series="SC"],.model-reader [data-term="SC"]{--variable:var(--mr-SC)}
 .model-reader [data-focus="I"],.model-reader [data-series="I"],.model-reader [data-term="I"]{--variable:var(--mr-I)}
-.model-reader [data-focus="D"],.model-reader [data-series="D"],.model-reader [data-term="D"]{--variable:var(--mr-D)}
+.model-reader [data-focus="DF"],.model-reader [data-series="DF"],.model-reader [data-term="DF"]{--variable:var(--mr-DF)}
 .mr-heading{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:.7rem}
 .mr-heading h1{font:600 clamp(1.2rem,2.1vw,1.85rem)/1.15 Archivo,sans-serif;margin:.25rem 0 0;letter-spacing:-.03em}
 .mr-kicker,.mr-edition{font:400 .65rem/1.4 'IBM Plex Mono',monospace;letter-spacing:.05em;color:var(--accent-hi)}
@@ -31,9 +31,11 @@
 .mr-variable{border:1px solid var(--variable);border-radius:var(--r-sm);background:#0c1923;color:var(--variable);padding:.2rem .5rem;font-size:.7rem;line-height:1.25;transition:background var(--t1),color var(--t1),box-shadow var(--t1)}
 .mr-variable[aria-pressed="true"]{background:var(--variable);color:var(--abyss);box-shadow:0 0 0 2px color-mix(in srgb,var(--variable) 25%,transparent)}
 .mr-variable:hover{box-shadow:0 0 0 2px color-mix(in srgb,var(--variable) 30%,transparent)}
+.mr-variable-label{display:none}
 .mr-chart{display:block;width:100%;height:9rem;min-height:0;overflow:visible;flex:1;color:var(--on-dark-2)}
 .mr-chart text{font:400 11px 'IBM Plex Mono',monospace;fill:currentColor}
 .mr-axis{stroke:var(--on-dark);stroke-opacity:.16;stroke-width:1}
+.mr-baseline{stroke:var(--on-dark);stroke-opacity:.5;stroke-width:1;stroke-dasharray:5 4}
 .mr-guide{stroke:var(--on-dark);stroke-opacity:.65;stroke-width:1;stroke-dasharray:2 3}
 .mr-band{fill:var(--variable);fill-opacity:.14;stroke:none}
 .mr-curve{stroke:var(--variable);stroke-width:2.2;fill:none;stroke-linejoin:round}
@@ -45,16 +47,15 @@
 .mr-events button{border:1px solid var(--gd-brd-hi);background:transparent;color:var(--on-dark);border-radius:var(--r-sm);font-size:.65rem;min-width:2.1rem;padding:.2rem .4rem}
 .mr-events button[aria-pressed="true"]{background:var(--accent-hi);color:var(--abyss);border-color:var(--accent-hi)}
 .mr-phase{font:400 .67rem/1.4 Archivo,sans-serif;min-height:1.9rem;margin:0;color:var(--on-dark-2)}
-.mr-description{border:1px solid var(--gd-brd-hi);border-radius:var(--r-md);padding:.45rem .6rem;height:4.4rem;flex:none;overflow:auto;background:rgba(0,14,26,.55);font:400 .73rem/1.35 Archivo,sans-serif}
-.mr-description strong{font-weight:600;color:var(--accent-hi)}
-.mr-description p{margin:.2rem 0 0;color:var(--on-dark-2)}
+.mr-description{border:1px solid var(--hairline);border-radius:var(--r-md);padding:.45rem .6rem;height:4.4rem;flex:none;overflow:auto;background:var(--paper);color:var(--text);font:400 .73rem/1.35 Archivo,sans-serif}
+.mr-description strong{font-weight:600;color:var(--accent)}
+.mr-description p{margin:.2rem 0 0;color:var(--text)}
 .mr-paper{padding:clamp(1rem,2.2vw,2rem);font:400 1.08rem/1.72 Spectral,Georgia,serif;background:#111f2bea;color:var(--on-dark);border:1px solid var(--gd-brd-hi);border-radius:var(--r-xl)}
 .mr-paper h2{font:600 1.45rem/1.3 Archivo,sans-serif;letter-spacing:-.025em;margin:1.5rem 0 1rem}
 .mr-paper h3{font:600 1.16rem/1.35 Archivo,sans-serif;margin:1rem 0}
 .mr-paper p{margin:0 0 1.1em}
 .mr-paper strong{font-weight:600;color:#fff}
-.mr-draft-note,.mr-end{font:400 .68rem/1.4 'IBM Plex Mono',monospace;color:var(--accent-hi);padding-bottom:1rem;border-bottom:1px solid var(--gd-brd)}
-.mr-end{padding-top:2rem;border-bottom:0;border-top:1px solid var(--gd-brd)}
+.mr-draft-note{font:400 .68rem/1.4 'IBM Plex Mono',monospace;color:var(--accent-hi);padding-bottom:1rem;border-bottom:1px solid var(--gd-brd)}
 .mr-margin{align-self:start;position:sticky;top:1rem;text-align:left;padding:.65rem .45rem;display:flex;flex-direction:column;gap:.4rem;width:100%;margin:1rem 0}
 .mr-margin strong{color:inherit;font:600 1.1rem/1.2 'IBM Plex Mono',monospace}
 .mr-margin span{font:400 .65rem/1.3 Archivo,sans-serif}
@@ -70,7 +71,7 @@
 .model-reader[data-ready]{padding:.7rem 1rem;max-width:1800px}
 [data-ready] .mr-workspace{height:var(--mr-available);position:relative;isolation:isolate}
 [data-layout="desktop"] .mr-workspace{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--mr-gap)}
-[data-layout="desktop"] .mr-reading{height:100%;overflow:auto;scroll-behavior:auto;scrollbar-color:var(--ink-4) transparent;border-radius:var(--r-xl);overscroll-behavior:contain}
+[data-layout="desktop"] .mr-reading{height:100%;overflow:auto;scroll-behavior:auto;scrollbar-width:none;border-radius:var(--r-xl);overscroll-behavior:contain}
 [data-layout="desktop"] .mr-graph{height:100%}
 [data-layout="desktop"] .mr-plots-window,[data-layout="desktop"] .mr-plots{flex:1;min-height:0;display:flex;flex-direction:column}
 [data-layout="desktop"] .mr-panel{flex:1}
@@ -95,7 +96,7 @@
 .mr-sync small{font-size:.57rem;color:var(--on-dark-3);margin-top:.2rem}
 .mr-sync[aria-pressed="true"]{border-color:var(--accent-hi);background:#193e50;box-shadow:inset 0 0 16px #7dc2da12}
 [data-layout="mobile"] .mr-description,[data-layout="mobile"] .mr-events,[data-layout="mobile"] .mr-phase{display:none}
-[data-layout="mobile"] .mr-context-tools{display:block;height:1rem;flex:none;text-align:center;font:400 .6rem/1.2 Archivo,sans-serif}
+[data-layout] .mr-context-tools{display:block;height:1rem;flex:none;text-align:center;font:400 .6rem/1.2 Archivo,sans-serif}
 .mr-context-tools button{background:transparent;color:var(--accent-hi);border:0;text-decoration:underline;font:inherit;padding:.2rem .4rem}
 [data-layout="mobile"] .mr-caption{font-size:.56rem;flex:none}
 [data-layout="mobile"] .mr-caption br{display:none}
@@ -105,14 +106,34 @@
 [data-layout="mobile"] .mr-panel h2{display:none}
 [data-layout="mobile"] .mr-panel header{flex:none;justify-content:center;min-height:1.8rem}
 [data-layout="mobile"] .mr-variable{min-height:1.75rem;padding:.25rem .6rem}
+/* Only the contextual strip is elastic. aria-pressed remains the single
+   focus source; the overview and the desktop measurement probe stay compact.
+   Keep the original symbol widths and 1.75rem button height. Only the active
+   flex basis grows, to slightly more than the chart's T1–T3 interval (about
+   half the plot width). The centered group leaves space on both sides. */
+[data-layout="mobile"][data-overview="false"] .mr-panel header{flex-wrap:nowrap}
+[data-layout="mobile"][data-overview="false"] .mr-legend{width:100%;min-width:0;justify-content:center;align-items:center}
+[data-layout="mobile"][data-overview="false"] .mr-legend .mr-variable{
+ display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);align-items:center;flex:0 1 0px;min-width:max-content;height:1.75rem;
+ padding:0 .6rem;overflow:hidden;
+ transition:flex-basis var(--t2) var(--e-out),background var(--t1),color var(--t1),box-shadow var(--t1);
+}
+[data-layout="mobile"][data-overview="false"] .mr-legend .mr-variable[aria-pressed="true"]{flex-basis:calc(52% - 1.5rem)}
+[data-layout="mobile"][data-overview="false"] :is(.mr-variable-symbol,.mr-variable-label){grid-area:1/1;transition:opacity .1s var(--e-out)}
+[data-layout="mobile"][data-overview="false"] .mr-legend .mr-variable-symbol{white-space:nowrap}
+[data-layout="mobile"][data-overview="false"] .mr-legend .mr-variable-label{
+ display:block;contain:inline-size;min-width:0;max-height:100%;overflow:hidden;opacity:0;font:400 .7rem/1.1 Archivo,sans-serif;text-wrap:balance;
+}
+[data-layout="mobile"][data-overview="false"] .mr-legend .mr-variable[aria-pressed="true"] .mr-variable-symbol{opacity:0}
+[data-layout="mobile"][data-overview="false"] .mr-legend .mr-variable[aria-pressed="true"] .mr-variable-label{opacity:1;transition:opacity .14s var(--e-out) .14s}
 [data-layout="mobile"][data-overview="true"] .mr-panel{height:33.333%;flex-basis:33.333%;border-bottom:1px solid var(--gd-brd)}
 [data-layout="mobile"][data-overview="true"] .mr-panel h2{display:block;font-size:.6rem}
 [data-layout="mobile"][data-overview="true"] .mr-panel header{justify-content:space-between;flex-wrap:nowrap}
 [data-layout="mobile"][data-overview="true"] .mr-variable{font-size:.6rem;padding:.15rem .3rem;min-height:1.5rem}
 [data-layout="mobile"] .mr-reading{position:absolute;inset:0;overflow:auto;scroll-behavior:auto;scrollbar-width:none;overscroll-behavior:contain;clip-path:inset(0);}
 [data-layout="mobile"] .mr-paper{margin-top:calc(var(--mr-expanded) + var(--mr-gap));padding:1.15rem 1rem calc(var(--mr-compact) + 2rem);border-color:transparent;background:transparent;position:relative;z-index:1}
-[data-layout="mobile"] .mr-reading-frame{display:block;position:absolute;inset:calc(var(--mr-graph-h) + var(--mr-gap)) 0 0;pointer-events:none;z-index:-1;background:#111f2b}
-[data-layout="mobile"] .mr-reading-tab{position:absolute;bottom:0;left:0;width:100%;height:calc(2.75rem + var(--mr-safe-bottom));z-index:3;border:1px solid var(--gd-brd-hi);border-radius:var(--r-xl) var(--r-xl) 0 0;background:#152a38;color:var(--accent-hi);font-size:.7rem;padding:.6rem .4rem calc(.6rem + var(--mr-safe-bottom))}
+[data-layout="mobile"] .mr-reading-frame{display:block;position:absolute;inset:calc(var(--mr-graph-h) + var(--mr-gap)) 0 0;pointer-events:none;z-index:-1;background:var(--paper)}
+[data-layout="mobile"] .mr-reading-tab{position:absolute;bottom:0;left:0;width:100%;height:calc(2.75rem + var(--mr-safe-bottom));z-index:3;border:1px solid var(--hairline);border-radius:var(--r-xl) var(--r-xl) 0 0;background:var(--paper);color:var(--accent);font-size:.7rem;padding:.6rem .4rem calc(.6rem + var(--mr-safe-bottom))}
 [data-layout="mobile"][data-space="reading"] .mr-reading-tab{display:none}
 [data-layout="mobile"][data-space="expanded"] .mr-reading{overflow:hidden}
 [data-layout="mobile"] .mr-segment--variable{display:block}
@@ -159,3 +180,51 @@ html[data-model-reader-ready] #main{height:100%;overflow:hidden}
 [data-layout="mobile"] .mr-panel{clip-path:inset(0)}
 
 .model-reader[data-ready]{margin-top:0;padding-bottom:0}
+
+/* Editorial paper in both layouts; graph panels keep their blue surface. */
+[data-layout="desktop"] .mr-reading{background:var(--paper)}
+[data-layout] .mr-paper{background:var(--paper);color:var(--text);border-color:var(--hairline)}
+/* The fixed mobile cell owns the paper surface; scrolling prose must not
+   paint a rectangle over its original rounded frame. */
+[data-layout="mobile"] .mr-paper{background:transparent;border-color:transparent}
+[data-layout="mobile"] .mr-reading-frame{border-color:var(--hairline)}
+[data-layout] .mr-paper :is(h2,h3,strong){color:var(--ink)}
+[data-layout] .mr-paper a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+[data-layout] .mr-paper a:hover{color:var(--ink)}
+[data-layout] .mr-draft-note{color:var(--accent);border-color:var(--hairline)}
+[data-layout] .mr-paper [data-term]{text-decoration-color:color-mix(in srgb,var(--variable) 45%,var(--ink))}
+/* Reserve the same optical spacing with or without focus. Each wrapped
+   fragment gets its own soft ends, without changing the prose's line-height. */
+[data-layout] .mr-paper [data-term]{box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:.02em .12em;border-radius:.18em}
+[data-layout] .mr-paper [data-term].is-focused{color:var(--ink);box-shadow:0 0 0 1px color-mix(in srgb,var(--variable) 80%,var(--ink))}
+[data-layout] .mr-paper .mr-margin{background:var(--paper);color:var(--ink);border-color:color-mix(in srgb,var(--variable) 45%,var(--ink));box-shadow:inset 3px 0 0 var(--variable)}
+[data-layout] .mr-paper .mr-margin[aria-pressed="true"]{background:var(--variable);box-shadow:0 0 0 2px color-mix(in srgb,var(--variable) 45%,var(--ink))}
+[data-layout] .mr-paper .mr-margin:hover{border-color:var(--accent)}
+[data-layout] .mr-reading:focus-visible,[data-layout] .mr-paper button:focus-visible{outline-color:var(--accent)}
+
+.model-reader .mr-reading-tab:focus-visible{outline-color:var(--accent)}
+
+/* Native text scrolling, with the article section navigator in its own gutter. */
+.mr-reading::-webkit-scrollbar{display:none}
+.model-reader .secnav{display:none}
+[data-layout="desktop"] .mr-reading{margin-right:3rem}
+[data-layout="desktop"] .mr-workspace > .secnav{display:block;right:.2rem}
+[data-layout="desktop"] .secnav-sticky{position:relative;top:0;height:100%}
+[data-layout="desktop"] .secnav-panel{max-height:calc(var(--mr-available) - 2rem)}
+[data-layout="desktop"] .secnav-titles{max-height:calc(var(--mr-available) - 3rem)}
+/* The original article roller sits beside the reading cell. Reserve only its
+   existing width and touch clearance; graph and outer paper geometry stay fixed. */
+[data-layout="mobile"] .mr-reading{--section-navigation-inset:var(--mr-compact)}
+[data-layout="mobile"] .mr-paper{padding-right:calc(var(--secroll-w) + 2rem)}
+.model-reader .secroll{display:none}
+.model-reader[data-layout="mobile"] .secroll{
+ display:block;top:calc(var(--mr-viewport-h) - (var(--mr-available) - var(--mr-graph-h) - var(--mr-gap))/2);
+}
+/* Centering is placement, including when motion is reduced. */
+.model-reader[data-layout="mobile"] .secroll.is-visible{transform:translateY(-50%)}
+/* Keep the existing menu inside the available reading cell, below the graph. */
+.model-reader[data-layout="mobile"] .secroll-menu{max-height:calc(var(--mr-available) - var(--mr-graph-h) - var(--mr-gap) - 1rem)}
+/* Restore the original desktop information card, without changing its size. */
+[data-layout="desktop"] .mr-description{background:rgba(0,14,26,.55);color:var(--on-dark);border-color:var(--gd-brd-hi)}
+[data-layout="desktop"] .mr-description strong{color:var(--accent-hi)}
+[data-layout="desktop"] .mr-description p{color:var(--on-dark-2)}

@@ -25,6 +25,12 @@
   // Contratto comune: il contenitore del solo corpo editoriale indicizzabile.
   var body = document.querySelector("[data-section-navigation]");
   if (!body) return; // Nessun contenuto abilitato in pagina.
+  // Optional native inner scroller (Model Reader). Both layouts reuse the
+  // same links, active section and scroll navigation.
+  var scrollRootSelector = body.getAttribute("data-section-navigation-scroll-root");
+  var scrollRoot = scrollRootSelector ? body.closest(scrollRootSelector) : null;
+  var scrollTarget = scrollRoot || window;
+  function scrollY() { return scrollRoot ? scrollRoot.scrollTop : window.pageYOffset; }
 
   // Sequenza ordinata delle tappe, nell'ordine DOM reale del corpo:
   //  - tutti gli h2 figli diretti del contenitore (i titoli attuali);
@@ -102,7 +108,12 @@
     return parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
   }
   function scrollMarginPx() {
-    return 5.5 * rootFontPx(); // deve combaciare con scroll-margin-top in CSS
+    return scrollRoot ? innerInset() + 24 : 5.5 * rootFontPx(); // inside the reader's context line
+  }
+  function innerInset() {
+    // The host declares the area covered by its fixed graph. No focus state
+    // or graph geometry is owned by the shared navigator.
+    return scrollRoot ? parseFloat(getComputedStyle(scrollRoot).getPropertyValue("--section-navigation-inset")) || 0 : 0;
   }
   function measure() {
     navH = headerEl ? Math.round(headerEl.getBoundingClientRect().height) : 60;
@@ -126,7 +137,7 @@
      esattamente quando un titolo la attraversa: nessun aggiornamento tardivo.
      ===================================================================== */
   function activationLine() {
-    return navH + Math.min(window.innerHeight * 0.22, 220);
+    return scrollRoot ? scrollRoot.getBoundingClientRect().top + innerInset() + 32 : navH + Math.min(window.innerHeight * 0.22, 220);
   }
   function computeActive() {
     // Durante una navigazione programmata lo stato resta bloccato sul target.
@@ -142,10 +153,11 @@
     }
     // Ultima sezione: se il fondo di una pagina scrollabile è raggiunto, forza
     // l'ultima (evita che resti "attiva" una sezione più in alto a fine articolo).
-    var doc = document.documentElement;
+    var doc = scrollRoot || document.documentElement;
+    var viewportHeight = scrollRoot ? scrollRoot.clientHeight : window.innerHeight;
     if (
-      doc.scrollHeight > window.innerHeight + 4 &&
-      window.innerHeight + window.pageYOffset >= doc.scrollHeight - 2
+      doc.scrollHeight > viewportHeight + 4 &&
+      viewportHeight + scrollY() >= doc.scrollHeight - 2
     ) {
       idx = sections.length - 1;
     }
@@ -155,10 +167,10 @@
   var io = null;
   function setupObserver() {
     if (io) io.disconnect();
-    var line = Math.round(activationLine());
+    var line = scrollRoot ? innerInset() + 32 : Math.round(activationLine());
     io = new IntersectionObserver(function () {
       computeActive();
-    }, { rootMargin: "-" + line + "px 0px 0px 0px", threshold: [0, 1] });
+    }, { root: scrollRoot, rootMargin: "-" + line + "px 0px 0px 0px", threshold: [0, 1] });
     sections.forEach(function (s) {
       io.observe(s.el);
     });
@@ -188,7 +200,7 @@
       navTimer = 0;
     }
     if (navScrollEnd) {
-      window.removeEventListener("scrollend", navScrollEnd);
+      scrollTarget.removeEventListener("scrollend", navScrollEnd);
       navScrollEnd = null;
     }
   }
@@ -199,10 +211,10 @@
   }
 
   function targetScrollY(el) {
-    var top = el.getBoundingClientRect().top + window.pageYOffset;
+    var top = el.getBoundingClientRect().top + scrollY() - (scrollRoot ? scrollRoot.getBoundingClientRect().top : 0);
     var y = top - scrollMarginPx();
     var doc = document.documentElement;
-    var max = Math.max(0, doc.scrollHeight - window.innerHeight);
+    var max = Math.max(0, scrollRoot ? scrollRoot.scrollHeight - scrollRoot.clientHeight : doc.scrollHeight - window.innerHeight);
     return Math.max(0, Math.min(y, max));
   }
 
@@ -239,7 +251,8 @@
     clearNavWatch();
 
     if (reduceMotion) {
-      s.el.scrollIntoView({ block: "start" });
+      if (scrollRoot) scrollRoot.scrollTo({top:targetScrollY(s.el),behavior:"instant"});
+      else s.el.scrollIntoView({ block: "start" });
       focusTitle();
       releaseNav();
       return;
@@ -247,9 +260,11 @@
 
     var ty = targetScrollY(s.el);
     try {
-      s.el.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (scrollRoot) scrollRoot.scrollTo({top:ty,behavior:"smooth"});
+      else s.el.scrollIntoView({ behavior: "smooth", block: "start" });
     } catch (e) {
-      s.el.scrollIntoView();
+      if (scrollRoot) scrollRoot.scrollTop=ty;
+      else s.el.scrollIntoView();
     }
     focusTitle();
 
@@ -257,8 +272,8 @@
     navScrollEnd = function () {
       if (navLock && navTarget === idx) releaseNav();
     };
-    if ("onscrollend" in window)
-      window.addEventListener("scrollend", navScrollEnd);
+    if ("onscrollend" in scrollTarget)
+      scrollTarget.addEventListener("scrollend", navScrollEnd);
 
     // … e/o quando lo scroll si ferma (target raggiunto o posizione stabile),
     //     indipendente da durata, browser e preferenze.
@@ -266,7 +281,7 @@
     var lastY = null;
     function watch() {
       if (!navLock || navTarget !== idx) return;
-      var y = window.pageYOffset;
+      var y = scrollY();
       if (Math.abs(y - ty) <= 2 || (lastY !== null && Math.abs(y - lastY) < 0.5))
         stable++;
       else stable = 0;
@@ -297,7 +312,7 @@
   // di posizionamento (position:relative) e la misura editoriale. Nelle schede
   // F/P è .fasewrap (griglia a due colonne); negli articoli è il foglio .reading
   // (.foglio è già relative). Fallback prudente: il genitore del corpo.
-  var wrap = body.closest(".fasewrap") || body.closest(".reading") || body.parentNode;
+  var wrap = scrollRoot ? scrollRoot.parentNode : body.closest(".fasewrap") || body.closest(".reading") || body.parentNode;
   var tickItems = [];
   var titleItems = [];
   var titlesUl = null;
@@ -491,7 +506,9 @@
   menu.appendChild(menuList);
   roll.appendChild(menu);
 
-  document.body.appendChild(roll);
+  // Keep the original roller outside the clipped scroller. Inner hosts can
+  // scope its placement and responsive visibility without changing its skin.
+  (scrollRoot ? wrap : document.body).appendChild(roll);
 
   var STEP = 22; // px per sezione nel rullino
   var position = 0;
@@ -633,7 +650,11 @@
   // ----- Comparsa del rullino -----
   var pastStart = false;
   function updateRollVisibility() {
-    var show = narrowMQ.matches && pastStart;
+    if (scrollRoot) pastStart = startMarker.getBoundingClientRect().top <= startLine();
+    var available = scrollRoot
+      ? getComputedStyle(roll).display !== "none" && getComputedStyle(scrollRoot).overflowY !== "hidden"
+      : narrowMQ.matches;
+    var show = available && pastStart;
     roll.classList.toggle("is-visible", show);
     // Se il rullino non è più visibile (sopra il corpo o viewport tornato largo)
     // il menu eventualmente aperto va chiuso.
@@ -652,16 +673,20 @@
   body.insertBefore(startMarker, body.firstChild);
 
   var startObs = null;
+  function startLine() {
+    return scrollRoot ? scrollRoot.getBoundingClientRect().top + innerInset() + 12 : navH + 12;
+  }
   function setupStartObserver() {
     if (startObs) startObs.disconnect();
-    var line = Math.round(navH + 12);
+    var line = Math.round(startLine());
+    var inset = scrollRoot ? innerInset() + 12 : line;
     startObs = new IntersectionObserver(
       function (entries) {
         var top = entries[0].boundingClientRect.top;
         pastStart = top <= line;
         updateRollVisibility();
       },
-      { rootMargin: "-" + line + "px 0px 0px 0px", threshold: 0 }
+      { root: scrollRoot, rootMargin: "-" + inset + "px 0px 0px 0px", threshold: 0 }
     );
     startObs.observe(startMarker);
     pastStart = startMarker.getBoundingClientRect().top <= line;
@@ -835,6 +860,49 @@
   /* ---- avvio ---- */
   renderRoll(0);
   computeActive();
+
+  if (scrollRoot) {
+    // Reuse the same section state, navigation and drag for native inner scroll.
+    // Host layout/space changes also hide the roller while its graph is expanded.
+    var innerFrame = 0;
+    function refreshInner() {
+      innerFrame = 0;
+      computeActive();
+      updateRollVisibility();
+    }
+    function scheduleInner() {
+      if (!innerFrame) innerFrame = requestAnimationFrame(refreshInner);
+    }
+    scrollRoot.addEventListener("scroll", scheduleInner, { passive: true });
+    var innerResize = new ResizeObserver(function () {
+      setupObserver();
+      setupStartObserver();
+      scheduleInner();
+    });
+    innerResize.observe(scrollRoot);
+    innerResize.observe(body);
+    new MutationObserver(scheduleInner).observe(wrap.parentNode, {
+      attributes: true, attributeFilter: ["data-layout", "data-space"],
+    });
+    // Native hash alignment ignores the area covered by the inner host's
+    // graph. Reuse goTo after layout/fonts settle and for subsequent deep links.
+    function alignInnerHash() {
+      var id = location.hash.slice(1);
+      for (var i = 0; i < sections.length; i++) {
+        if (sections[i].id === id) {
+          goTo(i, false, false);
+          break;
+        }
+      }
+    }
+    window.addEventListener("hashchange", alignInnerHash);
+    document.fonts.ready.then(function () {
+      requestAnimationFrame(function () {
+        alignInnerHash();
+        scheduleInner();
+      });
+    });
+  }
 
   var reT = null;
   window.addEventListener(
