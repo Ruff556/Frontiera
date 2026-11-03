@@ -193,21 +193,26 @@
       {
         "id": "A6-E017",
         "livello": "confermato",
-        "titolo": "Codificazione annunciata del Droid TW 12.7",
-        "motivazione": "Il ministero ucraino ha annunciato codificazione e autorizzazione del sistema con mitragliatrice Browning 12,7 mm il 9 dicembre 2024. Il provvedimento non dimostra quantità consegnate, efficacia o costo per missione.",
+        "titolo": "Codificazione del Droid TW 12.7 e configurazione con Browning M2",
+        "motivazione": "Il ministero ucraino documenta l’annuncio di codificazione e l’armamento Browning da 12,7 mm. L’intervista al reparto identifica la M2 e la configurazione cingolata. La codificazione riguarda l’autorizzazione all’impiego.",
         "fonti": [
           {
             "nome": "Ministero della Difesa ucraino — The Ministry of Defence has codified the Droid TW 12.7, a Ukrainian robotic system equipped with a Browning 12.7 machine gun",
             "url": "https://mod.gov.ua/en/news/the-ministry-of-defence-has-codified-the-droid-tw-12-7-a-ukrainian-robotic-system-equipped-with-a-browning-12-7-machine-gun",
             "data": "2024-12-09"
+          },
+          {
+            "nome": "Matthew Loh, Business Insider — intervista al comandante Mykola «Makar» Zinkevych sul Droid TW",
+            "url": "https://www.businessinsider.com/ukraine-unit-ground-drone-devdroid-tw-fought-russians-45-days-2026-1",
+            "data": "2026-01-08"
           }
         ]
       },
       {
         "id": "A6-E018",
         "livello": "confermato",
-        "titolo": "I 45 giorni riferiti dal comandante Zinkevych",
-        "motivazione": "Business Insider riporta la testimonianza nominativa del comandante sull’impiego per 45 giorni, comprensivo dei rientri per assistenza. È confermata l’esistenza della testimonianza, non un audit indipendente dei risultati; il periodo non equivale a servizio autonomo o ininterrotto.",
+        "titolo": "I 45 giorni di impiego riferiti dal comandante Zinkevych",
+        "motivazione": "Il comandante NC13 riferisce l’impiego del Droid da più posizioni nel corso della missione e rientri circa ogni due giorni per assistenza all’arma, munizioni e batterie. Il livello riguarda l’esistenza e il contenuto della testimonianza, da cui dipendono durata, cadenza dei rientri e risultati riferiti.",
         "fonti": [
           {
             "nome": "Matthew Loh, Business Insider — intervista al comandante Mykola «Makar» Zinkevych sul Droid TW",
@@ -219,22 +224,17 @@
       {
         "id": "A6-E019",
         "livello": "plausibile",
-        "titolo": "Effetti differenti di mitragliatrice e cannone",
-        "motivazione": "Le fonti documentano famiglie d’arma differenti e l’uso del fuoco diretto; la distinzione tra effetti di munizioni è inferenza tecnica per categorie. Bersaglio, tipo di proiettile e condizioni cambiano il risultato. Non si deducono penetrazione, precisione o effetti provati del cannone corto Shturm dal solo calibro.",
+        "titolo": "Effetto del colpo pesante e continuità del fuoco di soppressione",
+        "motivazione": "La documentazione dell’U.S. Army descrive l’impiego della M2 per il fuoco di soppressione e contro bersagli compatibili con il suo munizionamento. Il dossier documenta la descrizione del pezzo accorciato di Shturm. Il confronto è funzionale e condizionato a bersaglio e munizione. Il solo calibro non determina gli effetti del pezzo accorciato.",
         "fonti": [
           {
-            "nome": "Ministero della Difesa ucraino — The Ministry of Defence has codified the Droid TW 12.7, a Ukrainian robotic system equipped with a Browning 12.7 machine gun",
-            "url": "https://mod.gov.ua/en/news/the-ministry-of-defence-has-codified-the-droid-tw-12-7-a-ukrainian-robotic-system-equipped-with-a-browning-12-7-machine-gun",
-            "data": "2024-12-09"
+            "nome": "U.S. Army — TC 3-22.50, Heavy Machine Gun",
+            "url": "https://rdl.train.army.mil/catalog-ws/view/100.ATSC/A736EED1-595B-4049-B7B5-1E0261D8E478-1495566423695/tc3_22x50.pdf"
           },
           {
-            "nome": "Jack Watling e Nick Reynolds, RUSI — Tactical Developments During the Third Year of the Russo–Ukrainian War; ricerca sul campo novembre 2024–gennaio 2025",
-            "url": "https://static.rusi.org/tactical-developments-third-year-russo-ukrainian-war-february-2205.pdf",
-            "data": "2025-02-14"
-          },
-          {
-            "nome": "James M. Warford, ARMOR — Cold War Armor After Chechnya: An Assessment of the Russian T-80, pp. 18–21; novembre–dicembre 1995",
-            "url": "https://media-cdn.dvidshub.net/pubs/pdf_33788.pdf"
+            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/insights-papers/emergent-approaches-combined-arms-manoeuvre-ukraine",
+            "data": "2025-10-23"
           },
           {
             "nome": "Defense Express — analisi del T-72 senza equipaggio con cannone accorciato; immagini attribuite a Tarasenko",
@@ -244,102 +244,68 @@
         ]
       },
       {
-        "id": "A6-E020",
-        "livello": "confermato",
-        "titolo": "Lanciagranate del Droid NW 40 secondo DevDroid",
-        "motivazione": "Il produttore presenta il Droid NW 40 con lanciagranate Mk-19 o AGL-53 e dichiara la codificazione. È documentato il contenuto della presentazione, senza verifica indipendente del rendimento; la data della pagina non è assunta come data dell’autorizzazione.",
-        "fonti": [
-          {
-            "nome": "DevDroid — Droid NW 40 con lanciagranate e codificazione dichiarata; data della pagina distinta dalla data dell’autorizzazione",
-            "url": "https://devdroid.tech/news/pershyj-kodyfikovanyj-nrk-z-granatometom-droid-nw-40-otrymav-kod-nato/",
-            "data": "2026-04-06"
-          }
-        ]
-      },
-      {
         "id": "A6-E021",
         "livello": "plausibile",
-        "titolo": "Alternative e confronto fra effetti",
-        "motivazione": "Le ricerche descrivono capacità di fuoco e impieghi differenti; le presentazioni dei Droid illustrano configurazioni ulteriori. La comparazione fra carro, missili, artiglieria e sistemi robotizzati è funzionale e condizionata da effetto, tempi, disponibilità, protezione e persistenza, non un test comparativo di Shturm.",
+        "titolo": "Possibile redistribuzione di trasporto, soppressione e fuoco pesante",
+        "motivazione": "Watling descrive ruoli complementari per UGV armati, trasporto protetto e carri in un campione di reparti ucraini. La ripartizione fra mezzi e il relativo onere di coordinamento sono un’inferenza editoriale, da valutare in relazione al compito.",
         "fonti": [
           {
-            "nome": "Jack Watling e Nick Reynolds, RUSI — Tactical Developments During the Third Year of the Russo–Ukrainian War; ricerca sul campo novembre 2024–gennaio 2025",
-            "url": "https://static.rusi.org/tactical-developments-third-year-russo-ukrainian-war-february-2205.pdf",
-            "data": "2025-02-14"
-          },
-          {
-            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine; ricerca su unità selezionate",
+            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine",
             "url": "https://www.rusi.org/explore-our-research/publications/insights-papers/emergent-approaches-combined-arms-manoeuvre-ukraine",
             "data": "2025-10-23"
           },
           {
-            "nome": "Ministero della Difesa ucraino — The Ministry of Defence has codified the Droid TW 12.7, a Ukrainian robotic system equipped with a Browning 12.7 machine gun",
-            "url": "https://mod.gov.ua/en/news/the-ministry-of-defence-has-codified-the-droid-tw-12-7-a-ukrainian-robotic-system-equipped-with-a-browning-12-7-machine-gun",
-            "data": "2024-12-09"
-          },
-          {
-            "nome": "DevDroid — Droid NW 40 con lanciagranate e codificazione dichiarata; data della pagina distinta dalla data dell’autorizzazione",
-            "url": "https://devdroid.tech/news/pershyj-kodyfikovanyj-nrk-z-granatometom-droid-nw-40-otrymav-kod-nato/",
-            "data": "2026-04-06"
+            "nome": "U.S. Army Acquisition Support Center — Bradley Fighting Vehicle Systems (BFVS)",
+            "url": "https://asc.army.mil/docs/wsh2/1990-wsh.pdf"
           }
         ]
       },
       {
         "id": "A6-E022",
         "livello": "plausibile",
-        "titolo": "Comunicazioni e possibile nodo comune di controllo",
-        "motivazione": "Le fonti descrivono un elemento di comando separato. Un collegamento degradato o un nodo comune possono limitare il gruppo, se l’architettura concretamente adottata li rende dipendenze critiche; distanze, ridondanze, topologia e resilienza sotto contrasto non sono certificate.",
+        "titolo": "Percezione, collegamento e gestione degli imprevisti",
+        "motivazione": "L’U.S. Army documenta prove radio su terreno diverso e sotto disturbo simulato. La dimostrazione RACER riguarda la mobilità autonoma e il controllo supervisionato. L’effetto di danni ai sensori o interruzioni radio sulla missione è un’inferenza condizionale. Le descrizioni di Shturm indicano un elemento di comando esterno, senza quantificarne la resilienza.",
         "fonti": [
-          {
-            "nome": "Andrii Tarasenko — Про «Штурм»; analisi delle immagini e citazione del resoconto TASS",
-            "url": "https://andrei-bt.livejournal.com/2812949.html",
-            "data": "2026-10-04"
-          },
-          {
-            "nome": "Dylan Malyasov, Defence Blog — Russia shows Shturm robotic tank system in big exercise; resoconto secondario",
-            "url": "https://defence-blog.com/russia-shows-shturm-robotic-tank-system-in-big-exercise/",
-            "data": "2026-10-03"
-          },
           {
             "nome": "Aleksei Moiseev, Rossiyskaya Gazeta — descrizione delle caratteristiche dei veicoli del complesso Shturm",
             "url": "https://rg.ru/2026/10/03/raskryty-novye-osobennosti-bezekipazhnyh-tankov-i-bmpt-kompleksa-shturm.html",
             "data": "2026-10-03"
+          },
+          {
+            "nome": "U.S. Army DEVCOM — Army engineers field-test robotic combat vehicle communications",
+            "url": "https://www.army.mil/article/246522/army_engineers_field_test_robotic_combat_vehicle_communications",
+            "data": "2021-05-18"
+          },
+          {
+            "nome": "U.S. Army — DARPA autonomous vehicles deliver command-controlled robotic lethality at Fort Knox event",
+            "url": "https://www.army.mil/article/296278/darpa_autonomous_vehicles_deliver_command_controlled_robotic_lethality_at_fort_knox_event",
+            "data": "2026-10-22"
           }
         ]
       },
       {
         "id": "A6-E023",
         "livello": "plausibile",
-        "titolo": "Esposizione umana nel sistema completo",
-        "motivazione": "La separazione degli operatori dal veicolo di fuoco modifica direttamente l’esposizione a bordo. La testimonianza sul Droid e le ricerche su recupero e ripristino sostengono la necessità di includere personale di comando e supporto; organico e bilancio complessivo di rischio Shturm non sono misurati. La redistribuzione del rischio può accompagnarsi a un miglioramento netto.",
+        "titolo": "Recupero dei mezzi ed esposizione del personale di supporto",
+        "motivazione": "La ricerca sul campo di Watling collega ritmo operativo, recupero e riparazione dei corazzati. La testimonianza NC13 descrive il sostegno al Droid. Il possibile trasferimento di parte dell’esposizione al personale di recupero è un’inferenza sul sistema Shturm, per il quale mancano misure comparabili.",
         "fonti": [
           {
-            "nome": "Dylan Malyasov, Defence Blog — Russia shows Shturm robotic tank system in big exercise; resoconto secondario",
-            "url": "https://defence-blog.com/russia-shows-shturm-robotic-tank-system-in-big-exercise/",
-            "data": "2026-10-03"
+            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/insights-papers/emergent-approaches-combined-arms-manoeuvre-ukraine",
+            "data": "2025-10-23"
           },
           {
             "nome": "Matthew Loh, Business Insider — intervista al comandante Mykola «Makar» Zinkevych sul Droid TW",
             "url": "https://www.businessinsider.com/ukraine-unit-ground-drone-devdroid-tw-fought-russians-45-days-2026-1",
             "data": "2026-01-08"
-          },
-          {
-            "nome": "Jack Watling e Nick Reynolds, RUSI — Stormbreak: Fighting Through Russian Defences in Ukraine’s 2023 Offensive",
-            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/stormbreak-fighting-through-russian-defences-ukraines-2023-offensive",
-            "data": "2023-09-04"
-          },
-          {
-            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine; ricerca su unità selezionate",
-            "url": "https://www.rusi.org/explore-our-research/publications/insights-papers/emergent-approaches-combined-arms-manoeuvre-ukraine",
-            "data": "2025-10-23"
           }
         ]
       },
       {
         "id": "A6-E024",
         "livello": "plausibile",
-        "titolo": "Conversione, costo completo e costo di opportunità",
-        "motivazione": "La proposta UVZ usa una base T-72; il confronto dei costi richiede valutare stato dello scafo, conversione, comando e sostegno nel tempo. Il costo di opportunità è il valore dell’impiego alternativo sacrificato, distinto dalle spese dirette. Mancano dati omogenei su costi, scafi e prestazioni per calcolare una convenienza comparata Shturm–Droid.",
+        "titolo": "Economia della conversione e ricostituzione della capacità",
+        "motivazione": "La base T-72 e il programma di conversione sono documentati. Stato degli scafi, impieghi alternativi e capacità di sostenere o sostituire i mezzi sono condizioni del confronto economico. La ricerca sul campo documenta il ruolo di ricambi e riparabilità nella disponibilità, senza fornire costi omogenei fra le piattaforme esaminate.",
         "fonti": [
           {
             "nome": "RBC — intervista ad Aleksandr Potapov, direttore generale di Uralvagonzavod",
@@ -351,30 +317,7 @@
             "url": "https://www.janes.com/defence-intelligence-insights/defence-news/army-2021-russia-orders-shturm-unmanned-battle-tank-system"
           },
           {
-            "nome": "Matthew Loh, Business Insider — intervista al comandante Mykola «Makar» Zinkevych sul Droid TW",
-            "url": "https://www.businessinsider.com/ukraine-unit-ground-drone-devdroid-tw-fought-russians-45-days-2026-1",
-            "data": "2026-01-08"
-          }
-        ]
-      },
-      {
-        "id": "A6-E025",
-        "livello": "plausibile",
-        "titolo": "Missioni recuperate e minore esposizione",
-        "motivazione": "La possibilità che la separazione renda praticabile una missione prima preclusa è un’inferenza condizionata al confronto controfattuale e all’esecuzione affidabile. Una minore esposizione a parità di effetto è un beneficio distinto, da valutare includendo operatori e supporti. Le fonti descrivono comando proposto e domanda di fuoco, non un beneficio netto Shturm misurato.",
-        "fonti": [
-          {
-            "nome": "Dylan Malyasov, Defence Blog — Russia shows Shturm robotic tank system in big exercise; resoconto secondario",
-            "url": "https://defence-blog.com/russia-shows-shturm-robotic-tank-system-in-big-exercise/",
-            "data": "2026-10-03"
-          },
-          {
-            "nome": "Jack Watling e Nick Reynolds, RUSI — Tactical Developments During the Third Year of the Russo–Ukrainian War; ricerca sul campo novembre 2024–gennaio 2025",
-            "url": "https://static.rusi.org/tactical-developments-third-year-russo-ukrainian-war-february-2205.pdf",
-            "data": "2025-02-14"
-          },
-          {
-            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine; ricerca su unità selezionate",
+            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine",
             "url": "https://www.rusi.org/explore-our-research/publications/insights-papers/emergent-approaches-combined-arms-manoeuvre-ukraine",
             "data": "2025-10-23"
           },
@@ -388,28 +331,23 @@
       {
         "id": "A6-E026",
         "livello": "plausibile",
-        "titolo": "Possibile specializzazione e confronto ancora aperto",
-        "motivazione": "La differenziazione degli effetti e delle dipendenze rende plausibile verificare impieghi circoscritti per un sistema pesante robotizzato. Le prove disponibili non dimostrano una nicchia favorevole: il confronto potrebbe risultare sfavorevole oppure sostenere un’utilità più ampia, in funzione delle missioni e dei dati futuri.",
+        "titolo": "Condizioni per una funzione specialistica di Shturm",
+        "motivazione": "L’ipotesi editoriale combina una domanda specifica di fuoco diretto pesante, l’esposizione evitata ai carristi e la ripetibilità della missione, compreso il recupero. Le fonti sostengono le premesse tecniche e tattiche, mentre la convenienza operativa ed economica di Shturm rimane da dimostrare.",
         "fonti": [
           {
-            "nome": "Jack Watling e Nick Reynolds, RUSI — Tactical Developments During the Third Year of the Russo–Ukrainian War; ricerca sul campo novembre 2024–gennaio 2025",
-            "url": "https://static.rusi.org/tactical-developments-third-year-russo-ukrainian-war-february-2205.pdf",
-            "data": "2025-02-14"
-          },
-          {
-            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine; ricerca su unità selezionate",
+            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine",
             "url": "https://www.rusi.org/explore-our-research/publications/insights-papers/emergent-approaches-combined-arms-manoeuvre-ukraine",
             "data": "2025-10-23"
           },
           {
-            "nome": "Ministero della Difesa ucraino — The Ministry of Defence has codified the Droid TW 12.7, a Ukrainian robotic system equipped with a Browning 12.7 machine gun",
-            "url": "https://mod.gov.ua/en/news/the-ministry-of-defence-has-codified-the-droid-tw-12-7-a-ukrainian-robotic-system-equipped-with-a-browning-12-7-machine-gun",
-            "data": "2024-12-09"
+            "nome": "Defense Express — analisi del T-72 senza equipaggio con cannone accorciato; immagini attribuite a Tarasenko",
+            "url": "https://defence-ua.com/news/chomu_treba_okrema_uvaga_na_rashistskij_tshrk_shturm_jak_bezpilotnij_t_72_z_ukorochenoju_garmatoju-19669.html",
+            "data": "2025-07-28"
           },
           {
-            "nome": "DevDroid — Droid NW 40 con lanciagranate e codificazione dichiarata; data della pagina distinta dalla data dell’autorizzazione",
-            "url": "https://devdroid.tech/news/pershyj-kodyfikovanyj-nrk-z-granatometom-droid-nw-40-otrymav-kod-nato/",
-            "data": "2026-04-06"
+            "nome": "U.S. Army DEVCOM — Army engineers field-test robotic combat vehicle communications",
+            "url": "https://www.army.mil/article/246522/army_engineers_field_test_robotic_combat_vehicle_communications",
+            "data": "2021-05-18"
           }
         ]
       },
@@ -567,6 +505,87 @@
           {
             "nome": "RBC — Yuri Borisov e i costi della piattaforma Armata nelle acquisizioni russe",
             "url": "https://www.rbc.ru/rbcfreenews/5b5eb03c9a7947bfdefac2c5"
+          }
+        ]
+      },
+      {
+        "id": "A6-E036",
+        "livello": "confermato",
+        "titolo": "UGV armati per la soppressione nelle unità studiate da Watling",
+        "motivazione": "Nella sezione Phase 5: Suppress Watling riferisce la preferenza dei reparti studiati per armi di sostegno su UGV quando il fuoco prolungato da posizioni non preparate espone al tiro avversario. La fonte documenta la valutazione di quei reparti, senza misurare l’efficacia del Droid o generalizzarla all’intero fronte.",
+        "fonti": [
+          {
+            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/insights-papers/emergent-approaches-combined-arms-manoeuvre-ukraine",
+            "data": "2025-10-23"
+          }
+        ]
+      },
+      {
+        "id": "A6-E037",
+        "livello": "confermato",
+        "titolo": "Mobilità protetta e sostegno di fuoco dell’M2 Bradley",
+        "motivazione": "La scheda dell’U.S. Army identifica l’M2 come IFV per la fanteria meccanizzata e specifica l’M242 da 25 mm, la coassiale da 7,62 mm e il TOW. Watling descrive la protezione della fanteria trasportata e il sostegno ravvicinato dei cannoncini come contributi distinti.",
+        "fonti": [
+          {
+            "nome": "U.S. Army Acquisition Support Center — Bradley Fighting Vehicle Systems (BFVS)",
+            "url": "https://asc.army.mil/docs/wsh2/1990-wsh.pdf"
+          },
+          {
+            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/insights-papers/emergent-approaches-combined-arms-manoeuvre-ukraine",
+            "data": "2025-10-23"
+          }
+        ]
+      },
+      {
+        "id": "A6-E038",
+        "livello": "confermato",
+        "titolo": "REFURBOT: dimostratore su scafo della famiglia AMX-30 con torre da 25 mm",
+        "motivazione": "S2M documenta la collaborazione con KNDS France, il retrofit, il kit TOXO e la presentazione a Eurosatory. Il reportage fotografico identifica la stazione ARX25. Le fonti distinguono la famiglia AMX-30 dallo specifico scafo AMX-32 indicato per l’esemplare in mostra. Il caso documenta una configurazione da esposizione.",
+        "fonti": [
+          {
+            "nome": "S2M Equipment — annunci del partner industriale su REFURBOT a Eurosatory",
+            "url": "https://www.linkedin.com/company/s2m-equipment/"
+          },
+          {
+            "nome": "Army Recognition, Eurosatory 2026 Official News — dimostratore esposto e stazione ARX25",
+            "url": "https://www.armyrecognition.com/archives/archives-defense-exhibitions/2026-archives-news-defense-exhibitions/eurosatory-2026/knds-and-s2m-reveal-how-legacy-amx-30-tank-hull-is-repurposed-into-heavy-combat-ugv-fitted-with-arx25-25mm-weapon-station",
+            "data": "2026-06-16"
+          }
+        ]
+      },
+      {
+        "id": "A6-E039",
+        "livello": "confermato",
+        "titolo": "Type-X: telaio dedicato, classe di massa e prova a fuoco annunciata",
+        "motivazione": "Milrem descrive il Type-X come piattaforma concepita per operazioni senza equipaggio e indica una massa nell’ordine delle 12 tonnellate. Milrem dichiara di aver previsto unità sostituibili per la manutenzione. Milrem e Kongsberg annunciano la prova a fuoco da 30 mm e inquadrano il sistema come supporto a carri e IFV. Le fonti sono comunicazioni industriali e documentano un passaggio sperimentale.",
+        "fonti": [
+          {
+            "nome": "Milrem Robotics — Loc Performance and Milrem Robotics Collaborate on Bid for US Army’s RCV-L Program",
+            "url": "https://milremrobotics.com/loc-performance-and-milrem-robotics-collaborate-on-bid-for-us-armys-robotic-combat-vehicle-light-rcv-l-program/"
+          },
+          {
+            "nome": "Milrem Robotics — Milrem Robotics rolls out its new Type-X RCV",
+            "url": "https://milremrobotics.com/milrem-robotics-rolls-out-its-new-type-x-rcv/"
+          },
+          {
+            "nome": "Milrem Robotics e Kongsberg — First live firing from the Type-X Robotic Combat Vehicle",
+            "url": "https://milremrobotics.com/kongsberg-and-milrem-robotics-perform-first-live-firing-from-the-type-x-robotic-combat-vehicle/",
+            "data": "2022-06-13"
+          }
+        ]
+      },
+      {
+        "id": "A6-E040",
+        "livello": "confermato",
+        "titolo": "Hanwha H-UGV: classe di 30 tonnellate nella tabella di marcia",
+        "motivazione": "La tabella di marcia di Hanwha Aerospace colloca l’H-UGV nella classe di 30 tonnellate fra gli sviluppi previsti e distingue questa linea dalla conversione opzionale di sistemi esistenti come il K9. La massa è una classe progettuale annunciata. Il documento non certifica armamento, prestazioni, completamento di un prototipo o entrata in servizio.",
+        "fonti": [
+          {
+            "nome": "Hanwha Aerospace — comunicato sulla tabella di marcia per i sistemi terrestri senza equipaggio",
+            "url": "https://www.newswire.co.kr/newsRead.php?no=1042858&picno=606323",
+            "data": "2026-09-17"
           }
         ]
       }
