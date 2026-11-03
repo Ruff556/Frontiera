@@ -73,52 +73,81 @@
         ]
       },
       {
-        "id": "A6-E010",
+        "id": "A6-E005",
         "livello": "confermato",
-        "titolo": "La difesa ucraina e le difficoltà dell’avanzata nel 2022",
-        "motivazione": "La ricerca RUSI sulla prima fase attribuisce rilievo a fuochi, ricognizione, resistenza e sostegno delle forze. L’analisi utilizza accesso prevalentemente ucraino e copre febbraio–luglio 2022: non fornisce una quota universale per ciascuna arma.",
+        "titolo": "Sinai, Grozny e Nagorno-Karabakh: vulnerabilità delle forze corazzate",
+        "motivazione": "I tre casi citati illustrano vulnerabilità diverse delle forze corazzate in contesti storici e operativi distinti. Lo studio AUSA sulla guerra arabo-israeliana del 1973 ricostruisce l'impatto di fuochi a distanza e difese anticarro su perdite e manovra; l'analisi di Grau documenta la vulnerabilità dei mezzi russi a Grozny nel 1994–1995, aggravata da tattiche inadeguate e carenza di sostegno della fanteria; il Congressional Research Service descrive nel conflitto del Nagorno-Karabakh del 2020 le perdite dei mezzi corazzati armeni, nel contesto di un impiego azero di droni, ricognizione e fuochi. I casi non stabiliscono una causa unica delle perdite, né dimostrano l'obsolescenza universale del carro armato.",
         "fonti": [
           {
-            "nome": "Mykhaylo Zabrodskyi, Jack Watling, Oleksandr V. Danylyuk e Nick Reynolds, RUSI — Preliminary Lessons in Conventional Warfighting from Russia’s Invasion of Ukraine: February–July 2022",
+            "nome": "Nathan Jennings e Kyle Trottier, AUSA — The 1973 Arab-Israeli War: Insights for Multi-Domain Operations",
+            "url": "https://www.ausa.org/publications/1973-arab-israeli-war-insights-multi-domain-operations",
+            "data": "2022-12-16"
+          },
+          {
+            "nome": "Lester W. Grau, Foreign Military Studies Office — Russian-Manufactured Armored Vehicle Vulnerability in Urban Combat: The Chechnya Experience",
+            "url": "https://man.fas.org/dod-101/sys/land/row/rusav.htm",
+            "data": "1997-01-01"
+          },
+          {
+            "nome": "Cory Welt e Andrew S. Bowen, Congressional Research Service — Azerbaijan and Armenia: The Nagorno-Karabakh Conflict, R46651",
+            "url": "https://www.everycrsreport.com/reports/R46651.html",
+            "data": "2021-01-07"
+          }
+        ]
+      },
+      {
+        "id": "A6-E006",
+        "livello": "confermato",
+        "titolo": "Perdite corazzate russe nel 2022 e ostacoli all'offensiva ucraina del 2023",
+        "motivazione": "Le ricerche RUSI sulla fase iniziale dell'invasione del 2022 documentano le difficoltà delle forze russe legate alla resistenza ucraina, ai fuochi, alla ricognizione e all'insufficiente coordinamento. Stormbreak e la successiva analisi delle operazioni offensive ucraine del 2022–2023 ricostruiscono invece le difficoltà dell'attaccante ucraino nel 2023 contro una difesa russa preparata: campi minati, ostacoli, osservazione, artiglieria e armi anticarro imposero esigenze elevate di genio, sostegno, addestramento e cooperazione fra capacità differenti. Le due campagne non sono considerate equivalenti per cause o dimensioni delle perdite; il richiamo documenta le difficoltà della manovra corazzata sotto una difesa organizzata.",
+        "fonti": [
+          {
+            "nome": "Mykhaylo Zabrodskyi, Jack Watling, Oleksandr V. Danylyuk e Nick Reynolds, RUSI — Preliminary Lessons in Conventional Warfighting from Russia's Invasion of Ukraine: February–July 2022",
             "url": "https://static.rusi.org/359-SR-Ukraine-Preliminary-Lessons-Feb-July-2022-web-final.pdf",
             "data": "2022-11-30"
-          }
-        ]
-      },
-      {
-        "id": "A6-E011",
-        "livello": "confermato",
-        "titolo": "Ostacoli, fuochi e sostegno nell’offensiva 2023",
-        "motivazione": "Stormbreak descrive l’interazione tra difese russe preparate, mine, osservazione e fuoco, insieme alle difficoltà di genio, coordinamento e recupero dell’attaccante. I risultati sono riferiti alla campagna studiata; sopravvivenza del personale, disponibilità del mezzo ed esito della missione sono variabili distinte.",
-        "fonti": [
+          },
           {
-            "nome": "Jack Watling e Nick Reynolds, RUSI — Stormbreak: Fighting Through Russian Defences in Ukraine’s 2023 Offensive",
+            "nome": "Jack Watling e Nick Reynolds, RUSI — Stormbreak: Fighting Through Russian Defences in Ukraine's 2023 Offensive",
             "url": "https://www.rusi.org/explore-our-research/publications/special-resources/stormbreak-fighting-through-russian-defences-ukraines-2023-offensive",
             "data": "2023-09-04"
+          },
+          {
+            "nome": "Jack Watling, Oleksandr V. Danylyuk e Nick Reynolds, RUSI — Preliminary Lessons from Ukraine's Offensive Operations, 2022–23",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-ukraines-offensive-operations-2022-23",
+            "data": "2024-07-18"
+          },
+          {
+            "nome": "Frontiera — La difesa che osserva; ricostruzione della fase ucraina del 2023",
+            "url": "https://frontiera.pages.dev/fasi/difesa-che-osserva/"
           }
         ]
       },
       {
-        "id": "A6-E012",
+        "id": "A6-E007",
         "livello": "confermato",
-        "titolo": "Pressione UAV e domanda di fuoco diretto",
-        "motivazione": "Watling e Reynolds descrivono, nelle unità osservate tra novembre 2024 e gennaio 2025, la pressione dei droni e la persistente utilità attribuita al fuoco dei carri. Il campione non rappresenta automaticamente l’intero fronte; nessuna quota universale delle perdite è attribuita agli FPV.",
+        "titolo": "Rarefazione della manovra corazzata e persistenza del suo ruolo",
+        "motivazione": "Watling documenta una notevole contrazione dell'impiego concentrato dei carri russi nelle aree osservate: fra il 1° e il 24 agosto 2025 l'ISR ucraino individuò 23 carri russi entro 70 km dalla linea del fronte, rispetto ai 470 rilevati sul solo asse meridionale nel maggio 2023. Gli ambiti geografici, i periodi e le condizioni di osservazione non sono omogenei, quindi le cifre non costituiscono un censimento completo o una misura comparabile della consistenza totale. La minaccia dei droni, l'osservazione diffusa, i fuochi e le difficoltà logistiche contribuiscono a rendere più difficile concentrare grandi formazioni; lo stesso Watling registra però impieghi ancora utili dei carri. Il risultato sostiene un ridimensionamento delle forme d'impiego, non una loro obsolescenza universale.",
         "fonti": [
           {
-            "nome": "Jack Watling e Nick Reynolds, RUSI — Tactical Developments During the Third Year of the Russo–Ukrainian War; ricerca sul campo novembre 2024–gennaio 2025",
+            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/insights-papers/emergent-approaches-combined-arms-manoeuvre-ukraine",
+            "data": "2025-10-23"
+          },
+          {
+            "nome": "Jack Watling e Nick Reynolds, RUSI — Tactical Developments During the Third Year of the Russo–Ukrainian War",
             "url": "https://static.rusi.org/tactical-developments-third-year-russo-ukrainian-war-february-2205.pdf",
             "data": "2025-02-14"
           }
         ]
       },
       {
-        "id": "A6-E013",
+        "id": "A6-E008",
         "livello": "confermato",
-        "titolo": "Impiego e ripristino dei carri nei reparti selezionati",
-        "motivazione": "Watling descrive unità selezionate che conservano i carri per fuoco diretto e supporto alla fanteria, e attribuisce rilievo alla capacità di riparazione. Il campione include reparti particolarmente efficaci e non misura la distribuzione di queste pratiche sull’intero fronte.",
+        "titolo": "Utilità dei carri a scala di plotone nel sostegno alla fanteria ucraina",
+        "motivazione": "Nell'analisi del 2025 Watling riferisce che i comandanti delle unità ucraine studiate continuano a ritenere prezioso l'impiego dei carri. A scala di plotone essi offrono fuoco diretto pesante per liberare posizioni nemiche e possono attrarre parte del fuoco che altrimenti minaccerebbe la fanteria. Il rapporto documenta anche manutenzione e ripristino delle protezioni di mezzi ripetutamente colpiti. I casi osservati appartengono a reparti selezionati e non possono essere generalizzati all'intero fronte: il sostegno alla fanteria resta una funzione documentata, non una prova di insostituibilità del carro in ogni missione.",
         "fonti": [
           {
-            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine; ricerca su unità selezionate",
+            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine",
             "url": "https://www.rusi.org/explore-our-research/publications/insights-papers/emergent-approaches-combined-arms-manoeuvre-ukraine",
             "data": "2025-10-23"
           }
@@ -159,24 +188,6 @@
           {
             "nome": "V. A. Kolesov, Vestnik bronetankovoy tekhniki, n. 10/1988 — Пути повышения подвижности танков [Vie per migliorare la mobilità dei carri]; riproduzione BTVT",
             "url": "https://btvt.info/5library/vbtt_1988_10_69021.htm"
-          }
-        ]
-      },
-      {
-        "id": "A6-E016",
-        "livello": "confermato",
-        "titolo": "Recupero e riparazione nella capacità corazzata",
-        "motivazione": "Le ricerche RUSI sui casi del 2023 e sulle unità osservate nel 2025 descrivono il ruolo di recupero e ripristino. Il passaggio dalla disponibilità del singolo mezzo alla conservazione della capacità è il criterio analitico adottato; non esiste qui una serie di ripristini Shturm.",
-        "fonti": [
-          {
-            "nome": "Jack Watling e Nick Reynolds, RUSI — Stormbreak: Fighting Through Russian Defences in Ukraine’s 2023 Offensive",
-            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/stormbreak-fighting-through-russian-defences-ukraines-2023-offensive",
-            "data": "2023-09-04"
-          },
-          {
-            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine; ricerca su unità selezionate",
-            "url": "https://www.rusi.org/explore-our-research/publications/insights-papers/emergent-approaches-combined-arms-manoeuvre-ukraine",
-            "data": "2025-10-23"
           }
         ]
       },
