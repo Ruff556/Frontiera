@@ -73,18 +73,6 @@
         ]
       },
       {
-        "id": "A6-E009",
-        "livello": "confermato",
-        "titolo": "I 4.453 carri russi nella fotografia Oryx",
-        "motivazione": "La fotografia del database consultata il 19 ottobre 2026 riporta 4.453 carri russi, comprendendo distrutti, danneggiati, abbandonati e catturati. Il catalogo raccoglie riscontri visivi pubblici; è dinamico, soggetto a correzioni e non certifica la data dell’ultimo evento coperto. Non è un totale delle sole perdite irreversibili né un tasso o una ripartizione causale.",
-        "fonti": [
-          {
-            "nome": "Oryx — Attack On Europe: Documenting Russian Equipment Losses During The Russian Invasion Of Ukraine; pagina dinamica, fotografia consultata il 19 ottobre 2026",
-            "url": "https://www.oryxspioenkop.com/2022/02/attack-on-europe-documenting-equipment.html"
-          }
-        ]
-      },
-      {
         "id": "A6-E010",
         "livello": "confermato",
         "titolo": "La difesa ucraina e le difficoltà dell’avanzata nel 2022",
@@ -139,31 +127,37 @@
       {
         "id": "A6-E014",
         "livello": "plausibile",
-        "titolo": "Stoccaggio delle munizioni ed esiti del danno",
-        "motivazione": "Warford e le fonti tecniche descrivono munizioni e architetture sovietiche differenti. La distinzione fra meccanismo di caricamento, posizione delle cariche, munizioni supplementari e dinamica del danno è un’inferenza causale; non identifica la causa di singoli relitti né certifica la disposizione interna di Shturm.",
+        "titolo": "T-72: disposizione delle munizioni e vulnerabilità alle penetrazioni",
+        "motivazione": "Il T-72 utilizza un autocaricatore a carosello collocato sul fondo del compartimento di combattimento, con 22 colpi costituiti da proietti e cariche propellenti separati. Ulteriori munizioni possono essere stivate fuori dal caricatore, in altre parti del compartimento e dello scafo. RUSI collega il rischio di incendi e detonazioni catastrofiche alla posizione delle munizioni, alla minore protezione di determinati settori dello scafo e alla mancanza di una separazione protettiva fra le riserve. Una penetrazione che raggiunga e inneschi le cariche può provocare la propagazione dell'incendio e, in determinate condizioni, la detonazione di altre munizioni. Il meccanismo di vulnerabilità è documentato, ma non determina l'esito di ogni penetrazione e non consente di quantificare una probabilità comparativa universale rispetto ad altri carri. La configurazione interna effettivamente conservata dal prototipo Shturm non è stata accertata. Il livello plausibile riflette soprattutto l'estensione dei vincoli della famiglia T-72 alla conversione robotizzata.",
         "fonti": [
           {
-            "nome": "James M. Warford, ARMOR — Cold War Armor After Chechnya: An Assessment of the Russian T-80, pp. 18–21; novembre–dicembre 1995",
-            "url": "https://media-cdn.dvidshub.net/pubs/pdf_33788.pdf"
+            "nome": "Sam Cranny-Evans e Sidharth Kaushal, RUSI — Technical Reflections on Russia's Armoured Fighting Vehicles",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/technical-reflections-russias-armoured-fighting-vehicles",
+            "data": "2022-04-27"
           },
           {
-            "nome": "The Tank Museum — T-72, scheda dell’esemplare T-72M1; senza data editoriale, consultata il 19 ottobre 2026",
+            "nome": "The Tank Museum — T-72; scheda museale dell'esemplare T-72M1, caricamento automatico e vulnerabilità delle munizioni",
             "url": "https://tankmuseum.org/tank-nuts/tank-collection/t-72/"
           },
           {
-            "nome": "BTVT — Technical Project Object 432, documentazione progettuale 1961–1962 riprodotta e tradotta; data di pubblicazione web non accertata",
-            "url": "https://btvt.info/7english/object_432_1962_1_eng.htm"
+            "nome": "David Saw, European Security & Defence — Ammunition Handling for AFVs; architetture di caricamento T-64 e T-72",
+            "url": "https://euro-sd.com/2022/02/articles/exclusive/25325/ammunition-handling/",
+            "data": "2022-02-14"
+          },
+          {
+            "nome": "GlobalSecurity — T-72 Tank: Inside the T-72M1; disposizione del carosello e delle munizioni supplementari",
+            "url": "https://www.globalsecurity.org/military/world/russia/t-72-design-1.htm"
           }
         ]
       },
       {
         "id": "A6-E015",
         "livello": "plausibile",
-        "titolo": "Retromarcia e trasmissione eventualmente conservata",
-        "motivazione": "Kolesov descrive velocità di retromarcia limitate per configurazioni storiche di T-72. Che una trasmissione invariata conservi i propri rapporti anche con comandi remotizzati è inferenza meccanica; non sono accertate la trasmissione né la velocità in retromarcia del prototipo Shturm.",
+        "titolo": "Retromarcia del T-72 e vincoli eventualmente ereditati da Shturm",
+        "motivazione": "In un articolo tecnico pubblicato nel 1988 sul Vestnik bronetankovoy tekhniki, V. A. Kolesov indica una velocità in retromarcia di 4,2 km/h per il T-64A e il T-72 nelle configurazioni considerate, confrontandola con i 10,7 km/h del T-80. Il dato documenta una limitazione storica della mobilità tattica e sostiene l'osservazione secondo cui una ritirata mantenendo la corazza frontale orientata verso la minaccia può risultare più lenta. Una conversione al comando remoto che conservi invariata la trasmissione ne conserverebbe anche i rapporti meccanici. Non sono però accertati il tipo di trasmissione installato sul prototipo Shturm, eventuali interventi di modifica né la sua effettiva velocità in retromarcia. Il riferimento non va quindi interpretato come prestazione misurata del sistema robotizzato.",
         "fonti": [
           {
-            "nome": "V. A. Kolesov, Vestnik bronetankovoy tekhniki n. 10, 1988; riproduzione BTVT — Vie per accrescere la mobilità dei carri",
+            "nome": "V. A. Kolesov, Vestnik bronetankovoy tekhniki, n. 10/1988 — Пути повышения подвижности танков [Vie per migliorare la mobilità dei carri]; riproduzione BTVT",
             "url": "https://btvt.info/5library/vbtt_1988_10_69021.htm"
           }
         ]
