@@ -5,107 +5,114 @@
     "contenuti/analisi/missileers-prezzo-distanza.md": [
       {
         "id": "STR4-E001",
-        "livello": "plausibile",
-        "titolo": "L’opzione aria-aria per i bombardieri nel rapporto USAF riferito dalla stampa",
-        "motivazione": "I resoconti del 21–23 ottobre 2026 attribuiscono al rapporto Long-Term USAF Fighter Force Structure, trasmesso secondo le testate il 16 ottobre, la considerazione di capacità aria-aria sui bombardieri. Air & Space Forces dichiara di aver ottenuto il rapporto; The War Zone riprende Aviation Week per il passaggio. Il testo integrale corrente non è stato recuperato: il livello riguarda un contenuto istituzionale riportato e attribuito, non una collazione dell’originale o una decisione d’integrazione. Di Aviation Week sono stati verificati titolo e apertura, non il corpo in abbonamento. Il PDF omonimo del 2025 non è impiegato come sostituto.",
+        "livello": "confermato",
+        "titolo": "I Sorci Verdi, la 351ª Squadriglia e lo stemma del 51° Stormo",
+        "motivazione": "Il Ministero della Difesa documenta la disputa prebellica fra sostenitori della caccia e del bombardamento, la dimostrazione dei Fiat G.50 della 351ª Squadriglia contro la formazione di SM.79 durante un’esercitazione su Roma e l’origine del gatto nero che afferra tre sorci verdi, poi adottato dal 51° Stormo. La ricostruzione storica di Ciarini identifica anche il 12° Stormo dei Sorci Verdi. Il livello conferma la vicenda tramandata e documentata dalle fonti; l’episodio di esercitazione non dimostra una legge generale sull’autosufficienza dei bombardieri.",
         "fonti": [
           {
-            "nome": "Stampa · Stephen Losey, Air & Space Forces Magazine — Air Force Considering Air-to-Air Role for Bombers; dichiara accesso al rapporto",
-            "url": "https://www.airandspaceforces.com/air-force-considering-air-to-air-role-for-bombers/",
-            "data": "2026-10-23"
+            "nome": "Primaria istituzionale · Ministero della Difesa — Giornata Mondiale del Gatto; origine dello stemma del 51° Stormo",
+            "url": "https://www.difesa.it/primopiano/giornata-mondiale-del-gatto/89174.html",
+            "data": "2026-02-17"
           },
           {
-            "nome": "Stampa · Joseph Trevithick, The War Zone — USAF Confirms Bombers Could Have A Major Air-To-Air Combat Role; dipende da Aviation Week per il passo del rapporto",
-            "url": "https://www.twz.com/air/usaf-confirms-bombers-could-have-a-major-air-to-air-combat-role",
-            "data": "2026-10-22"
-          },
-          {
-            "nome": "Stampa · Brian Everstine, Aviation Week — USAF Outlines New Fighter Goals, May Eye Bombers, CCAs For Help; sola apertura accessibile",
-            "url": "https://aviationweek.com/defense/budget-policy-operations/usaf-outlines-new-fighter-goals-may-eye-bombers-ccas-help",
-            "data": "2026-10-21"
+            "nome": "Ricostruzione storica · Giorgio Ciarini — 51° Stormo Aeronautica Militare; identificazione del 12° Stormo e contesto della disputa",
+            "url": "https://giorgiociarini.it/index.php?catid=8&id=167%3A51-stormo-aeronautica-militare&view=article"
           }
         ]
       },
       {
         "id": "STR4-E002",
-        "livello": "plausibile",
-        "titolo": "Obiettivo di flotta e vincoli d’acquisizione riportati nel 2026",
-        "motivazione": "Air & Space Forces riferisce 1.509 caccia combat-coded necessari nel 2035, rispetto a 1.288 attuali, e vincoli finanziari e di produzione all’acquisizione. Le quantità conservano definizione, attribuzione e orizzonte del resoconto: il primo è un obiettivo di pianificazione, il secondo un inventario riferito dalla testata. Il rapporto corrente non è stato collazionato. I numeri non sono confrontati con quelli dell’omonimo documento del 2025 e non costituiscono consegne garantite.",
+        "livello": "confermato",
+        "titolo": "Il limite della scorta ai bombardieri statunitensi nel 1943",
+        "motivazione": "Le ricostruzioni ufficiali del National Museum of the U.S. Air Force documentano le pesanti perdite delle missioni in profondità dei bombardieri B-17 e B-24 nel 1943, quando i caccia di scorta dovevano rientrare prima di raggiungere i bersagli più lontani. A Schweinfurt, il 14 ottobre, la perdita di 60 bombardieri contribuì alla sospensione delle missioni oltre il raggio della scorta. Il riferimento sostiene la funzione storica dei caccia, senza attribuire la totalità delle perdite alla sola assenza di scorta.",
         "fonti": [
           {
-            "nome": "Stampa · Stephen Losey, Air & Space Forces Magazine — Air Force Considering Air-to-Air Role for Bombers amid Fighter Procurement Constraints",
-            "url": "https://www.airandspaceforces.com/air-force-considering-air-to-air-role-for-bombers/",
-            "data": "2026-10-23"
+            "nome": "Primaria museale istituzionale · National Museum of the U.S. Air Force — Heavy Bombers",
+            "url": "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/196180/AFmuseum/heavy-bombers/"
+          },
+          {
+            "nome": "Primaria museale istituzionale · National Museum of the U.S. Air Force — Black Thursday: Schweinfurt, October 14, 1943",
+            "url": "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/1519661/black-thursday-schweinfurt-october-14-1943/"
           }
         ]
       },
       {
         "id": "STR4-E003",
         "livello": "plausibile",
-        "titolo": "Dalla traccia condivisa alla soluzione di tiro",
-        "motivazione": "Il paragrafo decompone analiticamente rilevamento, tracciamento, identificazione, autorizzazione e assegnazione dell’arma. La descrizione Navy di CEC e la prova ONR documentano architetture predisposte al controllo del tiro integrato, dalle quali si ricava la distinzione fra conoscenza della situazione e dati utilizzabili per l’ingaggio. Si tratta di una deduzione generale: non descrive procedure o regole d’ingaggio di un missileer esistente e non attribuisce a ogni collegamento la qualità necessaria al tiro.",
+        "titolo": "Il rapporto USAF 2026 contempla capacità aria-aria sui bombardieri",
+        "motivazione": "I resoconti di ottobre 2026 riportano che il rapporto Long-Term USAF Fighter Force Structure, trasmesso al Congresso il 16 ottobre, contempla lo sviluppo di capacità aria-aria su bombardieri. Air & Space Forces Magazine e Aviation Week dichiarano di aver ottenuto il documento. Il testo integrale del rapporto non è stato collazionato in questa verifica: si conferma l’attribuzione giornalistica della proposta, non l’adozione di una piattaforma o di una capacità operativa.",
         "fonti": [
           {
-            "nome": "Primaria istituzionale · US Navy — CEC, Cooperative Engagement Capability; testo ufficiale acquisito tramite indicizzazione, senza data editoriale assunta",
-            "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2166802/cec-cooperative-engagement-capability/"
+            "nome": "Stampa specializzata · Stephen Losey, Air & Space Forces Magazine — Air Force Considering Air-to-Air Role for Bombers amid Fighter Procurement Constraints",
+            "url": "https://www.airandspaceforces.com/air-force-considering-air-to-air-role-for-bombers/",
+            "data": "2026-10-23"
           },
           {
-            "nome": "Primaria istituzionale · Office of Naval Research — ONR Conducts Integrated Live-Fire Test",
-            "url": "https://www.onr.navy.mil/media-center/news-releases/onr-conducts-integrated-live-fire-test",
-            "data": "2009-06-03"
+            "nome": "Stampa specializzata · Brian Everstine, Aviation Week — USAF Outlines New Fighter Goals, May Eye Bombers, CCAs For Help",
+            "url": "https://aviationweek.com/defense/budget-policy-operations/usaf-outlines-new-fighter-goals-may-eye-bombers-ccas-help",
+            "data": "2026-10-21"
           }
         ]
       },
       {
         "id": "STR4-E004",
-        "livello": "confermato",
-        "titolo": "La dimostrazione navale del 29 maggio 2009",
-        "motivazione": "Il comunicato ONR del 3 giugno riferisce il successo di una prova a fuoco a White Sands del 29 maggio 2009 contro un bersaglio da crociera, con componenti rappresentative di E-2D, CEC, Aegis e SM-6 in un’architettura air-directed surface-to-air. È confermato il risultato dichiarato dall’ente sperimentatore per quella configurazione. Il precedente riguarda un intercettore lanciato da superficie, non un tiro aria-aria da bombardiere né una compatibilità universale fra sensori e armi.",
+        "livello": "plausibile",
+        "titolo": "Obiettivo 1.509 caccia combat-coded nel 2035 e vincoli industriali e finanziari",
+        "motivazione": "Air & Space Forces Magazine, citando il rapporto USAF ottenuto dalla redazione, indica 1.509 caccia combat-coded necessari nel 2035 contro 1.288 nella flotta corrente e riferisce che fiscal realities e industrial production limitations potrebbero ostacolare l’obiettivo. Sono quantità riferite a una pianificazione di forza e all’inventario di riferimento, non a consegne già programmate o garantite. Il rapporto originale non è stato qui collazionato.",
         "fonti": [
           {
-            "nome": "Primaria istituzionale · Office of Naval Research — ONR Conducts Integrated Live-Fire Test; evento del 29 maggio",
-            "url": "https://www.onr.navy.mil/media-center/news-releases/onr-conducts-integrated-live-fire-test",
-            "data": "2009-06-03"
+            "nome": "Stampa specializzata · Stephen Losey, Air & Space Forces Magazine — Air Force Considering Air-to-Air Role for Bombers amid Fighter Procurement Constraints",
+            "url": "https://www.airandspaceforces.com/air-force-considering-air-to-air-role-for-bombers/",
+            "data": "2026-10-23"
           }
         ]
       },
       {
         "id": "STR4-E005",
-        "livello": "confermato",
-        "titolo": "Le fasi di guida indicate per AMRAAM",
-        "motivazione": "La scheda USAF descrive guida intermedia inerziale e terminale radar attiva. Il richiamo conferma questa distinzione di principio; la scheda storica non viene usata per attribuire alle varianti moderne una gittata, un costo o una specifica interfaccia di aggiornamento. Il successivo ragionamento sull’acquisizione terminale è una spiegazione generale del ruolo delle informazioni nel tiro.",
+        "livello": "plausibile",
+        "titolo": "AWACS e cooperazione informativa nello scontro indo-pakistano del 7 maggio 2025",
+        "motivazione": "La NATO documenta le funzioni generali di scoperta, tracciamento e controllo dei caccia svolte dagli AWACS. Reuters ricostruisce l’uso pakistano di una rete di sensori aerei e terrestri con Data Link 17 per fornire ai J-10 informazioni radar, consentendo secondo le fonti interpellate di mantenere spenti i radar di bordo. L’attribuzione a Reuters è mantenuta: il resoconto di combattimento non è una telemetria pubblica verificata indipendentemente in tutti i suoi passaggi e non prova da solo la guida diretta dei missili da parte dell’AWACS.",
         "fonti": [
           {
-            "nome": "Primaria istituzionale · US Air Force — AIM-120 AMRAAM; guida verificata nel testo ufficiale indicizzato il 4 novembre 2026, apertura diretta 403, senza data editoriale assunta",
-            "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104576/aim-120-amraam/"
+            "nome": "Primaria istituzionale · NATO — AWACS: NATO’s eyes in the sky; funzioni di sorveglianza e controllo",
+            "url": "https://www.nato.int/en/what-we-do/deterrence-and-defence/awacs-natos-eyes-in-the-sky",
+            "data": "2026-07-07"
+          },
+          {
+            "nome": "Stampa d’inchiesta · Reuters — How Pakistan shot down India’s cutting-edge fighter using Chinese gear",
+            "url": "https://www.reuters.com/business/aerospace-defense/how-pakistan-shot-down-indias-cutting-edge-fighter-using-chinese-gear-2025-08-02/",
+            "data": "2025-08-02"
           }
         ]
       },
       {
         "id": "STR4-E006",
         "livello": "confermato",
-        "titolo": "L’integrazione descritta dalla Navy per CEC",
-        "motivazione": "La fonte Navy descrive la condivisione delle misure dei sensori, l’elaborazione cooperativa e l’integrazione con i sistemi di combattimento. Il livello riguarda queste funzioni dichiarate per apparati CEC predisposti. La distinzione fra ricevere una traccia e aggiornare direttamente un’arma delimita ciò che occorre verificare nel caso di un missileer; non attribuisce la seconda funzione a un particolare caccia o datalink.",
+        "titolo": "F-35: fusione sensoriale e condivisione tattica tramite MADL",
+        "motivazione": "L’USAF documenta prove multivelivolo (quattro o sei F-35, inclusi modelli di tutte le varianti) dedicate alla condivisione sicura dei dati, dichiarando l’uso del Multifunction Advanced Data Link per informazioni su minacce aeree e terrestri e la costruzione di un quadro tattico comune. Il livello riguarda queste capacità e prove documentate; non attribuisce a ogni velivolo della formazione la capacità di lanciare un missile basandosi esclusivamente sui sensori di un altro.",
         "fonti": [
           {
-            "nome": "Primaria istituzionale · US Navy — CEC, Cooperative Engagement Capability; testo ufficiale acquisito tramite indicizzazione, senza data editoriale assunta",
-            "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2166802/cec-cooperative-engagement-capability/"
+            "nome": "Primaria istituzionale · USAF / 412th Test Wing — Multiple F-35s take to the skies to test communication data links",
+            "url": "https://www.af.mil/News/Article-Display/Article/1026106/multiple-f-35s-take-to-the-skies-to-test-communication-data-links/",
+            "data": "2016-12-09"
           }
         ]
       },
       {
         "id": "STR4-E007",
-        "livello": "plausibile",
-        "titolo": "La perdita della funzione di tiro a carico intatto",
-        "motivazione": "L’articolo deduce dalle funzioni della catena sensore–rete–arma che una loro interruzione possa rendere inutilizzabile una parte del carico pur lasciando integro il lanciatore. Disturbo, inganno e allontanamento del sensore sono possibilità generali considerate nell’analisi, non episodi osservati su un missileer operativo. Non vengono quantificati vulnerabilità, efficacia del disturbo o beneficio di ridondanza e autonomia.",
+        "livello": "confermato",
+        "titolo": "White Sands 2016: F-35B come sensore e Aegis/SM-6 come lanciatore",
+        "motivazione": "Il comunicato NAVSEA del 13 settembre 2016 conferma la prova a fuoco del 12 settembre: un F-35B dei Marines osservò una minaccia oltre l’orizzonte radar della postazione Aegis, trasmise dati via MADL a una stazione a terra collegata a USS Desert Ship, e il sistema Aegis impiegò un SM-6 contro il bersaglio. Si tratta di un’intercettazione dimostrativa con postazione terrestre rappresentativa di una nave. La valutazione DOT&E riportata dal Congressional Research Service chiarisce che la configurazione non era operativamente rappresentativa: il risultato dimostra il principio di separazione fra sensore e lanciatore, non una capacità universale già disponibile su ogni piattaforma.",
         "fonti": [
           {
-            "nome": "Primaria istituzionale · US Navy — CEC, Cooperative Engagement Capability; integrazione funzionale, testo indicizzato",
-            "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2166802/cec-cooperative-engagement-capability/"
+            "nome": "Primaria istituzionale · NAVSEA / U.S. Navy — Navy Conducts First Live Fire NIFC-CA Test with F-35",
+            "url": "https://www.navsea.navy.mil/Media/News/Article-View/Article/942188/navy-conducts-first-live-fire-nifc-ca-test-with-f-35/",
+            "data": "2016-09-13"
           },
           {
-            "nome": "Primaria istituzionale · US Air Force — AIM-120 AMRAAM; principio di guida, testo indicizzato",
-            "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104576/aim-120-amraam/"
+            "nome": "Documentazione di controllo · Congressional Research Service con estratto DOT&E FY2016, prova F-35/Aegis non rappresentativa di capacità operativa",
+            "url": "https://www.everycrsreport.com/files/20171109_RL33745_56149c90fed139d555598a887c3821d0c0cb4379.html",
+            "data": "2017-11-09"
           }
         ]
       },
