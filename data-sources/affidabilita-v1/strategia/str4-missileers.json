@@ -152,11 +152,11 @@
       {
         "id": "STR4-E010",
         "livello": "confermato",
-        "titolo": "Carico e velocità dichiarati del B-52H",
-        "motivazione": "La scheda USAF indica 70.000 libbre di carico e Mach 0,84. La conversione metrica arrotondata è circa 31,8 tonnellate. Sono caratteristiche dichiarate della configurazione H, non un carico aria-aria certificato o un profilo di lancio. L’ipotetica riserva missilistica è discussa come impiego da sviluppare; dal peso massimo non viene ricavato un numero di missili.",
+        "titolo": "B-52H: capacità di carico e autonomia",
+        "motivazione": "La scheda istituzionale dell'US Air Force attribuisce al B-52H una capacità di carico di 70.000 libbre (circa 31,8 tonnellate), velocità subsonica e autonomia intercontinentale. Queste caratteristiche rendono plausibile studiarlo come grande riserva missilistica persistente, ma non dimostrano alcuna capacità aria-aria integrata o certificata. Il carico massimo di scheda non permette di ricavare il numero di missili aria-aria trasportabili, che dipenderebbe anche da ingombri, attacchi, lanciatori, integrazione e condizioni di missione.",
         "fonti": [
           {
-            "nome": "Primaria istituzionale · US Air Force — B-52H Stratofortress; dati di scheda acquisiti tramite indicizzazione, apertura diretta 403, senza data editoriale assunta",
+            "nome": "Primaria istituzionale · US Air Force — B-52H Stratofortress",
             "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104465/b-52h-stratofortress/"
           }
         ]
@@ -164,104 +164,56 @@
       {
         "id": "STR4-E011",
         "livello": "confermato",
-        "titolo": "I passaggi d’acquisizione della modernizzazione B-52 nel 2026",
-        "motivazione": "Il resoconto USAF di settembre riferisce Milestone B per CERP, che autorizza lo sviluppo della remotorizzazione, e Milestone C per il programma radar, che autorizza l’avvio della produzione degli aggiornamenti. Il richiamo conferma gli atti di programma annunciati; non attesta il completamento della flotta B-52J o una funzione aria-aria. La necessità di integrare armi e sistemi per il ruolo missileer è un’inferenza dell’articolo.",
+        "titolo": "B-1B: capacità supersonica, carico e vincoli di disponibilità",
+        "motivazione": "La scheda Air Force Global Strike Command indica per il B-1B una capacità di carico di 75.000 libbre (circa 34 tonnellate) e una velocità di Mach 1,2 al livello del mare. Sono prestazioni nominali che non attestano il raggiungimento simultaneo dei due massimi in una configurazione di trasporto e lancio di missili aria-aria. Il rapporto GAO del 2022 documenta inoltre difficoltà storiche relative a strutture, manutenzione e ricambi, rilevanti per valutare il costo e la disponibilità di un'eventuale riconversione. Il vantaggio energetico del rilascio più veloce, la compatibilità con i missili e la convenienza operativa rimangono valutazioni condizionate: nessuna delle due fonti dimostra una capacità aria-aria del B-1B.",
         "fonti": [
           {
-            "nome": "Primaria istituzionale · US Air Force — B-52 achieves key milestones for engine, radar modernization; testo ufficiale acquisito tramite indicizzazione",
-            "url": "https://www.spangdahlem.af.mil/News/Article/4601845/b-52-achieves-key-milestones-for-engine-radar-modernization/",
-            "data": "2026-09-15"
+            "nome": "Primaria istituzionale · Air Force Global Strike Command — B-1B Lancer",
+            "url": "https://www.afgsc.af.mil/About/Fact-Sheets/Article/630718/b-1b-lancer/"
+          },
+          {
+            "nome": "Primaria istituzionale · GAO — Weapon Systems Sustainment, GAO-23-106217",
+            "url": "https://www.gao.gov/assets/gao-23-106217.pdf",
+            "data": "2022-11-10"
           }
         ]
       },
       {
         "id": "STR4-E012",
         "livello": "confermato",
-        "titolo": "Carico e capacità supersonica dichiarati del B-1B",
-        "motivazione": "La scheda AFGSC indica 75.000 libbre di carico, circa 34 tonnellate, e Mach 1,2 al livello del mare. I due massimi non sono trattati come prestazioni simultaneamente dimostrate in una configurazione aria-aria. Quota, consumo, condizioni di rilascio e beneficio specifico sul missile restano da verificare. Il confronto non elegge il B-1B migliore missileer.",
+        "titolo": "B-2 e B-21: bassa osservabilità, disponibilità e architettura",
+        "motivazione": "Le schede ufficiali USAF descrivono il B-2 come bombardiere penetrante a bassa osservabilità e riportano un inventario di 20 velivoli, compreso un esemplare di prova: una flotta numericamente contenuta rispetto ai possibili impieghi alternativi. Il B-21 è progettato come bombardiere stealth penetrante per missioni convenzionali e nucleari, parte di una più ampia famiglia di sistemi, con architettura aperta per favorire future integrazioni. Nell'aprile 2026 l'US Air Force documentava progressi dei collaudi, tra cui una prova di rifornimento in volo, senza attestare una capacità aria-aria. La possibile posizione avanzata di un missileer stealth e l'opportunità di destinargli piattaforme così specializzate restano inferenze condizionate, non prestazioni dimostrate.",
         "fonti": [
           {
-            "nome": "Primaria istituzionale · Air Force Global Strike Command — B-1B Lancer; dati di scheda acquisiti tramite indicizzazione, apertura diretta 403, senza data editoriale assunta",
-            "url": "https://www.afgsc.af.mil/About/Fact-Sheets/Article/630718/b-1b-lancer/"
+            "nome": "Primaria istituzionale · US Air Force — B-2 Spirit, fact sheet",
+            "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104482/b-2-spirit/"
+          },
+          {
+            "nome": "Primaria istituzionale · US Air Force — B-21 Raider, fact sheet",
+            "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/2682973/b-21-raider/"
+          },
+          {
+            "nome": "Primaria istituzionale · Secretary of the Air Force Public Affairs — B-21 Raider accelerates delivery of long-range strike capability",
+            "url": "https://www.afrc.af.mil/News/Article/4459893/b-21-raider-accelerates-delivery-of-long-range-strike-capability/",
+            "data": "2026-04-14"
           }
         ]
       },
       {
         "id": "STR4-E013",
-        "livello": "confermato",
-        "titolo": "Spinta e consumo nella postcombustione",
-        "motivazione": "NASA descrive l’aumento di spinta ottenuto con la postcombustione e la minore efficienza nell’impiego del combustibile. È il principio tecnico richiamato dall’articolo. Il possibile costo in permanenza e rifornimento è una conseguenza qualitativa da valutare sul profilo di missione: non sono presentate curve di consumo del B-1B, durate supersoniche o equivalenze fra ogni tratto veloce e la stessa impostazione dei motori.",
-        "fonti": [
-          {
-            "nome": "Primaria tecnica · NASA Glenn — Afterburning Jet Thrust; aggiornamento indicato dalla pagina",
-            "url": "https://www.grc.nasa.gov/www/k-12/airplane/turbab.html",
-            "data": "2021-05-13"
-          }
-        ]
-      },
-      {
-        "id": "STR4-E014",
-        "livello": "confermato",
-        "titolo": "La prova di trasporto esterno B-1B del novembre 2020",
-        "motivazione": "Il comunicato USAF riferisce una dimostrazione di trasporto esterno con un JASSM inerte, svolta il 20 novembre 2020. Il richiamo riguarda quel captive carry, non un rilascio o una prova aria-aria. Il precedente è usato per rendere concreto il lavoro richiesto quando cambia una configurazione di trasporto; la compatibilità con armi aria-aria richiederebbe prove proprie.",
-        "fonti": [
-          {
-            "nome": "Primaria istituzionale · US Air Force / AFMC — Global Power Bomber CTF conducts B-1B external captive carry demonstration; testo indicizzato, evento del 20 novembre",
-            "url": "https://www.afmc.af.mil/News/Article-Display/Article/2427745/global-power-bomber-ctf-conducts-b-1b-external-captive-carry-demonstration/",
-            "data": "2020-11-24"
-          }
-        ]
-      },
-      {
-        "id": "STR4-E015",
-        "livello": "confermato",
-        "titolo": "Manutenzione storica e iniziativa corrente per la disponibilità dei bombardieri",
-        "motivazione": "GAO documenta nel periodo storico esaminato criticità strutturali, manutentive e di ricambi del B-1B. AFGSC annuncia nel settembre 2026 North Star per aumentare la disponibilità operativa di B-1 e B-52. Il livello riguarda l’audit e l’iniziativa dichiarata, non una misura della prontezza al 4 novembre 2026 o un incremento già conseguito. La convenienza di una riconversione nella vita utile residua è la domanda analitica che segue da questi vincoli, senza una data unica di ritiro o un costo inventati.",
-        "fonti": [
-          {
-            "nome": "Primaria istituzionale · GAO — Weapon Systems Sustainment, GAO-23-106217; dati storici B-1B acquisiti tramite indicizzazione",
-            "url": "https://www.gao.gov/assets/gao-23-106217.pdf",
-            "data": "2022-11-10"
-          },
-          {
-            "nome": "Primaria istituzionale · AFGSC — Global Strike’s North Star Readiness Campaign bolsters operational readiness; annuncio acquisito tramite indicizzazione",
-            "url": "https://www.afgsc.af.mil/News/Article-Display/Article/4592801/global-strikes-north-star-readiness-campaign-bolsters-operational-readiness/",
-            "data": "2026-09-08"
-          }
-        ]
-      },
-      {
-        "id": "STR4-E016",
-        "livello": "confermato",
-        "titolo": "Missione dichiarata del B-21 e progresso delle prove nel 2026",
-        "motivazione": "La scheda USAF presenta il B-21 come bombardiere stealth penetrante per missioni nucleari e convenzionali. Il resoconto dell’11 giugno 2026 riferisce un volo con pilota di test operativo insieme a un pilota di sviluppo. Sono documentati caratteristiche dichiarate e progresso del collaudo, non un armamento aria-aria. L’eventuale posizione più avanzata del missileer è una possibilità condizionata dalla minaccia e dalla missione, non una misura di invulnerabilità o una prestazione dimostrata.",
-        "fonti": [
-          {
-            "nome": "Primaria istituzionale · US Air Force — B-21 Raider, fact sheet; testo indicizzato, senza data editoriale assunta",
-            "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/article/2682973/b-21-raider/"
-          },
-          {
-            "nome": "Primaria istituzionale · US Air Force / 412th Test Wing — Operational pilot flies B-21 as top general pushes urgency; testo indicizzato",
-            "url": "https://www.afnwc.af.mil/News/Article-Display/Article/4515166/operational-pilot-flies-b-21-as-top-general-pushes-urgency/",
-            "data": "2026-06-11"
-          }
-        ]
-      },
-      {
-        "id": "STR4-E017",
         "livello": "plausibile",
-        "titolo": "Gli studi sul missileer ad ala volante riferiti nel 2025",
-        "motivazione": "Air & Space Forces descrive una possibile piattaforma missileer simile o derivata dal B-21, ricorrendo anche a fonti anonime. L’articolo conserva l’attribuzione della segnalazione: non presenta un requisito pubblico, un contratto o una decisione d’acquisto come acquisiti. Il richiamo non trasferisce al Raider di serie capacità ipotizzate per un derivato specializzato.",
+        "titolo": "Studi preliminari su un missileer stealth ad ala volante",
+        "motivazione": "Air & Space Forces Magazine riferiva nel settembre 2025 l'esame di una possibile piattaforma stealth ad ala volante, dotata di numerosi missili aria-aria e potenzialmente sviluppata anche a partire dall'esperienza del B-21. La segnalazione impiega anche fonti anonime e riguarda studi preliminari, non requisiti approvati, un contratto, una decisione di acquisizione o una configurazione operativa. Non è pertanto lecito trasferire la capacità aria-aria ipotizzata per il derivato a un B-21 di serie.",
         "fonti": [
           {
-            "nome": "Stampa · John A. Tirpak, Air & Space Forces Magazine — Air Force Contemplating B-21-Like Aircraft for Air-to-Air Combat; anche fonti anonime",
+            "nome": "Stampa specializzata · John A. Tirpak, Air & Space Forces Magazine — Air Force Contemplating B-21-Like Aircraft for Air-to-Air Combat",
             "url": "https://www.airandspaceforces.com/air-force-contemplating-b-21-like-aircraft-air-to-air/",
             "data": "2025-09-29"
           }
         ]
       },
       {
-        "id": "STR4-E018",
+        "id": "STR4-E014",
         "livello": "confermato",
         "titolo": "AIM-174B: dispiegamento dichiarato e portata classificata",
         "motivazione": "La scheda Navy dichiara l’AIM-174B dispiegato su F/A-18E/F e lo identifica come configurazione aviolanciata dell’SM-6, con portata classificata. Il livello conferma questa dichiarazione istituzionale. Non viene fornita una gittata numerica e non si estende l’integrazione del Super Hornet a piattaforme USAF o bombardieri. Il testo ufficiale indicizzato indica l’aggiornamento del 22 agosto 2026.",
@@ -274,7 +226,7 @@
         ]
       },
       {
-        "id": "STR4-E019",
+        "id": "STR4-E015",
         "livello": "plausibile",
         "titolo": "Le varianti AFLRW e la priorità aria-aria riportate dalla stampa",
         "motivazione": "USNI e Air & Space Forces attribuiscono all’avviso AFLCMC del giugno 2026 lo studio di varianti aria-aria e aria-superficie con priorità iniziale alla prima. La scheda SAM.gov è stata identificata e riaperta, ma non ha restituito testo leggibile; l’originale e il requisito quantitativo non sono stati collazionati. Per questo il dato di gittata è omesso dall’articolo. I due resoconti riguardano il medesimo avviso e non costituiscono prove indipendenti di prestazione. La fonte primaria è collegata per rintracciabilità, non presentata come documento integralmente letto.",
@@ -296,7 +248,7 @@
         ]
       },
       {
-        "id": "STR4-E020",
+        "id": "STR4-E016",
         "livello": "confermato",
         "titolo": "L’obiettivo dimostrativo di LongShot",
         "motivazione": "La scheda DARPA presenta LongShot come un dimostratore di velivolo senza equipaggio aviolanciato capace di impiegare armi aria-aria esistenti. Il livello conferma l’obiettivo e la natura sperimentale del programma. La sequenza piattaforma madre–veicolo intermedio–missile spiega l’architettura proposta, non un ciclo operativo già qualificato.",
@@ -308,7 +260,7 @@
         ]
       },
       {
-        "id": "STR4-E021",
+        "id": "STR4-E017",
         "livello": "confermato",
         "titolo": "PB2025: separare avvicinamento efficiente e ingaggio finale",
         "motivazione": "Il bilancio DARPA PB2025, datato marzo 2024, descrive per LongShot un velivolo relativamente lento ed efficiente nell’avvicinamento, conservando missili ad alta energia per l’ingaggio finale. Contempla il trasporto esterno dai caccia e interno dai bombardieri. Il passo è stato collazionato direttamente nella pagina stampata 160, corrispondente alla pagina PDF 178. È documentato l’approccio progettuale, non un incremento di portata misurato, un’intercettazione riuscita o un’integrazione certificata su un bombardiere specifico.",
@@ -320,7 +272,7 @@
         ]
       },
       {
-        "id": "STR4-E022",
+        "id": "STR4-E018",
         "livello": "confermato",
         "titolo": "X-68A: prove dichiarate e campagna di volo prospettata nel febbraio 2026",
         "motivazione": "DARPA annuncia designazione X-68A, prove in galleria del vento, recupero con paracadute e sistemi di rilascio. Prospetta la campagna di volo dalla fine del 2026, inizialmente da F-15, includendo l’espulsione di una submunizione di prova; gli altri vettori sono possibilità future. Il livello riguarda questi risultati a terra e il calendario dichiarato. La ricerca mirata al 4 novembre non ha individuato un annuncio primario di primo volo o intercetto: è un limite di riscontro pubblico, non prova dell’assenza di attività non pubbliche. Le prove di recupero non attestano riuso operativo.",
@@ -333,7 +285,7 @@
         ]
       },
       {
-        "id": "STR4-E023",
+        "id": "STR4-E019",
         "livello": "plausibile",
         "titolo": "Il nuovo mezzo e le dipendenze del lancio avanzato",
         "motivazione": "Il paragrafo deduce dall’architettura LongShot la necessità di trasportare, separare, portare in posizione e impiegare un veicolo intermedio, che occupa carico ed è a sua volta esposto. Sono condizioni analitiche, non costi, vulnerabilità o prestazioni misurate del dimostratore. Il corpus non consente di definire la ripartizione esatta fra autonomia e controllo remoto per ogni fase. Il collegamento a STR1 assicura continuità concettuale, senza costituire una nuova prova indipendente.",
@@ -350,7 +302,7 @@
         ]
       },
       {
-        "id": "STR4-E024",
+        "id": "STR4-E020",
         "livello": "plausibile",
         "titolo": "Fuoco aggiuntivo e carico redistribuito: diversa dipendenza dal supporto",
         "motivazione": "L’articolo confronta due scenari espliciti: mantenere l’armamento organico ricevendo fuoco supplementare, oppure affidarne una parte a un lanciatore esterno. Dalle dipendenze del tiro integrato si deduce che il secondo scenario espone maggiormente la capacità d’ingaggio alla disponibilità combinata dei nodi. Non sono descritti assetti USAF già adottati o un vantaggio economico dimostrato, e non viene assegnato un indicatore alla successiva ipotesi di ridisegno energetico del caccia.",
@@ -366,7 +318,7 @@
         ]
       },
       {
-        "id": "STR4-E025",
+        "id": "STR4-E021",
         "livello": "confermato",
         "titolo": "Il precedente F-35 sulla crescita dei fabbisogni energetici e termici",
         "motivazione": "GAO-25-107632 documenta fabbisogni di potenza e raffreddamento F-35 cresciuti rispetto alle previsioni e un percorso coordinato di aggiornamento di motore e sottosistemi. Il richiamo riguarda soltanto questo precedente, non il nesso tra minore armamento e maggiore potenza. La riallocazione di massa e volume nei caccia futuri è presentata nel testo come ipotesi esplorativa; nessuna scelta progettuale dell’F-47 viene ricavata dall’esperienza F-35.",
@@ -379,7 +331,7 @@
         ]
       },
       {
-        "id": "STR4-E026",
+        "id": "STR4-E022",
         "livello": "plausibile",
         "titolo": "Disponibilità simultanea e costo delle alternative sacrificate",
         "motivazione": "È una valutazione dell’autore: il contributo del missileer richiede contemporaneità utile di sensori, lanciatore e sostegno dell’arma, impegnando bombardieri già destinati ad altre funzioni. Le fonti documentano l’integrazione funzionale e le missioni concorrenti delle piattaforme, non un confronto quantitativo di costo-efficacia. CCA, carichi differenti dei caccia e organizzazione del riarmo sono alternative da confrontare, senza graduatoria o equivalenza prestazionale presunta.",
@@ -399,7 +351,7 @@
         ]
       },
       {
-        "id": "STR4-E027",
+        "id": "STR4-E023",
         "livello": "plausibile",
         "titolo": "Il valore della riserva che rimane utilizzabile durante la contesa",
         "motivazione": "La conclusione propone un criterio analitico: valutare la quota di riserva convertibile in occasioni d’ingaggio mentre l’avversario agisce su posizione, informazione e disponibilità. Il criterio deriva dalle dipendenze del tiro e dal problema del trasferimento evidenziato da LongShot. Non è una metrica quantitativa validata, una previsione d’adozione o una dimostrazione di superiorità dei bombardieri sui caccia. Le fonti sostengono le premesse; l’interpretazione e la selezione delle alternative appartengono all’autore.",
