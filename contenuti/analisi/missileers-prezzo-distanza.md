@@ -4,7 +4,7 @@ titolo: "Missileers, il prezzo della distanza"
 slug: missileers-prezzo-distanza
 data: 2026-11-04
 sezione: Strategia
-sommario: "Il possibile ruolo aria-aria dei bombardieri: quando una grande riserva di missili diventa fuoco utilizzabile, fra sensori remoti, distanza e lanciatori avanzati."
+sommario: "L'USAF esplora un nuovo ruolo per i bombardieri: sostenere la caccia con grandi riserve di missili aria-aria. Fra lanciatori avanzati, reti di combattimento e sesta generazione, il missileer apre nuove possibilità e nuovi compromessi per l'intera forza."
 teatro: "Stati Uniti · combattimento aereo"
 domini: [aria, droni]
 sistemi_citati: [B-52H, B-52J, B-1B, B-21, AIM-120, AIM-174B, AFLRW, X-68A]
