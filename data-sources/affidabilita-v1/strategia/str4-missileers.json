@@ -252,47 +252,6 @@
       },
       {
         "id": "STR4-E016",
-        "livello": "confermato",
-        "titolo": "NGAD, F-47 e CCA: famiglia di sistemi e test AIM-120 dello YFQ-44A",
-        "motivazione": "DOD e CRS descrivono NGAD/F-47 all’interno di una famiglia di sistemi che comprende i Collaborative Combat Aircraft. L’USAF conferma il 15 luglio 2026 il lancio da YFQ-44A di AIM-120 contro un bersaglio digitale dopo prove d’integrazione dei collegamenti e dei comandi. Non dimostra capacità operativa certificata, comando da un F-47 in volo o il ruolo di un missileer nel programma.",
-        "fonti": [
-          {
-            "nome": "U.S. Department of Defense — Next Generation Fighter Platform, F-47 e famiglia di sistemi",
-            "url": "https://www.defense.gov/News/News-Stories/Article/Article/4131804/trump-hegseth-announce-air-forces-next-generation-fighter-platform/",
-            "data": "2025-03-21"
-          },
-          {
-            "nome": "Congressional Research Service — U.S. Air Force NGAD Fighter, IF12805",
-            "url": "https://www.everycrsreport.com/reports/IF12805.html",
-            "data": "2025-07-22"
-          },
-          {
-            "nome": "US Air Force — Air Force conducts live-fire test for CCA program",
-            "url": "https://www.af.mil/News/Article-Display/Article/4545856/air-force-conducts-live-fire-test-for-collaborative-combat-aircraft-program/",
-            "data": "2026-07-15"
-          }
-        ]
-      },
-      {
-        "id": "STR4-E017",
-        "livello": "confermato",
-        "titolo": "Esigenze energetiche della caccia avanzata: NGAP XA103 e precedente F-35",
-        "motivazione": "RTX/Pratt & Whitney documenta lo sviluppo dell’XA103 per il programma NGAP e la revisione di predisposizione all’assemblaggio del maggio 2026, in relazione a esigenze di propulsione e supporto energetico/termico dei futuri sistemi. GAO documenta per l’F-35 fabbisogni di potenza e raffreddamento superiori alle previsioni, con interventi a motore e sistema termico. L’XA103 non risulta assegnato definitivamente all’F-47; nessuna fonte collega la riduzione dei missili all’aumento automatico della potenza elettrica.",
-        "fonti": [
-          {
-            "nome": "RTX / Pratt & Whitney — XA103 NGAP assembly readiness review",
-            "url": "https://www.rtx.com/news/news-center/2026/05/08/rtxs-pratt-whitney-completes-fully-digital-assembly-readiness-review-for-ngap",
-            "data": "2026-05-08"
-          },
-          {
-            "nome": "GAO — F-35 Joint Strike Fighter, GAO-25-107632",
-            "url": "https://files.gao.gov/reports/GAO-25-107632/index.html",
-            "data": "2025-09-03"
-          }
-        ]
-      },
-      {
-        "id": "STR4-E018",
         "livello": "plausibile",
         "titolo": "TWZ: vincoli delle stive e ipotesi di armamento distribuito sui CCA",
         "motivazione": "Darold Cummings spiega a The War Zone come le stive interne vincolino volume, forma, prestazioni e bassa osservabilità. La testata propone come possibilità che CCA armati consentano di limitare le armi organiche dell’F-47 e ottimizzarne diversamente il progetto. Il primo punto è un giudizio ingegneristico attribuito; il secondo è una speculazione editoriale, non un requisito F-47 documentato. L’estensione di tale scelta a bombardieri missileer è un’ulteriore inferenza dell’articolo.",
@@ -305,7 +264,7 @@
         ]
       },
       {
-        "id": "STR4-E019",
+        "id": "STR4-E017",
         "livello": "confermato",
         "titolo": "F-47: missione dichiarata di penetrating counter-air",
         "motivazione": "L’USAF qualifica ufficialmente NGAD/F-47 come programma di penetrating counter-air. La missione richiede capacità d’intervento in aree fortemente contese; non si deducono da questa qualifica prestazioni classificate, dotazione missilistica effettiva o autonomia del singolo esemplare.",
@@ -323,7 +282,7 @@
         ]
       },
       {
-        "id": "STR4-E020",
+        "id": "STR4-E018",
         "livello": "plausibile",
         "titolo": "Autonomia del caccia quando i collegamenti sono degradati",
         "motivazione": "Justin Bronk, RUSI, sostiene che nei teatri segnati da disturbo delle comunicazioni e kill chain a lunga distanza una piattaforma avanzata con sensori, armi e sistemi sufficienti per combattere anche temporaneamente isolata possa mantenere un valore operativo elevato. È una valutazione specialistica, non un test sul futuro F-47. L’eventuale autonomia di una formazione connessa localmente è distinta dall’autonomia del singolo caccia.",
@@ -336,7 +295,7 @@
         ]
       },
       {
-        "id": "STR4-E021",
+        "id": "STR4-E019",
         "livello": "confermato",
         "titolo": "MADL: collegamento direzionale a bassa probabilità di intercettazione",
         "motivazione": "Le prove Northrop Grumman del 2013 documentano lo scambio MADL fra F-35 in volo e il carattere direzionale del collegamento; l’USAF conferma l’uso tattico del sistema. Una notifica ufficiale del DoD pubblicata nel Federal Register lo qualifica a probabilità molto bassa di intercettazione. Questo sostiene una comunicazione meno esposta, non invisibilità, immunità al disturbo o compatibilità universale con B-21, F-47 e CCA.",
@@ -359,7 +318,7 @@
         ]
       },
       {
-        "id": "STR4-E022",
+        "id": "STR4-E020",
         "livello": "plausibile",
         "titolo": "Disconnected by Design: formazioni localmente connesse F-47, B-21 e CCA",
         "motivazione": "J. Michael Dahm, Mitchell Institute, propone le Disaggregated Collaborative Air Operations: formazioni con reti locali che possano continuare a operare anche quando scollegate dalle reti generali. La proposta include CCA e, nella prospettiva futura, F-47 e B-21. È uno studio di concetto operativo, non la prova di una formazione F-47/B-21/CCA già collaudata, né una decisione di impiegare B-21 come missileer aria-aria.",
