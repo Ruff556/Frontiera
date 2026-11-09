@@ -1,7 +1,6 @@
 ---
-# STR4 — prima stesura per revisione editoriale; titolo provvisorio.
-titolo: "Missileers, il prezzo della distanza"
-slug: missileers-prezzo-distanza
+titolo: "Missileer, il bombardiere cambia bersaglio"
+slug: missileers-cambio-bersaglio
 data: 2026-11-04
 sezione: Strategia
 sommario: "L'USAF esplora un nuovo ruolo per i bombardieri: sostenere la caccia con grandi riserve di missili aria-aria. Fra lanciatori avanzati, reti di combattimento e sesta generazione, il missileer apre nuove possibilità e nuovi compromessi per l'intera forza."
