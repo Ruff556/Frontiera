@@ -7,15 +7,15 @@
         "id": "STR4-E001",
         "livello": "confermato",
         "titolo": "I Sorci Verdi, la 351ª Squadriglia e lo stemma del 51° Stormo",
-        "motivazione": "Il Ministero della Difesa documenta la disputa prebellica fra sostenitori della caccia e del bombardamento, la dimostrazione dei Fiat G.50 della 351ª Squadriglia contro la formazione di SM.79 durante un’esercitazione su Roma e l’origine del gatto nero che afferra tre sorci verdi, poi adottato dal 51° Stormo. La ricostruzione storica di Ciarini identifica anche il 12° Stormo dei Sorci Verdi. Il livello conferma la vicenda tramandata e documentata dalle fonti; l’episodio di esercitazione non dimostra una legge generale sull’autosufficienza dei bombardieri.",
+        "motivazione": "Le fonti documentano l’episodio prebellico degli SM.79 dei Sorci Verdi e dei Fiat G.50 della 351ª Squadriglia, nonché la successiva origine dello stemma del 51° Stormo. Il richiamo interpreta un episodio emblematico, senza trattarlo come dimostrazione universale della vulnerabilità dei bombardieri.",
         "fonti": [
           {
-            "nome": "Primaria istituzionale · Ministero della Difesa — Giornata Mondiale del Gatto; origine dello stemma del 51° Stormo",
+            "nome": "Ministero della Difesa — Origine dello stemma del 51° Stormo",
             "url": "https://www.difesa.it/primopiano/giornata-mondiale-del-gatto/89174.html",
             "data": "2026-02-17"
           },
           {
-            "nome": "Ricostruzione storica · Giorgio Ciarini — 51° Stormo Aeronautica Militare; identificazione del 12° Stormo e contesto della disputa",
+            "nome": "Giorgio Ciarini — 51° Stormo Aeronautica Militare; 12° Stormo e disputa storica",
             "url": "https://giorgiociarini.it/index.php?catid=8&id=167%3A51-stormo-aeronautica-militare&view=article"
           }
         ]
@@ -24,14 +24,14 @@
         "id": "STR4-E002",
         "livello": "confermato",
         "titolo": "Il limite della scorta ai bombardieri statunitensi nel 1943",
-        "motivazione": "Le ricostruzioni ufficiali del National Museum of the U.S. Air Force documentano le pesanti perdite delle missioni in profondità dei bombardieri B-17 e B-24 nel 1943, quando i caccia di scorta dovevano rientrare prima di raggiungere i bersagli più lontani. A Schweinfurt, il 14 ottobre, la perdita di 60 bombardieri contribuì alla sospensione delle missioni oltre il raggio della scorta. Il riferimento sostiene la funzione storica dei caccia, senza attribuire la totalità delle perdite alla sola assenza di scorta.",
+        "motivazione": "Il National Museum of the U.S. Air Force documenta le perdite dei bombardieri statunitensi in missioni profonde oltre la portata della scorta nel 1943, compresa Schweinfurt. La presenza o assenza di scorta è uno dei fattori della vicenda, non l’unica causa delle perdite.",
         "fonti": [
           {
-            "nome": "Primaria museale istituzionale · National Museum of the U.S. Air Force — Heavy Bombers",
+            "nome": "National Museum of the U.S. Air Force — Heavy Bombers",
             "url": "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/196180/AFmuseum/heavy-bombers/"
           },
           {
-            "nome": "Primaria museale istituzionale · National Museum of the U.S. Air Force — Black Thursday: Schweinfurt, October 14, 1943",
+            "nome": "National Museum of the U.S. Air Force — Black Thursday: Schweinfurt",
             "url": "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/1519661/black-thursday-schweinfurt-october-14-1943/"
           }
         ]
@@ -40,15 +40,15 @@
         "id": "STR4-E003",
         "livello": "plausibile",
         "titolo": "Il rapporto USAF 2026 contempla capacità aria-aria sui bombardieri",
-        "motivazione": "I resoconti di ottobre 2026 riportano che il rapporto Long-Term USAF Fighter Force Structure, trasmesso al Congresso il 16 ottobre, contempla lo sviluppo di capacità aria-aria su bombardieri. Air & Space Forces Magazine e Aviation Week dichiarano di aver ottenuto il documento. Il testo integrale del rapporto non è stato collazionato in questa verifica: si conferma l’attribuzione giornalistica della proposta, non l’adozione di una piattaforma o di una capacità operativa.",
+        "motivazione": "Air & Space Forces Magazine e Aviation Week attribuiscono al rapporto Long-Term USAF Fighter Force Structure, trasmesso al Congresso il 16 ottobre 2026, la contemplazione di capacità aria-aria per bombardieri. Il rapporto integrale non è stato direttamente collazionato nel precedente recap: la conferma riguarda i resoconti giornalistici, non una decisione USAF di adozione.",
         "fonti": [
           {
-            "nome": "Stampa specializzata · Stephen Losey, Air & Space Forces Magazine — Air Force Considering Air-to-Air Role for Bombers amid Fighter Procurement Constraints",
+            "nome": "Stephen Losey, Air & Space Forces Magazine — Air Force Considering Air-to-Air Role for Bombers",
             "url": "https://www.airandspaceforces.com/air-force-considering-air-to-air-role-for-bombers/",
             "data": "2026-10-23"
           },
           {
-            "nome": "Stampa specializzata · Brian Everstine, Aviation Week — USAF Outlines New Fighter Goals, May Eye Bombers, CCAs For Help",
+            "nome": "Brian Everstine, Aviation Week — USAF Outlines New Fighter Goals, May Eye Bombers, CCAs For Help",
             "url": "https://aviationweek.com/defense/budget-policy-operations/usaf-outlines-new-fighter-goals-may-eye-bombers-ccas-help",
             "data": "2026-10-21"
           }
@@ -57,11 +57,11 @@
       {
         "id": "STR4-E004",
         "livello": "plausibile",
-        "titolo": "Obiettivo 1.509 caccia combat-coded nel 2035 e vincoli industriali e finanziari",
-        "motivazione": "Air & Space Forces Magazine, citando il rapporto USAF ottenuto dalla redazione, indica 1.509 caccia combat-coded necessari nel 2035 contro 1.288 nella flotta corrente e riferisce che fiscal realities e industrial production limitations potrebbero ostacolare l’obiettivo. Sono quantità riferite a una pianificazione di forza e all’inventario di riferimento, non a consegne già programmate o garantite. Il rapporto originale non è stato qui collazionato.",
+        "titolo": "Obiettivo di 1.509 caccia combat-coded entro il 2035",
+        "motivazione": "Secondo Air & Space Forces Magazine, il rapporto USAF stima 1.509 caccia combat-coded necessari entro il 2035, rispetto a 1.288 nel riferimento contemporaneo, identificando ostacoli finanziari e industriali. Sono obiettivi e valori riportati dalla stampa specializzata, non acquisizioni già finanziate o consegnate.",
         "fonti": [
           {
-            "nome": "Stampa specializzata · Stephen Losey, Air & Space Forces Magazine — Air Force Considering Air-to-Air Role for Bombers amid Fighter Procurement Constraints",
+            "nome": "Stephen Losey, Air & Space Forces Magazine — Air Force Considering Air-to-Air Role for Bombers",
             "url": "https://www.airandspaceforces.com/air-force-considering-air-to-air-role-for-bombers/",
             "data": "2026-10-23"
           }
@@ -71,15 +71,15 @@
         "id": "STR4-E005",
         "livello": "plausibile",
         "titolo": "AWACS e cooperazione informativa nello scontro indo-pakistano del 7 maggio 2025",
-        "motivazione": "La NATO documenta le funzioni generali di scoperta, tracciamento e controllo dei caccia svolte dagli AWACS. Reuters ricostruisce l’uso pakistano di una rete di sensori aerei e terrestri con Data Link 17 per fornire ai J-10 informazioni radar, consentendo secondo le fonti interpellate di mantenere spenti i radar di bordo. L’attribuzione a Reuters è mantenuta: il resoconto di combattimento non è una telemetria pubblica verificata indipendentemente in tutti i suoi passaggi e non prova da solo la guida diretta dei missili da parte dell’AWACS.",
+        "motivazione": "La NATO documenta il ruolo generale degli AWACS nella sorveglianza e nel controllo aereo. Reuters ricostruisce la trasmissione alla componente J-10 di informazioni radar da sensori esterni, permettendo secondo le fonti interpellate di mantenere spenti i radar di bordo. È un resoconto attribuito, non telemetria indipendente né prova che l’AWACS abbia guidato direttamente i missili.",
         "fonti": [
           {
-            "nome": "Primaria istituzionale · NATO — AWACS: NATO’s eyes in the sky; funzioni di sorveglianza e controllo",
+            "nome": "NATO — AWACS: NATO’s eyes in the sky",
             "url": "https://www.nato.int/en/what-we-do/deterrence-and-defence/awacs-natos-eyes-in-the-sky",
             "data": "2026-07-07"
           },
           {
-            "nome": "Stampa d’inchiesta · Reuters — How Pakistan shot down India’s cutting-edge fighter using Chinese gear",
+            "nome": "Reuters — How Pakistan shot down India’s cutting-edge fighter using Chinese gear",
             "url": "https://www.reuters.com/business/aerospace-defense/how-pakistan-shot-down-indias-cutting-edge-fighter-using-chinese-gear-2025-08-02/",
             "data": "2025-08-02"
           }
@@ -89,10 +89,10 @@
         "id": "STR4-E006",
         "livello": "confermato",
         "titolo": "F-35: fusione sensoriale e condivisione tattica tramite MADL",
-        "motivazione": "L’USAF documenta prove multivelivolo (quattro o sei F-35, inclusi modelli di tutte le varianti) dedicate alla condivisione sicura dei dati, dichiarando l’uso del Multifunction Advanced Data Link per informazioni su minacce aeree e terrestri e la costruzione di un quadro tattico comune. Il livello riguarda queste capacità e prove documentate; non attribuisce a ogni velivolo della formazione la capacità di lanciare un missile basandosi esclusivamente sui sensori di un altro.",
+        "motivazione": "L’USAF descrive la condivisione sicura di dati sulle minacce fra più F-35 attraverso MADL e la loro integrazione nel quadro tattico della formazione. Questa evidenza non implica che ogni piattaforma possa automaticamente impiegare armi sulla sola base dei sensori remoti; la dimensione LPI delle trasmissioni è distinta e approfondita in E021.",
         "fonti": [
           {
-            "nome": "Primaria istituzionale · USAF / 412th Test Wing — Multiple F-35s take to the skies to test communication data links",
+            "nome": "USAF / 412th Test Wing — Multiple F-35s take to the skies to test communication data links",
             "url": "https://www.af.mil/News/Article-Display/Article/1026106/multiple-f-35s-take-to-the-skies-to-test-communication-data-links/",
             "data": "2016-12-09"
           }
@@ -102,15 +102,15 @@
         "id": "STR4-E007",
         "livello": "confermato",
         "titolo": "White Sands 2016: F-35B come sensore e Aegis/SM-6 come lanciatore",
-        "motivazione": "Il comunicato NAVSEA del 13 settembre 2016 conferma la prova a fuoco del 12 settembre: un F-35B dei Marines osservò una minaccia oltre l’orizzonte radar della postazione Aegis, trasmise dati via MADL a una stazione a terra collegata a USS Desert Ship, e il sistema Aegis impiegò un SM-6 contro il bersaglio. Si tratta di un’intercettazione dimostrativa con postazione terrestre rappresentativa di una nave. La valutazione DOT&E riportata dal Congressional Research Service chiarisce che la configurazione non era operativamente rappresentativa: il risultato dimostra il principio di separazione fra sensore e lanciatore, non una capacità universale già disponibile su ogni piattaforma.",
+        "motivazione": "NAVSEA documenta la prova del 12 settembre 2016: un F-35B rilevò un bersaglio oltre l’orizzonte della postazione Aegis, trasmise dati attraverso MADL e un sistema Aegis terrestre impiegò SM-6. È una dimostrazione del principio sensore-lanciatore distribuiti, non prova d’integrazione operativa universale; la valutazione DOT&E riportata dal CRS ne indica i limiti di rappresentatività operativa.",
         "fonti": [
           {
-            "nome": "Primaria istituzionale · NAVSEA / U.S. Navy — Navy Conducts First Live Fire NIFC-CA Test with F-35",
+            "nome": "NAVSEA — Navy Conducts First Live Fire NIFC-CA Test with F-35",
             "url": "https://www.navsea.navy.mil/Media/News/Article-View/Article/942188/navy-conducts-first-live-fire-nifc-ca-test-with-f-35/",
             "data": "2016-09-13"
           },
           {
-            "nome": "Documentazione di controllo · Congressional Research Service con estratto DOT&E FY2016, prova F-35/Aegis non rappresentativa di capacità operativa",
+            "nome": "Congressional Research Service — Rapporto con valutazione DOT&E sul test F-35/Aegis",
             "url": "https://www.everycrsreport.com/files/20171109_RL33745_56149c90fed139d555598a887c3821d0c0cb4379.html",
             "data": "2017-11-09"
           }
@@ -119,15 +119,15 @@
       {
         "id": "STR4-E008",
         "livello": "plausibile",
-        "titolo": "Condizioni iniziali e profilo effettivo del lancio",
-        "motivazione": "Il paragrafo applica principi di meccanica al rilascio: velocità iniziale, quota e geometria concorrono alle condizioni dalle quali l’arma sviluppa il proprio volo. NASA documenta la dipendenza della resistenza da densità, velocità, area e coefficiente aerodinamico; DARPA esplicita la distinzione fra trasferimento e impiego energetico del missile. L’inferenza non fornisce un modello prestazionale né coefficienti di vantaggio del lancio supersonico, e non ricava l’inviluppo utile dalle velocità massime dei vettori.",
+        "titolo": "Quota, velocità e geometria del lancio modificano il margine energetico",
+        "motivazione": "La relazione fra velocità iniziale, quota, densità dell’aria e resistenza aerodinamica è fondata sulla meccanica del volo; la geometria dell’incontro condiziona la possibilità d’intercettazione. Non si deduce dai soli dati nominali dei vettori una gittata reale o un incremento numerico di prestazione.",
         "fonti": [
           {
-            "nome": "Primaria tecnica · NASA Glenn — Drag Equation; senza data editoriale assunta",
+            "nome": "NASA Glenn — Drag Equation",
             "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/drag-equation/"
           },
           {
-            "nome": "Primaria istituzionale · DARPA — PB2025, marzo 2024, PE 0603286E, LongShot, pagina stampata 160; condizioni energetiche del concetto",
+            "nome": "DARPA — PB2025, LongShot, p. 160, documento PDF p. 178",
             "url": "https://www.darpa.mil/sites/default/files/attachment/2024-11/u-rdte-mjb-darpa-pb-2025-06-mar-2024-final.pdf#page=178"
           }
         ]
@@ -135,28 +135,37 @@
       {
         "id": "STR4-E009",
         "livello": "plausibile",
-        "titolo": "Percorso del missile e margine terminale",
-        "motivazione": "Il testo distingue massima distanza raggiungibile e possibilità d’ingaggio di un bersaglio che reagisce. Il ragionamento combina il consumo di energia contro la resistenza con il meccanismo di propulsione sostenuta descritto da MBDA per Meteor. Il produttore sostiene il principio tecnico, non una graduatoria indipendente degli armamenti. Non vengono calcolati gittate, no-escape zone o probabilità d’abbattimento, né attribuite ad altre armi le prestazioni dichiarate per Meteor.",
+        "titolo": "Energia terminale: Meteor ramjet e confronto con AIM-260 JATM",
+        "motivazione": "La resistenza consuma progressivamente l’energia del missile; la distanza massima di volo differisce dalla possibilità d’ingaggio contro un bersaglio reattivo. MBDA descrive il ramjet sostenuto del Meteor fino all’intercetto. IISS analizza le ragioni dello sviluppo dell’AIM-260 rispetto ad AMRAAM e PL-15; Lockheed Martin documenta nel settembre 2026 l’accelerazione produttiva e la maggiore gittata rispetto a precedenti armi aria-aria. Le caratteristiche propulsive dell’AIM-260 non sono documentate pubblicamente in misura sufficiente per affermare categoricamente che non usi un ramjet; non si devono quantificare prestazioni classificate o no-escape zone.",
         "fonti": [
           {
-            "nome": "Primaria tecnica · NASA Glenn — Drag Equation; senza data editoriale assunta",
+            "nome": "NASA Glenn — Drag Equation",
             "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/drag-equation/"
           },
           {
-            "nome": "Primaria industriale · MBDA — MBDA’s Meteor missile at Seoul ADEX 2023; descrizione della propulsione e delle prestazioni terminali",
-            "url": "https://www.mbda-systems.com/mbdas-meteor-missile-seoul-adex-2023",
-            "data": "2023-10-13"
+            "nome": "MBDA — Meteor; propulsione ramjet e spinta sostenuta",
+            "url": "https://www.mbda-systems.com/products/air-dominance/meteor"
+          },
+          {
+            "nome": "Douglas Barrie, IISS — AIM-260 missile: the US Air Force and beyond-visual-range lethality",
+            "url": "https://www.iiss.org/online-analysis/military-balance/2019/10/aim-260-missile-us-air-force/",
+            "data": "2019-10-24"
+          },
+          {
+            "nome": "Lockheed Martin — Agreement to Accelerate AIM-260 JATM Production",
+            "url": "https://investors.lockheedmartin.com/news-releases/news-release-details/lockheed-martin-and-department-war-accelerate-air-dominance",
+            "data": "2026-09-17"
           }
         ]
       },
       {
         "id": "STR4-E010",
         "livello": "confermato",
-        "titolo": "B-52H: capacità di carico e autonomia",
-        "motivazione": "La scheda istituzionale dell'US Air Force attribuisce al B-52H una capacità di carico di 70.000 libbre (circa 31,8 tonnellate), velocità subsonica e autonomia intercontinentale. Queste caratteristiche rendono plausibile studiarlo come grande riserva missilistica persistente, ma non dimostrano alcuna capacità aria-aria integrata o certificata. Il carico massimo di scheda non permette di ricavare il numero di missili aria-aria trasportabili, che dipenderebbe anche da ingombri, attacchi, lanciatori, integrazione e condizioni di missione.",
+        "titolo": "B-52H: grande capacità di carico e autonomia",
+        "motivazione": "L’USAF riporta 70.000 lb di carico massimo, circa 31,8 tonnellate, oltre ad autonomia intercontinentale e velocità subsonica. La prospettiva di riserva missilistica persistente è un’applicazione ipotetica: non risultano certificati integrazione aria-aria, capacità di munizionamento e durata in specifico profilo missileer.",
         "fonti": [
           {
-            "nome": "Primaria istituzionale · US Air Force — B-52H Stratofortress",
+            "nome": "USAF — B-52H Stratofortress, fact sheet",
             "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104465/b-52h-stratofortress/"
           }
         ]
@@ -165,14 +174,14 @@
         "id": "STR4-E011",
         "livello": "confermato",
         "titolo": "B-1B: capacità supersonica, carico e vincoli di disponibilità",
-        "motivazione": "La scheda Air Force Global Strike Command indica per il B-1B una capacità di carico di 75.000 libbre (circa 34 tonnellate) e una velocità di Mach 1,2 al livello del mare. Sono prestazioni nominali che non attestano il raggiungimento simultaneo dei due massimi in una configurazione di trasporto e lancio di missili aria-aria. Il rapporto GAO del 2022 documenta inoltre difficoltà storiche relative a strutture, manutenzione e ricambi, rilevanti per valutare il costo e la disponibilità di un'eventuale riconversione. Il vantaggio energetico del rilascio più veloce, la compatibilità con i missili e la convenienza operativa rimangono valutazioni condizionate: nessuna delle due fonti dimostra una capacità aria-aria del B-1B.",
+        "motivazione": "L’AFGSC riporta 75.000 lb di carico (circa 34 t) e Mach 1,2 al livello del mare; non è dimostrato che i due valori massimi siano simultaneamente raggiungibili in un’ipotetica missione aria-aria. GAO documenta problematiche di manutenzione e sustainment. Il vantaggio di posizionamento e il costo operativo di una riconversione restano inferenze.",
         "fonti": [
           {
-            "nome": "Primaria istituzionale · Air Force Global Strike Command — B-1B Lancer",
+            "nome": "Air Force Global Strike Command — B-1B Lancer",
             "url": "https://www.afgsc.af.mil/About/Fact-Sheets/Article/630718/b-1b-lancer/"
           },
           {
-            "nome": "Primaria istituzionale · GAO — Weapon Systems Sustainment, GAO-23-106217",
+            "nome": "GAO — Weapon Systems Sustainment, GAO-23-106217",
             "url": "https://www.gao.gov/assets/gao-23-106217.pdf",
             "data": "2022-11-10"
           }
@@ -181,19 +190,19 @@
       {
         "id": "STR4-E012",
         "livello": "confermato",
-        "titolo": "B-2 e B-21: bassa osservabilità, disponibilità e architettura",
-        "motivazione": "Le schede ufficiali USAF descrivono il B-2 come bombardiere penetrante a bassa osservabilità e riportano un inventario di 20 velivoli, compreso un esemplare di prova: una flotta numericamente contenuta rispetto ai possibili impieghi alternativi. Il B-21 è progettato come bombardiere stealth penetrante per missioni convenzionali e nucleari, parte di una più ampia famiglia di sistemi, con architettura aperta per favorire future integrazioni. Nell'aprile 2026 l'US Air Force documentava progressi dei collaudi, tra cui una prova di rifornimento in volo, senza attestare una capacità aria-aria. La possibile posizione avanzata di un missileer stealth e l'opportunità di destinargli piattaforme così specializzate restano inferenze condizionate, non prestazioni dimostrate.",
+        "titolo": "B-2 e B-21: bassa osservabilità, scarsità e architettura aperta",
+        "motivazione": "Le fonti USAF documentano il B-2 penetrante stealth e la flotta di dimensioni contenute, e descrivono il B-21 come piattaforma stealth per missioni strategiche con architettura aperta. I collaudi B-21 risultavano in corso nell’aprile 2026. L’impiego come missileer avanzato e la riconversione dei B-2 non sono capacità dimostrate e rimangono ipotesi distinte dalle caratteristiche documentate.",
         "fonti": [
           {
-            "nome": "Primaria istituzionale · US Air Force — B-2 Spirit, fact sheet",
+            "nome": "USAF — B-2 Spirit, fact sheet",
             "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104482/b-2-spirit/"
           },
           {
-            "nome": "Primaria istituzionale · US Air Force — B-21 Raider, fact sheet",
+            "nome": "USAF — B-21 Raider, fact sheet",
             "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/2682973/b-21-raider/"
           },
           {
-            "nome": "Primaria istituzionale · Secretary of the Air Force Public Affairs — B-21 Raider accelerates delivery of long-range strike capability",
+            "nome": "USAF — B-21 Raider accelerates delivery of long-range strike capability",
             "url": "https://www.afrc.af.mil/News/Article/4459893/b-21-raider-accelerates-delivery-of-long-range-strike-capability/",
             "data": "2026-04-14"
           }
@@ -202,11 +211,11 @@
       {
         "id": "STR4-E013",
         "livello": "plausibile",
-        "titolo": "Studi preliminari su un missileer stealth ad ala volante",
-        "motivazione": "Air & Space Forces Magazine riferiva nel settembre 2025 l'esame di una possibile piattaforma stealth ad ala volante, dotata di numerosi missili aria-aria e potenzialmente sviluppata anche a partire dall'esperienza del B-21. La segnalazione impiega anche fonti anonime e riguarda studi preliminari, non requisiti approvati, un contratto, una decisione di acquisizione o una configurazione operativa. Non è pertanto lecito trasferire la capacità aria-aria ipotizzata per il derivato a un B-21 di serie.",
+        "titolo": "Studi preliminari su un missileer stealth simile al B-21",
+        "motivazione": "Air & Space Forces Magazine riferisce di una proposta ancora preliminare per una grande ala volante stealth con numerosi missili aria-aria, forse derivata dal B-21. Nell’architettura illustrata, caccia pilotati e potenzialmente CCA individuerebbero/designerebbero i bersagli per il missileer. La segnalazione si basa anche su fonti anonime e non prova una piattaforma approvata o operativa; non estendere la funzione al B-21 di serie.",
         "fonti": [
           {
-            "nome": "Stampa specializzata · John A. Tirpak, Air & Space Forces Magazine — Air Force Contemplating B-21-Like Aircraft for Air-to-Air Combat",
+            "nome": "John A. Tirpak, Air & Space Forces Magazine — Air Force Contemplating B-21-Like Aircraft for Air-to-Air Combat",
             "url": "https://www.airandspaceforces.com/air-force-contemplating-b-21-like-aircraft-air-to-air/",
             "data": "2025-09-29"
           }
@@ -215,159 +224,150 @@
       {
         "id": "STR4-E014",
         "livello": "confermato",
-        "titolo": "AIM-174B: dispiegamento dichiarato e portata classificata",
-        "motivazione": "La scheda Navy dichiara l’AIM-174B dispiegato su F/A-18E/F e lo identifica come configurazione aviolanciata dell’SM-6, con portata classificata. Il livello conferma questa dichiarazione istituzionale. Non viene fornita una gittata numerica e non si estende l’integrazione del Super Hornet a piattaforme USAF o bombardieri. Il testo ufficiale indicizzato indica l’aggiornamento del 22 agosto 2026.",
+        "titolo": "LongShot: veicolo intermedio aviolanciato per missili aria-aria",
+        "motivazione": "DARPA presenta LongShot come dimostratore sperimentale di velivolo senza equipaggio rilasciato da piattaforma madre, capace in progetto di impiegare missili aria-aria. Il bilancio PB2025 contempla carico esterno su caccia e interno su bombardieri, distinguendo il trasferimento efficiente dall’ingaggio finale. La progettazione è documentata; non lo sono integrazione operativa, numero di velivoli trasportabili o intercetti riusciti.",
         "fonti": [
           {
-            "nome": "Primaria istituzionale · US Navy — AIM-174B Gunslinger, SM-6 Air Launched Configuration; testo ufficiale verificato tramite indicizzazione, apertura diretta 403",
-            "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/4580875/aim-174b-gunslinger-sm-6-air-launched-configuration/",
-            "data": "2026-08-22"
+            "nome": "DARPA — LongShot, scheda del programma",
+            "url": "https://www.darpa.mil/research/programs/longshot"
+          },
+          {
+            "nome": "DARPA — PB2025, LongShot, p. 160, documento PDF p. 178",
+            "url": "https://www.darpa.mil/sites/default/files/attachment/2024-11/u-rdte-mjb-darpa-pb-2025-06-mar-2024-final.pdf#page=178"
           }
         ]
       },
       {
         "id": "STR4-E015",
-        "livello": "plausibile",
-        "titolo": "Le varianti AFLRW e la priorità aria-aria riportate dalla stampa",
-        "motivazione": "USNI e Air & Space Forces attribuiscono all’avviso AFLCMC del giugno 2026 lo studio di varianti aria-aria e aria-superficie con priorità iniziale alla prima. La scheda SAM.gov è stata identificata e riaperta, ma non ha restituito testo leggibile; l’originale e il requisito quantitativo non sono stati collazionati. Per questo il dato di gittata è omesso dall’articolo. I due resoconti riguardano il medesimo avviso e non costituiscono prove indipendenti di prestazione. La fonte primaria è collegata per rintracciabilità, non presentata come documento integralmente letto.",
+        "livello": "confermato",
+        "titolo": "X-68A: prove a terra e campagna di volo annunciata",
+        "motivazione": "DARPA il 17 febbraio 2026 assegna la designazione X-68A al dimostratore General Atomics e riferisce test in galleria del vento e dei sistemi di recupero e rilascio; anticipa prove in volo inizialmente da F-15 dalla fine del 2026, inclusa l’espulsione di una submunizione di prova. Si tratta dei risultati annunciati e di un piano, non di una capacità operativa già dimostrata.",
         "fonti": [
           {
-            "nome": "Stampa · Aaron-Matthew Lariosa, USNI News — Air Force Wants New 1,000-Nautical Mile Range Missile for Air, Sea Targets",
-            "url": "https://news.usni.org/2026/06/25/air-force-wants-new-1000-nautical-mile-range-missile-for-air-sea-targets",
-            "data": "2026-06-25"
-          },
-          {
-            "nome": "Stampa · Todd South, Air & Space Forces Magazine — Air Force Eyes New Stand-Off Missile with 1,000-Nautical Mile Range",
-            "url": "https://www.airandspaceforces.com/air-force-eyes-new-stand-off-missile-1000-mile-range/",
-            "data": "2026-06-25"
-          },
-          {
-            "nome": "Riferimento primario non collazionato · AFLCMC / SAM.gov — Air Force Long Range Weapon; avviso identificato, pagina senza testo leggibile nella verifica del 4 novembre 2026",
-            "url": "https://sam.gov/workspace/contract/opp/51ea69f731844ab4a8a6ab09e96a7326/view"
+            "nome": "DARPA — Not such a long shot",
+            "url": "https://www.darpa.mil/news/2026/long-shot-success",
+            "data": "2026-02-17"
           }
         ]
       },
       {
         "id": "STR4-E016",
         "livello": "confermato",
-        "titolo": "L’obiettivo dimostrativo di LongShot",
-        "motivazione": "La scheda DARPA presenta LongShot come un dimostratore di velivolo senza equipaggio aviolanciato capace di impiegare armi aria-aria esistenti. Il livello conferma l’obiettivo e la natura sperimentale del programma. La sequenza piattaforma madre–veicolo intermedio–missile spiega l’architettura proposta, non un ciclo operativo già qualificato.",
+        "titolo": "NGAD, F-47 e CCA: famiglia di sistemi e test AIM-120 dello YFQ-44A",
+        "motivazione": "DOD e CRS descrivono NGAD/F-47 all’interno di una famiglia di sistemi che comprende i Collaborative Combat Aircraft. L’USAF conferma il 15 luglio 2026 il lancio da YFQ-44A di AIM-120 contro un bersaglio digitale dopo prove d’integrazione dei collegamenti e dei comandi. Non dimostra capacità operativa certificata, comando da un F-47 in volo o il ruolo di un missileer nel programma.",
         "fonti": [
           {
-            "nome": "Primaria istituzionale · DARPA — LongShot, scheda di programma; consultata il 4 novembre 2026, senza data editoriale assunta",
-            "url": "https://www.darpa.mil/research/programs/longshot"
+            "nome": "U.S. Department of Defense — Next Generation Fighter Platform, F-47 e famiglia di sistemi",
+            "url": "https://www.defense.gov/News/News-Stories/Article/Article/4131804/trump-hegseth-announce-air-forces-next-generation-fighter-platform/",
+            "data": "2025-03-21"
+          },
+          {
+            "nome": "Congressional Research Service — U.S. Air Force NGAD Fighter, IF12805",
+            "url": "https://www.everycrsreport.com/reports/IF12805.html",
+            "data": "2025-07-22"
+          },
+          {
+            "nome": "US Air Force — Air Force conducts live-fire test for CCA program",
+            "url": "https://www.af.mil/News/Article-Display/Article/4545856/air-force-conducts-live-fire-test-for-collaborative-combat-aircraft-program/",
+            "data": "2026-07-15"
           }
         ]
       },
       {
         "id": "STR4-E017",
         "livello": "confermato",
-        "titolo": "PB2025: separare avvicinamento efficiente e ingaggio finale",
-        "motivazione": "Il bilancio DARPA PB2025, datato marzo 2024, descrive per LongShot un velivolo relativamente lento ed efficiente nell’avvicinamento, conservando missili ad alta energia per l’ingaggio finale. Contempla il trasporto esterno dai caccia e interno dai bombardieri. Il passo è stato collazionato direttamente nella pagina stampata 160, corrispondente alla pagina PDF 178. È documentato l’approccio progettuale, non un incremento di portata misurato, un’intercettazione riuscita o un’integrazione certificata su un bombardiere specifico.",
+        "titolo": "Esigenze energetiche della caccia avanzata: NGAP XA103 e precedente F-35",
+        "motivazione": "RTX/Pratt & Whitney documenta lo sviluppo dell’XA103 per il programma NGAP e la revisione di predisposizione all’assemblaggio del maggio 2026, in relazione a esigenze di propulsione e supporto energetico/termico dei futuri sistemi. GAO documenta per l’F-35 fabbisogni di potenza e raffreddamento superiori alle previsioni, con interventi a motore e sistema termico. L’XA103 non risulta assegnato definitivamente all’F-47; nessuna fonte collega la riduzione dei missili all’aumento automatico della potenza elettrica.",
         "fonti": [
           {
-            "nome": "Primaria istituzionale · DARPA — RDT&E Budget Item Justification, PB2025, marzo 2024, PE 0603286E, LongShot, pagina stampata 160; giorno di pubblicazione non assunto",
-            "url": "https://www.darpa.mil/sites/default/files/attachment/2024-11/u-rdte-mjb-darpa-pb-2025-06-mar-2024-final.pdf#page=178"
-          }
-        ]
-      },
-      {
-        "id": "STR4-E018",
-        "livello": "confermato",
-        "titolo": "X-68A: prove dichiarate e campagna di volo prospettata nel febbraio 2026",
-        "motivazione": "DARPA annuncia designazione X-68A, prove in galleria del vento, recupero con paracadute e sistemi di rilascio. Prospetta la campagna di volo dalla fine del 2026, inizialmente da F-15, includendo l’espulsione di una submunizione di prova; gli altri vettori sono possibilità future. Il livello riguarda questi risultati a terra e il calendario dichiarato. La ricerca mirata al 4 novembre non ha individuato un annuncio primario di primo volo o intercetto: è un limite di riscontro pubblico, non prova dell’assenza di attività non pubbliche. Le prove di recupero non attestano riuso operativo.",
-        "fonti": [
-          {
-            "nome": "Primaria istituzionale · DARPA — Not such a long shot; annuncio collazionato direttamente",
-            "url": "https://www.darpa.mil/news/2026/long-shot-success",
-            "data": "2026-02-17"
-          }
-        ]
-      },
-      {
-        "id": "STR4-E019",
-        "livello": "plausibile",
-        "titolo": "Il nuovo mezzo e le dipendenze del lancio avanzato",
-        "motivazione": "Il paragrafo deduce dall’architettura LongShot la necessità di trasportare, separare, portare in posizione e impiegare un veicolo intermedio, che occupa carico ed è a sua volta esposto. Sono condizioni analitiche, non costi, vulnerabilità o prestazioni misurate del dimostratore. Il corpus non consente di definire la ripartizione esatta fra autonomia e controllo remoto per ogni fase. Il collegamento a STR1 assicura continuità concettuale, senza costituire una nuova prova indipendente.",
-        "fonti": [
-          {
-            "nome": "Primaria istituzionale · DARPA — PB2025, marzo 2024, PE 0603286E, LongShot, pagina stampata 160; sfide di stabilità, controllo e separazione",
-            "url": "https://www.darpa.mil/sites/default/files/attachment/2024-11/u-rdte-mjb-darpa-pb-2025-06-mar-2024-final.pdf#page=178"
+            "nome": "RTX / Pratt & Whitney — XA103 NGAP assembly readiness review",
+            "url": "https://www.rtx.com/news/news-center/2026/05/08/rtxs-pratt-whitney-completes-fully-digital-assembly-readiness-review-for-ngap",
+            "data": "2026-05-08"
           },
           {
-            "nome": "Primaria istituzionale · DARPA — Not such a long shot; configurazione sperimentale e integrazioni prospettate",
-            "url": "https://www.darpa.mil/news/2026/long-shot-success",
-            "data": "2026-02-17"
-          }
-        ]
-      },
-      {
-        "id": "STR4-E020",
-        "livello": "plausibile",
-        "titolo": "Fuoco aggiuntivo e carico redistribuito: diversa dipendenza dal supporto",
-        "motivazione": "L’articolo confronta due scenari espliciti: mantenere l’armamento organico ricevendo fuoco supplementare, oppure affidarne una parte a un lanciatore esterno. Dalle dipendenze del tiro integrato si deduce che il secondo scenario espone maggiormente la capacità d’ingaggio alla disponibilità combinata dei nodi. Non sono descritti assetti USAF già adottati o un vantaggio economico dimostrato, e non viene assegnato un indicatore alla successiva ipotesi di ridisegno energetico del caccia.",
-        "fonti": [
-          {
-            "nome": "Primaria istituzionale · US Navy — CEC, Cooperative Engagement Capability; premessa funzionale, testo indicizzato",
-            "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2166802/cec-cooperative-engagement-capability/"
-          },
-          {
-            "nome": "Primaria istituzionale · DARPA — LongShot; obiettivo di estensione delle possibilità d’ingaggio, senza data editoriale assunta",
-            "url": "https://www.darpa.mil/research/programs/longshot"
-          }
-        ]
-      },
-      {
-        "id": "STR4-E021",
-        "livello": "confermato",
-        "titolo": "Il precedente F-35 sulla crescita dei fabbisogni energetici e termici",
-        "motivazione": "GAO-25-107632 documenta fabbisogni di potenza e raffreddamento F-35 cresciuti rispetto alle previsioni e un percorso coordinato di aggiornamento di motore e sottosistemi. Il richiamo riguarda soltanto questo precedente, non il nesso tra minore armamento e maggiore potenza. La riallocazione di massa e volume nei caccia futuri è presentata nel testo come ipotesi esplorativa; nessuna scelta progettuale dell’F-47 viene ricavata dall’esperienza F-35.",
-        "fonti": [
-          {
-            "nome": "Primaria istituzionale · GAO — F-35 Joint Strike Fighter, GAO-25-107632; sezioni su Engine and Power Thermal Management",
+            "nome": "GAO — F-35 Joint Strike Fighter, GAO-25-107632",
             "url": "https://files.gao.gov/reports/GAO-25-107632/index.html",
             "data": "2025-09-03"
           }
         ]
       },
       {
-        "id": "STR4-E022",
+        "id": "STR4-E018",
         "livello": "plausibile",
-        "titolo": "Disponibilità simultanea e costo delle alternative sacrificate",
-        "motivazione": "È una valutazione dell’autore: il contributo del missileer richiede contemporaneità utile di sensori, lanciatore e sostegno dell’arma, impegnando bombardieri già destinati ad altre funzioni. Le fonti documentano l’integrazione funzionale e le missioni concorrenti delle piattaforme, non un confronto quantitativo di costo-efficacia. CCA, carichi differenti dei caccia e organizzazione del riarmo sono alternative da confrontare, senza graduatoria o equivalenza prestazionale presunta.",
+        "titolo": "TWZ: vincoli delle stive e ipotesi di armamento distribuito sui CCA",
+        "motivazione": "Darold Cummings spiega a The War Zone come le stive interne vincolino volume, forma, prestazioni e bassa osservabilità. La testata propone come possibilità che CCA armati consentano di limitare le armi organiche dell’F-47 e ottimizzarne diversamente il progetto. Il primo punto è un giudizio ingegneristico attribuito; il secondo è una speculazione editoriale, non un requisito F-47 documentato. L’estensione di tale scelta a bombardieri missileer è un’ulteriore inferenza dell’articolo.",
         "fonti": [
           {
-            "nome": "Primaria istituzionale · US Navy — CEC, Cooperative Engagement Capability; catena integrata, testo indicizzato",
-            "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2166802/cec-cooperative-engagement-capability/"
-          },
-          {
-            "nome": "Primaria istituzionale · US Air Force — B-21 Raider, fact sheet; missioni nucleari e convenzionali, testo indicizzato",
-            "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/article/2682973/b-21-raider/"
-          },
-          {
-            "nome": "Primaria istituzionale · Air Force Global Strike Command — B-1B Lancer; missione della piattaforma, testo indicizzato",
-            "url": "https://www.afgsc.af.mil/About/Fact-Sheets/Article/630718/b-1b-lancer/"
+            "nome": "Joseph Trevithick, The War Zone — Why Does The F-47’s Design Look So Different Than What Many Expected?",
+            "url": "https://www.twz.com/air/why-does-the-f-47s-design-look-so-different-than-what-many-expected",
+            "data": "2026-07-09"
           }
         ]
       },
       {
-        "id": "STR4-E023",
-        "livello": "plausibile",
-        "titolo": "Il valore della riserva che rimane utilizzabile durante la contesa",
-        "motivazione": "La conclusione propone un criterio analitico: valutare la quota di riserva convertibile in occasioni d’ingaggio mentre l’avversario agisce su posizione, informazione e disponibilità. Il criterio deriva dalle dipendenze del tiro e dal problema del trasferimento evidenziato da LongShot. Non è una metrica quantitativa validata, una previsione d’adozione o una dimostrazione di superiorità dei bombardieri sui caccia. Le fonti sostengono le premesse; l’interpretazione e la selezione delle alternative appartengono all’autore.",
+        "id": "STR4-E019",
+        "livello": "confermato",
+        "titolo": "F-47: missione dichiarata di penetrating counter-air",
+        "motivazione": "L’USAF qualifica ufficialmente NGAD/F-47 come programma di penetrating counter-air. La missione richiede capacità d’intervento in aree fortemente contese; non si deducono da questa qualifica prestazioni classificate, dotazione missilistica effettiva o autonomia del singolo esemplare.",
         "fonti": [
           {
-            "nome": "Primaria istituzionale · US Navy — CEC, Cooperative Engagement Capability; dipendenze del tiro integrato, testo indicizzato",
-            "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2166802/cec-cooperative-engagement-capability/"
+            "nome": "Gen. David Allvin, USAF — CSAF letter to Airmen on strategic direction",
+            "url": "https://www.acc.af.mil/News/Article-Display/Article/4174012/csaf-letter-to-airmen-on-air-forces-strategic-direction/",
+            "data": "2025-05-05"
           },
           {
-            "nome": "Primaria istituzionale · DARPA — PB2025, marzo 2024, PE 0603286E, LongShot, pagina stampata 160; ripartizione del percorso fra veicolo e missile",
-            "url": "https://www.darpa.mil/sites/default/files/attachment/2024-11/u-rdte-mjb-darpa-pb-2025-06-mar-2024-final.pdf#page=178"
+            "nome": "USAF — Air Force Awards Contract for NGAD Platform, F-47",
+            "url": "https://www.acc.af.mil/News/Article-Display/Article/4131605/air-force-awards-contract-for-next-generation-air-dominance-ngad-platform-f-47/",
+            "data": "2025-03-23"
+          }
+        ]
+      },
+      {
+        "id": "STR4-E020",
+        "livello": "plausibile",
+        "titolo": "Autonomia del caccia quando i collegamenti sono degradati",
+        "motivazione": "Justin Bronk, RUSI, sostiene che nei teatri segnati da disturbo delle comunicazioni e kill chain a lunga distanza una piattaforma avanzata con sensori, armi e sistemi sufficienti per combattere anche temporaneamente isolata possa mantenere un valore operativo elevato. È una valutazione specialistica, non un test sul futuro F-47. L’eventuale autonomia di una formazione connessa localmente è distinta dall’autonomia del singolo caccia.",
+        "fonti": [
+          {
+            "nome": "Justin Bronk, RUSI — Large, Crewed Sixth-Generation Aircraft Have Unique Value in the Indo-Pacific",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/large-crewed-sixth-generation-aircraft-have-unique-value-indo-pacific",
+            "data": "2025-03-05"
+          }
+        ]
+      },
+      {
+        "id": "STR4-E021",
+        "livello": "confermato",
+        "titolo": "MADL: collegamento direzionale a bassa probabilità di intercettazione",
+        "motivazione": "Le prove Northrop Grumman del 2013 documentano lo scambio MADL fra F-35 in volo e il carattere direzionale del collegamento; l’USAF conferma l’uso tattico del sistema. Una notifica ufficiale del DoD pubblicata nel Federal Register lo qualifica a probabilità molto bassa di intercettazione. Questo sostiene una comunicazione meno esposta, non invisibilità, immunità al disturbo o compatibilità universale con B-21, F-47 e CCA.",
+        "fonti": [
+          {
+            "nome": "Northrop Grumman — MADL achieves successful flight test milestone",
+            "url": "https://investor.northropgrumman.com/news-releases/news-release-details/northrop-grumman-developed-multifunction-advanced-data-link",
+            "data": "2013-04-23"
           },
           {
-            "nome": "Primaria istituzionale · AFGSC — Global Strike’s North Star Readiness Campaign bolsters operational readiness; vincolo di disponibilità, testo indicizzato",
-            "url": "https://www.afgsc.af.mil/News/Article-Display/Article/4592801/global-strikes-north-star-readiness-campaign-bolsters-operational-readiness/",
-            "data": "2026-09-08"
+            "nome": "USAF — Multiple F-35s take to the skies to test communication data links",
+            "url": "https://www.af.mil/News/Article-Display/Article/1026106/multiple-f-35s-take-to-the-skies-to-test-communication-data-links/",
+            "data": "2016-12-09"
+          },
+          {
+            "nome": "U.S. Department of Defense — Arms Sales Notification, MADL low probability of intercept",
+            "url": "https://regulations.justia.com/regulations/fedreg/2018/01/26/2018-01432.html",
+            "data": "2018-01-26"
+          }
+        ]
+      },
+      {
+        "id": "STR4-E022",
+        "livello": "plausibile",
+        "titolo": "Disconnected by Design: formazioni localmente connesse F-47, B-21 e CCA",
+        "motivazione": "J. Michael Dahm, Mitchell Institute, propone le Disaggregated Collaborative Air Operations: formazioni con reti locali che possano continuare a operare anche quando scollegate dalle reti generali. La proposta include CCA e, nella prospettiva futura, F-47 e B-21. È uno studio di concetto operativo, non la prova di una formazione F-47/B-21/CCA già collaudata, né una decisione di impiegare B-21 come missileer aria-aria.",
+        "fonti": [
+          {
+            "nome": "J. Michael Dahm, Mitchell Institute — Disconnected by Design",
+            "url": "https://www.mitchellaerospacepower.org/disconnected-by-design-5th-6th-gen-aircraft-in-disaggregated-collaborative-air-operations/",
+            "data": "2025-08-29"
           }
         ]
       }
