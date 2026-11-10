@@ -9,11 +9,11 @@ domini: [aria, droni]
 sistemi_citati: [Fiat G.50, SM.79, B-52H, B-52J, B-1B, B-2, B-21, J-10, F-35, F-35B, F-47, AWACS, Aegis, MADL, SM-6, AIM-120, AIM-174B, AIM-260, PL-15, Meteor, AFLRW, LongShot, X-68A, CCA]
 immagine:
   file: /immagini/strategia/str4-missileer-gatto-raptor.webp
-  alt: "Elaborazione grafica: un B-52 e due F-22 Raptor in volo sopra le nuvole. In alto a sinistra, una rivisitazione dell'emblema del 51° Stormo mostra un gatto nero che sovrasta tre topi verdi."
-  didascalia: "Caccia e bombardieri, dalla storica rivalità dei Sorci Verdi alle prospettive del missileer. La composizione è un'illustrazione generata con IA, non una fotografia di un impiego operativo."
-  credito: "Frontiera · elaborazione grafica con IA"
-  fonte: "Composizione illustrativa originale Frontiera"
-  licenza: "Immagine generata con IA; nessuna licenza Creative Commons dichiarata."
+  alt: "Un B-52 e due F-22 Raptor in volo. In alto a sinistra, il gatto nero del 51° Stormo sovrasta tre topi verdi."
+  didascalia: "Dalla rivalità dei Sorci Verdi con il 51° Stormo a una possibile cooperazione: il missileer apre nuove prospettive per il rapporto fra bombardieri e caccia."
+  credito: "Frontiera · illustrazione generata con AI"
+  fonte: "Composizione originale Frontiera"
+  licenza: ""
   fit: cover
   posizione: "50% 50%"
   # Riferimento iconografico ai B-52 e F-22: fotografia USAF di Staff Sgt. Jerreht Harris
