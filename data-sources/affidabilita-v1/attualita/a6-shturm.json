@@ -1,0 +1,594 @@
+{
+  "versione": 1,
+  "dataset": "a6-shturm",
+  "ambiti": {
+    "contenuti/analisi/shturm-prezzo-del-fuoco-senza-equipaggio.md": [
+      {
+        "id": "A6-E001",
+        "livello": "confermato",
+        "titolo": "Presentazione a Chebarkul e identificazione dei moduli",
+        "motivazione": "Le didascalie TASS collocano la fase pubblica di Tsentr 2026 a Chebarkul il 2 ottobre. Tarasenko cita il resoconto TASS sui mezzi senza equipaggio e descrive moduli tipo carro e BMPT su T-72B3M. L’identificazione del complesso e delle configurazioni è attribuita ai resoconti; la nomenclatura esatta e il video integrale non sono stati stabiliti indipendentemente.",
+        "fonti": [
+          {
+            "nome": "TASS Photo — Tsentr 2026 military exercise in Russia; metadati fotografici e video, crediti distinti per singolo elemento",
+            "url": "https://stock.tassphoto.com/en/feature/582837/page/1"
+          },
+          {
+            "nome": "Andrii Tarasenko — Про «Штурм»; analisi delle immagini e citazione del resoconto TASS",
+            "url": "https://andrei-bt.livejournal.com/2812949.html",
+            "data": "2026-10-04"
+          }
+        ]
+      },
+      {
+        "id": "A6-E002",
+        "livello": "confermato",
+        "titolo": "Cannone e comando esterno nelle descrizioni di Shturm",
+        "motivazione": "Le fonti descrivono un mezzo tipo carro con cannone da 125 mm accorciato e un elemento di comando separato. Il livello riguarda il contenuto delle descrizioni: organico, prestazioni, configurazione completa ed effettiva efficacia operativa non sono certificati. I requisiti del 2018 non vengono trasferiti automaticamente al prototipo.",
+        "fonti": [
+          {
+            "nome": "Defense Express — analisi del T-72 senza equipaggio con cannone accorciato; immagini attribuite a Tarasenko",
+            "url": "https://defence-ua.com/news/chomu_treba_okrema_uvaga_na_rashistskij_tshrk_shturm_jak_bezpilotnij_t_72_z_ukorochenoju_garmatoju-19669.html",
+            "data": "2025-07-28"
+          },
+          {
+            "nome": "Dylan Malyasov, Defence Blog — Russia shows Shturm robotic tank system in big exercise; resoconto secondario",
+            "url": "https://defence-blog.com/russia-shows-shturm-robotic-tank-system-in-big-exercise/",
+            "data": "2026-10-03"
+          },
+          {
+            "nome": "Andrii Tarasenko — Про «Штурм»; analisi delle immagini e citazione del resoconto TASS",
+            "url": "https://andrei-bt.livejournal.com/2812949.html",
+            "data": "2026-10-04"
+          }
+        ]
+      },
+      {
+        "id": "A6-E003",
+        "livello": "confermato",
+        "titolo": "Il programma UVZ precede il 2022",
+        "motivazione": "Nell’intervista del settembre 2018 Potapov conferma il lavoro su una soluzione robotizzata basata sul T-72B3. È documentata la dichiarazione del produttore, non un risultato tecnico o industriale già acquisito.",
+        "fonti": [
+          {
+            "nome": "RBC — intervista ad Aleksandr Potapov, direttore generale di Uralvagonzavod",
+            "url": "https://www.rbc.ru/society/26/09/2018/5baa4caa9a7947f29e4eff23?from=right_column_materials_2",
+            "data": "2018-09-26"
+          }
+        ]
+      },
+      {
+        "id": "A6-E004",
+        "livello": "confermato",
+        "titolo": "Il Telekino di Torres Quevedo e il controllo remoto terrestre",
+        "motivazione": "La documentazione del Museo Torres Quevedo ricostruisce gli esperimenti del 1904 con il Telekino e un triciclo senza conducente, comandato mediante segnali radio per avanzare, arretrare e cambiare direzione. Il dispositivo nasce nel contesto degli studi sul controllo remoto dei dirigibili. L'indicatore conferma il funzionamento e l'applicazione terrestre, senza attribuire all'invenzione un'origine militare o un primato assoluto su ogni forma precedente di comando a distanza.",
+        "fonti": [
+          {
+            "nome": "Museo Torres Quevedo — Telekino: The First Remote Control; esposizione storica ospitata da Google Arts & Culture",
+            "url": "https://artsandculture.google.com/story/GQWBy6_ArC-_Ig?hl=en"
+          },
+          {
+            "nome": "Colegio Oficial de Ingenieros de Telecomunicación — Milestone de Leonardo Torres Quevedo; ricostruzione delle prove del triciclo",
+            "url": "https://forohistorico.coit.es/index.php/inicio/actividades/40-milestone-de-leonardo-torres-quevedo"
+          }
+        ]
+      },
+      {
+        "id": "A6-E005",
+        "livello": "confermato",
+        "titolo": "Sinai, Grozny e Nagorno-Karabakh: vulnerabilità delle forze corazzate",
+        "motivazione": "I tre casi citati illustrano vulnerabilità diverse delle forze corazzate in contesti storici e operativi distinti. Lo studio AUSA sulla guerra arabo-israeliana del 1973 ricostruisce l'impatto di fuochi a distanza e difese anticarro su perdite e manovra; l'analisi di Grau documenta la vulnerabilità dei mezzi russi a Grozny nel 1994–1995, aggravata da tattiche inadeguate e carenza di sostegno della fanteria; il Congressional Research Service descrive nel conflitto del Nagorno-Karabakh del 2020 le perdite dei mezzi corazzati armeni, nel contesto di un impiego azero di droni, ricognizione e fuochi. I casi non stabiliscono una causa unica delle perdite, né dimostrano l'obsolescenza universale del carro armato.",
+        "fonti": [
+          {
+            "nome": "Nathan Jennings e Kyle Trottier, AUSA — The 1973 Arab-Israeli War: Insights for Multi-Domain Operations",
+            "url": "https://www.ausa.org/publications/1973-arab-israeli-war-insights-multi-domain-operations",
+            "data": "2022-12-16"
+          },
+          {
+            "nome": "Lester W. Grau, Foreign Military Studies Office — Russian-Manufactured Armored Vehicle Vulnerability in Urban Combat: The Chechnya Experience",
+            "url": "https://man.fas.org/dod-101/sys/land/row/rusav.htm"
+          },
+          {
+            "nome": "Cory Welt e Andrew S. Bowen, Congressional Research Service — Azerbaijan and Armenia: The Nagorno-Karabakh Conflict, R46651",
+            "url": "https://www.everycrsreport.com/reports/R46651.html",
+            "data": "2021-01-07"
+          }
+        ]
+      },
+      {
+        "id": "A6-E006",
+        "livello": "confermato",
+        "titolo": "Perdite corazzate russe nel 2022 e ostacoli all'offensiva ucraina del 2023",
+        "motivazione": "Le ricerche RUSI sulla fase iniziale dell'invasione del 2022 documentano le difficoltà delle forze russe legate alla resistenza ucraina, ai fuochi, alla ricognizione e all'insufficiente coordinamento. Stormbreak e la successiva analisi delle operazioni offensive ucraine del 2022–2023 ricostruiscono invece le difficoltà dell'attaccante ucraino nel 2023 contro una difesa russa preparata: campi minati, ostacoli, osservazione, artiglieria e armi anticarro imposero esigenze elevate di genio, sostegno, addestramento e cooperazione fra capacità differenti. Le due campagne non sono considerate equivalenti per cause o dimensioni delle perdite; il richiamo documenta le difficoltà della manovra corazzata sotto una difesa organizzata.",
+        "fonti": [
+          {
+            "nome": "Mykhaylo Zabrodskyi, Jack Watling, Oleksandr V. Danylyuk e Nick Reynolds, RUSI — Preliminary Lessons in Conventional Warfighting from Russia's Invasion of Ukraine: February–July 2022",
+            "url": "https://static.rusi.org/359-SR-Ukraine-Preliminary-Lessons-Feb-July-2022-web-final.pdf",
+            "data": "2022-11-30"
+          },
+          {
+            "nome": "Jack Watling e Nick Reynolds, RUSI — Stormbreak: Fighting Through Russian Defences in Ukraine's 2023 Offensive",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/stormbreak-fighting-through-russian-defences-ukraines-2023-offensive",
+            "data": "2023-09-04"
+          },
+          {
+            "nome": "Jack Watling, Oleksandr V. Danylyuk e Nick Reynolds, RUSI — Preliminary Lessons from Ukraine's Offensive Operations, 2022–23",
+            "url": "https://www.rusi.org/explore-our-research/publications/special-resources/preliminary-lessons-ukraines-offensive-operations-2022-23",
+            "data": "2024-07-18"
+          },
+          {
+            "nome": "Frontiera — La difesa che osserva; ricostruzione della fase ucraina del 2023",
+            "url": "https://frontiera.pages.dev/fasi/difesa-che-osserva/"
+          }
+        ]
+      },
+      {
+        "id": "A6-E007",
+        "livello": "confermato",
+        "titolo": "Rarefazione della manovra corazzata e persistenza del suo ruolo",
+        "motivazione": "Watling documenta una notevole contrazione dell'impiego concentrato dei carri russi nelle aree osservate: fra il 1° e il 24 agosto 2025 l'ISR ucraino individuò 23 carri russi entro 70 km dalla linea del fronte, rispetto ai 470 rilevati sul solo asse meridionale nel maggio 2023. Gli ambiti geografici, i periodi e le condizioni di osservazione non sono omogenei, quindi le cifre non costituiscono un censimento completo o una misura comparabile della consistenza totale. La minaccia dei droni, l'osservazione diffusa, i fuochi e le difficoltà logistiche contribuiscono a rendere più difficile concentrare grandi formazioni; lo stesso Watling registra però impieghi ancora utili dei carri. Il risultato sostiene un ridimensionamento delle forme d'impiego, non una loro obsolescenza universale.",
+        "fonti": [
+          {
+            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/insights-papers/emergent-approaches-combined-arms-manoeuvre-ukraine",
+            "data": "2025-10-23"
+          },
+          {
+            "nome": "Jack Watling e Nick Reynolds, RUSI — Tactical Developments During the Third Year of the Russo–Ukrainian War",
+            "url": "https://static.rusi.org/tactical-developments-third-year-russo-ukrainian-war-february-2205.pdf",
+            "data": "2025-02-14"
+          }
+        ]
+      },
+      {
+        "id": "A6-E008",
+        "livello": "confermato",
+        "titolo": "Utilità dei carri a scala di plotone nel sostegno alla fanteria ucraina",
+        "motivazione": "Nell'analisi del 2025 Watling riferisce che i comandanti delle unità ucraine studiate continuano a ritenere prezioso l'impiego dei carri. A scala di plotone essi offrono fuoco diretto pesante per liberare posizioni nemiche e possono attrarre parte del fuoco che altrimenti minaccerebbe la fanteria. Il rapporto documenta anche manutenzione e ripristino delle protezioni di mezzi ripetutamente colpiti. I casi osservati appartengono a reparti selezionati e non possono essere generalizzati all'intero fronte: il sostegno alla fanteria resta una funzione documentata, non una prova di insostituibilità del carro in ogni missione.",
+        "fonti": [
+          {
+            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/insights-papers/emergent-approaches-combined-arms-manoeuvre-ukraine",
+            "data": "2025-10-23"
+          }
+        ]
+      },
+      {
+        "id": "A6-E014",
+        "livello": "plausibile",
+        "titolo": "T-72: disposizione delle munizioni e vulnerabilità alle penetrazioni",
+        "motivazione": "Il T-72 utilizza un autocaricatore a carosello collocato sul fondo del compartimento di combattimento, con 22 colpi costituiti da proietti e cariche propellenti separati. Ulteriori munizioni possono essere stivate fuori dal caricatore, in altre parti del compartimento e dello scafo. RUSI collega il rischio di incendi e detonazioni catastrofiche alla posizione delle munizioni, alla minore protezione di determinati settori dello scafo e alla mancanza di una separazione protettiva fra le riserve. Una penetrazione che raggiunga e inneschi le cariche può provocare la propagazione dell'incendio e, in determinate condizioni, la detonazione di altre munizioni. Il meccanismo di vulnerabilità è documentato, ma non determina l'esito di ogni penetrazione e non consente di quantificare una probabilità comparativa universale rispetto ad altri carri. La configurazione interna effettivamente conservata dal prototipo Shturm non è stata accertata. Il livello plausibile riflette soprattutto l'estensione dei vincoli della famiglia T-72 alla conversione robotizzata.",
+        "fonti": [
+          {
+            "nome": "Sam Cranny-Evans e Sidharth Kaushal, RUSI — Technical Reflections on Russia's Armoured Fighting Vehicles",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/technical-reflections-russias-armoured-fighting-vehicles",
+            "data": "2022-04-27"
+          },
+          {
+            "nome": "The Tank Museum — T-72; scheda museale dell'esemplare T-72M1, caricamento automatico e vulnerabilità delle munizioni",
+            "url": "https://tankmuseum.org/tank-nuts/tank-collection/t-72/"
+          },
+          {
+            "nome": "David Saw, European Security & Defence — Ammunition Handling for AFVs; architetture di caricamento T-64 e T-72",
+            "url": "https://euro-sd.com/2022/02/articles/exclusive/25325/ammunition-handling/",
+            "data": "2022-02-14"
+          },
+          {
+            "nome": "GlobalSecurity — T-72 Tank: Inside the T-72M1; disposizione del carosello e delle munizioni supplementari",
+            "url": "https://www.globalsecurity.org/military/world/russia/t-72-design-1.htm"
+          }
+        ]
+      },
+      {
+        "id": "A6-E015",
+        "livello": "plausibile",
+        "titolo": "Retromarcia del T-72 e vincoli eventualmente ereditati da Shturm",
+        "motivazione": "In un articolo tecnico pubblicato nel 1988 sul Vestnik bronetankovoy tekhniki, V. A. Kolesov indica una velocità in retromarcia di 4,2 km/h per il T-64A e il T-72 nelle configurazioni considerate, confrontandola con i 10,7 km/h del T-80. Il dato documenta una limitazione storica della mobilità tattica e sostiene l'osservazione secondo cui una ritirata mantenendo la corazza frontale orientata verso la minaccia può risultare più lenta. Una conversione al comando remoto che conservi invariata la trasmissione ne conserverebbe anche i rapporti meccanici. Non sono però accertati il tipo di trasmissione installato sul prototipo Shturm, eventuali interventi di modifica né la sua effettiva velocità in retromarcia. Il riferimento non va quindi interpretato come prestazione misurata del sistema robotizzato.",
+        "fonti": [
+          {
+            "nome": "V. A. Kolesov, Vestnik bronetankovoy tekhniki, n. 10/1988 — Пути повышения подвижности танков [Vie per migliorare la mobilità dei carri]; riproduzione BTVT",
+            "url": "https://btvt.info/5library/vbtt_1988_10_69021.htm"
+          }
+        ]
+      },
+      {
+        "id": "A6-E017",
+        "livello": "confermato",
+        "titolo": "Codificazione del Droid TW 12.7 e configurazione con Browning M2",
+        "motivazione": "Il ministero ucraino documenta l’annuncio di codificazione e l’armamento Browning da 12,7 mm. L’intervista al reparto identifica la M2 e la configurazione cingolata. La codificazione riguarda l’autorizzazione all’impiego.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa ucraino — The Ministry of Defence has codified the Droid TW 12.7, a Ukrainian robotic system equipped with a Browning 12.7 machine gun",
+            "url": "https://mod.gov.ua/en/news/the-ministry-of-defence-has-codified-the-droid-tw-12-7-a-ukrainian-robotic-system-equipped-with-a-browning-12-7-machine-gun",
+            "data": "2024-12-09"
+          },
+          {
+            "nome": "Matthew Loh, Business Insider — intervista al comandante Mykola «Makar» Zinkevych sul Droid TW",
+            "url": "https://www.businessinsider.com/ukraine-unit-ground-drone-devdroid-tw-fought-russians-45-days-2026-1",
+            "data": "2026-01-08"
+          }
+        ]
+      },
+      {
+        "id": "A6-E018",
+        "livello": "confermato",
+        "titolo": "I 45 giorni di impiego riferiti dal comandante Zinkevych",
+        "motivazione": "Il comandante NC13 riferisce l’impiego del Droid da più posizioni nel corso della missione e rientri circa ogni due giorni per assistenza all’arma, munizioni e batterie. Il livello riguarda l’esistenza e il contenuto della testimonianza, da cui dipendono durata, cadenza dei rientri e risultati riferiti.",
+        "fonti": [
+          {
+            "nome": "Matthew Loh, Business Insider — intervista al comandante Mykola «Makar» Zinkevych sul Droid TW",
+            "url": "https://www.businessinsider.com/ukraine-unit-ground-drone-devdroid-tw-fought-russians-45-days-2026-1",
+            "data": "2026-01-08"
+          }
+        ]
+      },
+      {
+        "id": "A6-E019",
+        "livello": "plausibile",
+        "titolo": "Effetto del colpo pesante e continuità del fuoco di soppressione",
+        "motivazione": "La documentazione dell’U.S. Army descrive l’impiego della M2 per il fuoco di soppressione e contro bersagli compatibili con il suo munizionamento. Il dossier documenta la descrizione del pezzo accorciato di Shturm. Il confronto è funzionale e condizionato a bersaglio e munizione. Il solo calibro non determina gli effetti del pezzo accorciato.",
+        "fonti": [
+          {
+            "nome": "U.S. Army — TC 3-22.50, Heavy Machine Gun",
+            "url": "https://rdl.train.army.mil/catalog-ws/view/100.ATSC/A736EED1-595B-4049-B7B5-1E0261D8E478-1495566423695/tc3_22x50.pdf"
+          },
+          {
+            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/insights-papers/emergent-approaches-combined-arms-manoeuvre-ukraine",
+            "data": "2025-10-23"
+          },
+          {
+            "nome": "Defense Express — analisi del T-72 senza equipaggio con cannone accorciato; immagini attribuite a Tarasenko",
+            "url": "https://defence-ua.com/news/chomu_treba_okrema_uvaga_na_rashistskij_tshrk_shturm_jak_bezpilotnij_t_72_z_ukorochenoju_garmatoju-19669.html",
+            "data": "2025-07-28"
+          }
+        ]
+      },
+      {
+        "id": "A6-E021",
+        "livello": "plausibile",
+        "titolo": "Possibile redistribuzione di trasporto, soppressione e fuoco pesante",
+        "motivazione": "Watling descrive ruoli complementari per UGV armati, trasporto protetto e carri in un campione di reparti ucraini. La ripartizione fra mezzi e il relativo onere di coordinamento sono un’inferenza editoriale, da valutare in relazione al compito.",
+        "fonti": [
+          {
+            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/insights-papers/emergent-approaches-combined-arms-manoeuvre-ukraine",
+            "data": "2025-10-23"
+          },
+          {
+            "nome": "U.S. Army Acquisition Support Center — Bradley Fighting Vehicle Systems (BFVS)",
+            "url": "https://asc.army.mil/docs/wsh2/1990-wsh.pdf"
+          }
+        ]
+      },
+      {
+        "id": "A6-E022",
+        "livello": "plausibile",
+        "titolo": "Percezione, collegamento e gestione degli imprevisti",
+        "motivazione": "L’U.S. Army documenta prove radio su terreno diverso e sotto disturbo simulato. La dimostrazione RACER riguarda la mobilità autonoma e il controllo supervisionato. L’effetto di danni ai sensori o interruzioni radio sulla missione è un’inferenza condizionale. Le descrizioni di Shturm indicano un elemento di comando esterno, senza quantificarne la resilienza.",
+        "fonti": [
+          {
+            "nome": "Aleksei Moiseev, Rossiyskaya Gazeta — descrizione delle caratteristiche dei veicoli del complesso Shturm",
+            "url": "https://rg.ru/2026/10/03/raskryty-novye-osobennosti-bezekipazhnyh-tankov-i-bmpt-kompleksa-shturm.html",
+            "data": "2026-10-03"
+          },
+          {
+            "nome": "U.S. Army DEVCOM — Army engineers field-test robotic combat vehicle communications",
+            "url": "https://www.army.mil/article/246522/army_engineers_field_test_robotic_combat_vehicle_communications",
+            "data": "2021-05-18"
+          },
+          {
+            "nome": "U.S. Army — DARPA autonomous vehicles deliver command-controlled robotic lethality at Fort Knox event",
+            "url": "https://www.army.mil/article/296278/darpa_autonomous_vehicles_deliver_command_controlled_robotic_lethality_at_fort_knox_event",
+            "data": "2026-10-22"
+          }
+        ]
+      },
+      {
+        "id": "A6-E023",
+        "livello": "plausibile",
+        "titolo": "Recupero dei mezzi ed esposizione del personale di supporto",
+        "motivazione": "La ricerca sul campo di Watling collega ritmo operativo, recupero e riparazione dei corazzati. La testimonianza NC13 descrive il sostegno al Droid. Il possibile trasferimento di parte dell’esposizione al personale di recupero è un’inferenza sul sistema Shturm, per il quale mancano misure comparabili.",
+        "fonti": [
+          {
+            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/insights-papers/emergent-approaches-combined-arms-manoeuvre-ukraine",
+            "data": "2025-10-23"
+          },
+          {
+            "nome": "Matthew Loh, Business Insider — intervista al comandante Mykola «Makar» Zinkevych sul Droid TW",
+            "url": "https://www.businessinsider.com/ukraine-unit-ground-drone-devdroid-tw-fought-russians-45-days-2026-1",
+            "data": "2026-01-08"
+          }
+        ]
+      },
+      {
+        "id": "A6-E024",
+        "livello": "plausibile",
+        "titolo": "Economia della conversione e ricostituzione della capacità",
+        "motivazione": "La base T-72 e il programma di conversione sono documentati. Stato degli scafi, impieghi alternativi e capacità di sostenere o sostituire i mezzi sono condizioni del confronto economico. La ricerca sul campo documenta il ruolo di ricambi e riparabilità nella disponibilità, senza fornire costi omogenei fra le piattaforme esaminate.",
+        "fonti": [
+          {
+            "nome": "RBC — intervista ad Aleksandr Potapov, direttore generale di Uralvagonzavod",
+            "url": "https://www.rbc.ru/society/26/09/2018/5baa4caa9a7947f29e4eff23?from=right_column_materials_2",
+            "data": "2018-09-26"
+          },
+          {
+            "nome": "Janes — Army 2021: Russia orders Shturm unmanned battle tank system; agosto 2021, evento 24 agosto",
+            "url": "https://www.janes.com/defence-intelligence-insights/defence-news/army-2021-russia-orders-shturm-unmanned-battle-tank-system"
+          },
+          {
+            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/insights-papers/emergent-approaches-combined-arms-manoeuvre-ukraine",
+            "data": "2025-10-23"
+          },
+          {
+            "nome": "Matthew Loh, Business Insider — intervista al comandante Mykola «Makar» Zinkevych sul Droid TW",
+            "url": "https://www.businessinsider.com/ukraine-unit-ground-drone-devdroid-tw-fought-russians-45-days-2026-1",
+            "data": "2026-01-08"
+          }
+        ]
+      },
+      {
+        "id": "A6-E026",
+        "livello": "plausibile",
+        "titolo": "Condizioni per una funzione specialistica di Shturm",
+        "motivazione": "L’ipotesi editoriale combina una domanda specifica di fuoco diretto pesante, l’esposizione evitata ai carristi e la ripetibilità della missione, compreso il recupero. Le fonti sostengono le premesse tecniche e tattiche, mentre la convenienza operativa ed economica di Shturm rimane da dimostrare.",
+        "fonti": [
+          {
+            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/insights-papers/emergent-approaches-combined-arms-manoeuvre-ukraine",
+            "data": "2025-10-23"
+          },
+          {
+            "nome": "Defense Express — analisi del T-72 senza equipaggio con cannone accorciato; immagini attribuite a Tarasenko",
+            "url": "https://defence-ua.com/news/chomu_treba_okrema_uvaga_na_rashistskij_tshrk_shturm_jak_bezpilotnij_t_72_z_ukorochenoju_garmatoju-19669.html",
+            "data": "2025-07-28"
+          },
+          {
+            "nome": "U.S. Army DEVCOM — Army engineers field-test robotic combat vehicle communications",
+            "url": "https://www.army.mil/article/246522/army_engineers_field_test_robotic_combat_vehicle_communications",
+            "data": "2021-05-18"
+          }
+        ]
+      },
+      {
+        "id": "A6-E027",
+        "livello": "confermato",
+        "titolo": "Le torpedini terrestri francesi della Prima guerra mondiale",
+        "motivazione": "Le ricostruzioni storiche documentano la sperimentazione francese, nel 1915, di piccoli dispositivi cingolati telecomandati, fra cui Aubriot-Gabet e Schneider Crocodile. Il comando via cavo permetteva di dirigere cariche esplosive contro reticolati e altri ostacoli. Si trattava di apparati sperimentali per la demolizione, distinti dai carri armati e privi di efficacia operativa generale dimostrata. L'indicatore non attribuisce alla Francia il primato assoluto della teleoperazione militare.",
+        "fonti": [
+          {
+            "nome": "Mechanix Illustrated — A Brief Early History of Unmanned Systems; ricostruzione degli esperimenti francesi",
+            "url": "https://mechanixillustrated.technicacuriosa.com/2017/02/19/a-brief-early-history-of-unmanned-systems/",
+            "data": "2017-02-19"
+          },
+          {
+            "nome": "WarHistory.org — The French Tank Programme; Aubriot-Gabet e Schneider Crocodile",
+            "url": "https://warhistory.org/ru/article/the-french-tank-programme/"
+          }
+        ]
+      },
+      {
+        "id": "A6-E028",
+        "livello": "confermato",
+        "titolo": "Dalle sperimentazioni sovietiche alla coppia TT-26/TU-26",
+        "motivazione": "La ricostruzione di Yuri Pasholok documenta le prove del 1930 con Renault FT e apparati REKA-1, seguite dagli esperimenti sul T-18. Nel 1933 prende forma il concetto di gruppo telemeccanico composto da un carro telecomandato TT e da un carro di controllo TU. Il successivo sviluppo sulla famiglia T-26 conduce alla coppia TT-26/TU-26, con trasmissione radio dei comandi. La documentazione storica è mediata da uno specialista che utilizza materiali d'archivio; non dimostra una discendenza progettuale diretta fra questi mezzi e Shturm.",
+        "fonti": [
+          {
+            "nome": "Yuri Pasholok, traduzione Peter Samsonov, Tank Archives — The Last of Stalin's Robots",
+            "url": "https://www.tankarchives.com/2023/05/the-last-of-stalins-robots.html",
+            "data": "2023-05-24"
+          }
+        ]
+      },
+      {
+        "id": "A6-E029",
+        "livello": "confermato",
+        "titolo": "Armamento del TT-26 e alimentazione del lanciafiamme",
+        "motivazione": "L'analisi tecnica di Yuri Pasholok del TT-26 conservato documenta la sostituzione del cannone da 45 mm con un lanciafiamme KS-2 e la presenza di una mitragliatrice. Il lanciafiamme disponeva di un serbatoio da 400 litri e utilizzava aria compressa per erogare getti successivi. L'analogia con un cannone serve a illustrare la differenza fra alimentazione continua del lanciafiamme e movimentazione di munizioni singole, senza implicare che un cannone convenzionale senza autocaricatore possa sparare un solo colpo.",
+        "fonti": [
+          {
+            "nome": "Yuri Pasholok, traduzione Peter Samsonov, Tank Archives — The Last of Stalin's Robots",
+            "url": "https://www.tankarchives.com/2023/05/the-last-of-stalins-robots.html",
+            "data": "2023-05-24"
+          }
+        ]
+      },
+      {
+        "id": "A6-E030",
+        "livello": "confermato",
+        "titolo": "Impiego dei teletank sovietici nella Guerra d'inverno",
+        "motivazione": "La documentazione sovietica riprodotta da Tank Archives attesta l'utilizzo di teletank radiocomandati nel teatro finlandese del 1939-1940 per individuare mine ed effettuare ricognizioni dimostrative. La ricostruzione di Pasholok associa l'impiego al 217° battaglione e riferisce sei perdite irreparabili. La partecipazione operativa è quindi documentata, ma non equivale alla dimostrazione di un successo tattico generale o della maturità tecnica del sistema.",
+        "fonti": [
+          {
+            "nome": "Tank Archives — Teletank Development; documento sovietico sulle applicazioni e i limiti",
+            "url": "https://www.tankarchives.com/2017/01/teletank-development.html",
+            "data": "2017-01-02"
+          },
+          {
+            "nome": "Yuri Pasholok, traduzione Peter Samsonov, Tank Archives — The Last of Stalin's Robots",
+            "url": "https://www.tankarchives.com/2023/05/the-last-of-stalins-robots.html",
+            "data": "2023-05-24"
+          }
+        ]
+      },
+      {
+        "id": "A6-E031",
+        "livello": "confermato",
+        "titolo": "Il rapporto sovietico del 1943 sui limiti dei teletank",
+        "motivazione": "Il documento del 2 ottobre 1943 riprodotto da Tank Archives giudica inadeguata l'osservazione del percorso dal carro di comando e segnala difficoltà nel guidare i teletank su strade strette, ponti, trincee e fossati. Richiama anche l'impossibilità di garantire un fuoco mirato continuativo e la necessità di manutenzione altamente specializzata. La valutazione registra i limiti dei sistemi allora disponibili; non stabilisce una legge generale valida per ogni successiva architettura di controllo remoto.",
+        "fonti": [
+          {
+            "nome": "Tank Archives — Teletank Revival; traduzione di un documento sovietico del 2 ottobre 1943",
+            "url": "https://www.tankarchives.com/2021/02/teletank-revival.html",
+            "data": "2021-02-03"
+          }
+        ]
+      },
+      {
+        "id": "A6-E032",
+        "livello": "confermato",
+        "titolo": "Sperimentazione remota del dopoguerra e caricamento automatico dell'AMX-13",
+        "motivazione": "La sperimentazione dei comandi remoti prosegue nel dopoguerra: negli Stati Uniti un M48A1 viene adattato nel 1956 per prove di controllo a distanza attraverso radio e telecamere; in Unione Sovietica il progetto Almaz avvia nel 1960 ricerche sull'osservazione televisiva applicata a un carro. Si tratta di programmi distinti dall'automazione del caricamento. Per quest'ultima il Tank Museum documenta l'AMX-13 francese, apparso nel 1952, con cannone da 75 mm e due caricatori automatici da sei colpi ciascuno. La soluzione elimina il servente durante la sequenza di dodici colpi disponibili, ma richiede il successivo rifornimento manuale dei caricatori. L'AMX-13 è presentato come precoce applicazione di serie, senza rivendicare un primato assoluto.",
+        "fonti": [
+          {
+            "nome": "The Tank Museum — AMX-13; sistema di caricamento automatico e due tamburi da sei colpi",
+            "url": "https://tankmuseum.org/tank-nuts/tank-collection/amx-13"
+          },
+          {
+            "nome": "World of Tanks, The Chieftain's Hatch — The Unmanned Patton; esperimenti statunitensi del 1956",
+            "url": "https://worldoftanks.com/en/news/history/The_Chieftains_Hatch_Unmanned_Patton/"
+          },
+          {
+            "nome": "Voennaya istoriya Rossii — Progetto sovietico Almaz del 1960; ricostruzione storica delle sperimentazioni televisive",
+            "url": "https://www.kskdivniy.ru/museum/dayinhistory/4-noyabrya-1960-g-nachalas-rabota-po-sozdaniyu-tanka-s-televizionnoy-apparaturoy/"
+          }
+        ]
+      },
+      {
+        "id": "A6-E033",
+        "livello": "confermato",
+        "titolo": "Dal T-64 al T-72: l'autocaricatore nella progettazione sovietica",
+        "motivazione": "Il T-64 introduce nella famiglia dei carri principali sovietici un sistema automatico di caricamento che permette di ridurre l'equipaggio a tre uomini. Le prime versioni impiegano un cannone da 115 mm; il successivo T-64A adotta il 125 mm. Il T-72 mantiene il principio del caricamento automatico, ma con un meccanismo differente per organizzazione e movimentazione delle munizioni. Il confronto documenta una scelta progettuale ricorrente nella produzione sovietica, non una generalizzata opposizione occidentale all'automazione.",
+        "fonti": [
+          {
+            "nome": "Army Guide — T-64 Main Battle Tank; sviluppo, armamento e caricamento automatico",
+            "url": "https://www.army-guide.com/eng/product.php?printmode=1&prodID=100"
+          },
+          {
+            "nome": "The Tank Museum — T-72; caricamento automatico, equipaggio e disposizione del veicolo",
+            "url": "https://tankmuseum.org/tank-nuts/tank-collection/t-72/"
+          },
+          {
+            "nome": "European Security & Defence — Ammunition Handling for AFVs; differenze fra i sistemi T-64 e T-72",
+            "url": "https://euro-sd.com/2022/02/articles/exclusive/25325/ammunition-handling/"
+          }
+        ]
+      },
+      {
+        "id": "A6-E034",
+        "livello": "confermato",
+        "titolo": "Diffusione del T-72 e ammodernamento alla famiglia T-72B3",
+        "motivazione": "La scheda del Tank Museum documenta l'ampia diffusione internazionale del T-72 e il suo autocaricatore. La ricostruzione RBC del 2018 identifica il T-72B3 come variante ammodernata, con aggiornamenti ai sistemi di protezione, comunicazione e tiro. L'analisi Janes conferma il peso numerico della famiglia T-72B3 nella componente corazzata russa. Sono quindi documentati la diffusione del mezzo e il suo mantenimento attraverso modernizzazioni. La possibilità di utilizzare tale patrimonio come base per una conversione robotizzata è coerente con il programma Shturm, ma non dimostra una convenienza industriale netta o l'identità dei costi di manutenzione prima e dopo la conversione.",
+        "fonti": [
+          {
+            "nome": "The Tank Museum — T-72; diffusione e caratteristiche del mezzo",
+            "url": "https://tankmuseum.org/tank-nuts/tank-collection/t-72/"
+          },
+          {
+            "nome": "RBC — Intervista ad Aleksandr Potapov e ricostruzione delle modernizzazioni T-72B3",
+            "url": "https://www.rbc.ru/society/26/09/2018/5baa4caa9a7947f29e4eff23",
+            "data": "2018-09-26"
+          },
+          {
+            "nome": "Janes — Analysis: Russia regenerates its tank force",
+            "url": "https://www.janes.com/defence-intelligence-insights/defence-and-national-security-analysis/russia-regenerates-tank-force"
+          }
+        ]
+      },
+      {
+        "id": "A6-E035",
+        "livello": "confermato",
+        "titolo": "Shturm sul T-72B3 e il costo della piattaforma Armata",
+        "motivazione": "L'inchiesta RBC dell'8 agosto 2018 identifica Shturm come programma di robotizzazione pesante basato sul T-72B3, attribuendo le informazioni a fonti del ministero della Difesa e vicine a Uralvagonzavod. Il servizio colloca la scelta nel contesto dei costi elevati della piattaforma Armata rispetto al T-72B3; la medesima questione economica era stata richiamata pubblicamente dal vicepremier Yuri Borisov per le acquisizioni dei T-14. Nell'intervista del 26 settembre Potapov conferma il lavoro sul T-72B3 ma, interrogato sulla motivazione economica della scelta, rimanda la decisione al ministero della Difesa senza confermarla esplicitamente. È quindi documentata l'attribuzione della spiegazione economica, non la sua dimostrazione come causa unica o determinante del programma. Il confronto fra prezzi storici delle piattaforme non equivale al costo completo delle rispettive conversioni robotizzate.",
+        "fonti": [
+          {
+            "nome": "RBC — UVZ avvia il programma robotizzato Shturm su base T-72B3; fonti e confronto dei costi",
+            "url": "https://www.rbc.ru/politics/08/08/2018/5b62d8979a794742d5e293fd",
+            "data": "2018-08-08"
+          },
+          {
+            "nome": "RBC — Potapov conferma la base T-72B3 senza attribuire espressamente la scelta al costo di Armata",
+            "url": "https://www.rbc.ru/society/26/09/2018/5baa4caa9a7947f29e4eff23",
+            "data": "2018-09-26"
+          },
+          {
+            "nome": "RBC — Yuri Borisov e i costi della piattaforma Armata nelle acquisizioni russe",
+            "url": "https://www.rbc.ru/rbcfreenews/5b5eb03c9a7947bfdefac2c5"
+          }
+        ]
+      },
+      {
+        "id": "A6-E036",
+        "livello": "confermato",
+        "titolo": "UGV armati per la soppressione nelle unità studiate da Watling",
+        "motivazione": "Nella sezione Phase 5: Suppress Watling riferisce la preferenza dei reparti studiati per armi di sostegno su UGV quando il fuoco prolungato da posizioni non preparate espone al tiro avversario. La fonte documenta la valutazione di quei reparti, senza misurare l’efficacia del Droid o generalizzarla all’intero fronte.",
+        "fonti": [
+          {
+            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/insights-papers/emergent-approaches-combined-arms-manoeuvre-ukraine",
+            "data": "2025-10-23"
+          }
+        ]
+      },
+      {
+        "id": "A6-E037",
+        "livello": "confermato",
+        "titolo": "Mobilità protetta e sostegno di fuoco dell’M2 Bradley",
+        "motivazione": "La scheda dell’U.S. Army identifica l’M2 come IFV per la fanteria meccanizzata e specifica l’M242 da 25 mm, la coassiale da 7,62 mm e il TOW. Watling descrive la protezione della fanteria trasportata e il sostegno ravvicinato dei cannoncini come contributi distinti.",
+        "fonti": [
+          {
+            "nome": "U.S. Army Acquisition Support Center — Bradley Fighting Vehicle Systems (BFVS)",
+            "url": "https://asc.army.mil/docs/wsh2/1990-wsh.pdf"
+          },
+          {
+            "nome": "Jack Watling, RUSI — Emergent Approaches to Combined Arms Manoeuvre in Ukraine",
+            "url": "https://www.rusi.org/explore-our-research/publications/insights-papers/emergent-approaches-combined-arms-manoeuvre-ukraine",
+            "data": "2025-10-23"
+          }
+        ]
+      },
+      {
+        "id": "A6-E038",
+        "livello": "confermato",
+        "titolo": "REFURBOT: dimostratore su scafo della famiglia AMX-30 con torre da 25 mm",
+        "motivazione": "S2M documenta la collaborazione con KNDS France, il retrofit, il kit TOXO e la presentazione a Eurosatory. Il reportage fotografico identifica la stazione ARX25. Le fonti distinguono la famiglia AMX-30 dallo specifico scafo AMX-32 indicato per l’esemplare in mostra. Il caso documenta una configurazione da esposizione.",
+        "fonti": [
+          {
+            "nome": "S2M Equipment — annunci del partner industriale su REFURBOT a Eurosatory",
+            "url": "https://www.linkedin.com/company/s2m-equipment/"
+          },
+          {
+            "nome": "Army Recognition, Eurosatory 2026 Official News — dimostratore esposto e stazione ARX25",
+            "url": "https://www.armyrecognition.com/archives/archives-defense-exhibitions/2026-archives-news-defense-exhibitions/eurosatory-2026/knds-and-s2m-reveal-how-legacy-amx-30-tank-hull-is-repurposed-into-heavy-combat-ugv-fitted-with-arx25-25mm-weapon-station",
+            "data": "2026-06-16"
+          }
+        ]
+      },
+      {
+        "id": "A6-E039",
+        "livello": "confermato",
+        "titolo": "Type-X: telaio dedicato, classe di massa e prova a fuoco annunciata",
+        "motivazione": "Milrem descrive il Type-X come piattaforma concepita per operazioni senza equipaggio e indica una massa nell’ordine delle 12 tonnellate. Milrem dichiara di aver previsto unità sostituibili per la manutenzione. Milrem e Kongsberg annunciano la prova a fuoco da 30 mm e inquadrano il sistema come supporto a carri e IFV. Le fonti sono comunicazioni industriali e documentano un passaggio sperimentale.",
+        "fonti": [
+          {
+            "nome": "Milrem Robotics — Loc Performance and Milrem Robotics Collaborate on Bid for US Army’s RCV-L Program",
+            "url": "https://milremrobotics.com/loc-performance-and-milrem-robotics-collaborate-on-bid-for-us-armys-robotic-combat-vehicle-light-rcv-l-program/"
+          },
+          {
+            "nome": "Milrem Robotics — Milrem Robotics rolls out its new Type-X RCV",
+            "url": "https://milremrobotics.com/milrem-robotics-rolls-out-its-new-type-x-rcv/"
+          },
+          {
+            "nome": "Milrem Robotics e Kongsberg — First live firing from the Type-X Robotic Combat Vehicle",
+            "url": "https://milremrobotics.com/kongsberg-and-milrem-robotics-perform-first-live-firing-from-the-type-x-robotic-combat-vehicle/",
+            "data": "2022-06-13"
+          }
+        ]
+      },
+      {
+        "id": "A6-E040",
+        "livello": "confermato",
+        "titolo": "Hanwha H-UGV: classe di 30 tonnellate nella tabella di marcia",
+        "motivazione": "La tabella di marcia di Hanwha Aerospace colloca l’H-UGV nella classe di 30 tonnellate fra gli sviluppi previsti e distingue questa linea dalla conversione opzionale di sistemi esistenti come il K9. La massa è una classe progettuale annunciata. Il documento non certifica armamento, prestazioni, completamento di un prototipo o entrata in servizio.",
+        "fonti": [
+          {
+            "nome": "Hanwha Aerospace — comunicato sulla tabella di marcia per i sistemi terrestri senza equipaggio",
+            "url": "https://www.newswire.co.kr/newsRead.php?no=1042858&picno=606323",
+            "data": "2026-09-17"
+          }
+        ]
+      }
+    ]
+  }
+}
