@@ -2962,7 +2962,6 @@ footer .license-note a:hover{color:#fff}
   background:rgba(255,255,255,.42);text-align:left;
 }
 .articlebody > figure.figura-inline .rights > span + span::before{content:" · "}
-.articlebody > figure.figura-inline--right figcaption{text-align:right}
 .articlebody:has(> .figura-inline) > :is(h1,h2,h3,h4,h5,h6,figure,table,pre,blockquote,ul,ol,hr,.schema-kit,.starlink-flow,.palantir-schema,.figura-clear){clear:both}
 .figura-clear{clear:both}
 /* 740px è solo la prima soglia: con sidebar una viewport desktop può lasciare
@@ -2972,10 +2971,12 @@ footer .license-note a:hover{color:#fff}
     .articlebody > figure.figura-inline--2{width:47%}
     .articlebody > figure.figura-inline--2.figura-inline--left{float:left;margin-right:1.25rem}
     .articlebody > figure.figura-inline--2.figura-inline--right{float:right;margin-left:1.25rem}
+    .articlebody > figure.figura-inline--2.figura-inline--right figcaption{text-align:right}
   }
   @container figure-editoriali (min-width:38rem){
     .articlebody > figure.figura-inline--3{width:66%}
     .articlebody > figure.figura-inline--3.figura-inline--left{float:left;margin-right:1.25rem}
     .articlebody > figure.figura-inline--3.figura-inline--right{float:right;margin-left:1.25rem}
+    .articlebody > figure.figura-inline--3.figura-inline--right figcaption{text-align:right}
   }
 }

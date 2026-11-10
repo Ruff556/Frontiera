@@ -68,7 +68,8 @@ for (const width of [1440, 1280, 1024, 900, 768, 740, 739, 390]) {
       expect(report.returnLeft).toBeCloseTo(report.body.left, 0);
     }
     if (largeFloats) expect(report.figures[3].width / report.body.width).toBeCloseTo(.66, 2);
-    expect(report.figures[2].align).toBe("right");
+    expect(report.figures[2].align).toBe(halfFloats ? "right" : "left");
+    expect(report.figures[4].align).toBe(largeFloats ? "right" : "left");
     expect(errors).toEqual([]);
     if (process.env.FIGURE_SCREENSHOTS && [1440,768,390,740].includes(width)) {
       await page.evaluate(() => scrollTo(0, 0));

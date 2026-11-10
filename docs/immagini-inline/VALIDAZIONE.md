@@ -69,3 +69,19 @@ configurazione e l'installazione Chromium già adottate dal progetto.
 
 Dettagli di lettura: [wrapping desktop](screenshots/wrapping-1440.png) e
 [disposizione mobile](screenshots/wrapping-390.png).
+
+## Rifinitura mobile e sincronizzazione del test tastiera
+
+Su richiesta, didascalia e diritti sono allineati a sinistra su mobile e in
+ogni fallback a blocco. L'allineamento destro è limitato alle figure che sono
+effettivamente flottanti a destra. Dieci test dedicati aggiornati e superati;
+screenshot rigenerati dopo la modifica.
+
+La suite generale aveva superato 100 test su 101: il controllo End/Home
+inviava Home appena rilevava il primo spostamento di End, durante lo scroll
+nativo ancora in corso. La riproduzione strumentata conferma che i tasti non
+sono intercettati dal sito e che Home funziona a movimento concluso.
+Il test ora attende l'evento `scrollend` prima del comando successivo, mantenendo
+inalterate le verifiche di posizione, visibilità del richiamo e ritorno del focus.
+Tre esecuzioni consecutive del test corretto sono passate. Nessuna modifica
+al comportamento del sito per compensare il test.

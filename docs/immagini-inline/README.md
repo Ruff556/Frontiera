@@ -67,7 +67,9 @@ della descrizione e l'appropriatezza dei diritti restano verifiche editoriali.
 `4/4` occupa la larghezza disponibile agli schemi (massimo 64rem, senza uscire
 dal corpo). `2/4` e `3/4` usano float CSS al 47% e 66%, con gutter di 1.25rem.
 Il margine inferiore è quello dei paragrafi, 1.25rem. Didascalia e diritti fanno
-parte del float; le figure destre allineano anche la didascalia a destra.
+parte del float; le figure flottanti destre allineano anche la didascalia a destra.
+Su mobile e ogni volta che la figura torna a blocco, didascalia e diritti sono
+allineati a sinistra.
 
 Sotto 740px tutte le figure sono verticali. Anche sopra tale soglia, le container
 query mantengono la disposizione verticale quando il corpo ha meno di 30rem
