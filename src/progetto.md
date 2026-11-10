@@ -109,8 +109,6 @@ Dall'ideazione al prodotto finale, queste soluzioni sono parte del lavoro origin
 
 ## Autorialità e riuso
 
-Frontiera è ideato, diretto e curato da **Michele Ruffato**.
-
 L'impostazione metodologica, la periodizzazione, l'architettura editoriale e le soluzioni sviluppate specificamente per il progetto appartengono a un unico lavoro autoriale.
 
 L'impiego di sistemi di intelligenza artificiale avviene all'interno di questa direzione. Ne estende le capacità senza trasferire agli strumenti la responsabilità editoriale delle opere pubblicate.
