@@ -1,0 +1,138 @@
+{
+  "versione": 1,
+  "dataset": "lw-loyal-wingman",
+  "ambiti": {
+    "contenuti/analisi/loyal-wingman-combattimento-aereo-collaborativo.md": [
+      {
+        "id": "LW-E001",
+        "livello": "confermato",
+        "titolo": "Il Ghost Bat impiega un AIM-120 contro un bersaglio aereo fisico",
+        "motivazione": "Il governo australiano ha comunicato il 9 dicembre 2025 che un MQ-28 Ghost Bat ha distrutto un bersaglio aereo Phoenix con un AIM-120 durante una prova integrata con E-7A Wedgetail e F/A-18F Super Hornet. Il grado conferma il risultato riportato dall'ente responsabile per questa dimostrazione, non una capacità già qualificata per il servizio né un ingaggio sotto una difesa aerea ostile reale. La data citata è quella dell'annuncio, non necessariamente del tiro.",
+        "fonti": [
+          {
+            "nome": "Australian Defence Ministers — Funding boost for Australian-made Ghost Bat",
+            "url": "https://www.minister.defence.gov.au/media-releases/2025-12-09/funding-boost-australian-made-ghost-bat",
+            "data": "2025-12-09"
+          },
+          {
+            "nome": "Boeing Australia — Boeing, RAAF Achieve CCA Missile Fire from MQ-28 Ghost Bat",
+            "url": "https://www.boeing.com.au/content/theboeingcompany/au/en/news/2025/boeing--raaf-achieve-cca-missile-fire-from-mq-28-ghost-bat.html",
+            "data": "2025-12-09"
+          }
+        ]
+      },
+      {
+        "id": "LW-E002",
+        "livello": "confermato",
+        "titolo": "La prova Ghost Bat distribuisce identificazione, autorizzazione e tiro",
+        "motivazione": "Secondo Boeing Australia, nella dimostrazione il F/A-18F ha individuato e seguito il bersaglio, le informazioni sono state condivise fra le piattaforme, l'operatore sull'E-7A ha autorizzato l'ingaggio e il MQ-28 ha eseguito la manovra e il tiro. L'evento d'arma è riferito anche dal governo australiano, mentre la precisa ripartizione dei compiti deriva dal resoconto industriale: non è una telemetria indipendente né prova che il software abbia deciso autonomamente di impiegare l'arma.",
+        "fonti": [
+          {
+            "nome": "Boeing Australia — Boeing, RAAF Achieve CCA Missile Fire from MQ-28 Ghost Bat",
+            "url": "https://www.boeing.com.au/content/theboeingcompany/au/en/news/2025/boeing--raaf-achieve-cca-missile-fire-from-mq-28-ghost-bat.html",
+            "data": "2025-12-09"
+          },
+          {
+            "nome": "Australian Defence Ministers — Funding boost for Australian-made Ghost Bat",
+            "url": "https://www.minister.defence.gov.au/media-releases/2025-12-09/funding-boost-australian-made-ghost-bat",
+            "data": "2025-12-09"
+          }
+        ]
+      },
+      {
+        "id": "LW-E003",
+        "livello": "confermato",
+        "titolo": "Il termine loyal wingman compare già in un piano USAF del 2009",
+        "motivazione": "Il documento Unmanned Aircraft Systems Flight Plan 2009–2047, pubblicato dall'US Air Force il 18 maggio 2009, impiega espressamente l'espressione loyal wingman e la distingue dallo swarming. La fonte documenta una precoce attestazione istituzionale, non la coniazione assoluta del termine o l'esistenza nel 2009 di una piattaforma capace di realizzarne già tutte le funzioni.",
+        "fonti": [
+          {
+            "nome": "Headquarters U.S. Air Force — Unmanned Aircraft Systems Flight Plan 2009–2047, p. 34 e pp. 38–40",
+            "url": "https://nps.edu/documents/106607930/106914584/UAS%2BAir%2BForce%2BRoadmap%2B2009.pdf/179e02eb-a788-4a85-a791-c13c39640ac9",
+            "data": "2009-05-18"
+          }
+        ]
+      },
+      {
+        "id": "LW-E004",
+        "livello": "confermato",
+        "titolo": "Il concetto USAF del 2009 contempla funzioni operative differenti",
+        "motivazione": "Nello stesso piano del 2009, l'USAF prospettava per i gregari senza pilota compiti di sorveglianza e ricognizione (ISR), interdizione, contrasto ai sistemi di difesa aerea integrata (IADS), offensive counter-air e trasporto aggiuntivo di armi. Il grado conferma il contenuto programmatico del documento, non l'effettiva disponibilità di tutte queste capacità nel 2009 né una dottrina uniforme dei programmi successivi.",
+        "fonti": [
+          {
+            "nome": "Headquarters U.S. Air Force — Unmanned Aircraft Systems Flight Plan 2009–2047, p. 34 e pp. 38–40",
+            "url": "https://nps.edu/documents/106607930/106914584/UAS%2BAir%2BForce%2BRoadmap%2B2009.pdf/179e02eb-a788-4a85-a791-c13c39640ac9",
+            "data": "2009-05-18"
+          }
+        ]
+      },
+      {
+        "id": "LW-E005",
+        "livello": "confermato",
+        "titolo": "Il Predator prova l'impiego di un missile Hellfire nel febbraio 2001",
+        "motivazione": "La scheda storica del National Museum of the U.S. Air Force documenta nel febbraio 2001 una prova nella quale un RQ-1 Predator ha lanciato un missile Hellfire contro un bersaglio terrestre fisso. Il caso testimonia il precedente armamento aria-superficie di un velivolo a pilotaggio remoto, basato su stazione di controllo e collegamenti; da solo non dimostra coordinamento tattico autonomo fra aeroplani.",
+        "fonti": [
+          {
+            "nome": "National Museum of the U.S. Air Force — General Atomics Aeronautical Systems RQ-1 Predator",
+            "url": "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/196333/general-atomics-aeronautical-systems-rq-1-predator/"
+          }
+        ]
+      },
+      {
+        "id": "LW-E006",
+        "livello": "confermato",
+        "titolo": "Due X-45A sperimentano nel 2005 una missione SEAD collaborativa",
+        "motivazione": "Il National Museum of the U.S. Air Force ricostruisce il percorso del dimostratore X-45A dal primo volo del 2002 alla sperimentazione, nel 2005, di due velivoli senza pilota in una missione autonoma di soppressione delle difese aeree contro minacce missilistiche simulate. Si tratta di volo reale con missione e bersagli di scenario: non di una campagna SEAD bellica, di tiri reali documentati o dell'entrata in servizio di un UCAV operativo.",
+        "fonti": [
+          {
+            "nome": "National Museum of the U.S. Air Force — Boeing X-45A J-UCAS",
+            "url": "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/196732/boeing-x-45a-j-ucas/"
+          }
+        ]
+      },
+      {
+        "id": "LW-E007",
+        "livello": "confermato",
+        "titolo": "Have Raider sperimenta il distacco dal leader e la ripianificazione autonoma",
+        "motivazione": "Il comunicato Lockheed Martin del 10 aprile 2017 distingue due dimostrazioni su un F-16 impiegato come surrogato di velivolo senza pilota. Have Raider I descrive la separazione dal leader pilotato, la prosecuzione di una missione aria-superficie e il ricongiungimento automatico; Have Raider II aggiunge ripianificazione, gestione di guasti, reazione a minacce simulate e perdita di comunicazioni. I risultati restano riferiti alla configurazione sperimentale e non provano un rilascio reale di armi né capacità già trasferite a un CCA operativo.",
+        "fonti": [
+          {
+            "nome": "Lockheed Martin, AFRL e partner — U.S. Air Force, Lockheed Martin Demonstrate Manned/Unmanned Teaming",
+            "url": "https://news.lockheedmartin.com/2017-04-10-U-S-Air-Force-Lockheed-Martin-Demonstrate-Manned-Unmanned-Teaming",
+            "data": "2017-04-10"
+          }
+        ]
+      },
+      {
+        "id": "LW-E008",
+        "livello": "confermato",
+        "titolo": "DARPA CODE dimostra cooperazione con comunicazioni e GPS degradati",
+        "motivazione": "DARPA ha descritto nel novembre 2018 una dimostrazione di CODE in ambiente di sperimentazione che combinava fino a sei velivoli reali e 24 virtuali, con condivisione delle informazioni, ripartizione di compiti e prosecuzione degli intenti della missione sotto condizioni simulate di comunicazioni e GPS negati. La difesa aerea avversaria era simulata e il comunicato non documenta un tiro reale; i risultati non costituiscono qualificazione operativa dei CCA contemporanei.",
+        "fonti": [
+          {
+            "nome": "DARPA — CODE Demonstrates Autonomy and Collaboration with Minimal Human Commands",
+            "url": "https://www.darpa.mil/news/2018/autonomy-minimal-human-commands",
+            "data": "2018-11-19"
+          }
+        ]
+      },
+      {
+        "id": "LW-E009",
+        "livello": "confermato",
+        "titolo": "XQ-58A e Skyborg sviluppano filoni distinti di piattaforma e autonomia",
+        "motivazione": "L'AFRL ha annunciato nel marzo 2019 il primo volo dell'XQ-58A Valkyrie, dimostratore associato alla ricerca LCAAT su piattaforme relativamente economiche e indipendenti dalle piste tradizionali. L'USAF ha poi comunicato nel maggio 2021 il primo volo dell'Autonomy Core System di Skyborg su un UTAP-22, con prove di navigazione, geofencing, gestione dell'inviluppo e manovre coordinate. Sono traguardi di due filoni sperimentali distinti, non la prova di un unico sistema già integrato o di autonomia nel combattimento aereo con armi.",
+        "fonti": [
+          {
+            "nome": "Air Force Research Laboratory / AFMC — XQ-58A Valkyrie demonstrator completes inaugural flight",
+            "url": "https://www.afmc.af.mil/News/Article-Display/Article/1777757/xq-58a-valkyrie-demonstrator-completes-inaugural-flight/",
+            "data": "2019-03-06"
+          },
+          {
+            "nome": "US Air Force / AFLCMC — Skyborg autonomy core system has successful first flight",
+            "url": "https://www.af.mil/News/Article-Display/Article/2596671/skyborg-autonomy-core-system-has-successful-first-flight/",
+            "data": "2021-05-06"
+          }
+        ]
+      }
+    ]
+  }
+}
