@@ -11,6 +11,53 @@ domini: [aria, droni]
 sistemi_citati: []
 # Copertina da assegnare dopo la selezione iconografica.
 immagine: null
+immagini_inline:
+  mq28:
+    file: "/immagini/strategia/lw-mq28-valiant-shield-2026.webp"
+    alt: "Un MQ-28 Ghost Bat in decollo a Rota durante Valiant Shield 2026."
+    didascalia: "Un MQ-28 Ghost Bat decolla a Rota durante l'esercitazione Valiant Shield, 25 giugno 2026."
+    credito: "U.S. Air Force / Senior Airman Adrien Tran"
+    fonte: "https://commons.wikimedia.org/wiki/File:MQ-28_Ghost_Bat_taking_off_during_Exercise_Valiant_Shield_2026_on_Rota.jpg"
+    licenza: "Pubblico dominio USA, opera del governo federale (17 USC 105); Public Domain Mark 1.0 — https://creativecommons.org/publicdomain/mark/1.0/ — Ridimensionamento e conversione WebP, nessun ritaglio. Nessuna approvazione del DoD implicita."
+    fit: contain
+  cca_usa:
+    file: "/immagini/strategia/lw-cca-yfq42a-yfq44a-usaf-2025.jpg"
+    alt: "Illustrazione degli YFQ-42A in primo piano e YFQ-44A sullo sfondo, insieme sopra le nuvole."
+    didascalia: "Rappresentazione dei CCA statunitensi YFQ-42A e YFQ-44A, pubblicata dalla U.S. Air Force nel marzo 2025."
+    credito: "U.S. Air Force artwork courtesy of General Atomics Aeronautical Systems, Inc. and Anduril Industries"
+    fonte: "https://www.afrc.af.mil/News/Art/igphoto/2003654616/"
+    licenza: "Dichiarata public domain e cleared for release nella scheda ufficiale USAF del file 250304-F-AF000-1001. Copia ridimensionata a 800 × 473 px; nessun ritaglio o sovrapposizione aggiunta. Restano applicabili i limiti DoD su marchi ed endorsement; nessuna approvazione del DoD implicita."
+    fit: contain
+  stormshroud:
+    file: "/immagini/strategia/lw-stormshroud-raf-2025.webp"
+    alt: "StormShroud AR3 della RAF sul contenitore di trasporto, davanti a un hangar con grandi segni arancioni."
+    didascalia: "Uno StormShroud della Royal Air Force, basato sul TEKEVER AR3, durante le attività di addestramento del marzo 2025."
+    credito: "Cpl Tomas Barnard RAF / UK Ministry of Defence — © Crown copyright 2025"
+    fonte: "https://commons.wikimedia.org/wiki/File:StormShroud_(Tekever_AR3)_of_216_Squadron_RAF,_May_2025.jpg"
+    licenza: "Open Government Licence v3.0, come indicata nella scheda del singolo file — https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/ — Ridimensionamento e conversione WebP, nessun ritaglio. Marchi e insegne militari esclusi dalla licenza."
+    fit: contain
+  # brontanax — SOSPESA: BAE / fotografo; autorizzazione alla ripubblicazione non documentata.
+  # remote_carriers — SOSPESA: le condizioni Airbus Media Centre richiedono consenso preventivo per la pubblicazione online.
+  # u740 — SOSPESA: le condizioni Airbus Media Centre richiedono consenso preventivo per la pubblicazione online.
+  ucav_rafale_f5:
+    file: "/immagini/strategia/lw-ucav-rafale-f5-le-bourget-2025.webp"
+    alt: "Modello UCAS Dassault a grandezza naturale esposto davanti allo stand Dassault a Le Bourget nel 2025."
+    didascalia: "Il modello a grandezza naturale del futuro UCAV destinato ad accompagnare il Rafale F5, esposto al Salone di Le Bourget 2025. Fotografia del 20 giugno 2025."
+    credito: "Artvill / Wikimedia Commons"
+    fonte: "https://commons.wikimedia.org/wiki/File:Dassault_UCAS_au_Salon_du_Bourget_2025.jpg"
+    licenza: "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/ — Ridimensionamento e conversione WebP, nessun ritaglio."
+    fit: contain
+  # kizilelma — SOSPESA: autorizzazione al riuso dello scatto Baykar con Gokdogan non documentata; nessuna alternativa sufficientemente fedele verificata.
+  # anka_iii — SOSPESA: TUSAS richiede autorizzazione scritta; alternativa in formazione troppo distante dalla selezione.
+  gj11:
+    file: "/immagini/strategia/lw-gj11-zhuhai.jpg"
+    alt: "Modello GJ-11 esposto a Zhuhai con le stive aperte."
+    didascalia: "Un modello del velivolo cinese GJ-11 esposto al salone aeronautico di Zhuhai, con le stive visibili."
+    credito: "Infinty 0 / Wikimedia Commons"
+    fonte: "https://commons.wikimedia.org/wiki/File:GJ-11_at_Airshow_China_Zhuhai_2021.jpg"
+    licenza: "CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/ — File originale invariato; eventuali adattamenti restano sotto la stessa licenza."
+    fit: contain
+  # s70_okhotnik — SOSPESA: Commons segnala ancora License review needed anche sul video di origine.
 # L'infobox sarà costruito sulle acquisizioni dell'articolo, non su segnaposto.
 infobox: null
 # Modello disponibile, da attivare solo quando le tre voci sono definite:
