@@ -36,9 +36,23 @@ immagini_inline:
     fonte: "https://commons.wikimedia.org/wiki/File:StormShroud_(Tekever_AR3)_of_216_Squadron_RAF,_May_2025.jpg"
     licenza: "Open Government Licence v3.0, come indicata nella scheda del singolo file — https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/ — Ridimensionamento e conversione WebP, nessun ritaglio. Marchi e insegne militari esclusi dalla licenza."
     fit: contain
-  # brontanax — SOSPESA: BAE / fotografo; autorizzazione alla ripubblicazione non documentata.
-  # remote_carriers — SOSPESA: le condizioni Airbus Media Centre richiedono consenso preventivo per la pubblicazione online.
-  # u740 — SOSPESA: le condizioni Airbus Media Centre richiedono consenso preventivo per la pubblicazione online.
+  # brontanax — SOSPESA: alternative Reuters/ASDS individuate; licenza non ancora acquisita, nessun file pubblicato.
+  remote_carriers:
+    file: "/immagini/strategia/lw-remote-carrier-rc200-ila-2024.webp"
+    alt: "Modello dimostrativo MBDA RC200 grigio esposto su supporti trasparenti a ILA Berlino."
+    didascalia: "Il modello dimostrativo MBDA RC200 (RCM², Remote Carrier Multidomain Multirole Effector), esposto a ILA Berlino il 5 giugno 2024."
+    credito: "Boevaya mashina / Wikimedia Commons"
+    fonte: "https://commons.wikimedia.org/wiki/File:MBDA_RC200_demonstrator_at_ILA-2024.jpg"
+    licenza: "CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/ — Conversione WebP, dimensioni invariate e nessun ritaglio. Gli adattamenti dell’immagine restano sotto la stessa licenza."
+    fit: contain
+  u740:
+    file: "/immagini/strategia/lw-u740-piattaforma-xq58a-ila-2026.webp"
+    alt: "Modello grigio del Kratos XQ-58A Valkyrie con marcature Marines, esposto su un rimorchio a ILA Berlino."
+    didascalia: "Un modello espositivo del Kratos XQ-58A Valkyrie a ILA Berlino, 11 giugno 2026. La fotografia illustra la piattaforma di base del programma Airbus U740, nella configurazione espositiva con marcature statunitensi."
+    credito: "André Gerwing / Wikimedia Commons"
+    fonte: "https://commons.wikimedia.org/wiki/File:Kratos_XQ-58A_Valkyrie_Mockup_2026-06-11_Andre_Gerwing_Collection_ID_029735.jpg"
+    licenza: "CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/ — Ridimensionamento e conversione WebP, nessun ritaglio. Gli adattamenti dell’immagine restano sotto la stessa licenza."
+    fit: contain
   ucav_rafale_f5:
     file: "/immagini/strategia/lw-ucav-rafale-f5-le-bourget-2025.webp"
     alt: "Modello UCAS Dassault a grandezza naturale esposto davanti allo stand Dassault a Le Bourget nel 2025."
@@ -47,8 +61,22 @@ immagini_inline:
     fonte: "https://commons.wikimedia.org/wiki/File:Dassault_UCAS_au_Salon_du_Bourget_2025.jpg"
     licenza: "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/ — Ridimensionamento e conversione WebP, nessun ritaglio."
     fit: contain
-  # kizilelma — SOSPESA: autorizzazione al riuso dello scatto Baykar con Gokdogan non documentata; nessuna alternativa sufficientemente fedele verificata.
-  # anka_iii — SOSPESA: TUSAS richiede autorizzazione scritta; alternativa in formazione troppo distante dalla selezione.
+  kizilelma:
+    file: "/immagini/strategia/lw-kizilelma-teknofest-2023.webp"
+    alt: "Un Kızılelma grigio visto frontalmente mentre viene trainato da un mezzo rosso sul piazzale aeroportuale."
+    didascalia: "Un Bayraktar Kızılelma durante il traino a Teknofest Istanbul, 29 aprile 2023."
+    credito: "Fotografia: Erişim; ritaglio: Huntster / Wikimedia Commons"
+    fonte: "https://commons.wikimedia.org/wiki/File:Teknofest_%C4%B0stanbul_2023_(cropped).jpg"
+    licenza: "CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/ — Ritaglio già presente nella fonte Commons; ulteriore ridimensionamento e conversione WebP, senza nuovi ritagli. Gli adattamenti dell’immagine restano sotto la stessa licenza."
+    fit: contain
+  anka_iii:
+    file: "/immagini/strategia/lw-anka-iii-formazione-teknofest-2024.jpg"
+    alt: "Un ANKA III ad ala volante in formazione con due addestratori rossi Hürjet e Hürkuş."
+    didascalia: "L’ANKA III in volo con Hürjet e Hürkuş durante Teknofest Adana, 3 ottobre 2024."
+    credito: "Yusuf Küçük (UnknownYazar); ritaglio: Hohum / Wikimedia Commons"
+    fonte: "https://commons.wikimedia.org/wiki/File:H%C3%BCrjet,_Anka-3_ve_H%C3%BCrku%C5%9F.jpg"
+    licenza: "CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/ — File già ritagliato da Hohum su Commons, copiato senza ulteriori modifiche. Gli eventuali adattamenti dell’immagine restano sotto la stessa licenza."
+    fit: contain
   gj11:
     file: "/immagini/strategia/lw-gj11-zhuhai.jpg"
     alt: "Modello GJ-11 esposto a Zhuhai con le stive aperte."
@@ -57,7 +85,14 @@ immagini_inline:
     fonte: "https://commons.wikimedia.org/wiki/File:GJ-11_at_Airshow_China_Zhuhai_2021.jpg"
     licenza: "CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/ — File originale invariato; eventuali adattamenti restano sotto la stessa licenza."
     fit: contain
-  # s70_okhotnik — SOSPESA: Commons segnala ancora License review needed anche sul video di origine.
+  s70_okhotnik:
+    file: "/immagini/strategia/lw-s70-okhotnik-decollo-2019.webp"
+    alt: "Il prototipo grigio S-70 Okhotnik ad ala volante durante il decollo, visto frontalmente di tre quarti."
+    didascalia: "Il prototipo S-70 Okhotnik durante il decollo, in un fotogramma del video del Ministero della Difesa russo pubblicato il 16 agosto 2019."
+    credito: "Ministero della Difesa della Federazione Russa / Mil.ru; fotogramma estratto da Lklundin su Wikimedia Commons"
+    fonte: "https://commons.wikimedia.org/wiki/File:S-70_takeoff_front_view.png"
+    licenza: "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/ — Attribuzione richiesta: Mil.ru. Autorizzazione generale documentata in https://commons.wikimedia.org/wiki/Template:Mil.ru (ticket VRT 2024021510008013); sul singolo file resta l’avviso Commons «License review needed». Ridimensionamento e conversione WebP del fotogramma già estratto, nessun nuovo ritaglio."
+    fit: contain
 # L'infobox sarà costruito sulle acquisizioni dell'articolo, non su segnaposto.
 infobox: null
 # Modello disponibile, da attivare solo quando le tre voci sono definite:
