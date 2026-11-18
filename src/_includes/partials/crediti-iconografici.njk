@@ -1,5 +1,5 @@
 {% macro richiamoCredito(voce) %}
-<a class="credito-immagine-link" href="#{{ voce.id | escape }}">Crediti immagine · {{ voce.numero | escape }}</a>
+<a class="credito-immagine-link" href="#{{ voce.id | escape }}" aria-label="Crediti iconografici dell’immagine {{ voce.numero | escape }}">{{ voce.numero | escape }} <span aria-hidden="true">ⓘ</span></a>
 {% endmacro %}
 
 {% macro registroCrediti(voci) %}

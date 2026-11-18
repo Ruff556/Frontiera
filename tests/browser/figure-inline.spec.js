@@ -118,7 +118,9 @@ for (const width of [1440, 390]) {
     await expect(page.locator(".figura-inline")).toHaveCount(11);
     const refs = await page.locator(".credito-immagine-link").evaluateAll(links => links.map(link => ({
       href: link.getAttribute("href"),
-      label: link.textContent.trim(),
+      text: link.textContent.trim(),
+      label: link.getAttribute("aria-label"),
+      iconHidden: link.querySelector("span")?.getAttribute("aria-hidden"),
       imageId: link.closest("figure").id,
     })));
     const entries = await registro.getByRole("listitem").evaluateAll(items => items.map(item => ({
@@ -132,7 +134,9 @@ for (const width of [1440, 390]) {
     for (const [i, entry] of entries.entries()) {
       const number = String(i + 1).padStart(2, "0");
       expect(entry.number).toBe(number);
-      expect(refs[i].label).toBe(`Crediti immagine · ${number}`);
+      expect(refs[i].text).toBe(`${number} ⓘ`);
+      expect(refs[i].label).toBe(`Crediti iconografici dell’immagine ${number}`);
+      expect(refs[i].iconHidden).toBe("true");
       expect(entry.back).toBe(`#${refs[i].imageId}`);
     }
     await expect(registro).not.toContainText(/https?:\/\//);
@@ -181,7 +185,7 @@ test.describe("navigazione nativa del registro", () => {
   test.use({ javaScriptEnabled: false });
   test("andata, focus e ritorno da tastiera", async ({ page }) => {
     await page.goto(loyalWingman);
-    const ref = page.getByRole("link", { name: "Crediti immagine · 01", exact: true });
+    const ref = page.getByRole("link", { name: "Crediti iconografici dell’immagine 01", exact: true });
     await ref.focus();
     await page.keyboard.press("Enter");
     const item = page.locator(await ref.getAttribute("href"));
