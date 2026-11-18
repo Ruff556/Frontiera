@@ -4,7 +4,7 @@ slug: loyal-wingman-combattimento-aereo-collaborativo
 data: 2026-11-19
 sezione: Strategia
 sommario: "Dalle prime formulazioni dell'USAF ai programmi internazionali, i loyal wingman promettono nuove forme di collaborazione fra caccia e velivoli senza pilota. Fra autonomia, sensori, armamenti e costi, si delinea un nuovo livello di proiezione per le forze aeree."
-teatro: Globale
+teatro: Globale · combattimento aereo
 domini: [aria, droni]
 sistemi_citati: [NGAD, F-47, GCAP, CCA, Predator, Hellfire, X-45A, F-16, Have Raider, Have Raider II, CODE, XQ-58A Valkyrie, Skyborg, ACS, UTAP-22, MQ-20 Avenger, MQ-28 Ghost Bat, AIM-120, F/A-18F Super Hornet, E-7A Wedgetail, FQ-42 Vengeance, FQ-44 Fury, XQ-67A, Gambit, Gambit Core, A-GRA, StormShroud, AR3, BriteStorm, Typhoon, F-35B, Brontanax, Storm Fighter, NGWS/FCAS, Remote Carriers, Do-DT25, A400M, Learjet, H145M, Remote Carrier Compact, U740 Valkyrie, MARS, Eurofighter, Rafale F5, nEUROn, Bayraktar Kızılelma, Gökdoğan, Murad, K-SWARM, M-346 Fighter Attack, ANKA III, TEBER-82, TOLUN, Hürjet, GJ-11 Xuanlong, J-20, J-16D, J-20S, S-70 Okhotnik, Su-57, Su-57D, UMPB D-30SN, LOWUS, F-22 Raptor, YFQ-44A Fury, Hivemind, A2M2, Lattice for Mission Autonomy, AMS GRA, EICACS, EICACS 2]
 immagine:
