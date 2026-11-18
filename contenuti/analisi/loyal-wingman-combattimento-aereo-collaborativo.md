@@ -1,7 +1,7 @@
 ---
 titolo: "Loyal wingman, il combattimento aereo collaborativo"
 slug: loyal-wingman-combattimento-aereo-collaborativo
-data: 2026-11-10
+data: 2026-11-19
 sezione: Strategia
 sommario: "Dalle prime formulazioni dell'USAF ai programmi internazionali, i loyal wingman promettono nuove forme di collaborazione fra caccia e velivoli senza pilota. Fra autonomia, sensori, armamenti e costi, si delinea un nuovo livello di proiezione per le forze aeree."
 teatro: Globale
