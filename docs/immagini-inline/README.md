@@ -1,7 +1,6 @@
 # Immagini nel corpo degli articoli
 
-La funzione usa il corpo `.articlebody` dei layout Analisi e Sistemi. Non modifica
-le immagini principali, gli articoli esistenti o il lightbox delle schede F/P.
+La funzione usa il corpo `.articlebody` dei layout Analisi e Sistemi.
 Demo tecnica: `/demo/immagini-inline/`, esclusa dalle collezioni, home, feed e
 sitemap, con `noindex, follow`.
 
@@ -24,9 +23,10 @@ immagini_inline:
   JPEG, PNG, WebP e AVIF. Sono ammessi percorsi YAML quotati e commenti finali.
 - `alt`: testo significativo obbligatorio. `alt: ""` è una scelta esplicita per
   un'immagine decorativa; non ometterlo sulle immagini informative.
-- `didascalia`, `credito`, `fonte`, `licenza`: testi facoltativi. I campi sono
-  escapati: HTML e link HTML non diventano contenuti attivi. L'assenza di questi
-  campi non costituisce un'autorizzazione all'uso dell'immagine: verificare i diritti.
+- `didascalia`, `credito`, `fonte`, `licenza`: testi facoltativi. Nel registro
+  Analisi gli indirizzi HTTP e HTTPS diventano link con etichette leggibili.
+  L'HTML nei campi viene mostrato come testo. L'assenza dei campi di attribuzione
+  non costituisce un'autorizzazione all'uso dell'immagine.
 - `fit`: `contain` (default, tavole e diagrammi) oppure `cover`. Nessun rapporto
   fisso, crop o deformazione; con la cornice naturale anche `cover` conserva
   l'intera immagine. Non viene applicato `posizione` alla figura inline.
@@ -66,8 +66,9 @@ della descrizione e l'appropriatezza dei diritti restano verifiche editoriali.
 
 `4/4` occupa la larghezza disponibile agli schemi (massimo 64rem, senza uscire
 dal corpo). `2/4` e `3/4` usano float CSS al 47% e 66%, con gutter di 1.25rem.
-Il margine inferiore è quello dei paragrafi, 1.25rem. Didascalia e diritti fanno
-parte del float; le figure destre allineano anche la didascalia a destra.
+Il margine inferiore è quello dei paragrafi, 1.25rem. La didascalia e il rimando
+al registro in Analisi fanno parte del float, come i diritti in Sistemi. Le
+figure a destra allineano a destra anche il contenuto della didascalia.
 
 Sotto 740px tutte le figure sono verticali. Anche sopra tale soglia, le container
 query mantengono la disposizione verticale quando il corpo ha meno di 30rem
@@ -84,10 +85,15 @@ per allineare correttamente il float destro. Gli altri articoli restano invariat
 ## Pipeline
 
 Nunjucks precede Markdown e riceve `immagini_inline` dal front matter. Lo shortcode
-valida il modello e rende `figuraInline` nel partial media già esistente. Il filtro
-`responsiveImage` rimane quello comune: i metadata vengono preparati in
-`eleventy.before`. Il rilevatore `file:` è stato esteso solo a virgolette e commenti
-YAML; conserva la scoperta dei campi annidati. Non sono richieste nuove dipendenze.
+valida il modello e rende `figuraInline` nel partial media già esistente. In Analisi
+il layout assegna i numeri alla copertina e poi alle figure nell'ordine del corpo
+renderizzato. Gli usi ripetuti della stessa voce YAML condividono i crediti e
+hanno un collegamento di ritorno per ogni figura. I crediti e le eventuali note
+sulle modifiche si scrivono negli stessi campi del front matter.
+
+Il filtro comune `responsiveImage` usa i metadati preparati in
+`eleventy.before`. Il rilevatore `file:` gestisce i valori YAML quotati, i
+commenti finali e i campi annidati.
 
 Dimensioni intrinseche, `loading="lazy"`, `decoding="async"` e `srcset` vengono
 preservati. I profili delle tre misure usano `sizes="auto, …"`: sui browser che

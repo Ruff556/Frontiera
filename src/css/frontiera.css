@@ -2979,3 +2979,50 @@ footer .license-note a:hover{color:#fff}
     .articlebody > figure.figura-inline--3.figura-inline--right{float:right;margin-left:1.25rem}
   }
 }
+
+/* Richiami delle figure e registro a fondo Analisi. */
+.credito-immagine-link,.crediti-iconografici a{
+  color:var(--accent);text-decoration:underline;text-underline-offset:.18em;
+}
+.credito-immagine-link{
+  align-self:flex-start;font-family:'IBM Plex Mono',monospace;font-size:.72rem;line-height:1.45;
+}
+.analisi-head-caption .credito-immagine-link{color:var(--accent-hi)}
+.figura-inline--right .credito-immagine-link{align-self:flex-end}
+.credito-immagine-link:hover,.crediti-iconografici a:hover{text-decoration-thickness:2px}
+:is(.analisi-head-media,.figura-inline)[id^="immagine-"],.crediti-iconografici-lista > li{
+  scroll-margin-top:calc(var(--secnav-nav-h) + 1.25rem);
+}
+@media(max-width:899px){
+  :is(.analisi-head-media,.figura-inline)[id^="immagine-"],.crediti-iconografici-lista > li{
+    scroll-margin-top:calc(var(--infobox-mobile-top,var(--secnav-nav-h)) + 4.1rem);
+  }
+}
+.crediti-iconografici{
+  max-width:var(--maxread);margin-top:3rem;padding-top:1.4rem;
+  border-top:1px solid var(--hairline);overflow-wrap:anywhere;
+}
+.reading .crediti-iconografici > h2{
+  margin:0 0 1.15rem;padding:0;
+  font-family:'IBM Plex Mono',monospace;font-size:.8rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:.12em;color:var(--accent);
+}
+.reading .crediti-iconografici > h2::before{content:none}
+.reading .crediti-iconografici-lista{margin:0;padding:0;list-style:none}
+.crediti-iconografici-lista > li{margin:0;padding:0 0 1rem}
+.crediti-iconografici-lista > li + li{border-top:1px solid var(--hairline);padding-top:1rem}
+.crediti-iconografici-lista > li:last-child{padding-bottom:0}
+.crediti-iconografici-lista > li:target{outline:2px solid var(--accent);outline-offset:.3rem}
+.reading .crediti-iconografici h3{
+  display:flex;gap:.6rem;align-items:baseline;margin:0 0 .35rem;
+  font-size:.94rem;line-height:1.4;
+}
+.crediti-iconografici-numero{
+  flex:none;white-space:nowrap;
+  font-family:'IBM Plex Mono',monospace;color:var(--accent);font-size:.76rem;
+}
+.crediti-iconografici dl{margin:0 0 .35rem;font-size:.88rem;line-height:1.5;color:var(--text)}
+.crediti-iconografici dl > div{display:grid;grid-template-columns:3.6rem minmax(0,1fr);gap:.5rem}
+.crediti-iconografici dt{font-weight:600}
+.crediti-iconografici dd{margin:0;white-space:pre-line}
+.crediti-iconografici-ritorni{display:flex;flex-wrap:wrap;gap:.25rem .9rem;font-size:.8rem}

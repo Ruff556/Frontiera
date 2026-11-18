@@ -1,10 +1,11 @@
 {# ---- Macro immagini: diritti incorporati (credito + licenza obbligatori) ---- #}
+{% from "partials/crediti-iconografici.njk" import richiamoCredito %}
 
 {# Variante editoriale nel corpo: stesso renderer responsive e lessico media,
    didascalia facoltativa, nessun full-src o trigger lightbox. #}
-{% macro figuraInline(modello) %}
+{% macro figuraInline(modello, riferimento=null) %}
 {% set img = modello.img %}
-<figure class="media figura-inline figura-inline--{{ modello.misura }} figura-inline--{{ modello.lato }} figura-inline--{{ modello.fit }}">
+<figure class="media figura-inline figura-inline--{{ modello.misura }} figura-inline--{{ modello.lato }} figura-inline--{{ modello.fit }}"{% if riferimento %} data-credito-inline="{{ riferimento | escape }}"{% endif %}>
   <div class="frame">
     {{ img | responsiveImage(modello.profile) | safe }}
   </div>
@@ -63,27 +64,29 @@
    Riusa il MEDESIMO blocco `immagine` del front matter (nessun campo separato).
    - stato compilato: <img> above-the-fold (eager, fetchpriority alta), eventuale
      object-position da img.posizione, e SOTTO la cornice uno spazio dedicato con
-     didascalia e crediti (didascalia · credito · fonte · licenza);
+     didascalia e rimando al registro, se attivo, oppure crediti completi;
    - stato vuoto: superficie petrolio intenzionale, senza segnaposto testuale,
      esclusa dall'albero accessibile (aria-hidden).
 
    Lo spazio didascalia riprende, in registro Liquid Glass, la funzione della
    figcaption delle schede F e P (macro `media`): descrizione e crediti
    gerarchicamente distinti. Nessun testo è codificato: tutti i campi vengono
-   dal front matter `immagine` e sono opzionali. Se non è presente alcun campo,
-   la figcaption non viene renderizzata (niente spazio vuoto). L'attributo `alt`
+   dal front matter `immagine` e sono opzionali. La figcaption viene resa
+   in presenza di didascalia, crediti o rimando al registro. L'attributo `alt`
    resta semanticamente distinto dalla didascalia pubblica. #}
-{% macro testataMedia(img) %}
+{% macro testataMedia(img, credito=null) %}
 {% if img and img.file %}
 {% set hasRights = img.credito or img.fonte or img.licenza %}
-<figure class="analisi-head-media{% if img.fit == 'contain' %} analisi-head-media--contain{% endif %}">
+<figure class="analisi-head-media{% if img.fit == 'contain' %} analisi-head-media--contain{% endif %}"{% if credito %} id="{{ credito.id | escape }}" tabindex="-1"{% endif %}>
   <div class="analisi-head-frame">
     {{ img | responsiveImage("articleHero", { alt: img.alt | default(""), loading: "eager", fetchpriority: "high" }) | safe }}
   </div>
-  {% if img.didascalia or hasRights %}
+  {% if img.didascalia or hasRights or credito %}
   <figcaption class="analisi-head-caption">
-    {% if img.didascalia %}<span class="analisi-caption-desc">{{ img.didascalia }}</span>{% endif %}
-    {% if hasRights %}
+    {% if img.didascalia %}<span class="analisi-caption-desc">{{ img.didascalia | escape }}</span>{% endif %}
+    {% if credito %}
+    {{ richiamoCredito(credito.voce) }}
+    {% elif hasRights %}
     <span class="analisi-caption-rights">
       {% if img.credito %}<span class="analisi-caption-credit"><b>Credito:</b>&nbsp;{{ img.credito }}</span>{% endif %}
       {% if img.fonte %}<span class="analisi-caption-credit"><b>Fonte:</b>&nbsp;{{ img.fonte }}</span>{% endif %}

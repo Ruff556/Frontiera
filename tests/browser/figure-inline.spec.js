@@ -80,17 +80,125 @@ for (const width of [1440, 1280, 1024, 900, 768, 740, 739, 390]) {
 test("le figure consecutive non si affiancano e il lightbox F/P resta operativo", async ({ page }) => {
   await page.goto("/demo/immagini-inline/");
   expect(await page.locator(".figura-inline + .figura-clear + .figura-inline").evaluate(f => f.getBoundingClientRect().top >= f.previousElementSibling.previousElementSibling.getBoundingClientRect().bottom)).toBe(true);
-  await expect(page.locator(".figura-inline:has(figcaption)")).toHaveCount(8);
+  await expect(page.locator(".figura-inline .cap")).toHaveCount(8);
+  await expect(page.locator(".figura-inline .credito-immagine-link")).toHaveCount(10);
   await page.goto("/fasi/manovra-fallita/");
+  await expect(page.locator(".fasenav")).toBeVisible();
+  await expect(page.locator(".crediti-iconografici")).toHaveCount(0);
   const trigger = page.locator("[data-image-lightbox-trigger]");
   await expect(trigger).toHaveCount(1);
   await trigger.click();
   await expect(page.locator('[role="dialog"]')).toBeVisible();
   await page.keyboard.press("Escape");
   await expect(page.locator('[role="dialog"]')).not.toBeVisible();
+  await page.goto("/profondita/asimmetria-iniziale-decisione-mancata/");
+  await expect(page.locator(".fasenav")).toBeVisible();
+  await expect(page.locator(".crediti-iconografici")).toHaveCount(0);
+  await page.goto("/schede/starlink/");
+  await expect(page.locator(".analisi-caption-rights")).toBeVisible();
+  await expect(page.locator(".crediti-iconografici, .credito-immagine-link")).toHaveCount(0);
   await page.goto("/analisi/capacita-residua-bombardamento/");
   await expect(page.locator(".schema-kit").first()).toBeVisible();
   await expect(page.locator(".figura-inline")).toHaveCount(0);
+});
+
+const loyalWingman = "/analisi/loyal-wingman-combattimento-aereo-collaborativo/";
+
+for (const width of [1440, 390]) {
+  test(`Loyal Wingman: registro, figure e flusso a ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto(loyalWingman);
+    await page.evaluate(() => document.fonts.ready);
+    const registro = page.getByRole("region", { name: "Crediti iconografici" });
+    await expect(registro).toBeVisible();
+    await expect(registro).toHaveAttribute("data-section-navigation-ignore", "");
+    await expect(page.locator(".articlebody + .crediti-iconografici")).toHaveCount(1);
+    await expect(page.locator('.secnav a[href="#crediti-iconografici"]')).toHaveCount(0);
+    await expect(page.locator(".figura-inline .rights, .analisi-caption-rights")).toHaveCount(0);
+    await expect(page.locator(".figura-inline")).toHaveCount(11);
+    const refs = await page.locator(".credito-immagine-link").evaluateAll(links => links.map(link => ({
+      href: link.getAttribute("href"),
+      label: link.textContent.trim(),
+      imageId: link.closest("figure").id,
+    })));
+    const entries = await registro.getByRole("listitem").evaluateAll(items => items.map(item => ({
+      href: `#${item.id}`,
+      number: item.querySelector(".crediti-iconografici-numero").textContent,
+      back: item.querySelector('a[href^="#"]').getAttribute("href"),
+    })));
+    expect(new Set(refs.map(ref => ref.href)).size).toBe(12);
+    expect(entries.map(({ href }) => href)).toEqual(refs.map(({ href }) => href));
+    await expect(registro.locator(".crediti-iconografici-numero").first()).toHaveCSS("white-space", "nowrap");
+    for (const [i, entry] of entries.entries()) {
+      const number = String(i + 1).padStart(2, "0");
+      expect(entry.number).toBe(number);
+      expect(refs[i].label).toBe(`Crediti immagine · ${number}`);
+      expect(entry.back).toBe(`#${refs[i].imageId}`);
+    }
+    await expect(registro).not.toContainText(/https?:\/\//);
+    await expect(registro).toContainText("License review needed");
+    await expect(registro).toContainText("Illustrazione generata con AI per Frontiera e convertita in WebP.");
+    await expect(registro.getByRole("link", { name: "Open Government Licence v3.0" }))
+      .toHaveAttribute("href", "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/");
+    await expect(registro.getByRole("link", { name: "Public Domain Mark 1.0" }))
+      .toHaveAttribute("href", "https://creativecommons.org/publicdomain/mark/1.0/");
+
+    const figure = page.locator(".figura-inline").first();
+    await figure.scrollIntoViewIfNeeded();
+    await expect(figure.locator("img")).toHaveJSProperty("complete", true);
+    await expect(figure).toHaveCSS("float", width === 1440 ? "right" : "none");
+    await expect(figure.locator("figcaption")).toHaveCSS("text-align", "right");
+    const geometry = await figure.evaluate(fig => {
+      const range = document.createRange();
+      range.selectNodeContents(fig.nextElementSibling);
+      return {
+        image: fig.querySelector("img").getBoundingClientRect().toJSON(),
+        figure: fig.getBoundingClientRect().toJSON(),
+        caption: fig.querySelector("figcaption").getBoundingClientRect().toJSON(),
+        firstLine: range.getClientRects()[0].toJSON(),
+        overflow: document.documentElement.scrollWidth > innerWidth,
+      };
+    });
+    expect(geometry.overflow).toBe(false);
+    expect(geometry.image.height).toBeGreaterThan(geometry.caption.height);
+    if (width === 1440) {
+      expect(geometry.firstLine.top).toBeLessThan(geometry.figure.bottom);
+      expect(geometry.firstLine.right).toBeLessThan(geometry.figure.left);
+    } else {
+      expect(geometry.firstLine.top).toBeGreaterThan(geometry.figure.bottom);
+      await page.locator(".analisi-head-caption .credito-immagine-link").click();
+      await expect(page.locator(".infobox-mobile-trigger")).toHaveClass(/is-visible/);
+      await expect.poll(() => page.evaluate(() => {
+        const heading = document.querySelector(".crediti-iconografici li:target h3");
+        const trigger = document.querySelector(".infobox-mobile-trigger");
+        return heading.getBoundingClientRect().top > trigger.getBoundingClientRect().bottom;
+      })).toBe(true);
+    }
+  });
+}
+
+test.describe("navigazione nativa del registro", () => {
+  test.use({ javaScriptEnabled: false });
+  test("andata, focus e ritorno da tastiera", async ({ page }) => {
+    await page.goto(loyalWingman);
+    const ref = page.getByRole("link", { name: "Crediti immagine · 01", exact: true });
+    await ref.focus();
+    await page.keyboard.press("Enter");
+    const item = page.locator(await ref.getAttribute("href"));
+    await expect(item).toBeFocused();
+    await expect(item).toBeInViewport();
+    await page.keyboard.press("Tab");
+    await expect(item.getByRole("link", { name: "Fonte originale" })).toBeFocused();
+    await page.keyboard.press("Tab");
+    const back = item.getByRole("link", { name: "Torna all’immagine" });
+    await expect(back).toBeFocused();
+    await page.keyboard.press("Enter");
+    const cover = page.locator(await back.getAttribute("href"));
+    await expect(cover).toBeFocused();
+    await expect(cover).toBeInViewport();
+    await page.keyboard.press("Tab");
+    await expect(ref).toBeFocused();
+  });
 });
 
 test("il corpo senza sidebar conserva la larghezza di lettura", async ({ page }) => {
