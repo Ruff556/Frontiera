@@ -6,94 +6,118 @@
       {
         "id": "LW-E001",
         "livello": "confermato",
-        "titolo": "Il Ghost Bat impiega un AIM-120 contro un bersaglio aereo fisico",
-        "motivazione": "Il governo australiano ha comunicato il 9 dicembre 2025 che un MQ-28 Ghost Bat ha distrutto un bersaglio aereo Phoenix con un AIM-120 durante una prova integrata con E-7A Wedgetail e F/A-18F Super Hornet. Il grado conferma il risultato riportato dall'ente responsabile per questa dimostrazione, non una capacità già qualificata per il servizio né un ingaggio sotto una difesa aerea ostile reale. La data citata è quella dell'annuncio, non necessariamente del tiro.",
+        "titolo": "F-47 e CCA nella famiglia NGAD, GCAP nel sistema britannico FCAS",
+        "motivazione": "L’annuncio USAF del marzo 2025 identifica l’F-47 come componente pilotata della famiglia NGAD e colloca i CCA nella stessa famiglia, come riscontra il Congressional Research Service. La strategia digitale del Ministero della Difesa britannico assegna al GCAP di Regno Unito, Italia e Giappone lo sviluppo del velivolo centrale. Le piattaforme autonome rientrano nel sistema britannico più ampio in cui il caccia dovrà integrarsi. Il passaggio descrive quindi due perimetri di programma distinti e un’integrazione prevista.",
         "fonti": [
           {
-            "nome": "Australian Defence Ministers — Funding boost for Australian-made Ghost Bat",
-            "url": "https://www.minister.defence.gov.au/media-releases/2025-12-09/funding-boost-australian-made-ghost-bat",
-            "data": "2025-12-09"
+            "nome": "U.S. Air Force — Air Force Awards Contract for Next Generation Air Dominance (NGAD) Platform, F-47",
+            "url": "https://www.af.mil/News/Article-Display/Article/4131345/air-force-awards-contract-for-next-generation-air-dominance-ngad-platform-f-47/",
+            "data": "2025-03-21"
           },
           {
-            "nome": "Boeing Australia — Boeing, RAAF Achieve CCA Missile Fire from MQ-28 Ghost Bat",
-            "url": "https://www.boeing.com.au/content/theboeingcompany/au/en/news/2025/boeing--raaf-achieve-cca-missile-fire-from-mq-28-ghost-bat.html",
-            "data": "2025-12-09"
+            "nome": "Congressional Research Service — U.S. Air Force Collaborative Combat Aircraft (CCA), IF12740",
+            "url": "https://www.everycrsreport.com/files/2025-11-28_IF12740_46eb60d7198264b09a302cef612d4224867d2163.html",
+            "data": "2025-11-28"
+          },
+          {
+            "nome": "UK Ministry of Defence — Future Combat Air System (FCAS) Digital Strategy, §1.1",
+            "url": "https://assets.publishing.service.gov.uk/media/6a622d6f243ee000f7127ee9/Future_Combat_Air_System_Digital_Strategy.pdf"
           }
         ]
       },
       {
         "id": "LW-E002",
         "livello": "confermato",
-        "titolo": "La prova Ghost Bat distribuisce identificazione, autorizzazione e tiro",
-        "motivazione": "Secondo Boeing Australia, nella dimostrazione il F/A-18F ha individuato e seguito il bersaglio, le informazioni sono state condivise fra le piattaforme, l'operatore sull'E-7A ha autorizzato l'ingaggio e il MQ-28 ha eseguito la manovra e il tiro. L'evento d'arma è riferito anche dal governo australiano, mentre la precisa ripartizione dei compiti deriva dal resoconto industriale: non è una telemetria indipendente né prova che il software abbia deciso autonomamente di impiegare l'arma.",
+        "titolo": "Funzioni previste per il gregario senza equipaggio",
+        "motivazione": "Il CRS documenta che l’USAF contempla ricognizione e sorveglianza, guerra elettronica, impiego di armamenti e supporto al combattimento, distribuendo tali funzioni fra piattaforme. La RAF offre un esempio distinto con StormShroud, dedicato alla guerra elettronica. L’impiego in missioni più rischiose è una finalità della delega ai velivoli senza equipaggio. Le fonti sostengono il ventaglio delle funzioni previste, che varia con il sistema e il programma.",
         "fonti": [
           {
-            "nome": "Boeing Australia — Boeing, RAAF Achieve CCA Missile Fire from MQ-28 Ghost Bat",
-            "url": "https://www.boeing.com.au/content/theboeingcompany/au/en/news/2025/boeing--raaf-achieve-cca-missile-fire-from-mq-28-ghost-bat.html",
-            "data": "2025-12-09"
+            "nome": "Congressional Research Service — U.S. Air Force Collaborative Combat Aircraft (CCA), IF12740",
+            "url": "https://www.everycrsreport.com/files/2025-11-28_IF12740_46eb60d7198264b09a302cef612d4224867d2163.html",
+            "data": "2025-11-28"
           },
           {
-            "nome": "Australian Defence Ministers — Funding boost for Australian-made Ghost Bat",
-            "url": "https://www.minister.defence.gov.au/media-releases/2025-12-09/funding-boost-australian-made-ghost-bat",
-            "data": "2025-12-09"
+            "nome": "Royal Air Force — StormShroud arrival marks the future of UK Air Combat Power",
+            "url": "https://www.raf.mod.uk/news/articles/stormshroud-arrival-marks-the-future-of-uk-air-combat-power/",
+            "data": "2025-05-02"
+          },
+          {
+            "nome": "Stephen Losey, Air & Space Forces Magazine — Air Force Official: CCAs Will Be “Optionally Attritable”",
+            "url": "https://www.airandspaceforces.com/air-force-official-cca-optionally-attritable/",
+            "data": "2026-07-30"
           }
         ]
       },
       {
         "id": "LW-E003",
         "livello": "confermato",
-        "titolo": "Il termine loyal wingman compare già in un piano USAF del 2009",
-        "motivazione": "Il documento Unmanned Aircraft Systems Flight Plan 2009–2047, pubblicato dall'US Air Force il 18 maggio 2009, impiega espressamente l'espressione loyal wingman e la distingue dallo swarming. La fonte documenta una precoce attestazione istituzionale, non la coniazione assoluta del termine o l'esistenza nel 2009 di una piattaforma capace di realizzarne già tutte le funzioni.",
+        "titolo": "Collaborazione a distanza e diversi gradi di autonomia",
+        "motivazione": "Il piano USAF del 2009 attesta l’idea del gregario collaborativo prima dei programmi attuali. Il CRS documenta requisiti e funzioni differenti, mentre le prove Airbus del 2022 mostrano che una stessa iniziativa può coinvolgere velivoli pilotati, droni, un elicottero e personale a terra con ruoli distinti. Questi elementi sostengono l’uso di «collaborazione» in senso più ampio del volo ravvicinato in formazione. Il grado di autonomia resta legato al compito e alla prova citata.",
         "fonti": [
           {
             "nome": "Headquarters U.S. Air Force — Unmanned Aircraft Systems Flight Plan 2009–2047, p. 34 e pp. 38–40",
             "url": "https://nps.edu/documents/106607930/106914584/UAS%2BAir%2BForce%2BRoadmap%2B2009.pdf/179e02eb-a788-4a85-a791-c13c39640ac9",
             "data": "2009-05-18"
+          },
+          {
+            "nome": "Congressional Research Service — U.S. Air Force Collaborative Combat Aircraft (CCA), IF12740",
+            "url": "https://www.everycrsreport.com/files/2025-11-28_IF12740_46eb60d7198264b09a302cef612d4224867d2163.html",
+            "data": "2025-11-28"
+          },
+          {
+            "nome": "Airbus — European premiere: Airbus-led large-scale flight demo teams up fighters, a helicopter and drones",
+            "url": "https://www.airbus.com/en/newsroom/press-releases/2022-12-european-premiere-airbus-led-large-scale-flight-demo-teams-up",
+            "data": "2022-12-09"
           }
         ]
       },
       {
         "id": "LW-E004",
-        "livello": "confermato",
-        "titolo": "Il concetto USAF del 2009 contempla funzioni operative differenti",
-        "motivazione": "Nello stesso piano del 2009, l'USAF prospettava per i gregari senza pilota compiti di sorveglianza e ricognizione (ISR), interdizione, contrasto ai sistemi di difesa aerea integrata (IADS), offensive counter-air e trasporto aggiuntivo di armi. Il grado conferma il contenuto programmatico del documento, non l'effettiva disponibilità di tutte queste capacità nel 2009 né una dottrina uniforme dei programmi successivi.",
+        "livello": "non-verificato",
+        "titolo": "Piano USAF del 2009: funzioni attestate, data della pubblicazione da precisare",
+        "motivazione": "Il Flight Plan reca la data del 18 maggio 2009 e descrive a p. 34 la tecnologia loyal wingman, includendo ricognizione, interdizione, contrasto alle difese aeree e trasporto di armi. Il resoconto USAF del 15 luglio documenta la presentazione pubblica del piano: la data del frontespizio non documenta una pubblicazione nel maggio 2009. È una precoce attestazione istituzionale. Il primato cronologico evocato da «prima attestazione» richiederebbe una ricognizione ulteriore delle fonti precedenti.",
         "fonti": [
           {
             "nome": "Headquarters U.S. Air Force — Unmanned Aircraft Systems Flight Plan 2009–2047, p. 34 e pp. 38–40",
             "url": "https://nps.edu/documents/106607930/106914584/UAS%2BAir%2BForce%2BRoadmap%2B2009.pdf/179e02eb-a788-4a85-a791-c13c39640ac9",
             "data": "2009-05-18"
+          },
+          {
+            "nome": "U.S. Air Force — Air Force leaders roll out UAS flight plan",
+            "url": "https://www.af.mil/News/Article-Display/Article/119739/air-force-leaders-roll-out-uas-flight-plan/",
+            "data": "2009-07-15"
           }
         ]
       },
       {
         "id": "LW-E005",
         "livello": "confermato",
-        "titolo": "Il Predator prova l'impiego di un missile Hellfire nel febbraio 2001",
-        "motivazione": "La scheda storica del National Museum of the U.S. Air Force documenta nel febbraio 2001 una prova nella quale un RQ-1 Predator ha lanciato un missile Hellfire contro un bersaglio terrestre fisso. Il caso testimonia il precedente armamento aria-superficie di un velivolo a pilotaggio remoto, basato su stazione di controllo e collegamenti; da solo non dimostra coordinamento tattico autonomo fra aeroplani.",
+        "titolo": "Predator nel 2001 e due X-45A nel 2005",
+        "motivazione": "Il museo dell’USAF e lo Smithsonian documentano i test in volo del Predator con Hellfire nel febbraio 2001. Il museo dell’USAF distingue inoltre il volo di due X-45A sotto un unico operatore nel 2004 dalla missione collaborativa del 2005 contro minacce antiaeree simulate. Il primo episodio dell’articolo riguarda una prova d’arma contro un bersaglio fisso. Il secondo riguarda il coordinamento di due dimostratori reali in uno scenario simulato.",
         "fonti": [
           {
             "nome": "National Museum of the U.S. Air Force — General Atomics Aeronautical Systems RQ-1 Predator",
             "url": "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/196333/general-atomics-aeronautical-systems-rq-1-predator/"
+          },
+          {
+            "nome": "Smithsonian National Air and Space Museum — General Atomics MQ-1L Predator A",
+            "url": "https://airandspace.si.edu/collection-objects/general-atomics-mq-1l-predator/nasm_A20040180000"
+          },
+          {
+            "nome": "National Museum of the U.S. Air Force — Boeing X-45A J-UCAS",
+            "url": "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/196732/boeing-x-45a-j-ucas/"
+          },
+          {
+            "nome": "NASA — X-45 Unmanned Combat Air Vehicle (UCAV)",
+            "url": "https://www.nasa.gov/aeronautics/x-45/"
           }
         ]
       },
       {
         "id": "LW-E006",
         "livello": "confermato",
-        "titolo": "Due X-45A sperimentano nel 2005 una missione SEAD collaborativa",
-        "motivazione": "Il National Museum of the U.S. Air Force ricostruisce il percorso del dimostratore X-45A dal primo volo del 2002 alla sperimentazione, nel 2005, di due velivoli senza pilota in una missione autonoma di soppressione delle difese aeree contro minacce missilistiche simulate. Si tratta di volo reale con missione e bersagli di scenario: non di una campagna SEAD bellica, di tiri reali documentati o dell'entrata in servizio di un UCAV operativo.",
-        "fonti": [
-          {
-            "nome": "National Museum of the U.S. Air Force — Boeing X-45A J-UCAS",
-            "url": "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/196732/boeing-x-45a-j-ucas/"
-          }
-        ]
-      },
-      {
-        "id": "LW-E007",
-        "livello": "confermato",
-        "titolo": "Have Raider sperimenta il distacco dal leader e la ripianificazione autonoma",
-        "motivazione": "Il comunicato Lockheed Martin del 10 aprile 2017 distingue due dimostrazioni su un F-16 impiegato come surrogato di velivolo senza pilota. Have Raider I descrive la separazione dal leader pilotato, la prosecuzione di una missione aria-superficie e il ricongiungimento automatico; Have Raider II aggiunge ripianificazione, gestione di guasti, reazione a minacce simulate e perdita di comunicazioni. I risultati restano riferiti alla configurazione sperimentale e non provano un rilascio reale di armi né capacità già trasferite a un CCA operativo.",
+        "titolo": "Have Raider I e II: separazione e ripianificazione",
+        "motivazione": "Lockheed Martin descrive due prove distinte con un F-16 sperimentale adibito a surrogato. Nella prima il surrogato volò in formazione, si separò per una missione aria-superficie e si ricongiunse autonomamente. La seconda, resa pubblica nell’aprile 2017 dopo prove condotte con l’USAF, aggiunse ripianificazione in risposta a minacce simulate, guasti e interruzioni delle comunicazioni. Il riscontro riguarda le funzioni dimostrate nello scenario descritto. Il comunicato non documenta il rilascio di un’arma reale.",
         "fonti": [
           {
             "nome": "Lockheed Martin, AFRL e partner — U.S. Air Force, Lockheed Martin Demonstrate Manned/Unmanned Teaming",
@@ -103,10 +127,10 @@
         ]
       },
       {
-        "id": "LW-E008",
+        "id": "LW-E007",
         "livello": "confermato",
-        "titolo": "DARPA CODE dimostra cooperazione con comunicazioni e GPS degradati",
-        "motivazione": "DARPA ha descritto nel novembre 2018 una dimostrazione di CODE in ambiente di sperimentazione che combinava fino a sei velivoli reali e 24 virtuali, con condivisione delle informazioni, ripartizione di compiti e prosecuzione degli intenti della missione sotto condizioni simulate di comunicazioni e GPS negati. La difesa aerea avversaria era simulata e il comunicato non documenta un tiro reale; i risultati non costituiscono qualificazione operativa dei CCA contemporanei.",
+        "titolo": "DARPA CODE: collaborazione in condizioni di comunicazione e GPS negati",
+        "motivazione": "La DARPA documenta una campagna di tre settimane annunciata nel novembre 2018, con fino a sei velivoli reali e ventiquattro virtuali e difese aeree rappresentate nello scenario. Un responsabile umano assegnava gli obiettivi, mentre i velivoli si coordinavano e proseguivano secondo l’intento ricevuto durante periodi di indisponibilità delle comunicazioni e del GPS. La prova sostiene il risultato nel perimetro sperimentale indicato, con una componente virtuale rilevante e senza verifica in combattimento reale.",
         "fonti": [
           {
             "nome": "DARPA — CODE Demonstrates Autonomy and Collaboration with Minimal Human Commands",
@@ -116,28 +140,45 @@
         ]
       },
       {
-        "id": "LW-E009",
+        "id": "LW-E008",
         "livello": "confermato",
-        "titolo": "XQ-58A e Skyborg sviluppano filoni distinti di piattaforma e autonomia",
-        "motivazione": "L'AFRL ha annunciato nel marzo 2019 il primo volo dell'XQ-58A Valkyrie, dimostratore associato alla ricerca LCAAT su piattaforme relativamente economiche e indipendenti dalle piste tradizionali. L'USAF ha poi comunicato nel maggio 2021 il primo volo dell'Autonomy Core System di Skyborg su un UTAP-22, con prove di navigazione, geofencing, gestione dell'inviluppo e manovre coordinate. Sono traguardi di due filoni sperimentali distinti, non la prova di un unico sistema già integrato o di autonomia nel combattimento aereo con armi.",
+        "titolo": "Primo volo del Valkyrie e obiettivo di costi contenuti",
+        "motivazione": "L’AFRL data il primo volo al 5 marzo 2019 e identifica Kratos come partner. Il museo dell’USAF documenta il lancio indipendente dalla pista e il recupero con paracadute e ammortizzazione. La frase attribuita a Doug Szczublewski riprende la presentazione AFRL di una classe a bassi costi d’acquisizione e d’impiego. Il contenimento dei costi e l’accettabilità di alcune perdite erano finalità del programma di ricerca. Il primo volo non fornisce una misura dei costi lungo la vita del velivolo.",
         "fonti": [
           {
-            "nome": "Air Force Research Laboratory / AFMC — XQ-58A Valkyrie demonstrator completes inaugural flight",
-            "url": "https://www.afmc.af.mil/News/Article-Display/Article/1777757/xq-58a-valkyrie-demonstrator-completes-inaugural-flight/",
+            "nome": "AFRL — XQ-58A Valkyrie demonstrator completes inaugural flight",
+            "url": "https://www.arnold.af.mil/News/Article-Display/Article/1777757/xq-58a-valkyrie-demonstrator-completes-inaugural-flight/",
             "data": "2019-03-06"
           },
           {
-            "nome": "US Air Force / AFLCMC — Skyborg autonomy core system has successful first flight",
-            "url": "https://www.af.mil/News/Article-Display/Article/2596671/skyborg-autonomy-core-system-has-successful-first-flight/",
+            "nome": "National Museum of the U.S. Air Force — Kratos XQ-58A Valkyrie",
+            "url": "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/3209939/kratos-xq-58a-valkyrie/"
+          }
+        ]
+      },
+      {
+        "id": "LW-E009",
+        "livello": "confermato",
+        "titolo": "Skyborg: stessa versione dell’ACS su UTAP-22 e MQ-20",
+        "motivazione": "L’USAF descrive le prove dell’Autonomy Core System sull’UTAP-22 il 29 aprile 2021 e sul MQ-20 Avenger il 24 giugno. Il secondo resoconto specifica che la stessa versione del software ripeté su una piattaforma diversa i comportamenti di base, inclusi il rispetto di limiti di volo e di aree interdette e l’esecuzione di comandi di navigazione. Il risultato dimostra la portabilità di quelle funzioni sui due dimostratori. L’autonomia collaborativa più complessa richiedeva ulteriori prove.",
+        "fonti": [
+          {
+            "nome": "U.S. Air Force — Skyborg autonomy core system has successful first flight",
+            "url": "https://www.af.mil/News/Features/Article/2596671/skyborg-autonomy-core-system-has-successful-first-flight/",
             "data": "2021-05-06"
+          },
+          {
+            "nome": "Air Force Life Cycle Management Center — Skyborg Successfully Integrates into Orange Flag Large Force Test Event",
+            "url": "https://www.aflcmc.af.mil/News/Article-Display/Article/2675447/skyborg-successfully-integrates-into-orange-flag-large-force-test-event/",
+            "data": "2021-06-29"
           }
         ]
       },
       {
         "id": "LW-E010",
         "livello": "confermato",
-        "titolo": "MQ-28 Ghost Bat: sviluppo australiano e tiro AIM-120 collaborativo",
-        "motivazione": "Il governo australiano annunciò nel febbraio 2019 il progetto Boeing Airpower Teaming System, poi MQ-28 Ghost Bat; Boeing colloca il primo volo nel febbraio 2021. Il 9 dicembre 2025 il governo australiano ha comunicato che un MQ-28 ha abbattuto un bersaglio aereo Phoenix con un AIM-120, nella prova integrata con F/A-18F Super Hornet ed E-7A Wedgetail. L’obiettivo di capacità operativa entro il 2028 appartiene alla programmazione industriale successiva, non costituisce servizio già raggiunto. L’indicatore conferma gli eventi e le dichiarazioni documentate, distinguendoli dalle prestazioni non pubblicate e dalla qualificazione operativa.",
+        "titolo": "Ghost Bat: tiro collaborativo AIM-120 e obiettivo 2028",
+        "motivazione": "Il governo australiano annunciò il progetto nel febbraio 2019 e Boeing colloca il primo volo nel febbraio 2021, prima dell’annuncio pubblico del marzo 2021. Ministero e Boeing documentano il tiro contro un bersaglio aereo Phoenix, con un F/A-18F e un E-7A. Il resoconto Boeing attribuisce a un operatore sul Wedgetail l’autorizzazione all’ingaggio. Il 9 dicembre 2025 è la data dei comunicati. La capacità operativa entro il 2028 è l’obiettivo del contratto successivo alla prova.",
         "fonti": [
           {
             "nome": "Australian Defence Ministers — Australian-designed Unmanned Loyal Wingman Aircraft to be developed with Industry",
@@ -154,6 +195,11 @@
             "data": "2025-12-09"
           },
           {
+            "nome": "Boeing Australia — Boeing, RAAF Achieve CCA Missile Fire from MQ-28 Ghost Bat",
+            "url": "https://www.boeing.com.au/news/2025/boeing--raaf-achieve-cca-missile-fire-from-mq-28-ghost-bat",
+            "data": "2025-12-09"
+          },
+          {
             "nome": "Boeing Australia — Boeing Awarded $754 million Ghost Bat Program of Record",
             "url": "https://www.boeing.com.au/news/2025/boeing-awarded--754-million-ghost-bat-program-of-record",
             "data": "2025-12-09"
@@ -162,24 +208,38 @@
       },
       {
         "id": "LW-E011",
-        "livello": "confermato",
-        "titolo": "CCA USA: FQ-42 Vengeance e FQ-44 Fury, piattaforme distinte dell’Increment 1",
-        "motivazione": "L’US Air Force ha assegnato nel giugno 2026 contratti di sviluppo e produzione dell’Increment 1 a General Atomics e Anduril per FQ-42 e FQ-44, denominati rispettivamente Vengeance e Fury nel settembre 2026. L’architettura della linea General Atomics Gambit si lega al dimostratore XQ-67A, senza renderlo tecnicamente identico al velivolo acquisito; il Fury è una soluzione distinta di Anduril. I prototipi sono sottoposti a campagne di volo e operazioni sperimentali; entro settembre 2026 entrambi i tipi erano stati consegnati alla base di Creech per le attività di sperimentazione operativa, come comunicato dall’USAF il 28 settembre. Le due piattaforme appartengono alla medesima acquisizione CCA ma non hanno una ripartizione esclusiva e comprovata dei ruoli tattici «sensore» e «tiratore».",
+        "livello": "plausibile",
+        "titolo": "FQ-42 e FQ-44: Increment 1 e cronologia di Creech",
+        "motivazione": "USAF e Reuters riscontrano i contratti per entrambe le linee nel giugno 2026. General Atomics documenta la selezione del 2024 e la genealogia Gambit/XQ-67A, mentre Anduril presenta Fury come piattaforma multimissione. Le fonti li collocano nello stesso programma per la superiorità aerea senza assegnare loro ruoli esclusivi. La cronologia dell’ultima frase richiede una correzione: secondo il comunicato USAF del 24 settembre, il Fury fu consegnato all’unità sperimentale in agosto, mentre il Vengeance arrivò il 18 settembre secondo General Atomics. Le prove di luglio documentano la presenza dei dimostratori a Creech prima di entrambe le consegne.",
         "fonti": [
           {
-            "nome": "US Air Force — Air Force advances future of air superiority with CCA contracts",
-            "url": "https://www.aflcmc.af.mil/NEWS/Article/4521029/air-force-advances-future-of-air-superiority-with-cca-contracts/",
+            "nome": "U.S. Air Force — Air Force advances future of air superiority with CCA contracts",
+            "url": "https://www.usafe.af.mil/News/Article-Display/Article/4520575/air-force-advances-future-of-air-superiority-with-cca-contracts/",
             "data": "2026-06-17"
           },
           {
-            "nome": "US Air Force — Air Force dubs Collaborative Combat Aircraft FQ-42 Vengeance, FQ-44 Fury",
-            "url": "https://www.af.mil/News/Article-Display/Article/4600199/air-force-dubs-collaborative-combat-aircraft-fq-42-vengeance-fq-44-fury/",
+            "nome": "Reuters — US Air Force awards production contracts to General Atomics, Anduril for drone wingmen",
+            "url": "https://www.reuters.com/business/aerospace-defense/us-air-force-awards-production-contracts-general-atomics-anduril-drone-wingmen-2026-06-17/",
+            "data": "2026-06-17"
+          },
+          {
+            "nome": "U.S. Air Force — SecAF announces names of new Collaborative Combat Aircraft",
+            "url": "https://www.af.mil/News/Article-Display/Article/4600199/secaf-announces-names-of-new-collaborative-combat-aircraft/",
             "data": "2026-09-14"
           },
           {
-            "nome": "General Atomics — U.S. Air Force Awards GA-ASI Production Contract for FQ-42A CCA",
-            "url": "https://www.ga.com/us-air-force-awards-ga-asi-production-contract-for-fq-42a-cca",
-            "data": "2026-06-17"
+            "nome": "U.S. Air Force — Air Force tests collaborative combat aircraft at Creech AFB",
+            "url": "https://www.af.mil/News/Article-Display/Article/4557390/air-force-tests-collaborative-combat-aircraft-at-creech-afb/",
+            "data": "2026-07-28"
+          },
+          {
+            "nome": "U.S. Air Force — Collaborative Combat Aircraft arrive at Creech AFB, advancing operational integration",
+            "url": "https://www.af.mil/News/Article-Display/Article/4610357/collaborative-combat-aircraft-arrive-at-creech-afb-advancing-operational-integr/",
+            "data": "2026-09-24"
+          },
+          {
+            "nome": "Air & Space Forces Association — What Both CCA Aircraft at Creech Mean for Air Force Integration",
+            "url": "https://afaconnect.org/news/cca-arrival-creech-operational-experimentation"
           },
           {
             "nome": "General Atomics — FQ-42 Vengeance Finds New Home at Creech Air Force Base",
@@ -187,22 +247,26 @@
             "data": "2026-09-21"
           },
           {
-            "nome": "US Air Force — Collaborative Combat Aircraft Arrive at Creech Air Force Base (ripubblicazione del comunicato)",
-            "url": "https://ebs.publicnow.com/view/CD5FBD9B0072230FED120D5718784A09D27EF643",
-            "data": "2026-09-28"
+            "nome": "Anduril — Fury",
+            "url": "https://www.anduril.com/fury"
           }
         ]
       },
       {
         "id": "LW-E012",
         "livello": "confermato",
-        "titolo": "CCA USA: autonomia di missione separata dalla cellula e interfacce A-GRA",
-        "motivazione": "La USAF ha strutturato l’Increment 1 distinguendo acquisizione dei velivoli e software di autonomia di missione, con interfacce comuni nell’Autonomy Government Reference Architecture (A-GRA) e più fornitori candidati. Nel febbraio 2026 un YFQ-44A Fury di Anduril ha eseguito una singola sortita nella quale ha usato prima Hivemind di Shield AI e poi Lattice for Mission Autonomy di Anduril, completando compiti di prova con entrambe le soluzioni. La dimostrazione attesta la sostituzione in volo di due sistemi su quel velivolo; non convalida automaticamente la portabilità di qualsiasi software su qualsiasi piattaforma, né un’autonomia completa nel combattimento armato.",
+        "titolo": "Autonomia di missione separata e cambio software sul Fury",
+        "motivazione": "La strategia d’acquisizione USAF e l’A-GRA documentano la separazione fra il software di autonomia di missione e i sistemi specifici della cellula. Anduril e Shield AI riferiscono una sortita con Hivemind e Lattice, durante la quale un YFQ-44A completò la stessa serie di esercizi con entrambi. Air & Space Forces Magazine, citando un responsabile USAF, colloca il volo al 24 febbraio 2026. Il risultato convalida il passaggio fra due soluzioni su quel velivolo. La compatibilità di altre combinazioni dipende dalle interfacce, dall’integrazione e dalle prove effettivamente eseguite.",
         "fonti": [
           {
-            "nome": "US Air Force — Air Force advances future of air superiority with CCA contracts",
-            "url": "https://www.aflcmc.af.mil/NEWS/Article/4521029/air-force-advances-future-of-air-superiority-with-cca-contracts/",
+            "nome": "U.S. Air Force — Air Force advances future of air superiority with CCA contracts",
+            "url": "https://www.usafe.af.mil/News/Article-Display/Article/4520575/air-force-advances-future-of-air-superiority-with-cca-contracts/",
             "data": "2026-06-17"
+          },
+          {
+            "nome": "U.S. Air Force — Air Force accelerates warfighter tech, releases foundational open architectures",
+            "url": "https://www.aflcmc.af.mil/NEWS/Article/4557729/air-force-accelerates-warfighter-tech-releases-foundational-open-architectures/",
+            "data": "2026-07-28"
           },
           {
             "nome": "Anduril Industries — YFQ-44A Flies with Mission Autonomy Software from Anduril & Shield AI",
@@ -213,14 +277,19 @@
             "nome": "Shield AI — Hivemind successfully completes first CCA flight test aboard Anduril’s YFQ-44A aircraft",
             "url": "https://shield.ai/hivemind-successfully-completes-first-cca-flight-test-aboard-andurils-yfq-44a-aircraft/",
             "data": "2026-02-26"
+          },
+          {
+            "nome": "Greg Hadley, Air & Space Forces Magazine — Anduril CCA Switches AI Pilots Midflight",
+            "url": "https://www.airandspaceforces.com/anduril-cca-switches-ai-pilots-midflight/",
+            "data": "2026-02-25"
           }
         ]
       },
       {
         "id": "LW-E013",
-        "livello": "confermato",
-        "titolo": "StormShroud: AR3 e BriteStorm come piattaforma britannica di guerra elettronica",
-        "motivazione": "RAF e Dstl descrivono StormShroud come una Autonomous Collaborative Platform di guerra elettronica basata sul TEKEVER AR3 e dotata del payload BriteStorm di Leonardo. La funzione prevista è disturbare e ingannare i radar avversari a sostegno di velivoli pilotati quali Typhoon e F-35B. La RAF annunciò l’entrata in servizio nel maggio 2025 e riferì successivamente prove di coordinamento di più piattaforme nel dicembre dello stesso anno. Il livello «confermato» riguarda configurazione dichiarata, stato ufficiale e sperimentazioni riferite, non l’efficacia contro specifiche difese in un combattimento reale né una piena autonomia tattica certificata.",
+        "livello": "plausibile",
+        "titolo": "StormShroud: entrata in servizio e prova con più velivoli",
+        "motivazione": "RAF e Dstl documentano l’introduzione in servizio nel maggio 2025, la piattaforma TEKEVER AR3, il sistema Leonardo BriteStorm e la funzione di guerra elettronica a supporto di Typhoon e F-35B. La RAF colloca la dimostrazione con più StormShroud nel dicembre 2025 in un resoconto pubblicato il 22 aprile 2026. Resta senza riscontro una comunicazione della RAF sull’esercitazione già nel dicembre 2025, come suggerisce la frase dell’articolo. Il coordinamento dimostrato nell’esercitazione e l’efficacia contro difese reali sono acquisizioni distinte. La RAF descrive ulteriori sviluppi nelle procedure e nell’autonomia.",
         "fonti": [
           {
             "nome": "Royal Air Force — StormShroud arrival marks the future of UK Air Combat Power",
@@ -241,15 +310,10 @@
       },
       {
         "id": "LW-E014",
-        "livello": "confermato",
-        "titolo": "Storm Fighter e Brontanax: programma britannico e prototipo BAE distinti",
-        "motivazione": "Il Regno Unito ha annunciato nel luglio 2026 uno stanziamento di 300 milioni di sterline per il programma autonomo Storm Fighter. BAE Systems ha presentato nello stesso mese Brontanax, un prototipo di Collaborative Combat Aircraft di dimensioni paragonabili al Hawk, concepito con architettura modulare per compiti quali guerra elettronica e attacco di precisione aria-aria e aria-superficie, con direttive da un pilota Typhoon o da un responsabile della missione a distanza. Alla presentazione il prototipo era preparato per prove a terra; il primo volo era previsto nel 2027 e la disponibilità per l’ingresso in servizio entro la fine del decennio era un obiettivo industriale. Brontanax contribuisce alla traiettoria britannica ma non risulta documentata una selezione come unica soluzione dello Storm Fighter.",
+        "livello": "plausibile",
+        "titolo": "Storm Fighter e Brontanax: finanziamento e maturità del dimostratore",
+        "motivazione": "La risposta parlamentare e l’annuncio di luglio collocano l’impegno britannico di 300 milioni di sterline nel programma Storm Fighter. BAE ha presentato Brontanax come propria iniziativa, con dimensioni simili all’Hawk, configurazione modulare e funzioni previste di guerra elettronica e attacco. Il costruttore parlava di preparativi per prove a terra. Aviation Week riferiva ancora in novembre che il dimostratore era vicino al completamento, perciò «già costruito come prototipo» merita una formulazione più precisa. Il primo volo nel 2027 e la disponibilità a fine decennio restano obiettivi. Il finanziamento del programma non equivale alla selezione del Brontanax.",
         "fonti": [
-          {
-            "nome": "UK MoD — Keynote speech at the Global Air and Space Chiefs’ Conference",
-            "url": "https://www.gov.uk/government/speeches/minister-for-defence-readiness-and-industry-luke-pollard-mp-keynote-speech-at-the-global-air-and-space-chiefs-conference",
-            "data": "2026-07-16"
-          },
           {
             "nome": "BAE Systems — First British designed Collaborative Combat Aircraft unveiled",
             "url": "https://www.baesystems.com/en/article/first-british-designed-collaborative-combat-aircraft-unveiled",
@@ -259,14 +323,24 @@
             "nome": "UK Parliament — Written question 21639, Autonomous Collaborative Platforms",
             "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21639",
             "data": "2026-09-07"
+          },
+          {
+            "nome": "Reuters — UK’s BAE enters uncrewed fighter competition with Brontanax",
+            "url": "https://www.reuters.com/business/aerospace-defense/uks-bae-enters-uncrewed-fighter-competition-with-brontanax-2026-07-22/",
+            "data": "2026-07-22"
+          },
+          {
+            "nome": "Aviation Week — Europe’s CCA Industry Moves Faster Than Its Clients",
+            "url": "https://aviationweek.com/defense/aircraft-propulsion/europes-cca-industry-moves-faster-its-clients",
+            "data": "2026-11-06"
           }
         ]
       },
       {
         "id": "LW-E015",
         "livello": "confermato",
-        "titolo": "Remote Carriers: NGWS/FCAS e prove reali con Do-DT25",
-        "motivazione": "I Remote Carriers costituiscono una famiglia di piattaforme sensoristiche, elettroniche ed effettrici sviluppate nel quadro franco-tedesco-spagnolo NGWS/FCAS. La rinuncia allo sviluppo congiunto del caccia NGF nel giugno 2026 non ha comportato l’interruzione di ogni cooperazione sui Remote Carriers, come mostra il successivo traguardo trilaterale MBDA. Airbus riferì nel dicembre 2022 una prova reale di rilascio di un Do-DT25 da A400M con trasferimento del controllo a un operatore a terra e, in una distinta campagna, una collaborazione fra cinque Do-DT25, un Learjet surrogato di caccia e un H145M, con sensori ESM ed elettro-ottici. Sono due eventi diversi: le difese aeree dello scenario erano simulate e non risulta un abbattimento reale di sistemi SAM.",
+        "titolo": "Remote Carriers: continuità dopo il NGF e prove Airbus del 2022",
+        "motivazione": "Janes documenta la cessazione del caccia congiunto NGF nel giugno 2026 e il proseguimento degli altri filoni. La revisione trilaterale del Remote Carrier Compact annunciata da MBDA ne offre un riscontro concreto. In due comunicati del dicembre 2022 Airbus distingue il rilascio di un Do-DT25 da A400M, con passaggio del controllo a terra, dalla dimostrazione con cinque Do-DT25, Learjet surrogato e H145M. In quest’ultima, due droni erano destinati a rilevare emissioni e tre a fornire immagini di difese simulate. La prova riguarda la cooperazione tra sensori e piattaforme in uno scenario sperimentale.",
         "fonti": [
           {
             "nome": "Airbus — Remote Carrier demonstrator released and operated from flying A400M for the first time",
@@ -279,9 +353,8 @@
             "data": "2022-12-09"
           },
           {
-            "nome": "Reuters — Germany and France drop joint fighter jet project",
-            "url": "https://www.reuters.com/business/aerospace-defense/german-french-leaders-unable-resolve-fcas-fighter-jet-dispute-sources-say-2026-06-08/",
-            "data": "2026-06-08"
+            "nome": "Janes — ILA 2026: Germany weighs post-NGF options",
+            "url": "https://www.janes.com/defence-intelligence-insights/defence-news/defence/ila-2026-germany-weighs-post-ngf-options"
           },
           {
             "nome": "MBDA — MBDA reaches key milestone with REMOTE CARRIER COMPACT demonstrator",
@@ -293,8 +366,8 @@
       {
         "id": "LW-E016",
         "livello": "confermato",
-        "titolo": "Remote Carriers: nove voli SATNUS e progetto preliminare Remote Carrier Compact",
-        "motivazione": "SATNUS ha riferito il 16 aprile 2026 il completamento di nove voli effettuati nel marzo precedente per sperimentare collaborazione, formazione, navigazione coordinata anche in ambiente degradato, evasione e ripianificazione, con fino a tre piattaforme reali e due simulate. MBDA ha annunciato il 6 ottobre 2026 che Francia, Germania e Spagna avevano approvato la Preliminary Design Review del dimostratore Remote Carrier Compact, destinato in prospettiva a scorta, ricognizione e attacco. Le prove SATNUS impiegavano dimostratori e componenti simulate; il traguardo MBDA è una revisione progettuale, non un UCAV Compact già operativo.",
+        "titolo": "SATNUS e Remote Carrier Compact: nove voli e revisione preliminare",
+        "motivazione": "Il resoconto Sener/SATNUS del 16 aprile situa i nove voli nel marzo 2026 e descrive fino a tre dimostratori reali e due simulati, con navigazione coordinata, manovre evasive e ripianificazione. MBDA il 6 ottobre rese pubblica l’approvazione, avvenuta in estate, della revisione preliminare da parte di Francia, Germania e Spagna. Le finalità di scorta, ricognizione e attacco appartengono al progetto Compact. Le prove SATNUS e l’avanzamento progettuale MBDA sono due traguardi distinti.",
         "fonti": [
           {
             "nome": "SATNUS / Sener — SATNUS successfully completes fourth Pillar 3 flight demonstration campaign",
@@ -311,8 +384,8 @@
       {
         "id": "LW-E017",
         "livello": "confermato",
-        "titolo": "Airbus U740 Valkyrie: cellula Kratos, sistema MARS e primo volo europeo",
-        "motivazione": "Airbus ha annunciato nel marzo 2026 la preparazione di due Kratos Valkyrie per un sistema collaborativo destinato anzitutto alla Germania, con obiettivo industriale 2029. La piattaforma U740 deriva dalla linea americana XQ-58A; la specificità del progetto europeo è l’integrazione prevista del sistema di missione Multiplatform Autonomous Reconfigurable and Secure (MARS), per autonomia e controllo europeo delle applicazioni e dei dati. Il 12 ottobre 2026 Airbus e Kratos hanno annunciato il primo volo europeo dell’U740: lancio assistito da razzo, manovre fino a Mach 0,8 e modifiche del piano di missione in volo. Airbus ha esplicitamente collocato le prove MARS più complesse in una fase successiva. Non è corretto attribuire al volo inaugurale l’intera autonomia collaborativa futura.",
+        "titolo": "U740 Valkyrie: primo volo europeo e integrazione MARS prevista",
+        "motivazione": "Airbus e Kratos collegano l’U740 alla cellula XQ-58A. Nel comunicato del 12 ottobre 2026 riferiscono un volo europeo con lancio assistito, velocità fino a Mach 0,8 e modifiche alla missione in volo. Aviation Week colloca il volo nel settembre 2026 e l’integrazione delle funzioni MARS più avanzate è collocata in prove successive. Reuters riscontra il volo e la natura industriale dell’orizzonte 2029. L’offerta alla Germania e la collaborazione con Eurofighter appartengono al progetto, senza attestare una consegna o qualifica operativa.",
         "fonti": [
           {
             "nome": "Airbus — German Air Force offered operational UCCA by 2029",
@@ -323,14 +396,29 @@
             "nome": "Airbus — Airbus U740 Valkyrie takes off for its first flight in Europe",
             "url": "https://www.airbus.com/en/newsroom/press-releases/2026-10-airbus-u740-valkyrie-uncrewed-combat-aircraft-takes-off-for-its-maiden-flight-in-europe",
             "data": "2026-10-12"
+          },
+          {
+            "nome": "Kratos — Airbus U740 Valkyrie Uncrewed Combat Aircraft Takes off for First European Test Flight",
+            "url": "https://www.kratosdefense.com/newsroom/airbus-u740-valkyrie-uncrewed-combat-aircraft-takes-off-for-first-european-test-flight",
+            "data": "2026-10-12"
+          },
+          {
+            "nome": "Reuters — Airbus tests Valkyrie drone in Europe, plans 2029 combat readiness",
+            "url": "https://www.reuters.com/business/aerospace-defense/airbus-tests-valkyrie-drone-europe-plans-2029-combat-readiness-2026-10-12/",
+            "data": "2026-10-12"
+          },
+          {
+            "nome": "Tony Osborne, Aviation Week — Europe’s CCA Industry Moves Faster Than Its Clients",
+            "url": "https://aviationweek.com/defense/aircraft-propulsion/europes-cca-industry-moves-faster-than-its-clients",
+            "data": "2026-11-06"
           }
         ]
       },
       {
         "id": "LW-E018",
         "livello": "confermato",
-        "titolo": "Francia: UCAV per Rafale F5, eredità nEUROn e obiettivi 2028/2035",
-        "motivazione": "Il ministero francese e Dassault hanno annunciato nell’ottobre 2024 lo sviluppo dell’UCAV complementare al Rafale F5, affidato a Dassault Aviation e a partner quali Thales e Safran. Il programma eredita risultati tecnici dal nEUROn, dimostratore a guida francese costruito mediante cooperazione di sei paesi europei: «guida nazionale» non significa esperienza esclusivamente francese. Per il futuro UCAV sono previste bassa osservabilità, stive interne, autonomia con uomo nel ciclo decisionale e supporto a missioni d’ingresso in area difesa, aria-aria, aria-superficie e soppressione delle difese avversarie. La legge francese n. 2026-791 del 16 agosto 2026 stabilisce come orizzonti una prima sperimentazione di droni accompagnatori attorno al 2028 e un dimostratore operativo di drone furtivo da combattimento attorno al 2035. Sono obiettivi distinti e non prestazioni già dimostrate sul nuovo velivolo.",
+        "titolo": "UCAV del Rafale F5: eredità nEUROn e orizzonti 2028 e 2035",
+        "motivazione": "Dassault e la DGA documentano l’avvio nel 2024, i contratti a Dassault, Thales e Safran e il contributo del dimostratore europeo nEUROn. Bassa osservabilità, stiva interna, supervisione umana e missioni a supporto del Rafale F5 sono caratteristiche e ruoli previsti. Il costruttore documenta il modello esposto nel 2025. La legge francese aggiornata nel 2026 distingue la prima sperimentazione dei droni accompagnatori all’orizzonte 2028 dal dimostratore operativo stealth all’orizzonte 2035.",
         "fonti": [
           {
             "nome": "Dassault Aviation — Unmanned combat aerial vehicle program kicks off as part of the Rafale F5 standard",
@@ -347,8 +435,13 @@
             "url": "https://www.dassault-aviation.com/en/defense/neuron/"
           },
           {
-            "nome": "République française / Légifrance — Loi n° 2026-791 actualisant la programmation militaire",
-            "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054694832",
+            "nome": "Dassault Aviation — Dassault Aviation at the 2025 Paris Air Show",
+            "url": "https://www.dassault-aviation.com/en/group/press/press-kits/dassault-aviation-at-the-2025-paris-air-show/",
+            "data": "2025-06-13"
+          },
+          {
+            "nome": "République française — Loi n° 2026-791 du 16 août 2026 actualisant la programmation militaire",
+            "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000054694832/2026-08-27",
             "data": "2026-08-16"
           }
         ]
@@ -356,31 +449,44 @@
       {
         "id": "LW-E019",
         "livello": "confermato",
-        "titolo": "Kızılelma: tiro aria-aria, formazione autonoma e teaming M-346 in K-SWARM",
-        "motivazione": "Baykar ha dichiarato il successo del test del 29 novembre 2025 nel quale un Kızılelma ha colpito un bersaglio aereo a reazione con il missile Gökdoğan, utilizzando il radar Murad AESA. L’azienda ha riferito una distinta prova di formazione autonoma di due Kızılelma nel dicembre 2025. Leonardo e Baykar hanno poi documentato nel giugno 2026 i voli K-SWARM condotti nel maggio precedente: da un M-346FA pilotato venivano impartite direttive al Kızılelma, che eseguiva cambi di formazione, distacchi e ricongiungimenti. Sono tre campagne differenti; il tiro aria-aria non è avvenuto, in base alle fonti disponibili, sotto comando M-346. Non assumere primati globali rivendicati da Baykar come fatti indipendenti.",
+        "titolo": "Kızılelma: tiro aria-aria, formazione autonoma e prove con M-346",
+        "motivazione": "Baykar data il primo volo al dicembre 2022. Il costruttore e la stampa specializzata distinguono il tiro del 29 novembre 2025 contro un bersaglio a reazione sul Mar Nero, con Gökdoğan e radar Murad secondo il resoconto industriale, dal volo autonomo in formazione dei due prototipi in dicembre. Le prove K-SWARM con M-346FA si svolsero nel maggio 2026 e furono annunciate il 22 giugno. Il controllo per direttive e le manovre del teaming appartengono a quest’ultima prova. Le tre dimostrazioni non costituiscono una singola prova di tiro cooperativo.",
         "fonti": [
+          {
+            "nome": "Baykar — Bayraktar Kızılelma Advances Toward Its Goal",
+            "url": "https://baykartech.com/en/press/bayraktar-kizilelma-advances-toward-its-goal/"
+          },
           {
             "nome": "Baykar — A New Chapter in Aviation History: Kızılelma hits target with air-to-air missile",
             "url": "https://preprod.baykartech.com/en/press/a-new-chapter-in-aviation-history",
             "data": "2025-11-30"
           },
           {
-            "nome": "Baykar — Bayraktar Kızılelma Strikes With Supersonic Missile",
-            "url": "https://www.baykartech.com/en/press/bayraktar-kizilelma-strikes-with-supersonic-missile/",
-            "data": "2026-07-15"
+            "nome": "The Aviationist — Turkey’s Kizilelma UCAV Shoots Down Target Drone with Gökdoğan Air-to-Air Missile",
+            "url": "https://theaviationist.com/2025/11/30/turkeys-kizilelma-gokdogan-live-fire/",
+            "data": "2025-11-30"
+          },
+          {
+            "nome": "Baykar — Bayraktar Kızılelma Performs Formation Flight Using Smart Fleet Autonomy",
+            "url": "https://www.baykartech.com/en/press/bayraktar-kizilelma-performs-formation-flight-using-smart-fleet-autonomy/",
+            "data": "2025-12-27"
           },
           {
             "nome": "Leonardo e Baykar — Successful first K-SWARM live trials",
             "url": "https://www.baykartech.com/en/press/leonardo-and-baykar-set-major-milestone-for-advanced-creweduncrewed-capability-development-with-successful-first-k-swarm-live-trials/",
             "data": "2026-06-22"
+          },
+          {
+            "nome": "Janes — Baykar, Leonardo demonstrate CUC-T under K-Swarm programme",
+            "url": "https://www.janes.com/defence-intelligence-insights/defence-news/air/baykar-leonardo-demonstrate-cuc-t-under-k-swarm-programme"
           }
         ]
       },
       {
         "id": "LW-E020",
         "livello": "confermato",
-        "titolo": "ANKA III: test di armamento e due forme distinte di formazione",
-        "motivazione": "Turkish Aerospace documenta il primo volo dell’ANKA III il 28 dicembre 2023, il successivo impiego di una TEBER-82 contro un bersaglio terrestre e una prova di rilascio TOLUN dalla stiva interna nel gennaio 2025. La configurazione ad ala volante mira a ridurre l’osservabilità radar. Nel maggio 2024 il velivolo sperimentò un volo in formazione con un Hürjet pilotato; il 18 marzo 2025 due prototipi ANKA III effettuarono un volo coordinato, con controllo multiplo dalla stessa stazione terrestre, documentato dal costruttore. Questi ultimi sono due test diversi. Il volo con Hürjet non dimostra che il pilota dell’addestratore controllasse tatticamente il drone.",
+        "titolo": "ANKA III: prove d’arma e due esperimenti di formazione",
+        "motivazione": "Turkish Aerospace documenta la configurazione ad ala volante, il primo volo del 28 dicembre 2023 e le prove con Hürjet nel 2024 e con due ANKA III il 18 marzo 2025. Per la seconda prova parla della prima fase di controllo di più velivoli dalla stessa stazione di terra. TurDef distingue il tiro TEBER-82 del 2024 dal rilascio TOLUN dalla stiva nel gennaio 2025. La formazione con Hürjet documenta il volo con un velivolo pilotato. Il controllo di più droni dalla stazione a terra documenta un risultato diverso.",
         "fonti": [
           {
             "nome": "Turkish Aerospace — ANKA III",
@@ -399,59 +505,76 @@
             "nome": "TURDEF — ANKA-III UCAV Completes Critical Autopilot Flight Test (cronologia delle prove)",
             "url": "https://turdef.com/article/anka-iii-ucav-completes-critical-autopilot-flight-test",
             "data": "2025-12-08"
+          },
+          {
+            "nome": "TurDef — ANKA-III UCAV Hits Target with TEBER-82 Guided Bomb",
+            "url": "https://www.turdef.com/article/anka-iii-ucav-hits-target-with-teber-82-guided-bomb"
           }
         ]
       },
       {
         "id": "LW-E021",
         "livello": "confermato",
-        "titolo": "Cina GJ-11: presenza con J-20/J-16D, ingresso dichiarato e tiro riferito nel 2026",
-        "motivazione": "Il GJ-11 Xuanlong è rappresentato come velivolo ad ala volante a bassa osservabilità destinato principalmente ad attacco e soppressione delle difese aeree. Nel novembre 2025 l’aeronautica cinese diffuse immagini di volo con un J-20 e un J-16D, e annunciò l’ingresso del sistema nei ranghi. Il 9 novembre 2026 la CCTV pubblicò ulteriori immagini, anche delle stive interne, riferendo una prima prova di tiro reale riuscita. Il giorno del tiro, la munizione, il bersaglio e la relazione di comando in quella prova non sono pubblici: il registro attesta le dichiarazioni e la documentazione audiovisiva, non un ingaggio autonomo dimostrato o l’ampiezza dell’operatività già conseguita.",
+        "titolo": "GJ-11: presentazione, formazione e tiro riferito da CCTV",
+        "motivazione": "La presentazione del GJ-11 nel 2019 e le immagini del novembre 2025 con J-20 e J-16D sono documentate anche dalla stampa specializzata. L’ingresso in servizio è dichiarato dall’aeronautica cinese. Le immagini diffuse da CCTV il 9 novembre 2026 mostrano le stive interne, mentre l’esito del primo tiro è riferito dall’emittente. La data del tiro, la natura del bersaglio e dati indipendenti sul risultato non sono pubblici. «Avrebbe colpito» riflette questa differenza fra ciò che le immagini mostrano e ciò che il servizio televisivo riferisce.",
         "fonti": [
+          {
+            "nome": "The War Zone — China Showcases Stealthier Sharp Sword Unmanned Combat Air Vehicle Configuration",
+            "url": "https://www.twz.com/30111/china-showcases-stealthier-sharp-sword-unmanned-combat-air-vehicle-configuration",
+            "data": "2019-10-01"
+          },
+          {
+            "nome": "South China Morning Post — PLA shows first footage of Chinese GJ-11 drone working with crewed J-20 fighter",
+            "url": "https://www.scmp.com/news/china/military/article/3332383/pla-shows-first-footage-chinese-gj-11-drone-collaborating-crewed-j-20-fighter",
+            "data": "2025-11-11"
+          },
           {
             "nome": "CCTV News, ripubblicato da China Youth — GJ-11 Xuanlong: nuove immagini e stato dichiarato",
             "url": "https://news.youth.cn/gn/202611/t20261109_16957079.htm",
             "data": "2026-11-09"
           },
           {
-            "nome": "CCTV News, ripubblicato da The Paper — GJ-11: primo attacco con armamento reale, bersaglio colpito",
-            "url": "https://www.thepaper.cn/newsDetail_forward_34440282",
+            "nome": "The Aviationist — Our Best Look Yet at China’s GJ-11 UCAV",
+            "url": "https://theaviationist.com/2026/11/09/our-best-look-yet-at-chinas-gj-11-ucav/",
             "data": "2026-11-09"
-          },
-          {
-            "nome": "South China Morning Post — PLA shows first footage of Chinese GJ-11 drone working with crewed J-20 fighter",
-            "url": "https://www.scmp.com/news/china/military/article/3332383/pla-shows-first-footage-chinese-gj-11-drone-collaborating-crewed-j-20-fighter",
-            "data": "2025-11-11"
           }
         ]
       },
       {
         "id": "LW-E022",
         "livello": "confermato",
-        "titolo": "J-20S: variante biposto concepita per comandare velivoli senza equipaggio",
-        "motivazione": "Un portavoce dell’AVIC, nelle dichiarazioni riportate dal Ministero della Difesa cinese l’11 novembre 2024, ha attribuito alla variante biposto J-20S funzioni di sorveglianza, guerra elettronica, cooperazione con velivoli senza pilota e comando tattico. Il secondo posto offre la possibilità progettuale di ripartire le attività fra pilotaggio e coordinamento di altre piattaforme. Il paragrafo Frontiera trae da ciò l’inferenza ragionevole che la variante mira ad ampliare il ruolo di comando del J-20 anche verso i loyal wingman. Non vi è prova pubblica acquisita di una catena completa J-20S→GJ-11 né di autorizzazione di tiro affidata al secondo membro dell’equipaggio.",
+        "titolo": "J-20S: coordinamento di velivoli senza equipaggio come ruolo previsto",
+        "motivazione": "Alla presentazione di Zhuhai del novembre 2024, AVIC attribuì al J-20S biposto compiti di consapevolezza situazionale, guerra elettronica, comando tattico e cooperazione con velivoli senza pilota. Janes riporta tali ruoli presentandoli come potenziali. La divisione del lavoro fra due membri dell’equipaggio è una deduzione esplicitamente condizionale nel testo. L’evidenza sostiene l’intenzione progettuale. Restano aperti i dettagli di eventuali prove di comando su specifici gregari e dell’autorizzazione all’impiego di armi.",
         "fonti": [
           {
             "nome": "AVIC / Ministero della Difesa cinese — Twin-seat J-20S stealth fighter to be unveiled",
             "url": "https://eng.mod.gov.cn/xb/News_213114/TopStories/16351084.html",
             "data": "2024-11-11"
+          },
+          {
+            "nome": "Janes — Two-seat J-20 emerges as potential combat C2 aircraft",
+            "url": "https://www.janes.com/defence-intelligence-insights/defence-news/defence/two-seat-j-20-emerges-as-potential-combat-c2-aircraft"
           }
         ]
       },
       {
         "id": "LW-E023",
         "livello": "plausibile",
-        "titolo": "S-70 Okhotnik e Su-57D: sperimentazione, perdita in guerra e probabile missione armata",
-        "motivazione": "Rostec/UAC documenta il primo volo dell’S-70 nell’agosto 2019 e una successiva prova congiunta con il Su-57. UAC ha annunciato il primo volo del Su-57D biposto il 19 maggio 2026, indicandone fra le funzioni previste il comando di formazioni miste pilotate e non pilotate; dichiarazioni Sukhoi successive hanno specificato anche l’S-70 come possibile sistema coordinato. Il 5 ottobre 2024 un S-70 venne abbattuto da un velivolo russo presso Kostiantynivka; il GUR ucraino ha riferito l’esame del relitto. Fotografie e analisi indipendenti dei rottami hanno identificato componenti di bomba planante UMPB D-30SN, elemento a sostegno della plausibilità di una missione armata sperimentale. L’intelligence britannica ha valutato probabile una perdita di controllo. L’indicatore è «plausibile» per l’inferenza sulla precisa natura della missione; non è dimostrato che il velivolo avesse già colpito un bersaglio o che il Su-57D avesse effettivamente comandato un S-70.",
+        "titolo": "S-70 e Su-57D: prove di volo e possibile missione armata in Ucraina",
+        "motivazione": "RUSI e The War Zone documentano il volo inaugurale dell’S-70 nell’agosto 2019 e il successivo volo con un Su-57. UAC ha annunciato il volo inaugurale del Su-57D nel maggio 2026. Il coordinamento di formazioni miste comprendenti l’S-70 è una funzione dichiarata. L’abbattimento dell’Okhotnik il 5 ottobre 2024 presso Kostjantynivka e l’esame del relitto sono documentati. I componenti identificati come appartenenti a una UMPB D-30SN rendono plausibile una missione sperimentale armata. La perdita di controllo è una valutazione britannica, mentre l’obiettivo e l’eventuale esecuzione dell’attacco rimangono indeterminati.",
         "fonti": [
           {
-            "nome": "Rostec / UAC — UAC mostra S-70 Okhotnik con ugello piatto",
-            "url": "https://rostec.ru/media/pressrelease/oak-vpervye-pokazala-bpla-okhotnik-s-ploskim-reaktivnym-soplom/",
-            "data": "2021-12-14"
+            "nome": "Justin Bronk, RUSI — First Flight of Russia’s S-70 Okhotnik-B UCAV",
+            "url": "https://www.rusi.org/explore-our-research/publications/rusi-defence-systems/first-flight-russias-s-70-okhotnik-b-ucav",
+            "data": "2019-08-09"
           },
           {
-            "nome": "UAC — Two-seat prototype of the Su-57 fifth-generation fighter performed its maiden flight",
-            "url": "https://uacrussia.ru/en/press-center/news/presentations/sostoyalsya-pervyy-polet-prototipa-dvukhmestnogo-istrebitelya-pyatogo-pokoleniya-su-57",
+            "nome": "The War Zone — Watch Russia’s S-70 Unmanned Combat Air Vehicle Fly With An Su-57 For The First Time",
+            "url": "https://www.twz.com/30053/watch-russias-s-70-unmanned-combat-air-vehicle-fly-with-an-su-57-for-the-first-time"
+          },
+          {
+            "nome": "The War Zone — Russia’s New Two-Seat Su-57 Felon Takes Its First Flight",
+            "url": "https://www.twz.com/air/russias-new-two-seat-su-57-felon-takes-its-first-flight",
             "data": "2026-05-19"
           },
           {
@@ -479,18 +602,17 @@
       {
         "id": "LW-E024",
         "livello": "confermato",
-        "titolo": "Corea LOWUS e Giappone ATLA/Subaru: fasi sperimentali e carico del pilota",
-        "motivazione": "Per la Corea del Sud, DAPA e Korean Air documentano il dimostratore LOWUS; al briefing industriale riferito il 9 novembre 2026 Korean Air dichiarò la consegna di due dimostratori all’Agency for Defense Development, con primo volo ancora previsto entro la fine dell’anno. Per il Giappone, ATLA descrive ricerche su intelligenza artificiale, generazione automatica di traiettorie e controllo di più droni da parte di un pilota. ATLA ha ricevuto piattaforme sperimentali Subaru il 9 luglio 2025; entro ottobre sono seguite prove con elicottero pilotato e droni che simulavano manovre di formazione fino a cinque velivoli, raccogliendo dati sui percorsi generati e sul carico di lavoro del pilota. Il paragrafo non sostiene che tali prove siano tiri d’arma, né che un sistema IA specifico abbia già raggiunto piena autonomia tattica: si tratta di attività documentate di ricerca e sperimentazione.",
+        "titolo": "LOWUS e ATLA: dimostratori, navigazione e carico del pilota",
+        "motivazione": "Breaking Defense riporta dalla direzione di Korean Air la consegna di due dimostratori LOWUS all’ADD e l’obiettivo del primo volo entro fine 2026. Janes riscontra la costruzione dei due prototipi. ATLA data al 9 luglio 2025 la consegna di velivoli sperimentali Subaru e riferisce prove fino a ottobre con un elicottero pilotato e manovre che simulavano anche formazioni a cinque. L’agenzia documenta la raccolta di dati sui percorsi generati e sul carico del pilota, collocando la valutazione dell’efficacia in una fase successiva.",
         "fonti": [
-          {
-            "nome": "DAPA / ADD — Primo dimostratore LOWUS: primo passo verso MUM-T",
-            "url": "https://www.dapa.go.kr/dapa/doc/selectDoc.do?bbsSeq=326&docSeq=20690&menuSeq=3069",
-            "data": "2025-02-26"
-          },
           {
             "nome": "Mike Yeo / Breaking Defense — Korean Air Aerospace pushes forward with Collaborative Combat Aircraft plans",
             "url": "https://breakingdefense.com/2026/11/korean-air-aerospace-pushes-forward-with-collaborative-combat-aircraft-plans/",
             "data": "2026-11-09"
+          },
+          {
+            "nome": "Janes — ADEX 2025: KAL-ASD reveals new CCA amid plans to flight-test LOWUS loyal wingman",
+            "url": "https://www.janes.com/defence-intelligence-insights/defence-news/defence/adex-2025-kal-asd-reveals-new-cca-amid-plans-to-flight-test-lowus-loyal-wingman"
           },
           {
             "nome": "Japan ATLA — Research and Development brochure, Air Systems Research Center",
@@ -500,6 +622,206 @@
             "nome": "Japan ATLA — 遠隔操作型支援機技術の研究について / Ricerca sulle tecnologie per velivoli di supporto controllati a distanza",
             "url": "https://www.mod.go.jp/atla/kousouken/rc_support.html",
             "data": "2025-11-20"
+          }
+        ]
+      },
+      {
+        "id": "LW-E025",
+        "livello": "confermato",
+        "titolo": "Edwards, 8 ottobre 2026: direttive dal F-22 al Fury",
+        "motivazione": "L’USAF documenta una prova di controllo tattico in volo da F-22 su YFQ-44A. Air & Space Forces Magazine, citando Anduril, colloca a Edwards il decollo e descrive la trasmissione di un piano aggiornato dopo il ricongiungimento. Shield AI data la prova all’8 ottobre e attribuisce ad Hivemind l’esecuzione in tempo reale di manovre e compiti simulati. L’esempio di sorveglianza nel testo è illustrativo. La prova documentata riguarda l’assegnazione di direttive ai sistemi di missione in una dimostrazione.",
+        "fonti": [
+          {
+            "nome": "U.S. Air Force / DVIDS — F-22 Raptor demonstrates airborne tactical control of Collaborative Combat Aircraft newscast",
+            "url": "https://www.dvidshub.net/audio/94413/f-22-raptor-demonstrates-airborne-tactical-control-collaborative-combat-aircraft-newscast"
+          },
+          {
+            "nome": "Stephen Losey, Air & Space Forces Magazine — F-22 Pilot Directs CCA in Flight as “Airborne QB”",
+            "url": "https://www.airandspaceforces.com/f-22-pilot-directs-cca-in-flight-as-airborne-qb/",
+            "data": "2026-10-16"
+          },
+          {
+            "nome": "Shield AI — Shield’s Hivemind flies multiple Air Force CCAs as a coordinated team for the first time",
+            "url": "https://shield.ai/shields-hivemind-flies-multiple-air-force-ccas-as-a-coordinated-team-for-the-first-time/",
+            "data": "2026-11-09"
+          }
+        ]
+      },
+      {
+        "id": "LW-E026",
+        "livello": "plausibile",
+        "titolo": "Hivemind: ciclo di percezione, decisione e azione",
+        "motivazione": "Shield AI descrive Hivemind come software di autonomia capace di percepire, decidere e agire, con adattamento agli imprevisti e risposta a direttive di alto livello. La scheda del consorzio NAMC riprende questa caratterizzazione. La prova sul Fury riscontra l’adattamento a direttive durante la sortita. Il modo in cui il software aggiorna la rappresentazione dell’ambiente sul singolo velivolo rimane descritto soprattutto dal fornitore. L’estensione a compiti progressivamente più complessi è un’inferenza ragionevole che richiede verifiche specifiche.",
+        "fonti": [
+          {
+            "nome": "Shield AI — Hivemind successfully completes first CCA flight test aboard Anduril’s YFQ-44A aircraft",
+            "url": "https://shield.ai/hivemind-successfully-completes-first-cca-flight-test-aboard-andurils-yfq-44a-aircraft/",
+            "data": "2026-02-26"
+          },
+          {
+            "nome": "National Advanced Mobility Consortium — Shield AI, Inc.",
+            "url": "https://www.namconsortium.org/member-page/shield-ai-inc"
+          },
+          {
+            "nome": "Shield AI — Shield’s Hivemind flies multiple Air Force CCAs as a coordinated team for the first time",
+            "url": "https://shield.ai/shields-hivemind-flies-multiple-air-force-ccas-as-a-coordinated-team-for-the-first-time/",
+            "data": "2026-11-09"
+          }
+        ]
+      },
+      {
+        "id": "LW-E027",
+        "livello": "plausibile",
+        "titolo": "Nevada, 26 ottobre 2026: due Fury contro una minaccia virtuale",
+        "motivazione": "Shield AI ha annunciato il 9 novembre che la prova del 26 ottobre aveva coinvolto più CCA in manovre cooperative simulate oltre la distanza visiva. Air & Space Forces Magazine, sulla base di un’intervista al responsabile Shield AI, identifica due FQ-44A e riferisce le direttive impartite da terra contro una minaccia virtuale, senza un pilota in volo. La testata aggiunge dettagli al comunicato, ma per questi elementi dipende dalla stessa fonte industriale. Il risultato è plausibile entro lo scenario di prova. Restano senza riscontro indipendente la prestazione del software e l’estensione del coordinamento.",
+        "fonti": [
+          {
+            "nome": "Shield AI — Shield’s Hivemind flies multiple Air Force CCAs as a coordinated team for the first time",
+            "url": "https://shield.ai/shields-hivemind-flies-multiple-air-force-ccas-as-a-coordinated-team-for-the-first-time/",
+            "data": "2026-11-09"
+          },
+          {
+            "nome": "Stephen Losey, Air & Space Forces Magazine — In First, Two CCAs Fly Air Combat Maneuvers Using Autonomy Software",
+            "url": "https://www.airandspaceforces.com/cca-drones-fly-air-combat-maneuvers-autonomy-software/",
+            "data": "2026-11-09"
+          }
+        ]
+      },
+      {
+        "id": "LW-E028",
+        "livello": "confermato",
+        "titolo": "Contratti USAF: sei fornitori di autonomia e prime opzioni",
+        "motivazione": "L’USAF ha annunciato il 17 giugno 2026 un accordo quadro di sei anni con Anduril, General Atomics, Lockheed Martin, Northrop Grumman, RTX Collins Aerospace e Shield AI. Anduril, Collins e Shield AI hanno ricevuto le prime opzioni. Le licenze possono essere acquistate da qualunque fornitore del gruppo per la durata dell’accordo. Reuters riscontra la separazione contrattuale fra velivoli e software. L’estate 2027 è la scadenza prevista per scegliere il fornitore principale dell’Increment 1.",
+        "fonti": [
+          {
+            "nome": "U.S. Air Force — Air Force advances future of air superiority with CCA contracts",
+            "url": "https://www.usafe.af.mil/News/Article-Display/Article/4520575/air-force-advances-future-of-air-superiority-with-cca-contracts/",
+            "data": "2026-06-17"
+          },
+          {
+            "nome": "Reuters — US Air Force awards production contracts to General Atomics, Anduril for drone wingmen",
+            "url": "https://www.reuters.com/business/aerospace-defense/us-air-force-awards-production-contracts-general-atomics-anduril-drone-wingmen-2026-06-17/",
+            "data": "2026-06-17"
+          }
+        ]
+      },
+      {
+        "id": "LW-E029",
+        "livello": "confermato",
+        "titolo": "A-GRA e AMS GRA: due standard di architettura distinti",
+        "motivazione": "Il comunicato USAF del 28 luglio 2026 annuncia il rilascio dei due standard governativi. A-GRA riguarda le interfacce che consentono di integrare l’autonomia di missione con i sistemi della piattaforma. AMS GRA riguarda la modularità e la sostituzione di componenti hardware e software dei sistemi di missione. La descrizione sostiene la distinzione fra regole d’integrazione e software di autonomia. La compatibilità effettiva resta circoscritta alle implementazioni conformi e collaudate.",
+        "fonti": [
+          {
+            "nome": "U.S. Air Force — Air Force accelerates warfighter tech, releases foundational open architectures",
+            "url": "https://www.aflcmc.af.mil/NEWS/Article/4557729/air-force-accelerates-warfighter-tech-releases-foundational-open-architectures/",
+            "data": "2026-07-28"
+          },
+          {
+            "nome": "U.S. Air Force — Air Force advances future of air superiority with CCA contracts",
+            "url": "https://www.usafe.af.mil/News/Article-Display/Article/4520575/air-force-advances-future-of-air-superiority-with-cca-contracts/",
+            "data": "2026-06-17"
+          }
+        ]
+      },
+      {
+        "id": "LW-E030",
+        "livello": "confermato",
+        "titolo": "A2M2: ricerca AFRL sulla riassegnazione distribuita degli incarichi",
+        "motivazione": "Il bando AFRL e il suo allegato qualificano A2M2 come architettura di ricerca per riassegnare incarichi dopo imprevisti e con collegamenti intermittenti, entro i vincoli già ricevuti. La ripartizione distribuita dei compiti è distinta nel bando dal controllo del volo e dalla pianificazione delle traiettorie. La fonte conferma che queste funzioni sono oggetto di ricerca. La capacità descritta nell’articolo rimane prospettica.",
+        "fonti": [
+          {
+            "nome": "Air Force Research Laboratory — Artificial Intelligence and Next Generation Distributed Command and Control, FA8750-23-S-7006",
+            "url": "https://sam.gov/opp/1d465d753ed945b89469df850a88a4d1/view"
+          },
+          {
+            "nome": "Air Force Research Laboratory — FA8750-23-S-7006, Technical Areas, revisione del 24 giugno 2026, area 9 (GovTribe)",
+            "url": "https://govtribe.com/file/government-file/fa875023s7006-attachment-to-fa8750-23-s-7006-technical-areas-24-jun-2026-dot-pdf",
+            "data": "2026-06-24"
+          }
+        ]
+      },
+      {
+        "id": "LW-E031",
+        "livello": "confermato",
+        "titolo": "EICACS ed EICACS 2: obiettivi di interoperabilità e standard NATO",
+        "motivazione": "Le schede del Fondo europeo per la difesa identificano Dassault Aviation come coordinatore e descrivono il lavoro sull’interoperabilità dei sistemi di combattimento aereo e sulla gestione collaborativa della missione. La documentazione dell’EDF 2025, pubblicata nel 2026, attesta la selezione di EICACS 2 e indica il contributo ai futuri standard NATO come obiettivo. L’articolo mantiene condizionale la cooperazione fra flotte diverse. Le fonti documentano il programma di standardizzazione e il suo finanziamento.",
+        "fonti": [
+          {
+            "nome": "Commissione europea — European Defence Fund 2021, scheda EICACS",
+            "url": "https://defence-industry-space.ec.europa.eu/document/download/a6212405-673a-4303-add1-1be662c381ba_en?filename=Factsheet_EDF21_EICACS.pdf"
+          },
+          {
+            "nome": "Commissione europea — European Defence Fund 2025, scheda EICACS 2",
+            "url": "https://defence-industry-space.ec.europa.eu/document/download/8e47a86f-f4a8-440a-a96b-054c101616c9_en?filename=FACTSHEET_EDF_2025_DA_AIR_CAC_101304940_EICACS_2.pdf"
+          },
+          {
+            "nome": "Commissione europea — EDF 2025 Adopted Award Decision, C(2026) 4923",
+            "url": "https://defence-industry-space.ec.europa.eu/document/download/f957f709-27a2-4cb0-8f33-6214d2141d35_en?filename=EDF-2025+Adopted+Award+Decision+-+C%282026%29+4923+EN.PDF"
+          }
+        ]
+      },
+      {
+        "id": "LW-E032",
+        "livello": "confermato",
+        "titolo": "Optionally attritable: riutilizzo e rischio accettabile secondo la missione",
+        "motivazione": "Il colonnello Timothy Helfrich, responsabile USAF dell’acquisizione per i caccia e i velivoli avanzati, ha usato «optionally attritable» il 28 luglio 2026 per descrivere mezzi riutilizzabili la cui perdita può essere accettata se il valore della missione lo giustifica. Air & Space Forces Magazine riporta la dichiarazione il 30 luglio. Il CRS riscontra l’obiettivo di estendere la forza e ridurre il rischio per gli equipaggi. L’esempio dell’articolo rimane una scelta contingente del comando, senza attribuire all’USAF soglie economiche o tassi di perdita già stabiliti.",
+        "fonti": [
+          {
+            "nome": "Stephen Losey, Air & Space Forces Magazine — Air Force Official: CCAs Will Be “Optionally Attritable”",
+            "url": "https://www.airandspaceforces.com/air-force-official-cca-optionally-attritable/",
+            "data": "2026-07-30"
+          },
+          {
+            "nome": "Congressional Research Service — U.S. Air Force Collaborative Combat Aircraft (CCA), IF12740",
+            "url": "https://www.everycrsreport.com/files/2025-11-28_IF12740_46eb60d7198264b09a302cef612d4224867d2163.html",
+            "data": "2025-11-28"
+          }
+        ]
+      },
+      {
+        "id": "LW-E033",
+        "livello": "plausibile",
+        "titolo": "Modularità: più capacità possono aumentare il valore esposto alla perdita",
+        "motivazione": "Le famiglie Gambit e StormShroud documentano scelte diverse in materia di cellula e apparati. L’analisi CSBA esamina l’acquisizione e il sostegno dei CCA come aspetti interdipendenti. È ragionevole che apparati aggiuntivi possano aumentare il valore militare e l’onere di sostituzione, ma la modularità può anche distribuire i costi e favorire il riuso. Il giudizio dipende dalla configurazione, dalla disponibilità dei ricambi e dal costo dell’intero programma. Le fonti non consentono di quantificare un risparmio o una soglia generale di spendibilità.",
+        "fonti": [
+          {
+            "nome": "General Atomics Aeronautical Systems — Gambit Series",
+            "url": "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+          },
+          {
+            "nome": "Dstl — Dstl’s pivotal role in StormShroud uncrewed aircraft capability",
+            "url": "https://www.gov.uk/government/news/dstls-pivotal-role-in-stormshroud-uncrewed-aircraft-capability",
+            "data": "2025-05-14"
+          },
+          {
+            "nome": "Travis Sharp, CSBA — Ready Player None? An End-To-End Assessment of the Air Force Collaborative Combat Aircraft Program",
+            "url": "https://csbaonline.org/resource/ready-player-none-an-end-to-end-assessment-of-the-air-force-collaborative-combat-aircraft-program/"
+          }
+        ]
+      },
+      {
+        "id": "LW-E034",
+        "livello": "plausibile",
+        "titolo": "Gambit Core: comunanza progettuale e stima industriale del 70%",
+        "motivazione": "General Atomics documenta il legame del FQ-42A con Gambit e descrive il nucleo comune come comprendente struttura, carrello e avionica di base. Le fonti industriali presentano varianti di ricognizione e configurazioni per il combattimento aria-aria e aria-superficie a differenti stadi di sviluppo. Il 70% è il peso approssimativo del nucleo comune sul prezzo delle varianti secondo il costruttore. La riduzione dei costi duplicati è l’effetto industriale atteso della comunanza. I costi sostenuti e i risparmi effettivi non sono pubblicati.",
+        "fonti": [
+          {
+            "nome": "General Atomics Aeronautical Systems — Gambit Series",
+            "url": "https://www.ga-asi.com/remotely-piloted-aircraft/gambit-series"
+          },
+          {
+            "nome": "General Atomics — FQ-42 Vengeance Finds New Home at Creech Air Force Base",
+            "url": "https://www.ga-asi.com/fq-42-vengeance-finds-new-home-at-creech-air-force-base",
+            "data": "2026-09-21"
+          },
+          {
+            "nome": "General Atomics Aeronautical Systems — GA-ASI and INTEC Group Sign MOU at ILA Berlin",
+            "url": "https://www.ga-asi.com/ga-asi-and-intec-group-sign-mou-at-ila-berlin",
+            "data": "2026-06-11"
+          },
+          {
+            "nome": "General Atomics Aeronautical Systems — GA-ASI’s Gambit Series: The Future of Collaborative Combat Aircraft",
+            "url": "https://www.ga-asi.com/ga-asi-gambit-series-the-future-of-collaborative-combat-aircraft"
           }
         ]
       }
