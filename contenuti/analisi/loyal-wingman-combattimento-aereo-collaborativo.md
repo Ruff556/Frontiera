@@ -13,7 +13,7 @@ immagine:
   didascalia: "Un F-22 Raptor e un F-35A Lightning II volano in formazione con un XQ-58A Valkyrie sopra lo Yuma Proving Ground, in Arizona, il 9 dicembre 2020."
   credito: "U.S. Air Force / Tech. Sgt. James Cason"
   fonte: "https://www.af.mil/News/Photos/igphoto/2002551841/"
-  licenza: "Pubblico dominio USA, opera del governo federale statunitense (17 USC 105)."
+  licenza: "Pubblico dominio USA, opera del governo federale statunitense (17 USC 105). Fotografia dichiarata public domain dalla U.S. Air Force. Nessuna approvazione del DoD implicita."
   fit: cover
   posizione: "50% 50%"
 immagini_inline:
@@ -41,7 +41,14 @@ immagini_inline:
     fonte: "https://commons.wikimedia.org/wiki/File:StormShroud_(Tekever_AR3)_of_216_Squadron_RAF,_May_2025.jpg"
     licenza: "Open Government Licence v3.0, come indicata nella scheda del singolo file — https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/ — Ridimensionamento e conversione WebP, nessun ritaglio. Marchi e insegne militari esclusi dalla licenza."
     fit: contain
-  # brontanax — SOSPESA: alternative Reuters/ASDS individuate; licenza non ancora acquisita, nessun file pubblicato.
+  brontanax:
+    file: "/immagini/strategia/lw-brontanax-frontiera.webp"
+    alt: "Illustrazione generata con AI del velivolo senza equipaggio Brontanax, concepito come gregario autonomo."
+    didascalia: "Rappresentazione illustrativa del Brontanax, realizzata da Frontiera con AI. La figura offre una ricostruzione indicativa del velivolo."
+    credito: "Frontiera · illustrazione generata con AI"
+    fonte: "Creazione illustrativa Frontiera"
+    licenza: "Illustrazione generata con AI per Frontiera e convertita in WebP."
+    fit: contain
   remote_carriers:
     file: "/immagini/strategia/lw-remote-carrier-rc200-ila-2024.webp"
     alt: "Modello dimostrativo MBDA RC200 grigio esposto su supporti trasparenti a ILA Berlino."
@@ -152,6 +159,8 @@ Negli **Stati Uniti**, il programma *Collaborative Combat Aircraft* (CCA) ha ass
 {% figura immagini_inline.stormshroud, "2/4", "right" %}
 
 Un indirizzo differente emerge nel **Regno Unito**, dove la Royal Air Force (RAF) ha introdotto lo **StormShroud**, un velivolo senza pilota dalle dimensioni molto più contenute rispetto ai modelli precedenti, destinato principalmente alla **guerra elettronica**. Basato sulla piattaforma AR3 di TEKEVER, il sistema integra il *BriteStorm* sviluppato da Leonardo, un dispositivo capace di disturbare e ingannare i radar avversari mediante interferenze e segnali ingannevoli. Il suo contributo non consiste dunque nell'aggiungere armamenti alla formazione, ma nel **compromettere le capacità di rilevamento e ingaggio delle difese aeree**, favorendo l'azione di velivoli pilotati come il Typhoon e l'F-35B. Presentato come il primo esponente della nuova famiglia britannica di *Autonomous Collaborative Platforms* (ACP), lo StormShroud venne dichiarato in servizio nel maggio 2025. Nell'aprile 2026, la RAF documentò una dimostrazione di coordinamento fra più esemplari svolta nel dicembre precedente, mentre proseguiva lo sviluppo delle procedure operative e delle capacità di autonomia. {% affV1 "LW-E013" %}
+
+{% figura immagini_inline.brontanax, "2/4", "right" %}
 
 Il Regno Unito sta sviluppando anche una categoria di gregari più vicina ai grandi velivoli da combattimento. Nel luglio 2026, il governo britannico annunciò un investimento iniziale di **300 milioni di sterline nel programma *Storm Fighter***, destinato allo sviluppo di piattaforme autonome capaci di ampliare le possibilità operative dei caccia pilotati. Nello stesso mese, **BAE Systems presentò il Brontanax**: un velivolo senza equipaggio di dimensioni paragonabili a quelle di un addestratore Hawk, progettato per affiancare caccia come il Typhoon e svolgere missioni di guerra elettronica e attacco di precisione contro bersagli aerei e terrestri. Il progetto prevede un'architettura modulare e la possibilità di ricevere direttive da un pilota o da un comandante di missione, sviluppando autonomamente i compiti assegnati. Ancora in completamento nell'autunno 2026, il dimostratore dovrebbe affrontare le prove a terra e volare per la prima volta nel 2027, con l'obiettivo dichiarato da BAE Systems di entrare in servizio entro la fine del decennio. {% affV1 "LW-E014" %}
 
