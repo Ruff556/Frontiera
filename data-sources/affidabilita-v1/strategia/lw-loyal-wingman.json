@@ -73,9 +73,9 @@
       },
       {
         "id": "LW-E004",
-        "livello": "non-verificato",
-        "titolo": "Piano USAF del 2009: funzioni attestate, data della pubblicazione da precisare",
-        "motivazione": "Il Flight Plan reca la data del 18 maggio 2009 e descrive a p. 34 la tecnologia loyal wingman, includendo ricognizione, interdizione, contrasto alle difese aeree e trasporto di armi. Il resoconto USAF del 15 luglio documenta la presentazione pubblica del piano: la data del frontespizio non documenta una pubblicazione nel maggio 2009. È una precoce attestazione istituzionale. Il primato cronologico evocato da «prima attestazione» richiederebbe una ricognizione ulteriore delle fonti precedenti.",
+        "livello": "confermato",
+        "titolo": "Il Flight Plan USAF del 2009 e le funzioni previste per il loyal wingman",
+        "motivazione": "Il piano USAF, datato 18 maggio 2009, descrive a p. 34 la cooperazione fra un velivolo senza equipaggio e uno pilotato, con compiti di ricognizione, interdizione, contrasto alle difese aeree e trasporto di armamenti aggiuntivi. La comunicazione USAF del 15 luglio e la conferenza stampa del Pentagono del 23 luglio documentano la presentazione del piano in quel mese. Il documento attesta una precoce formulazione istituzionale del gregario come concetto d’impiego e presenta quelle funzioni come prospettive di sviluppo.",
         "fonti": [
           {
             "nome": "Headquarters U.S. Air Force — Unmanned Aircraft Systems Flight Plan 2009–2047, p. 34 e pp. 38–40",
@@ -86,6 +86,11 @@
             "nome": "U.S. Air Force — Air Force leaders roll out UAS flight plan",
             "url": "https://www.af.mil/News/Article-Display/Article/119739/air-force-leaders-roll-out-uas-flight-plan/",
             "data": "2009-07-15"
+          },
+          {
+            "nome": "U.S. Department of Defense — DoD News Briefing with Lt. Gen. Deptula and Col. Mathewson from the Pentagon",
+            "url": "https://www.airandspaceforces.com/PDF/SiteCollectionDocuments/Reports/2009/July%202009/Day24/UASplanbrief072309.pdf",
+            "data": "2009-07-23"
           }
         ]
       },
@@ -208,10 +213,15 @@
       },
       {
         "id": "LW-E011",
-        "livello": "plausibile",
-        "titolo": "FQ-42 e FQ-44: Increment 1 e cronologia di Creech",
-        "motivazione": "USAF e Reuters riscontrano i contratti per entrambe le linee nel giugno 2026. General Atomics documenta la selezione del 2024 e la genealogia Gambit/XQ-67A, mentre Anduril presenta Fury come piattaforma multimissione. Le fonti li collocano nello stesso programma per la superiorità aerea senza assegnare loro ruoli esclusivi. La cronologia dell’ultima frase richiede una correzione: secondo il comunicato USAF del 24 settembre, il Fury fu consegnato all’unità sperimentale in agosto, mentre il Vengeance arrivò il 18 settembre secondo General Atomics. Le prove di luglio documentano la presenza dei dimostratori a Creech prima di entrambe le consegne.",
+        "livello": "confermato",
+        "titolo": "Fury e Vengeance: selezione, contratti e consegne a Creech",
+        "motivazione": "L’USAF documenta la selezione di Anduril e General Atomics per i dimostratori nell’aprile 2024 e i contratti di sviluppo ingegneristico e produzione per entrambi i velivoli nel giugno 2026, riscontrati anche da Reuters. General Atomics ricostruisce la derivazione del Vengeance dalla famiglia Gambit e il ruolo sperimentale dell’XQ-67A. Anduril presenta il Fury come piattaforma multimissione. L’USAF assegna a entrambi il contributo alla superiorità aerea e affida alla sperimentazione il compito di precisarne l’impiego operativo. Dopo le prove di luglio a Creech, il resoconto USAF del 24 settembre colloca la consegna del Fury all’unità sperimentale in agosto. General Atomics data al 18 settembre l’arrivo del Vengeance per le successive prove e valutazioni.",
         "fonti": [
+          {
+            "nome": "U.S. Air Force — Air Force exercises two Collaborative Combat Aircraft option awards",
+            "url": "https://www.af.mil/News/Article-Display/Article/3754980/air-force-exercises-two-collaborative-combat-aircraft-option-awards/",
+            "data": "2024-04-24"
+          },
           {
             "nome": "U.S. Air Force — Air Force advances future of air superiority with CCA contracts",
             "url": "https://www.usafe.af.mil/News/Article-Display/Article/4520575/air-force-advances-future-of-air-superiority-with-cca-contracts/",
@@ -287,9 +297,9 @@
       },
       {
         "id": "LW-E013",
-        "livello": "plausibile",
-        "titolo": "StormShroud: entrata in servizio e prova con più velivoli",
-        "motivazione": "RAF e Dstl documentano l’introduzione in servizio nel maggio 2025, la piattaforma TEKEVER AR3, il sistema Leonardo BriteStorm e la funzione di guerra elettronica a supporto di Typhoon e F-35B. La RAF colloca la dimostrazione con più StormShroud nel dicembre 2025 in un resoconto pubblicato il 22 aprile 2026. Resta senza riscontro una comunicazione della RAF sull’esercitazione già nel dicembre 2025, come suggerisce la frase dell’articolo. Il coordinamento dimostrato nell’esercitazione e l’efficacia contro difese reali sono acquisizioni distinte. La RAF descrive ulteriori sviluppi nelle procedure e nell’autonomia.",
+        "livello": "confermato",
+        "titolo": "StormShroud: ingresso in servizio e coordinamento in esercitazione",
+        "motivazione": "La RAF ha annunciato nel maggio 2025 l’ingresso in servizio di StormShroud come prima piattaforma della famiglia ACP. RAF e Dstl ne documentano la configurazione, con il TEKEVER AR3 e il BriteStorm di Leonardo, e la funzione prevista di disturbo e inganno radar a sostegno di Typhoon e F-35B. Nel resoconto del 22 aprile 2026 la RAF riferisce che più esemplari operarono in coordinamento durante un’esercitazione del dicembre 2025 e descrive l’ulteriore sviluppo di procedure e autonomia. Il resoconto attesta il coordinamento nell’esercitazione. L’efficacia contro difese aeree reali resta fuori dal perimetro della prova pubblicata.",
         "fonti": [
           {
             "nome": "Royal Air Force — StormShroud arrival marks the future of UK Air Combat Power",
@@ -311,9 +321,14 @@
       {
         "id": "LW-E014",
         "livello": "plausibile",
-        "titolo": "Storm Fighter e Brontanax: finanziamento e maturità del dimostratore",
-        "motivazione": "La risposta parlamentare e l’annuncio di luglio collocano l’impegno britannico di 300 milioni di sterline nel programma Storm Fighter. BAE ha presentato Brontanax come propria iniziativa, con dimensioni simili all’Hawk, configurazione modulare e funzioni previste di guerra elettronica e attacco. Il costruttore parlava di preparativi per prove a terra. Aviation Week riferiva ancora in novembre che il dimostratore era vicino al completamento, perciò «già costruito come prototipo» merita una formulazione più precisa. Il primo volo nel 2027 e la disponibilità a fine decennio restano obiettivi. Il finanziamento del programma non equivale alla selezione del Brontanax.",
+        "titolo": "Storm Fighter e Brontanax: finanziamento del programma e stato del dimostratore",
+        "motivazione": "Il Ministero della Difesa britannico documenta a luglio l’impegno di 300 milioni di sterline per lo sviluppo di un velivolo autonomo nazionale nel quadro di Storm Fighter. Il 22 luglio BAE ha presentato Brontanax come un progetto finanziato fino ad allora con risorse proprie e ha descritto modularità, dimensioni e missioni previste. Reuters riferiva a luglio di un esemplare già assemblato a Warton. Aviation Week descriveva il dimostratore come ancora in completamento il 6 novembre. Le fonti non precisano quali lavori restassero dopo l’assemblaggio, perciò il grado resta plausibile per lo stato di avanzamento. Prove a terra, primo volo nel 2027 e disponibilità per l’ingresso in servizio entro fine decennio appartengono al calendario annunciato. Le fonti documentano il finanziamento generale di Storm Fighter e l’iniziativa di BAE. L’eventuale assegnazione di risorse del programma al singolo progetto richiede evidenza specifica.",
         "fonti": [
+          {
+            "nome": "UK Ministry of Defence — Over £4 billion invested in next-generation fighter jet with new international contract",
+            "url": "https://www.gov.uk/government/news/over-4-billion-invested-in-next-generation-fighter-jet-with-new-international-contract",
+            "data": "2026-07-03"
+          },
           {
             "nome": "BAE Systems — First British designed Collaborative Combat Aircraft unveiled",
             "url": "https://www.baesystems.com/en/article/first-british-designed-collaborative-combat-aircraft-unveiled",
