@@ -2987,7 +2987,7 @@ footer .license-note a:hover{color:#fff}
   font-family:'IBM Plex Mono',monospace;font-size:.72rem;line-height:1;
   color:var(--muted);transition:color var(--t1);
 }
-.credito-immagine-link > span{font-family:system-ui,sans-serif;font-size:.84rem}
+.credito-immagine-link > span{font-family:system-ui,sans-serif;font-size:.82em;opacity:.8}
 .credito-immagine-link:is(:hover,:focus-visible){color:var(--accent)}
 .credito-immagine-link:focus-visible{outline-color:currentColor;outline-offset:2px}
 .analisi-head-caption .credito-immagine-link{color:var(--on-dark-3)}
@@ -3019,7 +3019,19 @@ footer .license-note a:hover{color:#fff}
 .crediti-iconografici-lista > li{margin:0;padding:0 0 1rem}
 .crediti-iconografici-lista > li + li{border-top:1px solid var(--hairline);padding-top:1rem}
 .crediti-iconografici-lista > li:last-child{padding-bottom:0}
-.crediti-iconografici-lista > li:target{outline:2px solid var(--accent);outline-offset:.3rem}
+/* La cornice occupa lo spazio circostante senza spostare testo e ancore. */
+.crediti-iconografici-lista > li:target{position:relative;isolation:isolate;outline:none}
+.crediti-iconografici-lista > li:target,
+.crediti-iconografici-lista > li:target + li{border-top-color:transparent}
+.crediti-iconografici-lista > li:target::before{
+  content:"";position:absolute;z-index:-1;inset:.25rem -.75rem;
+  pointer-events:none;border:1px solid var(--hairline);border-radius:var(--r-lg);
+  border-color:color-mix(in srgb,var(--accent) 34%,var(--hairline));
+  background:var(--accent-soft);
+}
+.crediti-iconografici-lista > li:target:first-child::before{inset-block-start:-.75rem}
+.crediti-iconografici-lista > li:target:last-child::before{inset-block-end:-.75rem}
+.crediti-iconografici-lista > li:target:focus-visible::before{border-color:var(--accent)}
 .reading .crediti-iconografici h3{
   display:flex;gap:.6rem;align-items:baseline;margin:0 0 .35rem;
   font-size:.94rem;line-height:1.4;
