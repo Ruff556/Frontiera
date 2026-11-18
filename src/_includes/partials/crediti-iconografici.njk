@@ -1,0 +1,41 @@
+{% macro richiamoCredito(voce) %}
+<a class="credito-immagine-link" href="#{{ voce.id | escape }}" aria-label="Crediti iconografici dell’immagine {{ voce.numero | escape }}">{{ voce.numero | escape }} <span aria-hidden="true">ⓘ</span></a>
+{% endmacro %}
+
+{% macro registroCrediti(voci) %}
+{% if voci.length %}
+<section class="crediti-iconografici" aria-labelledby="crediti-iconografici" data-section-navigation-ignore>
+  <h2 id="crediti-iconografici">Crediti iconografici</h2>
+  <ol class="crediti-iconografici-lista" role="list">
+    {% for voce in voci %}
+    <li id="{{ voce.id | escape }}" tabindex="-1">
+      <h3><span class="crediti-iconografici-numero">{{ voce.numero | escape }}</span> <span>{% if voce.copertina %}Copertina · {% endif %}{{ voce.nome | escape }}</span></h3>
+      {% if voce.campi.length %}
+      <dl>
+        {% for campo in voce.campi %}
+        <div>
+          <dt>{{ campo.etichetta }}</dt>
+          <dd>
+            {%- for parte in campo.segmenti -%}
+              {%- if parte.url -%}
+                <a href="{{ parte.url | escape }}">{{ parte.testo | escape }}</a>
+              {%- else -%}
+                {{ parte.testo | escape }}
+              {%- endif -%}
+            {%- endfor -%}
+          </dd>
+        </div>
+        {% endfor %}
+      </dl>
+      {% endif %}
+      <div class="crediti-iconografici-ritorni">
+        {% for uso in voce.usi %}
+        <a href="#{{ uso.id | escape }}">Torna all’immagine{% if voce.usi.length > 1 %} ({{ loop.index }} di {{ voce.usi.length }}){% endif %}</a>
+        {% endfor %}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endif %}
+{% endmacro %}

@@ -2,9 +2,11 @@
 layout: layouts/base.njk
 ---
 {% from "partials/struttura-editoriale.njk" import testataEditoriale, corpoEditoriale %}
+{% from "partials/crediti-iconografici.njk" import registroCrediti %}
+{% set apparato = content | creditiIconografici(immagine, immagini_inline) %}
 
 {# Metadati Analisi dentro la struttura editoriale condivisa. #}
-{% call testataEditoriale(sezione | archivioUrl, sezione, immagine) %}
+{% call testataEditoriale(sezione | archivioUrl, sezione, immagine, apparato.hero) %}
   <div class="artkicker">{{ sezione }}{% if teatro %} · Teatro: {{ teatro }}{% endif %}</div>
   <h1>{{ titolo }}</h1>
   {% if sommario %}<p class="standfirst">{{ sommario }}</p>{% endif %}
@@ -18,7 +20,7 @@ layout: layouts/base.njk
 {% set modelloInfobox = infobox | modelloInfobox("analisi", {}, null, page.inputPath) %}
 {% call corpoEditoriale(modelloInfobox, "Sintesi dell’articolo") %}
   <div class="articlebody" data-section-navigation>
-    {{ content | safe }}
+    {{ apparato.corpo | safe }}
   </div>
 
   {% set collegate = [] %}
@@ -33,4 +35,5 @@ layout: layouts/base.njk
     {% endfor %}
   </aside>
   {% endif %}
+  {{ registroCrediti(apparato.voci) }}
 {% endcall %}

@@ -21,6 +21,7 @@ const {
 } = require("./src/_lib/diagramma-profondita");
 const { normalizeInfobox } = require("./src/_lib/infobox");
 const { normalizeFigura } = require("./src/_lib/figura");
+const { creditiIconografici, riferimentoFigura } = require("./src/_lib/crediti-iconografici");
 const {
   creaRegistry: creaRegistryAffidabilitaV1,
   renderIndicatore: renderIndicatoreAffidabilitaV1,
@@ -179,14 +180,23 @@ function metadataForProfile(metadata, profile) {
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(rssPlugin);
   let nunjucksEnvironment;
+  let linkify;
   eleventyConfig.on("eleventy.engine.njk", ({ environment }) => { nunjucksEnvironment = environment; });
+  eleventyConfig.addFilter("creditiIconografici", (html, copertina, figure) =>
+    creditiIconografici(html, copertina, figure, linkify, (voce) => nunjucksEnvironment.renderString(
+      '{% from "partials/crediti-iconografici.njk" import richiamoCredito %}{{ richiamoCredito(voce) }}',
+      { voce }
+    ))
+  );
   eleventyConfig.addNunjucksShortcode("figura", function (img, misura, lato) {
     const modello = normalizeFigura(img, misura, lato, this.page?.inputPath);
     try { imageSourcePath(modello.img.file); }
     catch (error) { throw new Error(`[figura] ${this.page?.inputPath}: ${error.message}`); }
+    const riferimento = this.ctx.layout === "layouts/analisi.njk"
+      ? riferimentoFigura(img, this.ctx.immagini_inline, modello) : null;
     const html = nunjucksEnvironment.renderString(
-      '{% from "partials/media.njk" import figuraInline %}{{ figuraInline(modello) }}',
-      { modello }
+      '{% from "partials/media.njk" import figuraInline %}{{ figuraInline(modello, riferimento) }}',
+      { modello, riferimento }
     ).trim().replace(/\n\s*/g, " ");
     // Un HTML block Markdown termina alla prima riga vuota: il markup compatto
     // evita paragrafi spurii nei crediti quando un campo opzionale è assente.
@@ -211,6 +221,7 @@ module.exports = function (eleventyConfig) {
   // (che sono generati dai layout .njk e non passano da questo renderer).
   eleventyConfig.amendLibrary("md", (mdLib) => {
     mdLib.set({ html: true });
+    linkify = mdLib.linkify;
 
     // Host considerati INTERNI a Frontiera: un URL assoluto verso uno di questi
     // NON è un link esterno (evita falsi positivi su URL che puntano comunque al
