@@ -1,16 +1,21 @@
 ---
-# FRONTIERA | LW · base editoriale per scrittura diretta
-# Titolo e sommario provvisori; modificabili durante la composizione.
 titolo: "Loyal wingman, il combattimento aereo collaborativo"
 slug: loyal-wingman-combattimento-aereo-collaborativo
 data: 2026-11-10
 sezione: Strategia
-sommario: "Origine del concetto di loyal wingman, programmi internazionali e funzioni dei velivoli collaborativi senza pilota nel combattimento aereo."
+sommario: "Dalle prime formulazioni dell'USAF ai programmi internazionali, i *loyal wingman* promettono nuove forme di collaborazione fra caccia e velivoli senza pilota. Fra autonomia, sensori, armamenti e costi, si delinea un nuovo livello di proiezione per le forze aeree."
 teatro: Globale
 domini: [aria, droni]
-sistemi_citati: []
-# Copertina da assegnare dopo la selezione iconografica.
-immagine: null
+sistemi_citati: [NGAD, F-47, GCAP, CCA, Predator, Hellfire, X-45A, F-16, Have Raider, Have Raider II, CODE, XQ-58A Valkyrie, Skyborg, ACS, UTAP-22, MQ-20 Avenger, MQ-28 Ghost Bat, AIM-120, F/A-18F Super Hornet, E-7A Wedgetail, FQ-42 Vengeance, FQ-44 Fury, XQ-67A, Gambit, Gambit Core, A-GRA, StormShroud, AR3, BriteStorm, Typhoon, F-35B, Brontanax, Storm Fighter, NGWS/FCAS, Remote Carriers, Do-DT25, A400M, Learjet, H145M, Remote Carrier Compact, U740 Valkyrie, MARS, Eurofighter, Rafale F5, nEUROn, Bayraktar Kızılelma, Gökdoğan, Murad, K-SWARM, M-346 Fighter Attack, ANKA III, TEBER-82, TOLUN, Hürjet, GJ-11 Xuanlong, J-20, J-16D, J-20S, S-70 Okhotnik, Su-57, Su-57D, UMPB D-30SN, LOWUS, F-22 Raptor, YFQ-44A Fury, Hivemind, A2M2, Lattice for Mission Autonomy, AMS GRA, EICACS, EICACS 2]
+immagine:
+  file: /immagini/strategia/lw-f22-f35-xq58-valkyrie.jpg
+  alt: "Un F-22 Raptor in primo piano, un F-35A Lightning II e un XQ-58A Valkyrie in formazione sopra il deserto dell'Arizona."
+  didascalia: "Un F-22 Raptor e un F-35A Lightning II volano in formazione con un XQ-58A Valkyrie sopra lo Yuma Proving Ground, in Arizona, il 9 dicembre 2020."
+  credito: "U.S. Air Force / Tech. Sgt. James Cason"
+  fonte: "https://www.af.mil/News/Photos/igphoto/2002551841/"
+  licenza: "Pubblico dominio USA, opera del governo federale statunitense (17 USC 105)."
+  fit: cover
+  posizione: "50% 50%"
 immagini_inline:
   mq28:
     file: "/immagini/strategia/lw-mq28-valiant-shield-2026.webp"
@@ -93,16 +98,19 @@ immagini_inline:
     fonte: "https://commons.wikimedia.org/wiki/File:S-70_takeoff_front_view.png"
     licenza: "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/ — Attribuzione richiesta: Mil.ru. Autorizzazione generale documentata in https://commons.wikimedia.org/wiki/Template:Mil.ru (ticket VRT 2024021510008013); sul singolo file resta l’avviso Commons «License review needed». Ridimensionamento e conversione WebP del fotogramma già estratto, nessun nuovo ritaglio."
     fit: contain
-# L'infobox sarà costruito sulle acquisizioni dell'articolo, non su segnaposto.
-infobox: null
-# Modello disponibile, da attivare solo quando le tre voci sono definite:
-# infobox:
-#   tipo: 2
-#   titolo: "..."
-#   voci:
-#     - occhiello: "..."
-#       titolo: "..."
-#       testo: "..."
+infobox:
+  tipo: 2
+  titolo: "Oltre la formazione"
+  voci:
+    - occhiello: "Cooperazione"
+      titolo: "Insieme, anche a distanza"
+      testo: "Il gregario non deve necessariamente volare accanto al caccia. Sensori, armamenti e sistemi di guerra elettronica possono operare su piattaforme separate, contribuendo alla stessa missione attraverso lo scambio di informazioni e il coordinamento dei compiti."
+    - occhiello: "Autonomia"
+      titolo: "Dall'ordine alla condotta"
+      testo: "Il comando assegna obiettivi e vincoli, mentre il software elabora le manovre necessarie. La ricerca esplora anche la possibilità di redistribuire autonomamente gli incarichi fra gregari quando la formazione subisce perdite o interruzioni delle comunicazioni."
+    - occhiello: "Spendibilità"
+      titolo: "Rischiare senza sacrificare"
+      testo: "Un loyal wingman non è necessariamente destinato a essere perduto. Costi e capacità ne determinano la spendibilità: la possibilità di accettare rischi maggiori può ampliare la libertà d'impiego della forza aerea, preservandone i velivoli più preziosi."
 ---
 
 Quando si parla di caccia di sesta generazione, l'attenzione va naturalmente ai nuovi velivoli pilotati. Eppure, alcuni degli sviluppi più interessanti riguardano proprio i velivoli senza equipaggio progettati per cooperare con loro. Negli Stati Uniti, accanto allo sviluppo dell'F-47, il programma NGAD comprende anche i *Collaborative Combat Aircraft* (CCA), velivoli senza equipaggio concepiti per cooperare con le forze pilotate. Il GCAP, programma congiunto di Regno Unito, Italia e Giappone, sviluppa a sua volta un nuovo caccia destinato a inserirsi in un sistema di combattimento più ampio, nel quale potranno trovare posto anche piattaforme autonome. {% affV1 "LW-E001" %}
@@ -144,8 +152,6 @@ Negli **Stati Uniti**, il programma *Collaborative Combat Aircraft* (CCA) ha ass
 {% figura immagini_inline.stormshroud, "2/4", "right" %}
 
 Un indirizzo differente emerge nel **Regno Unito**, dove la Royal Air Force (RAF) ha introdotto lo **StormShroud**, un velivolo senza pilota dalle dimensioni molto più contenute rispetto ai modelli precedenti, destinato principalmente alla **guerra elettronica**. Basato sulla piattaforma AR3 di TEKEVER, il sistema integra il *BriteStorm* sviluppato da Leonardo, un dispositivo capace di disturbare e ingannare i radar avversari mediante interferenze e segnali ingannevoli. Il suo contributo non consiste dunque nell'aggiungere armamenti alla formazione, ma nel **compromettere le capacità di rilevamento e ingaggio delle difese aeree**, favorendo l'azione di velivoli pilotati come il Typhoon e l'F-35B. Presentato come il primo esponente della nuova famiglia britannica di *Autonomous Collaborative Platforms* (ACP), lo StormShroud venne dichiarato in servizio nel maggio 2025. Nel dicembre dello stesso anno, la RAF riferì una dimostrazione di coordinamento fra più esemplari, mentre proseguiva lo sviluppo delle procedure operative e delle capacità di autonomia. {% affV1 "LW-E013" %}
-
-{% figura immagini_inline.brontanax, "2/4", "right" %}
 
 Il Regno Unito sta sviluppando anche una categoria di gregari più vicina ai grandi velivoli da combattimento. Nel luglio 2026, il governo britannico annunciò un investimento iniziale di **300 milioni di sterline nel programma *Storm Fighter***, destinato allo sviluppo di piattaforme autonome capaci di ampliare le possibilità operative dei caccia pilotati. In questo contesto si inserisce il **Brontanax**, presentato nello stesso mese da BAE Systems: un velivolo senza equipaggio di dimensioni paragonabili a quelle di un addestratore Hawk, progettato per affiancare caccia come il Typhoon e svolgere missioni di guerra elettronica e attacco di precisione contro bersagli aerei e terrestri. Il progetto prevede un'architettura modulare e la possibilità di ricevere direttive da un pilota o da un comandante di missione, sviluppando autonomamente i compiti assegnati. Già costruito come prototipo e avviato verso le prove a terra, il Brontanax dovrebbe effettuare il primo volo nel 2027, con l'obiettivo dichiarato di entrare in servizio entro la fine del decennio. {% affV1 "LW-E014" %}
 
