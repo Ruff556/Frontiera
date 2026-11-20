@@ -2,6 +2,126 @@
   "versione": 1,
   "dataset": "ugv",
   "ambiti": {
-    "contenuti/analisi/ugv.md": []
+    "contenuti/analisi/ugv.md": [
+      {
+        "id": "UGV-E001",
+        "livello": "plausibile",
+        "titolo": "Il Ratel H «Did» della 79ª brigata",
+        "motivazione": "Il 7° Corpo delle forze d’assalto aereo ha presentato il Ratel H impiegato dalla 79ª brigata. Secondo il reparto, il mezzo ha trasportato circa 19 tonnellate di carico in una cinquantina di missioni nell’arco di quasi un anno. Il tecnico intervistato riferisce circa dodici sostituzioni delle ruote. Le cifre provengono dal reparto e il registro delle missioni non è pubblico.",
+        "fonti": [
+          {
+            "nome": "7° Corpo delle forze d’assalto aereo ucraine — Video sul Ratel H «Did»",
+            "url": "https://t.me/corps7DSHV/1645",
+            "data": "2026-07-18"
+          },
+          {
+            "nome": "Andrii Konyk, Ukrainska Pravda — Meet “Grandpa”, the Ukrainian ground robot that has completed nearly 50 missions in a year",
+            "url": "https://www.pravda.com.ua/eng/news/2026/07/18/8044722/",
+            "data": "2026-07-18"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E005",
+        "livello": "confermato",
+        "titolo": "La logistica come principale impiego degli UGV secondo il Ministero",
+        "motivazione": "Il Ministero della Difesa ucraino indica la logistica come compito della maggioranza delle missioni UGV nel bilancio di gennaio 2026. Nel quadro di novembre descrive gli UGV logistici come la categoria più diffusa. Le due note sostengono l’attribuzione al Ministero. Manca una ripartizione numerica delle missioni per funzione sull’intero periodo.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa dell’Ucraina — Over 7,000 missions in January: Ukraine expands deployment of ground robotic systems",
+            "url": "https://mod.gov.ua/en/news/over-7-000-missions-in-january-ukraine-expands-deployment-of-ground-robotic-systems",
+            "data": "2026-02-17"
+          },
+          {
+            "nome": "Ministero della Difesa dell’Ucraina — UGVs and cargo drones: how Ukraine is scaling up frontline logistics and evacuation",
+            "url": "https://mod.gov.ua/en/explainers/ukraine-ugvs-cargo-drones-frontline-logistics",
+            "data": "2026-11-11"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E006",
+        "livello": "confermato",
+        "titolo": "Missioni logistiche e di evacuazione registrate in DELTA",
+        "motivazione": "La serie ministeriale pubblicata il 6 novembre riporta 7.511 missioni a gennaio e 31.398 a ottobre. I dieci conteggi mensili sommano 171.253 missioni, coerenti con le oltre 171.000 citate nell’approfondimento dell’11 novembre. Si tratta delle missioni logistiche e di evacuazione registrate in DELTA e verificate da Brave1. I registri di missione individuali non sono pubblici.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa dell’Ucraina — UGVs complete over 30,000 missions in a single month for the first time",
+            "url": "https://mod.gov.ua/en/news/ukraine-ugv-missions-october-2026",
+            "data": "2026-11-06"
+          },
+          {
+            "nome": "Ministero della Difesa dell’Ucraina — UGVs and cargo drones: how Ukraine is scaling up frontline logistics and evacuation",
+            "url": "https://mod.gov.ua/en/explainers/ukraine-ugvs-cargo-drones-frontline-logistics",
+            "data": "2026-11-11"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E009",
+        "livello": "plausibile",
+        "titolo": "La missione di rifornimento raccontata da Roboneers",
+        "motivazione": "Taras Rokoshevskyi, cofondatore di Roboneers, riferisce una consegna di 200 kg di rifornimenti a una posizione distante 10 km. I diciotto uomini necessari per una consegna equivalente sono una stima del comandante, riportata da Rokoshevskyi. L’intervista documenta il racconto di un singolo episodio e la stima del personale che sarebbe servito in quel caso.",
+        "fonti": [
+          {
+            "nome": "Daniel McLaughlin, The Irish Times — Ukraine’s army of ground drones aims to save lives in the ‘kill zone’",
+            "url": "https://www.irishtimes.com/world/europe/2025/11/03/ukraines-army-of-ground-drones-aims-to-save-lives-in-the-kill-zone/",
+            "data": "2025-11-03"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E010",
+        "livello": "plausibile",
+        "titolo": "Aumento dei reparti che rendicontano missioni UGV",
+        "motivazione": "Secondo il ministro Mykhailo Fedorov, ripreso da ArmyInform, nei primi cinque mesi del 2026 i reparti che rendicontavano missioni UGV sono passati da 117 a 230. Il bacino di rendicontazione è quindi cresciuto nella finestra documentata. I dati pubblici non permettono di isolare quanto questo ampliamento abbia contribuito all’aumento delle missioni registrate fino a ottobre.",
+        "fonti": [
+          {
+            "nome": "ArmyInform — 50.000 missioni dall’inizio dell’anno e quasi il doppio dei reparti che rendicontano",
+            "url": "https://armyinform.com.ua/2026/06/09/50-000-misij-z-pochatku-roku-vdvichi-bilshe-pidrozdiliv-operatoriv-yak-masshtabuyetsya-nrk-skladova-syl-oborony/",
+            "data": "2026-06-09"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E046",
+        "livello": "plausibile",
+        "titolo": "Il rifornimento aereo nella testimonianza della 24ª brigata",
+        "motivazione": "Le Monde ha intervistato Sergej, detto «Rahnar», addetto alla logistica della 24ª brigata meccanizzata ucraina. Il reportage descrive il passaggio dai rifornimenti stradali alle consegne aeree per alcune posizioni e indica circa otto chilogrammi come carico abituale dei droni impiegati dal suo reparto. La testimonianza riguarda le posizioni e i mezzi descritti nel reportage.",
+        "fonti": [
+          {
+            "nome": "Thomas d’Istria e Virginie NGuyen Hoang, Le Monde — Des drones chargés d’œufs durs et de viande séchée",
+            "url": "https://www.lemonde.fr/international/article/2026/06/17/des-drones-charges-d-ufs-durs-et-de-viande-sechee-sur-le-front-du-donbass-un-magasinier-veut-ameliorer-le-quotidien-des-soldats-ukrainiens_6704237_3210.html",
+            "data": "2026-06-17"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E047",
+        "livello": "plausibile",
+        "titolo": "Le distanze percorse a piedi secondo un comandante della 92ª brigata",
+        "motivazione": "Anatolii Tkachenko, comandante di una batteria mortai della 92ª brigata ucraina, riferisce a CEPA percorsi a piedi di 30 km per i fanti e di 10–15 km per le squadre di mortai e gli operatori di droni. Le distanze sono quelle citate dall’intervistato nel contesto operativo che descrive.",
+        "fonti": [
+          {
+            "nome": "David Kirichenko, CEPA — Frontline Drones: Doing the Infantry’s Heavy Lifting",
+            "url": "https://cepa.org/article/frontline-drones-doing-the-infantrys-heavy-lifting/",
+            "data": "2026-07-22"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E048",
+        "livello": "plausibile",
+        "titolo": "L’aumento degli spostamenti a piedi secondo un operatore ucraino",
+        "motivazione": "Un operatore del 4° reggimento Ranger delle forze speciali ucraine, identificato come «Gur», racconta a Business Insider che la maggiore presenza di droni russi ha indotto il suo reparto a muoversi più spesso a piedi. La testimonianza descrive l’esperienza dell’unità intervistata.",
+        "fonti": [
+          {
+            "nome": "Jake Epstein, Business Insider — Ukrainian troops are walking more and spreading out to avoid drones, special operator says",
+            "url": "https://www.businessinsider.com/ukrainian-troops-walk-more-spreading-out-avoid-drones-special-operator-2026-7",
+            "data": "2026-07-22"
+          }
+        ]
+      }
+    ]
   }
 }
