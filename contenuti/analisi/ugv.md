@@ -16,7 +16,15 @@ immagine:
   licenza: ""
   fit: ""
   posizione: ""
-immagini_inline: {}
+immagini_inline:
+  missioni_delta:
+    file: /immagini/strategia/ugv-missioni-delta-2026.webp
+    alt: "Grafico a barre delle missioni logistiche e di evacuazione con UGV. Le missioni aumentano ogni mese, da 7.511 a gennaio a 31.398 a ottobre 2026."
+    didascalia: "Missioni mensili di logistica ed evacuazione svolte con UGV dalle forze ucraine, gennaio–ottobre 2026. Dati registrati in DELTA e verificati da Brave1."
+    credito: "Elaborazione Frontiera su dati del Ministero della Difesa dell’Ucraina"
+    fonte: "https://mod.gov.ua/en/explainers/ukraine-ugvs-cargo-drones-frontline-logistics"
+    licenza: "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/"
+    fit: contain
 infobox:
   tipo: null
   titolo: ""
