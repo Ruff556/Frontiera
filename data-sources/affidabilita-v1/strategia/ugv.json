@@ -6,119 +6,281 @@
       {
         "id": "UGV-E001",
         "livello": "plausibile",
-        "titolo": "Il Ratel H «Did» della 79ª brigata",
-        "motivazione": "Il 7° Corpo delle forze d’assalto aereo ha presentato il Ratel H impiegato dalla 79ª brigata. Secondo il reparto, il mezzo ha trasportato circa 19 tonnellate di carico in una cinquantina di missioni nell’arco di quasi un anno. Il tecnico intervistato riferisce circa dodici sostituzioni delle ruote. Le cifre provengono dal reparto e il registro delle missioni non è pubblico.",
+        "titolo": "Dai tentativi dei volontari al nucleo UGV di Khartiia",
+        "motivazione": "Kopach distingue le prove artigianali del 2022 dalla formazione del nucleo nella primavera 2024 e dalle prime consegne isolate in estate. L’intervista di ArmyInform attesta che il responsabile dirigeva la specialità nella 13ª brigata già nell’agosto 2025. La cronologia iniziale e lo scetticismo sono ricordi di Kopach, raccolti a posteriori da un addetto alla comunicazione del corpo.",
         "fonti": [
           {
-            "nome": "7° Corpo delle forze d’assalto aereo ucraine — Video sul Ratel H «Did»",
-            "url": "https://t.me/corps7DSHV/1645",
-            "data": "2026-07-18"
+            "nome": "Dmytro Kuzubov, Oboronka — Intervista ad Andrii Kopach sull’evoluzione degli UGV a Khartiia",
+            "url": "https://oboronka.mezha.ua/en/nazemni-roboti-v-hartiji-314570/",
+            "data": "2026-08-27"
           },
           {
-            "nome": "Andrii Konyk, Ukrainska Pravda — Meet “Grandpa”, the Ukrainian ground robot that has completed nearly 50 missions in a year",
-            "url": "https://www.pravda.com.ua/eng/news/2026/07/18/8044722/",
-            "data": "2026-07-18"
+            "nome": "ArmyInform — Intervista al responsabile UGV della 13ª brigata Khartiia",
+            "url": "https://armyinform.com.ua/2025/08/05/zhygul-sered-droniv-ta-czerkva-kolisnyh-yak-nazemni-robotyzovani-kompleksy-voyuyut-u-hartiyi/",
+            "data": "2025-08-05"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E002",
+        "livello": "plausibile",
+        "titolo": "Un servizio di rifornimento per più reparti della brigata",
+        "motivazione": "Kopach collega l’aumento della domanda alla maggiore esposizione delle vie di rifornimento sotto la minaccia dei droni e indica fanteria, mortaisti e operatori aerei fra i destinatari del servizio per la 13ª brigata. DOU registra attività di trasporto ricorrenti in una precedente intervista allo stesso ufficiale. Il peso preciso dei diversi fattori e la copertura dei fabbisogni dei reparti restano affidati alla testimonianza.",
+        "fonti": [
+          {
+            "nome": "Dmytro Kuzubov, Oboronka — Intervista ad Andrii Kopach sull’evoluzione degli UGV a Khartiia",
+            "url": "https://oboronka.mezha.ua/en/nazemni-roboti-v-hartiji-314570/",
+            "data": "2026-08-27"
+          },
+          {
+            "nome": "Viktoriia Osipova, DOU — Inchiesta sugli UGV con interviste a Khartiia e ad altri reparti",
+            "url": "https://dou.ua/lenta/articles/ground-robotic-systems-experience/",
+            "data": "2025-12-01"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E003",
+        "livello": "plausibile",
+        "titolo": "La ripartizione del lavoro logistico a Khartiia",
+        "motivazione": "In DOU Kopach distingue officina, postazione di controllo e gruppo dei conducenti. ArmyInform aveva raccolto dallo stesso interlocutore indicazioni sul ruolo di ingegneri, pianificatori e operatori. Sono descrizioni del lavoro effettivo secondo il responsabile. Gli effettivi e le assegnazioni dei singoli turni non sono pubblicati.",
+        "fonti": [
+          {
+            "nome": "Viktoriia Osipova, DOU — Inchiesta sugli UGV con interviste a Khartiia e ad altri reparti",
+            "url": "https://dou.ua/lenta/articles/ground-robotic-systems-experience/",
+            "data": "2025-12-01"
+          },
+          {
+            "nome": "ArmyInform — Intervista al responsabile UGV della 13ª brigata Khartiia",
+            "url": "https://armyinform.com.ua/2025/08/05/zhygul-sered-droniv-ta-czerkva-kolisnyh-yak-nazemni-robotyzovani-kompleksy-voyuyut-u-hartiyi/",
+            "data": "2025-08-05"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E004",
+        "livello": "plausibile",
+        "titolo": "La crescita dei trasporti e le due cifre per maggio 2025",
+        "motivazione": "Nel 2026 Kopach riferì a Oboronka 25 tonnellate a maggio e 60–80 al mese fra luglio e agosto 2025, con variazioni contenute nell’organico. Nel dicembre 2025 aveva dato a DOU 12–13 tonnellate per maggio e una media corrente di circa 60. Entrambe le versioni mostrano un aumento, ma il perimetro del conteggio di maggio non è chiarito. Mancano registri, ore di lavoro e risorse impiegate per stimare la produttività per addetto.",
+        "fonti": [
+          {
+            "nome": "Dmytro Kuzubov, Oboronka — Intervista ad Andrii Kopach sull’evoluzione degli UGV a Khartiia",
+            "url": "https://oboronka.mezha.ua/en/nazemni-roboti-v-hartiji-314570/",
+            "data": "2026-08-27"
+          },
+          {
+            "nome": "Viktoriia Osipova, DOU — Inchiesta sugli UGV con interviste a Khartiia e ad altri reparti",
+            "url": "https://dou.ua/lenta/articles/ground-robotic-systems-experience/",
+            "data": "2025-12-01"
           }
         ]
       },
       {
         "id": "UGV-E005",
-        "livello": "confermato",
-        "titolo": "La logistica come principale impiego degli UGV secondo il Ministero",
-        "motivazione": "Il Ministero della Difesa ucraino indica la logistica come compito della maggioranza delle missioni UGV nel bilancio di gennaio 2026. Nel quadro di novembre descrive gli UGV logistici come la categoria più diffusa. Le due note sostengono l’attribuzione al Ministero. Manca una ripartizione numerica delle missioni per funzione sull’intero periodo.",
+        "livello": "plausibile",
+        "titolo": "Gruppi UGV presso le unità del corpo Khartiia",
+        "motivazione": "Kopach data alla fine del 2025 l’avvio dei gruppi nelle brigate e nei battaglioni del corpo. Nel 2026 è presentato come comandante UGV del reggimento Lava e descrive il suo reparto come ancora impegnato a sostegno delle altre unità. L’articolo distingue questa struttura dalla compagnia che riforniva la 13ª brigata. Manca un atto d’organico pubblico che documenti gli eventuali trasferimenti di personale fra le due.",
         "fonti": [
           {
-            "nome": "Ministero della Difesa dell’Ucraina — Over 7,000 missions in January: Ukraine expands deployment of ground robotic systems",
-            "url": "https://mod.gov.ua/en/news/over-7-000-missions-in-january-ukraine-expands-deployment-of-ground-robotic-systems",
-            "data": "2026-02-17"
-          },
-          {
-            "nome": "Ministero della Difesa dell’Ucraina — UGVs and cargo drones: how Ukraine is scaling up frontline logistics and evacuation",
-            "url": "https://mod.gov.ua/en/explainers/ukraine-ugvs-cargo-drones-frontline-logistics",
-            "data": "2026-11-11"
+            "nome": "Dmytro Kuzubov, Oboronka — Intervista ad Andrii Kopach sull’evoluzione degli UGV a Khartiia",
+            "url": "https://oboronka.mezha.ua/en/nazemni-roboti-v-hartiji-314570/",
+            "data": "2026-08-27"
           }
         ]
       },
       {
         "id": "UGV-E006",
-        "livello": "confermato",
-        "titolo": "Missioni logistiche e di evacuazione registrate in DELTA",
-        "motivazione": "La serie ministeriale pubblicata il 6 novembre riporta 7.511 missioni a gennaio e 31.398 a ottobre. I dieci conteggi mensili sommano 171.253 missioni, coerenti con le oltre 171.000 citate nell’approfondimento dell’11 novembre. Si tratta delle missioni logistiche e di evacuazione registrate in DELTA e verificate da Brave1. I registri di missione individuali non sono pubblici.",
+        "livello": "plausibile",
+        "titolo": "Valutazione sanitaria delle richieste di evacuazione",
+        "motivazione": "La relazione del battaglione attribuisce a valutazioni iniziali rivelatesi inesatte il passaggio del primo contatto dal comandante della missione al sanitario. Descrive anche il sostegno a distanza alla prima assistenza, quando il contatto era possibile. La relazione spiega il cambiamento interno e non misura l’effetto della nuova procedura sugli esiti.",
         "fonti": [
           {
-            "nome": "Ministero della Difesa dell’Ucraina — UGVs complete over 30,000 missions in a single month for the first time",
-            "url": "https://mod.gov.ua/en/news/ukraine-ugv-missions-october-2026",
-            "data": "2026-11-06"
+            "nome": "1° battaglione medico indipendente — Dal CASEVAC all’UGEVAC, relazione sulle evacuazioni con UGV",
+            "url": "https://telegra.ph/V%D1%96d-CASEVAC-do-UGEVAC-Dosv%D1%96d-evakuac%D1%96i-na-NRK-09-26",
+            "data": "2026-09-26"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E007",
+        "livello": "confermato",
+        "titolo": "Origine sanitaria e progetto del Maul",
+        "motivazione": "La relazione dei sanitari fa risalire il progetto alle prove iniziate nel servizio medico della 1ª Legione internazionale e spiega il problema del trasporto senza accompagnatore. La scheda Brave1 documenta la destinazione sanitaria della piattaforma e la capsula protetta. Il giudizio sulle prestazioni delle piattaforme provate appartiene ai sanitari che le valutarono.",
+        "fonti": [
+          {
+            "nome": "1° battaglione medico indipendente — Dal CASEVAC all’UGEVAC, relazione sulle evacuazioni con UGV",
+            "url": "https://telegra.ph/V%D1%96d-CASEVAC-do-UGEVAC-Dosv%D1%96d-evakuac%D1%96i-na-NRK-09-26",
+            "data": "2026-09-26"
           },
           {
-            "nome": "Ministero della Difesa dell’Ucraina — UGVs and cargo drones: how Ukraine is scaling up frontline logistics and evacuation",
-            "url": "https://mod.gov.ua/en/explainers/ukraine-ugvs-cargo-drones-frontline-logistics",
-            "data": "2026-11-11"
+            "nome": "Brave1 Market — Scheda del Maul EVAC",
+            "url": "https://market-brave1.delta.mil.gov.ua/en/maul-evac-nrk-yakyi-riatuie-zhyttia/",
+            "data": "2026-03-11"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E008",
+        "livello": "plausibile",
+        "titolo": "Primo impiego logistico e prima evacuazione riuscita del Maul",
+        "motivazione": "Il battaglione distingue l’esordio logistico del gennaio 2025 dalla prima evacuazione riuscita, in ottobre. Ukrainska Pravda riporta entrambe le date dalla relazione. Le date provengono dalla stessa fonte e non descrivono tutte le uscite intermedie.",
+        "fonti": [
+          {
+            "nome": "1° battaglione medico indipendente — Dal CASEVAC all’UGEVAC, relazione sulle evacuazioni con UGV",
+            "url": "https://telegra.ph/V%D1%96d-CASEVAC-do-UGEVAC-Dosv%D1%96d-evakuac%D1%96i-na-NRK-09-26",
+            "data": "2026-09-26"
+          },
+          {
+            "nome": "Andrii Konyk, Ukrainska Pravda — Il bilancio delle evacuazioni con il Maul",
+            "url": "https://www.pravda.com.ua/eng/news/2026/09/27/8055273/index.amp",
+            "data": "2026-09-27"
           }
         ]
       },
       {
         "id": "UGV-E009",
         "livello": "plausibile",
-        "titolo": "La missione di rifornimento raccontata da Roboneers",
-        "motivazione": "Taras Rokoshevskyi, cofondatore di Roboneers, riferisce una consegna di 200 kg di rifornimenti a una posizione distante 10 km. I diciotto uomini necessari per una consegna equivalente sono una stima del comandante, riportata da Rokoshevskyi. L’intervista documenta il racconto di un singolo episodio e la stima del personale che sarebbe servito in quel caso.",
+        "titolo": "Il personale coinvolto nelle missioni del Maul",
+        "motivazione": "Il battaglione riferisce il coinvolgimento di oltre dieci militari per missione e descrive il coordinamento con l’unità che chiede l’evacuazione. Attribuisce recupero, sanificazione e controllo del veicolo alla squadra di supporto. Il numero si riferisce ai partecipanti alla missione, comprese le funzioni svolte prima e dopo il trasporto.",
         "fonti": [
           {
-            "nome": "Daniel McLaughlin, The Irish Times — Ukraine’s army of ground drones aims to save lives in the ‘kill zone’",
-            "url": "https://www.irishtimes.com/world/europe/2025/11/03/ukraines-army-of-ground-drones-aims-to-save-lives-in-the-kill-zone/",
-            "data": "2025-11-03"
+            "nome": "1° battaglione medico indipendente — Dal CASEVAC all’UGEVAC, relazione sulle evacuazioni con UGV",
+            "url": "https://telegra.ph/V%D1%96d-CASEVAC-do-UGEVAC-Dosv%D1%96d-evakuac%D1%96i-na-NRK-09-26",
+            "data": "2026-09-26"
           }
         ]
       },
       {
         "id": "UGV-E010",
         "livello": "plausibile",
-        "titolo": "Aumento dei reparti che rendicontano missioni UGV",
-        "motivazione": "Secondo il ministro Mykhailo Fedorov, ripreso da ArmyInform, nei primi cinque mesi del 2026 i reparti che rendicontavano missioni UGV sono passati da 117 a 230. Il bacino di rendicontazione è quindi cresciuto nella finestra documentata. I dati pubblici non permettono di isolare quanto questo ampliamento abbia contribuito all’aumento delle missioni registrate fino a ottobre.",
+        "titolo": "Tentativi e perdite nell’evacuazione Hver",
+        "motivazione": "Ukrainska Pravda riporta dal battaglione sette tentativi e sei mezzi perduti, quattro di unità vicine, prima della consegna del ferito alle cure. Brave1 riprende lo stesso episodio. Il bilancio dei mezzi e dei tentativi risale ai partecipanti.",
         "fonti": [
           {
-            "nome": "ArmyInform — 50.000 missioni dall’inizio dell’anno e quasi il doppio dei reparti che rendicontano",
-            "url": "https://armyinform.com.ua/2026/06/09/50-000-misij-z-pochatku-roku-vdvichi-bilshe-pidrozdiliv-operatoriv-yak-masshtabuyetsya-nrk-skladova-syl-oborony/",
-            "data": "2026-06-09"
+            "nome": "Andrii Haladei, Ukrainska Pravda — Il resoconto del battaglione medico sull’evacuazione Hver",
+            "url": "https://www.pravda.com.ua/eng/news/2025/11/04/8005792/",
+            "data": "2025-11-04"
+          },
+          {
+            "nome": "Brave1 Market — Scheda del Maul EVAC",
+            "url": "https://market-brave1.delta.mil.gov.ua/en/maul-evac-nrk-yakyi-riatuie-zhyttia/",
+            "data": "2026-03-11"
           }
         ]
       },
       {
-        "id": "UGV-E046",
+        "id": "UGV-E011",
         "livello": "plausibile",
-        "titolo": "Il rifornimento aereo nella testimonianza della 24ª brigata",
-        "motivazione": "Le Monde ha intervistato Sergej, detto «Rahnar», addetto alla logistica della 24ª brigata meccanizzata ucraina. Il reportage descrive il passaggio dai rifornimenti stradali alle consegne aeree per alcune posizioni e indica circa otto chilogrammi come carico abituale dei droni impiegati dal suo reparto. La testimonianza riguarda le posizioni e i mezzi descritti nel reportage.",
+        "titolo": "Esiti dichiarati delle partenze del Maul",
+        "motivazione": "La relazione indica centinaia di partenze su richiesta di unità vicine e definisce riuscita la consegna alla fase sanitaria seguente, registrata nel 51,9% dei casi. Il 4,6% riguarda tutte le partenze e conta i mezzi distrutti con il ferito a bordo. La numerosità puntuale e gli esiti clinici successivi non sono pubblicati. Ukrainska Pravda riprende la medesima relazione.",
         "fonti": [
           {
-            "nome": "Thomas d’Istria e Virginie NGuyen Hoang, Le Monde — Des drones chargés d’œufs durs et de viande séchée",
-            "url": "https://www.lemonde.fr/international/article/2026/06/17/des-drones-charges-d-ufs-durs-et-de-viande-sechee-sur-le-front-du-donbass-un-magasinier-veut-ameliorer-le-quotidien-des-soldats-ukrainiens_6704237_3210.html",
-            "data": "2026-06-17"
+            "nome": "1° battaglione medico indipendente — Dal CASEVAC all’UGEVAC, relazione sulle evacuazioni con UGV",
+            "url": "https://telegra.ph/V%D1%96d-CASEVAC-do-UGEVAC-Dosv%D1%96d-evakuac%D1%96i-na-NRK-09-26",
+            "data": "2026-09-26"
+          },
+          {
+            "nome": "Andrii Konyk, Ukrainska Pravda — Il bilancio delle evacuazioni con il Maul",
+            "url": "https://www.pravda.com.ua/eng/news/2026/09/27/8055273/index.amp",
+            "data": "2026-09-27"
           }
         ]
       },
       {
-        "id": "UGV-E047",
-        "livello": "plausibile",
-        "titolo": "Le distanze percorse a piedi secondo un comandante della 92ª brigata",
-        "motivazione": "Anatolii Tkachenko, comandante di una batteria mortai della 92ª brigata ucraina, riferisce a CEPA percorsi a piedi di 30 km per i fanti e di 10–15 km per le squadre di mortai e gli operatori di droni. Le distanze sono quelle citate dall’intervistato nel contesto operativo che descrive.",
+        "id": "UGV-E012",
+        "livello": "confermato",
+        "titolo": "Reuters osserva NC13 usare una mitragliatrice a distanza",
+        "motivazione": "I cronisti descrivono l’officina, il meccanico Chimera e gli operatori che azionavano una mitragliatrice da una postazione di controllo, con le immagini del campo sui propri schermi. Il reportage identifica anche il vicecomandante Bar come ex fante. L’osservazione documenta il tiro remoto in un caso reale e non ne quantifica la frequenza o l’effetto sul campo.",
         "fonti": [
           {
-            "nome": "David Kirichenko, CEPA — Frontline Drones: Doing the Infantry’s Heavy Lifting",
-            "url": "https://cepa.org/article/frontline-drones-doing-the-infantrys-heavy-lifting/",
-            "data": "2026-07-22"
+            "nome": "Dan Peleschuk e Thomas Peter, Reuters — Reportage presso NC13, ripreso da Investing.com",
+            "url": "https://www.investing.com/news/world-news/behind-the-killer-robots-of-ukraines-new-warfare-revolution-4897238",
+            "data": "2026-09-11"
           }
         ]
       },
       {
-        "id": "UGV-E048",
+        "id": "UGV-E013",
         "livello": "plausibile",
-        "titolo": "L’aumento degli spostamenti a piedi secondo un operatore ucraino",
-        "motivazione": "Un operatore del 4° reggimento Ranger delle forze speciali ucraine, identificato come «Gur», racconta a Business Insider che la maggiore presenza di droni russi ha indotto il suo reparto a muoversi più spesso a piedi. La testimonianza descrive l’esperienza dell’unità intervistata.",
+        "titolo": "Dal plotone d’assalto al reparto UGV dedicato",
+        "motivazione": "Ad Army FM Zinkevych fa risalire il nome NC13 al plotone del 2° battaglione d’assalto attivo nel 2023. A LB.ua data l’incarico di sviluppare gli UGV al maggio 2024, un primo impiego d’attacco alla primavera 2025 e l’istituzione del reparto dedicato al settembre 2025. Le due versioni vengono dal comandante e distinguono la storia del gruppo dalla formalizzazione della specialità.",
         "fonti": [
           {
-            "nome": "Jake Epstein, Business Insider — Ukrainian troops are walking more and spreading out to avoid drones, special operator says",
-            "url": "https://www.businessinsider.com/ukrainian-troops-walk-more-spreading-out-avoid-drones-special-operator-2026-7",
-            "data": "2026-07-22"
+            "nome": "Army FM — Intervista a Mykola Zinkevych sulla storia di NC13",
+            "url": "https://www.armyfm.com.ua/pershymy-v-sviti-provely-robotyzovanyi-shturm-iak-pratsiuie-pidrozdil-/",
+            "data": "2026-05-06"
+          },
+          {
+            "nome": "LB.ua — Intervista a Mykola Zinkevych sulla specializzazione di NC13 e sull’operazione Vivaldi",
+            "url": "https://en.lb.ua/news/2026/11/09/49134_managed_simulate_assault_group.html",
+            "data": "2026-11-09"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E014",
+        "livello": "plausibile",
+        "titolo": "L’addestramento d’ingresso di NC13",
+        "motivazione": "Zinkevych descrive a LB.ua il corso di 28 giorni, la provenienza eterogenea dei nuovi membri e la base comune della formazione. Distingue da essa la preparazione richiesta per gli UGV armati. L’intervista documenta l’organizzazione del corso secondo il comandante. Non pubblica un rendiconto dei corsisti o dei risultati.",
+        "fonti": [
+          {
+            "nome": "LB.ua — Intervista a Mykola Zinkevych sulla specializzazione di NC13 e sull’operazione Vivaldi",
+            "url": "https://en.lb.ua/news/2026/11/09/49134_managed_simulate_assault_group.html",
+            "data": "2026-11-09"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E015",
+        "livello": "plausibile",
+        "titolo": "La frequenza dichiarata delle missioni di NC13",
+        "motivazione": "A Reuters Bar riferisce operazioni quasi quotidiane. A LB.ua Zinkevych parla di diverse missioni strike al giorno e spiega che la categoria comprende veicoli con armi remotizzate e mezzi esplosivi a perdere. Nessuna delle testimonianze isola il numero di uscite con tiro da armi di bordo.",
+        "fonti": [
+          {
+            "nome": "Dan Peleschuk e Thomas Peter, Reuters — Reportage presso NC13, ripreso da Investing.com",
+            "url": "https://www.investing.com/news/world-news/behind-the-killer-robots-of-ukraines-new-warfare-revolution-4897238",
+            "data": "2026-09-11"
+          },
+          {
+            "nome": "LB.ua — Intervista a Mykola Zinkevych sulla specializzazione di NC13 e sull’operazione Vivaldi",
+            "url": "https://en.lb.ua/news/2026/11/09/49134_managed_simulate_assault_group.html",
+            "data": "2026-11-09"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E016",
+        "livello": "plausibile",
+        "titolo": "L’incarico di 45 giorni attribuito a un UGV armato",
+        "motivazione": "Zinkevych racconta un incarico di 45 giorni con un UGV dotato di mitragliatrice. Il ministero descrive un episodio della stessa durata con un Droid TW e precisa che erano previsti rientri per ripristinare il mezzo. La nota non identifica NC13 in quel passaggio. Le fonti sostengono la lettura dei 45 giorni come durata dell’incarico, senza un registro pubblico della presenza in posizione o delle azioni di fuoco.",
+        "fonti": [
+          {
+            "nome": "LB.ua — Intervista a Mykola Zinkevych sulla specializzazione di NC13 e sull’operazione Vivaldi",
+            "url": "https://en.lb.ua/news/2026/11/09/49134_managed_simulate_assault_group.html",
+            "data": "2026-11-09"
+          },
+          {
+            "nome": "Ministero della Difesa dell’Ucraina — Nota sullo Zmiy Droid con il precedente del Droid TW",
+            "url": "https://mod.gov.ua/en/news/ukraine-s-ground-robot-fleet-expands-with-the-addition-of-the-zmiy-droid-12-7-armored-machine-gun-system",
+            "data": "2026-01-07"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E017",
+        "livello": "confermato",
+        "titolo": "La componente terrestre nell’operazione Vivaldi",
+        "motivazione": "Reuters ricostruisce la cooperazione fra UGV, fanteria e mezzi aerei attraverso sei interviste e richiama il riscontro cartografico sui progressi territoriali. Zinkevych descrive separatamente il ruolo di NC13. Reuters non ha verificato in modo indipendente i singoli resoconti di combattimento e la cartografia non isola il contributo dei robot.",
+        "fonti": [
+          {
+            "nome": "Dan Peleschuk, Reuters — Inchiesta sull’operazione Vivaldi, ripresa da MarketScreener",
+            "url": "https://www.marketscreener.com/news/operation-vivaldi-ukraine-melds-man-and-machine-to-repel-russians-ce785edcd18ff52d",
+            "data": "2026-11-18"
+          },
+          {
+            "nome": "LB.ua — Intervista a Mykola Zinkevych sulla specializzazione di NC13 e sull’operazione Vivaldi",
+            "url": "https://en.lb.ua/news/2026/11/09/49134_managed_simulate_assault_group.html",
+            "data": "2026-11-09"
           }
         ]
       }
