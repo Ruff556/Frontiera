@@ -105,7 +105,7 @@
         "id": "UGV-E007",
         "livello": "confermato",
         "titolo": "Origine sanitaria e progetto del Maul",
-        "motivazione": "La relazione dei sanitari fa risalire il progetto alle prove iniziate nel servizio medico della 1ª Legione internazionale e spiega il problema del trasporto senza accompagnatore. La scheda Brave1 documenta la destinazione sanitaria della piattaforma e la capsula protetta. Il giudizio sulle prestazioni delle piattaforme provate appartiene ai sanitari che le valutarono.",
+        "motivazione": "La relazione del battaglione fa risalire il progetto alle prove avviate alla fine del 2023 dal servizio medico della 1ª Legione internazionale. Il giudizio sui limiti dei mezzi esistenti è dei sanitari che li provarono. La scheda Brave1 documenta la destinazione sanitaria del Maul e la capsula protetta. Il reportage di Ukrainska Pravda racconta il trasporto senza accompagnatore e segnala il ritardo dei comandi e il rischio di urti a velocità più alta nel caso osservato. Le condizioni di guida descritte riguardano quella missione.",
         "fonti": [
           {
             "nome": "1° battaglione medico indipendente — Dal CASEVAC all’UGEVAC, relazione sulle evacuazioni con UGV",
@@ -116,6 +116,11 @@
             "nome": "Brave1 Market — Scheda del Maul EVAC",
             "url": "https://market-brave1.delta.mil.gov.ua/en/maul-evac-nrk-yakyi-riatuie-zhyttia/",
             "data": "2026-03-11"
+          },
+          {
+            "nome": "Bohdan Miroshnychenko, Ukrainska Pravda / Oboronka — Reportage sul recupero di due feriti con il Maul",
+            "url": "https://www.pravda.com.ua/eng/articles/2025/11/17/8007606/index.amp",
+            "data": "2025-11-17"
           }
         ]
       },
@@ -123,7 +128,7 @@
         "id": "UGV-E008",
         "livello": "plausibile",
         "titolo": "Primo impiego logistico e prima evacuazione riuscita del Maul",
-        "motivazione": "Il battaglione distingue l’esordio logistico del gennaio 2025 dalla prima evacuazione riuscita, in ottobre. Ukrainska Pravda riporta entrambe le date dalla relazione. Le date provengono dalla stessa fonte e non descrivono tutte le uscite intermedie.",
+        "motivazione": "Il battaglione colloca nel gennaio 2025 il primo impiego in condizioni di combattimento, per trasportare materiali, e nell’ottobre dello stesso anno la prima evacuazione riuscita. La notizia di Ukrainska Pravda del settembre 2026 riprende la cronologia del battaglione. Il reportage pubblicato nel novembre 2025 documenta un altro episodio: i commilitoni prestarono la prima assistenza e caricarono un ferito sul Maul, che lo portò fino alla consegna al mezzo sanitario blindato. Quel caso documenta un segmento della catena di evacuazione.",
         "fonti": [
           {
             "nome": "1° battaglione medico indipendente — Dal CASEVAC all’UGEVAC, relazione sulle evacuazioni con UGV",
@@ -134,19 +139,29 @@
             "nome": "Andrii Konyk, Ukrainska Pravda — Il bilancio delle evacuazioni con il Maul",
             "url": "https://www.pravda.com.ua/eng/news/2026/09/27/8055273/index.amp",
             "data": "2026-09-27"
+          },
+          {
+            "nome": "Bohdan Miroshnychenko, Ukrainska Pravda / Oboronka — Reportage sul recupero di due feriti con il Maul",
+            "url": "https://www.pravda.com.ua/eng/articles/2025/11/17/8007606/index.amp",
+            "data": "2025-11-17"
           }
         ]
       },
       {
         "id": "UGV-E009",
         "livello": "plausibile",
-        "titolo": "Il personale coinvolto nelle missioni del Maul",
-        "motivazione": "Il battaglione riferisce il coinvolgimento di oltre dieci militari per missione e descrive il coordinamento con l’unità che chiede l’evacuazione. Attribuisce recupero, sanificazione e controllo del veicolo alla squadra di supporto. Il numero si riferisce ai partecipanti alla missione, comprese le funzioni svolte prima e dopo il trasporto.",
+        "titolo": "Personale, manutenzione e ripristino del Maul",
+        "motivazione": "Il battaglione riferisce più di dieci militari coinvolti per missione, compresi gli addetti alle attività prima e dopo il trasporto. Alla squadra di supporto attribuisce controlli tecnici e manutenzione prima dell’impiego, poi recupero, sanificazione e verifica dei danni. Il reportage di Ukrainska Pravda documenta la collaborazione fra operatori, sanitari e tecnici e descrive controlli del mezzo tra due recuperi. Il numero di partecipanti e la ripartizione generale delle responsabilità restano dati del reparto.",
         "fonti": [
           {
             "nome": "1° battaglione medico indipendente — Dal CASEVAC all’UGEVAC, relazione sulle evacuazioni con UGV",
             "url": "https://telegra.ph/V%D1%96d-CASEVAC-do-UGEVAC-Dosv%D1%96d-evakuac%D1%96i-na-NRK-09-26",
             "data": "2026-09-26"
+          },
+          {
+            "nome": "Bohdan Miroshnychenko, Ukrainska Pravda / Oboronka — Reportage sul recupero di due feriti con il Maul",
+            "url": "https://www.pravda.com.ua/eng/articles/2025/11/17/8007606/index.amp",
+            "data": "2025-11-17"
           }
         ]
       },
