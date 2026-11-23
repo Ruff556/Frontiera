@@ -7,7 +7,7 @@
         "id": "UGV-E001",
         "livello": "plausibile",
         "titolo": "Dai tentativi dei volontari al nucleo UGV di Khartiia",
-        "motivazione": "Kopach distingue le prove artigianali del 2022 dalla formazione del nucleo nella primavera 2024 e dalle prime consegne isolate in estate. L’intervista di ArmyInform attesta che il responsabile dirigeva la specialità nella 13ª brigata già nell’agosto 2025. La cronologia iniziale e lo scetticismo sono ricordi di Kopach, raccolti a posteriori da un addetto alla comunicazione del corpo.",
+        "motivazione": "Kopach distingue i tentativi artigianali dei volontari nel 2022 dalla decisione del comando di costituire un nucleo UGV nella primavera 2024. Ricorda il proprio scetticismo: i mezzi convenzionali riuscivano ancora ad avvicinarsi alle posizioni e i primi robot erano artigianali e privi di telecamere a bordo. Colloca le consegne occasionali nell’estate 2024 e la prima evacuazione riuscita di un ferito nell’autunno. La cronologia e l’episodio risalgono alla sua testimonianza retrospettiva. ArmyInform documenta l’esistenza della specialità nella 13ª brigata nell’agosto 2025.",
         "fonti": [
           {
             "nome": "Dmytro Kuzubov, Oboronka — Intervista ad Andrii Kopach sull’evoluzione degli UGV a Khartiia",
@@ -43,7 +43,7 @@
         "id": "UGV-E003",
         "livello": "plausibile",
         "titolo": "La ripartizione del lavoro logistico a Khartiia",
-        "motivazione": "In DOU Kopach distingue officina, postazione di controllo e gruppo dei conducenti. ArmyInform aveva raccolto dallo stesso interlocutore indicazioni sul ruolo di ingegneri, pianificatori e operatori. Nel settembre 2025 Schemy ha osservato presso un battaglione di fanteria della brigata una consegna con UGV, da cui si vede la separazione tra preparazione del mezzo e guida a distanza. Il reportage documenta un singolo caso. La ripartizione dell’intera compagnia resta quella descritta da Kopach.",
+        "motivazione": "In DOU Kopach distingue tre gruppi: l’officina, la postazione di controllo e il gruppo dei conducenti. ArmyInform aveva raccolto dallo stesso ufficiale indicazioni sui ruoli tecnici, di pianificazione e di guida. La ripartizione descrive l’organizzazione del lavoro riferita dal responsabile della specialità.",
         "fonti": [
           {
             "nome": "Viktoriia Osipova, DOU — Inchiesta sugli UGV con interviste a Khartiia e ad altri reparti",
@@ -54,11 +54,6 @@
             "nome": "ArmyInform — Intervista al responsabile UGV della 13ª brigata Khartiia",
             "url": "https://armyinform.com.ua/2025/08/05/zhygul-sered-droniv-ta-czerkva-kolisnyh-yak-nazemni-robotyzovani-kompleksy-voyuyut-u-hartiyi/",
             "data": "2025-08-05"
-          },
-          {
-            "nome": "Valeriia Yehoshyna e Kira Tolstiakova, Schemy / Radio Svoboda — Reportage sui rifornimenti con UGV a Khartiia",
-            "url": "https://www.radiosvoboda.org/a/video-skhemy-nazemni-drony/33518677.html",
-            "data": "2025-09-01"
           }
         ]
       },
@@ -286,6 +281,37 @@
             "nome": "LB.ua — Intervista a Mykola Zinkevych sulla specializzazione di NC13 e sull’operazione Vivaldi",
             "url": "https://en.lb.ua/news/2026/11/09/49134_managed_simulate_assault_group.html",
             "data": "2026-11-09"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E018",
+        "livello": "plausibile",
+        "titolo": "Comunicazioni digitali, telecamere a bordo e controllo a distanza nel 2025",
+        "motivazione": "Kopach colloca nel 2025 l’introduzione di collegamenti digitali e di telecamere a bordo. A queste modifiche attribuisce la possibilità di spostare le postazioni di controllo più lontano dalle consegne e ridurre il ricorso all’osservazione aerea per la guida. Il reportage di DOU del dicembre 2025 riporta dallo stesso ufficiale l’uso dei collegamenti digitali e descrive il lavoro degli operatori a distanza. La cronologia della transizione e il suo contributo all’estensione del servizio restano attribuiti a Kopach.",
+        "fonti": [
+          {
+            "nome": "Dmytro Kuzubov, Oboronka — Intervista ad Andrii Kopach sull’evoluzione degli UGV a Khartiia",
+            "url": "https://oboronka.mezha.ua/en/nazemni-roboti-v-hartiji-314570/",
+            "data": "2026-08-27"
+          },
+          {
+            "nome": "Viktoriia Osipova, DOU — Inchiesta sugli UGV con interviste a Khartiia e ad altri reparti",
+            "url": "https://dou.ua/lenta/articles/ground-robotic-systems-experience/",
+            "data": "2025-12-01"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E019",
+        "livello": "confermato",
+        "titolo": "Schemy osserva un rifornimento con UGV a Khartiia",
+        "motivazione": "Nel reportage pubblicato il 1° settembre 2025, Schemy documenta un ciclo logistico mostrato da un battaglione di fanteria della brigata Khartiia, dalla preparazione del mezzo al trasferimento del carico a distanza. La portata indicativa di 200–250 kg è riportata nel servizio. Il precedente trasporto a mano e l’impossibilità di raggiungere direttamente le posizioni in automobile sono riferiti dal comandante del gruppo UGV. L’osservazione riguarda un singolo caso.",
+        "fonti": [
+          {
+            "nome": "Valeriia Yehoshyna e Kira Tolstiakova, Schemy / Radio Svoboda — Reportage sui rifornimenti con UGV a Khartiia",
+            "url": "https://www.radiosvoboda.org/a/video-skhemy-nazemni-drony/33518677.html",
+            "data": "2025-09-01"
           }
         ]
       }
