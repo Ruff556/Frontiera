@@ -25,7 +25,7 @@
         "id": "UGV-E002",
         "livello": "plausibile",
         "titolo": "Un servizio di rifornimento per più reparti della brigata",
-        "motivazione": "Kopach collega l’aumento della domanda alla maggiore esposizione delle vie di rifornimento sotto la minaccia dei droni e indica fanteria, mortaisti e operatori aerei fra i destinatari del servizio per la 13ª brigata. DOU registra attività di trasporto ricorrenti in una precedente intervista allo stesso ufficiale. Il peso preciso dei diversi fattori e la copertura dei fabbisogni dei reparti restano affidati alla testimonianza.",
+        "motivazione": "Kopach attribuisce alla maggiore esposizione delle vie di rifornimento, in particolare alla diffusione degli FPV a fibra ottica, una parte dell’aumento della domanda. Indica fanteria, mortaisti e operatori aerei fra i destinatari del servizio della 13ª brigata. DOU riporta testimonianze di altri reparti sulla crescente difficoltà dei trasporti convenzionali. L’estensione del servizio Khartiia e i suoi destinatari sono descritti da Kopach.",
         "fonti": [
           {
             "nome": "Dmytro Kuzubov, Oboronka — Intervista ad Andrii Kopach sull’evoluzione degli UGV a Khartiia",
@@ -43,7 +43,7 @@
         "id": "UGV-E003",
         "livello": "plausibile",
         "titolo": "La ripartizione del lavoro logistico a Khartiia",
-        "motivazione": "In DOU Kopach distingue officina, postazione di controllo e gruppo dei conducenti. ArmyInform aveva raccolto dallo stesso interlocutore indicazioni sul ruolo di ingegneri, pianificatori e operatori. Sono descrizioni del lavoro effettivo secondo il responsabile. Gli effettivi e le assegnazioni dei singoli turni non sono pubblicati.",
+        "motivazione": "In DOU Kopach distingue officina, postazione di controllo e gruppo dei conducenti. ArmyInform aveva raccolto dallo stesso interlocutore indicazioni sul ruolo di ingegneri, pianificatori e operatori. Nel settembre 2025 Schemy ha osservato presso un battaglione di fanteria della brigata una consegna con UGV, da cui si vede la separazione tra preparazione del mezzo e guida a distanza. Il reportage documenta un singolo caso. La ripartizione dell’intera compagnia resta quella descritta da Kopach.",
         "fonti": [
           {
             "nome": "Viktoriia Osipova, DOU — Inchiesta sugli UGV con interviste a Khartiia e ad altri reparti",
@@ -54,6 +54,11 @@
             "nome": "ArmyInform — Intervista al responsabile UGV della 13ª brigata Khartiia",
             "url": "https://armyinform.com.ua/2025/08/05/zhygul-sered-droniv-ta-czerkva-kolisnyh-yak-nazemni-robotyzovani-kompleksy-voyuyut-u-hartiyi/",
             "data": "2025-08-05"
+          },
+          {
+            "nome": "Valeriia Yehoshyna e Kira Tolstiakova, Schemy / Radio Svoboda — Reportage sui rifornimenti con UGV a Khartiia",
+            "url": "https://www.radiosvoboda.org/a/video-skhemy-nazemni-drony/33518677.html",
+            "data": "2025-09-01"
           }
         ]
       },
@@ -61,7 +66,7 @@
         "id": "UGV-E004",
         "livello": "plausibile",
         "titolo": "La crescita dei trasporti e le due cifre per maggio 2025",
-        "motivazione": "Nel 2026 Kopach riferì a Oboronka 25 tonnellate a maggio e 60–80 al mese fra luglio e agosto 2025, con variazioni contenute nell’organico. Nel dicembre 2025 aveva dato a DOU 12–13 tonnellate per maggio e una media corrente di circa 60. Entrambe le versioni mostrano un aumento, ma il perimetro del conteggio di maggio non è chiarito. Mancano registri, ore di lavoro e risorse impiegate per stimare la produttività per addetto.",
+        "motivazione": "Nel 2026 Kopach riferì a Oboronka 25 tonnellate a maggio e 60–80 al mese fra luglio e agosto 2025, con variazioni contenute nell’organico. Nel dicembre 2025 aveva dato a DOU 12–13 tonnellate per maggio e una media corrente di circa 60. Entrambe sono dichiarazioni dello stesso ufficiale. Oboronka riferisce il dato alla compagnia che serviva la brigata. DOU presenta Kopach nel suo ruolo presso il corpo e lascia implicito il perimetro del conteggio. La serie mostra una crescita dichiarata, con una base di partenza incerta e senza i dati necessari a stimare la produttività per addetto.",
         "fonti": [
           {
             "nome": "Dmytro Kuzubov, Oboronka — Intervista ad Andrii Kopach sull’evoluzione degli UGV a Khartiia",
