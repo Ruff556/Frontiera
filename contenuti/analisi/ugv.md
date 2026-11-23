@@ -1,6 +1,6 @@
 ---
 titolo: "UGV, Il fronte a distanza"
-slug: ugv
+slug: ugv-fronte-a-distanza
 data: ""
 sezione: Strategia
 sommario: ""
