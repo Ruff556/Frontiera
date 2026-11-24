@@ -218,7 +218,7 @@
         "id": "UGV-E013",
         "livello": "plausibile",
         "titolo": "Dal plotone d’assalto al reparto UGV dedicato",
-        "motivazione": "Ad Army FM Zinkevych fa risalire il nome NC13 al plotone del 2° battaglione d’assalto attivo nel 2023. A LB.ua data l’incarico di sviluppare gli UGV al maggio 2024, un primo impiego d’attacco alla primavera 2025 e l’istituzione del reparto dedicato al settembre 2025. Le due versioni vengono dal comandante e distinguono la storia del gruppo dalla formalizzazione della specialità.",
+        "motivazione": "Ad Army FM Zinkevych fa risalire NC13 al plotone d’assalto del 2° battaglione della brigata, attivo nell’area di Bakhmut nel 2023. Ricorda la scarsità di esperienza disponibile agli inizi e i primi compiti di trasporto ed evacuazione. A LB.ua colloca l’incarico di sviluppare gli UGV nel maggio 2024, il primo impiego offensivo nella primavera del 2025 e la formalizzazione del reparto specializzato nel settembre dello stesso anno. La cronologia ricostruisce due fasi distinte attraverso le testimonianze dello stesso comandante.",
         "fonti": [
           {
             "nome": "Army FM — Intervista a Mykola Zinkevych sulla storia di NC13",
@@ -236,7 +236,7 @@
         "id": "UGV-E014",
         "livello": "plausibile",
         "titolo": "L’addestramento d’ingresso di NC13",
-        "motivazione": "Zinkevych descrive a LB.ua il corso di 28 giorni, la provenienza eterogenea dei nuovi membri e la base comune della formazione. Distingue da essa la preparazione richiesta per gli UGV armati. L’intervista documenta l’organizzazione del corso secondo il comandante. Non pubblica un rendiconto dei corsisti o dei risultati.",
+        "motivazione": "Zinkevych descrive a LB.ua un corso d’ingresso di 28 giorni, con istruttori che hanno esperienza di combattimento e allievi provenienti anche da altre unità o dalla vita civile. Descrive una formazione di base condivisa fra operatori di UGV logistici, di evacuazione e da combattimento, seguita dalla preparazione specifica per funzione. L’articolazione del corso è riferita dal comandante.",
         "fonti": [
           {
             "nome": "LB.ua — Intervista a Mykola Zinkevych sulla specializzazione di NC13 e sull’operazione Vivaldi",
@@ -248,14 +248,9 @@
       {
         "id": "UGV-E015",
         "livello": "plausibile",
-        "titolo": "La frequenza dichiarata delle missioni di NC13",
-        "motivazione": "A Reuters Bar riferisce operazioni quasi quotidiane. A LB.ua Zinkevych parla di diverse missioni strike al giorno e spiega che la categoria comprende veicoli con armi remotizzate e mezzi esplosivi a perdere. Nessuna delle testimonianze isola il numero di uscite con tiro da armi di bordo.",
+        "titolo": "Frequenza dichiarata e significato della categoria strike",
+        "motivazione": "Su LB.ua Zinkevych riferisce diverse missioni strike quotidiane. Nella classificazione usata dal reparto, strike comprende sia le piattaforme esplosive a perdere sia gli UGV armati riutilizzabili. Frequenza e classificazione sono dichiarazioni del comandante.",
         "fonti": [
-          {
-            "nome": "Dan Peleschuk e Thomas Peter, Reuters — Reportage presso NC13, ripreso da Investing.com",
-            "url": "https://www.investing.com/news/world-news/behind-the-killer-robots-of-ukraines-new-warfare-revolution-4897238",
-            "data": "2026-09-11"
-          },
           {
             "nome": "LB.ua — Intervista a Mykola Zinkevych sulla specializzazione di NC13 e sull’operazione Vivaldi",
             "url": "https://en.lb.ua/news/2026/11/09/49134_managed_simulate_assault_group.html",
@@ -267,7 +262,7 @@
         "id": "UGV-E016",
         "livello": "plausibile",
         "titolo": "L’incarico di 45 giorni attribuito a un UGV armato",
-        "motivazione": "Zinkevych racconta un incarico di 45 giorni con un UGV dotato di mitragliatrice. Il ministero descrive un episodio della stessa durata con un Droid TW e precisa che erano previsti rientri per ripristinare il mezzo. La nota non identifica NC13 in quel passaggio. Le fonti sostengono la lettura dei 45 giorni come durata dell’incarico, senza un registro pubblico della presenza in posizione o delle azioni di fuoco.",
+        "motivazione": "Zinkevych riferisce a LB.ua un incarico di 45 giorni affidato a un UGV armato senza il concorso della fanteria. Il Ministero descrive un episodio della stessa durata con un Droid TW e segnala ritiri periodici per il ripristino del mezzo. A gennaio Business Insider aveva già associato NC13 a un incarico di 45 giorni con un Droid TW, anche in quel caso sulla base delle parole del comandante. La convergenza rende plausibile che si tratti dello stesso episodio, ma la dichiarazione di novembre non identifica il modello. I 45 giorni sono la durata dell’incarico.",
         "fonti": [
           {
             "nome": "LB.ua — Intervista a Mykola Zinkevych sulla specializzazione di NC13 e sull’operazione Vivaldi",
@@ -278,6 +273,11 @@
             "nome": "Ministero della Difesa dell’Ucraina — Nota sullo Zmiy Droid con il precedente del Droid TW",
             "url": "https://mod.gov.ua/en/news/ukraine-s-ground-robot-fleet-expands-with-the-addition-of-the-zmiy-droid-12-7-armored-machine-gun-system",
             "data": "2026-01-07"
+          },
+          {
+            "nome": "Business Insider — Testimonianza di Zinkevych sull’incarico di 45 giorni del Droid TW",
+            "url": "https://www.businessinsider.com/ukraine-unit-ground-drone-devdroid-tw-fought-russians-45-days-2026-1",
+            "data": "2026-01-08"
           }
         ]
       },
@@ -376,6 +376,63 @@
             "nome": "Reuters — A Ukrainian army unit pioneered drone evacuations. Now it’s scaling up",
             "url": "https://www.reuters.com/world/ukrainian-army-unit-pioneered-drone-evacuations-now-its-scaling-up-2026-11-12/",
             "data": "2026-11-12"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E023",
+        "livello": "plausibile",
+        "titolo": "La divisione dei compiti fra NC13, NOVA e i battaglioni",
+        "motivazione": "Nell’intervista di maggio 2026 Zinkevych attribuisce logistica ed evacuazione a NOVA e alle componenti dei singoli battaglioni, mentre descrive NC13 come reparto specializzato nel combattimento. Ricorda che NC13 svolgeva in precedenza compiti logistici e di evacuazione e che il suo comando include ex fanti e militari dei reparti d’assalto. La ripartizione delle funzioni è quella riferita dal comandante.",
+        "fonti": [
+          {
+            "nome": "Army FM — Intervista a Mykola Zinkevych sulla storia di NC13",
+            "url": "https://www.armyfm.com.ua/pershymy-v-sviti-provely-robotyzovanyi-shturm-iak-pratsiuie-pidrozdil-/",
+            "data": "2026-05-06"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E024",
+        "livello": "confermato",
+        "titolo": "Il ruolo della fanteria nella conquista e nel mantenimento del terreno",
+        "motivazione": "Nello studio RUSI sull’integrazione degli UAV nei battaglioni di fanteria, Jack Watling e Robert Tollast richiamano il ruolo della fanteria nel prendere e tenere il terreno. È una conclusione dell’analisi degli autori. Il riferimento sostiene il quadro generale del passaggio, mentre gli impieghi dei robot terrestri descritti nell’articolo provengono da altre fonti.",
+        "fonti": [
+          {
+            "nome": "Jack Watling e Robert Tollast, RUSI — Integrating Tactical UAVs into the Infantry Battalion",
+            "url": "https://www.rusi.org/explore-our-research/publications/research-papers/integrating-tactical-uavs-infantry-battalion",
+            "data": "2026-11-19"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E025",
+        "livello": "plausibile",
+        "titolo": "Un UGV armato in una posizione già occupata dalla fanteria",
+        "motivazione": "Nell’inchiesta di febbraio 2026 di Ukrainska Pravda, Zinkevych racconta che NC13 impiegò un UGV armato da una posizione in precedenza occupata dalla fanteria, assegnandogli compiti di osservazione e di fuoco. Il resoconto del singolo caso proviene dal comandante.",
+        "fonti": [
+          {
+            "nome": "Sviatoslav Nakonechnyi, Ukrainska Pravda — Inchiesta sugli UGV armati e sui loro limiti",
+            "url": "https://www.pravda.com.ua/eng/articles/2026/02/02/8019085/",
+            "data": "2026-02-02"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E026",
+        "livello": "plausibile",
+        "titolo": "Guasti e dipendenza dal supporto tecnico negli UGV armati",
+        "motivazione": "L’inchiesta di Ukrainska Pravda descrive comunicazioni e guasti meccanici fra i limiti degli UGV armati e cita il caso di un malfunzionamento dell’arma che richiede un intervento sul posto. A LB.ua Zinkevych richiama il peso di riparazioni e manutenzione nel lavoro del reparto. Le fonti descrivono i limiti e il ruolo del personale tecnico, senza misurare la frequenza dei guasti o i relativi tempi di ripristino.",
+        "fonti": [
+          {
+            "nome": "Sviatoslav Nakonechnyi, Ukrainska Pravda — Inchiesta sugli UGV armati e sui loro limiti",
+            "url": "https://www.pravda.com.ua/eng/articles/2026/02/02/8019085/",
+            "data": "2026-02-02"
+          },
+          {
+            "nome": "LB.ua — Intervista a Mykola Zinkevych sulla specializzazione di NC13 e sull’operazione Vivaldi",
+            "url": "https://en.lb.ua/news/2026/11/09/49134_managed_simulate_assault_group.html",
+            "data": "2026-11-09"
           }
         ]
       }
