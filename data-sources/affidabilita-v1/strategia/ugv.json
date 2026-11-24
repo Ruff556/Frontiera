@@ -169,7 +169,7 @@
         "id": "UGV-E010",
         "livello": "plausibile",
         "titolo": "Tentativi e perdite nell’evacuazione Hver",
-        "motivazione": "Ukrainska Pravda riporta dal battaglione sette tentativi e sei mezzi perduti, quattro di unità vicine, prima della consegna del ferito alle cure. Brave1 riprende lo stesso episodio. Il bilancio dei mezzi e dei tentativi risale ai partecipanti.",
+        "motivazione": "Ukrainska Pravda riporta il resoconto del 1° battaglione medico: dal ferimento all’evacuazione trascorsero 33 giorni. Prima che il ferito fosse consegnato alle cure andarono perduti sei mezzi, quattro delle unità vicine. Il recupero riuscì al settimo tentativo. Brave1 riprende lo stesso episodio. Tempi, tentativi e perdite sono riferiti dal reparto.",
         "fonti": [
           {
             "nome": "Andrii Haladei, Ukrainska Pravda — Il resoconto del battaglione medico sull’evacuazione Hver",
@@ -187,7 +187,7 @@
         "id": "UGV-E011",
         "livello": "plausibile",
         "titolo": "Esiti dichiarati delle partenze del Maul",
-        "motivazione": "La relazione indica centinaia di partenze su richiesta di unità vicine e definisce riuscita la consegna alla fase sanitaria seguente, registrata nel 51,9% dei casi. Il 4,6% riguarda tutte le partenze e conta i mezzi distrutti con il ferito a bordo. La numerosità puntuale e gli esiti clinici successivi non sono pubblicati. Ukrainska Pravda riprende la medesima relazione.",
+        "motivazione": "Il battaglione dichiara centinaia di missioni e registra la consegna del ferito alla fase sanitaria successiva nel 51,9% dei casi. Nel 4,6% di tutte le missioni il mezzo fu distrutto con il ferito a bordo. Fra gli esiti senza consegna figurano rientri a vuoto e perdite del mezzo prima del carico. Il denominatore è costituito dalle missioni, perciò il bilancio non permette di risalire ai singoli pazienti infine recuperati dopo eventuali tentativi ulteriori o alla loro sopravvivenza dopo la consegna. Ukrainska Pravda riprende la medesima relazione.",
         "fonti": [
           {
             "nome": "1° battaglione medico indipendente — Dal CASEVAC all’UGEVAC, relazione sulle evacuazioni con UGV",
@@ -327,6 +327,55 @@
             "nome": "Valeriia Yehoshyna e Kira Tolstiakova, Schemy / Radio Svoboda — Reportage sui rifornimenti con UGV a Khartiia",
             "url": "https://www.radiosvoboda.org/a/video-skhemy-nazemni-drony/33518677.html",
             "data": "2025-09-01"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E020",
+        "livello": "confermato",
+        "titolo": "Tempi dell’evacuazione sanitaria in elicottero in Afghanistan",
+        "motivazione": "Kotwal e colleghi analizzano la direttiva statunitense del 2009 per il trasporto in elicottero entro un’ora dei feriti critici. Nel sottogruppo con dati dettagliati, la mediana del tempo di trasporto è scesa da 90 a 43 minuti e la quota entro 60 minuti è salita dal 24,8% al 75,2%. Il confronto è retrospettivo e riguarda il tempo di trasporto preospedaliero.",
+        "fonti": [
+          {
+            "nome": "Russ S. Kotwal et al., JAMA Surgery — The Effect of a Golden Hour Policy on the Morbidity and Mortality of Combat Casualties",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/26422778/",
+            "data": "2015-09-30"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E021",
+        "livello": "plausibile",
+        "titolo": "Prime evacuazioni rese pubbliche con Ayudag-6 e StarGate",
+        "motivazione": "Il 19 ottobre 2026 The Kyiv Independent riporta l’annuncio e il filmato dell’evacuazione di un militare della 30ª brigata meccanizzata con l’Ayudag-6, con il contributo della 92ª brigata d’assalto e di altre unità. Il 26 ottobre Associated Press riporta i due recuperi con StarGate dichiarati dal 475° reggimento CODE 9.2, identifica SkyFall come sviluppatore e intervista uno dei feriti. Le date sono quelle degli annunci. Per il quadro complessivo degli episodi le fonti si basano sui reparti.",
+        "fonti": [
+          {
+            "nome": "Yuliia Taradiuk, The Kyiv Independent — Evacuazione aerea con Ayudag-6",
+            "url": "https://kyivindependent.com/ukrainian-forces-evacuate-injured-soldier-from-front-line-position-by-drone-in-first-of-its-kind-mission-video-shows/",
+            "data": "2026-10-19"
+          },
+          {
+            "nome": "Associated Press — Le prime evacuazioni con StarGate e l’intervista a un militare evacuato",
+            "url": "https://apnews.com/article/289e7f0b9ef13ad024f73f488e25a132",
+            "data": "2026-10-26"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E022",
+        "livello": "plausibile",
+        "titolo": "La testimonianza di un ferito e i plotoni di evacuazione aerea di CODE 9.2",
+        "motivazione": "Associated Press ha intervistato in ospedale un ferito evacuato con StarGate. Il militare racconta due giorni di attesa e l’impossibilità di rientrare a piedi. Il servizio indica una durata inferiore a quindici minuti per il solo volo con il paziente. Il 12 novembre Reuters attribuisce alla responsabile del servizio medico di CODE 9.2 la formazione in corso di plotoni per l’evacuazione aerea e il lavoro sul coordinamento fra piloti e sanitari. Il racconto riguarda un singolo recupero e lo stato dei plotoni è riferito dal reparto.",
+        "fonti": [
+          {
+            "nome": "Associated Press — Le prime evacuazioni con StarGate e l’intervista a un militare evacuato",
+            "url": "https://apnews.com/article/289e7f0b9ef13ad024f73f488e25a132",
+            "data": "2026-10-26"
+          },
+          {
+            "nome": "Reuters — A Ukrainian army unit pioneered drone evacuations. Now it’s scaling up",
+            "url": "https://www.reuters.com/world/ukrainian-army-unit-pioneered-drone-evacuations-now-its-scaling-up-2026-11-12/",
+            "data": "2026-11-12"
           }
         ]
       }
