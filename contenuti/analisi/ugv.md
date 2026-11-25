@@ -1,47 +1,69 @@
 ---
-titolo: "UGV, Il fronte a distanza"
+titolo: "UGV: tre unità, un fronte a distanza"
 slug: ugv-fronte-a-distanza
-data: ""
+data: "2026-11-25"
 sezione: Strategia
-sommario: ""
-teatro: ""
-domini: []
-sistemi_citati: []
+sommario: "Dai rifornimenti al combattimento, passando per l'evacuazione dei feriti: la diffusione dei robot terrestri in Ucraina sta trasformando l'organizzazione dei reparti e il rapporto fra presenza fisica del soldato ed esercizio delle sue funzioni."
+teatro: Ucraina
+domini: [terra, aria, droni, logistica, industria]
+sistemi_citati: [Gimli, Targan, Maul, Droid TW, TerMIT, THeMIS, DJI Mavic, Heavy Shot Ayudag-6, StarGate, Starlink, DELTA, DOT-Chain Defence]
 immagine:
-  file: ""
-  alt: ""
-  didascalia: ""
-  credito: ""
-  fonte: ""
+  file: /immagini/strategia/ugv/ugv-fronte-a-distanza.webp
+  alt: "Due veicoli terrestri senza equipaggio, uno logistico e uno armato. In alto, le insegne di Khartiia, del 1° battaglione medico indipendente e di NC13."
+  didascalia: "Tre unità ucraine, tre applicazioni della robotica terrestre: rifornimento, evacuazione e combattimento."
+  credito: "Frontiera"
+  fonte: "Illustrazione editoriale generata con AI"
   licenza: ""
-  fit: ""
-  posizione: ""
+  fit: cover
+  posizione: center
 immagini_inline:
   missioni_delta:
     file: /immagini/strategia/ugv/missioni-delta-2026.webp
-    alt: "Grafico a barre delle missioni logistiche e di evacuazione con UGV. Le missioni aumentano ogni mese, da 7.511 a gennaio a 31.398 a ottobre 2026."
-    didascalia: "Missioni mensili di logistica ed evacuazione svolte con UGV dalle forze ucraine, gennaio–ottobre 2026. Dati registrati in DELTA e verificati da Brave1."
-    credito: "Elaborazione Frontiera su dati del Ministero della Difesa dell’Ucraina"
-    fonte: "https://mod.gov.ua/en/explainers/ukraine-ugvs-cargo-drones-frontline-logistics"
-    licenza: "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/"
+    alt: "Le missioni mensili passano da 7.511 a gennaio a 31.398 a ottobre 2026, per un totale di 171.253 nei dieci mesi."
+    didascalia: "Missioni mensili di logistica ed evacuazione con UGV registrate in DELTA e verificate da Brave1, gennaio–ottobre 2026."
+    credito: "Elaborazione Frontiera su dati del Ministero della Difesa ucraino"
+    fonte: "https://mod.gov.ua/en/news/ukraine-ugv-missions-october-2026"
     fit: contain
-infobox: null
-eleventyExcludeFromCollections: true
-noindex: true
+  produzione_ugv:
+    file: /immagini/strategia/ugv/produzione-ugv-ucraina.webp
+    alt: "Il valore stimato della produzione ucraina di UGV sale da 43 a 252 milioni di dollari. Logistica e posa di mine valgono il 61% nel 2025. La crescita annua è del 967% per i robot esplosivi a perdere, del 556% per le piattaforme logistiche e del 19% per le piattaforme strike."
+    didascalia: "Valore stimato della produzione ucraina di UGV nel 2024 e nel 2025, con quota logistica e crescita annua per segmento."
+    credito: "Elaborazione Frontiera su stime KSE Institute, marzo 2026, pp. 10–11"
+    fonte: "https://institute.kse.ua/wp-content/uploads/2026/03/the-ukrainian_defense_technology_market_eng_march_2026.pdf"
+    fit: contain
+  tencore_ratel:
+    file: /immagini/strategia/ugv/tencore-ratel-robotics.webp
+    alt: "Tencore riceve un investimento di 3,74 milioni di dollari. Le vendite nette di Ratel passano da 1,5 a 18,6 milioni tra 2024 e 2025. Nel 2026 Ratel dichiara 42,1 milioni di ricavi preliminari nei primi nove mesi e 65,1 milioni di ordini da evadere al 30 settembre. L’acquisizione annunciata prevede un corrispettivo potenziale fino a 224 milioni."
+    didascalia: "L’investimento di MITS Capital in Tencore e i dati societari di Ratel Robotics. Il corrispettivo massimo annunciato da Swarmer dipende anche da risultati futuri."
+    credito: "Elaborazione Frontiera su comunicati MITS Capital e documenti Swarmer depositati alla SEC"
+    fonte: "https://mits.capital/news/mits-capital-invests-3-74m-in-ukrainian-robotics-company-tencore/ — https://www.sec.gov/Archives/edgar/data/2092574/000110465926111047/tm2625952-1_prem14a.htm — https://www.sec.gov/Archives/edgar/data/2092574/000110465926125211/tm2629384d1_ex99-1.htm — https://www.sec.gov/Archives/edgar/data/2092574/000110465926106499/tm2625021d3_ex99-1.htm"
+    fit: contain
+infobox:
+  tipo: 2
+  titolo: "Le forme della presenza terrestre"
+  voci:
+    - occhiello: "Esposizione"
+      titolo: "Operare senza essere sul posto"
+      testo: "La diffusione dei droni aerei accresce i rischi delle attività sul terreno. Gli UGV permettono di esercitare alcune di queste attività senza esporre direttamente il personale incaricato di svolgerle."
+    - occhiello: "Organizzazione"
+      titolo: "Redistribuire il lavoro militare"
+      testo: "Il controllo a distanza dei mezzi modifica la distribuzione del lavoro fra i reparti e favorisce lo sviluppo di nuove specialità, competenze e funzioni di supporto."
+    - occhiello: "Presenza"
+      titolo: "Sostituire e sostenere"
+      testo: "La robotizzazione terrestre consente di assumere alcune funzioni del soldato e, attraverso i rifornimenti e il recupero dei feriti, contribuisce a sostenere la presenza degli uomini sul campo."
 ---
 
-Un esercito può disporre di uomini, armi e mezzi, ma senza rifornimenti non può continuare a combattere. Munizioni, acqua, viveri, carburante e materiali devono raggiungere le unità impegnate sul campo, alimentando un flusso continuo dalle retrovie alle posizioni avanzate. **La logistica costituisce così una delle condizioni fondamentali della capacità militare**: quando viene meno, anche le forze ancora disponibili rischiano di non poter più svolgere i propri compiti.
-
-Nella guerra in Ucraina, questa necessità incontra difficoltà particolarmente severe. La diffusione dei droni da ricognizione ha ampliato enormemente le possibilità di osservare i movimenti sul campo di battaglia, mentre i droni d'attacco, soprattutto gli FPV, consentono di colpire uomini e veicoli lungo percorsi un tempo meno esposti. È uno degli aspetti del cosiddetto *fronte trasparente*, nel quale anche un viaggio di rifornimento può diventare un'operazione estremamente rischiosa. Eppure, il mantenimento della logistica non può venir meno.
-
-Per affrontare questo problema, le forze ucraine ricorrono sempre più spesso ai **veicoli terrestri senza equipaggio**, o *Unmanned Ground Vehicles* (UGV). Controllati a distanza, questi mezzi possono trasportare rifornimenti fino alle posizioni avanzate senza esporre un conducente lungo il percorso. Il trasporto logistico rappresenta oggi una delle loro applicazioni più diffuse, ma non l'unica: gli UGV vengono impiegati anche per evacuare feriti, svolgere attività del genio e sostenere il combattimento con armi controllate da remoto. **La possibilità di separare la presenza fisica del soldato da alcune attività operative sta così acquistando una dimensione sempre più concreta**, sostenuta dalla crescita degli impieghi e della produzione di queste piattaforme.
+Nel gennaio 2026 le forze ucraine hanno registrato circa 7.500 missioni di logistica ed evacuazione mediante **veicoli terrestri senza equipaggio**, o *Unmanned Ground Vehicles* (UGV). Nei mesi successivi il numero delle missioni è cresciuto costantemente, fino a superare le **31.000 nel solo mese di ottobre**. Parallelamente, nei primi cinque mesi dell'anno, il numero delle unità che rendicontavano missioni svolte con queste piattaforme era quasi raddoppiato, passando da 117 a 230. I dati pubblicati dal Ministero della Difesa ucraino, relativi alle attività registrate attraverso DELTA e verificate da Brave1, restituiscono la crescente dimensione assunta dalla robotica terrestre nelle forze ucraine. {% affV1 "UGV-E036" %}
 
 {% figura immagini_inline.missioni_delta, "4/4" %}
 
+Lo sviluppo della robotica terrestre si inserisce in una delle più profonde trasformazioni del campo di battaglia osservate durante la guerra in Ucraina. La diffusione dei droni aerei da ricognizione e da attacco ha progressivamente accresciuto i rischi ai quali sono esposti uomini e veicoli impegnati nelle attività sul terreno. La possibilità di svolgere alcune di queste attività attraverso piattaforme controllate a distanza ha assunto così un'importanza crescente, dando luogo alla formazione di reparti specializzati e allo sviluppo di mezzi destinati a funzioni differenti.
+
+Attraverso l'esperienza di tre unità militari ucraine esamineremo altrettante applicazioni della robotica terrestre: **il rifornimento delle posizioni avanzate, con la brigata Khartiia; l'evacuazione dei feriti, con il 1° battaglione medico indipendente; il combattimento, con il reparto NC13 della 3ª brigata d'assalto.** Le loro esperienze permettono di osservare la robotizzazione del fronte non soltanto attraverso lo sviluppo di nuove piattaforme, ma attraverso i cambiamenti che il loro impiego introduce nel lavoro e nell'organizzazione dei reparti.
+
 ## Khartiia · I rifornimenti diventano un servizio
 
-Nella primavera del 2024, quando il comando della **13ª brigata Khartiia** della Guardia nazionale ucraina decise di costituire un nucleo dedicato ai veicoli terrestri senza equipaggio, Andrii Kopach non era convinto che quei mezzi avessero un futuro importante sul campo di battaglia. Il comandante della brigata, noto come «Kornet», e il capo di stato maggiore «Altair» avevano invece deciso di investire nello sviluppo della specialità. Non era un interesse del tutto nuovo: già nel 2022, nell'ambiente delle formazioni volontarie da cui sarebbe nata Khartiia, erano stati sperimentati piccoli veicoli radiocomandati, ricavati persino da automobili giocattolo, per trasportare esplosivi verso le posizioni nemiche. Quelle prove avevano però lasciato spazio allo sviluppo dei droni FPV, che offrivano un'altra possibilità di colpire a distanza.
-
+Nella primavera del 2024, quando il comando della **13ª brigata Khartiia** della Guardia nazionale ucraina decise di costituire un nucleo dedicato ai veicoli terrestri senza equipaggio, Andrii Kopach, noto con il nome di battaglia «Matematyk» e futuro responsabile della specialità UGV della brigata, non era convinto che quei mezzi avessero un futuro importante sul campo di battaglia. Il comandante della brigata, noto come «Kornet», e il capo di stato maggiore «Altair» avevano invece deciso di investire nello sviluppo della specialità. Non era un interesse del tutto nuovo: già nel 2022, nell'ambiente delle formazioni volontarie da cui sarebbe nata Khartiia, erano stati sperimentati piccoli veicoli radiocomandati, ricavati persino da automobili giocattolo, per trasportare esplosivi verso le posizioni nemiche. Quelle prove avevano però lasciato spazio allo sviluppo dei droni FPV, che offrivano un'altra possibilità di colpire a distanza.
 Lo scetticismo di Kopach aveva ragioni concrete. Nelle condizioni operative dell'inizio del 2024, ricorda l'ufficiale, pick-up e mezzi blindati potevano ancora avvicinarsi a circa tre-cinque chilometri dalla linea di contatto. **La logistica convenzionale continuava dunque a raggiungere gran parte delle destinazioni utili, mentre i robot sembravano avere uno spazio limitato**: portare viveri ai fanti nelle posizioni più avanzate oppure recuperare uomini dove i veicoli con equipaggio non riuscivano ad arrivare. A renderli poco attraenti contribuivano le **caratteristiche delle prime piattaforme**. Erano spesso costruzioni artigianali fornite da appassionati, con sistemi di controllo derivati da quelli degli FPV e senza una telecamera capace di mostrare direttamente la strada all'operatore. Per guidarle **occorreva osservarne il movimento attraverso un drone aereo**, generalmente un Mavic, mantenendo il collegamento radio necessario al controllo.
 
 La formazione del nucleo proseguì comunque. Kopach, insieme al giovane comandante di plotone «Happy» e a un piccolo gruppo di militari, cominciò a sperimentare le piattaforme disponibili. Nell'estate del 2024 arrivarono le prime consegne logistiche, ancora occasionali. Entro la fine dell'anno il reparto riuscì anche a recuperare un ferito da una posizione nella zona di Lyptsi, irraggiungibile con i veicoli ordinari. Il robot venne guidato osservandolo da un Mavic, in una missione che Kopach ricorda per la difficoltà del percorso e la tensione degli operatori. I mezzi terrestri avevano dimostrato di poter raggiungere luoghi altrimenti inaccessibili, ma il loro impiego rimaneva legato a necessità particolari e a una preparazione impegnativa. {% affV1 "UGV-E001" %}
@@ -135,15 +157,19 @@ Se le esperienze di combattimento finora documentate non consentono ancora di st
 
 In uno studio pubblicato nel marzo 2026, il **KSE Institute** ha ricostruito l'evoluzione dei principali comparti tecnologici dell'industria della difesa ucraina. Il valore della produzione di robot terrestri, stimato a **43 milioni di dollari nel 2024**, avrebbe raggiunto i **252 milioni nel 2025**, quasi sei volte quello dell'anno precedente. Nel settore operavano ormai più di cinquanta aziende, prevalentemente di piccole e medie dimensioni. La crescita era avvenuta in un mercato ancora relativamente giovane, caratterizzato dalla concentrazione di una parte considerevole dei ricavi presso pochi produttori e dall'ingresso di nuove imprese. Gli autori dello studio sottolineano inoltre la difficoltà di ricostruire l'intera dimensione della produzione ucraina: parte dei mezzi viene acquistata attraverso finanziamenti decentrati e organizzazioni di volontariato, mentre alcune attività di fabbricazione e assemblaggio avvengono direttamente all'interno dei reparti militari. {% affV1 "UGV-E027" %}
 
-La distribuzione del valore della produzione fra le diverse tipologie di robot permette di osservare anche lo sviluppo relativo delle loro applicazioni. Nel 2025 il segmento che KSE identifica con la logistica e la posa di mine rappresentava il **61% del valore complessivo della produzione di UGV**, con una crescita del 556% rispetto all'anno precedente. È in questo segmento che lo studio colloca gran parte delle piattaforme utilizzate per i rifornimenti e l'evacuazione dei feriti. Particolarmente interessante, alla luce dell'esperienza di NC13, è la differenza fra le due categorie di mezzi da combattimento: mentre il segmento dei robot esplosivi a perdere registrava una crescita del 967%, quello delle piattaforme appartenenti alla categoria *strike*, che KSE distingue dai sistemi a perdere, cresceva del 19%, continuando a rappresentare una parte relativamente contenuta del mercato. Le diverse forme di combattimento robotizzato non stavano dunque conoscendo il medesimo sviluppo industriale. {% affV1 "UGV-E028" %}
+La distribuzione del valore della produzione fra le diverse tipologie di robot permette di osservare anche il differente sviluppo delle loro applicazioni. Nel 2025 il segmento che KSE identifica con la **logistica e la posa di mine** rappresentava il **61% del valore complessivo della produzione di UGV**, con una crescita del 556% rispetto all'anno precedente. Particolarmente interessante, alla luce dell'esperienza di NC13, è la distinzione operata dallo studio fra i robot terrestri a perdere, compresi nella categoria *kamikaze / minelaying*, e le piattaforme appartenenti alla categoria *strike*, qui intesa in senso più ristretto rispetto alla classificazione adottata dal reparto ucraino, includente i soli droni armati. Il valore della produzione del primo segmento, che partiva da dimensioni particolarmente ridotte, era cresciuto del **967%**, mentre quello del secondo era aumentato del **19%**. Nell'interpretare questa discrepanza occorre considerare anche la **diversa natura economica delle piattaforme**: mentre i robot armati riutilizzabili sono destinati a esercitare la propria funzione nel tempo, quelli a perdere vengono consumati nell'attacco, generando un'esigenza di reintegro insita nel loro stesso impiego. Non è tuttavia possibile stabilire quanto questa differenza abbia contribuito alla diversa crescita dei due segmenti. Gli autori dello studio riconducono inoltre la limitata diffusione delle piattaforme *strike* alla persistente difficoltà nel soddisfare pienamente le esigenze operative dei reparti. {% affV1 "UGV-E028" %}
+
+{% figura immagini_inline.produzione_ugv, "3/4" %}
 
 L'espansione della produzione si accompagnava a una rapida crescita delle acquisizioni militari. Secondo i dati forniti dall'agenzia acquisti del Ministero della Difesa ucraino a *Ekonomichna Pravda*, nella seconda metà del 2024 erano stati stipulati sei contratti per la fornitura di robot terrestri, per un valore complessivo di circa 100 milioni di grivne. Nei soli primi tre mesi del 2025 i contratti erano diventati trentuno, per un valore di **6 miliardi di grivne**. Le esigenze alle quali i primi reparti specializzati avevano cercato di rispondere attraverso la sperimentazione delle piattaforme disponibili cominciavano così a trovare riscontro negli stanziamenti destinati all'acquisizione di questi sistemi. {% affV1 "UGV-E029" %}
 
 Alla fine del 2025, il Ministero della Difesa riferiva di aver consegnato alle forze ucraine circa 15.000 robot terrestri nel corso dell'anno. Il 27 aprile 2026 il presidente Volodymyr Zelensky assegnò al ministro della Difesa e allo stato maggiore un nuovo obiettivo: **almeno 50.000 UGV entro la fine dell'anno**. Nel luglio successivo l'agenzia acquisti comunicò di aver già stipulato contratti per oltre 22.000 mezzi, tutti di produzione nazionale, quasi il doppio di quelli contrattualizzati durante l'intero 2025. La maggioranza apparteneva alla categoria logistica, seguita dai sistemi destinati alle attività del genio e da quelli da combattimento. Migliaia di mezzi erano già stati consegnati ai reparti, anche attraverso il sistema di acquisti DOT-Chain Defence, che consente alle unità di selezionare le piattaforme di cui necessitano utilizzando le risorse loro assegnate. {% affV1 "UGV-E030" %}
 
-Lo sviluppo di questa domanda ha favorito anche l'ingresso di capitali privati nel settore. Nel luglio 2025 il gruppo di investimento MITS Capital annunciò un investimento di **3,74 milioni di dollari in Tencore**, azienda ucraina specializzata nella robotica terrestre e produttrice del TerMIT. La crescita di un'impresa del settore non dipendeva più soltanto dalla capacità di ottenere nuove commesse: cominciava ad **attirare investitori interessati a partecipare al suo sviluppo industriale**. {% affV1 "UGV-E031" %}
+Lo sviluppo di questa domanda ha favorito anche l'ingresso di capitali privati nel settore. Nel luglio 2025 il gruppo di investimento MITS Capital annunciò un investimento di **3,74 milioni di dollari in Tencore**, azienda ucraina specializzata nella robotica terrestre e produttrice del TerMIT (un robot terrestre cingolato e modulare, destinato principalmente al trasporto logistico e adattabile ad altre funzioni). La crescita di un'impresa del settore non dipendeva più soltanto dalla capacità di ottenere nuove commesse: cominciava ad **attirare investitori interessati a partecipare al suo sviluppo industriale**. {% affV1 "UGV-E031" %}
 
 La trasformazione economica di queste imprese emerge con particolare chiarezza dai documenti societari di un altro produttore ucraino, **Ratel Robotics**. Secondo i prospetti depositati nell'ottobre 2026 presso la Securities and Exchange Commission statunitense, le vendite nette dell'azienda erano passate da 1,51 milioni di dollari nel 2024 a 18,64 milioni nel 2025, anno nel quale i clienti pubblici avevano generato circa il 93% dei ricavi. L'aumento delle vendite si accompagnava a un miglioramento della redditività: il risultato economico netto, negativo nel 2024, aveva raggiunto quasi due milioni di dollari nel 2025. La domanda militare stava dunque contribuendo non soltanto all'ampliamento della produzione, ma anche alla crescita economica dei soggetti industriali chiamati a sostenerla. {% affV1 "UGV-E032" %}
+
+{% figura immagini_inline.tencore_ratel, "3/4" %}
 
 Nel settembre 2026 la società statunitense **Swarmer**, specializzata nello sviluppo di software per sistemi senza equipaggio, annunciò un accordo per acquisire Ratel Robotics, con un corrispettivo potenziale che, subordinatamente al raggiungimento di determinati risultati economici futuri, poteva arrivare a 224 milioni di dollari. Nel novembre successivo Swarmer comunicò che Ratel aveva registrato, secondo dati ancora preliminari e non sottoposti a revisione indipendente, ricavi per 42,1 milioni di dollari nei primi nove mesi del 2026. Al 30 settembre l'azienda disponeva inoltre di un portafoglio di ordini governativi ancora da evadere del valore di circa 65 milioni di dollari. Attraverso l'acquisizione, non ancora perfezionata al momento di quell'aggiornamento, Swarmer intendeva affiancare alla propria attività di sviluppo software la capacità di produrre e commercializzare direttamente sistemi robotici terrestri. {% affV1 "UGV-E033" %}
 
@@ -152,3 +178,11 @@ L'interesse internazionale per il settore si manifesta anche attraverso la **cos
 Anche l'esperienza acquisita dalle aziende ucraine durante la guerra è divenuta oggetto di cooperazione internazionale. Nell'estate del 2026 la finlandese Insta e Tencore hanno sottoscritto una dichiarazione d'intenti per avviare una collaborazione produttiva in Finlandia. In ottobre, Tencore ha poi concluso un memorandum con la canadese Dominion Dynamics per la produzione di robot terrestri in Canada, prevista a partire dal 2027. Si tratta, in questi ultimi casi, di iniziative ancora da realizzare, ma significative dell'interesse rivolto alle piattaforme sviluppate dall'industria ucraina e alle competenze maturate dai loro produttori nel corso del conflitto. {% affV1 "UGV-E035" %}
 
 Nella primavera del 2024, quando Andrii Kopach manifestava il proprio scetticismo sull'utilità dei robot terrestri, il loro impiego nella brigata Khartiia era ancora legato alla sperimentazione di mezzi artigianali e alla ricerca di compiti che i veicoli convenzionali non riuscivano a svolgere. A distanza di poco più di due anni, quelle attività hanno dato luogo alla formazione di reparti specializzati, a programmi di acquisizione di decine di migliaia di mezzi e allo sviluppo di un'industria che attira investimenti e promuove iniziative produttive internazionali. **La possibilità di esercitare a distanza alcune delle funzioni del soldato sul terreno è divenuta oggetto di un impegno militare, economico e industriale**, la cui estensione non trova ancora piena corrispondenza nelle capacità operative finora dimostrate, ma che costituisce una delle condizioni del loro ulteriore sviluppo.
+
+## Il fronte, tra aria e terra
+
+La straordinaria diffusione dei droni aerei costituisce uno dei fenomeni più caratteristici della guerra in Ucraina. Lo sviluppo della robotica terrestre non rappresenta però soltanto l'estensione di questa trasformazione a un altro dominio del combattimento. È proprio la crescente capacità di osservare e colpire dall'aria ad aver sensibilmente incentivato il ricorso a sistemi senza equipaggio per lo svolgimento di attività sul terreno. A loro volta, come abbiamo osservato nel caso di Khartiia, i robot terrestri concorrono al sostegno logistico dei reparti che operano con i droni aerei. **Le due forme di robotizzazione si sviluppano dunque anche in relazione l'una all'altra.**
+
+La presenza militare sul terreno, resa più difficile dalla diffusione dei droni aerei, continua a costituire una necessità del combattimento terrestre. Lo sviluppo degli UGV non risponde soltanto alla possibilità di sostituire il soldato nell'esercizio di alcune funzioni, ma anche all'esigenza di sostenere la presenza degli uomini che continuano a operare sul campo. **La robotizzazione di alcune attività terrestri può dunque contribuire al mantenimento della stessa presenza umana dalla quale permette, in altri casi, di prescindere.**
+
+La robotizzazione terrestre pone così una questione che va oltre le possibilità offerte dalle singole piattaforme: **quale forma possa assumere un esercito nel quale una parte crescente delle attività sul terreno venga esercitata a distanza.**
