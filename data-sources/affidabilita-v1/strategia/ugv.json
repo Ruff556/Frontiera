@@ -435,6 +435,151 @@
             "data": "2026-11-09"
           }
         ]
+      },
+      {
+        "id": "UGV-E027",
+        "livello": "plausibile",
+        "titolo": "Il valore stimato della produzione ucraina di UGV nel 2024–2025",
+        "motivazione": "KSE stima il valore della produzione in circa 43 milioni di dollari nel 2024 e 252 milioni nel 2025. Descrive oltre cinquanta aziende attive, soprattutto piccole e medie, in un mercato con ricavi concentrati presso pochi produttori e nuovi ingressi. Nella sintesi del mercato tecnologico della difesa avverte che acquisti decentrati, finanziamenti volontari e produzione delle brigate restano in parte fuori dalle statistiche formali. Le cifre sugli UGV sono stime settoriali.",
+        "fonti": [
+          {
+            "nome": "KSE Institute — The Ukrainian Defense Technology Market, figg. 3–4 e sintesi metodologica (marzo 2026)",
+            "url": "https://institute.kse.ua/wp-content/uploads/2026/03/the-ukrainian_defense_technology_market_eng_march_2026.pdf"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E028",
+        "livello": "plausibile",
+        "titolo": "Quota logistica e crescita diseguale dei segmenti UGV",
+        "motivazione": "KSE attribuisce al segmento Logistics/minelaying il 61% del valore della produzione nel 2025 e una crescita annua del 556%. Stima un aumento del 967% per Kamikaze/minelaying e del 19% per Strike, che nella tassonomia del rapporto è una categoria distinta e di peso ancora contenuto. Quota e variazioni riguardano il valore economico della produzione. La classificazione produttiva non coincide con una ripartizione delle missioni.",
+        "fonti": [
+          {
+            "nome": "KSE Institute — The Ukrainian Defense Technology Market, figg. 3–4 e sintesi metodologica (marzo 2026)",
+            "url": "https://institute.kse.ua/wp-content/uploads/2026/03/the-ukrainian_defense_technology_market_eng_march_2026.pdf"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E029",
+        "livello": "plausibile",
+        "titolo": "I contratti ucraini per gli UGV fra il 2024 e il primo trimestre 2025",
+        "motivazione": "L’agenzia acquisti della difesa ha comunicato a Ekonomichna Pravda sei contratti per circa 100 milioni di grivne nel secondo semestre 2024 e 31 per circa 6 miliardi nel primo trimestre 2025. Le cifre si riferiscono a contratti stipulati in periodi di diversa durata. Il materiale pubblicato non contiene il dettaglio dei singoli contratti o delle relative consegne.",
+        "fonti": [
+          {
+            "nome": "Ekonomichna Pravda / Ukrainska Pravda — Le acquisizioni ucraine di robot terrestri",
+            "url": "https://www.pravda.com.ua/eng/articles/2025/04/03/7505903/",
+            "data": "2025-04-03"
+          },
+          {
+            "nome": "Militarnyi — Il valore dei contratti ucraini per i robot terrestri",
+            "url": "https://militarnyi.com/en/news/ministry-of-defence-of-ukraine-contracts-ground-drones-worth-uah-6-billion/",
+            "data": "2025-03-31"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E030",
+        "livello": "confermato",
+        "titolo": "Consegne 2025, obiettivo 2026 e contratti di luglio",
+        "motivazione": "A dicembre 2025 il Ministero riferì più di 15.000 UGV consegnati. Il 27 aprile 2026 Zelensky fissò un obiettivo di almeno 50.000 UGV nell’anno. Il 20 luglio DOT riferì oltre 22.000 mezzi contrattualizzati, tutti di produzione ucraina, soprattutto per la logistica, seguita dal genio e dal combattimento. L’agenzia riportò migliaia di consegne, anche tramite DOT-Chain Defence, dove i reparti selezionano i sistemi con fondi di bilancio. Le tre cifre descrivono rispettivamente consegne riportate, un obiettivo e mezzi sotto contratto.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa dell’Ucraina — Bilancio delle consegne del 2025",
+            "url": "https://mod.gov.ua/en/news/45-billion-from-partners-over-3-million-strike-drones-more-ukrainian-weapons-key-ministry-of-defence-highlights",
+            "data": "2025-12-27"
+          },
+          {
+            "nome": "Presidenza dell’Ucraina — Discorso di Zelensky e obiettivo annuale sugli UGV",
+            "url": "https://www.president.gov.ua/en/news/aktivno-shukayemo-shlyahi-zabezpechennya-antibalistiki-ta-in-104141",
+            "data": "2026-04-27"
+          },
+          {
+            "nome": "Defence Procurement Agency DOT — Oltre 22.000 UGV contrattualizzati nel 2026",
+            "url": "https://www.zbroya.gov.ua/en/news/ponad-22-000-nrk-zakontraktovano-z-pochatku-2026-roku-maizhe-udvichi-bilshe-nizh-za-ves-mynulyi",
+            "data": "2026-07-20"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E031",
+        "livello": "confermato",
+        "titolo": "L’investimento di MITS Capital in Tencore",
+        "motivazione": "L’11 luglio 2025 MITS Capital ha annunciato un investimento privato di 3,74 milioni di dollari in Tencore, sviluppatrice del TerMIT. È un caso documentato di capitale privato nel settore degli UGV. La cifra riguarda l’investimento nella società.",
+        "fonti": [
+          {
+            "nome": "MITS Capital — MITS Capital Invests $3.74M in Ukrainian Robotics Company Tencore",
+            "url": "https://mits.capital/news/mits-capital-invests-3-74m-in-ukrainian-robotics-company-tencore/",
+            "data": "2025-07-11"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E032",
+        "livello": "confermato",
+        "titolo": "Vendite nette e redditività di Ratel Robotics nel 2024–2025",
+        "motivazione": "I bilanci di Ratel inclusi nel prospetto definitivo depositato da Swarmer presso la SEC riportano vendite nette per 1,51 milioni di dollari nel 2024 e 18,64 milioni nel 2025. Nel 2025 i clienti pubblici rappresentavano circa il 93% delle vendite nette e l’utile netto era di circa 1,97 milioni di dollari, a fronte di una perdita nel 2024.",
+        "fonti": [
+          {
+            "nome": "Swarmer — Prospetto definitivo DEF M14A depositato alla SEC, risultati e bilanci di Ratel",
+            "url": "https://www.sec.gov/Archives/edgar/data/2092574/000110465926114040/tm2625952-2_defm14a.htm",
+            "data": "2026-10-06"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E033",
+        "livello": "confermato",
+        "titolo": "L’accordo di acquisizione di Ratel e l’aggiornamento di novembre",
+        "motivazione": "Swarmer ha annunciato a settembre un accordo per acquisire Ratel con un corrispettivo potenziale fino a 224 milioni di dollari, subordinato al raggiungimento dei traguardi previsti. Nell’aggiornamento del 10 novembre l’operazione risultava ancora pendente. Swarmer riportava 42,1 milioni di ricavi preliminari non revisionati per i primi nove mesi del 2026 e circa 65,1 milioni di ordini governativi da evadere al 30 settembre. I due importi hanno perimetri distinti.",
+        "fonti": [
+          {
+            "nome": "Swarmer — Annuncio dell’accordo definitivo per l’acquisizione di Ratel, allegato SEC",
+            "url": "https://www.sec.gov/Archives/edgar/data/2092574/000110465926106499/tm2625021d3_ex99-1.htm",
+            "data": "2026-09-10"
+          },
+          {
+            "nome": "Swarmer — Risultati del terzo trimestre 2026 e aggiornamento su Ratel, allegato SEC",
+            "url": "https://www.sec.gov/Archives/edgar/data/2092574/000110465926125211/tm2629384d1_ex99-1.htm",
+            "data": "2026-11-10"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E034",
+        "livello": "confermato",
+        "titolo": "Cooperazione industriale sugli UGV in Germania e nei Paesi Bassi",
+        "motivazione": "Il 19 giugno Quantum Tencore Industries ha annunciato di essere stata selezionata per una fornitura di 2.000 TerMIT alle forze ucraine, finanziata dal Ministero della Difesa tedesco. Il 4 giugno Milrem Robotics e VDL Defentec hanno invece inaugurato a Born una linea di assemblaggio THeMIS e consegnato i primi veicoli prodotti nei Paesi Bassi al governo olandese per la successiva fornitura all’Ucraina. Gli annunci documentano stadi diversi dei due programmi.",
+        "fonti": [
+          {
+            "nome": "Quantum Tencore Industries — Annuncio della selezione per la fornitura di 2.000 TerMIT",
+            "url": "https://quantum-systems.com/wp-content/uploads/2026/06/260619_QTI_JV_DEU.pdf",
+            "data": "2026-06-19"
+          },
+          {
+            "nome": "Milrem Robotics — Inaugurazione della linea THeMIS a Born e consegna al governo olandese",
+            "url": "https://milremrobotics.com/milrem-robotics-and-vdl-defentec-hand-over-first-ugvs-intended-for-ukraine/",
+            "data": "2026-06-04"
+          }
+        ]
+      },
+      {
+        "id": "UGV-E035",
+        "livello": "confermato",
+        "titolo": "Le intese di Tencore per la produzione in Finlandia e Canada",
+        "motivazione": "Insta ha annunciato ad agosto una lettera d’intenti sulla cooperazione produttiva con Tencore in Finlandia. Il 13 ottobre Dominion Dynamics ha annunciato un memorandum con Tencore per produrre UGV in Canada, indicando il 2027 come obiettivo. Gli annunci attestano le intese e i progetti dichiarati. L’avvio della produzione resta da documentare.",
+        "fonti": [
+          {
+            "nome": "Insta — Lettera d’intenti sulla cooperazione produttiva in Finlandia",
+            "url": "https://www.insta.fi/en/defence-and-aviation/news/news/insta-and-ukrainian-defence-company-tencore-plan-to-launch-production-cooperation-for-unmanned-ground-vehicles-in-finland/",
+            "data": "2026-08-25"
+          },
+          {
+            "nome": "Dominion Dynamics — Memorandum per la produzione di UGV in Canada",
+            "url": "https://www.defendthedominion.com/news/dominion-and-tencore-partner-to-manufacture-UGVs-in-Canada",
+            "data": "2026-10-13"
+          }
+        ]
       }
     ]
   }
