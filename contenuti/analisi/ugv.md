@@ -38,6 +38,22 @@ immagini_inline:
     credito: "Elaborazione Frontiera su comunicati MITS Capital e documenti Swarmer depositati alla SEC"
     fonte: "https://mits.capital/news/mits-capital-invests-3-74m-in-ukrainian-robotics-company-tencore/ — https://www.sec.gov/Archives/edgar/data/2092574/000110465926111047/tm2625952-1_prem14a.htm — https://www.sec.gov/Archives/edgar/data/2092574/000110465926125211/tm2629384d1_ex99-1.htm — https://www.sec.gov/Archives/edgar/data/2092574/000110465926106499/tm2625021d3_ex99-1.htm"
     fit: contain
+  maul:
+    file: /immagini/strategia/ugv/maul.webp
+    alt: "Robot Maul a quattro ruote con la capsula verde per il trasporto del ferito, visto di tre quarti."
+    didascalia: "Il Maul da evacuazione durante una dimostrazione nei Paesi Bassi."
+    credito: "Iryna Drabok e Mykola Lobodianko / Ukrinform (crediti del reportage)"
+    fonte: "https://www.ukrinform.ua/rubric-world/4185261-droni-j-roboti-dla-frontu-u-niderlandah-pokazali-novi-oboronni-tehnologii.html"
+    licenza: "Uso online secondo le condizioni di Ukrinform — https://www.ukrinform.ua/info/code.html"
+    fit: contain
+  droid_tw:
+    file: /immagini/strategia/ugv/droid-tw-12-7.webp
+    alt: "Un Droid TW 12.7 cingolato con mitragliatrice, visto di fronte in un bosco."
+    didascalia: "Il Droid TW 12.7 di DevDroid."
+    credito: "DevDroid, via Ars Technica (conversione in WebP)"
+    fonte: "https://arstechnica.com/ai/2026/04/ukraines-military-robot-surge-aims-to-offset-drone-risks-to-humans/"
+    licenza: "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/"
+    fit: contain
 infobox:
   tipo: 2
   titolo: "Le forme della presenza terrestre"
@@ -93,7 +109,9 @@ Il **peggioramento delle condizioni sul fronte** ha investito profondamente anch
 
 **La ricerca di un'alternativa era cominciata alla fine del 2023**, nel servizio medico della **1ª Legione internazionale** dell'esercito ucraino. I sanitari avevano iniziato a sperimentare le piattaforme terrestri disponibili, cercando un mezzo capace di raggiungere le posizioni più difficili senza esporre un equipaggio. I risultati non li soddisfecero. Secondo la loro valutazione, molti robot erano **troppo lenti**, avevano un'**autonomia e una mobilità insufficienti** oppure **non offrivano una protezione adeguata** per trasportare un paziente. Le piattaforme sviluppate principalmente per la logistica potevano portare materiali, ma il recupero di un ferito imponeva esigenze differenti. Non bastava raggiungere una destinazione: occorreva farlo abbastanza rapidamente, attraversare un terreno danneggiato dai combattimenti e proteggere una persona che non avrebbe potuto difendersi o ricevere assistenza diretta durante il viaggio.
 
-Da questa esigenza nacque il **Maul**, un veicolo sviluppato con il coinvolgimento diretto dei militari che avrebbero dovuto impiegarlo. Invece di adattare semplicemente un piccolo robot logistico, il gruppo scelse una base di tipo quad, dotata di una **capsula corazzata destinata a ospitare il ferito**. L'obiettivo era ottenere una combinazione di velocità, mobilità fuoristrada e protezione che i sistemi precedentemente provati non avevano garantito. La presenza del motore termico comportava tuttavia degli svantaggi: rumore e calore rendevano il mezzo più facilmente individuabile, in particolare attraverso i sensori termici. Per i progettisti, tuttavia, ridurre il tempo trascorso nelle zone esposte aveva un'importanza tale da giustificare quel compromesso. La protezione della capsula, i collegamenti di controllo ridondanti e la possibilità di superare ostacoli o continuare a muoversi dopo alcuni danni divennero altrettanti elementi da perfezionare attraverso l'esperienza sul campo. {% affV1 "UGV-E007" %}
+{% figura immagini_inline.maul, "2/4", "right" %}
+
+Da questa esigenza nacque il **[Maul](https://www.ukrinform.ua/rubric-world/4185261-droni-j-roboti-dla-frontu-u-niderlandah-pokazali-novi-oboronni-tehnologii.html)**, un veicolo sviluppato con il coinvolgimento diretto dei militari che avrebbero dovuto impiegarlo. Invece di adattare semplicemente un piccolo robot logistico, il gruppo scelse una base di tipo quad, dotata di una **capsula corazzata destinata a ospitare il ferito**. L'obiettivo era ottenere una combinazione di velocità, mobilità fuoristrada e protezione che i sistemi precedentemente provati non avevano garantito. La presenza del motore termico comportava tuttavia degli svantaggi: rumore e calore rendevano il mezzo più facilmente individuabile, in particolare attraverso i sensori termici. Per i progettisti, tuttavia, ridurre il tempo trascorso nelle zone esposte aveva un'importanza tale da giustificare quel compromesso. La protezione della capsula, i collegamenti di controllo ridondanti e la possibilità di superare ostacoli o continuare a muoversi dopo alcuni danni divennero altrettanti elementi da perfezionare attraverso l'esperienza sul campo. {% affV1 "UGV-E007" %}
 
 La sperimentazione richiese tempo. **Nel gennaio 2025 il Maul venne impiegato in condizioni di combattimento per trasportare materiali**, prima ancora di effettuare un'evacuazione riuscita. Nell'aprile dello stesso anno, intanto, il servizio medico della 1ª Legione internazionale si trasformò nel **1° battaglione medico indipendente**, un'unità autonoma destinata a fornire sostegno sanitario anche ad altre formazioni. La sua attività comprendeva il recupero dei feriti, l'assistenza d'emergenza e le capacità necessarie a trattare pazienti prima del trasferimento alle strutture successive. La robotizzazione si inserì quindi in un'organizzazione nata per concentrare e sviluppare competenze sanitarie, anziché rappresentare un'aggiunta occasionale alle dotazioni di una brigata. Secondo la ricostruzione del battaglione, la prima evacuazione riuscita con il Maul arrivò nell'**ottobre 2025**, quasi due anni dopo l'inizio della ricerca di un'alternativa ai sistemi convenzionali. {% affV1 "UGV-E008" %}
 
@@ -142,6 +160,8 @@ La distinzione è particolarmente significativa in un campo di battaglia sul qua
 **La diffusione dei droni aerei non ha infatti eliminato la necessità di una presenza terrestre**. In uno studio pubblicato dal Royal United Services Institute nel novembre 2026, Jack Watling e Robert Tollast, esaminando l'integrazione degli UAV nei battaglioni di fanteria anche alla luce dell'esperienza ucraina, richiamano la persistente importanza dei soldati nella **conquista e nel mantenimento del terreno.** La capacità di osservare e colpire attraverso sistemi aerei non esaurisce le funzioni necessarie a esercitare il controllo di un'area. Proprio alcune di queste funzioni, tuttavia, cominciano a essere affidate a sistemi terrestri senza equipaggio. {% affV1 "UGV-E024" %}
 
 Già nel febbraio 2026, in un'inchiesta di *Ukrainska Pravda* dedicata agli UGV armati, Zinkevych raccontava come NC13 avesse adattato una **posizione precedentemente occupata dalla fanteria** per impiegarvi un robot dotato di mitragliatrice. Il mezzo svolgeva regolarmente compiti di osservazione e di fuoco su richiesta del comando. La piattaforma non era dunque soltanto uno strumento da inviare contro una posizione nemica: assumeva parte delle funzioni esercitate dai militari che, in precedenza, occupavano quella stessa posizione. {% affV1 "UGV-E025" %}
+
+{% figura immagini_inline.droid_tw, "2/4", "left" %}
 
 Nel novembre successivo Zinkevych riferì di un incarico durante il quale un robot armato aveva mantenuto una posizione per **45 giorni senza il concorso della fanteria**. Nel gennaio 2026 il Ministero della Difesa ucraino aveva già documentato un episodio della stessa durata, attribuito a un Droid TW, precisando che il mezzo veniva periodicamente ritirato per la manutenzione, il rifornimento di munizioni e la ricarica delle batterie. Non è possibile stabilire con certezza se i due resoconti si riferiscano alla medesima operazione. Il caso descritto dal Ministero mostra però come la continuità di una presenza robotizzata dipenda dalla capacità del reparto di sostenere la piattaforma nel tempo. {% affV1 "UGV-E016" %}
 
