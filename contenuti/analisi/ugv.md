@@ -8,7 +8,7 @@ teatro: Ucraina
 domini: [terra, aria, droni, logistica, industria]
 sistemi_citati: [Gimli, Targan, Maul, Droid TW, TerMIT, THeMIS, DJI Mavic, Heavy Shot Ayudag-6, StarGate, Starlink, DELTA, DOT-Chain Defence]
 immagine:
-  file: /immagini/strategia/ugv/ugv-fronte-a-distanza.webp
+  file: /immagini/strategia/ugv/copertina.webp
   alt: "Due veicoli terrestri senza equipaggio, uno logistico e uno armato. In alto, le insegne di Khartiia, del 1° battaglione medico indipendente e di NC13."
   didascalia: "Tre unità ucraine, tre applicazioni della robotica terrestre: rifornimento, evacuazione e combattimento."
   credito: "Frontiera"
