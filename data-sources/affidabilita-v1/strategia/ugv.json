@@ -580,6 +580,24 @@
             "data": "2026-10-13"
           }
         ]
+      },
+      {
+        "id": "UGV-E036",
+        "livello": "plausibile",
+        "titolo": "Crescita delle missioni UGV registrate e delle unità utilizzatrici",
+        "motivazione": "Il Ministero della Difesa ucraino riporta 7.511 missioni di logistica ed evacuazione in gennaio e 31.398 in ottobre 2026, con aumenti in tutti i mesi intermedi. La serie riguarda le missioni registrate in DELTA e verificate da Brave1. Nel comunicato di giugno il Ministero riporta anche il passaggio da 117 a 230 unità utilizzatrici nei primi cinque mesi del 2026. Le due cifre contano unità che impiegavano gli UGV secondo i dati ministeriali. Le fonti non permettono di quantificare quanto della crescita rilevata dipenda dall’aumento dell’impiego e quanto dall’estensione della rendicontazione.",
+        "fonti": [
+          {
+            "nome": "Ministero della Difesa dell’Ucraina — Serie mensile delle missioni UGV, gennaio–ottobre 2026",
+            "url": "https://mod.gov.ua/en/news/ukraine-ugv-missions-october-2026",
+            "data": "2026-11-06"
+          },
+          {
+            "nome": "Ministero della Difesa dell’Ucraina — Bilancio dei primi cinque mesi e crescita delle unità utilizzatrici",
+            "url": "https://mod.gov.ua/news/roboty-zamist-liudei-na-peredovii-nrk-vykonaly-vzhe-ponad-50-000-misii-z-pochatku-roku",
+            "data": "2026-06-09"
+          }
+        ]
       }
     ]
   }
